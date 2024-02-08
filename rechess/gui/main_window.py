@@ -1,0 +1,396 @@
+from pathlib import Path
+
+from chess.engine import Score
+from PySide6.QtCore import QThreadPool
+from PySide6.QtGui import QCloseEvent, QWheelEvent
+from PySide6.QtWidgets import (
+    QLabel,
+    QWidget,
+    QStatusBar,
+    QFileDialog,
+    QGridLayout,
+    QMainWindow,
+    QMessageBox,
+    QVBoxLayout,
+)
+
+from rechess import ClockStyle
+from rechess.gui.dialogs import SettingsDialog
+from rechess.core import ChessGame, TableModel, UCIEngine
+from rechess import create_action, get_opening_from, get_svg_icon
+from rechess.gui.widgets import (
+    SVGBoard,
+    FENEditor,
+    TableView,
+    ChessClock,
+    EvaluationBar,
+)
+
+
+EXE_FILE_FILTER = "UCI engine (*.exe)"
+HOME_DIRECTORY = Path.home().as_posix()
+
+FLIP_ICON = get_svg_icon("flip")
+QUIT_ICON = get_svg_icon("quit")
+ABOUT_ICON = get_svg_icon("about")
+NEW_GAME_ICON = get_svg_icon("new-game")
+SETTINGS_ICON = get_svg_icon("settings")
+LOAD_ENGINE_ICON = get_svg_icon("load-engine")
+PUSH_MOVE_NOW_ICON = get_svg_icon("push-move-now")
+STOP_ANALYSIS_ICON = get_svg_icon("stop-analysis")
+START_ANALYSIS_ICON = get_svg_icon("start-analysis")
+
+
+class MainWindow(QMainWindow):
+    """The main window of ReChess."""
+
+    def __init__(self) -> None:
+        super().__init__()
+
+        self.create_widgets()
+        self.create_actions()
+        self.create_menu_bar()
+        self.create_tool_bar()
+        self.create_status_bar()
+        self.create_thread_pool()
+        self.set_personal_layout()
+
+        self.invoke_engine()
+
+    def create_widgets(self) -> None:
+        """Create widgets for the main window."""
+        self._chess_game: ChessGame = ChessGame()
+        self._uci_engine: UCIEngine = UCIEngine()
+        self._table_model: TableModel = TableModel(self._chess_game.notation)
+
+        self._svg_board: SVGBoard = SVGBoard()
+        self._fen_editor: FENEditor = FENEditor()
+        self._evaluation_bar: EvaluationBar = EvaluationBar()
+        self._table_view: TableView = TableView(self._table_model)
+        self._black_clock: ChessClock = ChessClock(ClockStyle.Black)
+        self._white_clock: ChessClock = ChessClock(ClockStyle.White)
+
+        self._opening_label: QLabel = QLabel()
+        self._notifications_label: QLabel = QLabel()
+        self._engine_name_label: QLabel = QLabel(self._uci_engine.name)
+
+    def create_actions(self) -> None:
+        """Create actions for menu bar and tool bar."""
+        self.about_action = create_action(
+            name="About",
+            icon=ABOUT_ICON,
+            shortcut="Ctrl+I",
+            handler=self.show_about,
+            status_tip="Shows the About message.",
+        )
+        self.flip_action = create_action(
+            name="Flip",
+            icon=FLIP_ICON,
+            handler=self.flip,
+            shortcut="Ctrl+Shift+F",
+            status_tip="Flips playing sides.",
+        )
+        self.load_engine_action = create_action(
+            shortcut="Ctrl+E",
+            icon=LOAD_ENGINE_ICON,
+            name="Load engine...",
+            handler=self.load_engine,
+            status_tip="Shows the file manager.",
+        )
+        self.new_game_action = create_action(
+            name="New game",
+            icon=NEW_GAME_ICON,
+            shortcut="Ctrl+Shift+N",
+            handler=self.offer_new_game,
+            status_tip="Offers a new game.",
+        )
+        self.push_move_now_action = create_action(
+            name="Push move now",
+            icon=PUSH_MOVE_NOW_ICON,
+            shortcut="Ctrl+Shift+P",
+            handler=self.push_move_now,
+            status_tip="Forces the chess engine to push a move.",
+        )
+        self.settings_action = create_action(
+            icon=SETTINGS_ICON,
+            name="Settings...",
+            shortcut="Ctrl+Shift+S",
+            handler=self.show_settings_dialog,
+            status_tip="Shows the Settings dialog.",
+        )
+        self.start_analysis_action = create_action(
+            name="Start analysis",
+            shortcut="Ctrl+Shift+A",
+            icon=START_ANALYSIS_ICON,
+            handler=self.start_analysis,
+            status_tip="Starts chess engine analysis.",
+        )
+        self.stop_analysis_action = create_action(
+            name="Stop analysis",
+            icon=STOP_ANALYSIS_ICON,
+            shortcut="Ctrl+Shift+X",
+            handler=self.stop_analysis,
+            status_tip="Stops chess engine analysis.",
+        )
+        self.quit_action = create_action(
+            icon=QUIT_ICON,
+            name="Quit...",
+            handler=self.quit,
+            shortcut="Ctrl+Q",
+            status_tip="Offers to quit RexChess.",
+        )
+
+    def create_menu_bar(self) -> None:
+        """Create a menu bar with actions in separate menus."""
+
+        # Menu bar
+        menu_bar = self.menuBar()
+
+        # General menu
+        general_menu = menu_bar.addMenu("General")
+
+        # Edit menu
+        edit_menu = menu_bar.addMenu("Edit")
+
+        # Help menu
+        help_menu = menu_bar.addMenu("Help")
+
+        # General menu > Load engine...
+        general_menu.addAction(self.load_engine_action)
+
+        # General menu separator
+        general_menu.addSeparator()
+
+        # General menu > Quit...
+        general_menu.addAction(self.quit_action)
+
+        # Edit menu > Settings...
+        edit_menu.addAction(self.settings_action)
+
+        # Help menu > About
+        help_menu.addAction(self.about_action)
+
+    def create_tool_bar(self) -> None:
+        """Create a tool bar with buttons in separate areas."""
+
+        # General area
+        general_area = self.addToolBar("General")
+
+        # Edit area
+        edit_area = self.addToolBar("Edit")
+
+        # Help area
+        help_area = self.addToolBar("Help")
+
+        # General area > Quit
+        general_area.addAction(self.quit_action)
+
+        # Edit area > New game
+        edit_area.addAction(self.new_game_action)
+
+        # Edit area > Flip sides
+        edit_area.addAction(self.flip_action)
+
+        # Edit area > Push move now
+        edit_area.addAction(self.push_move_now_action)
+
+        # Edit area > Start analysis
+        edit_area.addAction(self.start_analysis_action)
+
+        # Edit area > Stop analysis
+        edit_area.addAction(self.stop_analysis_action)
+
+        # Edit area > Settings
+        edit_area.addAction(self.settings_action)
+
+        # Edit area > Load engine
+        edit_area.addAction(self.load_engine_action)
+
+        # Help area > About
+        help_area.addAction(self.about_action)
+
+    def create_status_bar(self) -> None:
+        """Create a status bar to show various information."""
+        status_bar: QStatusBar = self.statusBar()
+        status_bar.addWidget(self._opening_label)
+        status_bar.addPermanentWidget(self._engine_name_label)
+        self._engine_name_label.setText(self._uci_engine.name)
+
+    def create_thread_pool(self) -> None:
+        """Create a pool of CPU threads."""
+        self.thread_pool: QThreadPool = QThreadPool()
+
+    def set_personal_layout(self) -> None:
+        """Set a personal layout for widgets on the main window."""
+        self._clock_layout: QVBoxLayout = QVBoxLayout()
+        self._clock_layout.addWidget(self._black_clock)
+        self._clock_layout.addSpacing(550)
+        self._clock_layout.addWidget(self._white_clock)
+
+        self.grid_layout: QGridLayout = QGridLayout()
+        self.grid_layout.addLayout(self._clock_layout, 0, 0)
+        self.grid_layout.addWidget(self._svg_board, 0, 1)
+        self.grid_layout.addWidget(self._evaluation_bar, 0, 2)
+        self.grid_layout.addWidget(self._table_view, 0, 3)
+        self.grid_layout.addWidget(self._fen_editor, 1, 1)
+        self.grid_layout.addWidget(self._notifications_label, 2, 1)
+
+        self.widget_container: QWidget = QWidget()
+        self.widget_container.setLayout(self.grid_layout)
+        self.setCentralWidget(self.widget_container)
+
+        if self._chess_game.is_side_flipped():
+            self.flip_clocks()
+
+    def invoke_engine(self) -> None:
+        """Invoke the currently loaded chess engine to play a move."""
+        self.thread_pool.start(self._uci_engine.play_move)
+
+    def invoke_analysis(self) -> None:
+        """Invoke the loaded chess engine to start an analysis."""
+        self.thread_pool.start(self._uci_engine.start_analysis)
+
+    def show_maximized(self) -> None:
+        """Show the main window in maximized size."""
+        self.showMaximized()
+
+    def quit(self) -> None:
+        """Trigger the main window's close event."""
+        self.close()
+
+    def flip(self) -> None:
+        """Flip the sides for Black and White players."""
+        self.flip_clocks()
+        self._evaluation_bar.flip_sides()
+        self._svg_board.flip_sides()
+        self._svg_board.draw()
+
+    def push_move_now(self) -> None:
+        """Pass the turn to the loaded chess engine to push a move."""
+        self._chess_game.pass_turn_to_engine()
+
+    def show_settings_dialog(self) -> None:
+        """Show the Settings dialog."""
+        settings_dialog: SettingsDialog = SettingsDialog()
+        settings_dialog.exec()
+
+    def load_engine(self) -> None:
+        """Show the file manager to load a UCI engine."""
+        engine_file, _ = QFileDialog.getOpenFileName(
+            self,
+            "File Manager",
+            HOME_DIRECTORY,
+            EXE_FILE_FILTER,
+        )
+
+        if engine_file:
+            self._uci_engine.load(engine_file)
+            self.invoke_engine()
+
+    def show_about(self) -> None:
+        """Show the About message."""
+        QMessageBox.about(
+            self,
+            "About",
+            (
+                "A GUI app for playing chess against a UCI engine.\n\n"
+                "Copyright 2024 Boštjan Mejak\n"
+                "MIT License"
+            ),
+        )
+
+    def flip_clocks(self) -> None:
+        """Flip bottom and top chess clocks."""
+        bottom_clock = self._clock_layout.takeAt(2).widget()
+        top_clock = self._clock_layout.takeAt(0).widget()
+        self._clock_layout.insertWidget(0, bottom_clock)
+        self._clock_layout.insertWidget(2, top_clock)
+
+    def start_analysis(self) -> None:
+        """Start analyzing the current chessboard position."""
+        self.invoke_analysis()
+        self._evaluation_bar.show()
+
+    def stop_analysis(self) -> None:
+        """Stop analyzing the current chessboard position."""
+        self._uci_engine.stop_analysis()
+
+    def show_fen(self) -> None:
+        """Show a FEN (Forsyth-Edwards Notation) in the FEN editor."""
+        self._fen_editor.reset_background_color()
+        self._fen_editor.setText(self._chess_game.position.fen())
+
+    def show_evaluation(self, evaluation: Score) -> None:
+        """Show position evaluation by the given `evaluation`."""
+        self._evaluation_bar.animate(evaluation)
+
+    def show_variation(self, variation: str) -> None:
+        """Show a variation of chess moves by the given `variation`."""
+        self._notifications_label.setText(variation)
+
+    def show_opening(self) -> None:
+        """Show an ECO code along with a chess opening name."""
+        variation: str = self._chess_game.variation
+        eco_code, opening_name = get_opening_from(variation)
+        self._opening_label.setText(f"{eco_code}: {opening_name}")
+
+    def offer_new_game(self) -> None:
+        """Offer to start a new game."""
+        answer: QMessageBox.StandardButton = QMessageBox.question(
+            self,
+            "New Game",
+            "Do you want to start a new game?",
+        )
+
+        if answer == answer.Yes:
+            self.start_new_game()
+
+    def start_new_game(self) -> None:
+        """Start a new game by resetting everything."""
+        if self._chess_game.is_side_flipped():
+            self.flip_clocks()
+
+        self._black_clock.reset()
+        self._white_clock.reset()
+        self._table_model.update()
+        self._opening_label.clear()
+        self._evaluation_bar.reset()
+        self._uci_engine.stop_analysis()
+        self._notifications_label.clear()
+        self._chess_game.prepare_new_game()
+
+        self.invoke_engine()
+
+    def closeEvent(self, event: QCloseEvent) -> None:
+        """
+        Respond to the event of closing the main window of ReChess.
+
+        Ask the user with a dialog whether ReChess should quit before
+        the main window is closed.
+        """
+        answer: QMessageBox.StandardButton = QMessageBox.question(
+            self,
+            "Quit",
+            "Do you want to quit ReChess?",
+        )
+
+        if answer == answer.Yes:
+            self._uci_engine.quit()
+            event.accept()
+        else:
+            event.ignore()
+
+    def wheelEvent(self, event: QWheelEvent) -> None:
+        """
+        Respond to the event of rolling the wheel of a pointing device.
+
+        This event handler deals with wheel events of either a mouse or
+        a touchpad, be it an upward or a downward roll of the wheel.
+        """
+        upward_roll = event.angleDelta().y() > 0
+        downward_roll = event.angleDelta().y() < 0
+
+        if upward_roll:
+            self._table_view.select_preceding_item()
+        elif downward_roll:
+            self._table_view.select_following_item()
