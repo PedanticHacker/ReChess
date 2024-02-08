@@ -15,7 +15,7 @@ Windows, Linux or macOS.
 ### Third-Party Software
 
 ReChess uses the **PySide6** GUI framework, the **python-chess** library
-and the **Stockfish** 16 engine.
+and the **Stockfish 16** engine.
 
 ### Components
 
