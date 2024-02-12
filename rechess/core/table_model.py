@@ -7,14 +7,16 @@ from PySide6.QtCore import (
     QPersistentModelIndex,
 )
 
+from rechess.core import ChessGame
+
 
 class TableModel(QAbstractTableModel):
     """The model of a table for chess notation items."""
 
-    def __init__(self, items: list[str]) -> None:
+    def __init__(self) -> None:
         super().__init__()
 
-        self._items: list[str] = items
+        self._notation_items: int = len(ChessGame.notation)
 
     def data(
         self,
@@ -23,10 +25,10 @@ class TableModel(QAbstractTableModel):
     ) -> Any:
         """Prepare data of the items for the display role."""
         if role == Qt.ItemDataRole.DisplayRole:
-            item_index = 2 * index.row() + index.column()
+            notation_item_index = 2 * index.row() + index.column()
 
-            if 0 <= item_index < len(self._items):
-                return self._items[item_index]
+            if 0 <= notation_item_index < self._notation_items:
+                return ChessGame.notation[notation_item_index]
 
     def flags(
         self,
@@ -43,7 +45,7 @@ class TableModel(QAbstractTableModel):
     ) -> int:
         """Add rows for the table dynamically."""
         if index.isValid():
-            return 1 + len(self._items) // 2
+            return (self._notation_items // 2) + 1
         return 0
 
     def columnCount(

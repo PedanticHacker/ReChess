@@ -14,11 +14,11 @@ from rechess.gui.dialogs import PromotionDialog
 class ChessGame:
     """An implementation of the standard chess game."""
 
-    def __init__(self) -> None:
-        self._notation: list[str] = []
-        self._arrow: list[tuple[Square, Square]] = []
+    notation: list[str] = []
 
+    def __init__(self) -> None:
         self._board: Board = Board()
+        self._arrow: list[tuple[Square, Square]] = []
         self._sound_effect: QSoundEffect = QSoundEffect()
 
         self.prepare_new_game()
@@ -28,7 +28,7 @@ class ChessGame:
         self.play_sound_effect_for(move)
 
         notation_item: str = self._board.san_and_push(move)
-        self._notation.append(notation_item)
+        self.notation.append(notation_item)
 
         self.set_arrow_from(move)
 
@@ -36,7 +36,7 @@ class ChessGame:
         """Prepare the starting state of a standard chess game."""
         self._arrow.clear()
         self._board.reset()
-        self._notation.clear()
+        self.notation.clear()
 
         self._engine_turn: Color = get_config_value("engine", "black")
         self._side: Color = self._engine_turn
@@ -161,7 +161,7 @@ class ChessGame:
 
     def is_game_in_progress(self) -> bool:
         """Return True if a game is in progress, else False."""
-        return bool(self._notation)
+        return bool(self.notation)
 
     def is_game_over(self) -> bool:
         """Return `True` if the current game is over, else `False`."""
@@ -200,11 +200,6 @@ class ChessGame:
         square: Square = BB_SQUARES[self.from_square]
         legal_moves: Iterator[Move] = self._board.generate_legal_moves(square)
         return [legal_move.to_square for legal_move in legal_moves]
-
-    @property
-    def notation(self) -> list[str]:
-        """Get the current chess notation in SAN format."""
-        return self._notation
 
     @property
     def player_on_turn(self) -> str:
