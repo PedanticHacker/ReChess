@@ -21,7 +21,7 @@ class EvaluationBar(QProgressBar):
 
     def _set_animation(self) -> None:
         """Set animation for the bar."""
-        self._animation = QPropertyAnimation(self)
+        self._animation: QPropertyAnimation = QPropertyAnimation(self)
         self._animation.setTargetObject(self)
         self._animation.setPropertyName(b"value")
         self._animation.valueChanged.connect(self.update)
