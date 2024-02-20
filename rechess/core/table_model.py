@@ -44,9 +44,7 @@ class TableModel(QAbstractTableModel):
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
         """Add rows for the table dynamically."""
-        if index.isValid():
-            return (self._notation_items // 2) + 1
-        return 0
+        return (self._notation_items // 2) + 1
 
     def columnCount(
         self,
