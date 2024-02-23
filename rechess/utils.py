@@ -29,7 +29,7 @@ def create_button(icon: QIcon) -> QPushButton:
     return button
 
 
-def get_config_value(section: str, option: str) -> int:
+def get_config_value(section: str, option: str) -> int | bool:
     """Get the config value of an `option` from the given `section`."""
     config_parser = ConfigParser()
     config_parser.read("rechess/config.ini")

@@ -202,6 +202,11 @@ class ChessGame:
         return [legal_move.to_square for legal_move in legal_moves]
 
     @property
+    def orientation(self) -> Color:
+        """Get the color playing from the bottom of the chessboard."""
+        return self._orientation
+
+    @property
     def player_on_turn(self) -> str:
         """Get the player on turn as either White or Black."""
         return "White" if self.is_white_on_turn() else "Black"
@@ -215,11 +220,6 @@ class ChessGame:
     def position(self, new_position: Board) -> None:
         """Set a new chessboard position from `new_position`."""
         self._board = new_position
-
-    @property
-    def side(self) -> Color:
-        """Get the side playing from the bottom."""
-        return self._orientation
 
     @property
     def variation(self) -> str:

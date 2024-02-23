@@ -88,7 +88,7 @@ class MainWindow(QMainWindow):
             icon=FLIP_ICON,
             handler=self.flip,
             shortcut="Ctrl+Shift+F",
-            status_tip="Flips playing sides.",
+            status_tip="Flips the viewpoint.",
         )
         self.load_engine_action = create_action(
             shortcut="Ctrl+E",
@@ -259,10 +259,10 @@ class MainWindow(QMainWindow):
         self.close()
 
     def flip(self) -> None:
-        """Flip the sides for Black and White players."""
+        """Flip the viewpoint."""
         self.flip_clocks()
-        self._evaluation_bar.flip_sides()
-        self._svg_board.flip_sides()
+        self._svg_board.flip_board()
+        self._evaluation_bar.flip_orientation()
         self._svg_board.draw()
 
     def push_move_now(self) -> None:
@@ -300,7 +300,7 @@ class MainWindow(QMainWindow):
         )
 
     def flip_clocks(self) -> None:
-        """Flip bottom and top chess clocks."""
+        """Flip the bottom and top chess clocks."""
         bottom_clock = self._clock_layout.takeAt(2).widget()
         top_clock = self._clock_layout.takeAt(0).widget()
         self._clock_layout.insertWidget(0, bottom_clock)

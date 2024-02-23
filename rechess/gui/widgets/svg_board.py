@@ -43,16 +43,16 @@ class SVGBoard(QSvgWidget):
             colors=PERSONAL_BOARD_STYLE,
             arrows=self._chess_game.arrow,
             board=self._chess_game.position,
-            orientation=self._chess_game.side,
             check=self._chess_game.king_square,
             squares=self._chess_game.legal_moves,
+            orientation=self._chess_game.orientation,
         )
         encoded_svg_board: bytes = svg_board.encode()
         self.load(encoded_svg_board)
 
-    def flip_sides(self) -> None:
-        """Flip the sides of the board."""
-        self._chess_game.flip_sides()
+    def flip_board(self) -> None:
+        """Flip the board."""
+        self._chess_game.flip_board()
 
     def mousePressEvent(self, event: QMouseEvent) -> None:
         """Respond to pressing the primary mouse button."""
