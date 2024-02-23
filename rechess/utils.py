@@ -1,6 +1,5 @@
+from json import load
 from typing import Callable
-from functools import partial
-from configparser import ConfigParser
 
 from PySide6.QtCore import QSize
 from PySide6.QtGui import QAction, QIcon
@@ -29,16 +28,12 @@ def create_button(icon: QIcon) -> QPushButton:
     return button
 
 
-def get_config_value(section: str, option: str) -> int | bool:
-    """Get the config value of an `option` from the given `section`."""
-    config_parser = ConfigParser()
-    config_parser.read("rechess/config.ini")
+def get_config_value(section: str, key: str) -> int | bool:
+    """Get the config value of a `key` from the given `section`."""
+    with open("rechess/config.json") as config_file:
+        config_contents = load(config_file)
 
-    section_parsers: dict[str, Callable[[str], int]] = {
-        "clock": partial(config_parser.getint, section),
-        "engine": partial(config_parser.getboolean, section),
-    }
-    return section_parsers[section](option)
+    return config_contents[section][key]
 
 
 def get_style(file_name: str) -> str:
