@@ -1,4 +1,5 @@
-from typing import Any, Callable
+from typing import Callable
+from functools import partial
 from configparser import ConfigParser
 
 from PySide6.QtCore import QSize
@@ -28,17 +29,16 @@ def create_button(icon: QIcon) -> QPushButton:
     return button
 
 
-def get_config_value(section: str, option: str) -> Any:
+def get_config_value(section: str, option: str) -> int:
     """Get the config value of an `option` from the given `section`."""
     config_parser = ConfigParser()
     config_parser.read("rechess/config.ini")
 
-    if section == "clock":
-        return config_parser.getint(section, option)
-    elif section == "engine":
-        return config_parser.getboolean(section, option)
-    else:
-        return config_parser.get(section, option)
+    section_parsers: dict[str, Callable[[str], int]] = {
+        "clock": partial(config_parser.getint, section),
+        "engine": partial(config_parser.getboolean, section),
+    }
+    return section_parsers[section](option)
 
 
 def get_style(file_name: str) -> str:

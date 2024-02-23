@@ -38,8 +38,8 @@ class ChessGame:
         self._board.reset()
         self.notation.clear()
 
-        self._engine_turn: Color = get_config_value("engine", "black")
-        self._side: Color = self._engine_turn
+        self._engine_color: Color = get_config_value("engine", "black")
+        self._orientation: Color = self._engine_color
 
         self.reset_squares()
 
@@ -48,9 +48,9 @@ class ChessGame:
         self.from_square: Square = -1
         self.to_square: Square = -1
 
-    def flip_sides(self) -> None:
-        """Flip the sides of the board."""
-        self._side = not self._side
+    def flip_board(self) -> None:
+        """Flip the board's orientation."""
+        self._orientation = not self._orientation
 
     def get_square_from(self, x: float, y: float) -> None:
         """Detect a square from `x` and `y` coordinates."""
@@ -65,7 +65,7 @@ class ChessGame:
 
     def detect_file_and_rank_from(self, x: float, y: float) -> tuple[int, int]:
         """Detect a file and a rank from `x` and `y` coordinates."""
-        if self._side == WHITE:
+        if self._orientation == WHITE:
             file = (x - 22) // 69.5
             rank = 7 - (y - 22) // 69.5
         else:
@@ -152,7 +152,7 @@ class ChessGame:
 
     def pass_turn_to_engine(self) -> None:
         """Pass the current turn to the chess engine."""
-        self._engine_turn = self._board.turn
+        self._engine_color = self._board.turn
         # utils.save_settings()
 
     def is_black_on_turn(self) -> bool:
@@ -169,11 +169,11 @@ class ChessGame:
 
     def is_engine_on_turn(self) -> bool:
         """Return `True` if the engine is on turn, else `False`."""
-        return self._board.turn == self._engine_turn
+        return self._board.turn == self._engine_color
 
     def is_side_flipped(self) -> bool:
         """Return `True` if Black plays from the bottom, else `False`."""
-        return self._side == BLACK
+        return self._orientation == BLACK
 
     def is_white_on_turn(self) -> bool:
         """Return `True` if White is on turn, else `False`."""
@@ -219,7 +219,7 @@ class ChessGame:
     @property
     def side(self) -> Color:
         """Get the side playing from the bottom."""
-        return self._side
+        return self._orientation
 
     @property
     def variation(self) -> str:
