@@ -1,3 +1,5 @@
+from json import dump
+
 from PySide6.QtCore import Slot
 from PySide6.QtWidgets import (
     QDialog,
@@ -117,4 +119,22 @@ class SettingsDialog(QDialog):
     @Slot()
     def save_settings(self) -> None:
         """Save the changed settings."""
-        print("The settings were saved!")
+        is_engine_black: bool = self.engine_black_option.isChecked()
+        is_engine_pondering: bool = self.pondering_option.isChecked()
+
+        clock_time: int = self.time_option.currentData()
+        clock_increment: int = self.increment_option.currentData()
+
+        config_contents = {
+            "engine": {
+                "black": is_engine_black,
+                "pondering": is_engine_pondering
+            },
+            "clock": {
+                "time": clock_time,
+                "increment": clock_increment
+            }
+        }
+
+        with open("config.json", "w") as config_file:
+            dump(config_contents, config_file, indent=4)
