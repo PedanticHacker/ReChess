@@ -138,3 +138,4 @@ class SettingsDialog(QDialog):
 
         with open("config.json", "w") as config_file:
             dump(config_contents, config_file, indent=4)
+            config_file.write("\n")
