@@ -128,12 +128,12 @@ class SettingsDialog(QDialog):
         config_contents = {
             "engine": {
                 "black": is_engine_black,
-                "pondering": is_engine_pondering
+                "pondering": is_engine_pondering,
             },
             "clock": {
                 "time": clock_time,
-                "increment": clock_increment
-            }
+                "increment": clock_increment,
+            },
         }
 
         with open("config.json", "w") as config_file:
