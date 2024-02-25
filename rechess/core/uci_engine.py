@@ -8,9 +8,10 @@ from PySide6.QtCore import QObject, Signal
 from rechess import get_config_value
 
 
+OPERATING_SYSTEM_NAME = system().lower()
 DEFAULT_FILE_PATH: str = (
-    f"rechess/resources/engines/Stockfish-16.1/{system()}/stockfish"
-    f"{'.exe' if system() == 'Windows' else ''}"
+    f"rechess/resources/engines/stockfish-16.1/{OPERATING_SYSTEM_NAME}/"
+    f"stockfish{'.exe' if OPERATING_SYSTEM_NAME == 'Windows' else ''}"
 )
 
 
