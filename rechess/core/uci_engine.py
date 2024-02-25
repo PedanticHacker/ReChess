@@ -8,13 +8,6 @@ from PySide6.QtCore import QObject, Signal
 from rechess import get_config_value
 
 
-OPERATING_SYSTEM_NAME = system().lower()
-DEFAULT_FILE_PATH: str = (
-    f"rechess/resources/engines/stockfish-16.1/{OPERATING_SYSTEM_NAME}/"
-    f"stockfish{'.exe' if OPERATING_SYSTEM_NAME == 'Windows' else ''}"
-)
-
-
 class UCIEngine(QObject):
     """A mechanism to communicate with a UCI-based engine."""
 
@@ -26,7 +19,10 @@ class UCIEngine(QObject):
 
         self._board: Board = Board()
         self.is_analysis_active: bool = False
-        self._engine: SimpleEngine = SimpleEngine.popen_uci(DEFAULT_FILE_PATH)
+        self._engine: SimpleEngine = SimpleEngine.popen_uci(
+            f"rechess/resources/engines/stockfish-16.1/{system().lower()}/"
+            f"stockfish{'.exe' if system() == 'Windows' else ''}"
+        )
 
     def load(self, file_path: str) -> None:
         """Load a chess engine by the given `file_path`."""
