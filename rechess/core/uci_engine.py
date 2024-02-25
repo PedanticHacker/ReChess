@@ -9,13 +9,13 @@ from rechess import get_config_value
 
 
 DEFAULT_FILE_PATH: str = (
-    f"rechess/resources/engines/Stockfish-16/{system()}/stockfish"
+    f"rechess/resources/engines/Stockfish-16.1/{system()}/stockfish"
     f"{'.exe' if system() == 'Windows' else ''}"
 )
 
 
 class UCIEngine(QObject):
-    """An implementation of UCI engine communication."""
+    """A mechanism to communicate with a UCI-based engine."""
 
     move_played: Signal = Signal(Move)
     analysis_updated: Signal = Signal(str)

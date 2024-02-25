@@ -151,7 +151,7 @@ class ChessGame:
         self._board = self._board.root()
 
     def pass_turn_to_engine(self) -> None:
-        """Pass the current turn to the chess engine."""
+        """Pass the current turn to the engine."""
         self._engine_color = self._board.turn
         # utils.save_settings()
 
@@ -218,10 +218,10 @@ class ChessGame:
 
     @position.setter
     def position(self, new_position: Board) -> None:
-        """Set a new chessboard position from `new_position`."""
+        """Set a new position on the board from `new_position`."""
         self._board = new_position
 
     @property
     def variation(self) -> str:
-        """Get the current variation of chess moves."""
+        """Get the current variation of moves."""
         return Board().variation_san(self._board.move_stack)

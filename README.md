@@ -15,7 +15,7 @@ Windows, Linux or macOS.
 ### Third-Party Software
 
 ReChess uses the **PySide6** GUI framework, the **python-chess** library
-and the **Stockfish 16** engine.
+and the **Stockfish 16.1** engine.
 
 ### Components
 
@@ -47,18 +47,18 @@ The following screenshots reveal how ReChess looks like.
 *Selecting a move from the chess notation table.*
 
 ![ReChess on Windows 11](link "ReChess on Windows 11")
-*Analyzing a position with the default Stockfish 16 engine.*
+*Analyzing a position with the default Stockfish 16.1 engine.*
 
 ![ReChess on Windows 11](link "ReChess on Windows 11")
 *Promoting a white pawn to a queen, a rook, a bishop or a knight.*
 
 ## UCI Engine Integration
 
-By default, ReChess integrates the UCI-based Stockfish 16 engine for
-Windows, Linux and macOS.
+By default, ReChess integrates the UCI-based Stockfish 16.1 engine for
+either the Windows, a Linux-based or the macOS operating system.
 
 A non-default engine can also be loaded and played against, but it must
-be based on the UCI protocol.
+support the UCI protocol.
 
 ## Requirements
 
@@ -76,20 +76,20 @@ the following:
 - **PySide6**, by executing the command `pip install PySide6`
 - **python-chess**, by executing the command `pip install chess`
 
-Alternatively, you can also install **PySide6** and **python-chess**
-using the `pip` package manager in a command-line interface with admin
-privileges by navigating to the top-level directory of ReChess and then
-executing the command `pip install -r requirements.txt`.
+Alternatively, install **PySide6** and **python-chess** with the `pip`
+package manager in your command-line interface with admin privileges
+within the top-level directory of ReChess and then execute the command
+`pip install -r requirements.txt`.
 
 ## How to Launch ReChess
 
 To launch ReChess after installing all of its requirements, launch your
-IDE (e.g., PyCharm, VSCode, Wing, Spyder, etc.) or launch a code editor
-(e.g., Sublime Text, IDLE, etc.) and build the `main.py` file, found in
-the top-level directory of ReChess.
+favorite IDE (e.g., PyCharm, VSCode, Wing, Spyder, etc.) or perhaps your
+code editor (e.g., Sublime Text, Notepad++, UltraEdit, Atom, etc.) and
+build the `main.py` file, found in the top-level directory of ReChess.
 
-Alternatively, you can also execute the command `python main.py` in your
-command-line interface from within the top-level directory of ReChess.
+Alternatively, execute the command `python main.py` in your command-line
+interface within the top-level directory of ReChess.
 
 ## Credits and Links
 

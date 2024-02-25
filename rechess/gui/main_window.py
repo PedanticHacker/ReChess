@@ -266,7 +266,7 @@ class MainWindow(QMainWindow):
         self._svg_board.draw()
 
     def push_move_now(self) -> None:
-        """Pass the turn to the loaded chess engine to push a move."""
+        """Pass the turn to the loaded engine to push a move."""
         self._chess_game.pass_turn_to_engine()
 
     def show_settings_dialog(self) -> None:
