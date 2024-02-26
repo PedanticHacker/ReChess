@@ -75,7 +75,7 @@ class ChessGame:
         return round(file), round(rank)
 
     def find_move(self, origin: Square, target: Square) -> None:
-        """Find a move from `origin` and `target` squares."""
+        """Find a move from the given `origin` and `target` squares."""
         with suppress(IllegalMoveError):
             move: Move = self._board.find_move(origin, target)
 
@@ -85,14 +85,14 @@ class ChessGame:
             self.push_human_move(move)
 
     def get_promotion_piece(self) -> PieceType:
-        """Show a dialog to get a promotion piece."""
+        """Show the promotion dialog to get a promotion piece."""
         promotion_dialog: PromotionDialog = PromotionDialog(self._board.turn)
         return promotion_dialog.piece_type
 
     def play_sound_effect_for(self, move: Move) -> None:
-        """Play a WAV sound effect for the `move`."""
-        file_name = "capture" if self._board.is_capture(move) else "move"
-        file_path = f"rechess/resources/audio/{file_name}.wav"
+        """Play a WAV sound effect for the given `move`."""
+        file_name = "capture.wav" if self._board.is_capture(move) else "move.wav"
+        file_path = f"rechess/resources/audio/{file_name}"
         file_url = QUrl.fromLocalFile(file_path)
         self._sound_effect.setSource(file_url)
         self._sound_effect.play()
