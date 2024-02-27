@@ -40,6 +40,10 @@ class TableView(QTableView):
         if following_index.isValid():
             self.setCurrentIndex(following_index)
 
+    def update(self) -> None:
+        """Update the model's layout."""
+        self.model().layoutChanged.emit()
+
     @Slot(QModelIndex)
     def on_item_pressed(self, model_index: QModelIndex) -> None:
         """Respond to pressing a chess notation item."""

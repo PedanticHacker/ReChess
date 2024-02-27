@@ -66,7 +66,3 @@ class TableModel(QAbstractTableModel):
 
             if orientation == Qt.Orientation.Vertical:
                 return section + 1
-
-    def update(self) -> None:
-        """Update the model's layout."""
-        self.layoutChanged.emit()
