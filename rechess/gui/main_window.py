@@ -27,9 +27,6 @@ from rechess.gui.widgets import (
 )
 
 
-EXE_FILE_FILTER = "UCI engine (*.exe)"
-HOME_DIRECTORY = Path.home().as_posix()
-
 FLIP_ICON = get_svg_icon("flip")
 QUIT_ICON = get_svg_icon("quit")
 ABOUT_ICON = get_svg_icon("about")
@@ -279,8 +276,8 @@ class MainWindow(QMainWindow):
         engine_file, _ = QFileDialog.getOpenFileName(
             self,
             "File Manager",
-            HOME_DIRECTORY,
-            EXE_FILE_FILTER,
+            Path.home().as_posix(),
+            "UCI chess engine (*.exe)",
         )
 
         if engine_file:
