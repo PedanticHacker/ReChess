@@ -40,14 +40,14 @@ class App(QApplication):
         return self.exec()
 
 
-def main() -> None:
+def main() -> int:
     """Define the application entry point."""
     app: App = App()
 
     main_window: MainWindow = MainWindow()
     main_window.show_maximized()
 
-    app.launch()
+    return app.launch()
 
 
 if __name__ == "__main__":
