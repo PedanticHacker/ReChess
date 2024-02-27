@@ -40,8 +40,8 @@ class TableView(QTableView):
         if following_index.isValid():
             self.setCurrentIndex(following_index)
 
-    def update(self) -> None:
-        """Update the model's layout."""
+    def refresh(self) -> None:
+        """Refresh the model's layout."""
         self.model().layoutChanged.emit()
 
     @Slot(QModelIndex)

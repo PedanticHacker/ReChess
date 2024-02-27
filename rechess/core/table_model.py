@@ -16,8 +16,6 @@ class TableModel(QAbstractTableModel):
     def __init__(self) -> None:
         super().__init__()
 
-        self._notation_items: int = len(ChessGame.notation)
-
     def data(
         self,
         index: QModelIndex | QPersistentModelIndex,
@@ -27,7 +25,7 @@ class TableModel(QAbstractTableModel):
         if role == Qt.ItemDataRole.DisplayRole:
             notation_item_index = 2 * index.row() + index.column()
 
-            if 0 <= notation_item_index < self._notation_items:
+            if 0 <= notation_item_index < len(ChessGame.notation):
                 return ChessGame.notation[notation_item_index]
 
     def flags(
@@ -44,7 +42,8 @@ class TableModel(QAbstractTableModel):
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
         """Add rows for the table dynamically."""
-        return (self._notation_items // 2) + 1
+        notation_items = len(ChessGame.notation)
+        return (notation_items // 2) + 1
 
     def columnCount(
         self,

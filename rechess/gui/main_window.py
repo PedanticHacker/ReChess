@@ -349,7 +349,7 @@ class MainWindow(QMainWindow):
 
         self._black_clock.reset()
         self._white_clock.reset()
-        self._table_model.update()
+        self._table_view.refresh()
         self._opening_label.clear()
         self._evaluation_bar.reset()
         self._uci_engine.stop_analysis()

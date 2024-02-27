@@ -135,10 +135,10 @@ class ChessGame:
     def show_game_result(self) -> str:
         """Show the result of a chess game."""
         game_result_rewordings = {
-            "*": "Undetermined!",
+            "1/2-1/2": "Draw",
             "0-1": "Black wins!",
             "1-0": "White wins!",
-            "1/2-1/2": "Draw!",
+            "*": "Undetermined game",
         }
         return game_result_rewordings[self._board.result()]
 
