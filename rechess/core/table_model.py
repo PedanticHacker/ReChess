@@ -23,7 +23,7 @@ class TableModel(QAbstractTableModel):
     ) -> Any:
         """Prepare data of the items for the display role."""
         if role == Qt.ItemDataRole.DisplayRole:
-            notation_item_index = 2 * index.row() + index.column()
+            notation_item_index: int = 2 * index.row() + index.column()
 
             if 0 <= notation_item_index < len(ChessGame.notation):
                 return ChessGame.notation[notation_item_index]
@@ -42,7 +42,7 @@ class TableModel(QAbstractTableModel):
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
         """Add rows for the table dynamically."""
-        notation_items = len(ChessGame.notation)
+        notation_items: int = len(ChessGame.notation)
         return (notation_items // 2) + 1
 
     def columnCount(

@@ -1,5 +1,7 @@
 from PySide6.QtWidgets import QHeaderView, QTableView
-from PySide6.QtCore import QAbstractTableModel, QModelIndex, QSize, Slot
+from PySide6.QtCore import QModelIndex, QSize, Slot
+
+from rechess.core import TableModel
 
 
 FIXED_RESIZE_MODE = QHeaderView.ResizeMode.Fixed
@@ -9,11 +11,11 @@ STRETCH_RESIZE_MODE = QHeaderView.ResizeMode.Stretch
 class TableView(QTableView):
     """A view for showing chess notation in table form."""
 
-    def __init__(self, table_model: QAbstractTableModel) -> None:
+    def __init__(self) -> None:
         super().__init__()
 
         self.setShowGrid(False)
-        self.setModel(table_model)
+        self.setModel(TableModel())
         self.setFixedSize(QSize(300, 550))
         self.verticalHeader().setSectionResizeMode(FIXED_RESIZE_MODE)
         self.horizontalHeader().setSectionResizeMode(STRETCH_RESIZE_MODE)
@@ -26,9 +28,7 @@ class TableView(QTableView):
         current_column = current_index.column()
         preceding_row = current_index.row() - 1
         preceding_index = self.model().index(preceding_row, current_column)
-
-        if preceding_index.isValid():
-            self.setCurrentIndex(preceding_index)
+        self.setCurrentIndex(preceding_index)
 
     def select_following_item(self) -> None:
         """Select the following chess notation item in the table."""
@@ -36,9 +36,7 @@ class TableView(QTableView):
         current_column = current_index.column()
         following_row = current_index.row() + 1
         following_index = self.model().index(following_row, current_column)
-
-        if following_index.isValid():
-            self.setCurrentIndex(following_index)
+        self.setCurrentIndex(following_index)
 
     def refresh(self) -> None:
         """Refresh the model's layout."""

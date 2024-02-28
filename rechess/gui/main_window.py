@@ -58,12 +58,11 @@ class MainWindow(QMainWindow):
         """Create widgets for the main window."""
         self._chess_game: ChessGame = ChessGame()
         self._uci_engine: UCIEngine = UCIEngine()
-        self._table_model: TableModel = TableModel()
 
         self._svg_board: SVGBoard = SVGBoard()
         self._fen_editor: FENEditor = FENEditor()
+        self._table_view: TableView = TableView()
         self._evaluation_bar: EvaluationBar = EvaluationBar()
-        self._table_view: TableView = TableView(self._table_model)
         self._black_clock: ChessClock = ChessClock(ClockStyle.Black)
         self._white_clock: ChessClock = ChessClock(ClockStyle.White)
 
