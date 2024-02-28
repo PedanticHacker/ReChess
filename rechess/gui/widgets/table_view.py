@@ -4,10 +4,6 @@ from PySide6.QtCore import QModelIndex, QSize, Slot
 from rechess.core import TableModel
 
 
-FIXED_RESIZE_MODE = QHeaderView.ResizeMode.Fixed
-STRETCH_RESIZE_MODE = QHeaderView.ResizeMode.Stretch
-
-
 class TableView(QTableView):
     """A view for showing chess notation in table form."""
 
@@ -17,8 +13,8 @@ class TableView(QTableView):
         self.setShowGrid(False)
         self.setModel(TableModel())
         self.setFixedSize(QSize(300, 550))
-        self.verticalHeader().setSectionResizeMode(FIXED_RESIZE_MODE)
-        self.horizontalHeader().setSectionResizeMode(STRETCH_RESIZE_MODE)
+        self.verticalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Fixed)
+        self.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
 
         self.pressed.connect(self.on_item_pressed)
 
