@@ -8,14 +8,14 @@ from PySide6.QtCore import QLockFile
 from PySide6.QtWidgets import QApplication
 
 from rechess.gui import MainWindow
-from rechess import get_style, get_svg_icon
+from rechess import get_app_style, get_svg_icon
 
 
 APP_NAME: str = "ReChess"
 APP_VERSION: str = "1.0.0"
 LOCK_FILE_NAME: str = "ReChess.lock"
 LOGO_ICON: QIcon = get_svg_icon("logo")
-GENERAL_STYLE: str = get_style("general")
+GENERAL_STYLE: str = get_app_style("general")
 
 
 class App(QApplication):

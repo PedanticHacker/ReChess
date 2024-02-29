@@ -28,18 +28,34 @@ def create_button(icon: QIcon) -> QPushButton:
     return button
 
 
+def get_app_style(file_name: str) -> str:
+    """Get an app style by the given `file_name`."""
+    with open(f"rechess/resources/styles/{file_name}.qss") as qss_file:
+        return qss_file.read()
+
+
+def get_board_colors() -> dict[str, str]:
+    """Get default colors to be applied to the SVG board."""
+    return {
+        "coord": "white",
+        "margin": "green",
+        "square dark": "lime",
+        "square light": "white",
+        "arrow red": "#88202080",
+        "arrow blue": "#00308880",
+        "arrow green": "#15781b80",
+        "arrow yellow": "#e68f0080",
+        "square dark lastmove": "#8b000080",
+        "square light lastmove": "#8b000080",
+    }
+
+
 def get_config_value(section: str, key: str) -> int | bool:
     """Get the config value of a `key` from the given `section`."""
     with open("rechess/config.json") as config_file:
         config_contents = load(config_file)
 
     return config_contents[section][key]
-
-
-def get_style(file_name: str) -> str:
-    """Get an app style by the given `file_name`."""
-    with open(f"rechess/resources/styles/{file_name}.qss") as qss_file:
-        return qss_file.read()
 
 
 def get_svg_icon(file_name: str) -> QIcon:
