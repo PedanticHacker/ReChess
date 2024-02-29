@@ -1,20 +1,19 @@
 from chess import Color, PieceType
 from chess import BISHOP, KNIGHT, QUEEN, ROOK, WHITE
+from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QDialog, QDialogButtonBox, QHBoxLayout
 
 from rechess import create_button, get_svg_icon
 
 
-BLACK_ROOK_ICON = get_svg_icon("black-rook")
-WHITE_ROOK_ICON = get_svg_icon("white-rook")
-BLACK_QUEEN_ICON = get_svg_icon("black-queen")
-WHITE_QUEEN_ICON = get_svg_icon("white-queen")
-BLACK_BISHOP_ICON = get_svg_icon("black-bishop")
-BLACK_KNIGHT_ICON = get_svg_icon("black-knight")
-WHITE_BISHOP_ICON = get_svg_icon("white-bishop")
-WHITE_KNIGHT_ICON = get_svg_icon("white-knight")
-
-ACCEPT_ROLE = QDialogButtonBox.ButtonRole.AcceptRole
+BLACK_ROOK_ICON: QIcon = get_svg_icon("black-rook")
+WHITE_ROOK_ICON: QIcon = get_svg_icon("white-rook")
+BLACK_QUEEN_ICON: QIcon = get_svg_icon("black-queen")
+WHITE_QUEEN_ICON: QIcon = get_svg_icon("white-queen")
+BLACK_BISHOP_ICON: QIcon = get_svg_icon("black-bishop")
+BLACK_KNIGHT_ICON: QIcon = get_svg_icon("black-knight")
+WHITE_BISHOP_ICON: QIcon = get_svg_icon("white-bishop")
+WHITE_KNIGHT_ICON: QIcon = get_svg_icon("white-knight")
 
 
 class PromotionDialog(QDialog):
@@ -56,10 +55,22 @@ class PromotionDialog(QDialog):
             self.knight_button = create_button(BLACK_KNIGHT_ICON)
 
     def add_buttons_to_box(self) -> None:
-        self.button_box.addButton(self.queen_button, ACCEPT_ROLE)
-        self.button_box.addButton(self.rook_button, ACCEPT_ROLE)
-        self.button_box.addButton(self.bishop_button, ACCEPT_ROLE)
-        self.button_box.addButton(self.knight_button, ACCEPT_ROLE)
+        self.button_box.addButton(
+            self.queen_button,
+            QDialogButtonBox.ButtonRole.AcceptRole,
+        )
+        self.button_box.addButton(
+            self.rook_button,
+            QDialogButtonBox.ButtonRole.AcceptRole,
+        )
+        self.button_box.addButton(
+            self.bishop_button,
+            QDialogButtonBox.ButtonRole.AcceptRole,
+        )
+        self.button_box.addButton(
+            self.knight_button,
+            QDialogButtonBox.ButtonRole.AcceptRole,
+        )
 
     def connect_events_with_handlers(self) -> None:
         self.button_box.accepted.connect(self.accept)
