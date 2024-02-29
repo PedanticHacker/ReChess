@@ -34,22 +34,6 @@ def get_app_style(file_name: str) -> str:
         return qss_file.read()
 
 
-def get_board_colors() -> dict[str, str]:
-    """Get default colors to be applied to the SVG board."""
-    return {
-        "coord": "white",
-        "margin": "green",
-        "square dark": "lime",
-        "square light": "white",
-        "arrow red": "#88202080",
-        "arrow blue": "#00308880",
-        "arrow green": "#15781b80",
-        "arrow yellow": "#e68f0080",
-        "square dark lastmove": "#8b000080",
-        "square light lastmove": "#8b000080",
-    }
-
-
 def get_config_value(section: str, key: str) -> int | bool:
     """Get the config value of a `key` from the given `section`."""
     with open("rechess/config.json") as config_file:

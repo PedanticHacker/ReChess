@@ -4,7 +4,20 @@ from PySide6.QtGui import QMouseEvent
 from PySide6.QtSvgWidgets import QSvgWidget
 
 from rechess.core import ChessGame
-from rechess import get_board_colors
+
+
+DEFAULT_BOARD_COLORS: dict[str, str] = {
+    "coord": "white",
+    "margin": "green",
+    "square dark": "lime",
+    "square light": "white",
+    "arrow red": "#88202080",
+    "arrow blue": "#00308880",
+    "arrow green": "#15781b80",
+    "arrow yellow": "#e68f0080",
+    "square dark lastmove": "#8b000080",
+    "square light lastmove": "#8b000080",
+}
 
 
 class SVGBoard(QSvgWidget):
@@ -27,7 +40,7 @@ class SVGBoard(QSvgWidget):
     def draw(self) -> None:
         """Draw the current position on the board."""
         svg_board: str = board(
-            colors=get_board_colors(),
+            colors=DEFAULT_BOARD_COLORS,
             arrows=self._chess_game.arrow,
             board=self._chess_game.position,
             check=self._chess_game.king_square,

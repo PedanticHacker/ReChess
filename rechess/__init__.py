@@ -4,7 +4,6 @@ from .utils import (
     create_action,
     create_button,
     get_app_style,
-    get_board_colors,
     get_config_value,
     get_opening_from,
 )
