@@ -11,27 +11,20 @@ from rechess.gui import MainWindow
 from rechess import get_app_style, get_svg_icon
 
 
-APP_NAME: str = "ReChess"
-APP_VERSION: str = "1.0.0"
-LOCK_FILE_NAME: str = "ReChess.lock"
-LOGO_ICON: QIcon = get_svg_icon("logo")
-GENERAL_STYLE: str = get_app_style("general")
-
-
 class App(QApplication):
     """The app's session, locked to be launched only once."""
 
     def __init__(self) -> None:
         super().__init__()
 
-        self.lock_file: QLockFile = QLockFile(LOCK_FILE_NAME)
+        self._lock_file: QLockFile = QLockFile("ReChess.lock")
 
-        if self.lock_file.tryLock(1):
-            self.setWindowIcon(LOGO_ICON)
-            self.setStyleSheet(GENERAL_STYLE)
-            self.setApplicationName(APP_NAME)
-            self.setDesktopFileName(APP_NAME)
-            self.setApplicationVersion(APP_VERSION)
+        if self._lock_file.tryLock(1):
+            self.setApplicationName("ReChess")
+            self.setDesktopFileName("ReChess")
+            self.setApplicationVersion("1.0.0")
+            self.setWindowIcon(get_svg_icon("logo"))
+            self.setStyleSheet(get_app_style("general"))
         else:
             sys.exit()
 
