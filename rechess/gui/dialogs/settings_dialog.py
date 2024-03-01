@@ -35,8 +35,7 @@ class SettingsDialog(QDialog):
     def set_button_box(self) -> None:
         """Set a button box with OK and Cancel buttons."""
         self.button_box: QDialogButtonBox = QDialogButtonBox(
-            QDialogButtonBox.StandardButton.Ok
-            | QDialogButtonBox.StandardButton.Cancel
+            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel
         )
 
     def create_groups(self) -> None:
