@@ -15,31 +15,27 @@ from PySide6.QtWidgets import (
 from rechess import get_config_value
 
 
-OK_BUTTON = QDialogButtonBox.StandardButton.Ok
-CANCEL_BUTTON = QDialogButtonBox.StandardButton.Cancel
-
-
 class SettingsDialog(QDialog):
     """A dialog for changing the settings."""
 
     def __init__(self) -> None:
         super().__init__()
 
-        self.set_title()
+        self.setWindowTitle("Settings")
+
         self.set_button_box()
         self.create_groups()
         self.create_options()
         self.set_personal_layout()
         self.connect_events_with_handlers()
 
-    def set_title(self) -> None:
-        """Set the title as Settings."""
-        self.setWindowTitle("Settings")
-
     def set_button_box(self) -> None:
         """Set a button box with OK and Cancel buttons."""
         self.button_box: QDialogButtonBox = QDialogButtonBox()
-        self.button_box.setStandardButtons(OK_BUTTON | CANCEL_BUTTON)
+        self.button_box.setStandardButtons(
+            QDialogButtonBox.StandardButton.Ok
+            | QDialogButtonBox.StandardButton.Cancel
+        )
 
     def create_groups(self) -> None:
         """Create a chess engine group and a time control group."""
