@@ -6,16 +6,6 @@ from PySide6.QtWidgets import QDialog, QDialogButtonBox, QHBoxLayout
 from rechess import create_button, get_svg_icon
 
 
-BLACK_ROOK_ICON: QIcon = get_svg_icon("black-rook")
-WHITE_ROOK_ICON: QIcon = get_svg_icon("white-rook")
-BLACK_QUEEN_ICON: QIcon = get_svg_icon("black-queen")
-WHITE_QUEEN_ICON: QIcon = get_svg_icon("white-queen")
-BLACK_BISHOP_ICON: QIcon = get_svg_icon("black-bishop")
-BLACK_KNIGHT_ICON: QIcon = get_svg_icon("black-knight")
-WHITE_BISHOP_ICON: QIcon = get_svg_icon("white-bishop")
-WHITE_KNIGHT_ICON: QIcon = get_svg_icon("white-knight")
-
-
 class PromotionDialog(QDialog):
     """A dialog for selecting a promotion piece."""
 
@@ -44,15 +34,15 @@ class PromotionDialog(QDialog):
 
     def create_buttons(self) -> None:
         if self.player_color == WHITE:
-            self.queen_button = create_button(WHITE_QUEEN_ICON)
-            self.rook_button = create_button(WHITE_ROOK_ICON)
-            self.bishop_button = create_button(WHITE_BISHOP_ICON)
-            self.knight_button = create_button(WHITE_KNIGHT_ICON)
+            self.queen_button = create_button(get_svg_icon("white-queen"))
+            self.rook_button = create_button(get_svg_icon("white-rook"))
+            self.bishop_button = create_button(get_svg_icon("white-bishop"))
+            self.knight_button = create_button(get_svg_icon("white-knight"))
         else:
-            self.queen_button = create_button(BLACK_QUEEN_ICON)
-            self.rook_button = create_button(BLACK_ROOK_ICON)
-            self.bishop_button = create_button(BLACK_BISHOP_ICON)
-            self.knight_button = create_button(BLACK_KNIGHT_ICON)
+            self.queen_button = create_button(get_svg_icon("black-queen"))
+            self.rook_button = create_button(get_svg_icon("black-rook"))
+            self.bishop_button = create_button(get_svg_icon("black-bishop"))
+            self.knight_button = create_button(get_svg_icon("black-knight"))
 
     def add_buttons_to_box(self) -> None:
         self.button_box.addButton(
