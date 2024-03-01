@@ -39,8 +39,6 @@ class MainWindow(QMainWindow):
         self.create_tool_bar()
         self.create_status_bar()
         self.set_personal_layout()
-        self.create_cpu_thread_pool()
-
         self.invoke_engine()
 
     def create_widgets(self) -> None:
@@ -201,10 +199,6 @@ class MainWindow(QMainWindow):
         status_bar.addPermanentWidget(self._engine_name_label)
         self._engine_name_label.setText(self._uci_engine.name)
 
-    def create_cpu_thread_pool(self) -> None:
-        """Create a pool of CPU threads."""
-        self._cpu_thread_pool: QThreadPool = QThreadPool()
-
     def set_personal_layout(self) -> None:
         """Set a personal layout for widgets on the main window."""
         self._clock_layout: QVBoxLayout = QVBoxLayout()
@@ -229,11 +223,11 @@ class MainWindow(QMainWindow):
 
     def invoke_engine(self) -> None:
         """Invoke the currently loaded engine to play a move."""
-        self._cpu_thread_pool.start(self._uci_engine.play_move)
+        self._uci_engine.play_move()
 
     def invoke_analysis(self) -> None:
         """Invoke the loaded engine to start an analysis."""
-        self._cpu_thread_pool.start(self._uci_engine.start_analysis)
+        self._uci_engine.start_analysis()
 
     def show_maximized(self) -> None:
         """Show the main window in maximized size."""
