@@ -25,13 +25,13 @@ class UCIEngine(QObject):
         )
 
     def load(self, file_path: str) -> None:
-        """Load a chess engine by the given `file_path`."""
+        """Load an engine by the given `file_path`."""
         with suppress(EngineError):
             self._engine.quit()
             self._engine = SimpleEngine.popen_uci(file_path)
 
     def play_move(self) -> None:
-        """Play a move with the loaded chess engine."""
+        """Play a move with the loaded engine."""
         play_result: PlayResult = self._engine.play(
             limit=Limit(1.0),
             board=self._board,
@@ -55,10 +55,10 @@ class UCIEngine(QObject):
         self.is_analysis_active = False
 
     def quit(self) -> None:
-        """Quit the CPU process of a loaded chess engine."""
+        """Quit the CPU process of a loaded engine."""
         self._engine.quit()
 
     @property
     def name(self) -> str:
-        """Get the name of a loaded chess engine."""
+        """Get the name of a loaded engine."""
         return self._engine.id["name"]
