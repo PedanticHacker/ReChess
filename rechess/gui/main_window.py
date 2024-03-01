@@ -27,17 +27,6 @@ from rechess.gui.widgets import (
 )
 
 
-FLIP_ICON = get_svg_icon("flip")
-QUIT_ICON = get_svg_icon("quit")
-ABOUT_ICON = get_svg_icon("about")
-NEW_GAME_ICON = get_svg_icon("new-game")
-SETTINGS_ICON = get_svg_icon("settings")
-LOAD_ENGINE_ICON = get_svg_icon("load-engine")
-PUSH_MOVE_NOW_ICON = get_svg_icon("push-move-now")
-STOP_ANALYSIS_ICON = get_svg_icon("stop-analysis")
-START_ANALYSIS_ICON = get_svg_icon("start-analysis")
-
-
 class MainWindow(QMainWindow):
     """The main window of ReChess."""
 
@@ -74,65 +63,65 @@ class MainWindow(QMainWindow):
         """Create actions for menu bar and tool bar."""
         self.about_action = create_action(
             name="About",
-            icon=ABOUT_ICON,
             shortcut="Ctrl+I",
             handler=self.show_about,
+            icon=get_svg_icon("about"),
             status_tip="Shows the About message.",
         )
         self.flip_action = create_action(
             name="Flip",
-            icon=FLIP_ICON,
             handler=self.flip,
             shortcut="Ctrl+Shift+F",
+            icon=get_svg_icon("flip"),
             status_tip="Flips the viewpoint.",
         )
         self.load_engine_action = create_action(
             shortcut="Ctrl+E",
-            icon=LOAD_ENGINE_ICON,
             name="Load engine...",
             handler=self.load_engine,
+            icon=get_svg_icon("load-engine"),
             status_tip="Shows the file manager.",
         )
         self.new_game_action = create_action(
             name="New game",
-            icon=NEW_GAME_ICON,
             shortcut="Ctrl+Shift+N",
             handler=self.offer_new_game,
+            icon=get_svg_icon("new-game"),
             status_tip="Offers a new game.",
         )
         self.push_move_now_action = create_action(
             name="Push move now",
-            icon=PUSH_MOVE_NOW_ICON,
             shortcut="Ctrl+Shift+P",
             handler=self.push_move_now,
+            icon=get_svg_icon("push-move-now"),
             status_tip="Forces the chess engine to push a move.",
         )
         self.settings_action = create_action(
-            icon=SETTINGS_ICON,
             name="Settings...",
             shortcut="Ctrl+Shift+S",
+            icon=get_svg_icon("settings"),
             handler=self.show_settings_dialog,
             status_tip="Shows the Settings dialog.",
         )
         self.start_analysis_action = create_action(
             name="Start analysis",
             shortcut="Ctrl+Shift+A",
-            icon=START_ANALYSIS_ICON,
             handler=self.start_analysis,
+            icon=get_svg_icon("start-analysis"),
             status_tip="Starts chess engine analysis.",
         )
         self.stop_analysis_action = create_action(
             name="Stop analysis",
-            icon=STOP_ANALYSIS_ICON,
             shortcut="Ctrl+Shift+X",
             handler=self.stop_analysis,
+            icon=get_svg_icon("stop-analysis"),
             status_tip="Stops chess engine analysis.",
         )
         self.quit_action = create_action(
-            icon=QUIT_ICON,
             name="Quit...",
             handler=self.quit,
             shortcut="Ctrl+Q",
+            icon=get_svg_icon("quit"),
             status_tip="Offers to quit RexChess.",
         )
 
