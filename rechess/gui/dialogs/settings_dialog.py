@@ -21,18 +21,20 @@ class SettingsDialog(QDialog):
     def __init__(self) -> None:
         super().__init__()
 
-        self.setWindowTitle("Settings")
-
+        self.set_title()
         self.set_button_box()
         self.create_groups()
         self.create_options()
         self.set_personal_layout()
         self.connect_events_with_handlers()
 
+    def set_title(self) -> None:
+        """Set the dialog's title as Settings."""
+        self.setWindowTitle("Settings")
+
     def set_button_box(self) -> None:
         """Set a button box with OK and Cancel buttons."""
-        self.button_box: QDialogButtonBox = QDialogButtonBox()
-        self.button_box.setStandardButtons(
+        self.button_box: QDialogButtonBox = QDialogButtonBox(
             QDialogButtonBox.StandardButton.Ok
             | QDialogButtonBox.StandardButton.Cancel
         )
