@@ -1,10 +1,11 @@
 from chess import svg
-from chess.svg import board
 from PySide6.QtGui import QMouseEvent
 from PySide6.QtSvgWidgets import QSvgWidget
 
 from rechess.core import ChessGame
 
+
+svg.XX: str = "<circle id='xx' r='5' cx='22' cy='22' fill='lime' stroke='blue'/>"
 
 DEFAULT_BOARD_COLORS: dict[str, str] = {
     "coord": "white",
@@ -27,19 +28,11 @@ class SVGBoard(QSvgWidget):
         super().__init__()
 
         self._chess_game: ChessGame = ChessGame()
-
-        self._set_legal_move_marker()
         self.draw()
-
-    def _set_legal_move_marker(self) -> None:
-        """Set a dot as the marker for a legal move."""
-        svg.XX = (
-            "<circle id='xx' r='5.5' cx='22.5' cy='22.5' fill='yellow' stroke='blue'/>"
-        )
 
     def draw(self) -> None:
         """Draw the current position on the board."""
-        svg_board: str = board(
+        svg_board: str = svg.board(
             colors=DEFAULT_BOARD_COLORS,
             arrows=self._chess_game.arrow,
             board=self._chess_game.position,
