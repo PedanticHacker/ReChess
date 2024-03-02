@@ -36,10 +36,6 @@ class TableView(QTableView):
         following_index = self.model().index(following_row, current_column)
         self.setCurrentIndex(following_index)
 
-    def refresh(self) -> None:
-        """Refresh the model's layout of notation items."""
-        self.model().layoutChanged.emit()
-
     @Slot(QModelIndex)
     def on_notation_item_pressed(self, model_index: QModelIndex) -> None:
         """Respond to pressing a notation item."""

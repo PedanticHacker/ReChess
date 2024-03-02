@@ -64,3 +64,7 @@ class TableModel(QAbstractTableModel):
 
             if orientation == Qt.Orientation.Vertical:
                 return section + 1
+
+    def refresh(self) -> None:
+        """Refresh the model's layout of notation items."""
+        self.layoutChanged.emit()
