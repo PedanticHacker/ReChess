@@ -223,11 +223,11 @@ class MainWindow(QMainWindow):
 
     def invoke_engine(self) -> None:
         """Invoke the currently loaded engine to play a move."""
-        self._uci_engine.play_move()
+        QThreadPool.globalInstance().start(self._uci_engine.play_move)
 
     def invoke_analysis(self) -> None:
         """Invoke the loaded engine to start an analysis."""
-        self._uci_engine.start_analysis()
+        QThreadPool.globalInstance().start(self._uci_engine.start_analysis)
 
     def show_maximized(self) -> None:
         """Show the main window in maximized size."""
