@@ -11,7 +11,7 @@ from rechess.core import Game
 
 
 class TableModel(QAbstractTableModel):
-    """The model of a table for chess notation items."""
+    """The model of a table for notation items."""
 
     def __init__(self) -> None:
         super().__init__()
@@ -32,7 +32,7 @@ class TableModel(QAbstractTableModel):
         self,
         index: QModelIndex | QPersistentModelIndex,
     ) -> Qt.ItemFlag:
-        """Make items enabled and selectable if there is data."""
+        """Make notation items enabled and selectable if there's data."""
         if self.data(index):
             return Qt.ItemFlag.ItemIsEnabled | Qt.ItemFlag.ItemIsSelectable
         return Qt.ItemFlag.NoItemFlags
@@ -48,7 +48,7 @@ class TableModel(QAbstractTableModel):
         self,
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
-        """Count a fixed set of two columns for the table."""
+        """Count a fixed set of 2 columns for the table."""
         return 2
 
     def headerData(
