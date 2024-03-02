@@ -52,7 +52,7 @@ class EvaluationBar(QProgressBar):
     def flip_orientation(self) -> None:
         """Flip the bar's orientation if an engine plays as White."""
         is_engine_black: bool = get_config_value("engine", "black")
-        self.setInvertedAppearance(is_engine_black)
+        self.setInvertedAppearance(not is_engine_black)
 
     def reset(self) -> None:
         """Reset the bar to its default state."""
