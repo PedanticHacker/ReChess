@@ -51,9 +51,9 @@ class MainWindow(QMainWindow):
         self._svg_board: SVGBoard = SVGBoard()
         self._fen_editor: FENEditor = FENEditor()
         self._table_view: TableView = TableView()
-        self._evaluation_bar: EvaluationBar = EvaluationBar()
         self._black_clock: Clock = Clock(ClockStyle.Black)
         self._white_clock: Clock = Clock(ClockStyle.White)
+        self._evaluation_bar: EvaluationBar = EvaluationBar()
 
         self._opening_label: QLabel = QLabel()
         self._notifications_label: QLabel = QLabel()
