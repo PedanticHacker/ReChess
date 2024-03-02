@@ -26,16 +26,13 @@ class ChessGame(QObject):
         self.prepare_new_game()
 
     def _push(self, move: Move) -> None:
-        """Push the given `move`."""
+        """Play a sound effect for the given `move` and push it."""
         self.play_sound_effect_for(move)
-
-        notation_item: str = self._board.san_and_push(move)
-        self.notation.append(notation_item)
-
-        self.set_arrow_from(move)
+        self.set_notation_item_for(move)
+        self.set_arrow_for(move)
 
     def prepare_new_game(self) -> None:
-        """Prepare the starting state of a standard chess game."""
+        """Prepare the starting state of a standard game."""
         self._arrow.clear()
         self._board.reset()
         self.notation.clear()
@@ -46,9 +43,14 @@ class ChessGame(QObject):
         self.reset_squares()
 
     def reset_squares(self) -> None:
-        """Reset the origin and target squares."""
+        """Reset the origin and target squares of a piece."""
         self.from_square: Square = -1
         self.to_square: Square = -1
+
+    def set_notation_item_for(self, move: Move) -> None:
+        """Set a notation item for the given `move`."""
+        notation_item: str = self._board.san_and_push(move)
+        self.notation.append(notation_item)
 
     def flip_board(self) -> None:
         """Flip the board's orientation."""
@@ -138,8 +140,8 @@ class ChessGame(QObject):
         }
         return game_result_rewordings[self._board.result()]
 
-    def set_arrow_from(self, move: Move) -> None:
-        """Set an arrow from the given `move`."""
+    def set_arrow_for(self, move: Move) -> None:
+        """Set an arrow for the given `move`."""
         self._arrow = [(move.from_square, move.to_square)]
 
     def set_root_position(self) -> None:
@@ -177,7 +179,7 @@ class ChessGame(QObject):
 
     @property
     def arrow(self) -> list[tuple[Square, Square]]:
-        """Get the arrow for a pushed chess move."""
+        """Get the arrow for a move."""
         return self._arrow
 
     @property
@@ -189,7 +191,7 @@ class ChessGame(QObject):
 
     @property
     def legal_moves(self) -> list[Square] | None:
-        """Get all legal moves for a chess piece from its square."""
+        """Get all legal moves for a piece from its square."""
         if self.from_square == -1:
             return None
 
@@ -199,7 +201,7 @@ class ChessGame(QObject):
 
     @property
     def orientation(self) -> Color:
-        """Get the color playing from the bottom of the chessboard."""
+        """Get the color playing from the bottom of the board."""
         return self._orientation
 
     @property
@@ -209,7 +211,7 @@ class ChessGame(QObject):
 
     @property
     def position(self) -> Board:
-        """Get the current chessboard position."""
+        """Get the current position."""
         return self._board
 
     @position.setter
