@@ -4,19 +4,21 @@ from contextlib import suppress
 from chess import square
 from chess import BB_SQUARES, BLACK, WHITE
 from chess import Board, Color, IllegalMoveError, Move, PieceType, Square
-from PySide6.QtCore import QUrl
+from PySide6.QtCore import QObject, QUrl, Slot
 from PySide6.QtMultimedia import QSoundEffect
 
 from rechess import get_config_value
 from rechess.gui.dialogs import PromotionDialog
 
 
-class ChessGame:
+class ChessGame(QObject):
     """An implementation of the standard chess game."""
 
     notation: list[str] = []
 
     def __init__(self) -> None:
+        super().__init__()
+
         self._board: Board = Board()
         self._arrow: list[tuple[Square, Square]] = []
         self._sound_effect: QSoundEffect = QSoundEffect()
@@ -99,12 +101,6 @@ class ChessGame:
 
     def push_human_move(self, move: Move) -> None:
         """Push a legal human move with the given `move`."""
-        if self._board.is_legal(move):
-            self._push(move)
-            self.update_game_state()
-
-    def push_engine_move(self, move: Move) -> None:
-        """Push a legal chess engine move as `move`."""
         if self._board.is_legal(move):
             self._push(move)
             self.update_game_state()
@@ -225,3 +221,10 @@ class ChessGame:
     def variation(self) -> str:
         """Get the current variation of moves."""
         return Board().variation_san(self._board.move_stack)
+
+    @Slot(Move)
+    def push_engine_move(self, move: Move) -> None:
+        """Push a legal engine move as `move`."""
+        if self._board.is_legal(move):
+            self._push(move)
+            self.update_game_state()

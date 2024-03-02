@@ -39,6 +39,8 @@ class MainWindow(QMainWindow):
         self.create_tool_bar()
         self.create_status_bar()
         self.set_personal_layout()
+        self.connect_events_with_handlers()
+
         self.invoke_engine()
 
     def create_widgets(self) -> None:
@@ -220,6 +222,10 @@ class MainWindow(QMainWindow):
 
         if self._chess_game.is_side_flipped():
             self.flip_clocks()
+
+    def connect_events_with_handlers(self) -> None:
+        """Connect `move_played` event with `push_engine_move` handler."""
+        self._uci_engine.move_played.connect(self._chess_game.push_engine_move)
 
     def invoke_engine(self) -> None:
         """Invoke the currently loaded engine to play a move."""

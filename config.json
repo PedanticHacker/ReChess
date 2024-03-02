@@ -1,0 +1,10 @@
+{
+    "engine": {
+        "black": true,
+        "pondering": false
+    },
+    "clock": {
+        "time": 60,
+        "increment": 0
+    }
+}

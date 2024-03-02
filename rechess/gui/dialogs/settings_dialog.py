@@ -62,7 +62,6 @@ class SettingsDialog(QDialog):
 
         self.engine_white_option: QRadioButton = QRadioButton()
         self.engine_white_option.setText("White")
-        self.engine_white_option.setChecked(not is_engine_black)
 
         self.pondering_option: QCheckBox = QCheckBox()
         self.pondering_option.setText("Pondering")
@@ -116,7 +115,7 @@ class SettingsDialog(QDialog):
     @Slot()
     def save_settings(self) -> None:
         """Save the changed settings."""
-        is_engine_black: bool = self.engine_black_option.isChecked()
+        is_engine_white: bool = self.engine_black_option.isChecked()
         is_engine_pondering: bool = self.pondering_option.isChecked()
 
         clock_time: int = self.time_option.currentData()
@@ -124,7 +123,7 @@ class SettingsDialog(QDialog):
 
         config_contents = {
             "engine": {
-                "black": is_engine_black,
+                "black": is_engine_white,
                 "pondering": is_engine_pondering,
             },
             "clock": {
