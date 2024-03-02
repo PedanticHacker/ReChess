@@ -48,7 +48,7 @@ def get_svg_icon(file_name: str) -> QIcon:
 
 
 def get_opening_from(variation: str) -> tuple[str, str]:
-    """Get an ECO code and a chess opening name from `variation`."""
+    """Get an ECO code and an opening name from `variation`."""
     openings = {
         "1. Nh3 d5 2. g3 e5 3. f4 Bxh3 4. Bxh3 exf4": ("A00", "Amar Gambit"),
         "1. Nh3": ("A00", "Amar Opening"),
