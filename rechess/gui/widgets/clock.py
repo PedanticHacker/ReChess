@@ -7,13 +7,13 @@ from rechess import ClockStyle
 from rechess import get_config_value
 
 
-class ChessClock(QLCDNumber):
+class Clock(QLCDNumber):
     """A clock with a 1-second countdown timer."""
 
-    def __init__(self, clock_style: ClockStyle) -> None:
+    def __init__(self, style: ClockStyle) -> None:
         super().__init__()
 
-        self.setStyleSheet(clock_style)
+        self.setStyleSheet(style)
         self.setFixedSize(QSize(200, 50))
         self.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 

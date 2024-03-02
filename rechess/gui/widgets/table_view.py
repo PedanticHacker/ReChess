@@ -10,8 +10,10 @@ class TableView(QTableView):
     def __init__(self) -> None:
         super().__init__()
 
+        self._table_model: TableModel = TableModel()
+
         self.setShowGrid(False)
-        self.setModel(TableModel())
+        self.setModel(self._table_model)
         self.setFixedSize(QSize(300, 550))
         self.verticalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Fixed)
         self.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)

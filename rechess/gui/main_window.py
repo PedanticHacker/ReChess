@@ -16,13 +16,13 @@ from PySide6.QtWidgets import (
 
 from rechess import ClockStyle
 from rechess.gui.dialogs import SettingsDialog
-from rechess.core import ChessGame, TableModel, UCIEngine
+from rechess.core import Engine, Game, TableModel
 from rechess import create_action, get_opening_from, get_svg_icon
 from rechess.gui.widgets import (
+    Clock,
     SVGBoard,
     FENEditor,
     TableView,
-    ChessClock,
     EvaluationBar,
 )
 
@@ -45,19 +45,19 @@ class MainWindow(QMainWindow):
 
     def create_widgets(self) -> None:
         """Create widgets for the main window."""
-        self._chess_game: ChessGame = ChessGame()
-        self._uci_engine: UCIEngine = UCIEngine()
+        self._game: Game = Game()
+        self._engine: Engine = Engine()
 
         self._svg_board: SVGBoard = SVGBoard()
         self._fen_editor: FENEditor = FENEditor()
         self._table_view: TableView = TableView()
         self._evaluation_bar: EvaluationBar = EvaluationBar()
-        self._black_clock: ChessClock = ChessClock(ClockStyle.Black)
-        self._white_clock: ChessClock = ChessClock(ClockStyle.White)
+        self._black_clock: Clock = Clock(ClockStyle.Black)
+        self._white_clock: Clock = Clock(ClockStyle.White)
 
         self._opening_label: QLabel = QLabel()
         self._notifications_label: QLabel = QLabel()
-        self._engine_name_label: QLabel = QLabel(self._uci_engine.name)
+        self._engine_name_label: QLabel = QLabel(self._engine.name)
 
     def create_actions(self) -> None:
         """Create actions for menu bar and tool bar."""
@@ -199,7 +199,7 @@ class MainWindow(QMainWindow):
         status_bar: QStatusBar = self.statusBar()
         status_bar.addWidget(self._opening_label)
         status_bar.addPermanentWidget(self._engine_name_label)
-        self._engine_name_label.setText(self._uci_engine.name)
+        self._engine_name_label.setText(self._engine.name)
 
     def set_personal_layout(self) -> None:
         """Set a personal layout for widgets on the main window."""
@@ -220,20 +220,20 @@ class MainWindow(QMainWindow):
         self.widget_container.setLayout(self.grid_layout)
         self.setCentralWidget(self.widget_container)
 
-        if self._chess_game.is_side_flipped():
+        if self._game.is_side_flipped():
             self.flip_clocks()
 
     def connect_events_with_handlers(self) -> None:
         """Connect `move_played` event with `push_engine_move` handler."""
-        self._uci_engine.move_played.connect(self._chess_game.push_engine_move)
+        self._engine.move_played.connect(self._game.push_engine_move)
 
     def invoke_engine(self) -> None:
         """Invoke the currently loaded engine to play a move."""
-        QThreadPool.globalInstance().start(self._uci_engine.play_move)
+        QThreadPool.globalInstance().start(self._engine.play_move)
 
     def invoke_analysis(self) -> None:
         """Invoke the loaded engine to start an analysis."""
-        QThreadPool.globalInstance().start(self._uci_engine.start_analysis)
+        QThreadPool.globalInstance().start(self._engine.start_analysis)
 
     def show_maximized(self) -> None:
         """Show the main window in maximized size."""
@@ -244,7 +244,7 @@ class MainWindow(QMainWindow):
         self.close()
 
     def flip(self) -> None:
-        """Flip the viewpoint."""
+        """Flip the orientation of clocks, board and evaluation bar."""
         self.flip_clocks()
         self._svg_board.flip_board()
         self._evaluation_bar.flip_orientation()
@@ -252,7 +252,7 @@ class MainWindow(QMainWindow):
 
     def push_move_now(self) -> None:
         """Pass the turn to the loaded engine to push a move."""
-        self._chess_game.pass_turn_to_engine()
+        self._game.pass_turn_to_engine()
 
     def show_settings_dialog(self) -> None:
         """Show the Settings dialog."""
@@ -269,7 +269,7 @@ class MainWindow(QMainWindow):
         )
 
         if engine_file:
-            self._uci_engine.load(engine_file)
+            self._engine.load(engine_file)
             self.invoke_engine()
 
     def show_about(self) -> None:
@@ -298,12 +298,12 @@ class MainWindow(QMainWindow):
 
     def stop_analysis(self) -> None:
         """Stop analyzing the current chessboard position."""
-        self._uci_engine.stop_analysis()
+        self._engine.stop_analysis()
 
     def show_fen(self) -> None:
         """Show a FEN (Forsyth-Edwards Notation) in the FEN editor."""
         self._fen_editor.reset_background_color()
-        self._fen_editor.setText(self._chess_game.position.fen())
+        self._fen_editor.setText(self._game.position.fen())
 
     def show_evaluation(self, evaluation: Score) -> None:
         """Show position evaluation by the given `evaluation`."""
@@ -315,7 +315,7 @@ class MainWindow(QMainWindow):
 
     def show_opening(self) -> None:
         """Show an ECO code along with a chess opening name."""
-        variation: str = self._chess_game.variation
+        variation: str = self._game.variation
         eco_code, opening_name = get_opening_from(variation)
         self._opening_label.setText(f"{eco_code}: {opening_name}")
 
@@ -332,17 +332,17 @@ class MainWindow(QMainWindow):
 
     def start_new_game(self) -> None:
         """Start a new game by resetting everything."""
-        if self._chess_game.is_side_flipped():
+        if self._game.is_side_flipped():
             self.flip_clocks()
 
         self._black_clock.reset()
         self._white_clock.reset()
         self._table_view.refresh()
         self._opening_label.clear()
+        self._engine.stop_analysis()
         self._evaluation_bar.reset()
-        self._uci_engine.stop_analysis()
+        self._game.prepare_new_game()
         self._notifications_label.clear()
-        self._chess_game.prepare_new_game()
 
         self.invoke_engine()
 
@@ -360,7 +360,7 @@ class MainWindow(QMainWindow):
         )
 
         if answer == answer.Yes:
-            self._uci_engine.quit()
+            self._engine.quit()
             event.accept()
         else:
             event.ignore()

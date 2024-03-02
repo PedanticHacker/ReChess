@@ -11,7 +11,7 @@ from rechess import get_config_value
 from rechess.gui.dialogs import PromotionDialog
 
 
-class ChessGame(QObject):
+class Game(QObject):
     """An implementation of the standard chess game."""
 
     notation: list[str] = []
@@ -108,7 +108,7 @@ class ChessGame(QObject):
             self.update_game_state()
 
     def update_game_state(self) -> None:
-        """Update the current state of a chess game."""
+        """Update the current state of a game."""
         # self._black_clock.toggle_timer()
         # self._white_clock.toggle_timer()
 
@@ -191,7 +191,7 @@ class ChessGame(QObject):
 
     @property
     def legal_moves(self) -> list[Square] | None:
-        """Get all legal moves for a piece from its square."""
+        """Get all legal moves for a piece from its origin square."""
         if self.from_square == -1:
             return None
 
@@ -211,7 +211,7 @@ class ChessGame(QObject):
 
     @property
     def position(self) -> Board:
-        """Get the current position."""
+        """Get the current position on the board."""
         return self._board
 
     @position.setter

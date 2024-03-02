@@ -8,8 +8,8 @@ from PySide6.QtCore import QObject, Signal
 from rechess import get_config_value
 
 
-class UCIEngine(QObject):
-    """A mechanism to communicate with a UCI-based engine."""
+class Engine(QObject):
+    """A mechanism to communicate with a UCI-based chess engine."""
 
     move_played: Signal = Signal(Move)
     analysis_updated: Signal = Signal(str)

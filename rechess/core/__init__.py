@@ -1,3 +1,3 @@
-from .chess_game import ChessGame
-from .uci_engine import UCIEngine
+from .game import Game
+from .engine import Engine
 from .table_model import TableModel
