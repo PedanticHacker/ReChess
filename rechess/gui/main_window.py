@@ -47,13 +47,14 @@ class MainWindow(QMainWindow):
         """Create widgets for the main window."""
         self._game: Game = Game()
         self._engine: Engine = Engine()
+        self._table_model: TableModel = TableModel(Game.notation)
 
         self._svg_board: SVGBoard = SVGBoard()
         self._fen_editor: FENEditor = FENEditor()
-        self._table_view: TableView = TableView()
         self._black_clock: Clock = Clock(ClockStyle.Black)
         self._white_clock: Clock = Clock(ClockStyle.White)
         self._evaluation_bar: EvaluationBar = EvaluationBar()
+        self._table_view: TableView = TableView(self._table_model)
 
         self._opening_label: QLabel = QLabel()
         self._notifications_label: QLabel = QLabel()
@@ -220,7 +221,7 @@ class MainWindow(QMainWindow):
         self.widget_container.setLayout(self.grid_layout)
         self.setCentralWidget(self.widget_container)
 
-        if self._game.is_side_flipped():
+        if self._game.is_orientation_flipped():
             self.flip_clocks()
 
     def connect_events_with_handlers(self) -> None:
@@ -332,7 +333,7 @@ class MainWindow(QMainWindow):
 
     def start_new_game(self) -> None:
         """Start a new game by resetting everything."""
-        if self._game.is_side_flipped():
+        if self._game.is_orientation_flipped():
             self.flip_clocks()
 
         self._black_clock.reset()

@@ -1,4 +1,4 @@
-from json import load
+from json import dump, load
 from typing import Callable
 
 from PySide6.QtCore import QSize
@@ -40,6 +40,18 @@ def get_config_value(section: str, key: str) -> int | bool:
         config_contents = load(config_file)
 
     return config_contents[section][key]
+
+
+def set_config_values(new_config_values: dict[str, dict[str, int | bool]]) -> None:
+    """Set config values from the given `new_config_values`."""
+    with open("rechess/config.json") as config_file:
+        config_contents = load(config_file)
+
+    config_contents |= new_config_values
+
+    with open("rechess/config.json", mode="w", newline="\n") as config_file:
+        dump(config_contents, config_file, indent=4)
+        config_file.write("\n")
 
 
 def get_svg_icon(file_name: str) -> QIcon:

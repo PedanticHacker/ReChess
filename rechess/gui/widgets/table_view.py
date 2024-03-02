@@ -1,19 +1,17 @@
 from PySide6.QtWidgets import QHeaderView, QTableView
 from PySide6.QtCore import QModelIndex, QSize, Slot
 
-from rechess.core import TableModel
+from rechess.core import Game, TableModel
 
 
 class TableView(QTableView):
     """A view for showing notation items in a 2-column table."""
 
-    def __init__(self) -> None:
+    def __init__(self, table_model: TableModel) -> None:
         super().__init__()
 
-        self._table_model: TableModel = TableModel()
-
         self.setShowGrid(False)
-        self.setModel(self._table_model)
+        self.setModel(table_model)
         self.setFixedSize(QSize(300, 550))
         self.verticalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Fixed)
         self.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)

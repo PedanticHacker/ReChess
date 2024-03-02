@@ -12,7 +12,7 @@ from rechess.gui.dialogs import PromotionDialog
 
 
 class Game(QObject):
-    """An implementation of the standard chess game."""
+    """An implementation of the standard game."""
 
     notation: list[str] = []
 
@@ -32,7 +32,7 @@ class Game(QObject):
         self.set_arrow_for(move)
 
     def prepare_new_game(self) -> None:
-        """Prepare the starting state of a standard game."""
+        """Prepare the starting state of a game."""
         self._arrow.clear()
         self._board.reset()
         self.notation.clear()
@@ -113,7 +113,7 @@ class Game(QObject):
         # self._white_clock.toggle_timer()
 
         # self._evaluation_bar.reset()
-        # self._uci_engine.stop_analysis()
+        # self._engine.stop_analysis()
         # self._notifications_label.clear()
 
         if self.is_game_over():
@@ -123,10 +123,10 @@ class Game(QObject):
             self.show_game_result()
             # self.offer_new_game()
 
-        # if self.engine.has_resigned():
+        # if self._engine.has_resigned():
         #     self._black_clock.stop_timer()
         #     self._white_clock.stop_timer()
-        #     self._notifications_label.setText(f"{self.engine.name} has resigned!")
+        #     self._notifications_label.setText(f"{self._engine.name} has resigned!")
 
         # self._svg_board.draw()
 
@@ -150,7 +150,7 @@ class Game(QObject):
 
     def pass_turn_to_engine(self) -> None:
         """Pass the current turn to the engine."""
-        self._engine_color = self._board.turn
+        self._engine_color = not self._engine_color
         # utils.save_settings()
 
     def is_black_on_turn(self) -> bool:
@@ -169,7 +169,7 @@ class Game(QObject):
         """Return `True` if the engine is on turn, else `False`."""
         return self._board.turn == self._engine_color
 
-    def is_side_flipped(self) -> bool:
+    def is_orientation_flipped(self) -> bool:
         """Return `True` if Black plays from the bottom, else `False`."""
         return self._orientation == BLACK
 

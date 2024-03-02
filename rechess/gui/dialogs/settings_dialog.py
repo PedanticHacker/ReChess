@@ -12,7 +12,7 @@ from PySide6.QtWidgets import (
     QDialogButtonBox,
 )
 
-from rechess import get_config_value
+from rechess import get_config_value, set_config_values
 
 
 class SettingsDialog(QDialog):
@@ -119,24 +119,16 @@ class SettingsDialog(QDialog):
 
     @Slot()
     def on_save_settings(self) -> None:
-        """Save the changed settings."""
-        is_engine_black: bool = self.engine_black_option.isChecked()
-        is_engine_pondering: bool = self.engine_pondering_option.isChecked()
-
-        clock_time: int = self.clock_time_option.currentData()
-        clock_increment: int = self.clock_increment_option.currentData()
-
-        config_contents = {
+        """Save any changed settings."""
+        new_config_values: dict[str, dict[str, int | bool]] = {
             "clock": {
-                "time": clock_time,
-                "increment": clock_increment,
+                "time": self.clock_time_option.currentData(),
+                "increment": self.clock_increment_option.currentData(),
             },
             "engine": {
-                "black": is_engine_black,
-                "pondering": is_engine_pondering,
+                "black": self.engine_black_option.isChecked(),
+                "pondering": self.engine_pondering_option.isChecked(),
             },
         }
 
-        with open("config.json", mode="w", newline="\n") as config_file:
-            dump(config_contents, config_file, indent=4)
-            config_file.write("\n")
+        set_config_values(new_config_values)

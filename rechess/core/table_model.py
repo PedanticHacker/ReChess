@@ -13,8 +13,10 @@ from rechess.core import Game
 class TableModel(QAbstractTableModel):
     """The model of a table for notation items."""
 
-    def __init__(self) -> None:
+    def __init__(self, notation_items: list[str]) -> None:
         super().__init__()
+
+        self._notation_items = notation_items
 
     def data(
         self,
@@ -25,8 +27,8 @@ class TableModel(QAbstractTableModel):
         if role == Qt.ItemDataRole.DisplayRole:
             notation_item_index: int = 2 * index.row() + index.column()
 
-            if 0 <= notation_item_index < len(Game.notation):
-                return Game.notation[notation_item_index]
+            if 0 <= notation_item_index < len(self._notation_items):
+                return self._notation_items[notation_item_index]
 
     def flags(
         self,
@@ -35,14 +37,15 @@ class TableModel(QAbstractTableModel):
         """Make notation items enabled and selectable if there's data."""
         if self.data(index):
             return Qt.ItemFlag.ItemIsEnabled | Qt.ItemFlag.ItemIsSelectable
-        return Qt.ItemFlag.NoItemFlags
+        else:
+            return Qt.ItemFlag.NoItemFlags
 
     def rowCount(
         self,
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
         """Count the rows needed for the table."""
-        return len(Game.notation) // 2 + 1
+        return len(self._notation_items) // 2 + 1
 
     def columnCount(
         self,
