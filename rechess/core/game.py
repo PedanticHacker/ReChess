@@ -4,14 +4,14 @@ from contextlib import suppress
 from chess import square
 from chess import BB_SQUARES, BLACK, WHITE
 from chess import Board, Color, IllegalMoveError, Move, PieceType, Square
-from PySide6.QtCore import QObject, QUrl, Slot
+from PySide6.QtCore import QUrl, Slot
 from PySide6.QtMultimedia import QSoundEffect
 
 from rechess import get_config_value
 from rechess.gui.dialogs import PromotionDialog
 
 
-class Game(QObject):
+class Game:
     """An implementation of the standard game."""
 
     notation: list[str] = []
