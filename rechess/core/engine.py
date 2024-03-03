@@ -9,7 +9,7 @@ from rechess import get_config_value
 
 
 class Engine(QObject):
-    """A mechanism to communicate with a UCI-based chess engine."""
+    """A mechanism to communicate with an engine."""
 
     move_played: Signal = Signal(Move)
     analysis_updated: Signal = Signal(str)
