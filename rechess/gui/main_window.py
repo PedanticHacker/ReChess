@@ -278,14 +278,11 @@ class MainWindow(QMainWindow):
         QMessageBox.about(
             self,
             "About",
-            """
-            A GUI app for playing chess against a UCI engine.
-            \n
-            \n
-            Copyright 2024 Boštjan Mejak
-            \n
-            MIT License
-            """,
+            (
+                "A GUI app for playing chess against a UCI engine.\n\n"
+                "Copyright 2024 Boštjan Mejak\n"
+                "MIT License"
+            ),
         )
 
     def flip_clocks(self) -> None:
