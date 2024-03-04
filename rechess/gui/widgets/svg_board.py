@@ -45,7 +45,7 @@ class SVGBoard(QSvgWidget):
         self.load(encoded_svg_board)
 
     def flip_board(self) -> None:
-        """Flip the board."""
+        """Flip the board's orientation."""
         self._game.flip_board()
 
     def mousePressEvent(self, event: QMouseEvent) -> None:
