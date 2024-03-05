@@ -41,9 +41,6 @@ class MainWindow(QMainWindow):
         self.set_personal_layout()
         self.connect_events_with_handlers()
 
-        self.invoke_engine()
-        self.update_game_state()
-
     def create_widgets(self) -> None:
         """Create widgets for the main window."""
         self._game: Game = Game()
@@ -324,7 +321,7 @@ class MainWindow(QMainWindow):
     def update_game_state(self) -> None:
         """Update the current state of a game."""
         self.show_opening()
-        self.toggle_clocks()
+        self.toggle_clock_state()
         self._evaluation_bar.reset()
         self._engine.stop_analysis()
 
@@ -342,8 +339,8 @@ class MainWindow(QMainWindow):
 
         self._svg_board.draw()
 
-    def toggle_clocks(self) -> None:
-        """Toggle the clocks of Black and White players."""
+    def toggle_clock_state(self) -> None:
+        """Toggle the started/stopped state of both clocks."""
         if self._game.is_white_on_turn():
             self._black_clock.stop_timer()
             self._white_clock.start_timer()
