@@ -15,7 +15,6 @@ class SVGBoard(QSvgWidget):
         super().__init__()
 
         self._game: Game = Game()
-
         self._colors: dict[str, str] = {
             "coord": "white",
             "margin": "green",

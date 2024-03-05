@@ -70,11 +70,11 @@ class Game:
     def detect_file_and_rank_from(self, x: float, y: float) -> tuple[int, int]:
         """Detect a file and a rank from `x` and `y` coordinates."""
         if self._orientation == WHITE:
-            file = (x - 22) // 69.5
-            rank = 7 - (y - 22) // 69.5
+            file = x // 75
+            rank = 7 - (y // 75)
         else:
-            file = 7 - (x - 22) // 69.5
-            rank = (y - 22) // 69.5
+            file = 7 - (x // 75)
+            rank = y // 75
 
         return round(file), round(rank)
 
