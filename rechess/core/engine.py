@@ -3,22 +3,20 @@ from contextlib import suppress
 
 from chess import Move
 from chess.engine import EngineError, Limit, PlayResult, SimpleEngine
-from PySide6.QtCore import QObject, Signal, Slot
+from PySide6.QtCore import Slot
 
-from rechess.core import Game
 from rechess import get_config_value
+from rechess.core import Game, Signals
 
 
-class Engine(QObject):
+class Engine:
     """A mechanism to communicate with a UCI engine."""
-
-    move_played: Signal = Signal(Move)
-    analysis_updated: Signal = Signal(str)
 
     def __init__(self) -> None:
         super().__init__()
 
         self._game: Game = Game()
+        self._signals: Signals = Signals()
         self._loaded_engine: SimpleEngine = SimpleEngine.popen_uci(
             f"rechess/resources/engines/stockfish-16.1/{system().lower()}/"
             f"stockfish{'.exe' if system() == 'Windows' else ''}"
@@ -44,7 +42,7 @@ class Engine(QObject):
             ponder=get_config_value("engine", "pondering"),
         )
         self._resigned = play_result.resigned
-        self.move_played.emit(play_result.move)
+        self._signals.move_played.emit(play_result.move)
 
     def start_analysis(self) -> None:
         """Start analyzing the current position."""

@@ -7,6 +7,7 @@ from chess import Board, Color, IllegalMoveError, Move, PieceType, Square
 from PySide6.QtCore import QUrl, Slot
 from PySide6.QtMultimedia import QSoundEffect
 
+from rechess.core import Signals
 from rechess import get_config_value
 from rechess.gui.dialogs import PromotionDialog
 
@@ -20,6 +21,7 @@ class Game:
         super().__init__()
 
         self._board: Board = Board()
+        self._signals: Signals = Signals()
         self._arrow: list[tuple[Square, Square]] = []
         self._sound_effect: QSoundEffect = QSoundEffect()
 
@@ -86,7 +88,7 @@ class Game:
             if move.promotion:
                 move.promotion = self.get_promotion_piece()
 
-            self.push_human_move(move)
+            self._push(move)
 
     def get_promotion_piece(self) -> PieceType:
         """Show the promotion dialog to get a promotion piece."""
@@ -100,11 +102,6 @@ class Game:
         file_url = QUrl.fromLocalFile(file_path)
         self._sound_effect.setSource(file_url)
         self._sound_effect.play()
-
-    def push_human_move(self, move: Move) -> None:
-        """Push a legal human move with the given `move`."""
-        if self._board.is_legal(move):
-            self._push(move)
 
     def set_arrow_for(self, move: Move) -> None:
         """Set an arrow for the given `move`."""
@@ -193,5 +190,4 @@ class Game:
     @Slot(Move)
     def push_engine_move(self, move: Move) -> None:
         """Push a legal engine move as `move`."""
-        if self._board.is_legal(move):
-            self._push(move)
+        self._push(move)
