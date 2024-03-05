@@ -1,4 +1,5 @@
 from chess import svg
+from PySide6.QtCore import QSize
 from PySide6.QtGui import QMouseEvent
 from PySide6.QtSvgWidgets import QSvgWidget
 
@@ -13,6 +14,8 @@ class SVGBoard(QSvgWidget):
 
     def __init__(self) -> None:
         super().__init__()
+
+        self.setFixedSize(QSize(600, 600))
 
         self._game: Game = Game()
         self._colors: dict[str, str] = {
