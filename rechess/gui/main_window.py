@@ -320,6 +320,45 @@ class MainWindow(QMainWindow):
         eco_code, opening_name = get_opening_from(variation)
         self._opening_label.setText(f"{eco_code}: {opening_name}")
 
+    def update_game_state(self) -> None:
+        """Update the current state of a game."""
+        self.toggle_clocks()
+        self._evaluation_bar.reset()
+        self._engine.stop_analysis()
+
+        if self._game.is_game_over():
+            self._black_clock.stop_timer()
+            self._white_clock.stop_timer()
+            self._notifications_label.setText(self.get_result())
+
+            self.offer_new_game()
+
+        if self._engine.has_resigned():
+            self._black_clock.stop_timer()
+            self._white_clock.stop_timer()
+            self._notifications_label.setText(f"{self._engine.name} has resigned!")
+
+        self._svg_board.draw()
+
+    def toggle_clocks(self) -> None:
+        """Toggle the clocks of Black and White players."""
+        if self._game.is_white_on_turn():
+            self._black_clock.stop_timer()
+            self._white_clock.start_timer()
+        else:
+            self._white_clock.stop_timer()
+            self._black_clock.start_timer()
+
+    def show_result(self) -> str:
+        """Show the result of a game."""
+        result_rewordings = {
+            "1/2-1/2": "Draw",
+            "0-1": "Black wins!",
+            "1-0": "White wins!",
+            "*": "Undetermined game",
+        }
+        return result_rewordings[self._board.result()]
+
     def offer_new_game(self) -> None:
         """Offer to start a new game."""
         answer: QMessageBox.StandardButton = QMessageBox.question(
@@ -345,6 +384,7 @@ class MainWindow(QMainWindow):
         self._game.prepare_new_game()
         self._notifications_label.clear()
 
+        self.toggle_clocks()
         self.invoke_engine()
 
     def closeEvent(self, event: QCloseEvent) -> None:

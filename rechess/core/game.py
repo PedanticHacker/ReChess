@@ -105,40 +105,7 @@ class Game:
         """Push a legal human move with the given `move`."""
         if self._board.is_legal(move):
             self._push(move)
-            self.update_game_state()
-
-    def update_game_state(self) -> None:
-        """Update the current state of a game."""
-        # self._black_clock.toggle_timer()
-        # self._white_clock.toggle_timer()
-
-        # self._evaluation_bar.reset()
-        # self._engine.stop_analysis()
-        # self._notifications_label.clear()
-
-        if self.is_game_over():
-            # self._black_clock.stop_timer()
-            # self._white_clock.stop_timer()
-
-            self.show_game_result()
-            # self.offer_new_game()
-
-        # if self._engine.has_resigned():
-        #     self._black_clock.stop_timer()
-        #     self._white_clock.stop_timer()
-        #     self._notifications_label.setText(f"{self._engine.name} has resigned!")
-
-        # self._svg_board.draw()
-
-    def show_game_result(self) -> str:
-        """Show the result of a chess game."""
-        game_result_rewordings = {
-            "1/2-1/2": "Draw",
-            "0-1": "Black wins!",
-            "1-0": "White wins!",
-            "*": "Undetermined game",
-        }
-        return game_result_rewordings[self._board.result()]
+            # self.update_game_state()
 
     def set_arrow_for(self, move: Move) -> None:
         """Set an arrow for the given `move`."""
@@ -229,4 +196,4 @@ class Game:
         """Push a legal engine move as `move`."""
         if self._board.is_legal(move):
             self._push(move)
-            self.update_game_state()
+            # self.update_game_state()
