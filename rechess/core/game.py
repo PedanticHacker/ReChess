@@ -4,10 +4,9 @@ from contextlib import suppress
 from chess import square
 from chess import BB_SQUARES, BLACK, WHITE
 from chess import Board, Color, IllegalMoveError, Move, PieceType, Square
-from PySide6.QtCore import QUrl, Slot
+from PySide6.QtCore import QUrl
 from PySide6.QtMultimedia import QSoundEffect
 
-from rechess.core import Signals
 from rechess import get_config_value
 from rechess.gui.dialogs import PromotionDialog
 
@@ -16,19 +15,18 @@ class Game:
     """An implementation of the standard game."""
 
     notation: list[str] = []
+    position: Board = Board()
 
     def __init__(self) -> None:
         super().__init__()
 
-        self._board: Board = Board()
-        self._signals: Signals = Signals()
         self._arrow: list[tuple[Square, Square]] = []
         self._sound_effect: QSoundEffect = QSoundEffect()
 
         self.prepare_new_game()
 
-    def _push(self, move: Move) -> None:
-        """Play a sound effect for the given `move` and push it."""
+    def push(self, move: Move) -> None:
+        """Push the given `move`."""
         self.play_sound_effect_for(move)
         self.set_notation_item_for(move)
         self.set_arrow_for(move)
@@ -36,7 +34,7 @@ class Game:
     def prepare_new_game(self) -> None:
         """Prepare the starting state of a game."""
         self._arrow.clear()
-        self._board.reset()
+        self.position.reset()
         self.notation.clear()
 
         self._engine_color: Color = get_config_value("engine", "black")
@@ -51,7 +49,7 @@ class Game:
 
     def set_notation_item_for(self, move: Move) -> None:
         """Set a notation item for the given `move`."""
-        notation_item: str = self._board.san_and_push(move)
+        notation_item: str = self.position.san_and_push(move)
         self.notation.append(notation_item)
 
     def flip_board(self) -> None:
@@ -83,21 +81,21 @@ class Game:
     def find_move(self, origin: Square, target: Square) -> None:
         """Find a move from the given `origin` and `target` squares."""
         with suppress(IllegalMoveError):
-            move: Move = self._board.find_move(origin, target)
+            move: Move = self.position.find_move(origin, target)
 
             if move.promotion:
                 move.promotion = self.get_promotion_piece()
 
-            self._push(move)
+            self.push(move)
 
     def get_promotion_piece(self) -> PieceType:
         """Show the promotion dialog to get a promotion piece."""
-        promotion_dialog: PromotionDialog = PromotionDialog(self._board.turn)
+        promotion_dialog: PromotionDialog = PromotionDialog(self.position.turn)
         return promotion_dialog.piece_type
 
     def play_sound_effect_for(self, move: Move) -> None:
         """Play a WAV sound effect for the given `move`."""
-        file_name = "capture.wav" if self._board.is_capture(move) else "move.wav"
+        file_name = "capture.wav" if self.position.is_capture(move) else "move.wav"
         file_path = f"rechess/resources/audio/{file_name}"
         file_url = QUrl.fromLocalFile(file_path)
         self._sound_effect.setSource(file_url)
@@ -109,7 +107,7 @@ class Game:
 
     def set_root_position(self) -> None:
         """Set all 32 pieces to their root position."""
-        self._board = self._board.root()
+        self.position.root()
 
     def pass_turn_to_engine(self) -> None:
         """Pass the current turn to the engine."""
@@ -118,7 +116,7 @@ class Game:
 
     def is_black_on_turn(self) -> bool:
         """Return True if Black is on turn, else False."""
-        return self._board.turn == BLACK
+        return self.position.turn == BLACK
 
     def is_game_in_progress(self) -> bool:
         """Return True if a game is in progress, else False."""
@@ -126,11 +124,11 @@ class Game:
 
     def is_game_over(self) -> bool:
         """Return `True` if the current game is over, else `False`."""
-        return self._board.is_game_over(claim_draw=True)
+        return self.position.is_game_over(claim_draw=True)
 
     def is_engine_on_turn(self) -> bool:
         """Return `True` if the engine is on turn, else `False`."""
-        return self._board.turn == self._engine_color
+        return self.position.turn == self._engine_color
 
     def is_orientation_flipped(self) -> bool:
         """Return `True` if Black plays from the bottom, else `False`."""
@@ -138,7 +136,7 @@ class Game:
 
     def is_white_on_turn(self) -> bool:
         """Return `True` if White is on turn, else `False`."""
-        return self._board.turn == WHITE
+        return self.position.turn == WHITE
 
     @property
     def arrow(self) -> list[tuple[Square, Square]]:
@@ -148,8 +146,8 @@ class Game:
     @property
     def king_square(self) -> Square | None:
         """Get the square of a king in check."""
-        if self._board.is_check():
-            return self._board.king(self._board.turn)
+        if self.position.is_check():
+            return self.position.king(self.position.turn)
         return None
 
     @property
@@ -159,7 +157,7 @@ class Game:
             return None
 
         square: Square = BB_SQUARES[self.from_square]
-        legal_moves: Iterator[Move] = self._board.generate_legal_moves(square)
+        legal_moves: Iterator[Move] = self.position.generate_legal_moves(square)
         return [legal_move.to_square for legal_move in legal_moves]
 
     @property
@@ -173,21 +171,6 @@ class Game:
         return "White" if self.is_white_on_turn() else "Black"
 
     @property
-    def position(self) -> Board:
-        """Get the current position on the board."""
-        return self._board
-
-    @position.setter
-    def position(self, new_position: Board) -> None:
-        """Set a new position on the board from `new_position`."""
-        self._board = new_position
-
-    @property
     def variation(self) -> str:
         """Get the current variation of moves."""
-        return Board().variation_san(self._board.move_stack)
-
-    @Slot(Move)
-    def push_engine_move(self, move: Move) -> None:
-        """Push a legal engine move as `move`."""
-        self._push(move)
+        return Board().variation_san(self.position.move_stack)

@@ -3,20 +3,21 @@ from contextlib import suppress
 
 from chess import Move
 from chess.engine import EngineError, Limit, PlayResult, SimpleEngine
-from PySide6.QtCore import Slot
+from PySide6.QtCore import QObject, Signal
 
 from rechess import get_config_value
-from rechess.core import Game, Signals
+from rechess.core import Game
 
 
-class Engine:
+class Engine(QObject):
     """A mechanism to communicate with a UCI engine."""
+
+    engine_move_pushed: Signal = Signal(Move)
+    engine_analysis_updated: Signal = Signal(str)
 
     def __init__(self) -> None:
         super().__init__()
 
-        self._game: Game = Game()
-        self._signals: Signals = Signals()
         self._loaded_engine: SimpleEngine = SimpleEngine.popen_uci(
             f"rechess/resources/engines/stockfish-16.1/{system().lower()}/"
             f"stockfish{'.exe' if system() == 'Windows' else ''}"
@@ -35,25 +36,25 @@ class Engine:
             self._loaded_engine = SimpleEngine.popen_uci(file_path)
 
     def play_move(self) -> None:
-        """Play a move with the loaded engine."""
+        """Play a move by the loaded engine."""
         play_result: PlayResult = self._loaded_engine.play(
             limit=Limit(1.0),
-            board=self._game.position,
+            board=Game.position,
             ponder=get_config_value("engine", "pondering"),
         )
         self._resigned = play_result.resigned
-        self._signals.move_played.emit(play_result.move)
+        self.engine_move_pushed.emit(play_result.move)
 
     def start_analysis(self) -> None:
         """Start analyzing the current position."""
         self.is_analyzing = True
 
-        with self._loaded_engine.analysis(self._game.position) as analysis:
+        with self._loaded_engine.analysis(Game.position) as analysis:
             for info in analysis:
                 if not self.is_analyzing:
                     break
                 if "pv" in info:
-                    self.analysis_updated.emit(info["pv"])
+                    self.engine_analysis_updated.emit(info["pv"])
 
     def stop_analysis(self) -> None:
         """Stop analyzing the current position."""

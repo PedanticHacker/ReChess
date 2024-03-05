@@ -1,7 +1,8 @@
 from pathlib import Path
 
+from chess import Move
 from chess.engine import Score
-from PySide6.QtCore import QThreadPool
+from PySide6.QtCore import QThreadPool, Slot
 from PySide6.QtGui import QCloseEvent, QWheelEvent
 from PySide6.QtWidgets import (
     QLabel,
@@ -224,7 +225,8 @@ class MainWindow(QMainWindow):
 
     def connect_events_with_handlers(self) -> None:
         """Connect `move_played` event with `push_engine_move` handler."""
-        self._engine.move_played.connect(self._game.push_engine_move)
+        self._engine.engine_move_pushed.connect(self.push_engine_move)
+        self._engine.engine_analysis_updated.connect(self.show_engine_analysis)
 
     def invoke_engine(self) -> None:
         """Invoke the currently loaded engine to play a move."""
@@ -419,3 +421,13 @@ class MainWindow(QMainWindow):
             self._table_view.select_preceding_item()
         elif downward_roll:
             self._table_view.select_following_item()
+
+    @Slot(Move)
+    def push_engine_move(self, move: Move) -> None:
+        """Push the given `move` made by the engine."""
+        self._game.push(move)
+        self.update_game_state()
+
+    @Slot(str)
+    def show_engine_analysis(self, variation: str) -> None:
+        self._notifications_label.setText(variation)
