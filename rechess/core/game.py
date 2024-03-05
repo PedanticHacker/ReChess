@@ -105,7 +105,6 @@ class Game:
         """Push a legal human move with the given `move`."""
         if self._board.is_legal(move):
             self._push(move)
-            # self.update_game_state()
 
     def set_arrow_for(self, move: Move) -> None:
         """Set an arrow for the given `move`."""
@@ -196,4 +195,3 @@ class Game:
         """Push a legal engine move as `move`."""
         if self._board.is_legal(move):
             self._push(move)
-            # self.update_game_state()

@@ -42,6 +42,7 @@ class MainWindow(QMainWindow):
         self.connect_events_with_handlers()
 
         self.invoke_engine()
+        self.update_game_state()
 
     def create_widgets(self) -> None:
         """Create widgets for the main window."""
@@ -322,6 +323,7 @@ class MainWindow(QMainWindow):
 
     def update_game_state(self) -> None:
         """Update the current state of a game."""
+        self.show_opening()
         self.toggle_clocks()
         self._evaluation_bar.reset()
         self._engine.stop_analysis()

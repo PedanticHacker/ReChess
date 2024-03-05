@@ -11282,5 +11282,4 @@ def get_opening_from(variation: str) -> tuple[str, str]:
             "King's Indian Defense: Orthodox Variation, Classical System, Traditional Line",
         ),
     }
-
     return openings[variation]
