@@ -12,7 +12,6 @@ from PySide6.QtWidgets import (
     QGridLayout,
     QMainWindow,
     QMessageBox,
-    QSizePolicy,
     QVBoxLayout,
 )
 
@@ -51,6 +50,7 @@ class MainWindow(QMainWindow):
 
         self._svg_board: SVGBoard = SVGBoard()
         self._fen_editor: FENEditor = FENEditor()
+
         self._black_clock: Clock = Clock(ClockStyle.Black)
         self._white_clock: Clock = Clock(ClockStyle.White)
         self._evaluation_bar: EvaluationBar = EvaluationBar()
@@ -210,20 +210,14 @@ class MainWindow(QMainWindow):
         self._clock_layout.addWidget(self._white_clock)
 
         self.grid_layout: QGridLayout = QGridLayout()
-        self.grid_layout.addLayout(self._clock_layout, 0, 0)
+        self.grid_layout.addLayout(self._clock_layout, 0, 0, Qt.Alignment.AlignRight)
         self.grid_layout.addWidget(self._svg_board, 0, 1)
         self.grid_layout.addWidget(self._evaluation_bar, 0, 2)
-        self.grid_layout.addWidget(self._table_view, 0, 3)
+        self.grid_layout.addWidget(self._table_view, 0, 3, Qt.Alignment.AlignLeft)
         self.grid_layout.addWidget(self._fen_editor, 1, 1)
-        self.grid_layout.addWidget(self._notifications_label, 2, 1)
+        self.grid_layout.addWidget(self._notifications_label, 2, 1, Qt.Alignment.AlignTop)
 
         self.widget_container: QWidget = QWidget()
-        self.widget_container.setSizePolicy(
-            QSizePolicy(
-                QSizePolicy.Policy.Minimum,
-                QSizePolicy.Policy.Minimum,
-            )
-        )
         self.widget_container.setLayout(self.grid_layout)
         self.setCentralWidget(self.widget_container)
 
@@ -330,6 +324,7 @@ class MainWindow(QMainWindow):
         """Update the current state of a game."""
         self.show_opening()
         self.toggle_clock_state()
+        self._table_model.refresh()
         self._evaluation_bar.reset()
         self._engine.stop_analysis()
 
@@ -375,11 +370,13 @@ class MainWindow(QMainWindow):
         self._black_clock.reset()
         self._white_clock.reset()
         self._opening_label.clear()
-        self._table_model.refresh()
+
         self._engine.stop_analysis()
         self._evaluation_bar.reset()
         self._game.prepare_new_game()
         self._notifications_label.clear()
+
+        self._table_model.refresh()
 
         self.toggle_clock_state()
         self._svg_board.draw()

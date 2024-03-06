@@ -46,7 +46,7 @@ class TableModel(QAbstractTableModel):
     ) -> int:
         """Count the rows needed for the table."""
         all_notation_items = len(self._notation_items)
-        return (all_notation_items // 2) + (all_notation_items % 2)
+        return (all_notation_items + 1) // 2
 
     def columnCount(
         self,
