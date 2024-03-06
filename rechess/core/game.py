@@ -4,15 +4,17 @@ from contextlib import suppress
 from chess import square
 from chess import BB_SQUARES, BLACK, WHITE
 from chess import Board, Color, IllegalMoveError, Move, PieceType, Square
-from PySide6.QtCore import QUrl
 from PySide6.QtMultimedia import QSoundEffect
+from PySide6.QtCore import QObject, QUrl, Signal
 
 from rechess import get_config_value
 from rechess.gui.dialogs import PromotionDialog
 
 
-class Game:
+class Game(QObject):
     """An implementation of the standard game."""
+
+    human_move_pushed: Signal = Signal(Move)
 
     notation: list[str] = []
     position: Board = Board()
@@ -28,9 +30,9 @@ class Game:
 
     def push(self, move: Move) -> None:
         """Push the given `move`."""
+        self.set_arrow_for(move)
         self.play_sound_effect_for(move)
         self.set_notation_item_for(move)
-        self.set_arrow_for(move)
 
     def prepare_new_game(self) -> None:
         """Prepare the starting state of a game."""
@@ -87,7 +89,7 @@ class Game:
             if move.promotion:
                 move.promotion = self.get_promotion_piece()
 
-            self.push(move)
+            self.human_move_pushed.emit(move)
 
     def get_promotion_piece(self) -> PieceType:
         """Show the promotion dialog to get a promotion piece."""
@@ -116,14 +118,10 @@ class Game:
         """Set an arrow for the given `move`."""
         self._arrow = [(move.from_square, move.to_square)]
 
-    def set_root_position(self) -> None:
-        """Set all 32 pieces to their root position."""
-        self.position.root()
-
     def pass_turn_to_engine(self) -> None:
         """Pass the current turn to the engine."""
         self._engine_color = not self._engine_color
-        # utils.save_settings()
+        # utils.set_config_values()
 
     def is_black_on_turn(self) -> bool:
         """Return True if Black is on turn, else False."""

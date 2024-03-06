@@ -225,7 +225,8 @@ class MainWindow(QMainWindow):
             self.flip_clocks()
 
     def connect_events_with_handlers(self) -> None:
-        """Connect `move_played` event with `push_engine_move` handler."""
+        """Connect custom events with specific handlers."""
+        self._game.human_move_pushed.connect(self.push_human_move)
         self._engine.engine_move_pushed.connect(self.push_engine_move)
         self._engine.engine_analysis_updated.connect(self.show_engine_analysis)
 
@@ -419,8 +420,15 @@ class MainWindow(QMainWindow):
             self._table_view.select_following_item()
 
     @Slot(Move)
+    def push_human_move(self, move: Move) -> None:
+        """Push the given `move` made by the human player."""
+        self._game.push(move)
+        self.update_game_state()
+        self.invoke_engine()
+
+    @Slot(Move)
     def push_engine_move(self, move: Move) -> None:
-        """Push the given `move` made by the engine."""
+        """Push the given `move` made by the engine player."""
         self._game.push(move)
         self.update_game_state()
 
