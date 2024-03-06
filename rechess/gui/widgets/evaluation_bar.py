@@ -16,10 +16,10 @@ class EvaluationBar(QProgressBar):
         self.setFixedSize(QSize(40, 500))
         self.setOrientation(Qt.Orientation.Vertical)
 
-        self._set_animation()
-        self._retain_size_when_hidden()
+        self.set_animation()
+        self.retain_size_when_hidden()
 
-    def _set_animation(self) -> None:
+    def set_animation(self) -> None:
         """Set animation for the bar."""
         self._animation: QPropertyAnimation = QPropertyAnimation(self)
         self._animation.setTargetObject(self)
@@ -27,7 +27,7 @@ class EvaluationBar(QProgressBar):
         self._animation.valueChanged.connect(self.update)
         self._animation.setEasingCurve(QEasingCurve.Type.InOutQuint)
 
-    def _retain_size_when_hidden(self) -> None:
+    def retain_size_when_hidden(self) -> None:
         """Retain the size of the bar when it is hidden."""
         evaluation_bar_size_policy: QSizePolicy = self.sizePolicy()
         evaluation_bar_size_policy.setRetainSizeWhenHidden(True)
