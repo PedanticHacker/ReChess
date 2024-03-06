@@ -15,7 +15,7 @@ class SVGBoard(QSvgWidget):
     def __init__(self) -> None:
         super().__init__()
 
-        self.setFixedSize(QSize(600, 600))
+        self.setFixedSize(QSize(500, 500))
 
         self._game: Game = Game()
         self._colors: dict[str, str] = {
@@ -53,5 +53,6 @@ class SVGBoard(QSvgWidget):
     def mousePressEvent(self, event: QMouseEvent) -> None:
         """Respond to pressing the primary mouse button."""
         x, y = event.position().x(), event.position().y()
+        print(x, y)
         self._game.get_square_from(x, y)
         self.draw()

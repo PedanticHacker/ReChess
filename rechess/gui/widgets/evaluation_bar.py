@@ -13,7 +13,7 @@ class EvaluationBar(QProgressBar):
 
         self.reset()
         self.setRange(0, 1000)
-        self.setFixedSize(QSize(40, 550))
+        self.setFixedSize(QSize(40, 500))
         self.setOrientation(Qt.Orientation.Vertical)
 
         self._set_animation()

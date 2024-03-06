@@ -12,7 +12,7 @@ class TableView(QTableView):
 
         self.setShowGrid(False)
         self.setModel(table_model)
-        self.setFixedSize(QSize(300, 550))
+        self.setFixedSize(QSize(300, 500))
         self.verticalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Fixed)
         self.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
 

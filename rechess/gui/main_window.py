@@ -2,7 +2,7 @@ from pathlib import Path
 
 from chess import Move
 from chess.engine import Score
-from PySide6.QtCore import QThreadPool, Slot
+from PySide6.QtCore import Qt, QThreadPool, Slot
 from PySide6.QtGui import QCloseEvent, QWheelEvent
 from PySide6.QtWidgets import (
     QLabel,
@@ -12,6 +12,7 @@ from PySide6.QtWidgets import (
     QGridLayout,
     QMainWindow,
     QMessageBox,
+    QSizePolicy,
     QVBoxLayout,
 )
 
@@ -205,7 +206,7 @@ class MainWindow(QMainWindow):
         """Set a personal layout for widgets on the main window."""
         self._clock_layout: QVBoxLayout = QVBoxLayout()
         self._clock_layout.addWidget(self._black_clock)
-        self._clock_layout.addSpacing(550)
+        self._clock_layout.addSpacing(400)
         self._clock_layout.addWidget(self._white_clock)
 
         self.grid_layout: QGridLayout = QGridLayout()
@@ -217,6 +218,12 @@ class MainWindow(QMainWindow):
         self.grid_layout.addWidget(self._notifications_label, 2, 1)
 
         self.widget_container: QWidget = QWidget()
+        self.widget_container.setSizePolicy(
+            QSizePolicy(
+                QSizePolicy.Policy.Minimum,
+                QSizePolicy.Policy.Minimum,
+            )
+        )
         self.widget_container.setLayout(self.grid_layout)
         self.setCentralWidget(self.widget_container)
 
