@@ -16,6 +16,7 @@ class Game:
 
     notation: list[str] = []
     position: Board = Board()
+    variation: str = Board().variation_san(position.move_stack)
 
     def __init__(self) -> None:
         super().__init__()
@@ -37,8 +38,8 @@ class Game:
         self.position.reset()
         self.notation.clear()
 
-        self._engine_color: Color = get_config_value("engine", "black")
-        self._perspective: Color = self._engine_color
+        self._engine_color: Color = get_config_value("engine", "white")
+        self._perspective: Color = not self._engine_color
 
         self.reset_squares()
 
@@ -179,8 +180,3 @@ class Game:
     def player_on_turn(self) -> str:
         """Get the player on turn as either White or Black."""
         return "White" if self.is_white_on_turn() else "Black"
-
-    @property
-    def variation(self) -> str:
-        """Get the current variation of moves."""
-        return Board().variation_san(self.position.move_stack)

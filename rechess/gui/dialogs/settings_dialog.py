@@ -50,7 +50,7 @@ class SettingsDialog(QDialog):
 
     def create_options(self) -> None:
         """Create options that will represent the settings."""
-        is_engine_black: bool = get_config_value("engine", "black")
+        is_engine_white: bool = get_config_value("engine", "white")
         is_engine_pondering: bool = get_config_value("engine", "pondering")
 
         clock_time: int = get_config_value("clock", "time")
@@ -58,13 +58,11 @@ class SettingsDialog(QDialog):
 
         self.engine_black_option: QRadioButton = QRadioButton()
         self.engine_black_option.setText("Black")
-        self.engine_black_option.setChecked(is_engine_black)
+        self.engine_black_option.setChecked(not is_engine_white)
 
         self.engine_white_option: QRadioButton = QRadioButton()
         self.engine_white_option.setText("White")
-        self.engine_white_option.setChecked(
-            not self.engine_black_option.isChecked()
-        )
+        self.engine_white_option.setChecked(is_engine_white)
 
         self.engine_pondering_option: QCheckBox = QCheckBox()
         self.engine_pondering_option.setText("Pondering")
@@ -126,7 +124,7 @@ class SettingsDialog(QDialog):
                 "increment": self.clock_increment_option.currentData(),
             },
             "engine": {
-                "black": self.engine_black_option.isChecked(),
+                "white": self.engine_white_option.isChecked(),
                 "pondering": self.engine_pondering_option.isChecked(),
             },
         }

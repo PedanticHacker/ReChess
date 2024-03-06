@@ -53,6 +53,5 @@ class SVGBoard(QSvgWidget):
     def mousePressEvent(self, event: QMouseEvent) -> None:
         """Respond to pressing the primary mouse button."""
         x, y = event.position().x(), event.position().y()
-        print(x, y)
         self._game.get_square_from(x, y)
         self.draw()

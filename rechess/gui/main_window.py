@@ -19,7 +19,7 @@ from PySide6.QtWidgets import (
 from rechess import ClockStyle
 from rechess.gui.dialogs import SettingsDialog
 from rechess.core import Engine, Game, TableModel
-from rechess import create_action, get_opening_from, get_svg_icon
+from rechess import create_action, get_openings, get_svg_icon
 from rechess.gui.widgets import (
     Clock,
     SVGBoard,
@@ -255,7 +255,7 @@ class MainWindow(QMainWindow):
         """Flip the orientation of clocks, board and evaluation bar."""
         self.flip_clocks()
         self._svg_board.flip_board()
-        self._evaluation_bar.flip_orientation()
+        self._evaluation_bar.flip_perspective()
         self._svg_board.draw()
 
     def push_move_now(self) -> None:
@@ -320,9 +320,11 @@ class MainWindow(QMainWindow):
 
     def show_opening(self) -> None:
         """Show an ECO code along with an opening name."""
-        variation: str = self._game.variation
-        eco_code, opening_name = get_opening_from(variation)
-        self._opening_label.setText(f"{eco_code}: {opening_name}")
+        openings: dict[str, tuple[str, str]] = get_openings()
+
+        if Game.variation in openings:
+            eco_code, opening_name = openings[Game.variation]
+            self._opening_label.setText(f"{eco_code}: {opening_name}")
 
     def update_game_state(self) -> None:
         """Update the current state of a game."""
@@ -367,7 +369,7 @@ class MainWindow(QMainWindow):
 
     def start_new_game(self) -> None:
         """Start a new game by resetting everything."""
-        if self._game.is_orientation_flipped():
+        if self._game.is_perspective_flipped():
             self.flip_clocks()
 
         self._black_clock.reset()

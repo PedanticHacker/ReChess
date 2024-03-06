@@ -59,9 +59,9 @@ def get_svg_icon(file_name: str) -> QIcon:
     return QIcon(f"rechess/resources/icons/{file_name}.svg")
 
 
-def get_opening_from(variation: str) -> tuple[str, str]:
-    """Get an ECO code and an opening name from `variation`."""
-    openings = {
+def get_openings() -> dict[str, tuple[str, str]]:
+    """Get a dictionary of openings."""
+    return {
         "1. Nh3 d5 2. g3 e5 3. f4 Bxh3 4. Bxh3 exf4": ("A00", "Amar Gambit"),
         "1. Nh3": ("A00", "Amar Opening"),
         "1. Nh3 d5 2. g3 e5 3. f4 Bxh3 4. Bxh3 exf4 5. O-O fxg3 6. hxg3": (
@@ -11282,4 +11282,3 @@ def get_opening_from(variation: str) -> tuple[str, str]:
             "King's Indian Defense: Orthodox Variation, Classical System, Traditional Line",
         ),
     }
-    return openings[variation]

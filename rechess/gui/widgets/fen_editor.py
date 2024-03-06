@@ -12,8 +12,6 @@ class FENEditor(QLineEdit):
     def __init__(self) -> None:
         super().__init__()
 
-        self._game: Game = Game()
-
         self.setMaxLength(90)
         self.setText(STARTING_FEN)
         self.setFixedSize(QSize(500, 20))
@@ -38,7 +36,7 @@ class FENEditor(QLineEdit):
     def on_fen_edited(self, new_fen: str) -> None:
         """Try to set a valid position from `new_fen`."""
         try:
-            position = self._game.position
+            position = Game.position
             position.set_fen(new_fen)
         except (IndexError, ValueError):
             self.set_red_background_color()
@@ -46,4 +44,4 @@ class FENEditor(QLineEdit):
             if position.is_valid():
                 self.clearFocus()
                 self.reset_background_color()
-                self._game.position = position
+                Game.position = position
