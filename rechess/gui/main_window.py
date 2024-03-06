@@ -381,8 +381,11 @@ class MainWindow(QMainWindow):
         self._game.prepare_new_game()
         self._notifications_label.clear()
 
-        self.invoke_engine()
         self.toggle_clock_state()
+        self._svg_board.draw()
+
+        if self._game.is_engine_on_turn():
+            self.invoke_engine()
 
     def closeEvent(self, event: QCloseEvent) -> None:
         """
