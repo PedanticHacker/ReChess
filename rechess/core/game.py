@@ -38,7 +38,7 @@ class Game:
         self.notation.clear()
 
         self._engine_color: Color = get_config_value("engine", "black")
-        self._orientation: Color = self._engine_color
+        self._perspective: Color = self._engine_color
 
         self.reset_squares()
 
@@ -53,8 +53,8 @@ class Game:
         self.notation.append(notation_item)
 
     def flip_board(self) -> None:
-        """Flip the board's orientation."""
-        self._orientation = not self._orientation
+        """Flip the board's perspective."""
+        self._perspective = not self._perspective
 
     def get_square_from(self, x: float, y: float) -> None:
         """Detect a square from `x` and `y` coordinates."""
@@ -69,7 +69,7 @@ class Game:
 
     def detect_file_and_rank_from(self, x: float, y: float) -> tuple[int, int]:
         """Detect a file and a rank from `x` and `y` coordinates."""
-        if self._orientation == WHITE:
+        if self._perspective == WHITE:
             file = (x - 22) // 69.5
             rank = 7 - (y - 22) // 69.5
         else:
@@ -92,6 +92,16 @@ class Game:
         """Show the promotion dialog to get a promotion piece."""
         promotion_dialog: PromotionDialog = PromotionDialog(self.position.turn)
         return promotion_dialog.piece_type
+
+    def get_result(self) -> str:
+        """Show the result of a game."""
+        result_rewordings = {
+            "1/2-1/2": "Draw",
+            "0-1": "Black wins!",
+            "1-0": "White wins!",
+            "*": "Undetermined game",
+        }
+        return result_rewordings[self.position.result()]
 
     def play_sound_effect_for(self, move: Move) -> None:
         """Play a WAV sound effect for the given `move`."""
@@ -130,9 +140,9 @@ class Game:
         """Return `True` if the engine is on turn, else `False`."""
         return self.position.turn == self._engine_color
 
-    def is_orientation_flipped(self) -> bool:
+    def is_perspective_flipped(self) -> bool:
         """Return `True` if Black plays from the bottom, else `False`."""
-        return self._orientation == BLACK
+        return self._perspective == BLACK
 
     def is_white_on_turn(self) -> bool:
         """Return `True` if White is on turn, else `False`."""
@@ -161,9 +171,9 @@ class Game:
         return [legal_move.to_square for legal_move in legal_moves]
 
     @property
-    def orientation(self) -> Color:
+    def perspective(self) -> Color:
         """Get the color playing from the bottom of the board."""
-        return self._orientation
+        return self._perspective
 
     @property
     def player_on_turn(self) -> str:

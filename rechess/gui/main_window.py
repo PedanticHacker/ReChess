@@ -220,7 +220,7 @@ class MainWindow(QMainWindow):
         self.widget_container.setLayout(self.grid_layout)
         self.setCentralWidget(self.widget_container)
 
-        if self._game.is_orientation_flipped():
+        if self._game.is_perspective_flipped():
             self.flip_clocks()
 
     def connect_events_with_handlers(self) -> None:
@@ -300,22 +300,19 @@ class MainWindow(QMainWindow):
     def stop_analysis(self) -> None:
         """Stop analyzing the current chessboard position."""
         self._engine.stop_analysis()
+        self._evaluation_bar.hide()
 
     def show_fen(self) -> None:
         """Show a FEN (Forsyth-Edwards Notation) in the FEN editor."""
         self._fen_editor.reset_background_color()
-        self._fen_editor.setText(self._game.position.fen())
+        self._fen_editor.setText(Game.position.fen())
 
     def show_evaluation(self, evaluation: Score) -> None:
         """Show position evaluation by the given `evaluation`."""
         self._evaluation_bar.animate(evaluation)
 
-    def show_variation(self, variation: str) -> None:
-        """Show a variation of chess moves by the given `variation`."""
-        self._notifications_label.setText(variation)
-
     def show_opening(self) -> None:
-        """Show an ECO code along with a chess opening name."""
+        """Show an ECO code along with an opening name."""
         variation: str = self._game.variation
         eco_code, opening_name = get_opening_from(variation)
         self._opening_label.setText(f"{eco_code}: {opening_name}")
@@ -330,7 +327,7 @@ class MainWindow(QMainWindow):
         if self._game.is_game_over():
             self._black_clock.stop_timer()
             self._white_clock.stop_timer()
-            self._notifications_label.setText(self.get_result())
+            self._notifications_label.setText(self._game.get_result())
 
             self.offer_new_game()
 
@@ -349,16 +346,6 @@ class MainWindow(QMainWindow):
         else:
             self._white_clock.stop_timer()
             self._black_clock.start_timer()
-
-    def show_result(self) -> str:
-        """Show the result of a game."""
-        result_rewordings = {
-            "1/2-1/2": "Draw",
-            "0-1": "Black wins!",
-            "1-0": "White wins!",
-            "*": "Undetermined game",
-        }
-        return result_rewordings[self._board.result()]
 
     def offer_new_game(self) -> None:
         """Offer to start a new game."""
@@ -385,8 +372,8 @@ class MainWindow(QMainWindow):
         self._game.prepare_new_game()
         self._notifications_label.clear()
 
-        self.toggle_clocks()
         self.invoke_engine()
+        self.toggle_clock_state()
 
     def closeEvent(self, event: QCloseEvent) -> None:
         """
