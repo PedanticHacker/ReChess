@@ -35,8 +35,8 @@ class Game:
     def prepare_new_game(self) -> None:
         """Prepare the starting state of a game."""
         self._arrow.clear()
-        self.position.reset()
         self.notation.clear()
+        self.position.reset()
 
         self._engine_color: Color = get_config_value("engine", "white")
         self._perspective: Color = not self._engine_color
