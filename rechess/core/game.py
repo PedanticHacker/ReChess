@@ -183,6 +183,11 @@ class Game(QObject):
         """Get the current position on the board."""
         return self._position
 
+    @position.setter
+    def position(self, new_position: Board) -> None:
+        """Set a new position on the board by the given `new_position`."""
+        self._position: Board = new_position
+
     @property
     def player_on_turn(self) -> str:
         """Get the player on turn as either White or Black."""
