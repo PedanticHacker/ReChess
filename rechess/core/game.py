@@ -95,6 +95,10 @@ class Game(QObject):
         promotion_dialog: PromotionDialog = PromotionDialog(self._position.turn)
         return promotion_dialog.piece_type
 
+    def get_fen(self) -> str:
+        """Get a FEN of the current position."""
+        return self._position.fen()
+
     def get_result(self) -> str:
         """Show the result of a game."""
         result_rewordings = {
@@ -103,11 +107,11 @@ class Game(QObject):
             "1-0": "White wins!",
             "*": "Undetermined game",
         }
-        return result_rewordings[self.position.result()]
+        return result_rewordings[self._position.result()]
 
     def play_sound_effect_for(self, move: Move) -> None:
         """Play a WAV sound effect for the given `move`."""
-        file_name = "capture.wav" if self.position.is_capture(move) else "move.wav"
+        file_name = "capture.wav" if self._position.is_capture(move) else "move.wav"
         file_path = f"rechess/resources/audio/{file_name}"
         file_url = QUrl.fromLocalFile(file_path)
         self._sound_effect.setSource(file_url)
@@ -124,19 +128,19 @@ class Game(QObject):
 
     def is_black_on_turn(self) -> bool:
         """Return True if Black is on turn, else False."""
-        return self.position.turn == BLACK
+        return self._position.turn == BLACK
 
     def is_game_in_progress(self) -> bool:
         """Return True if a game is in progress, else False."""
-        return bool(self.notation)
+        return bool(self._notation)
 
     def is_game_over(self) -> bool:
         """Return `True` if the current game is over, else `False`."""
-        return self.position.is_game_over(claim_draw=True)
+        return self._position.is_game_over(claim_draw=True)
 
     def is_engine_on_turn(self) -> bool:
         """Return `True` if the engine is on turn, else `False`."""
-        return self.position.turn == self._engine_color
+        return self._position.turn == self._engine_color
 
     def is_perspective_flipped(self) -> bool:
         """Return `True` if Black plays from the bottom, else `False`."""
@@ -144,7 +148,7 @@ class Game(QObject):
 
     def is_white_on_turn(self) -> bool:
         """Return `True` if White is on turn, else `False`."""
-        return self.position.turn == WHITE
+        return self._position.turn == WHITE
 
     @property
     def arrow(self) -> list[tuple[Square, Square]]:
@@ -154,8 +158,8 @@ class Game(QObject):
     @property
     def king_square(self) -> Square | None:
         """Get the square of a king in check."""
-        if self.position.is_check():
-            return self.position.king(self.position.turn)
+        if self._position.is_check():
+            return self._position.king(self._position.turn)
         return None
 
     @property
@@ -165,12 +169,12 @@ class Game(QObject):
             return None
 
         square: Square = BB_SQUARES[self.from_square]
-        legal_moves: Iterator[Move] = self.position.generate_legal_moves(square)
+        legal_moves: Iterator[Move] = self._position.generate_legal_moves(square)
         return [legal_move.to_square for legal_move in legal_moves]
 
     @property
     def notation(self) -> list[str]:
-        """Get the SAN notation of all the moves."""
+        """Get all notation items of pushed moves."""
         return self._notation
 
     @property
@@ -196,5 +200,5 @@ class Game(QObject):
     @property
     def variation(self) -> str:
         """Get the variation of moves, like `1. e4 e5 2. Nf3`."""
-        self._variation = self._position.variation_san(self._position.move_stack)
+        self._variation = Board().variation_san(self._position.move_stack)
         return self._variation

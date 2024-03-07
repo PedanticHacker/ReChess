@@ -1,13 +1,13 @@
 from PySide6.QtWidgets import QHeaderView, QTableView
-from PySide6.QtCore import QModelIndex, QSize, Slot
+from PySide6.QtCore import QAbstractTableModel, QModelIndex, QSize, Slot
 
-from rechess.core import Game, TableModel
+from rechess.core import Game
 
 
 class TableView(QTableView):
     """A view for showing notation items in a 2-column table."""
 
-    def __init__(self, table_model: TableModel) -> None:
+    def __init__(self, table_model: QAbstractTableModel) -> None:
         super().__init__()
 
         self.setShowGrid(False)

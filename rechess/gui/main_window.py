@@ -307,7 +307,7 @@ class MainWindow(QMainWindow):
     def show_fen(self) -> None:
         """Show a FEN (Forsyth-Edwards Notation) in the FEN editor."""
         self._fen_editor.reset_background_color()
-        self._fen_editor.setText(Game.position.fen())
+        self._fen_editor.setText(self._game.get_fen())
 
     def show_evaluation(self, evaluation: Score) -> None:
         """Show position evaluation by the given `evaluation`."""
@@ -317,12 +317,13 @@ class MainWindow(QMainWindow):
         """Show an ECO code along with an opening name."""
         openings: dict[str, tuple[str, str]] = get_openings()
 
-        if Game.variation in openings:
-            eco_code, opening_name = openings[Game.variation]
+        if self._game.variation in openings:
+            eco_code, opening_name = openings[self._game.variation]
             self._opening_label.setText(f"{eco_code}: {opening_name}")
 
     def update_game_state(self) -> None:
         """Update the current state of a game."""
+        self.show_fen()
         self.show_opening()
         self.toggle_clock_state()
         self._table_model.refresh()
@@ -375,11 +376,12 @@ class MainWindow(QMainWindow):
         self._engine.stop_analysis()
         self._evaluation_bar.reset()
         self._game.prepare_new_game()
+        self._table_model.refresh()
         self._notifications_label.clear()
 
-        self._table_model.refresh()
-
+        self.show_fen()
         self.toggle_clock_state()
+
         self._svg_board.draw()
 
         if self._game.is_engine_on_turn():
@@ -434,4 +436,4 @@ class MainWindow(QMainWindow):
 
     @Slot(str)
     def show_engine_analysis(self, variation: str) -> None:
-        self._notifications_label.setText(variation)
+        self._notifications_label.setText()
