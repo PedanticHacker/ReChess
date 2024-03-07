@@ -17,6 +17,7 @@ class TableView(QTableView):
         self.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
 
         self.pressed.connect(self.on_notation_item_pressed)
+        table_model.layoutChanged.connect(self.scrollToBottom)
 
     def select_preceding_item(self) -> None:
         """Select the preceding notation item in the table."""
