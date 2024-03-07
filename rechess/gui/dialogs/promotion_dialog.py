@@ -12,7 +12,7 @@ class PromotionDialog(QDialog):
     def __init__(self, player_color: Color) -> None:
         super().__init__()
 
-        self.player_color: Color = player_color
+        self._player_color: Color = player_color
         self._piece_type: PieceType = PieceType()
 
         self.set_title()
@@ -33,7 +33,7 @@ class PromotionDialog(QDialog):
         self.setLayout(self.horizontal_layout)
 
     def create_buttons(self) -> None:
-        if self.player_color == WHITE:
+        if self._player_color == WHITE:
             self.queen_button = create_button(get_svg_icon("white-queen"))
             self.rook_button = create_button(get_svg_icon("white-rook"))
             self.bishop_button = create_button(get_svg_icon("white-bishop"))
