@@ -5,8 +5,8 @@ from chess import Move
 from chess.engine import EngineError, Limit, PlayResult, SimpleEngine
 from PySide6.QtCore import QObject, Signal
 
-from rechess import get_config_value
 from rechess.core import Game
+from rechess import get_config_value
 
 
 class Engine(QObject):
@@ -15,8 +15,10 @@ class Engine(QObject):
     engine_move_pushed: Signal = Signal(Move)
     engine_analysis_updated: Signal = Signal(str)
 
-    def __init__(self) -> None:
+    def __init__(self, game: Game) -> None:
         super().__init__()
+
+        self._game: Game = game
 
         self._loaded_engine: SimpleEngine = SimpleEngine.popen_uci(
             f"rechess/resources/engines/stockfish-16.1/{system().lower()}/"
@@ -39,7 +41,7 @@ class Engine(QObject):
         """Play a move by the loaded engine."""
         play_result: PlayResult = self._loaded_engine.play(
             limit=Limit(1.0),
-            board=Game.position,
+            board=self._game.position,
             ponder=get_config_value("engine", "pondering"),
         )
         self._resigned = play_result.resigned
@@ -49,7 +51,7 @@ class Engine(QObject):
         """Start analyzing the current position."""
         self.is_analyzing = True
 
-        with self._loaded_engine.analysis(Game.position) as analysis:
+        with self._loaded_engine.analysis(self._game.position) as analysis:
             for info in analysis:
                 if not self.is_analyzing:
                     break

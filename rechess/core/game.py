@@ -16,13 +16,12 @@ class Game(QObject):
 
     human_move_pushed: Signal = Signal(Move)
 
-    notation: list[str] = []
-    position: Board = Board()
-    variation: str = Board().variation_san(position.move_stack)
-
     def __init__(self) -> None:
         super().__init__()
 
+        self._variation: str = ""
+        self._notation: list[str] = []
+        self._position: Board = Board()
         self._arrow: list[tuple[Square, Square]] = []
         self._sound_effect: QSoundEffect = QSoundEffect()
 
@@ -37,8 +36,8 @@ class Game(QObject):
     def prepare_new_game(self) -> None:
         """Prepare the starting state of a game."""
         self._arrow.clear()
-        self.notation.clear()
-        self.position.reset()
+        self._notation.clear()
+        self._position.reset()
 
         self._engine_color: Color = get_config_value("engine", "white")
         self._perspective: Color = not self._engine_color
@@ -52,8 +51,8 @@ class Game(QObject):
 
     def set_notation_item_for(self, move: Move) -> None:
         """Set a notation item for the given `move`."""
-        notation_item: str = self.position.san_and_push(move)
-        self.notation.append(notation_item)
+        notation_item: str = self._position.san_and_push(move)
+        self._notation.append(notation_item)
 
     def flip_board(self) -> None:
         """Flip the board's perspective."""
@@ -93,7 +92,7 @@ class Game(QObject):
 
     def get_promotion_piece(self) -> PieceType:
         """Show the promotion dialog to get a promotion piece."""
-        promotion_dialog: PromotionDialog = PromotionDialog(self.position.turn)
+        promotion_dialog: PromotionDialog = PromotionDialog(self._position.turn)
         return promotion_dialog.piece_type
 
     def get_result(self) -> str:
@@ -170,11 +169,27 @@ class Game(QObject):
         return [legal_move.to_square for legal_move in legal_moves]
 
     @property
+    def notation(self) -> list[str]:
+        """Get the SAN notation of all the moves."""
+        return self._notation
+
+    @property
     def perspective(self) -> Color:
         """Get the color playing from the bottom of the board."""
         return self._perspective
 
     @property
+    def position(self) -> Board:
+        """Get the current position on the board."""
+        return self._position
+
+    @property
     def player_on_turn(self) -> str:
         """Get the player on turn as either White or Black."""
         return "White" if self.is_white_on_turn() else "Black"
+
+    @property
+    def variation(self) -> str:
+        """Get the variation of moves, like `1. e4 e5 2. Nf3`."""
+        self._variation = self._position.variation_san(self._position.move_stack)
+        return self._variation

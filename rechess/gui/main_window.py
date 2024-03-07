@@ -45,11 +45,11 @@ class MainWindow(QMainWindow):
     def create_widgets(self) -> None:
         """Create widgets for the main window."""
         self._game: Game = Game()
-        self._engine: Engine = Engine()
-        self._table_model: TableModel = TableModel(Game.notation)
+        self._engine: Engine = Engine(self._game)
+        self._table_model: TableModel = TableModel(self._game.notation)
 
-        self._svg_board: SVGBoard = SVGBoard()
-        self._fen_editor: FENEditor = FENEditor()
+        self._svg_board: SVGBoard = SVGBoard(self._game)
+        self._fen_editor: FENEditor = FENEditor(self._game)
 
         self._black_clock: Clock = Clock(ClockStyle.Black)
         self._white_clock: Clock = Clock(ClockStyle.White)

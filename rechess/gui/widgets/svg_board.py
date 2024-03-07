@@ -12,12 +12,12 @@ svg.XX: str = "<circle id='xx' r='5' cx='22' cy='22' fill='lime' stroke='blue'/>
 class SVGBoard(QSvgWidget):
     """An SVG-based board with pieces."""
 
-    def __init__(self) -> None:
+    def __init__(self, game: Game) -> None:
         super().__init__()
 
         self.setFixedSize(QSize(500, 500))
 
-        self._game: Game = Game()
+        self._game: Game = game
         self._colors: dict[str, str] = {
             "coord": "white",
             "margin": "green",
@@ -36,9 +36,9 @@ class SVGBoard(QSvgWidget):
     def draw(self) -> None:
         """Draw the current position on the board."""
         svg_board: str = svg.board(
-            board=Game.position,
             colors=self._colors,
             arrows=self._game.arrow,
+            board=self._game.position,
             check=self._game.king_square,
             squares=self._game.legal_moves,
             orientation=self._game.perspective,

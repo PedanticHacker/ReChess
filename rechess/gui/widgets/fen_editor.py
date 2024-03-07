@@ -9,8 +9,10 @@ from rechess.core import Game
 class FENEditor(QLineEdit):
     """An editor for FEN (Forsyth-Edwards Notation) records."""
 
-    def __init__(self) -> None:
+    def __init__(self, game: Game) -> None:
         super().__init__()
+
+        self._game: Game = game
 
         self.setMaxLength(90)
         self.setText(STARTING_FEN)
@@ -36,12 +38,12 @@ class FENEditor(QLineEdit):
     def on_fen_edited(self, new_fen: str) -> None:
         """Try to set a valid position from `new_fen`."""
         try:
-            position = Game.position
-            position.set_fen(new_fen)
+            game_position = self._game.position
+            game_position.set_fen(new_fen)
         except (IndexError, ValueError):
             self.set_red_background_color()
         else:
-            if position.is_valid():
+            if game_position.is_valid():
                 self.clearFocus()
                 self.reset_background_color()
-                Game.position = position
+                self._game.position = game_position
