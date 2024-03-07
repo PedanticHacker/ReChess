@@ -25,7 +25,7 @@ class Engine(QObject):
             f"stockfish{'.exe' if system() == 'Windows' else ''}"
         )
         self._resigned: bool = False
-        self.is_analyzing: bool = False
+        self._analyzing: bool = False
 
     def has_resigned(self) -> bool:
         """Check whether the loaded engine has resigned."""
@@ -49,18 +49,18 @@ class Engine(QObject):
 
     def start_analysis(self) -> None:
         """Start analyzing the current position."""
-        self.is_analyzing = True
+        self._analyzing = True
 
         with self._loaded_engine.analysis(self._game.position) as analysis:
             for info in analysis:
-                if not self.is_analyzing:
+                if not self._analyzing:
                     break
-                if "pv" in info:
+                if self._analyzing and "pv" in info:
                     self.engine_analysis_updated.emit(info["pv"])
 
     def stop_analysis(self) -> None:
         """Stop analyzing the current position."""
-        self.is_analyzing = False
+        self._analyzing = False
 
     def quit(self) -> None:
         """End the CPU task of a loaded engine."""
