@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QAbstractItemView, QHeaderView, QTableView
-from PySide6.QtCore import QAbstractTableModel, QModelIndex, QSize, Slot
+from PySide6.QtCore import QAbstractTableModel, QItemSelectionModel, QSize
 
 from rechess.core import Game
 
@@ -19,26 +19,35 @@ class TableView(QTableView):
         self.verticalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Fixed)
         self.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
 
-        self.pressed.connect(self.on_notation_item_pressed)
         table_model.layoutChanged.connect(self.scrollToBottom)
 
     def select_preceding_item(self) -> None:
         """Select the preceding notation item in the table."""
-        current_index = self.currentIndex()
+        selection_model = self.selectionModel()
+        current_index = selection_model.currentIndex()
+
+        current_row = current_index.row()
         current_column = current_index.column()
-        preceding_row = current_index.row() - 1
-        preceding_index = self.model().index(preceding_row, current_column)
-        self.setCurrentIndex(preceding_index)
+
+        if current_index.isValid() and current_row > 0:
+            previous_index = current_index.sibling(current_row - 1, current_column)
+            selection_model.setCurrentIndex(
+                previous_index,
+                QItemSelectionModel.SelectionFlag.SelectCurrent,
+            )
 
     def select_following_item(self) -> None:
         """Select the following notation item in the table."""
-        current_index = self.currentIndex()
-        current_column = current_index.column()
-        following_row = current_index.row() + 1
-        following_index = self.model().index(following_row, current_column)
-        self.setCurrentIndex(following_index)
+        model = self.model()
+        selection_model = self.selectionModel()
+        current_index = selection_model.currentIndex()
 
-    @Slot(QModelIndex)
-    def on_notation_item_pressed(self, model_index: QModelIndex) -> None:
-        """Respond to pressing a notation item."""
-        self.setCurrentIndex(model_index)
+        current_row = current_index.row()
+        current_column = current_index.column()
+
+        if current_index.isValid() and current_row < model.rowCount() - 1:
+            next_index = current_index.sibling(current_row + 1, current_column)
+            selection_model.setCurrentIndex(
+                next_index,
+                QItemSelectionModel.SelectionFlag.SelectCurrent,
+            )
