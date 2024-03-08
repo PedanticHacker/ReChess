@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QHeaderView, QTableView
+from PySide6.QtWidgets import QAbstractItemView, QHeaderView, QTableView
 from PySide6.QtCore import QAbstractTableModel, QModelIndex, QSize, Slot
 
 from rechess.core import Game
@@ -13,6 +13,8 @@ class TableView(QTableView):
         self.setShowGrid(False)
         self.setModel(table_model)
         self.setFixedSize(QSize(300, 500))
+        self.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
+        self.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
         self.verticalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Fixed)
         self.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
 
