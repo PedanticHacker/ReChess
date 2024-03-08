@@ -14,7 +14,7 @@ from rechess.gui.dialogs import PromotionDialog
 class Game(QObject):
     """An implementation of the standard game."""
 
-    human_move_pushed: Signal = Signal(Move)
+    move_pushed: Signal = Signal(Move)
 
     def __init__(self) -> None:
         super().__init__()
@@ -88,7 +88,7 @@ class Game(QObject):
             if move.promotion:
                 move.promotion = self.get_promotion_piece()
 
-            self.human_move_pushed.emit(move)
+            self.move_pushed.emit(move)
 
     def get_promotion_piece(self) -> PieceType:
         """Show the promotion dialog to get a promotion piece."""

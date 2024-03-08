@@ -42,6 +42,8 @@ class MainWindow(QMainWindow):
         self.set_personal_layout()
         self.connect_events_with_handlers()
 
+        self.start_new_game()
+
     def create_widgets(self) -> None:
         """Create widgets for the main window."""
         self._game: Game = Game()
@@ -210,12 +212,39 @@ class MainWindow(QMainWindow):
         self._clock_layout.addWidget(self._white_clock)
 
         self.grid_layout: QGridLayout = QGridLayout()
-        self.grid_layout.addLayout(self._clock_layout, 0, 0, Qt.Alignment.AlignRight)
-        self.grid_layout.addWidget(self._svg_board, 0, 1)
-        self.grid_layout.addWidget(self._evaluation_bar, 0, 2)
-        self.grid_layout.addWidget(self._table_view, 0, 3, Qt.Alignment.AlignLeft)
-        self.grid_layout.addWidget(self._fen_editor, 1, 1)
-        self.grid_layout.addWidget(self._notifications_label, 2, 1, Qt.Alignment.AlignTop)
+        self.grid_layout.addLayout(
+            self._clock_layout,
+            0,
+            0,
+            Qt.AlignmentFlag.AlignRight,
+        )
+        self.grid_layout.addWidget(
+            self._svg_board,
+            0,
+            1,
+        )
+        self.grid_layout.addWidget(
+            self._evaluation_bar,
+            0,
+            2,
+        )
+        self.grid_layout.addWidget(
+            self._table_view,
+            0,
+            3,
+            Qt.AlignmentFlag.AlignLeft,
+        )
+        self.grid_layout.addWidget(
+            self._fen_editor,
+            1,
+            1,
+        )
+        self.grid_layout.addWidget(
+            self._notifications_label,
+            2,
+            1,
+            Qt.AlignmentFlag.AlignTop,
+        )
 
         self.widget_container: QWidget = QWidget()
         self.widget_container.setLayout(self.grid_layout)
@@ -225,10 +254,10 @@ class MainWindow(QMainWindow):
             self.flip_clocks()
 
     def connect_events_with_handlers(self) -> None:
-        """Connect custom events with specific handlers."""
-        self._game.human_move_pushed.connect(self.push_human_move)
-        self._engine.engine_move_pushed.connect(self.push_engine_move)
-        self._engine.engine_analysis_updated.connect(self.show_engine_analysis)
+        """Connect events with specific handlers."""
+        self._game.move_pushed.connect(self.push_move)
+        self._engine.move_pushed.connect(self.push_move)
+        self._engine.analysis_refreshed.connect(self.refresh_engine_analysis)
 
     def invoke_engine(self) -> None:
         """Invoke the currently loaded engine to play a move."""
@@ -325,16 +354,18 @@ class MainWindow(QMainWindow):
         """Update the current state of a game."""
         self.show_fen()
         self.show_opening()
-        self.toggle_clock_state()
+        self.toggle_clock_states()
         self._table_model.refresh()
         self._evaluation_bar.reset()
         self._engine.stop_analysis()
+
+        if self._game.is_engine_on_turn():
+            self.invoke_engine()
 
         if self._game.is_game_over():
             self._black_clock.stop_timer()
             self._white_clock.stop_timer()
             self._notifications_label.setText(self._game.get_result())
-
             self.offer_new_game()
 
         if self._engine.has_resigned():
@@ -344,8 +375,8 @@ class MainWindow(QMainWindow):
 
         self._svg_board.draw()
 
-    def toggle_clock_state(self) -> None:
-        """Toggle the started/stopped state of both clocks."""
+    def toggle_clock_states(self) -> None:
+        """Toggle between started and stopped states of both clocks."""
         if self._game.is_white_on_turn():
             self._black_clock.stop_timer()
             self._white_clock.start_timer()
@@ -380,7 +411,7 @@ class MainWindow(QMainWindow):
         self._notifications_label.clear()
 
         self.show_fen()
-        self.toggle_clock_state()
+        self.toggle_clock_states()
 
         self._svg_board.draw()
 
@@ -422,18 +453,12 @@ class MainWindow(QMainWindow):
             self._table_view.select_following_item()
 
     @Slot(Move)
-    def push_human_move(self, move: Move) -> None:
-        """Push the given `move` made by the human player."""
-        self._game.push(move)
-        self.update_game_state()
-        self.invoke_engine()
-
-    @Slot(Move)
-    def push_engine_move(self, move: Move) -> None:
-        """Push the given `move` made by the engine player."""
+    def push_move(self, move: Move) -> None:
+        """Push the given `move`."""
         self._game.push(move)
         self.update_game_state()
 
     @Slot(str)
-    def show_engine_analysis(self, variation: str) -> None:
-        self._notifications_label.setText()
+    def refresh_engine_analysis(self, variation: str) -> None:
+        """Refresh engine analysis by the given `variation`."""
+        self._notifications_label.setText(variation)

@@ -31,8 +31,6 @@ class SVGBoard(QSvgWidget):
             "square light lastmove": "#8b000080",
         }
 
-        self.draw()
-
     def draw(self) -> None:
         """Draw the current position on the board."""
         svg_board: str = svg.board(
