@@ -38,12 +38,12 @@ class FENEditor(QLineEdit):
     def on_fen_edited(self, new_fen: str) -> None:
         """Try to set a valid position from `new_fen`."""
         try:
-            game_position = self._game.position
-            game_position.set_fen(new_fen)
+            position = self._game.position
+            position.set_fen(new_fen)
         except (IndexError, ValueError):
             self.set_red_background_color()
         else:
-            if game_position.is_valid():
+            if position.is_valid():
                 self.clearFocus()
                 self.reset_background_color()
-                self._game.position = game_position
+                self._game.position = position
