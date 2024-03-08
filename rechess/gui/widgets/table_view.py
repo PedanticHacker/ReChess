@@ -23,31 +23,6 @@ class TableView(QTableView):
 
     def select_preceding_item(self) -> None:
         """Select the preceding notation item in the table."""
-        selection_model = self.selectionModel()
-        current_index = selection_model.currentIndex()
-
-        current_row = current_index.row()
-        current_column = current_index.column()
-
-        if current_index.isValid() and current_row > 0:
-            previous_index = current_index.sibling(current_row - 1, current_column)
-            selection_model.setCurrentIndex(
-                previous_index,
-                QItemSelectionModel.SelectionFlag.SelectCurrent,
-            )
 
     def select_following_item(self) -> None:
         """Select the following notation item in the table."""
-        model = self.model()
-        selection_model = self.selectionModel()
-        current_index = selection_model.currentIndex()
-
-        current_row = current_index.row()
-        current_column = current_index.column()
-
-        if current_index.isValid() and current_row < model.rowCount() - 1:
-            next_index = current_index.sibling(current_row + 1, current_column)
-            selection_model.setCurrentIndex(
-                next_index,
-                QItemSelectionModel.SelectionFlag.SelectCurrent,
-            )
