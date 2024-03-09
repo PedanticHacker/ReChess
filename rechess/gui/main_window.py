@@ -371,7 +371,9 @@ class MainWindow(QMainWindow):
         if self._engine.has_resigned():
             self._black_clock.stop_timer()
             self._white_clock.stop_timer()
-            self._notifications_label.setText(f"{self._engine.name} has resigned!")
+            self._notifications_label.setText(
+                f"{self._engine.name} has resigned!"
+            )
 
         self._svg_board.draw()
 
@@ -404,10 +406,10 @@ class MainWindow(QMainWindow):
         self._white_clock.reset()
         self._opening_label.clear()
 
+        self._table_model.reset()
         self._engine.stop_analysis()
         self._evaluation_bar.reset()
         self._game.prepare_new_game()
-        self._table_model.refresh()
         self._notifications_label.clear()
 
         self.show_fen()
@@ -448,9 +450,9 @@ class MainWindow(QMainWindow):
         downward_roll = event.angleDelta().y() < 0
 
         if upward_roll:
-            self._table_view.select_preceding_item()
+            self._table_view.select_previous_item()
         elif downward_roll:
-            self._table_view.select_following_item()
+            self._table_view.select_next_item()
 
     @Slot(Move)
     def push_move(self, move: Move) -> None:

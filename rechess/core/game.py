@@ -36,7 +36,6 @@ class Game(QObject):
     def prepare_new_game(self) -> None:
         """Prepare the starting state of a game."""
         self._arrow.clear()
-        self._notation.clear()
         self._position.reset()
 
         self._engine_color: Color = get_config_value("engine", "white")
@@ -111,7 +110,9 @@ class Game(QObject):
 
     def play_sound_effect_for(self, move: Move) -> None:
         """Play a WAV sound effect for the given `move`."""
-        file_name = "capture.wav" if self._position.is_capture(move) else "move.wav"
+        file_name = (
+            "capture.wav" if self._position.is_capture(move) else "move.wav"
+        )
         file_path = f"rechess/resources/audio/{file_name}"
         file_url = QUrl.fromLocalFile(file_path)
         self._sound_effect.setSource(file_url)
@@ -169,7 +170,9 @@ class Game(QObject):
             return None
 
         square: Square = BB_SQUARES[self.from_square]
-        legal_moves: Iterator[Move] = self._position.generate_legal_moves(square)
+        legal_moves: Iterator[Move] = self._position.generate_legal_moves(
+            square
+        )
         return [legal_move.to_square for legal_move in legal_moves]
 
     @property

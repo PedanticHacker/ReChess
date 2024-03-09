@@ -13,10 +13,10 @@ from rechess.core import Game
 class TableModel(QAbstractTableModel):
     """The model of a table for notation items."""
 
-    def __init__(self, notation_items: list[str]) -> None:
+    def __init__(self, item_data: list[str]) -> None:
         super().__init__()
 
-        self._notation_items = notation_items
+        self._item_data = item_data
 
     def data(
         self,
@@ -25,10 +25,10 @@ class TableModel(QAbstractTableModel):
     ) -> Any:
         """Prepare data of the notation items for display role."""
         if role == Qt.ItemDataRole.DisplayRole:
-            notation_item_index: int = 2 * index.row() + index.column()
+            item_index: int = 2 * index.row() + index.column()
 
-            if 0 <= notation_item_index < len(self._notation_items):
-                return self._notation_items[notation_item_index]
+            if 0 <= item_index < len(self._item_data):
+                return self._item_data[item_index]
 
     def flags(
         self,
@@ -45,8 +45,8 @@ class TableModel(QAbstractTableModel):
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
         """Count the rows needed for the table."""
-        all_notation_items = len(self._notation_items)
-        return (all_notation_items + 1) // 2
+        all_data = len(self._item_data)
+        return (all_data + 1) // 2
 
     def columnCount(
         self,
@@ -69,6 +69,12 @@ class TableModel(QAbstractTableModel):
             if orientation == Qt.Orientation.Vertical:
                 return section + 1
 
+    def reset(self) -> None:
+        """Reset the model by clearing all item data."""
+        self.beginResetModel()
+        self._item_data.clear()
+        self.endResetModel()
+
     def refresh(self) -> None:
-        """Refresh the model's layout of notation items."""
+        """Refresh the view as the layout of the model has changed."""
         self.layoutChanged.emit()

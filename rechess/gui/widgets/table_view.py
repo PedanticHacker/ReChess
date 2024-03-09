@@ -25,69 +25,72 @@ class TableView(QTableView):
             QHeaderView.ResizeMode.Stretch
         )
 
-        table_model.layoutChanged.connect(self.scrollToBottom)
-        self.selectionModel().selectionChanged.connect(
+        self._table_model = self.model()
+        self._selection_model = self.selectionModel()
+
+        self._table_model.layoutChanged.connect(self.scrollToBottom)
+        self._selection_model.selectionChanged.connect(
             self.on_selection_changed
         )
 
-    def ensure_selection(self) -> None:
-        """Ensure a selection, defaulting to the last notation item."""
-        selection_model = self.selectionModel()
-        if not selection_model.hasSelection():
-            last_row = self.model().rowCount() - 1
-            last_column = 1 if last_row >= 0 else 0
-            last_index = self.model().index(last_row, last_column)
-            selection_model.setCurrentIndex(
+    def select_previous_item(self) -> None:
+        """Select the previous notation item in the table."""
+        if not self._selection_model.hasSelection():
+            last_index = self._table_model.index(
+                self._table_model.rowCount() - 1,
+                0,
+            )
+            self._selection_model.setCurrentIndex(
                 last_index,
                 QItemSelectionModel.SelectionFlag.ClearAndSelect,
             )
+            return
 
-    def select_preceding_item(self) -> None:
-        """Select the preceding notation item in the table."""
-        self.ensure_selection()
+        index = self._selection_model.currentIndex()
+        previous_row = index.row() - (index.column() == 0)
+        previous_column = 0 if index.column() == 1 else 1
 
-        selection_model = self.selectionModel()
-        current_index = selection_model.currentIndex()
-
-        if current_index.column() == 0 and current_index.row() > 0:
-            new_row = current_index.row() - 1
-            new_column = 1
-        else:
-            new_row = current_index.row()
-            new_column = (current_index.column() - 1) % 2
-
-        if new_row >= 0:
-            previous_index = self.model().index(new_row, new_column)
-            selection_model.setCurrentIndex(
+        if previous_row >= 0:
+            previous_index = self._table_model.index(
+                previous_row,
+                previous_column,
+            )
+            self._selection_model.setCurrentIndex(
                 previous_index,
                 QItemSelectionModel.SelectionFlag.ClearAndSelect,
             )
 
-    def select_following_item(self) -> None:
-        """Select the following notation item in the table."""
-        self.ensure_selection()
+    def select_next_item(self) -> None:
+        """Select the next notation item in the table."""
+        if not self._selection_model.hasSelection():
+            last_index = self._table_model.index(
+                self._table_model.rowCount() - 1,
+                0,
+            )
+            self._selection_model.setCurrentIndex(
+                last_index,
+                QItemSelectionModel.SelectionFlag.ClearAndSelect,
+            )
+            return
 
-        selection_model = self.selectionModel()
-        current_index = selection_model.currentIndex()
+        index = self._selection_model.currentIndex()
+        next_row = index.row() + (index.column() == 1)
+        next_column = (index.column() + 1) % 2
 
-        if current_index.column() == 1:
-            new_row = current_index.row() + 1
-            new_column = 0
-        else:
-            new_row = current_index.row()
-            new_column = (current_index.column() + 1) % 2
-
-        if new_row < self.model().rowCount():
-            next_index = self.model().index(new_row, new_column)
-            selection_model.setCurrentIndex(
+        if next_row < self._table_model.rowCount():
+            next_index = self._table_model.index(next_row, next_column)
+            self._selection_model.setCurrentIndex(
                 next_index,
                 QItemSelectionModel.SelectionFlag.ClearAndSelect,
             )
+        else:
+            return
 
     @Slot()
     def on_selection_changed(self) -> None:
-        current_index = self.selectionModel().currentIndex()
+        """Draw the position when the selected move has been played."""
+        current_index = self._selection_model.currentIndex()
 
         if current_index.isValid():
-            data = self.model().data(current_index)
+            data = self._table_model.data(current_index)
             print(f"The data in the cell is: {data}")
