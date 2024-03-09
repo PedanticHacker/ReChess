@@ -1,5 +1,6 @@
 from PySide6.QtWidgets import QAbstractItemView, QHeaderView, QTableView
 from PySide6.QtCore import (
+    Slot,
     QSize,
     QModelIndex,
     QAbstractTableModel,
@@ -25,6 +26,9 @@ class TableView(QTableView):
         )
 
         table_model.layoutChanged.connect(self.scrollToBottom)
+        self.selectionModel().selectionChanged.connect(
+            self.on_selection_changed
+        )
 
     def ensure_selection(self) -> None:
         """Ensure a selection, defaulting to the last notation item."""
@@ -79,3 +83,11 @@ class TableView(QTableView):
                 next_index,
                 QItemSelectionModel.SelectionFlag.ClearAndSelect,
             )
+
+    @Slot()
+    def on_selection_changed(self) -> None:
+        current_index = self.selectionModel().currentIndex()
+
+        if current_index.isValid():
+            data = self.model().data(current_index)
+            print(f"The data in the cell is: {data}")
