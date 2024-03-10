@@ -108,11 +108,13 @@ class Game(QObject):
         }
         return result_rewordings[self._position.result()]
 
+    def get_variation_text(self, variation: list[Move]) -> str:
+        """Get a variation in the form of `1. e4 e5 2. Nf3`."""
+        return self._position.variation_san(variation)
+
     def play_sound_effect_for(self, move: Move) -> None:
         """Play a WAV sound effect for the given `move`."""
-        file_name = (
-            "capture.wav" if self._position.is_capture(move) else "move.wav"
-        )
+        file_name = "capture.wav" if self._position.is_capture(move) else "move.wav"
         file_path = f"rechess/resources/audio/{file_name}"
         file_url = QUrl.fromLocalFile(file_path)
         self._sound_effect.setSource(file_url)
@@ -170,9 +172,7 @@ class Game(QObject):
             return None
 
         square: Square = BB_SQUARES[self.from_square]
-        legal_moves: Iterator[Move] = self._position.generate_legal_moves(
-            square
-        )
+        legal_moves: Iterator[Move] = self._position.generate_legal_moves(square)
         return [legal_move.to_square for legal_move in legal_moves]
 
     @property
@@ -192,16 +192,10 @@ class Game(QObject):
 
     @position.setter
     def position(self, new_position: Board) -> None:
-        """Set a new position on the board by the given `new_position`."""
-        self._position: Board = new_position
+        """Set a position on the board by the given `new_position`."""
+        self._position = new_position
 
     @property
     def player_on_turn(self) -> str:
         """Get the player on turn as either White or Black."""
         return "White" if self.is_white_on_turn() else "Black"
-
-    @property
-    def variation(self) -> str:
-        """Get the variation of moves, like `1. e4 e5 2. Nf3`."""
-        self._variation = Board().variation_san(self._position.move_stack)
-        return self._variation

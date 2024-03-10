@@ -2,7 +2,7 @@ from platform import system
 from contextlib import suppress
 
 from chess import Move
-from chess.engine import EngineError, Limit, PlayResult, SimpleEngine
+from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
 from PySide6.QtCore import QObject, Signal
 
 from rechess.core import Game
@@ -13,7 +13,8 @@ class Engine(QObject):
     """A mechanism to communicate with a UCI engine."""
 
     move_pushed: Signal = Signal(Move)
-    analysis_refreshed: Signal = Signal(str)
+    score_refreshed: Signal = Signal(Score)
+    variation_refreshed: Signal = Signal(str)
 
     def __init__(self, game: Game) -> None:
         super().__init__()
@@ -53,10 +54,11 @@ class Engine(QObject):
 
         with self._loaded_engine.analysis(self._game.position) as analysis:
             for info in analysis:
+                if self._analyzing and "pv" in info:
+                    variation_text = self._game.get_variation_text(info["pv"])
+                    self.variation_refreshed.emit(variation_text)
                 if not self._analyzing:
                     break
-                if self._analyzing and "pv" in info:
-                    self.analysis_refreshed.emit(info["pv"])
 
     def stop_analysis(self) -> None:
         """Stop analyzing the current position."""

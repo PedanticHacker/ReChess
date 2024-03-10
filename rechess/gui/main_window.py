@@ -60,6 +60,7 @@ class MainWindow(QMainWindow):
 
         self._opening_label: QLabel = QLabel()
         self._notifications_label: QLabel = QLabel()
+        self._notifications_label.setWordWrap(True)
         self._engine_name_label: QLabel = QLabel(self._engine.name)
 
     def create_actions(self) -> None:
@@ -257,7 +258,7 @@ class MainWindow(QMainWindow):
         """Connect events with specific handlers."""
         self._game.move_pushed.connect(self.push_move)
         self._engine.move_pushed.connect(self.push_move)
-        self._engine.analysis_refreshed.connect(self.refresh_engine_analysis)
+        self._engine.variation_refreshed.connect(self.refresh_variation)
 
     def invoke_engine(self) -> None:
         """Invoke the currently loaded engine to play a move."""
@@ -371,9 +372,7 @@ class MainWindow(QMainWindow):
         if self._engine.has_resigned():
             self._black_clock.stop_timer()
             self._white_clock.stop_timer()
-            self._notifications_label.setText(
-                f"{self._engine.name} has resigned!"
-            )
+            self._notifications_label.setText(f"{self._engine.name} has resigned!")
 
         self._svg_board.draw()
 
@@ -461,6 +460,6 @@ class MainWindow(QMainWindow):
         self.update_game_state()
 
     @Slot(str)
-    def refresh_engine_analysis(self, variation: str) -> None:
-        """Refresh engine analysis by the given `variation`."""
+    def refresh_variation(self, variation: str) -> None:
+        """Refresh the given `variation` from engine analysis."""
         self._notifications_label.setText(variation)
