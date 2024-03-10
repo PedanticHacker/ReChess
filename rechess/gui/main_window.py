@@ -256,8 +256,8 @@ class MainWindow(QMainWindow):
 
     def connect_events_with_handlers(self) -> None:
         """Connect events with specific handlers."""
-        self._game.move_pushed.connect(self.push_move)
-        self._engine.move_pushed.connect(self.push_move)
+        self._game.move_played.connect(self.play_move)
+        self._engine.move_played.connect(self.play_move)
         self._engine.variation_refreshed.connect(self.refresh_variation)
 
     def invoke_engine(self) -> None:
@@ -346,9 +346,12 @@ class MainWindow(QMainWindow):
     def show_opening(self) -> None:
         """Show an ECO code along with an opening name."""
         openings: dict[str, tuple[str, str]] = get_openings()
+        variation: str = self._game.get_variation_text(
+            self._game.position.move_stack
+        )
 
-        if self._game.variation in openings:
-            eco_code, opening_name = openings[self._game.variation]
+        if variation in openings:
+            eco_code, opening_name = openings[variation]
             self._opening_label.setText(f"{eco_code}: {opening_name}")
 
     def update_game_state(self) -> None:
@@ -372,7 +375,9 @@ class MainWindow(QMainWindow):
         if self._engine.has_resigned():
             self._black_clock.stop_timer()
             self._white_clock.stop_timer()
-            self._notifications_label.setText(f"{self._engine.name} has resigned!")
+            self._notifications_label.setText(
+                f"{self._engine.name} has resigned!"
+            )
 
         self._svg_board.draw()
 
@@ -454,8 +459,8 @@ class MainWindow(QMainWindow):
             self._table_view.select_next_item()
 
     @Slot(Move)
-    def push_move(self, move: Move) -> None:
-        """Push the given `move`."""
+    def play_move(self, move: Move) -> None:
+        """Play the given `move`."""
         self._game.push(move)
         self.update_game_state()
 

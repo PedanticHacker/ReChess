@@ -12,7 +12,7 @@ from rechess import get_config_value
 class Engine(QObject):
     """A mechanism to communicate with a UCI engine."""
 
-    move_pushed: Signal = Signal(Move)
+    move_played: Signal = Signal(Move)
     score_refreshed: Signal = Signal(Score)
     variation_refreshed: Signal = Signal(str)
 
@@ -46,7 +46,7 @@ class Engine(QObject):
             ponder=get_config_value("engine", "pondering"),
         )
         self._resigned = play_result.resigned
-        self.move_pushed.emit(play_result.move)
+        self.move_played.emit(play_result.move)
 
     def start_analysis(self) -> None:
         """Start analyzing the current position."""
