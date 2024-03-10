@@ -373,9 +373,7 @@ class MainWindow(QMainWindow):
         if self._engine.has_resigned():
             self._black_clock.stop_timer()
             self._white_clock.stop_timer()
-            self._notifications_label.setText(
-                f"{self._engine.name} has resigned!"
-            )
+            self._notifications_label.setText(f"{self._engine.name} resigned!")
 
         self._svg_board.draw()
 
