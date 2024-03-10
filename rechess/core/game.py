@@ -107,9 +107,9 @@ class Game(QObject):
         }
         return result_rewordings[self.position.result()]
 
-    def get_variation_text(self, variation: list[Move]) -> str:
+    def get_variation(self) -> str:
         """Get a variation in the form of `1. e4 e5 2. Nf3`."""
-        return self.position.variation_san(variation)
+        return Board().variation_san(self.position.move_stack)
 
     def play_sound_effect_for(self, move: Move) -> None:
         """Play a WAV sound effect for the given `move`."""

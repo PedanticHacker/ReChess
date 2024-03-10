@@ -346,9 +346,7 @@ class MainWindow(QMainWindow):
     def show_opening(self) -> None:
         """Show an ECO code along with an opening name."""
         openings: dict[str, tuple[str, str]] = get_openings()
-        variation: str = self._game.get_variation_text(
-            self._game.position.move_stack
-        )
+        variation: str = self._game.get_variation()
 
         if variation in openings:
             eco_code, opening_name = openings[variation]
