@@ -14,7 +14,7 @@ class Engine(QObject):
 
     move_played: Signal = Signal(Move)
     score_refreshed: Signal = Signal(Score)
-    variation_refreshed: Signal = Signal(str)
+    variation_refreshed: Signal = Signal(list)
 
     def __init__(self, game: Game) -> None:
         super().__init__()
@@ -55,8 +55,7 @@ class Engine(QObject):
         with self._loaded_engine.analysis(self._game.position) as analysis:
             for info in analysis:
                 if self._analyzing and "pv" in info:
-                    variation_text = self._game.get_variation_text(info["pv"])
-                    self.variation_refreshed.emit(variation_text)
+                    self.variation_refreshed.emit(info["pv"])
                 if not self._analyzing:
                     break
 

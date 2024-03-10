@@ -21,7 +21,7 @@ from rechess.core import Engine, Game, TableModel
 from rechess import create_action, get_openings, get_svg_icon
 from rechess.gui.widgets import (
     Clock,
-    SVGBoard,
+    SvgBoard,
     FENEditor,
     TableView,
     EvaluationBar,
@@ -50,7 +50,7 @@ class MainWindow(QMainWindow):
         self._engine: Engine = Engine(self._game)
         self._table_model: TableModel = TableModel(self._game.notation)
 
-        self._svg_board: SVGBoard = SVGBoard(self._game)
+        self._svg_board: SvgBoard = SvgBoard(self._game)
         self._fen_editor: FENEditor = FENEditor(self._game)
 
         self._black_clock: Clock = Clock(ClockStyle.Black)
@@ -256,9 +256,9 @@ class MainWindow(QMainWindow):
 
     def connect_events_with_handlers(self) -> None:
         """Connect events with specific handlers."""
-        self._game.move_played.connect(self.play_move)
-        self._engine.move_played.connect(self.play_move)
-        self._engine.variation_refreshed.connect(self.refresh_variation)
+        self._game.move_played.connect(self.on_move_played)
+        self._engine.move_played.connect(self.on_move_played)
+        self._engine.variation_refreshed.connect(self.on_variation_refreshed)
 
     def invoke_engine(self) -> None:
         """Invoke the currently loaded engine to play a move."""
@@ -346,7 +346,9 @@ class MainWindow(QMainWindow):
     def show_opening(self) -> None:
         """Show an ECO code along with an opening name."""
         openings: dict[str, tuple[str, str]] = get_openings()
-        variation: str = self._game.get_variation()
+        variation: str = self._game.get_variation_from(
+            self._game.position.move_stack
+        )
 
         if variation in openings:
             eco_code, opening_name = openings[variation]
@@ -457,12 +459,13 @@ class MainWindow(QMainWindow):
             self._table_view.select_next_item()
 
     @Slot(Move)
-    def play_move(self, move: Move) -> None:
+    def on_move_played(self, move: Move) -> None:
         """Play the given `move`."""
         self._game.push(move)
         self.update_game_state()
 
-    @Slot(str)
-    def refresh_variation(self, variation: str) -> None:
-        """Refresh the given `variation` from engine analysis."""
+    @Slot(list)
+    def on_variation_refreshed(self, moves: list[Move]) -> None:
+        """Show a variation from the `moves` of engine analysis."""
+        variation = self._game.get_variation_from(moves)
         self._notifications_label.setText(variation)

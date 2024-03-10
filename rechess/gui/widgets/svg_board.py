@@ -6,11 +6,13 @@ from PySide6.QtSvgWidgets import QSvgWidget
 from rechess.core import Game
 
 
-svg.XX: str = "<circle id='xx' r='5' cx='22' cy='22' fill='lime' stroke='blue'/>"
+svg.XX: str = (
+    "<circle id='xx' r='5' cx='22' cy='22' fill='lime' stroke='blue'/>"
+)
 
 
-class SVGBoard(QSvgWidget):
-    """An SVG-based board with pieces."""
+class SvgBoard(QSvgWidget):
+    """An SVG board with pieces."""
 
     def __init__(self, game: Game) -> None:
         super().__init__()
