@@ -13,8 +13,7 @@ class Engine(QObject):
     """A mechanism to communicate with a UCI engine."""
 
     move_played: Signal = Signal(Move)
-    score_refreshed: Signal = Signal(Score)
-    variation_refreshed: Signal = Signal(list)
+    analysis_refreshed: Signal = Signal(list)
 
     def __init__(self, game: Game) -> None:
         super().__init__()
@@ -55,7 +54,7 @@ class Engine(QObject):
         with self._loaded_engine.analysis(self._game.position) as analysis:
             for info in analysis:
                 if self._analyzing and "pv" in info:
-                    self.variation_refreshed.emit(info["pv"])
+                    self.analysis_refreshed.emit(info["pv"])
                 if not self._analyzing:
                     break
 

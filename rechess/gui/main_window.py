@@ -258,7 +258,7 @@ class MainWindow(QMainWindow):
         """Connect events with specific handlers."""
         self._game.move_played.connect(self.on_move_played)
         self._engine.move_played.connect(self.on_move_played)
-        self._engine.variation_refreshed.connect(self.on_variation_refreshed)
+        self._engine.analysis_refreshed.connect(self.on_analysis_refreshed)
 
     def invoke_engine(self) -> None:
         """Invoke the currently loaded engine to play a move."""
@@ -346,9 +346,7 @@ class MainWindow(QMainWindow):
     def show_opening(self) -> None:
         """Show an ECO code along with an opening name."""
         openings: dict[str, tuple[str, str]] = get_openings()
-        variation: str = self._game.get_variation_from(
-            self._game.position.move_stack
-        )
+        variation: str = self._game.get_variation_from(self._game.moves)
 
         if variation in openings:
             eco_code, opening_name = openings[variation]
@@ -465,7 +463,7 @@ class MainWindow(QMainWindow):
         self.update_game_state()
 
     @Slot(list)
-    def on_variation_refreshed(self, moves: list[Move]) -> None:
-        """Show a variation from the `moves` of engine analysis."""
-        variation = self._game.get_variation_from(moves)
+    def on_analysis_refreshed(self, analysis_moves: list[Move]) -> None:
+        """Show a variation from the given `analysis_moves`."""
+        variation: str = self._game.get_variation_from(analysis_moves)
         self._notifications_label.setText(variation)

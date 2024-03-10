@@ -170,3 +170,8 @@ class Game(QObject):
         square: Square = BB_SQUARES[self.from_square]
         legal_moves: Iterator[Move] = self.position.generate_legal_moves(square)
         return [legal_move.to_square for legal_move in legal_moves]
+
+    @property
+    def moves(self) -> list[Move]:
+        """Get a list of all the played moves in the current game."""
+        return self.position.move_stack
