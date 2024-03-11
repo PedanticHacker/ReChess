@@ -260,14 +260,8 @@ class MainWindow(QMainWindow):
         self.start_analysis_action.setEnabled(True)
         self.stop_analysis_action.setDisabled(True)
 
-        # if self._engine.is_invoked():
-        #     self.push_move_now_action.setDisabled(True)
-        #     self.stop_analysis_action.setDisabled(True)
-        #     self.start_analysis_action.setDisabled(True)
-
-        if self._engine.is_analyzing():
+        if self._engine.analyzing:
             self.stop_analysis_action.setEnabled(True)
-            self.push_move_now_action.setDisabled(True)
             self.start_analysis_action.setDisabled(True)
 
         if self._game.is_game_over():
@@ -352,11 +346,14 @@ class MainWindow(QMainWindow):
         """Start analyzing the current position."""
         self.invoke_analysis()
         self._evaluation_bar.show()
+        self._engine.analyzing = True
+        self.toggle_tool_bar_buttons()
 
     def stop_analysis(self) -> None:
         """Stop analyzing the current position."""
         self._engine.stop_analysis()
         self._evaluation_bar.hide()
+        self.toggle_tool_bar_buttons()
 
     def show_fen(self) -> None:
         """Show a FEN (Forsyth-Edwards Notation) in the FEN editor."""
@@ -380,6 +377,7 @@ class MainWindow(QMainWindow):
         self._table_model.refresh()
         self._evaluation_bar.reset()
         self._engine.stop_analysis()
+        self.toggle_tool_bar_buttons()
 
         if self._game.is_engine_on_turn():
             self.invoke_engine()
@@ -390,7 +388,7 @@ class MainWindow(QMainWindow):
             self._notifications_label.setText(self._game.get_result())
             self.offer_new_game()
 
-        if self._engine.has_resigned():
+        if self._engine.resigned:
             self._black_clock.stop_timer()
             self._white_clock.stop_timer()
             self._notifications_label.setText(f"{self._engine.name} resigned!")
@@ -434,6 +432,7 @@ class MainWindow(QMainWindow):
 
         self.show_fen()
         self.toggle_clock_states()
+        self.toggle_tool_bar_buttons()
 
         self._svg_board.draw()
 

@@ -26,16 +26,8 @@ class Engine(QObject):
             f"rechess/resources/engines/stockfish-16.1/{system().lower()}/"
             f"stockfish{'.exe' if system() == 'Windows' else ''}"
         )
-        self._resigned: bool = False
-        self._analyzing: bool = False
-
-    def has_resigned(self) -> bool:
-        """Check whether the loaded engine has resigned."""
-        return self._resigned
-
-    def is_analyzing(self) -> bool:
-        """Check whether the loaded engine is analyzing."""
-        return self._analyzing
+        self.resigned: bool = False
+        self.analyzing: bool = False
 
     def load(self, file_path: str) -> None:
         """Load an engine by the given `file_path`."""
@@ -50,16 +42,14 @@ class Engine(QObject):
             board=self._game.position,
             ponder=get_config_value("engine", "pondering"),
         )
-        self._resigned = play_result.resigned
+        self.resigned = play_result.resigned
         self.move_played.emit(play_result.move)
 
     def start_analysis(self) -> None:
         """Start analyzing the current position."""
-        self._analyzing = True
-
         with self._loaded_engine.analysis(self._game.position) as analysis:
             for info in analysis:
-                if self._analyzing and "pv" in info:
+                if self.analyzing and "pv" in info:
                     score: Score = info["score"].white()
                     pv: list[Move] = info["pv"]
                     best_move: Move = pv[0]
@@ -68,12 +58,12 @@ class Engine(QObject):
                     self.score_analyzed.emit(score)
                     self.best_move_analyzed.emit(best_move)
                     self.variation_analyzed.emit(variation)
-                if not self._analyzing:
+                if not self.analyzing:
                     break
 
     def stop_analysis(self) -> None:
         """Stop analyzing the current position."""
-        self._analyzing = False
+        self.analyzing = False
 
     def quit(self) -> None:
         """End the CPU task of a loaded engine."""
