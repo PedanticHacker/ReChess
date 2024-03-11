@@ -6,9 +6,7 @@ from PySide6.QtSvgWidgets import QSvgWidget
 from rechess.core import Game
 
 
-svg.XX: str = (
-    "<circle id='xx' r='5' cx='22' cy='22' fill='lime' stroke='blue'/>"
-)
+svg.XX: str = "<circle id='xx' r='5' cx='22' cy='22' fill='lime' stroke='blue'/>"
 
 
 class SvgBoard(QSvgWidget):
@@ -16,8 +14,6 @@ class SvgBoard(QSvgWidget):
 
     def __init__(self, game: Game) -> None:
         super().__init__()
-
-        self.setFixedSize(QSize(500, 500))
 
         self._game: Game = game
         self._colors: dict[str, str] = {
@@ -33,10 +29,11 @@ class SvgBoard(QSvgWidget):
             "square light lastmove": "#8b000080",
         }
 
+        self.setFixedSize(QSize(500, 500))
         self.draw()
 
     def draw(self) -> None:
-        """Draw the current position on the board."""
+        """Draw the current position of the board."""
         svg_board: str = svg.board(
             colors=self._colors,
             arrows=self._game.arrow,
@@ -47,10 +44,6 @@ class SvgBoard(QSvgWidget):
         )
         encoded_svg_board: bytes = svg_board.encode()
         self.load(encoded_svg_board)
-
-    def flip_perspective(self) -> None:
-        """Flip the board's current perspective."""
-        self._game.flip_perspective()
 
     def mousePressEvent(self, event: QMouseEvent) -> None:
         """Respond to pressing the primary mouse button."""

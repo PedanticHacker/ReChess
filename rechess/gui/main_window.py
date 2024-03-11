@@ -47,21 +47,21 @@ class MainWindow(QMainWindow):
         """Create widgets for the main window."""
         self._game: Game = Game()
         self._engine: Engine = Engine(self._game)
-        self._table_model: TableModel = TableModel(self._game.notation)
-
         self._svg_board: SvgBoard = SvgBoard(self._game)
         self._fen_editor: FENEditor = FENEditor(self._game)
         self._evaluation_bar: EvaluationBar = EvaluationBar(self._game)
 
+        self._table_model: TableModel = TableModel(self._game.notation)
+        self._table_view: TableView = TableView(self._table_model)
+
         self._black_clock: Clock = Clock(ClockStyle.Black)
         self._white_clock: Clock = Clock(ClockStyle.White)
-        self._table_view: TableView = TableView(self._table_model)
+
+        self._opening_label: QLabel = QLabel()
+        self._engine_name_label: QLabel = QLabel()
 
         self._notifications_label: QLabel = QLabel()
         self._notifications_label.setWordWrap(True)
-
-        self._opening_label: QLabel = QLabel()
-        self._engine_name_label: QLabel = QLabel(self._engine.name)
 
     def create_actions(self) -> None:
         """Create actions for menu bar and tool bar."""
@@ -77,7 +77,7 @@ class MainWindow(QMainWindow):
             handler=self.flip,
             shortcut="Ctrl+Shift+F",
             icon=get_svg_icon("flip"),
-            status_tip="Flips the perspective.",
+            status_tip="Flips the current perspective.",
         )
         self.load_engine_action = create_action(
             shortcut="Ctrl+E",
@@ -209,7 +209,7 @@ class MainWindow(QMainWindow):
         """Set a personal layout for widgets on the main window."""
         self._clock_layout: QVBoxLayout = QVBoxLayout()
         self._clock_layout.addWidget(self._black_clock)
-        self._clock_layout.addSpacing(400)
+        self._clock_layout.addSpacing(394)
         self._clock_layout.addWidget(self._white_clock)
 
         self.grid_layout: QGridLayout = QGridLayout()
@@ -294,15 +294,17 @@ class MainWindow(QMainWindow):
         self.close()
 
     def flip(self) -> None:
-        """Flip the orientation of clocks, board and evaluation bar."""
+        """Flip the current perspective."""
         self.flip_clocks()
-        self._svg_board.flip_perspective()
-        self._evaluation_bar.flip_perspective()
+        self._game.flip_perspective()
+        self._evaluation_bar.adjust_perspective()
         self._svg_board.draw()
 
     def push_move_now(self) -> None:
         """Pass the turn to the loaded engine to push a move."""
         self._game.pass_turn_to_engine()
+
+        self.flip()
         self.invoke_engine()
 
     def show_settings_dialog(self) -> None:

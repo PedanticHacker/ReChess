@@ -113,9 +113,7 @@ class Game(QObject):
 
     def play_sound_effect_for(self, move: Move) -> None:
         """Play a WAV sound effect for the given `move`."""
-        file_name = (
-            "capture.wav" if self.position.is_capture(move) else "move.wav"
-        )
+        file_name = "capture.wav" if self.position.is_capture(move) else "move.wav"
         file_path = f"rechess/resources/audio/{file_name}"
         file_url = QUrl.fromLocalFile(file_path)
         self.sound_effect.setSource(file_url)
@@ -173,5 +171,5 @@ class Game(QObject):
 
     @property
     def variation(self) -> str:
-        """Get a variation of moves in the current game."""
+        """Get a variation of moves in the current game's position."""
         return Board().variation_san(self.position.move_stack)

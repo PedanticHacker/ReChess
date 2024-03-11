@@ -19,7 +19,7 @@ class FENEditor(QLineEdit):
         self.setFixedSize(QSize(500, 20))
         self.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.textEdited.connect(self.on_fen_edited)
+        self.textEdited.connect(self.on_text_edited)
 
     def set_red_background_color(self) -> None:
         """Set the background color to red as a warning indication."""
@@ -35,11 +35,11 @@ class FENEditor(QLineEdit):
         self.paste()
 
     @Slot(str)
-    def on_fen_edited(self, new_fen: str) -> None:
-        """Try to set a valid position from `new_fen`."""
+    def on_text_edited(self, edited_text: str) -> None:
+        """Try to set a valid position from `edited_text`."""
         try:
             position = self._game.position
-            position.set_fen(new_fen)
+            position.set_fen(edited_text)
         except (IndexError, ValueError):
             self.set_red_background_color()
         else:
