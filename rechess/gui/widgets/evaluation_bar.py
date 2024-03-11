@@ -23,7 +23,6 @@ class EvaluationBar(QProgressBar):
 
         self.hide()
         self.setRange(0, 1000)
-
         self.setFixedSize(QSize(40, 500))
         self.setSizePolicy(self._size_policy)
         self.setOrientation(Qt.Orientation.Vertical)
@@ -44,6 +43,6 @@ class EvaluationBar(QProgressBar):
         self._animation.setEndValue(animation_value)
         self._animation.start()
 
-    def adjust_perspective(self) -> None:
-        """Adjust the bar's perspective relative to the game."""
+    def flip_perspective(self) -> None:
+        """Flip the bar's perspective."""
         self.setInvertedAppearance(self._game.perspective)

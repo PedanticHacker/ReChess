@@ -26,7 +26,6 @@ class Engine(QObject):
             f"rechess/resources/engines/stockfish-16.1/{system().lower()}/"
             f"stockfish{'.exe' if system() == 'Windows' else ''}"
         )
-        self.resigned: bool = False
         self.analyzing: bool = False
 
     def load(self, file_path: str) -> None:
@@ -42,7 +41,6 @@ class Engine(QObject):
             board=self._game.position,
             ponder=get_config_value("engine", "pondering"),
         )
-        self.resigned = play_result.resigned
         self.move_played.emit(play_result.move)
 
     def start_analysis(self) -> None:

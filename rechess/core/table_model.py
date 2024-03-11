@@ -75,6 +75,6 @@ class TableModel(QAbstractTableModel):
         self._item_data.clear()
         self.endResetModel()
 
-    def refresh(self) -> None:
-        """Refresh the view as the layout of the model has changed."""
+    def refresh_view(self) -> None:
+        """Refresh the view due to changes in the model's layout."""
         self.layoutChanged.emit()

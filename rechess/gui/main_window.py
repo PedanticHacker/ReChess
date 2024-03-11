@@ -297,7 +297,7 @@ class MainWindow(QMainWindow):
         """Flip the current perspective."""
         self.flip_clocks()
         self._game.flip_perspective()
-        self._evaluation_bar.adjust_perspective()
+        self._evaluation_bar.flip_perspective()
         self._svg_board.draw()
 
     def push_move_now(self) -> None:
@@ -353,8 +353,8 @@ class MainWindow(QMainWindow):
 
     def stop_analysis(self) -> None:
         """Stop analyzing the current position."""
-        self._engine.stop_analysis()
         self._evaluation_bar.hide()
+        self._engine.stop_analysis()
         self.toggle_tool_bar_buttons()
 
     def show_fen(self) -> None:
@@ -376,10 +376,12 @@ class MainWindow(QMainWindow):
         self.show_fen()
         self.show_opening()
         self.toggle_clock_states()
-        self._table_model.refresh()
-        self._evaluation_bar.reset()
-        self._engine.stop_analysis()
         self.toggle_tool_bar_buttons()
+
+        self._evaluation_bar.hide()
+        self._engine.stop_analysis()
+        self._table_model.refresh_view()
+        self._notifications_label.clear()
 
         if self._game.is_engine_on_turn():
             self.invoke_engine()
@@ -389,11 +391,6 @@ class MainWindow(QMainWindow):
             self._white_clock.stop_timer()
             self._notifications_label.setText(self._game.get_result())
             self.offer_new_game()
-
-        if self._engine.resigned:
-            self._black_clock.stop_timer()
-            self._white_clock.stop_timer()
-            self._notifications_label.setText(f"{self._engine.name} resigned!")
 
         self._svg_board.draw()
 
@@ -427,8 +424,8 @@ class MainWindow(QMainWindow):
         self._opening_label.clear()
 
         self._table_model.reset()
+        self._evaluation_bar.hide()
         self._engine.stop_analysis()
-        self._evaluation_bar.reset()
         self._game.prepare_new_game()
         self._notifications_label.clear()
 

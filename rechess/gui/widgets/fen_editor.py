@@ -1,4 +1,3 @@
-from chess import STARTING_FEN
 from PySide6.QtGui import QMouseEvent
 from PySide6.QtWidgets import QLineEdit
 from PySide6.QtCore import QSize, Qt, Slot
@@ -15,8 +14,8 @@ class FENEditor(QLineEdit):
         self._game: Game = game
 
         self.setMaxLength(90)
-        self.setText(STARTING_FEN)
         self.setFixedSize(QSize(500, 20))
+        self.setText(self._game.get_fen())
         self.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.textEdited.connect(self.on_text_edited)

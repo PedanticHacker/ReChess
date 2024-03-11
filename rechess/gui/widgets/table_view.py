@@ -36,7 +36,7 @@ class TableView(QTableView):
                 last_index,
                 QItemSelectionModel.SelectionFlag.Select,
             )
-            return
+            return None
 
         current_index = self.selectionModel().currentIndex()
         previous_row = current_index.row() - (current_index.column() == 0)
