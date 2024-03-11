@@ -45,8 +45,8 @@ class TableModel(QAbstractTableModel):
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
         """Count the rows needed for the table."""
-        all_data = len(self._item_data)
-        return (all_data + 1) // 2
+        all_item_data = len(self._item_data) + 1
+        return all_item_data // 2
 
     def columnCount(
         self,

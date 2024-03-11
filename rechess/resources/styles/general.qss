@@ -20,7 +20,7 @@ QMainWindow {
 
 QProgressBar {
     font: bold;
-    color: a6700;
+    color: lime;
     background: white;
     text-align: center;
 }
