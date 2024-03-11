@@ -52,8 +52,8 @@ class Game(QObject):
         notation_item: str = self.position.san_and_push(move)
         self.notation.append(notation_item)
 
-    def flip_board(self) -> None:
-        """Flip the board's perspective."""
+    def flip_perspective(self) -> None:
+        """Flip the current perspective."""
         self.perspective = not self.perspective
 
     def get_square_from(self, x: float, y: float) -> None:
@@ -172,6 +172,6 @@ class Game(QObject):
         return [legal_move.to_square for legal_move in legal_moves]
 
     @property
-    def moves(self) -> list[Move]:
-        """Get a list of all the played moves in the current game."""
-        return self.position.move_stack
+    def variation(self) -> str:
+        """Get a variation of moves in the current game."""
+        return Board().variation_san(self.position.move_stack)

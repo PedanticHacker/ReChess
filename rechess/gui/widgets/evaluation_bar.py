@@ -2,14 +2,17 @@ from chess.engine import Score
 from PySide6.QtWidgets import QProgressBar, QSizePolicy
 from PySide6.QtCore import QEasingCurve, QPropertyAnimation, QSize, Qt
 
+from rechess.core import Game
 from rechess import get_config_value
 
 
 class EvaluationBar(QProgressBar):
     """A bar showing an engine's evaluation of a position."""
 
-    def __init__(self) -> None:
+    def __init__(self, game: Game) -> None:
         super().__init__()
+
+        self._game: Game = game
 
         self.reset()
         self.setRange(0, 1000)
@@ -50,9 +53,8 @@ class EvaluationBar(QProgressBar):
         self._animation.start()
 
     def flip_perspective(self) -> None:
-        """Flip the bar's perspective if an engine plays as White."""
-        is_engine_white: bool = get_config_value("engine", "white")
-        self.setInvertedAppearance(is_engine_white)
+        """Flip the bar's perspective if the engine plays as White."""
+        self.setInvertedAppearance(self._game.perspective)
 
     def reset(self) -> None:
         """Reset the bar to its default state."""

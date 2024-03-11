@@ -40,9 +40,8 @@ class MainWindow(QMainWindow):
         self.create_tool_bar()
         self.create_status_bar()
         self.set_personal_layout()
+        self.toggle_tool_bar_buttons()
         self.connect_events_with_handlers()
-
-        self.start_new_game()
 
     def create_widgets(self) -> None:
         """Create widgets for the main window."""
@@ -52,15 +51,16 @@ class MainWindow(QMainWindow):
 
         self._svg_board: SvgBoard = SvgBoard(self._game)
         self._fen_editor: FENEditor = FENEditor(self._game)
+        self._evaluation_bar: EvaluationBar = EvaluationBar(self._game)
 
         self._black_clock: Clock = Clock(ClockStyle.Black)
         self._white_clock: Clock = Clock(ClockStyle.White)
-        self._evaluation_bar: EvaluationBar = EvaluationBar()
         self._table_view: TableView = TableView(self._table_model)
 
-        self._opening_label: QLabel = QLabel()
         self._notifications_label: QLabel = QLabel()
         self._notifications_label.setWordWrap(True)
+
+        self._opening_label: QLabel = QLabel()
         self._engine_name_label: QLabel = QLabel(self._engine.name)
 
     def create_actions(self) -> None:
@@ -77,7 +77,7 @@ class MainWindow(QMainWindow):
             handler=self.flip,
             shortcut="Ctrl+Shift+F",
             icon=get_svg_icon("flip"),
-            status_tip="Flips the viewpoint.",
+            status_tip="Flips the perspective.",
         )
         self.load_engine_action = create_action(
             shortcut="Ctrl+E",
@@ -254,11 +254,34 @@ class MainWindow(QMainWindow):
         if self._game.is_perspective_flipped():
             self.flip_clocks()
 
+    def toggle_tool_bar_buttons(self) -> None:
+        """Toggle tool bar buttons of the engine."""
+        self.push_move_now_action.setEnabled(True)
+        self.start_analysis_action.setEnabled(True)
+        self.stop_analysis_action.setDisabled(True)
+
+        # if self._engine.is_invoked():
+        #     self.push_move_now_action.setDisabled(True)
+        #     self.stop_analysis_action.setDisabled(True)
+        #     self.start_analysis_action.setDisabled(True)
+
+        if self._engine.is_analyzing():
+            self.stop_analysis_action.setEnabled(True)
+            self.push_move_now_action.setDisabled(True)
+            self.start_analysis_action.setDisabled(True)
+
+        if self._game.is_game_over():
+            self.push_move_now_action.setDisabled(True)
+            self.stop_analysis_action.setDisabled(True)
+            self.start_analysis_action.setDisabled(True)
+
     def connect_events_with_handlers(self) -> None:
         """Connect events with specific handlers."""
         self._game.move_played.connect(self.on_move_played)
         self._engine.move_played.connect(self.on_move_played)
-        self._engine.analysis_refreshed.connect(self.on_analysis_refreshed)
+        self._engine.score_analyzed.connect(self.on_score_analyzed)
+        self._engine.best_move_analyzed.connect(self.on_best_move_analyzed)
+        self._engine.variation_analyzed.connect(self.on_variation_analyzed)
 
     def invoke_engine(self) -> None:
         """Invoke the currently loaded engine to play a move."""
@@ -279,13 +302,14 @@ class MainWindow(QMainWindow):
     def flip(self) -> None:
         """Flip the orientation of clocks, board and evaluation bar."""
         self.flip_clocks()
-        self._svg_board.flip_board()
+        self._svg_board.flip_perspective()
         self._evaluation_bar.flip_perspective()
         self._svg_board.draw()
 
     def push_move_now(self) -> None:
         """Pass the turn to the loaded engine to push a move."""
         self._game.pass_turn_to_engine()
+        self.invoke_engine()
 
     def show_settings_dialog(self) -> None:
         """Show the Settings dialog."""
@@ -325,12 +349,12 @@ class MainWindow(QMainWindow):
         self._clock_layout.insertWidget(2, top_clock)
 
     def start_analysis(self) -> None:
-        """Start analyzing the current chessboard position."""
+        """Start analyzing the current position."""
         self.invoke_analysis()
         self._evaluation_bar.show()
 
     def stop_analysis(self) -> None:
-        """Stop analyzing the current chessboard position."""
+        """Stop analyzing the current position."""
         self._engine.stop_analysis()
         self._evaluation_bar.hide()
 
@@ -339,14 +363,10 @@ class MainWindow(QMainWindow):
         self._fen_editor.reset_background_color()
         self._fen_editor.setText(self._game.get_fen())
 
-    def show_evaluation(self, evaluation: Score) -> None:
-        """Show position evaluation by the given `evaluation`."""
-        self._evaluation_bar.animate(evaluation)
-
     def show_opening(self) -> None:
         """Show an ECO code along with an opening name."""
         openings: dict[str, tuple[str, str]] = get_openings()
-        variation: str = self._game.get_variation_from(self._game.moves)
+        variation: str = self._game.variation
 
         if variation in openings:
             eco_code, opening_name = openings[variation]
@@ -455,13 +475,23 @@ class MainWindow(QMainWindow):
             self._table_view.select_next_item()
 
     @Slot(Move)
+    def on_best_move_analyzed(self, best_move: Move) -> None:
+        """Show the given `best_move` from engine analysis."""
+        self._game.set_arrow_for(best_move)
+        self._svg_board.draw()
+
+    @Slot(Move)
     def on_move_played(self, move: Move) -> None:
         """Play the given `move`."""
         self._game.push(move)
         self.update_game_state()
 
-    @Slot(list)
-    def on_analysis_refreshed(self, analysis_moves: list[Move]) -> None:
-        """Show a variation from the given `analysis_moves`."""
-        variation: str = self._game.get_variation_from(analysis_moves)
+    @Slot(Score)
+    def on_score_analyzed(self, evaluation: Score) -> None:
+        """Show position evaluation by the given `evaluation`."""
+        self._evaluation_bar.animate(evaluation)
+
+    @Slot(str)
+    def on_variation_analyzed(self, variation: str) -> None:
+        """Show the given `variation` from engine analysis."""
         self._notifications_label.setText(variation)

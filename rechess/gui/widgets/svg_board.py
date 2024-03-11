@@ -33,6 +33,8 @@ class SvgBoard(QSvgWidget):
             "square light lastmove": "#8b000080",
         }
 
+        self.draw()
+
     def draw(self) -> None:
         """Draw the current position on the board."""
         svg_board: str = svg.board(
@@ -46,9 +48,9 @@ class SvgBoard(QSvgWidget):
         encoded_svg_board: bytes = svg_board.encode()
         self.load(encoded_svg_board)
 
-    def flip_board(self) -> None:
-        """Flip the board's orientation."""
-        self._game.flip_board()
+    def flip_perspective(self) -> None:
+        """Flip the board's current perspective."""
+        self._game.flip_perspective()
 
     def mousePressEvent(self, event: QMouseEvent) -> None:
         """Respond to pressing the primary mouse button."""

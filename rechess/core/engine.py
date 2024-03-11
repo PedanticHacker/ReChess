@@ -13,7 +13,9 @@ class Engine(QObject):
     """A mechanism to communicate with a UCI engine."""
 
     move_played: Signal = Signal(Move)
-    analysis_refreshed: Signal = Signal(list)
+    score_analyzed: Signal = Signal(Score)
+    variation_analyzed: Signal = Signal(str)
+    best_move_analyzed: Signal = Signal(Move)
 
     def __init__(self, game: Game) -> None:
         super().__init__()
@@ -30,6 +32,10 @@ class Engine(QObject):
     def has_resigned(self) -> bool:
         """Check whether the loaded engine has resigned."""
         return self._resigned
+
+    def is_analyzing(self) -> bool:
+        """Check whether the loaded engine is analyzing."""
+        return self._analyzing
 
     def load(self, file_path: str) -> None:
         """Load an engine by the given `file_path`."""
@@ -54,7 +60,14 @@ class Engine(QObject):
         with self._loaded_engine.analysis(self._game.position) as analysis:
             for info in analysis:
                 if self._analyzing and "pv" in info:
-                    self.analysis_refreshed.emit(info["pv"])
+                    score: Score = info["score"].white()
+                    pv: list[Move] = info["pv"]
+                    best_move: Move = pv[0]
+                    variation: str = self._game.position.variation_san(pv)
+
+                    self.score_analyzed.emit(score)
+                    self.best_move_analyzed.emit(best_move)
+                    self.variation_analyzed.emit(variation)
                 if not self._analyzing:
                     break
 
