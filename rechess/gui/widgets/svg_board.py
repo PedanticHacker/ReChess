@@ -32,11 +32,11 @@ class SvgBoard(QSvgWidget):
         self.draw()
 
     def draw(self) -> None:
-        """Draw the current position of the board."""
+        """Draw the current position."""
         svg_board: str = svg.board(
             colors=self._colors,
+            board=self._game.board,
             arrows=self._game.arrow,
-            board=self._game.position,
             check=self._game.king_square,
             squares=self._game.legal_moves,
             orientation=self._game.perspective,

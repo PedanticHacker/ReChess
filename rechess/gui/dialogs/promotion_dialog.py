@@ -1,6 +1,5 @@
 from chess import Color, PieceType
 from chess import BISHOP, KNIGHT, QUEEN, ROOK, WHITE
-from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QDialog, QDialogButtonBox, QHBoxLayout
 
 from rechess import create_button, get_svg_icon
@@ -13,26 +12,22 @@ class PromotionDialog(QDialog):
         super().__init__()
 
         self._player_color: Color = player_color
-        self._piece_type: PieceType = PieceType()
+        self.piece_type: PieceType = PieceType()
 
         self.set_title()
-        self.set_layout()
         self.create_buttons()
         self.add_buttons_to_box()
+        self.set_horizontal_layout()
         self.connect_events_with_handlers()
 
         self.exec()
 
     def set_title(self) -> None:
+        """Set the dialog's title as Pawn Promotion."""
         self.setWindowTitle("Pawn Promotion")
 
-    def set_layout(self) -> None:
-        self.button_box = QDialogButtonBox()
-        self.horizontal_layout = QHBoxLayout()
-        self.horizontal_layout.addWidget(self.button_box)
-        self.setLayout(self.horizontal_layout)
-
     def create_buttons(self) -> None:
+        """Create buttons for the promotion options."""
         if self._player_color == WHITE:
             self.queen_button = create_button(get_svg_icon("white-queen"))
             self.rook_button = create_button(get_svg_icon("white-rook"))
@@ -45,6 +40,9 @@ class PromotionDialog(QDialog):
             self.knight_button = create_button(get_svg_icon("black-knight"))
 
     def add_buttons_to_box(self) -> None:
+        """Add buttons to a button box to be placed horizontally."""
+        self.button_box: QDialogButtonBox = QDialogButtonBox()
+
         self.button_box.addButton(
             self.queen_button,
             QDialogButtonBox.ButtonRole.AcceptRole,
@@ -62,7 +60,14 @@ class PromotionDialog(QDialog):
             QDialogButtonBox.ButtonRole.AcceptRole,
         )
 
+    def set_horizontal_layout(self) -> None:
+        """Set a horizontal layout for the buttons."""
+        self.horizontal_layout: QHBoxLayout = QHBoxLayout()
+        self.horizontal_layout.addWidget(self.button_box)
+        self.setLayout(self.horizontal_layout)
+
     def connect_events_with_handlers(self) -> None:
+        """Connect various events with specific handlers."""
         self.button_box.accepted.connect(self.accept)
         self.button_box.rejected.connect(self.reject)
         self.queen_button.clicked.connect(self.on_queen_button_clicked)
@@ -71,17 +76,17 @@ class PromotionDialog(QDialog):
         self.knight_button.clicked.connect(self.on_knight_button_clicked)
 
     def on_queen_button_clicked(self) -> None:
-        self._piece_type = QUEEN
+        """Change the promoting pawn to a queen."""
+        self.piece_type = QUEEN
 
     def on_rook_button_clicked(self) -> None:
-        self._piece_type = ROOK
+        """Change the promoting pawn to a rook."""
+        self.piece_type = ROOK
 
     def on_bishop_button_clicked(self) -> None:
-        self._piece_type = BISHOP
+        """Change the promoting pawn to a bishop."""
+        self.piece_type = BISHOP
 
     def on_knight_button_clicked(self) -> None:
-        self._piece_type = KNIGHT
-
-    @property
-    def piece_type(self) -> PieceType:
-        return self._piece_type
+        """Change the promoting pawn to a knight."""
+        self.piece_type = KNIGHT

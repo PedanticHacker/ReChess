@@ -2,7 +2,7 @@ from pathlib import Path
 
 from chess import Move
 from chess.engine import Score
-from PySide6.QtCore import QThreadPool, Slot
+from PySide6.QtCore import Qt, QThreadPool, Slot
 from PySide6.QtGui import QCloseEvent, QWheelEvent
 from PySide6.QtWidgets import (
     QLabel,
@@ -37,8 +37,8 @@ class MainWindow(QMainWindow):
         self.create_actions()
         self.create_menu_bar()
         self.create_tool_bar()
+        self.set_grid_layout()
         self.create_status_bar()
-        self.set_personal_layout()
         self.toggle_tool_bar_buttons()
         self.connect_events_with_handlers()
 
@@ -204,8 +204,8 @@ class MainWindow(QMainWindow):
         status_bar.addPermanentWidget(self._engine_name_label)
         self._engine_name_label.setText(self._engine.name)
 
-    def set_personal_layout(self) -> None:
-        """Set a personal layout for widgets on the main window."""
+    def set_grid_layout(self) -> None:
+        """Set a grid layout for widgets on the main window."""
         self._grid_layout: QGridLayout = QGridLayout()
         self._grid_layout.addWidget(self._black_clock, 0, 0)
         self._grid_layout.addWidget(self._white_clock, 1, 0)
@@ -215,9 +215,9 @@ class MainWindow(QMainWindow):
         self._grid_layout.addWidget(self._fen_editor, 1, 1)
         self._grid_layout.addWidget(self._notifications_label, 2, 1)
 
-        self.widget_container: QWidget = QWidget()
-        self.widget_container.setLayout(self._grid_layout)
-        self.setCentralWidget(self.widget_container)
+        self._widget_container: QWidget = QWidget()
+        self._widget_container.setLayout(self._grid_layout)
+        self.setCentralWidget(self._widget_container)
 
         if self._game.is_perspective_flipped():
             self.flip_clocks()
@@ -238,12 +238,12 @@ class MainWindow(QMainWindow):
             self.start_analysis_action.setDisabled(True)
 
     def connect_events_with_handlers(self) -> None:
-        """Connect events with specific handlers."""
+        """Connect various events with specific handlers."""
         self._game.move_played.connect(self.on_move_played)
         self._engine.move_played.connect(self.on_move_played)
-        self._engine.score_analyzed.connect(self.on_score_analyzed)
         self._engine.best_move_analyzed.connect(self.on_best_move_analyzed)
-        self._engine.variation_analyzed.connect(self.on_variation_analyzed)
+        self._engine.white_score_analyzed.connect(self.on_white_score_analyzed)
+        self._engine.san_variation_analyzed.connect(self.on_san_variation_analyzed)
 
     def invoke_engine(self) -> None:
         """Invoke the currently loaded engine to play a move."""
@@ -328,7 +328,7 @@ class MainWindow(QMainWindow):
     def show_fen(self) -> None:
         """Show a FEN (Forsyth-Edwards Notation) in the FEN editor."""
         self._fen_editor.reset_background_color()
-        self._fen_editor.setText(self._game.get_fen())
+        self._fen_editor.setText(self._game.fen)
 
     def show_opening(self) -> None:
         """Show an ECO code along with an opening name."""
@@ -357,7 +357,7 @@ class MainWindow(QMainWindow):
         if self._game.is_game_over():
             self._black_clock.stop_timer()
             self._white_clock.stop_timer()
-            self._notifications_label.setText(self._game.get_result())
+            self._notifications_label.setText(self._game.result)
             self.offer_new_game()
 
         self._svg_board.draw()
@@ -448,16 +448,17 @@ class MainWindow(QMainWindow):
 
     @Slot(Move)
     def on_move_played(self, move: Move) -> None:
-        """Play the given `move`."""
-        self._game.push(move)
-        self.update_game_state()
+        """Play the `move` by pushing it and updating the game state."""
+        if self._game.is_legal(move):
+            self._game.push(move)
+            self.update_game_state()
 
     @Slot(Score)
-    def on_score_analyzed(self, evaluation: Score) -> None:
-        """Show position evaluation by the given `evaluation`."""
-        self._evaluation_bar.animate(evaluation)
+    def on_white_score_analyzed(self, white_score: Score) -> None:
+        """Show a position evaluation as per the `white_score`."""
+        self._evaluation_bar.animate(white_score)
 
     @Slot(str)
-    def on_variation_analyzed(self, variation: str) -> None:
-        """Show the given `variation` from engine analysis."""
-        self._notifications_label.setText(variation)
+    def on_san_variation_analyzed(self, san_variation: str) -> None:
+        """Show the `san_variation` from engine analysis."""
+        self._notifications_label.setText(san_variation)

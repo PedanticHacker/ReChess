@@ -13,9 +13,9 @@ class Engine(QObject):
     """A mechanism to communicate with a UCI engine."""
 
     move_played: Signal = Signal(Move)
-    score_analyzed: Signal = Signal(Score)
-    variation_analyzed: Signal = Signal(str)
     best_move_analyzed: Signal = Signal(Move)
+    san_variation_analyzed: Signal = Signal(str)
+    white_score_analyzed: Signal = Signal(Score)
 
     def __init__(self, game: Game) -> None:
         super().__init__()
@@ -38,24 +38,24 @@ class Engine(QObject):
         """Play a move by the loaded engine."""
         play_result: PlayResult = self._loaded_engine.play(
             limit=Limit(1.0),
-            board=self._game.position,
+            board=self._game.board,
             ponder=get_config_value("engine", "pondering"),
         )
         self.move_played.emit(play_result.move)
 
     def start_analysis(self) -> None:
         """Start analyzing the current position."""
-        with self._loaded_engine.analysis(self._game.position) as analysis:
+        with self._loaded_engine.analysis(self._game.board) as analysis:
             for info in analysis:
                 if self.analyzing and "pv" in info:
-                    score: Score = info["score"].white()
                     pv: list[Move] = info["pv"]
                     best_move: Move = pv[0]
-                    variation: str = self._game.position.variation_san(pv)
+                    san_variation: str = self._game.get_san_variation_from(pv)
+                    white_score: Score = info["score"].white()
 
-                    self.score_analyzed.emit(score)
                     self.best_move_analyzed.emit(best_move)
-                    self.variation_analyzed.emit(variation)
+                    self.white_score_analyzed.emit(white_score)
+                    self.san_variation_analyzed.emit(san_variation)
                 if not self.analyzing:
                     break
 

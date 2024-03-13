@@ -22,21 +22,14 @@ class SettingsDialog(QDialog):
         super().__init__()
 
         self.set_title()
-        self.set_button_box()
         self.create_groups()
         self.create_options()
-        self.set_personal_layout()
+        self.set_vertical_layout()
         self.connect_events_with_handlers()
 
     def set_title(self) -> None:
         """Set the dialog's title as Settings."""
         self.setWindowTitle("Settings")
-
-    def set_button_box(self) -> None:
-        """Set a button box with OK and Cancel buttons."""
-        self.button_box: QDialogButtonBox = QDialogButtonBox(
-            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel
-        )
 
     def create_groups(self) -> None:
         """Create a chess engine group and a time control group."""
@@ -78,7 +71,7 @@ class SettingsDialog(QDialog):
         self.clock_time_option.addItem("1 hour", 3600)
         self.clock_time_option.addItem("2 hours", 7200)
         self.clock_time_option.setCurrentIndex(
-            self.clock_time_option.findData(clock_time),
+            self.clock_time_option.findData(clock_time)
         )
 
         self.clock_increment_option: QComboBox = QComboBox()
@@ -87,11 +80,16 @@ class SettingsDialog(QDialog):
         self.clock_increment_option.addItem("12 seconds", 12)
         self.clock_increment_option.addItem("30 seconds", 30)
         self.clock_increment_option.setCurrentIndex(
-            self.clock_increment_option.findData(clock_increment),
+            self.clock_increment_option.findData(clock_increment)
         )
 
-    def set_personal_layout(self) -> None:
-        """Set a personal layout for the widgets."""
+    def set_vertical_layout(self) -> None:
+        """Set a vertical layout for the dialog."""
+        self.button_box: QDialogButtonBox = QDialogButtonBox(
+            QDialogButtonBox.StandardButton.Ok
+            | QDialogButtonBox.StandardButton.Cancel
+        )
+
         engine_layout: QVBoxLayout = QVBoxLayout()
         engine_layout.addWidget(self.engine_black_option)
         engine_layout.addWidget(self.engine_white_option)
@@ -103,14 +101,15 @@ class SettingsDialog(QDialog):
         time_control_layout.addWidget(self.clock_increment_option)
         self.time_control_group.setLayout(time_control_layout)
 
-        personal_layout: QVBoxLayout = QVBoxLayout()
-        personal_layout.addWidget(self.engine_group)
-        personal_layout.addWidget(self.time_control_group)
-        personal_layout.addWidget(self.button_box)
-        self.setLayout(personal_layout)
+        vertical_layout: QVBoxLayout = QVBoxLayout()
+        vertical_layout.addWidget(self.engine_group)
+        vertical_layout.addWidget(self.time_control_group)
+        vertical_layout.addWidget(self.button_box)
+        self.setLayout(vertical_layout)
 
     def connect_events_with_handlers(self) -> None:
         """Connect various events with specific handlers."""
+        self.rejected.connect(self.reject)
         self.accepted.connect(self.on_save_settings)
         self.button_box.accepted.connect(self.accept)
         self.button_box.rejected.connect(self.reject)

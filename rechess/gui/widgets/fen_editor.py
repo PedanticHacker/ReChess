@@ -15,7 +15,7 @@ class FENEditor(QLineEdit):
 
         self.setMaxLength(90)
         self.setFixedSize(500, 20)
-        self.setText(self._game.get_fen())
+        self.setText(self._game.fen)
         self.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.textEdited.connect(self.on_text_edited)
@@ -35,14 +35,14 @@ class FENEditor(QLineEdit):
 
     @Slot(str)
     def on_text_edited(self, edited_text: str) -> None:
-        """Try to set a valid position from `edited_text`."""
+        """Try to set a valid board from `text`."""
         try:
-            position = self._game.position
-            position.set_fen(edited_text)
+            board = self._game.board
+            board.set_fen(edited_text)
         except (IndexError, ValueError):
             self.set_red_background_color()
         else:
-            if position.is_valid():
+            if board.is_valid():
                 self.clearFocus()
                 self.reset_background_color()
-                self._game.position = position
+                self._game.board = board
