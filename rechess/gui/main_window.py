@@ -12,7 +12,6 @@ from PySide6.QtWidgets import (
     QGridLayout,
     QMainWindow,
     QMessageBox,
-    QVBoxLayout,
 )
 
 from rechess import ClockStyle
@@ -207,13 +206,9 @@ class MainWindow(QMainWindow):
 
     def set_personal_layout(self) -> None:
         """Set a personal layout for widgets on the main window."""
-        self._clock_layout: QVBoxLayout = QVBoxLayout()
-        self._clock_layout.addWidget(self._black_clock)
-        self._clock_layout.addSpacing(394)
-        self._clock_layout.addWidget(self._white_clock)
-
         self._grid_layout: QGridLayout = QGridLayout()
-        self._grid_layout.addLayout(self._clock_layout, 0, 0)
+        self._grid_layout.addWidget(self._black_clock, 0, 0)
+        self._grid_layout.addWidget(self._white_clock, 1, 0)
         self._grid_layout.addWidget(self._svg_board, 0, 1)
         self._grid_layout.addWidget(self._evaluation_bar, 0, 2)
         self._grid_layout.addWidget(self._table_view, 0, 3)
