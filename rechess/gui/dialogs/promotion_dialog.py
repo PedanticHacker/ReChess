@@ -27,7 +27,7 @@ class PromotionDialog(QDialog):
         self.setWindowTitle("Pawn Promotion")
 
     def create_buttons(self) -> None:
-        """Create buttons for the promotion options."""
+        """Create buttons to be as promotion options."""
         if self._player_color == WHITE:
             self.queen_button = create_button(get_svg_icon("white-queen"))
             self.rook_button = create_button(get_svg_icon("white-rook"))
