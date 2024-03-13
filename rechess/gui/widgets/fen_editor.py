@@ -1,6 +1,6 @@
+from PySide6.QtCore import Qt, Slot
 from PySide6.QtGui import QMouseEvent
 from PySide6.QtWidgets import QLineEdit
-from PySide6.QtCore import QSize, Qt, Slot
 
 from rechess.core import Game
 
@@ -14,7 +14,7 @@ class FENEditor(QLineEdit):
         self._game: Game = game
 
         self.setMaxLength(90)
-        self.setFixedSize(QSize(500, 20))
+        self.setFixedSize(500, 20)
         self.setText(self._game.get_fen())
         self.setAlignment(Qt.AlignmentFlag.AlignCenter)
 

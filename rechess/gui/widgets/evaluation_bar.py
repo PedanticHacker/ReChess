@@ -1,7 +1,7 @@
 from chess import Color
 from chess.engine import Score
 from PySide6.QtWidgets import QProgressBar, QSizePolicy
-from PySide6.QtCore import QEasingCurve, QPropertyAnimation, QSize, Qt
+from PySide6.QtCore import QEasingCurve, QPropertyAnimation, Qt
 
 from rechess.core import Game
 
@@ -23,7 +23,7 @@ class EvaluationBar(QProgressBar):
 
         self.hide()
         self.setRange(0, 1000)
-        self.setFixedSize(QSize(40, 500))
+        self.setFixedSize(40, 500)
         self.setSizePolicy(self._size_policy)
         self.setOrientation(Qt.Orientation.Vertical)
 

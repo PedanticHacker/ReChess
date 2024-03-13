@@ -1,5 +1,4 @@
 from chess import svg
-from PySide6.QtCore import QSize
 from PySide6.QtGui import QMouseEvent
 from PySide6.QtSvgWidgets import QSvgWidget
 
@@ -29,7 +28,7 @@ class SvgBoard(QSvgWidget):
             "square light lastmove": "#8b000080",
         }
 
-        self.setFixedSize(QSize(500, 500))
+        self.setFixedSize(500, 500)
         self.draw()
 
     def draw(self) -> None:

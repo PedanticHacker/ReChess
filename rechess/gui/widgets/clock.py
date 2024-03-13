@@ -1,7 +1,7 @@
 from typing import Literal
 
 from PySide6.QtWidgets import QLCDNumber
-from PySide6.QtCore import QSize, Qt, QTimer, Slot
+from PySide6.QtCore import Qt, QTimer, Slot
 
 from rechess import ClockStyle
 from rechess import get_config_value
@@ -14,7 +14,7 @@ class Clock(QLCDNumber):
         super().__init__()
 
         self.setStyleSheet(style)
-        self.setFixedSize(QSize(200, 50))
+        self.setFixedSize(200, 50)
         self.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self._countdown_timer: QTimer = QTimer(self)

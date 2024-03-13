@@ -1,7 +1,6 @@
 from PySide6.QtWidgets import QAbstractItemView, QHeaderView, QTableView
 from PySide6.QtCore import (
     Slot,
-    QSize,
     QModelIndex,
     QAbstractTableModel,
     QItemSelectionModel,
@@ -18,8 +17,8 @@ class TableView(QTableView):
 
         self.setShowGrid(False)
         self.setModel(table_model)
+        self.setFixedSize(300, 500)
         self.setTabKeyNavigation(False)
-        self.setFixedSize(QSize(300, 500))
         self.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
         self.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
         self.verticalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Fixed)
