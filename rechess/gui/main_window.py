@@ -2,7 +2,7 @@ from pathlib import Path
 
 from chess import Move
 from chess.engine import Score
-from PySide6.QtCore import Qt, QThreadPool, Slot
+from PySide6.QtCore import QThreadPool, Slot
 from PySide6.QtGui import QCloseEvent, QWheelEvent
 from PySide6.QtWidgets import (
     QLabel,
@@ -212,43 +212,16 @@ class MainWindow(QMainWindow):
         self._clock_layout.addSpacing(394)
         self._clock_layout.addWidget(self._white_clock)
 
-        self.grid_layout: QGridLayout = QGridLayout()
-        self.grid_layout.addLayout(
-            self._clock_layout,
-            0,
-            0,
-            Qt.AlignmentFlag.AlignRight,
-        )
-        self.grid_layout.addWidget(
-            self._svg_board,
-            0,
-            1,
-        )
-        self.grid_layout.addWidget(
-            self._evaluation_bar,
-            0,
-            2,
-        )
-        self.grid_layout.addWidget(
-            self._table_view,
-            0,
-            3,
-            Qt.AlignmentFlag.AlignLeft,
-        )
-        self.grid_layout.addWidget(
-            self._fen_editor,
-            1,
-            1,
-        )
-        self.grid_layout.addWidget(
-            self._notifications_label,
-            2,
-            1,
-            Qt.AlignmentFlag.AlignTop,
-        )
+        self._grid_layout: QGridLayout = QGridLayout()
+        self._grid_layout.addLayout(self._clock_layout, 0, 0)
+        self._grid_layout.addWidget(self._svg_board, 0, 1)
+        self._grid_layout.addWidget(self._evaluation_bar, 0, 2)
+        self._grid_layout.addWidget(self._table_view, 0, 3)
+        self._grid_layout.addWidget(self._fen_editor, 1, 1)
+        self._grid_layout.addWidget(self._notifications_label, 2, 1)
 
         self.widget_container: QWidget = QWidget()
-        self.widget_container.setLayout(self.grid_layout)
+        self.widget_container.setLayout(self._grid_layout)
         self.setCentralWidget(self.widget_container)
 
         if self._game.is_perspective_flipped():
