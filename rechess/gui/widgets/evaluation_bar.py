@@ -18,8 +18,8 @@ class EvaluationBar(QProgressBar):
         self._size_policy.setRetainSizeWhenHidden(True)
 
         self._animation: QPropertyAnimation = QPropertyAnimation(self, b"value")
-        self._animation.valueChanged.connect(self.update)
         self._animation.setEasingCurve(QEasingCurve.Type.InOutQuint)
+        self._animation.valueChanged.connect(self.update)
 
         self.hide()
         self.setRange(0, 1000)

@@ -215,8 +215,8 @@ class MainWindow(QMainWindow):
     def set_grid_layout(self) -> None:
         """Set a grid layout for widgets on the main window."""
         self._grid_layout: QGridLayout = QGridLayout()
-        self._grid_layout.addWidget(self._black_clock, 0, 0, TOP)
-        self._grid_layout.addWidget(self._white_clock, 0, 0, BOTTOM)
+        self._grid_layout.addWidget(self._black_clock, 0, 0, TOP | RIGHT)
+        self._grid_layout.addWidget(self._white_clock, 0, 0, BOTTOM | RIGHT)
         self._grid_layout.addWidget(self._svg_board, 0, 1, CENTER)
         self._grid_layout.addWidget(self._evaluation_bar, 0, 2, LEFT)
         self._grid_layout.addWidget(self._table_view, 0, 3, LEFT)
@@ -315,7 +315,7 @@ class MainWindow(QMainWindow):
 
     def flip_clocks(self) -> None:
         """Flip the top and bottom clocks."""
-        if self._grid_layout.itemAt(0).alignment() == TOP:
+        if TOP in self._grid_layout.itemAt(0).alignment():
             self._grid_layout.itemAt(0).setAlignment(BOTTOM)
             self._grid_layout.itemAt(1).setAlignment(TOP)
         else:
