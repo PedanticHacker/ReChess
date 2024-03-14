@@ -2,7 +2,7 @@ from pathlib import Path
 
 from chess import Move
 from chess.engine import Score
-from PySide6.QtCore import QThreadPool, Slot
+from PySide6.QtCore import Qt, QThreadPool, Slot
 from PySide6.QtGui import QCloseEvent, QWheelEvent
 from PySide6.QtWidgets import (
     QLabel,
@@ -26,6 +26,13 @@ from rechess.gui.widgets import (
     TableView,
     EvaluationBar,
 )
+
+
+TOP: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop
+LEFT: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignLeft
+RIGHT: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignRight
+BOTTOM: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignBottom
+CENTER: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignCenter
 
 
 class MainWindow(QMainWindow):
@@ -208,13 +215,13 @@ class MainWindow(QMainWindow):
     def set_grid_layout(self) -> None:
         """Set a grid layout for widgets on the main window."""
         self._grid_layout: QGridLayout = QGridLayout()
-        self._grid_layout.addWidget(self._black_clock, 0, 0)
-        self._grid_layout.addWidget(self._white_clock, 1, 0)
-        self._grid_layout.addWidget(self._svg_board, 0, 1)
-        self._grid_layout.addWidget(self._evaluation_bar, 0, 2)
-        self._grid_layout.addWidget(self._table_view, 0, 3)
-        self._grid_layout.addWidget(self._fen_editor, 1, 1)
-        self._grid_layout.addWidget(self._notifications_label, 2, 1)
+        self._grid_layout.addWidget(self._black_clock, 0, 0, TOP)
+        self._grid_layout.addWidget(self._white_clock, 0, 0, BOTTOM)
+        self._grid_layout.addWidget(self._svg_board, 0, 1, CENTER)
+        self._grid_layout.addWidget(self._evaluation_bar, 0, 2, LEFT)
+        self._grid_layout.addWidget(self._table_view, 0, 3, LEFT)
+        self._grid_layout.addWidget(self._fen_editor, 1, 1, TOP)
+        self._grid_layout.addWidget(self._notifications_label, 2, 1, TOP)
 
         self._widget_container: QWidget = QWidget()
         self._widget_container.setLayout(self._grid_layout)
@@ -307,7 +314,15 @@ class MainWindow(QMainWindow):
         )
 
     def flip_clocks(self) -> None:
-        """Flip the bottom and top clocks."""
+        """Flip the top and bottom clocks."""
+        if self._grid_layout.itemAt(0).alignment() == TOP:
+            self._grid_layout.itemAt(0).setAlignment(BOTTOM)
+            self._grid_layout.itemAt(1).setAlignment(TOP)
+        else:
+            self._grid_layout.itemAt(0).setAlignment(TOP)
+            self._grid_layout.itemAt(1).setAlignment(BOTTOM)
+
+        self._grid_layout.update()
 
     def start_analysis(self) -> None:
         """Start analyzing the current position."""
