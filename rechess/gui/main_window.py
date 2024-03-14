@@ -93,12 +93,12 @@ class MainWindow(QMainWindow):
             icon=get_svg_icon("new-game"),
             status_tip="Offers a new game.",
         )
-        self.push_move_now_action = create_action(
-            name="Push move now",
+        self.play_move_now_action = create_action(
+            name="Play move now",
             shortcut="Ctrl+Shift+P",
-            handler=self.push_move_now,
-            icon=get_svg_icon("push-move-now"),
-            status_tip="Forces the chess engine to push a move.",
+            handler=self.play_move_now,
+            icon=get_svg_icon("play-move-now"),
+            status_tip="Forces the engine to play a move.",
         )
         self.settings_action = create_action(
             name="Settings...",
@@ -112,21 +112,21 @@ class MainWindow(QMainWindow):
             shortcut="Ctrl+Shift+A",
             handler=self.start_analysis,
             icon=get_svg_icon("start-analysis"),
-            status_tip="Starts chess engine analysis.",
+            status_tip="Starts the engine analysis.",
         )
         self.stop_analysis_action = create_action(
             name="Stop analysis",
             shortcut="Ctrl+Shift+X",
             handler=self.stop_analysis,
             icon=get_svg_icon("stop-analysis"),
-            status_tip="Stops chess engine analysis.",
+            status_tip="Stops the engine analysis.",
         )
         self.quit_action = create_action(
             name="Quit...",
             handler=self.quit,
             shortcut="Ctrl+Q",
             icon=get_svg_icon("quit"),
-            status_tip="Offers to quit RexChess.",
+            status_tip="Offers to quit ReChess.",
         )
 
     def create_menu_bar(self) -> None:
@@ -180,8 +180,8 @@ class MainWindow(QMainWindow):
         # Edit area > Flip sides
         edit_area.addAction(self.flip_action)
 
-        # Edit area > Push move now
-        edit_area.addAction(self.push_move_now_action)
+        # Edit area > Play move now
+        edit_area.addAction(self.play_move_now_action)
 
         # Edit area > Start analysis
         edit_area.addAction(self.start_analysis_action)
@@ -207,45 +207,19 @@ class MainWindow(QMainWindow):
 
     def set_grid_layout(self) -> None:
         """Set a grid layout for widgets in the main window."""
-        self._clock_layout: QVBoxLayout = QVBoxLayout()
-        self._clock_layout.addWidget(self._black_clock)
-        self._clock_layout.addSpacing(394)
-        self._clock_layout.addWidget(self._white_clock)
+        top: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop
+        left: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignLeft
+        bottom: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignBottom
+        center: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignCenter
 
         self._grid_layout: QGridLayout = QGridLayout()
-        self._grid_layout.addLayout(
-            self._clock_layout,
-            0,
-            0,
-            Qt.AlignmentFlag.AlignRight,
-        )
-        self._grid_layout.addWidget(
-            self._svg_board,
-            0,
-            1,
-        )
-        self._grid_layout.addWidget(
-            self._evaluation_bar,
-            0,
-            2,
-        )
-        self._grid_layout.addWidget(
-            self._table_view,
-            0,
-            3,
-            Qt.AlignmentFlag.AlignLeft,
-        )
-        self._grid_layout.addWidget(
-            self._fen_editor,
-            1,
-            1,
-        )
-        self._grid_layout.addWidget(
-            self._notifications_label,
-            2,
-            1,
-            Qt.AlignmentFlag.AlignTop,
-        )
+        self._grid_layout.addWidget(self._black_clock, 0, 0, top)
+        self._grid_layout.addWidget(self._white_clock, 1, 0, bottom)
+        self._grid_layout.addWidget(self._svg_board, 0, 1, center)
+        self._grid_layout.addWidget(self._evaluation_bar, 0, 2, left)
+        self._grid_layout.addWidget(self._table_view, 0, 3, left)
+        self._grid_layout.addWidget(self._fen_editor, 1, 1, top)
+        self._grid_layout.addWidget(self._notifications_label, 2, 1, top)
 
         self._widget_container: QWidget = QWidget()
         self._widget_container.setLayout(self._grid_layout)
@@ -256,7 +230,7 @@ class MainWindow(QMainWindow):
 
     def toggle_tool_bar_buttons(self) -> None:
         """Toggle tool bar buttons of the engine."""
-        self.push_move_now_action.setEnabled(True)
+        self.play_move_now_action.setEnabled(True)
         self.start_analysis_action.setEnabled(True)
         self.stop_analysis_action.setDisabled(True)
 
@@ -265,7 +239,7 @@ class MainWindow(QMainWindow):
             self.start_analysis_action.setDisabled(True)
 
         if self._game.is_game_over():
-            self.push_move_now_action.setDisabled(True)
+            self.play_move_now_action.setDisabled(True)
             self.stop_analysis_action.setDisabled(True)
             self.start_analysis_action.setDisabled(True)
 
@@ -300,8 +274,8 @@ class MainWindow(QMainWindow):
         self._evaluation_bar.flip_perspective()
         self._svg_board.draw()
 
-    def push_move_now(self) -> None:
-        """Pass the turn to the loaded engine to push a move."""
+    def play_move_now(self) -> None:
+        """Pass the turn to the loaded engine to play a move."""
         self._game.pass_turn_to_engine()
 
         self.flip()
@@ -339,10 +313,11 @@ class MainWindow(QMainWindow):
 
     def flip_clocks(self) -> None:
         """Flip the bottom and top clocks."""
-        bottom_clock = self._clock_layout.takeAt(2).widget()
-        top_clock = self._clock_layout.takeAt(0).widget()
-        self._clock_layout.insertWidget(0, bottom_clock)
-        self._clock_layout.insertWidget(2, top_clock)
+        top_clock = self._grid_layout.takeAt(0).widget()
+        bottom_clock = self._grid_layout.takeAt(1).widget()
+
+        self._grid_layout.addWidget(bottom_clock)
+        self._grid_layout.addWidget(top_clock)
 
     def start_analysis(self) -> None:
         """Start analyzing the current position."""
