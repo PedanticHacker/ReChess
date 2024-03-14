@@ -2,7 +2,7 @@ from pathlib import Path
 
 from chess import Move
 from chess.engine import Score
-from PySide6.QtCore import Qt, QThreadPool, Slot
+from PySide6.QtCore import QThreadPool, Slot
 from PySide6.QtGui import QCloseEvent, QWheelEvent
 from PySide6.QtWidgets import (
     QLabel,
@@ -206,20 +206,15 @@ class MainWindow(QMainWindow):
         self._engine_name_label.setText(self._engine.name)
 
     def set_grid_layout(self) -> None:
-        """Set a grid layout for widgets in the main window."""
-        top: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop
-        left: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignLeft
-        bottom: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignBottom
-        center: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignCenter
-
+        """Set a grid layout for widgets on the main window."""
         self._grid_layout: QGridLayout = QGridLayout()
-        self._grid_layout.addWidget(self._black_clock, 0, 0, top)
-        self._grid_layout.addWidget(self._white_clock, 1, 0, bottom)
-        self._grid_layout.addWidget(self._svg_board, 0, 1, center)
-        self._grid_layout.addWidget(self._evaluation_bar, 0, 2, left)
-        self._grid_layout.addWidget(self._table_view, 0, 3, left)
-        self._grid_layout.addWidget(self._fen_editor, 1, 1, top)
-        self._grid_layout.addWidget(self._notifications_label, 2, 1, top)
+        self._grid_layout.addWidget(self._black_clock, 0, 0)
+        self._grid_layout.addWidget(self._white_clock, 1, 0)
+        self._grid_layout.addWidget(self._svg_board, 0, 1)
+        self._grid_layout.addWidget(self._evaluation_bar, 0, 2)
+        self._grid_layout.addWidget(self._table_view, 0, 3)
+        self._grid_layout.addWidget(self._fen_editor, 1, 1)
+        self._grid_layout.addWidget(self._notifications_label, 2, 1)
 
         self._widget_container: QWidget = QWidget()
         self._widget_container.setLayout(self._grid_layout)
@@ -313,11 +308,6 @@ class MainWindow(QMainWindow):
 
     def flip_clocks(self) -> None:
         """Flip the bottom and top clocks."""
-        top_clock = self._grid_layout.takeAt(0).widget()
-        bottom_clock = self._grid_layout.takeAt(1).widget()
-
-        self._grid_layout.addWidget(bottom_clock)
-        self._grid_layout.addWidget(top_clock)
 
     def start_analysis(self) -> None:
         """Start analyzing the current position."""
