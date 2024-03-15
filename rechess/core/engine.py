@@ -21,12 +21,11 @@ class Engine(QObject):
         super().__init__()
 
         self._game: Game = game
-
+        self._analyzing: bool = False
         self._loaded_engine: SimpleEngine = SimpleEngine.popen_uci(
             f"rechess/resources/engines/stockfish-16.1/{system().lower()}/"
             f"stockfish{'.exe' if system() == 'Windows' else ''}"
         )
-        self.analyzing: bool = False
 
     def load(self, file_path: str) -> None:
         """Load an engine by the given `file_path`."""
@@ -45,23 +44,29 @@ class Engine(QObject):
 
     def start_analysis(self) -> None:
         """Start analyzing the current position."""
+        self._analyzing = True
+
         with self._loaded_engine.analysis(self._game.board) as analysis:
             for info in analysis:
-                if self.analyzing and "pv" in info:
+                if self._analyzing and "pv" in info:
                     pv: list[Move] = info["pv"]
                     best_move: Move = pv[0]
-                    san_variation: str = self._game.get_san_variation_from(pv)
+                    san_variation: str = self._game.board.variation_san(pv)
                     white_score: Score = info["score"].white()
 
                     self.best_move_analyzed.emit(best_move)
                     self.white_score_analyzed.emit(white_score)
                     self.san_variation_analyzed.emit(san_variation)
-                if not self.analyzing:
+                if not self._analyzing:
                     break
 
     def stop_analysis(self) -> None:
         """Stop analyzing the current position."""
-        self.analyzing = False
+        self._analyzing = False
+
+    def is_analyzing(self) -> bool:
+        """Check whether the loaded engine is analyzing."""
+        return self._analyzing
 
     def quit(self) -> None:
         """End the CPU task of a loaded engine."""

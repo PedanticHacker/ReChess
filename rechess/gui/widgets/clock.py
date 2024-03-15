@@ -1,7 +1,7 @@
 from typing import Literal
 
 from PySide6.QtWidgets import QLCDNumber
-from PySide6.QtCore import Qt, QTimer, Slot
+from PySide6.QtCore import Qt, QTimer, Signal, Slot
 
 from rechess import ClockStyle
 from rechess import get_config_value
@@ -9,6 +9,8 @@ from rechess import get_config_value
 
 class Clock(QLCDNumber):
     """A clock with a 1-second countdown timer."""
+
+    time_expired: Signal = Signal()
 
     def __init__(self, style: ClockStyle) -> None:
         super().__init__()
@@ -62,9 +64,8 @@ class Clock(QLCDNumber):
     @Slot()
     def update_time(self) -> None:
         """Subtract 1 second from the clock's time."""
-        if self.time > 0:
+        if self.time:
             self.time -= 1
             self.show_time()
         else:
-            self._countdown_timer.stop()
-            # self.notify_player_lost()
+            self.time_expired.emit()

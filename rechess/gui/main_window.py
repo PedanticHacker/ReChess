@@ -29,10 +29,7 @@ from rechess.gui.widgets import (
 
 
 TOP: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop
-LEFT: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignLeft
-RIGHT: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignRight
 BOTTOM: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignBottom
-CENTER: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignCenter
 
 
 class MainWindow(QMainWindow):
@@ -47,7 +44,7 @@ class MainWindow(QMainWindow):
         self.create_tool_bar()
         self.set_grid_layout()
         self.create_status_bar()
-        self.toggle_tool_bar_buttons()
+        self.adjust_engine_buttons()
         self.connect_events_with_handlers()
 
     def create_widgets(self) -> None:
@@ -215,13 +212,13 @@ class MainWindow(QMainWindow):
     def set_grid_layout(self) -> None:
         """Set a grid layout for widgets on the main window."""
         self._grid_layout: QGridLayout = QGridLayout()
-        self._grid_layout.addWidget(self._black_clock, 0, 0, TOP | RIGHT)
-        self._grid_layout.addWidget(self._white_clock, 0, 0, BOTTOM | RIGHT)
-        self._grid_layout.addWidget(self._svg_board, 0, 1, CENTER)
-        self._grid_layout.addWidget(self._evaluation_bar, 0, 2, LEFT)
-        self._grid_layout.addWidget(self._table_view, 0, 3, LEFT)
-        self._grid_layout.addWidget(self._fen_editor, 1, 1, TOP)
-        self._grid_layout.addWidget(self._notifications_label, 2, 1, TOP)
+        self._grid_layout.addWidget(self._black_clock, 0, 0, 1, 1, TOP)
+        self._grid_layout.addWidget(self._white_clock, 0, 0, 1, 1, BOTTOM)
+        self._grid_layout.addWidget(self._svg_board, 0, 1, 1, 1)
+        self._grid_layout.addWidget(self._evaluation_bar, 0, 2, 1, 1)
+        self._grid_layout.addWidget(self._table_view, 0, 3, 1, 2)
+        self._grid_layout.addWidget(self._fen_editor, 1, 1, 1, 1)
+        self._grid_layout.addWidget(self._notifications_label, 2, 1, 1, 1, TOP)
 
         self._widget_container: QWidget = QWidget()
         self._widget_container.setLayout(self._grid_layout)
@@ -230,13 +227,13 @@ class MainWindow(QMainWindow):
         if self._game.is_perspective_flipped():
             self.flip_clocks()
 
-    def toggle_tool_bar_buttons(self) -> None:
-        """Toggle tool bar buttons of the engine."""
+    def adjust_engine_buttons(self) -> None:
+        """Adjust the state of the engine's tool bar buttons."""
         self.play_move_now_action.setEnabled(True)
         self.start_analysis_action.setEnabled(True)
         self.stop_analysis_action.setDisabled(True)
 
-        if self._engine.analyzing:
+        if self._engine.is_analyzing():
             self.stop_analysis_action.setEnabled(True)
             self.start_analysis_action.setDisabled(True)
 
@@ -251,10 +248,12 @@ class MainWindow(QMainWindow):
         self._engine.move_played.connect(self.on_move_played)
         self._engine.best_move_analyzed.connect(self.on_best_move_analyzed)
         self._engine.white_score_analyzed.connect(self.on_white_score_analyzed)
+        self._black_clock.time_expired.connect(self.on_black_clock_time_expired)
+        self._white_clock.time_expired.connect(self.on_white_clock_time_expired)
         self._engine.san_variation_analyzed.connect(self.on_san_variation_analyzed)
 
     def invoke_engine(self) -> None:
-        """Invoke the currently loaded engine to play a move."""
+        """Invoke the loaded engine to play a move."""
         QThreadPool.globalInstance().start(self._engine.play_move)
 
     def invoke_analysis(self) -> None:
@@ -328,14 +327,14 @@ class MainWindow(QMainWindow):
         """Start analyzing the current position."""
         self.invoke_analysis()
         self._evaluation_bar.show()
-        self._engine.analyzing = True
-        self.toggle_tool_bar_buttons()
+        self.stop_analysis_action.setEnabled(True)
+        self.start_analysis_action.setDisabled(True)
+        # self.adjust_engine_buttons()
 
     def stop_analysis(self) -> None:
         """Stop analyzing the current position."""
-        self._evaluation_bar.hide()
         self._engine.stop_analysis()
-        self.toggle_tool_bar_buttons()
+        self.adjust_engine_buttons()
 
     def show_fen(self) -> None:
         """Show a FEN (Forsyth-Edwards Notation) in the FEN editor."""
@@ -344,24 +343,26 @@ class MainWindow(QMainWindow):
 
     def show_opening(self) -> None:
         """Show an ECO code along with an opening name."""
+        san_variation: str = self._game.get_san_variation()
         openings: dict[str, tuple[str, str]] = get_openings()
-        variation: str = self._game.variation
 
-        if variation in openings:
-            eco_code, opening_name = openings[variation]
+        if san_variation in openings:
+            eco_code, opening_name = openings[san_variation]
             self._opening_label.setText(f"{eco_code}: {opening_name}")
 
     def update_game_state(self) -> None:
         """Update the current state of a game."""
-        self.show_fen()
-        self.show_opening()
-        self.toggle_clock_states()
-        self.toggle_tool_bar_buttons()
-
         self._evaluation_bar.hide()
         self._engine.stop_analysis()
         self._table_model.refresh_view()
         self._notifications_label.clear()
+
+        self.show_fen()
+        self.show_opening()
+        self.switch_clock_timers()
+        self.adjust_engine_buttons()
+
+        self._svg_board.draw()
 
         if self._game.is_engine_on_turn():
             self.invoke_engine()
@@ -372,10 +373,8 @@ class MainWindow(QMainWindow):
             self._notifications_label.setText(self._game.result)
             self.offer_new_game()
 
-        self._svg_board.draw()
-
-    def toggle_clock_states(self) -> None:
-        """Toggle between started and stopped states of both clocks."""
+    def switch_clock_timers(self) -> None:
+        """Switch the clock timers of Black's and White's clocks."""
         if self._game.is_white_on_turn():
             self._black_clock.stop_timer()
             self._white_clock.start_timer()
@@ -410,8 +409,8 @@ class MainWindow(QMainWindow):
         self._notifications_label.clear()
 
         self.show_fen()
-        self.toggle_clock_states()
-        self.toggle_tool_bar_buttons()
+        self.switch_clock_timers()
+        self.adjust_engine_buttons()
 
         self._svg_board.draw()
 
@@ -451,6 +450,18 @@ class MainWindow(QMainWindow):
             self._table_view.select_previous_item()
         elif downward_roll:
             self._table_view.select_next_item()
+
+    @Slot()
+    def on_black_clock_time_expired(self) -> None:
+        """Notify that White wins on time."""
+        self._notifications_label.setText("White wins on time!")
+        self.offer_new_game()
+
+    @Slot()
+    def on_white_clock_time_expired(self) -> None:
+        """Notify that Black wins on time."""
+        self._notifications_label.setText("Black wins on time!")
+        self.offer_new_game()
 
     @Slot(Move)
     def on_best_move_analyzed(self, best_move: Move) -> None:

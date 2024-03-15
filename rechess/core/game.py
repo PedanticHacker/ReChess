@@ -37,8 +37,8 @@ class Game(QObject):
         self.arrow.clear()
         self.board.reset()
 
-        self._engine_color: Color = get_config_value("engine", "white")
-        self.perspective: Color = not self._engine_color
+        self._engine_turn: bool = get_config_value("engine", "white")
+        self.perspective: Color = not self._engine_turn
 
         self.reset_squares()
 
@@ -93,9 +93,9 @@ class Game(QObject):
         promotion_dialog: PromotionDialog = PromotionDialog(self.board.turn)
         return promotion_dialog.piece_type
 
-    def get_san_variation_from(self, moves: list[Move]) -> str:
-        """Get a variation of moves in SAN format from the `moves`."""
-        return Board().variation_san(moves)
+    def get_san_variation(self) -> str:
+        """Get a variation of moves in SAN format from the move stack."""
+        return Board().variation_san(self.board.move_stack)
 
     def play_sound_effect_for(self, move: Move) -> None:
         """Play a WAV sound effect for the `move`."""
@@ -111,12 +111,8 @@ class Game(QObject):
 
     def pass_turn_to_engine(self) -> None:
         """Pass the current turn to the engine."""
-        self._engine_color = not self._engine_color
+        self._engine_turn = not self._engine_turn
         # utils.set_config_values()
-
-    def is_black_on_turn(self) -> bool:
-        """Return True if Black is on turn, else False."""
-        return self.board.turn == BLACK
 
     def is_game_in_progress(self) -> bool:
         """Return True if a game is in progress, else False."""
@@ -128,7 +124,7 @@ class Game(QObject):
 
     def is_engine_on_turn(self) -> bool:
         """Return True if the engine is on turn, else False."""
-        return self.board.turn == self._engine_color
+        return self.board.turn == self._engine_turn
 
     def is_legal(self, move: Move) -> bool:
         """Check whether the `move` is legal in the current position."""
@@ -174,8 +170,3 @@ class Game(QObject):
             "*": "Undetermined game",
         }
         return result_rewordings[self.board.result()]
-
-    @property
-    def variation(self) -> str:
-        """Get a variation of moves in SAN format from the move stack."""
-        return Board().variation_san(self.board.move_stack)
