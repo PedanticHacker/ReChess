@@ -233,10 +233,6 @@ class MainWindow(QMainWindow):
         self.start_analysis_action.setEnabled(True)
         self.stop_analysis_action.setDisabled(True)
 
-        if self._engine.is_analyzing():
-            self.stop_analysis_action.setEnabled(True)
-            self.start_analysis_action.setDisabled(True)
-
         if self._game.is_game_over():
             self.play_move_now_action.setDisabled(True)
             self.stop_analysis_action.setDisabled(True)
@@ -329,7 +325,6 @@ class MainWindow(QMainWindow):
         self._evaluation_bar.show()
         self.stop_analysis_action.setEnabled(True)
         self.start_analysis_action.setDisabled(True)
-        # self.adjust_engine_buttons()
 
     def stop_analysis(self) -> None:
         """Stop analyzing the current position."""

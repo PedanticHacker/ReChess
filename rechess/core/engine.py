@@ -64,10 +64,6 @@ class Engine(QObject):
         """Stop analyzing the current position."""
         self._analyzing = False
 
-    def is_analyzing(self) -> bool:
-        """Check whether the loaded engine is analyzing."""
-        return self._analyzing
-
     def quit(self) -> None:
         """End the CPU task of a loaded engine."""
         self._loaded_engine.quit()
