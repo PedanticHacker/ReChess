@@ -5,7 +5,7 @@ from PySide6.QtWidgets import QLineEdit
 from rechess.core import Game
 
 
-class FENEditor(QLineEdit):
+class FenEditor(QLineEdit):
     """An editor for FEN (Forsyth-Edwards Notation) records."""
 
     def __init__(self, game: Game) -> None:
@@ -35,7 +35,7 @@ class FENEditor(QLineEdit):
 
     @Slot(str)
     def on_text_edited(self, edited_text: str) -> None:
-        """Try to set a valid board from `text`."""
+        """Try to set a valid position from `edited_text`."""
         try:
             board = self._game.board
             board.set_fen(edited_text)
@@ -46,3 +46,4 @@ class FENEditor(QLineEdit):
                 self.clearFocus()
                 self.reset_background_color()
                 self._game.board = board
+                # self._svg_board.draw() or emit a signal

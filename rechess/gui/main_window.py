@@ -22,7 +22,7 @@ from rechess import create_action, get_openings, get_svg_icon
 from rechess.gui.widgets import (
     Clock,
     SvgBoard,
-    FENEditor,
+    FenEditor,
     TableView,
     EvaluationBar,
 )
@@ -52,7 +52,7 @@ class MainWindow(QMainWindow):
         self._game: Game = Game()
         self._engine: Engine = Engine(self._game)
         self._svg_board: SvgBoard = SvgBoard(self._game)
-        self._fen_editor: FENEditor = FENEditor(self._game)
+        self._fen_editor: FenEditor = FenEditor(self._game)
         self._evaluation_bar: EvaluationBar = EvaluationBar(self._game)
 
         self._table_model: TableModel = TableModel(self._game.notation)
@@ -218,7 +218,7 @@ class MainWindow(QMainWindow):
         self._grid_layout.addWidget(self._evaluation_bar, 0, 2, 1, 1)
         self._grid_layout.addWidget(self._table_view, 0, 3, 1, 2)
         self._grid_layout.addWidget(self._fen_editor, 1, 1, 1, 1)
-        self._grid_layout.addWidget(self._notifications_label, 2, 1, 1, 1, TOP)
+        self._grid_layout.addWidget(self._notifications_label, 2, 1, 2, 1, TOP)
 
         self._widget_container: QWidget = QWidget()
         self._widget_container.setLayout(self._grid_layout)
@@ -455,13 +455,11 @@ class MainWindow(QMainWindow):
     def on_black_clock_time_expired(self) -> None:
         """Notify that White wins on time."""
         self._notifications_label.setText("White wins on time!")
-        self.offer_new_game()
 
     @Slot()
     def on_white_clock_time_expired(self) -> None:
         """Notify that Black wins on time."""
         self._notifications_label.setText("Black wins on time!")
-        self.offer_new_game()
 
     @Slot(Move)
     def on_best_move_analyzed(self, best_move: Move) -> None:
