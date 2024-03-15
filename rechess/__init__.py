@@ -1,4 +1,3 @@
-from .enums import ClockStyle
 from .utils import (
     get_openings,
     get_svg_icon,

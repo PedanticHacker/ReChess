@@ -109,7 +109,6 @@ class SettingsDialog(QDialog):
 
     def connect_events_with_handlers(self) -> None:
         """Connect various events with specific handlers."""
-        self.rejected.connect(self.reject)
         self.accepted.connect(self.on_save_settings)
         self.button_box.accepted.connect(self.accept)
         self.button_box.rejected.connect(self.reject)
@@ -127,5 +126,4 @@ class SettingsDialog(QDialog):
                 "pondering": self.engine_pondering_option.isChecked(),
             },
         }
-
         set_config_values(new_config_values)

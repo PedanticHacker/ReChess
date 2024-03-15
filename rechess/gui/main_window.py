@@ -15,7 +15,6 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
 )
 
-from rechess import ClockStyle
 from rechess.gui.dialogs import SettingsDialog
 from rechess.core import Engine, Game, TableModel
 from rechess import create_action, get_openings, get_svg_icon
@@ -27,6 +26,9 @@ from rechess.gui.widgets import (
     EvaluationBar,
 )
 
+
+BLACK_STYLE: str = "color: white; background: black;"
+WHITE_STYLE: str = "color: black; background: white;"
 
 TOP: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop
 BOTTOM: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignBottom
@@ -58,8 +60,8 @@ class MainWindow(QMainWindow):
         self._table_model: TableModel = TableModel(self._game.notation)
         self._table_view: TableView = TableView(self._table_model)
 
-        self._black_clock: Clock = Clock(ClockStyle.Black)
-        self._white_clock: Clock = Clock(ClockStyle.White)
+        self._black_clock: Clock = Clock(BLACK_STYLE)
+        self._white_clock: Clock = Clock(WHITE_STYLE)
 
         self._opening_label: QLabel = QLabel()
         self._engine_name_label: QLabel = QLabel()
@@ -219,7 +221,7 @@ class MainWindow(QMainWindow):
         self._grid_layout.addWidget(self._table_view, 0, 3, 1, 2)
         self._grid_layout.addWidget(self._notifications_label, 1, 3, 1, 1)
         self._grid_layout.addWidget(self._fen_editor, 1, 1, 1, 1)
-        self._grid_layout.addWidget(self._engine_analysis_label, 2, 1, 1, 1)
+        self._grid_layout.addWidget(self._engine_analysis_label, 2, 1, 1, 1, TOP)
 
         self._widget_container: QWidget = QWidget()
         self._widget_container.setLayout(self._grid_layout)
@@ -295,7 +297,7 @@ class MainWindow(QMainWindow):
 
         if engine_file:
             self._engine.load(engine_file)
-            self.invoke_engine()
+            self.refresh_ui()
 
     def show_about(self) -> None:
         """Show the About message."""
@@ -346,12 +348,13 @@ class MainWindow(QMainWindow):
             eco_code, opening_name = openings[san_variation]
             self._opening_label.setText(f"{eco_code}: {opening_name}")
 
-    def update_game_state(self) -> None:
+    def refresh_ui(self) -> None:
         """Update the current state of a game."""
         self._engine.stop_analysis()
         self._table_model.refresh_view()
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
+        self._engine_name_label.setText(self._engine.name)
 
         self.show_fen()
         self.show_opening()
@@ -469,7 +472,7 @@ class MainWindow(QMainWindow):
         """Play the `move` by pushing it and updating the game state."""
         if self._game.is_legal(move):
             self._game.push(move)
-            self.update_game_state()
+            self.refresh_ui()
 
     @Slot(Score)
     def on_white_score_analyzed(self, white_score: Score) -> None:

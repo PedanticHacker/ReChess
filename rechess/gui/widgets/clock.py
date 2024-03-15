@@ -3,7 +3,6 @@ from typing import Literal
 from PySide6.QtWidgets import QLCDNumber
 from PySide6.QtCore import Qt, QTimer, Signal, Slot
 
-from rechess import ClockStyle
 from rechess import get_config_value
 
 
@@ -12,7 +11,7 @@ class Clock(QLCDNumber):
 
     time_expired: Signal = Signal()
 
-    def __init__(self, style: ClockStyle) -> None:
+    def __init__(self, style: str) -> None:
         super().__init__()
 
         self.setStyleSheet(style)
