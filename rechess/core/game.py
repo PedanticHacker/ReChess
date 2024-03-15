@@ -24,16 +24,10 @@ class Game(QObject):
         self.arrow: list[tuple[Square, Square]] = []
         self.sound_effect: QSoundEffect = QSoundEffect()
 
-        self.prepare_new_game()
+        self.set_new_game()
 
-    def push(self, move: Move) -> None:
-        """Push the `move`."""
-        self.set_arrow_for(move)
-        self.play_sound_effect_for(move)
-        self.set_notation_item_for(move)
-
-    def prepare_new_game(self) -> None:
-        """Prepare the starting state of a game."""
+    def set_new_game(self) -> None:
+        """Set the starting state of a game."""
         self.arrow.clear()
         self.board.reset()
 
@@ -46,6 +40,24 @@ class Game(QObject):
         """Reset the origin and target squares of a piece."""
         self.from_square: Square = -1
         self.to_square: Square = -1
+
+    def push(self, move: Move) -> None:
+        """Push the `move`."""
+        self.set_arrow_for(move)
+        self.play_sound_effect_for(move)
+        self.set_notation_item_for(move)
+
+    def set_arrow_for(self, move: Move) -> None:
+        """Set an arrow for the `move`."""
+        self.arrow = [(move.from_square, move.to_square)]
+
+    def play_sound_effect_for(self, move: Move) -> None:
+        """Play a WAV sound effect for the `move`."""
+        file_name = "capture.wav" if self.board.is_capture(move) else "move.wav"
+        file_path = f"rechess/resources/audio/{file_name}"
+        file_url = QUrl.fromLocalFile(file_path)
+        self.sound_effect.setSource(file_url)
+        self.sound_effect.play()
 
     def set_notation_item_for(self, move: Move) -> None:
         """Set a notation item for the `move`."""
@@ -96,18 +108,6 @@ class Game(QObject):
     def get_san_variation(self) -> str:
         """Get a variation of moves in SAN format from the move stack."""
         return Board().variation_san(self.board.move_stack)
-
-    def play_sound_effect_for(self, move: Move) -> None:
-        """Play a WAV sound effect for the `move`."""
-        file_name = "capture.wav" if self.board.is_capture(move) else "move.wav"
-        file_path = f"rechess/resources/audio/{file_name}"
-        file_url = QUrl.fromLocalFile(file_path)
-        self.sound_effect.setSource(file_url)
-        self.sound_effect.play()
-
-    def set_arrow_for(self, move: Move) -> None:
-        """Set an arrow for the `move`."""
-        self.arrow = [(move.from_square, move.to_square)]
 
     def pass_turn_to_engine(self) -> None:
         """Pass the current turn to the engine."""

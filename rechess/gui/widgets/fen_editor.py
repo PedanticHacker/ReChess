@@ -14,7 +14,7 @@ class FenEditor(QLineEdit):
         self._game: Game = game
 
         self.setMaxLength(90)
-        self.setFixedSize(500, 20)
+        self.setFixedSize(500, 30)
         self.setText(self._game.fen)
         self.setAlignment(Qt.AlignmentFlag.AlignCenter)
 

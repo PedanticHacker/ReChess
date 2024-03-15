@@ -1,10 +1,11 @@
 QDialog {
-    font-size: 13px;
+    font-size: 12px;
     background: lime;
 }
 
 QLabel {
     font: bold;
+    font-size: 12px;
 }
 
 QLineEdit {
@@ -21,7 +22,7 @@ QMainWindow {
 QProgressBar {
     font: bold;
     color: lime;
-    background: white;
+    font-size: 12px;
     text-align: center;
 }
 
@@ -32,7 +33,7 @@ QProgressBar::chunk {
 QTableView {
     font: bold;
     color: white;
-    font-size: 13px;
+    font-size: 12px;
     background: lime;
     selection-background-color: blue;
 }

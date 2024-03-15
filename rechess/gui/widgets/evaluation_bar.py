@@ -21,11 +21,18 @@ class EvaluationBar(QProgressBar):
         self._animation.setEasingCurve(QEasingCurve.Type.InOutQuint)
         self._animation.valueChanged.connect(self.update)
 
-        self.hide()
         self.setRange(0, 1000)
         self.setFixedSize(40, 500)
         self.setSizePolicy(self._size_policy)
         self.setOrientation(Qt.Orientation.Vertical)
+
+        self.reset_appearance()
+
+    def reset_appearance(self) -> None:
+        """Reset the bar's appearance."""
+        self.hide()
+        self.reset()
+        self.flip_perspective()
 
     def animate(self, evaluation: Score) -> None:
         """Animate the bar per the given `evaluation`."""

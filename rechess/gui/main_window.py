@@ -63,9 +63,9 @@ class MainWindow(QMainWindow):
 
         self._opening_label: QLabel = QLabel()
         self._engine_name_label: QLabel = QLabel()
-
         self._notifications_label: QLabel = QLabel()
-        self._notifications_label.setWordWrap(True)
+        self._engine_analysis_label: QLabel = QLabel()
+        self._engine_analysis_label.setWordWrap(True)
 
     def create_actions(self) -> None:
         """Create actions for menu bar and tool bar."""
@@ -217,8 +217,9 @@ class MainWindow(QMainWindow):
         self._grid_layout.addWidget(self._svg_board, 0, 1, 1, 1)
         self._grid_layout.addWidget(self._evaluation_bar, 0, 2, 1, 1)
         self._grid_layout.addWidget(self._table_view, 0, 3, 1, 2)
+        self._grid_layout.addWidget(self._notifications_label, 1, 3, 1, 1)
         self._grid_layout.addWidget(self._fen_editor, 1, 1, 1, 1)
-        self._grid_layout.addWidget(self._notifications_label, 2, 1, 2, 1, TOP)
+        self._grid_layout.addWidget(self._engine_analysis_label, 2, 1, 1, 1)
 
         self._widget_container: QWidget = QWidget()
         self._widget_container.setLayout(self._grid_layout)
@@ -347,10 +348,10 @@ class MainWindow(QMainWindow):
 
     def update_game_state(self) -> None:
         """Update the current state of a game."""
-        self._evaluation_bar.hide()
         self._engine.stop_analysis()
         self._table_model.refresh_view()
-        self._notifications_label.clear()
+        self._engine_analysis_label.clear()
+        self._evaluation_bar.reset_appearance()
 
         self.show_fen()
         self.show_opening()
@@ -397,11 +398,12 @@ class MainWindow(QMainWindow):
         self._white_clock.reset()
         self._opening_label.clear()
 
+        self._game.set_new_game()
         self._table_model.reset()
-        self._evaluation_bar.hide()
         self._engine.stop_analysis()
-        self._game.prepare_new_game()
         self._notifications_label.clear()
+        self._engine_analysis_label.clear()
+        self._evaluation_bar.reset_appearance()
 
         self.show_fen()
         self.switch_clock_timers()
@@ -477,4 +479,4 @@ class MainWindow(QMainWindow):
     @Slot(str)
     def on_san_variation_analyzed(self, san_variation: str) -> None:
         """Show the `san_variation` from engine analysis."""
-        self._notifications_label.setText(san_variation)
+        self._engine_analysis_label.setText(san_variation)

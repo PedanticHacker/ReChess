@@ -74,7 +74,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
         "1. a3 a5 2. b4": ("A00", "Anderssen's Opening: Polish Gambit"),
         "1. f3": ("A00", "Barnes Opening"),
         "1. f3 e5 2. g4 Qh4#": ("A00", "Barnes Opening: Fool's Mate"),
-        "1. f3 d5 2. e4 g6 3. d4 dxe4 4. c3": ("A00", "Barnes Opening: Gedult Gambit"),
+        "1. f3 d5 2. e4 g6 3. d4 dxe4 4. c3": (
+            "A00",
+            "Barnes Opening: Gedult Gambit",
+        ),
         "1. f3 f5 2. e4 fxe4 3. Nc3": ("A00", "Barnes Opening: Gedult Gambit"),
         "1. f3 e5 2. Kf2": ("A00", "Barnes Opening: Hammerschlag"),
         "1. h3": ("A00", "Clemenz Opening"),
@@ -122,7 +125,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "Grob Opening: Keene Defense, Main Line",
         ),
         "1. g4 e5 2. h3 Nc6": ("A00", "Grob Opening: London Defense"),
-        "1. g4 d5 2. Bg2 Bxg4 3. c4 d4": ("A00", "Grob Opening: Romford Countergambit"),
+        "1. g4 d5 2. Bg2 Bxg4 3. c4 d4": (
+            "A00",
+            "Grob Opening: Romford Countergambit",
+        ),
         "1. g4 d5 2. Bg2 c6 3. g5": ("A00", "Grob Opening: Spike Attack"),
         "1. g4 e5 2. Bg2 d5 3. c4": ("A00", "Grob Opening: Spike, Hurst Attack"),
         "1. g4 d5 2. e4 dxe4 3. Nc3": ("A00", "Grob Opening: Zilbermints Gambit"),
@@ -148,7 +154,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
         "1. g3 f5": ("A00", "Hungarian Opening: Dutch Defense"),
         "1. g3 Nf6": ("A00", "Hungarian Opening: Indian Defense"),
         "1. g3 g5": ("A00", "Hungarian Opening: Myers Defense"),
-        "1. g3 f5 2. e4 fxe4 3. Qh5+ g6": ("A00", "Hungarian Opening: Pachman Gambit"),
+        "1. g3 f5 2. e4 fxe4 3. Qh5+ g6": (
+            "A00",
+            "Hungarian Opening: Pachman Gambit",
+        ),
         "1. g3 e5 2. Nh3 d5 3. f4 Bxh3 4. Bxh3 exf4 5. O-O": (
             "A00",
             "Hungarian Opening: Paris Gambit",
@@ -174,7 +183,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
         "1. h4": ("A00", "Kádas Opening"),
         "1. h4 d5 2. Rh3": ("A00", "Kádas Opening: Beginner's Trap"),
         "1. h4 c5 2. b4": ("A00", "Kádas Opening: Kádas Gambit"),
-        "1. h4 d5 2. d4 c5 3. Nf3 cxd4 4. c3": ("A00", "Kádas Opening: Kádas Gambit"),
+        "1. h4 d5 2. d4 c5 3. Nf3 cxd4 4. c3": (
+            "A00",
+            "Kádas Opening: Kádas Gambit",
+        ),
         "1. h4 e5 2. d4 exd4 3. c3": ("A00", "Kádas Opening: Kádas Gambit"),
         "1. h4 d5 2. d4 c5 3. e4": ("A00", "Kádas Opening: Myers Variation"),
         "1. h4 g5": ("A00", "Kádas Opening: Schneider Gambit"),
@@ -234,7 +246,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
         "1. d3 e5 2. Nd2": ("A00", "Valencia Opening"),
         "1. Nc3": ("A00", "Van Geet Opening"),
         "1. a3 e5 2. Nc3": ("A00", "Van Geet Opening: Battambang Variation"),
-        "1. Nc3 e5 2. Nf3 Bc5": ("A00", "Van Geet Opening: Billockus-Johansen Gambit"),
+        "1. Nc3 e5 2. Nf3 Bc5": (
+            "A00",
+            "Van Geet Opening: Billockus-Johansen Gambit",
+        ),
         "1. Nc3 d5 2. e4 c6 3. h3": (
             "A00",
             "Van Geet Opening: Caro-Kann Variation, St. Patrick's Attack",
@@ -251,8 +266,14 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "Van Geet Opening: Gladbacher Gambit",
         ),
         "1. Nc3 d5 2. e4 dxe4 3. Bc4": ("A00", "Van Geet Opening: Hector Gambit"),
-        "1. Nc3 d6 2. f4 e5 3. fxe5 Nc6": ("A00", "Van Geet Opening: Hergert Gambit"),
-        "1. Nc3 e5 2. e3 d5 3. Qh5 Be6": ("A00", "Van Geet Opening: Hulsemann Gambit"),
+        "1. Nc3 d6 2. f4 e5 3. fxe5 Nc6": (
+            "A00",
+            "Van Geet Opening: Hergert Gambit",
+        ),
+        "1. Nc3 e5 2. e3 d5 3. Qh5 Be6": (
+            "A00",
+            "Van Geet Opening: Hulsemann Gambit",
+        ),
         "1. Nc3 d5 2. f4 d4 3. Ne4 f5 4. Nf2 Nf6 5. Nf3 c5 6. b4": (
             "A00",
             "Van Geet Opening: Jendrossek Gambit",
@@ -285,7 +306,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
         "1. Nc3 d5 2. e3 e5 3. d4 Bb4": ("A00", "Van Geet Opening: Sleipnir Gambit"),
         "1. Nc3 c5 2. Rb1": ("A00", "Van Geet Opening: Twyble Attack"),
         "1. Nc3 Nf6 2. g4": ("A00", "Van Geet Opening: Tübingen Gambit"),
-        "1. Nc3 d5 2. d3 Nf6 3. g3": ("A00", "Van Geet Opening: Venezolana Variation"),
+        "1. Nc3 d5 2. d3 Nf6 3. g3": (
+            "A00",
+            "Van Geet Opening: Venezolana Variation",
+        ),
         "1. Nc3 d5 2. f4 g5": ("A00", "Van Geet Opening: Warsteiner Gambit"),
         "1. e3": ("A00", "Van't Kruijs Opening"),
         "1. e3 e5 2. Bc4 b5 3. Bb3": (
@@ -317,10 +341,16 @@ def get_openings() -> dict[str, tuple[str, str]]:
         "1. b3 Nf6": ("A01", "Nimzo-Larsen Attack: Indian Variation"),
         "1. b3 e5": ("A01", "Nimzo-Larsen Attack: Modern Variation"),
         "1. b3 e5 2. Bb2 Nc6": ("A01", "Nimzo-Larsen Attack: Modern Variation"),
-        "1. b3 e5 2. Bb2 Nc6 3. e3": ("A01", "Nimzo-Larsen Attack: Modern Variation"),
+        "1. b3 e5 2. Bb2 Nc6 3. e3": (
+            "A01",
+            "Nimzo-Larsen Attack: Modern Variation",
+        ),
         "1. b3 e5 2. Bb2 Nc6 3. f4": ("A01", "Nimzo-Larsen Attack: Pachman Gambit"),
         "1. b3 b5": ("A01", "Nimzo-Larsen Attack: Polish Variation"),
-        "1. b3 f5 2. Bb2 e6 3. e4": ("A01", "Nimzo-Larsen Attack: Ringelbach Gambit"),
+        "1. b3 f5 2. Bb2 e6 3. e4": (
+            "A01",
+            "Nimzo-Larsen Attack: Ringelbach Gambit",
+        ),
         "1. b3 Nf6 2. Bb2 g6 3. g4": ("A01", "Nimzo-Larsen Attack: Spike Variation"),
         "1. b3 b6": ("A01", "Nimzo-Larsen Attack: Symmetrical Variation"),
         "1. f4": ("A02", "Bird Opening"),
@@ -349,8 +379,14 @@ def get_openings() -> dict[str, tuple[str, str]]:
         "1. f4 b5": ("A02", "Bird Opening: Myers Defense"),
         "1. f4 e5 2. fxe5 Ne7": ("A02", "Bird Opening: Platz Gambit"),
         "1. f4 e5 2. fxe5 Nc6": ("A02", "Bird Opening: Schlechter Gambit"),
-        "1. f4 e5 2. d4 exd4 3. Nf3 c5 4. c3": ("A02", "Bird Opening: Siegener Gambit"),
-        "1. f4 f5 2. e4 fxe4 3. Nc3 Nf6 4. g4": ("A02", "Bird Opening: Swiss Gambit"),
+        "1. f4 e5 2. d4 exd4 3. Nf3 c5 4. c3": (
+            "A02",
+            "Bird Opening: Siegener Gambit",
+        ),
+        "1. f4 f5 2. e4 fxe4 3. Nc3 Nf6 4. g4": (
+            "A02",
+            "Bird Opening: Swiss Gambit",
+        ),
         "1. f4 f5 2. e4": ("A02", "Bird Opening: Wagner-Zwitersch Gambit"),
         "1. f4 d5": ("A03", "Bird Opening: Dutch Variation"),
         "1. f4 d5 2. g4": ("A03", "Bird Opening: Dutch Variation, Dudweiler Gambit"),
@@ -386,7 +422,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "Modern Defense: Semi-Averbakh Variation, Pterodactyl Variation Accepted",
         ),
         "1. Nf3 Nh6 2. d4 g6": ("A04", "Zukertort Defense: Kingside Variation"),
-        "1. Nf3 Na6 2. e4 c5": ("A04", "Zukertort Defense: Sicilian Knight Variation"),
+        "1. Nf3 Na6 2. e4 c5": (
+            "A04",
+            "Zukertort Defense: Sicilian Knight Variation",
+        ),
         "1. Nf3": ("A04", "Zukertort Opening"),
         "1. Nf3 f6": ("A04", "Zukertort Opening: Arctic Defense"),
         "1. Nf3 f6 2. e4 Nh6 3. d4 Nf7": (
@@ -395,7 +434,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
         ),
         "1. Nf3 h6": ("A04", "Zukertort Opening: Basman Defense"),
         "1. Nf3 Nc6": ("A04", "Zukertort Opening: Black Mustang Defense"),
-        "1. Nf3 Na6 2. e4 Nh6": ("A04", "Zukertort Opening: Drunken Cavalry Variation"),
+        "1. Nf3 Na6 2. e4 Nh6": (
+            "A04",
+            "Zukertort Opening: Drunken Cavalry Variation",
+        ),
         "1. Nf3 f5": ("A04", "Zukertort Opening: Dutch Variation"),
         "1. Nf3 g5": ("A04", "Zukertort Opening: Herrstrom Gambit"),
         "1. Nf3 g6": ("A04", "Zukertort Opening: Kingside Fianchetto"),
@@ -417,12 +459,18 @@ def get_openings() -> dict[str, tuple[str, str]]:
         "1. Nf3 c6": ("A04", "Zukertort Opening: Slav Invitation"),
         "1. Nf3 c5 2. d4 cxd4 3. e3": ("A04", "Zukertort Opening: Speelsmet Gambit"),
         "1. Nf3 a6": ("A04", "Zukertort Opening: St. George Defense"),
-        "1. Nf3 e5 2. Nxe5 Nc6 3. Nxc6 dxc6": ("A04", "Zukertort Opening: The Walrus"),
+        "1. Nf3 e5 2. Nxe5 Nc6 3. Nxc6 dxc6": (
+            "A04",
+            "Zukertort Opening: The Walrus",
+        ),
         "1. Nf3 d6 2. d4 e5": ("A04", "Zukertort Opening: Vos Gambit"),
         "1. Nf3 d6 2. e4 Bg4": ("A04", "Zukertort Opening: Wade Defense"),
         "1. Nf3 a5": ("A04", "Zukertort Opening: Ware Defense"),
         "1. Nf3 Nf6 2. g3 d5": ("A05", "King's Indian Attack"),
-        "1. Nf3 Nf6 2. g3 g6 3. b4": ("A05", "King's Indian Attack: Smyslov Variation"),
+        "1. Nf3 Nf6 2. g3 g6 3. b4": (
+            "A05",
+            "King's Indian Attack: Smyslov Variation",
+        ),
         "1. Nf3 Nf6 2. g3 b5": ("A05", "King's Indian Attack: Spassky Variation"),
         "1. Nf3 Nf6 2. g3 g6": ("A05", "King's Indian Attack: Symmetrical Defense"),
         "1. Nf3 Nf6 2. g3 g6 3. Bg2 Bg7 4. O-O O-O 5. d3 d5": (
@@ -437,7 +485,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "Zukertort Opening: Double Fianchetto Attack",
         ),
         "1. Nf3 Nf6 2. e4": ("A05", "Zukertort Opening: Lemberger Gambit"),
-        "1. Nf3 Nf6 2. a4 g6 3. b4": ("A05", "Zukertort Opening: Myers Polish Attack"),
+        "1. Nf3 Nf6 2. a4 g6 3. b4": (
+            "A05",
+            "Zukertort Opening: Myers Polish Attack",
+        ),
         "1. Nf3 Nf6 2. b3": ("A05", "Zukertort Opening: Nimzo-Larsen Variation"),
         "1. Nf3 Nf6 2. e3": ("A05", "Zukertort Opening: Quiet System"),
         "1. Nf3 d5 2. b3": ("A06", "Nimzo-Larsen Attack: Classical Variation"),
@@ -1018,7 +1069,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
         ),
         "1. d4 b6": ("A40", "English Defense"),
         "1. d4 e6 2. c4 b6": ("A40", "English Defense"),
-        "1. d4 b6 2. c4 Bb7 3. Nc3 e5": ("A40", "English Defense: Eastbourne Gambit"),
+        "1. d4 b6 2. c4 Bb7 3. Nc3 e5": (
+            "A40",
+            "English Defense: Eastbourne Gambit",
+        ),
         "1. c4 e6 2. d4 b6 3. Nc3 Bb7 4. e4 f5 5. exf5 Nf6": (
             "A40",
             "English Defense: Hartlaub Gambit Accepted",
@@ -1139,7 +1193,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
         "1. d4": ("A40", "Queen's Pawn Game"),
         "1. d4 c6 2. c4 d6": ("A40", "Queen's Pawn Game: Anglo-Slav Opening"),
         "1. d4 g6": ("A40", "Queen's Pawn Game: Modern Defense"),
-        "1. d4 c6 2. Nf3 Nf6 3. c4 b5": ("A40", "Slav Indian: Kudischewitsch Gambit"),
+        "1. d4 c6 2. Nf3 Nf6 3. c4 b5": (
+            "A40",
+            "Slav Indian: Kudischewitsch Gambit",
+        ),
         "1. d4 Nc6 2. d5 Nb8 3. e4 Nf6 4. e5 Ng8": ("A40", "Zaire Defense"),
         "1. d4 g6 2. c4 Bg7 3. Nc3 d6": ("A41", "Modern Defense"),
         "1. d4 g6 2. c4 Bg7 3. e4 e5": ("A41", "Modern Defense: Neo-Modern Defense"),
@@ -1201,7 +1258,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
         "1. d4 c5": ("A43", "Benoni Defense: Old Benoni"),
         "1. d4 c5 2. d5": ("A43", "Benoni Defense: Old Benoni"),
         "1. d4 c5 2. d5 d6": ("A43", "Benoni Defense: Old Benoni"),
-        "1. d4 c5 2. d5 f5": ("A43", "Benoni Defense: Old Benoni, Mujannah Formation"),
+        "1. d4 c5 2. d5 f5": (
+            "A43",
+            "Benoni Defense: Old Benoni, Mujannah Formation",
+        ),
         "1. d4 c5 2. d5 d6 3. Nc3 g6": (
             "A43",
             "Benoni Defense: Old Benoni, Schmid Variation",
@@ -1266,7 +1326,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "Queen's Pawn Game: Veresov, Richter Attack",
         ),
         "1. d4 Nf6 2. Bg5": ("A45", "Trompowsky Attack"),
-        "1. d4 Nf6 2. Bg5 Ne4 3. Bf4 g5": ("A45", "Trompowsky Attack: Borg Variation"),
+        "1. d4 Nf6 2. Bg5 Ne4 3. Bf4 g5": (
+            "A45",
+            "Trompowsky Attack: Borg Variation",
+        ),
         "1. d4 Nf6 2. Bg5 e6": ("A45", "Trompowsky Attack: Classical Defense"),
         "1. d4 Nf6 2. Bg5 e6 3. e4": (
             "A45",
@@ -1318,7 +1381,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "A46",
             "Torre Attack: Classical Defense, Petrosian Gambit",
         ),
-        "1. d4 Nf6 2. Nf3 e6 3. Bg5 c5 4. e4": ("A46", "Torre Attack: Wagner Gambit"),
+        "1. d4 Nf6 2. Nf3 e6 3. Bg5 c5 4. e4": (
+            "A46",
+            "Torre Attack: Wagner Gambit",
+        ),
         "1. d4 Nf6 2. Nf3 e6 3. e3": ("A46", "Yusupov-Rubinstein System"),
         "1. d4 Nf6 2. Nf3 b6 3. c3 e5": ("A47", "Indian Defense: Schnepper Gambit"),
         "1. d4 Nf6 2. Nf3 b6 3. g3 Bb7 4. Bg2 c5": ("A47", "Marienbad System"),
@@ -1370,7 +1436,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "A51",
             "Indian Defense: Budapest Defense, Fajarowicz-Steiner Variation",
         ),
-        "1. d4 Nf6 2. c4 e5 3. dxe5 Ng4": ("A52", "Indian Defense: Budapest Defense"),
+        "1. d4 Nf6 2. c4 e5 3. dxe5 Ng4": (
+            "A52",
+            "Indian Defense: Budapest Defense",
+        ),
         "1. d4 Nf6 2. c4 e5 3. dxe5 Ng4 4. Nf3": (
             "A52",
             "Indian Defense: Budapest Defense, Adler Variation",
@@ -1392,7 +1461,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "Indian Defense: Budapest Defense, Rubinstein Variation",
         ),
         "1. d4 Nf6 2. c4 d6": ("A53", "Old Indian Defense"),
-        "1. d4 Nf6 2. c4 d6 3. g4": ("A53", "Old Indian Defense: Aged Gibbon Gambit"),
+        "1. d4 Nf6 2. c4 d6 3. g4": (
+            "A53",
+            "Old Indian Defense: Aged Gibbon Gambit",
+        ),
         "1. d4 Nf6 2. c4 d6 3. Nc3 c6": (
             "A53",
             "Old Indian Defense: Czech Variation, with Nc3",
@@ -1438,13 +1510,19 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "Old Indian Defense: Normal Variation",
         ),
         "1. d4 Nf6 2. c4 c5": ("A56", "Benoni Defense"),
-        "1. d4 Nf6 2. c4 c5 3. d5 e5": ("A56", "Benoni Defense: Czech Benoni Defense"),
+        "1. d4 Nf6 2. c4 c5 3. d5 e5": (
+            "A56",
+            "Benoni Defense: Czech Benoni Defense",
+        ),
         "1. d4 Nf6 2. c4 c5 3. d5 d6": ("A56", "Benoni Defense: Hromádka System"),
         "1. d4 Nf6 2. c4 c5 3. d5 e5 4. Nc3 d6 5. e4 g6": (
             "A56",
             "Benoni Defense: King's Indian System",
         ),
-        "1. d4 Nf6 2. c4 c5 3. dxc5 e6": ("A56", "Benoni Defense: Weenink Variation"),
+        "1. d4 Nf6 2. c4 c5 3. dxc5 e6": (
+            "A56",
+            "Benoni Defense: Weenink Variation",
+        ),
         "1. d4 Nf6 2. c4 c5 3. e3 g6 4. Nc3 Bg7 5. Nf3 O-O 6. Be2 cxd4 7. exd4 d5 8. O-O Nc6": (
             "A56",
             "Grünfeld Defense: Three Knights Variation, Burille Variation, Reversed Tarrasch",
@@ -1743,7 +1821,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
         ),
         "1. d4 f5 2. c4 Nf6": ("A84", "Dutch Defense: Normal Variation"),
         "1. d4 f5 2. c4 e6 3. Nc3": ("A84", "Dutch Defense: Rubinstein Variation"),
-        "1. d4 f5 2. c4 Nf6 3. Nc3": ("A85", "Dutch Defense: Queen's Knight Variation"),
+        "1. d4 f5 2. c4 Nf6 3. Nc3": (
+            "A85",
+            "Dutch Defense: Queen's Knight Variation",
+        ),
         "1. d4 f5 2. c4 Nf6 3. g3": ("A86", "Dutch Defense: Fianchetto Variation"),
         "1. d4 f5 2. c4 Nf6 3. g3 d6 4. Bg2 c6 5. Nc3 Qc7": (
             "A86",
@@ -1869,7 +1950,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "B00",
             "Nimzowitsch Defense: Breyer Variation",
         ),
-        "1. e4 Nc6 2. Nf3 f5": ("B00", "Nimzowitsch Defense: Colorado Countergambit"),
+        "1. e4 Nc6 2. Nf3 f5": (
+            "B00",
+            "Nimzowitsch Defense: Colorado Countergambit",
+        ),
         "1. e4 Nc6 2. Nf3 f5 3. exf5": (
             "B00",
             "Nimzowitsch Defense: Colorado Countergambit Accepted",
@@ -2091,7 +2175,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "B01",
             "Scandinavian Defense: Lasker Variation",
         ),
-        "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5": ("B01", "Scandinavian Defense: Main Line"),
+        "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5": (
+            "B01",
+            "Scandinavian Defense: Main Line",
+        ),
         "1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5 4. b4": (
             "B01",
             "Scandinavian Defense: Main Line, Leonhardt Gambit",
@@ -2109,7 +2196,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "Scandinavian Defense: Mieses-Kotroc Variation",
         ),
         "1. e4 d5 2. exd5 Nf6": ("B01", "Scandinavian Defense: Modern Variation"),
-        "1. e4 d5 2. exd5 Nf6 3. d4": ("B01", "Scandinavian Defense: Modern Variation"),
+        "1. e4 d5 2. exd5 Nf6 3. d4": (
+            "B01",
+            "Scandinavian Defense: Modern Variation",
+        ),
         "1. e4 d5 2. exd5 Nf6 3. d4 Nxd5 4. Nf3 Bg4": (
             "B01",
             "Scandinavian Defense: Modern Variation, Gipslis Variation",
@@ -2318,7 +2408,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "B03",
             "Alekhine Defense: Modern Variation, Alekhine Gambit",
         ),
-        "1. e4 Nf6 2. e5 Nd5 3. d4 b5": ("B03", "Alekhine Defense: O'Sullivan Gambit"),
+        "1. e4 Nf6 2. e5 Nd5 3. d4 b5": (
+            "B03",
+            "Alekhine Defense: O'Sullivan Gambit",
+        ),
         "1. e4 Nf6 2. e5 Nd5 3. d4 d6 4. Nf3": (
             "B04",
             "Alekhine Defense: Modern Variation",
@@ -2395,7 +2488,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "B06",
             "Modern Defense: Masur Gambit",
         ),
-        "1. e4 g6 2. d4 Bg7 3. Nc3 c5": ("B06", "Modern Defense: Modern Pterodactyl"),
+        "1. e4 g6 2. d4 Bg7 3. Nc3 c5": (
+            "B06",
+            "Modern Defense: Modern Pterodactyl",
+        ),
         "1. e4 g6 2. d4 Bg7 3. Nc3 b6": (
             "B06",
             "Modern Defense: Mongredien Defense, with Nc3",
@@ -2511,10 +2607,16 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "B06",
             "Pterodactyl Defense: Western, Siroccopteryx",
         ),
-        "1. e4 g6 2. d4 d6 3. Nc3 c6": ("B06", "Rat Defense: Accelerated Gurgenidze"),
+        "1. e4 g6 2. d4 d6 3. Nc3 c6": (
+            "B06",
+            "Rat Defense: Accelerated Gurgenidze",
+        ),
         "1. e4 d6 2. d4 Nf6 3. Nc3 c6": ("B07", "Czech Defense"),
         "1. e4 d6 2. d4 e5": ("B07", "King's Pawn Game: Maróczy Defense"),
-        "1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. f4": ("B07", "Lion Defense: Anti-Philidor"),
+        "1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. f4": (
+            "B07",
+            "Lion Defense: Anti-Philidor",
+        ),
         "1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. f4 e5": (
             "B07",
             "Lion Defense: Anti-Philidor, Lion's Cave",
@@ -2523,7 +2625,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "B07",
             "Lion Defense: Anti-Philidor, Lion's Cave, Lion Claw Gambit",
         ),
-        "1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. g4": ("B07", "Lion Defense: Bayonet Attack"),
+        "1. e4 d6 2. d4 Nf6 3. Nc3 Nbd7 4. g4": (
+            "B07",
+            "Lion Defense: Bayonet Attack",
+        ),
         "1. e4 g6 2. d4 Bg7 3. Nf3 d6 4. c3": (
             "B07",
             "Modern Defense: Geller's System",
@@ -2545,12 +2650,18 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "B07",
             "Pirc Defense: Bayonet Attack",
         ),
-        "1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. Bg5": ("B07", "Pirc Defense: Byrne Variation"),
+        "1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. Bg5": (
+            "B07",
+            "Pirc Defense: Byrne Variation",
+        ),
         "1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. Be2 Bg7 5. g4": (
             "B07",
             "Pirc Defense: Chinese Variation",
         ),
-        "1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. Bc4": ("B07", "Pirc Defense: Kholmov System"),
+        "1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. Bc4": (
+            "B07",
+            "Pirc Defense: Kholmov System",
+        ),
         "1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. g3": (
             "B07",
             "Pirc Defense: Sveshnikov System",
@@ -2583,7 +2694,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "B08",
             "Pirc Defense: Classical Variation, Schlechter Variation",
         ),
-        "1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. f4": ("B09", "Pirc Defense: Austrian Attack"),
+        "1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. f4": (
+            "B09",
+            "Pirc Defense: Austrian Attack",
+        ),
         "1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. f4 Bg7 5. Nf3 O-O": (
             "B09",
             "Pirc Defense: Austrian Attack",
@@ -2672,7 +2786,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "Caro-Kann Defense: Spike Variation, Scorpion-Grob Gambit",
         ),
         "1. e4 c6 2. c4 d5 3. e5": ("B10", "Caro-Kann Defense: Toikkanen Gambit"),
-        "1. e4 c6 2. Nc3 d5 3. Nf3": ("B10", "Caro-Kann Defense: Two Knights Attack"),
+        "1. e4 c6 2. Nc3 d5 3. Nf3": (
+            "B10",
+            "Caro-Kann Defense: Two Knights Attack",
+        ),
         "1. e4 c6 2. Nc3 d5 3. Nf3 Bg4": (
             "B11",
             "Caro-Kann Defense: Two Knights Attack, Mindeno Variation",
@@ -2754,7 +2871,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "B12",
             "Caro-Kann Defense: Ulysses Gambit",
         ),
-        "1. e4 c6 2. d4 d5 3. exd5": ("B13", "Caro-Kann Defense: Exchange Variation"),
+        "1. e4 c6 2. d4 d5 3. exd5": (
+            "B13",
+            "Caro-Kann Defense: Exchange Variation",
+        ),
         "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. g4": (
             "B13",
             "Caro-Kann Defense: Exchange Variation, Bulla Attack",
@@ -2821,7 +2941,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "B15",
             "Caro-Kann Defense: Alekhine Gambit",
         ),
-        "1. e4 c6 2. d4 d5 3. Nc3 Nf6": ("B15", "Caro-Kann Defense: Campomanes Attack"),
+        "1. e4 c6 2. d4 d5 3. Nc3 Nf6": (
+            "B15",
+            "Caro-Kann Defense: Campomanes Attack",
+        ),
         "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nf6 5. Nxf6+ exf6 6. Bc4": (
             "B15",
             "Caro-Kann Defense: Forgacs Variation",
@@ -2830,7 +2953,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "B15",
             "Caro-Kann Defense: Gurgenidze Counterattack",
         ),
-        "1. e4 c6 2. d4 d5 3. Nc3 g6": ("B15", "Caro-Kann Defense: Gurgenidze System"),
+        "1. e4 c6 2. d4 d5 3. Nc3 g6": (
+            "B15",
+            "Caro-Kann Defense: Gurgenidze System",
+        ),
         "1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4": (
             "B15",
             "Caro-Kann Defense: Main Line",
@@ -3131,7 +3257,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "B23",
             "Sicilian Defense: Closed, Chameleon Variation",
         ),
-        "1. e4 c5 2. Nc3 Nc6 3. g4": ("B23", "Sicilian Defense: Closed, Grob Attack"),
+        "1. e4 c5 2. Nc3 Nc6 3. g4": (
+            "B23",
+            "Sicilian Defense: Closed, Grob Attack",
+        ),
         "1. e4 c5 2. Nc3 e6 3. g3 d5": (
             "B23",
             "Sicilian Defense: Closed, Korchnoi Defense",
@@ -3143,7 +3272,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "Sicilian Defense: Grand Prix Attack, Schofman Variation",
         ),
         "1. e4 c5 2. Nc3 Nc6 3. g3 g6": ("B24", "Sicilian Defense: Closed"),
-        "1. e4 c5 2. Nc3 Nc6 3. g3 g6 4. Bg2 Bg7": ("B24", "Sicilian Defense: Closed"),
+        "1. e4 c5 2. Nc3 Nc6 3. g3 g6 4. Bg2 Bg7": (
+            "B24",
+            "Sicilian Defense: Closed",
+        ),
         "1. e4 c5 2. Nc3 Nc6 3. g3": (
             "B24",
             "Sicilian Defense: Closed, Fianchetto Variation",
@@ -3216,7 +3348,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "B27",
             "Sicilian Defense: Double-Dutch Gambit",
         ),
-        "1. e4 c5 2. Nf3 g6 3. d4 f5": ("B27", "Sicilian Defense: Frederico Variation"),
+        "1. e4 c5 2. Nf3 g6 3. d4 f5": (
+            "B27",
+            "Sicilian Defense: Frederico Variation",
+        ),
         "1. e4 c5 2. Nf3 g6": ("B27", "Sicilian Defense: Hyperaccelerated Dragon"),
         "1. e4 c5 2. Nf3 g6 3. d4": (
             "B27",
@@ -3446,7 +3581,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "B33",
             "Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation, Peresypkin's Sacrifice",
         ),
-        "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6": ("B33", "Sicilian Defense: Open"),
+        "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6": (
+            "B33",
+            "Sicilian Defense: Open",
+        ),
         "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 g6 5. Nxc6": (
             "B34",
             "Sicilian Defense: Accelerated Dragon, Exchange Variation",
@@ -3554,7 +3692,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "B40",
             "Sicilian Defense: Smith-Morra Gambit Deferred",
         ),
-        "1. e4 c5 2. Nf3 e6 3. b4": ("B40", "Sicilian Defense: Wing Gambit Deferred"),
+        "1. e4 c5 2. Nf3 e6 3. b4": (
+            "B40",
+            "Sicilian Defense: Wing Gambit Deferred",
+        ),
         "1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6": (
             "B41",
             "Sicilian Defense: Kan Variation",
@@ -4315,7 +4456,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
         ),
         "1. e4 e6 2. c4": ("C00", "French Defense: Steiner Variation"),
         "1. e4 e6 2. e5": ("C00", "French Defense: Steinitz Attack"),
-        "1. e4 e6 2. Nf3 d5 3. Nc3": ("C00", "French Defense: Two Knights Variation"),
+        "1. e4 e6 2. Nf3 d5 3. Nc3": (
+            "C00",
+            "French Defense: Two Knights Variation",
+        ),
         "1. e4 e6 2. Nf3 d5 3. e5 c5 4. b4": ("C00", "French Defense: Wing Gambit"),
         "1. d4 e6 2. e4 d6": ("C00", "Rat Defense: Small Center Defense"),
         "1. e4 e6 2. d4 d5 3. exd5": ("C01", "French Defense: Exchange Variation"),
@@ -4520,7 +4664,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "C11",
             "French Defense: Burn Variation",
         ),
-        "1. e4 e6 2. d4 d5 3. Nc3 Nf6": ("C11", "French Defense: Classical Variation"),
+        "1. e4 e6 2. d4 d5 3. Nc3 Nf6": (
+            "C11",
+            "French Defense: Classical Variation",
+        ),
         "1. e4 e6 2. d4 d5 3. Nc3 Nf6 4. Bg5 dxe4 5. Nxe4 Be7 6. Bxf6 Bxf6 7. Nf3 O-O": (
             "C11",
             "French Defense: Classical Variation, Burn Variation, Main Line",
@@ -4847,17 +4994,26 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "King's Pawn Game: Clam Variation, Radisch Gambit",
         ),
         "1. e4 e5 2. f3": ("C20", "King's Pawn Game: King's Head Opening"),
-        "1. e4 e5 2. f3 Nf6 3. Nc3": ("C20", "King's Pawn Game: King's Head Opening"),
+        "1. e4 e5 2. f3 Nf6 3. Nc3": (
+            "C20",
+            "King's Pawn Game: King's Head Opening",
+        ),
         "1. e4 e5 2. d3": ("C20", "King's Pawn Game: Leonardis Variation"),
         "1. e4 e5 2. c3": ("C20", "King's Pawn Game: MacLeod Attack"),
-        "1. e4 e5 2. c3 f5": ("C20", "King's Pawn Game: MacLeod Attack, Lasa Gambit"),
+        "1. e4 e5 2. c3 f5": (
+            "C20",
+            "King's Pawn Game: MacLeod Attack, Lasa Gambit",
+        ),
         "1. e4 e5 2. c3 d5 3. Qh5 Bd6": (
             "C20",
             "King's Pawn Game: MacLeod Attack, Norwalde Gambit",
         ),
         "1. e4 e5 2. a3": ("C20", "King's Pawn Game: Mengarini's Opening"),
         "1. e4 e5 2. Qf3": ("C20", "King's Pawn Game: Napoleon Attack"),
-        "1. e4 e5 2. d4 d6 3. dxe5 Bd7": ("C20", "King's Pawn Game: Philidor Gambit"),
+        "1. e4 e5 2. d4 d6 3. dxe5 Bd7": (
+            "C20",
+            "King's Pawn Game: Philidor Gambit",
+        ),
         "1. e4 e5 2. Bd3": ("C20", "King's Pawn Game: Tortoise Opening"),
         "1. e4 e5 2. Qh5": ("C20", "King's Pawn Game: Wayward Queen Attack"),
         "1. e4 e5 2. Qh5 Nf6": (
@@ -4880,7 +5036,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
         ),
         "1. e4 e5 2. Bb5": ("C20", "Portuguese Opening"),
         "1. e4 e5 2. Bb5 Bc5 3. b4": ("C20", "Portuguese Opening: Miguel Gambit"),
-        "1. e4 e5 2. Bb5 Nf6 3. d4": ("C20", "Portuguese Opening: Portuguese Gambit"),
+        "1. e4 e5 2. Bb5 Nf6 3. d4": (
+            "C20",
+            "Portuguese Opening: Portuguese Gambit",
+        ),
         "1. e4 e5 2. d4 exd4 3. Qxd4": ("C21", "Center Game"),
         "1. e4 e5 2. d4 exd4": ("C21", "Center Game Accepted"),
         "1. e4 e5 2. d4 exd4 3. f4": ("C21", "Center Game: Halasz-McDonnell Gambit"),
@@ -4889,7 +5048,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "Center Game: Halasz-McDonnell Gambit, Crocodile Variation",
         ),
         "1. e4 e5 2. d4 exd4 3. Nf3": ("C21", "Center Game: Kieseritzky Variation"),
-        "1. e4 e5 2. d4 exd4 3. Nf3 c5": ("C21", "Center Game: Kieseritzky Variation"),
+        "1. e4 e5 2. d4 exd4 3. Nf3 c5": (
+            "C21",
+            "Center Game: Kieseritzky Variation",
+        ),
         "1. e4 e5 2. d4 exd4 3. Nf3 c5 4. Bc4": (
             "C21",
             "Center Game: Kieseritzky Variation",
@@ -4963,7 +5125,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "Center Game: l'Hermet Variation",
         ),
         "1. e4 e5 2. Bc4": ("C23", "Bishop's Opening"),
-        "1. e4 e5 2. Bc4 b5 3. Bxb5 c6": ("C23", "Bishop's Opening: Anderssen Gambit"),
+        "1. e4 e5 2. Bc4 b5 3. Bxb5 c6": (
+            "C23",
+            "Bishop's Opening: Anderssen Gambit",
+        ),
         "1. e4 e5 2. Bc4 Bc5": ("C23", "Bishop's Opening: Boi Variation"),
         "1. e4 e5 2. Bc4 f5": ("C23", "Bishop's Opening: Calabrese Countergambit"),
         "1. e4 e5 2. Bc4 f5 3. d3": (
@@ -5018,7 +5183,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
         ),
         "1. e4 e5 2. Bc4 Bc5 3. f4": ("C23", "Bishop's Opening: Stein Gambit"),
         "1. e4 e5 2. Bc4 b5 3. Bxb5 f5": ("C23", "Bishop's Opening: Thorold Gambit"),
-        "1. e4 e5 2. Bc4 Bc5 3. c3 Qg5": ("C23", "Bishop's Opening: del Rio Variation"),
+        "1. e4 e5 2. Bc4 Bc5 3. c3 Qg5": (
+            "C23",
+            "Bishop's Opening: del Rio Variation",
+        ),
         "1. e4 e5 2. Bc4 Nf6": ("C24", "Bishop's Opening: Berlin Defense"),
         "1. e4 e5 2. Bc4 Nf6 3. f4": (
             "C24",
@@ -5049,7 +5217,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "C24",
             "Bishop's Opening: Warsaw Gambit",
         ),
-        "1. e4 e5 2. Nc3 Nc6 3. f4": ("C25", "Vienna Gambit, with Max Lange Defense"),
+        "1. e4 e5 2. Nc3 Nc6 3. f4": (
+            "C25",
+            "Vienna Gambit, with Max Lange Defense",
+        ),
         "1. e4 e5 2. Nc3 Nc6 3. f4 exf4 4. Nf3 Be7": (
             "C25",
             "Vienna Gambit, with Max Lange Defense: Cunningham Defense",
@@ -5110,7 +5281,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
         "1. e4 e5 2. Nc3 Bc5": ("C25", "Vienna Game: Anderssen Defense"),
         "1. e4 e5 2. Nc3 Nc6 3. d4": ("C25", "Vienna Game: Fyfe Gambit"),
         "1. e4 e5 2. Nc3 Bc5 3. Qg4": ("C25", "Vienna Game: Giraffe Attack"),
-        "1. e4 e5 2. Nc3 Bc5 3. Na4": ("C25", "Vienna Game: Hamppe-Meitner Variation"),
+        "1. e4 e5 2. Nc3 Bc5 3. Na4": (
+            "C25",
+            "Vienna Game: Hamppe-Meitner Variation",
+        ),
         "1. e4 e5 2. Nc3 Nc6 3. f4 exf4 4. Nf3 g5 5. Bc4 g4 6. O-O": (
             "C25",
             "Vienna Game: Hamppe-Muzio Gambit",
@@ -5130,7 +5304,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "C25",
             "Vienna Game: Paulsen Variation, Mariotti Gambit",
         ),
-        "1. e4 e5 2. Nc3 Nc6 3. d4 f5": ("C25", "Vienna Game: Philidor Countergambit"),
+        "1. e4 e5 2. Nc3 Nc6 3. d4 f5": (
+            "C25",
+            "Vienna Game: Philidor Countergambit",
+        ),
         "1. e4 e5 2. Nc3 Nc6 3. f4 exf4 4. Nf3 g5 5. d4 g4 6. Bc4 gxf3 7. O-O d5 8. exd5 Bg4 9. dxc6": (
             "C25",
             "Vienna Game: Pierce Gambit, Rushmere Attack",
@@ -5288,7 +5465,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "King's Gambit Declined: Keene Defense",
         ),
         "1. e4 e5 2. f4 Qh4+": ("C30", "King's Gambit Declined: Keene's Defense"),
-        "1. e4 e5 2. f4 Qh4+ 3. g3": ("C30", "King's Gambit Declined: Keene's Defense"),
+        "1. e4 e5 2. f4 Qh4+ 3. g3": (
+            "C30",
+            "King's Gambit Declined: Keene's Defense",
+        ),
         "1. e4 c5 2. f4 e5": ("C30", "King's Gambit Declined: Mafia Defense"),
         "1. e4 e5 2. f4 Nc6 3. Nf3 f5": (
             "C30",
@@ -5328,7 +5508,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "King's Gambit Declined: Panteldakis Countergambit, Symmetrical Variation",
         ),
         "1. e4 e5 2. f4 Nf6": ("C30", "King's Gambit Declined: Petrov's Defense"),
-        "1. e4 e5 2. f4 Nc6": ("C30", "King's Gambit Declined: Queen's Knight Defense"),
+        "1. e4 e5 2. f4 Nc6": (
+            "C30",
+            "King's Gambit Declined: Queen's Knight Defense",
+        ),
         "1. e4 e5 2. f4 Bc5 3. Nf3 g5": (
             "C30",
             "King's Gambit Declined: Senechaud Countergambit",
@@ -5345,7 +5528,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "C30",
             "King's Gambit Declined: Zilbermints Double Gambit",
         ),
-        "1. e4 e5 2. f4 d5": ("C31", "King's Gambit Declined: Falkbeer Countergambit"),
+        "1. e4 e5 2. f4 d5": (
+            "C31",
+            "King's Gambit Declined: Falkbeer Countergambit",
+        ),
         "1. e4 e5 2. f4 d5 3. exd5": (
             "C31",
             "King's Gambit Declined: Falkbeer Countergambit Accepted",
@@ -5435,7 +5621,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "King's Gambit Declined: Falkbeer Countergambit, Tarrasch Variation",
         ),
         "1. e4 e5 2. f4 exf4": ("C33", "King's Gambit Accepted"),
-        "1. e4 e5 2. f4 exf4 3. Qe2": ("C33", "King's Gambit Accepted: Basman Gambit"),
+        "1. e4 e5 2. f4 exf4 3. Qe2": (
+            "C33",
+            "King's Gambit Accepted: Basman Gambit",
+        ),
         "1. e4 e5 2. f4 exf4 3. Bc4": (
             "C33",
             "King's Gambit Accepted: Bishop's Gambit",
@@ -5548,9 +5737,18 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "C33",
             "King's Gambit Accepted: Bishop's Gambit, Steinitz Defense",
         ),
-        "1. e4 e5 2. f4 exf4 3. Qf3": ("C33", "King's Gambit Accepted: Breyer Gambit"),
-        "1. e4 e5 2. f4 exf4 3. Qh5": ("C33", "King's Gambit Accepted: Carrera Gambit"),
-        "1. e4 e5 2. f4 exf4 3. Qg4": ("C33", "King's Gambit Accepted: Dodo Variation"),
+        "1. e4 e5 2. f4 exf4 3. Qf3": (
+            "C33",
+            "King's Gambit Accepted: Breyer Gambit",
+        ),
+        "1. e4 e5 2. f4 exf4 3. Qh5": (
+            "C33",
+            "King's Gambit Accepted: Carrera Gambit",
+        ),
+        "1. e4 e5 2. f4 exf4 3. Qg4": (
+            "C33",
+            "King's Gambit Accepted: Dodo Variation",
+        ),
         "1. e4 e5 2. f4 exf4 3. Nh3": (
             "C33",
             "King's Gambit Accepted: Eisenberg Variation",
@@ -5564,9 +5762,18 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "C33",
             "King's Gambit Accepted: Mason-Keres Gambit",
         ),
-        "1. e4 e5 2. f4 exf4 3. b3": ("C33", "King's Gambit Accepted: Orsini Gambit"),
-        "1. e4 e5 2. f4 exf4 3. Ne2": ("C33", "King's Gambit Accepted: Paris Gambit"),
-        "1. e4 e5 2. f4 exf4 3. d4": ("C33", "King's Gambit Accepted: Polerio Gambit"),
+        "1. e4 e5 2. f4 exf4 3. b3": (
+            "C33",
+            "King's Gambit Accepted: Orsini Gambit",
+        ),
+        "1. e4 e5 2. f4 exf4 3. Ne2": (
+            "C33",
+            "King's Gambit Accepted: Paris Gambit",
+        ),
+        "1. e4 e5 2. f4 exf4 3. d4": (
+            "C33",
+            "King's Gambit Accepted: Polerio Gambit",
+        ),
         "1. e4 e5 2. f4 exf4 3. Bb5": (
             "C33",
             "King's Gambit Accepted: Schurig Gambit, with Bb5",
@@ -5575,7 +5782,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "C33",
             "King's Gambit Accepted: Schurig Gambit, with Bd3",
         ),
-        "1. e4 e5 2. f4 exf4 3. h4": ("C33", "King's Gambit Accepted: Stamma Gambit"),
+        "1. e4 e5 2. f4 exf4 3. h4": (
+            "C33",
+            "King's Gambit Accepted: Stamma Gambit",
+        ),
         "1. e4 e5 2. f4 exf4 3. Be2": (
             "C33",
             "King's Gambit Accepted: Tartakower Gambit",
@@ -6070,7 +6280,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "C41",
             "Philidor Defense: Berger Variation",
         ),
-        "1. e4 e5 2. Nf3 d6 3. d4 exd4 4. c3": ("C41", "Philidor Defense: Bird Gambit"),
+        "1. e4 e5 2. Nf3 d6 3. d4 exd4 4. c3": (
+            "C41",
+            "Philidor Defense: Bird Gambit",
+        ),
         "1. e4 e5 2. Nf3 d6 3. d4 exd4 4. Qxd4 Bd7": (
             "C41",
             "Philidor Defense: Boden Variation",
@@ -6087,7 +6300,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "C41",
             "Philidor Defense: Exchange Variation",
         ),
-        "1. e4 e5 2. Nf3 d6 3. d4 Nd7": ("C41", "Philidor Defense: Hanham Variation"),
+        "1. e4 e5 2. Nf3 d6 3. d4 Nd7": (
+            "C41",
+            "Philidor Defense: Hanham Variation",
+        ),
         "1. e4 e5 2. Nf3 d6 3. d4 Nd7 4. Bc4 c6 5. c3": (
             "C41",
             "Philidor Defense: Hanham Variation, Delmar Variation",
@@ -6298,7 +6514,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "C42",
             "Russian Game: Cozio Attack",
         ),
-        "1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nxe4": ("C42", "Russian Game: Damiano Variation"),
+        "1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nxe4": (
+            "C42",
+            "Russian Game: Damiano Variation",
+        ),
         "1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nxe4 4. Qe2 Qe7": (
             "C42",
             "Russian Game: Damiano Variation, Kholmov Gambit",
@@ -6320,7 +6539,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "C42",
             "Russian Game: Millennium Attack",
         ),
-        "1. e4 e5 2. Nf3 Nf6 3. Qe2 Nc6 4. d4": ("C42", "Russian Game: Moody Gambit"),
+        "1. e4 e5 2. Nf3 Nf6 3. Qe2 Nc6 4. d4": (
+            "C42",
+            "Russian Game: Moody Gambit",
+        ),
         "1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. Nc3": (
             "C42",
             "Russian Game: Nimzowitsch Attack",
@@ -6377,7 +6599,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "C43",
             "Russian Game: Modern Attack, Trifunovic Variation",
         ),
-        "1. e4 e5 2. Nf3 Nc6 3. c4 Nf6 4. Nxe5": ("C44", "Dresden Opening: The Goblin"),
+        "1. e4 e5 2. Nf3 Nc6 3. c4 Nf6 4. Nxe5": (
+            "C44",
+            "Dresden Opening: The Goblin",
+        ),
         "1. e4 e5 2. Nf3 Nc6 3. Nxe5": ("C44", "Irish Gambit"),
         "1. e4 e5 2. Nf3 Nc6 3. g3": (
             "C44",
@@ -6385,7 +6610,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
         ),
         "1. e4 e5 2. Nf3 Nc6": ("C44", "King's Knight Opening: Normal Variation"),
         "1. e4 e5 2. Nf3 Nc6 3. c4": ("C44", "King's Pawn Game: Dresden Opening"),
-        "1. e4 e5 2. Nf3 Nc6 3. b4": ("C44", "King's Pawn Game: Pachman Wing Gambit"),
+        "1. e4 e5 2. Nf3 Nc6 3. b4": (
+            "C44",
+            "King's Pawn Game: Pachman Wing Gambit",
+        ),
         "1. e4 e5 2. Nf3 Nc6 3. Nxe5 Nxe5 4. d4": (
             "C44",
             "King's Pawn Game: Schulze-Müller Gambit",
@@ -6403,7 +6631,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "C44",
             "King's Pawn Game: Tayler Opening, Inverted Hanham",
         ),
-        "1. e4 e5 2. Nf3 Nc6 3. d3 f5 4. exf5": ("C44", "Latvian Gambit: Clam Gambit"),
+        "1. e4 e5 2. Nf3 Nc6 3. d3 f5 4. exf5": (
+            "C44",
+            "Latvian Gambit: Clam Gambit",
+        ),
         "1. e4 e5 2. Nf3 Nc6 3. c3": ("C44", "Ponziani Opening"),
         "1. e4 e5 2. Nf3 Nc6 3. c3 d5 4. Qa4 Bd7": (
             "C44",
@@ -6433,7 +6664,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "C44",
             "Ponziani Opening: Romanishin Variation",
         ),
-        "1. e4 e5 2. Nf3 Nc6 3. c3 Nge7": ("C44", "Ponziani Opening: Réti Variation"),
+        "1. e4 e5 2. Nf3 Nc6 3. c3 Nge7": (
+            "C44",
+            "Ponziani Opening: Réti Variation",
+        ),
         "1. e4 e5 2. Nf3 Nc6 3. c3 d5 4. Bb5": (
             "C44",
             "Ponziani Opening: Spanish Variation",
@@ -6464,7 +6698,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "C44",
             "Scotch Game: Cochrane-Shumov Defense",
         ),
-        "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. c3": ("C44", "Scotch Game: Göring Gambit"),
+        "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. c3": (
+            "C44",
+            "Scotch Game: Göring Gambit",
+        ),
         "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. c3 dxc3 5. Bc4 Nf6 6. Nxc3 Bb4": (
             "C44",
             "Scotch Game: Göring Gambit, Bardeleben Variation",
@@ -6494,7 +6731,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "C44",
             "Scotch Game: Relfsson Gambit",
         ),
-        "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Bc4": ("C44", "Scotch Game: Scotch Gambit"),
+        "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Bc4": (
+            "C44",
+            "Scotch Game: Scotch Gambit",
+        ),
         "1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Bc4 Nf6 5. e5": (
             "C44",
             "Scotch Game: Scotch Gambit, Advance Variation",
@@ -6888,7 +7128,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "Italian Game: Rosentreter Gambit",
         ),
         "1. e4 e5 2. Nf3 Nc6 3. Bc4 f5": ("C50", "Italian Game: Rousseau Gambit"),
-        "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4": ("C51", "Italian Game: Evans Gambit"),
+        "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4": (
+            "C51",
+            "Italian Game: Evans Gambit",
+        ),
         "1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Bc5 6. d4 exd4 7. O-O d6 8. cxd4 Bb6 9. Nc3 Bg4": (
             "C51",
             "Italian Game: Evans Gambit",
@@ -7249,7 +7492,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "C55",
             "Italian Game: Scotch Invitation Declined",
         ),
-        "1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6": ("C55", "Italian Game: Two Knights Defense"),
+        "1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6": (
+            "C55",
+            "Italian Game: Two Knights Defense",
+        ),
         "1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. d4 Nxe4": (
             "C55",
             "Italian Game: Two Knights Defense",
@@ -7564,7 +7810,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "Ruy Lopez: Classical Variation, Spanish Wing Gambit",
         ),
         "1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6": ("C65", "Ruy Lopez: Berlin Defense"),
-        "1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O": ("C65", "Ruy Lopez: Berlin Defense"),
+        "1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O": (
+            "C65",
+            "Ruy Lopez: Berlin Defense",
+        ),
         "1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. d3 d6 5. Bxc6+": (
             "C65",
             "Ruy Lopez: Berlin Defense, Anderssen Variation",
@@ -8409,12 +8658,18 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "D00",
             "Blackmar-Diemer Gambit Declined: Weinsbach Defense",
         ),
-        "1. d4 d5 2. e4 dxe4 3. f3": ("D00", "Blackmar-Diemer Gambit: Blackmar Gambit"),
+        "1. d4 d5 2. e4 dxe4 3. f3": (
+            "D00",
+            "Blackmar-Diemer Gambit: Blackmar Gambit",
+        ),
         "1. d4 d5 2. e4 dxe4 3. Be3": (
             "D00",
             "Blackmar-Diemer Gambit: Diemer-Rosenberg Attack",
         ),
-        "1. d4 d5 2. e4 dxe4 3. Bc4": ("D00", "Blackmar-Diemer Gambit: Fritz Attack"),
+        "1. d4 d5 2. e4 dxe4 3. Bc4": (
+            "D00",
+            "Blackmar-Diemer Gambit: Fritz Attack",
+        ),
         "1. d4 d5 2. e4 dxe4 3. Nc3 e5": (
             "D00",
             "Blackmar-Diemer Gambit: Lemberger Countergambit",
@@ -8613,7 +8868,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "D05",
             "Queen's Pawn Game: Zukertort Variation",
         ),
-        "1. d4 Nf6 2. Nf3 e6 3. e3 c5 4. Bd3 d5 5. b3": ("D05", "Rubinstein Opening"),
+        "1. d4 Nf6 2. Nf3 e6 3. e3 c5 4. Bd3 d5 5. b3": (
+            "D05",
+            "Rubinstein Opening",
+        ),
         "1. d4 Nf6 2. Nf3 e6 3. e3 c5 4. Bd3 d5 5. b3 Nc6 6. O-O Bd6 7. Bb2 O-O": (
             "D05",
             "Rubinstein Opening: Bogoljubov Defense",
@@ -8762,7 +9020,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "D10",
             "Slav Defense: Slav Gambit, Alekhine Attack",
         ),
-        "1. d4 d5 2. c4 c6 3. Nc3 e5": ("D10", "Slav Defense: Winawer Countergambit"),
+        "1. d4 d5 2. c4 c6 3. Nc3 e5": (
+            "D10",
+            "Slav Defense: Winawer Countergambit",
+        ),
         "1. d4 d5 2. c4 c6 3. Nc3 e5 4. e4": (
             "D10",
             "Slav Defense: Winawer Countergambit, Anti-Winawer Gambit",
@@ -8773,7 +9034,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "Slav Defense: Breyer Variation",
         ),
         "1. d4 d5 2. c4 c6 3. Nf3": ("D11", "Slav Defense: Modern Line"),
-        "1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. e3": ("D11", "Slav Defense: Quiet Variation"),
+        "1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. e3": (
+            "D11",
+            "Slav Defense: Quiet Variation",
+        ),
         "1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. e3 Bg4": (
             "D11",
             "Slav Defense: Quiet Variation, Pin Defense",
@@ -8947,7 +9211,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "D20",
             "Queen's Gambit Accepted: Linares Variation",
         ),
-        "1. d4 d5 2. c4 dxc4 3. e3": ("D20", "Queen's Gambit Accepted: Old Variation"),
+        "1. d4 d5 2. c4 dxc4 3. e3": (
+            "D20",
+            "Queen's Gambit Accepted: Old Variation",
+        ),
         "1. d4 d5 2. c4 dxc4 3. e3 e5 4. Bxc4 exd4 5. Qb3 Qe7 6. a3": (
             "D20",
             "Queen's Gambit Accepted: Old Variation, Billinger Gambit",
@@ -9724,7 +9991,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "D52",
             "Queen's Gambit Declined: Cambridge Springs Defense, Yugoslav Variation",
         ),
-        "1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7": ("D53", "Queen's Gambit Declined"),
+        "1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7": (
+            "D53",
+            "Queen's Gambit Declined",
+        ),
         "1. d4 Nf6 2. c4 e6 3. Nc3 d5 4. Bg5 Be7 5. e3 Ne4": (
             "D53",
             "Queen's Gambit Declined: Lasker Defense",
@@ -9909,7 +10179,10 @@ def get_openings() -> dict[str, tuple[str, str]]:
             "D69",
             "Queen's Gambit Declined: Orthodox Defense, Classical Variation",
         ),
-        "1. d4 Nf6 2. c4 g6 3. f3 d5": ("D70", "Neo-Grünfeld Defense: Goglidze Attack"),
+        "1. d4 Nf6 2. c4 g6 3. f3 d5": (
+            "D70",
+            "Neo-Grünfeld Defense: Goglidze Attack",
+        ),
         "1. d4 Nf6 2. c4 g6 3. Nf3 d5": ("D70", "Neo-Grünfeld Defense: with Nf3"),
         "1. d4 Nf6 2. c4 g6 3. g3 d5": ("D70", "Neo-Grünfeld Defense: with g3"),
         "1. d4 Nf6 2. c4 g6 3. g3 Bg7 4. Bg2 d5 5. cxd5 Nxd5": (
