@@ -27,8 +27,8 @@ from rechess.gui.widgets import (
 )
 
 
-BLACK_STYLE: str = "color: white; background: black;"
-WHITE_STYLE: str = "color: black; background: white;"
+BLACK_CLOCK_STYLE: str = "color: white; background: black;"
+WHITE_CLOCK_STYLE: str = "color: black; background: white;"
 
 TOP: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop
 BOTTOM: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignBottom
@@ -60,8 +60,8 @@ class MainWindow(QMainWindow):
         self._table_model: TableModel = TableModel(self._game.notation)
         self._table_view: TableView = TableView(self._table_model)
 
-        self._black_clock: Clock = Clock(BLACK_STYLE)
-        self._white_clock: Clock = Clock(WHITE_STYLE)
+        self._black_clock: Clock = Clock(BLACK_CLOCK_STYLE)
+        self._white_clock: Clock = Clock(WHITE_CLOCK_STYLE)
 
         self._opening_label: QLabel = QLabel()
         self._engine_name_label: QLabel = QLabel()
@@ -228,7 +228,7 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self._widget_container)
 
         if self._game.is_perspective_flipped():
-            self.flip_clocks()
+            self.flip_clock_positions()
 
     def adjust_engine_buttons(self) -> None:
         """Adjust the state of the engine's tool bar buttons."""
@@ -269,7 +269,7 @@ class MainWindow(QMainWindow):
 
     def flip(self) -> None:
         """Flip the current perspective."""
-        self.flip_clocks()
+        self.flip_clock_positions()
         self._game.flip_perspective()
         self._evaluation_bar.flip_perspective()
         self._svg_board.draw()
@@ -297,7 +297,7 @@ class MainWindow(QMainWindow):
 
         if engine_file:
             self._engine.load(engine_file)
-            self.refresh_ui()
+            self.refresh_ui_after_new_engine_loaded()
 
     def show_about(self) -> None:
         """Show the About message."""
@@ -311,8 +311,8 @@ class MainWindow(QMainWindow):
             ),
         )
 
-    def flip_clocks(self) -> None:
-        """Flip the top and bottom clocks."""
+    def flip_clock_positions(self) -> None:
+        """Flip the position of the top and the bottom clocks."""
         if TOP in self._grid_layout.itemAt(0).alignment():
             self._grid_layout.itemAt(0).setAlignment(BOTTOM)
             self._grid_layout.itemAt(1).setAlignment(TOP)
@@ -349,12 +349,11 @@ class MainWindow(QMainWindow):
             self._opening_label.setText(f"{eco_code}: {opening_name}")
 
     def refresh_ui(self) -> None:
-        """Update the current state of a game."""
+        """Refresh the current UI's state to a new state."""
         self._engine.stop_analysis()
         self._table_model.refresh_view()
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
-        self._engine_name_label.setText(self._engine.name)
 
         self.show_fen()
         self.show_opening()
@@ -372,8 +371,15 @@ class MainWindow(QMainWindow):
             self._notifications_label.setText(self._game.result)
             self.offer_new_game()
 
+    def refresh_ui_after_new_engine_loaded(self) -> None:
+        """Refresh the UI's state after a new engine has been loaded."""
+        self._engine_name_label.setText(self._engine.name)
+
+        if self._game.is_engine_on_turn():
+            self.invoke_engine()
+
     def switch_clock_timers(self) -> None:
-        """Switch the clock timers of Black's and White's clocks."""
+        """Activate the clock's timer for the player on turn."""
         if self._game.is_white_on_turn():
             self._black_clock.stop_timer()
             self._white_clock.start_timer()
@@ -382,7 +388,7 @@ class MainWindow(QMainWindow):
             self._black_clock.start_timer()
 
     def offer_new_game(self) -> None:
-        """Offer to start a new game."""
+        """Show a dialog offering to start a new game."""
         answer: QMessageBox.StandardButton = QMessageBox.question(
             self,
             "New Game",
@@ -395,7 +401,7 @@ class MainWindow(QMainWindow):
     def start_new_game(self) -> None:
         """Start a new game by resetting everything."""
         if self._game.is_perspective_flipped():
-            self.flip_clocks()
+            self.flip_clock_positions()
 
         self._black_clock.reset()
         self._white_clock.reset()
