@@ -296,8 +296,16 @@ class MainWindow(QMainWindow):
         )
 
         if engine_file:
-            self._engine.load(engine_file)
-            self.refresh_ui_after_new_engine_loaded()
+            self.load_new_engine(engine_file)
+
+    def load_new_engine(self, engine_file: str) -> None:
+        """Load a new engine from `engine_file`."""
+        self.stop_analysis()
+        self._engine.load(engine_file)
+        self._engine_name_label.setText(self._engine.name)
+
+        if self._game.is_engine_on_turn():
+            self.invoke_engine()
 
     def show_about(self) -> None:
         """Show the About message."""
@@ -370,19 +378,6 @@ class MainWindow(QMainWindow):
             self._white_clock.stop_timer()
             self._notifications_label.setText(self._game.result)
             self.offer_new_game()
-
-    def refresh_ui_after_new_engine_loaded(self) -> None:
-        """Refresh the UI's state after a new engine has been loaded."""
-        self._game.arrow.clear()
-        self._engine.stop_analysis()
-        self._engine_analysis_label.clear()
-        self._evaluation_bar.reset_appearance()
-        self._engine_name_label.setText(self._engine.name)
-
-        self._svg_board.draw()
-
-        if self._game.is_engine_on_turn():
-            self.invoke_engine()
 
     def switch_clock_timers(self) -> None:
         """Activate the clock's timer for the player on turn."""
@@ -486,12 +481,12 @@ class MainWindow(QMainWindow):
             self._game.push(move)
             self.refresh_ui()
 
-    @Slot(Score)
-    def on_white_score_analyzed(self, white_score: Score) -> None:
-        """Show a position evaluation as per the `white_score`."""
-        self._evaluation_bar.animate(white_score)
-
     @Slot(str)
     def on_san_variation_analyzed(self, san_variation: str) -> None:
         """Show the `san_variation` from engine analysis."""
         self._engine_analysis_label.setText(san_variation)
+
+    @Slot(Score)
+    def on_white_score_analyzed(self, white_score: Score) -> None:
+        """Show a position evaluation as per the `white_score`."""
+        self._evaluation_bar.animate(white_score)

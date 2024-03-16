@@ -48,7 +48,10 @@ class Engine(QObject):
 
         with self._loaded_engine.analysis(self._game.board) as analysis:
             for info in analysis:
-                if self._analyzing and "pv" in info:
+                if not self._analyzing:
+                    break
+
+                if "pv" in info:
                     pv: list[Move] = info["pv"]
                     best_move: Move = pv[0]
                     san_variation: str = self._game.board.variation_san(pv)
@@ -57,8 +60,6 @@ class Engine(QObject):
                     self.best_move_analyzed.emit(best_move)
                     self.white_score_analyzed.emit(white_score)
                     self.san_variation_analyzed.emit(san_variation)
-                if not self._analyzing:
-                    break
 
     def stop_analysis(self) -> None:
         """Stop analyzing the current position."""
