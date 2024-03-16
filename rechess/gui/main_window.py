@@ -296,13 +296,19 @@ class MainWindow(QMainWindow):
         )
 
         if engine_file:
-            self.load_new_engine(engine_file)
+            self.start_new_engine(engine_file)
 
-    def load_new_engine(self, engine_file: str) -> None:
+    def start_new_engine(self, engine_file: str) -> None:
         """Load a new engine from `engine_file`."""
         self.stop_analysis()
+        self._game.arrow.clear()
+        self._engine_analysis_label.clear()
+        self._evaluation_bar.reset_appearance()
+
         self._engine.load(engine_file)
         self._engine_name_label.setText(self._engine.name)
+
+        self._svg_board.draw()
 
         if self._game.is_engine_on_turn():
             self.invoke_engine()
