@@ -373,6 +373,10 @@ class MainWindow(QMainWindow):
 
     def refresh_ui_after_new_engine_loaded(self) -> None:
         """Refresh the UI's state after a new engine has been loaded."""
+        self._game.arrow.clear()
+        self._engine.stop_analysis()
+        self._engine_analysis_label.clear()
+        self._evaluation_bar.reset_appearance()
         self._engine_name_label.setText(self._engine.name)
 
         if self._game.is_engine_on_turn():
