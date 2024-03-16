@@ -379,6 +379,8 @@ class MainWindow(QMainWindow):
         self._evaluation_bar.reset_appearance()
         self._engine_name_label.setText(self._engine.name)
 
+        self._svg_board.draw()
+
         if self._game.is_engine_on_turn():
             self.invoke_engine()
 
