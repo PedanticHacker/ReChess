@@ -41,7 +41,7 @@ class TableView(QTableView):
             last_index = self.model().index(last_row, last_column)
             self.selectionModel().setCurrentIndex(
                 last_index,
-                QItemSelectionModel.SelectionFlag.Select,
+                QItemSelectionModel.SelectionFlag.ClearAndSelect,
             )
             return None
 
