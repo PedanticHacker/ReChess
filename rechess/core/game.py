@@ -165,8 +165,8 @@ class Game(QObject):
         """Show the result of a game."""
         result_rewordings = {
             "1/2-1/2": "Draw",
-            "0-1": "Black wins!",
-            "1-0": "White wins!",
+            "0-1": "Black wins",
+            "1-0": "White wins",
             "*": "Undetermined game",
         }
         return result_rewordings[self.board.result(claim_draw=True)]
