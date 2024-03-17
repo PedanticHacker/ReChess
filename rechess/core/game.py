@@ -169,4 +169,4 @@ class Game(QObject):
             "1-0": "White wins!",
             "*": "Undetermined game",
         }
-        return result_rewordings[self.board.result()]
+        return result_rewordings[self.board.result(claim_draw=True)]

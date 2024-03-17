@@ -376,14 +376,14 @@ class MainWindow(QMainWindow):
 
         self._svg_board.draw()
 
-        if self._game.is_engine_on_turn():
-            self.invoke_engine()
-
         if self._game.is_game_over():
             self._black_clock.stop_timer()
             self._white_clock.stop_timer()
             self._notifications_label.setText(self._game.result)
             self.offer_new_game()
+
+        if self._game.is_engine_on_turn():
+            self.invoke_engine()
 
     def switch_clock_timers(self) -> None:
         """Activate the clock's timer for the player on turn."""
