@@ -37,7 +37,7 @@ class TableView(QTableView):
         """Select the previous notation item in the table."""
         if not self.selectionModel().hasSelection():
             last_row = self.model().rowCount() - 1
-            last_column = 0
+            last_column = self.model().columnCount() - 1
             last_index = self.model().index(last_row, last_column)
             self.selectionModel().setCurrentIndex(
                 last_index,
