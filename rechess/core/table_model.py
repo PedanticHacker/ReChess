@@ -7,8 +7,6 @@ from PySide6.QtCore import (
     QPersistentModelIndex,
 )
 
-from rechess.core import Game
-
 
 class TableModel(QAbstractTableModel):
     """The model of a table for chess notation."""
