@@ -21,7 +21,7 @@ class TableView(QTableView):
     def configure_view(self) -> None:
         """Configure the view to personal preferences."""
         self.setShowGrid(False)
-        self.setFixedSize(300, 500)
+        self.setFixedSize(200, 500)
         self.setTabKeyNavigation(False)
         self.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
         self.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)

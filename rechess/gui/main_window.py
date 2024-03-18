@@ -45,6 +45,7 @@ class MainWindow(QMainWindow):
         self.create_menu_bar()
         self.create_tool_bar()
         self.set_grid_layout()
+        self.set_minimum_size()
         self.create_status_bar()
         self.adjust_engine_buttons()
         self.connect_events_with_handlers()
@@ -229,6 +230,10 @@ class MainWindow(QMainWindow):
 
         if self._game.is_perspective_flipped():
             self.flip_clock_positions()
+
+    def set_minimum_size(self) -> None:
+        """Set a minimum size to be 1000 by 700 pixels."""
+        self.setMinimumSize(1000, 700)
 
     def adjust_engine_buttons(self) -> None:
         """Adjust the state of the engine's tool bar buttons."""
