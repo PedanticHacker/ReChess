@@ -76,5 +76,5 @@ class TableView(QTableView):
     def on_selection_changed(self) -> None:
         """Show the position when a notation item has been selected."""
         current_index = self.selectionModel().currentIndex()
-        item_data = self.model().data(current_index)
-        print(f"Item data is: {item_data}")
+        linear_index = 2 * current_index.row() + current_index.column()
+        print(f"Show the position by index {linear_index}")
