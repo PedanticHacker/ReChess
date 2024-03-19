@@ -61,3 +61,4 @@ def get_svg_icon(file_name: str) -> QIcon:
 
 def get_openings() -> dict[str, tuple[str, str]]:
     """Get a dictionary of openings."""
+    return {
