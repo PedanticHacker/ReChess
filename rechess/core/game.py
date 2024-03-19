@@ -21,6 +21,7 @@ class Game(QObject):
 
         self.board: Board = Board()
         self.notation: list[str] = []
+        self.positions: list[Board] = []
         self.arrow: list[tuple[Square, Square]] = []
         self.sound_effect: QSoundEffect = QSoundEffect()
 
@@ -63,6 +64,9 @@ class Game(QObject):
         """Set a notation item for the `move`."""
         notation_item: str = self.board.san_and_push(move)
         self.notation.append(notation_item)
+
+        position: Board = self.board.copy()
+        self.positions.append(position)
 
     def flip_perspective(self) -> None:
         """Flip the current perspective."""
