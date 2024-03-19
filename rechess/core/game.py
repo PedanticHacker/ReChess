@@ -118,6 +118,14 @@ class Game(QObject):
         self._engine_turn = not self._engine_turn
         # utils.set_config_values()
 
+    def truncate_selection_from(self, index: int) -> None:
+        """Truncate notation and positions from `index` onwards."""
+        selection = len(self.positions) - index - 1
+
+        for _ in range(selection):
+            self.notation.pop()
+            self.positions.pop()
+
     def is_game_in_progress(self) -> bool:
         """Return True if a game is in progress, else False."""
         return bool(self.notation)

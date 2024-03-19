@@ -491,8 +491,13 @@ class MainWindow(QMainWindow):
         """Show a position and an arrow by the `index`."""
         position = self._game.positions[index]
         self._game.board = position
+
         move = self._game.board.move_stack[index]
         self._game.set_arrow_for(move)
+
+        self._game.truncate_selection_from(index)
+        self._table_model.refresh_view()
+
         self._svg_board.draw()
 
     @Slot(Move)
