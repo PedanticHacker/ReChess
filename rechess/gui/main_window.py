@@ -361,11 +361,11 @@ class MainWindow(QMainWindow):
 
     def show_opening(self) -> None:
         """Show an ECO code along with an opening name."""
-        san_variation: str = self._game.get_san_variation()
+        fen: str = self._game.fen
         openings: dict[str, tuple[str, str]] = get_openings()
 
-        if san_variation in openings:
-            eco_code, opening_name = openings[san_variation]
+        if fen in openings:
+            eco_code, opening_name = openings[fen]
             self._opening_label.setText(f"{eco_code}: {opening_name}")
 
     def refresh_ui(self) -> None:
@@ -495,8 +495,10 @@ class MainWindow(QMainWindow):
         move = self._game.board.move_stack[index]
         self._game.set_arrow_for(move)
 
-        self._game.truncate_selection_from(index)
-        self._table_model.refresh_view()
+        self.show_opening()
+
+        # self._game.truncate_selection_from(index)
+        # self._table_model.refresh_view()
 
         self._svg_board.draw()
 

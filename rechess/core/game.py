@@ -153,7 +153,7 @@ class Game(QObject):
     @property
     def fen(self) -> str:
         """Get a FEN of the current position."""
-        return self.board.fen()
+        return self.board.board_fen()
 
     @property
     def king_square(self) -> Square | None:
