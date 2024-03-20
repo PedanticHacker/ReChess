@@ -118,11 +118,11 @@ class Game(QObject):
         self._engine_turn = not self._engine_turn
         # utils.set_config_values()
 
-    def truncate_selection_from(self, index: int) -> None:
-        """Truncate notation and positions from `index` onwards."""
-        selection = len(self.positions) - index - 1
+    def purge_after(self, index: int) -> None:
+        """Purge notation and positions after `index`."""
+        to_purge = len(self.notation) - index - 1
 
-        for _ in range(selection):
+        for _ in range(to_purge):
             self.notation.pop()
             self.positions.pop()
 
@@ -153,7 +153,7 @@ class Game(QObject):
     @property
     def fen(self) -> str:
         """Get a FEN of the current position."""
-        return self.board.board_fen()
+        return self.board.fen()
 
     @property
     def king_square(self) -> Square | None:
