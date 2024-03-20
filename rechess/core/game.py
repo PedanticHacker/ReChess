@@ -120,11 +120,9 @@ class Game(QObject):
 
     def purge_after(self, index: int) -> None:
         """Purge notation and positions after `index`."""
-        to_purge = len(self.notation) - index - 1
-
-        for _ in range(to_purge):
-            self.notation.pop()
-            self.positions.pop()
+        purge_after_index: slice = slice(index + 1)
+        self.notation = self.notation[purge_after_index]
+        self.positions = self.positions[purge_after_index]
 
     def is_game_in_progress(self) -> bool:
         """Return True if a game is in progress, else False."""

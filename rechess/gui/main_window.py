@@ -495,6 +495,8 @@ class MainWindow(QMainWindow):
         move = self._game.board.move_stack[index]
         self._game.set_arrow_for(move)
 
+        self.refresh_ui()
+
     @Slot(Move)
     def on_move_played(self, move: Move) -> None:
         """Play the `move` by pushing it and updating the game state."""
