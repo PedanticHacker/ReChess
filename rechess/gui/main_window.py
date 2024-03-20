@@ -489,9 +489,6 @@ class MainWindow(QMainWindow):
     @Slot(int)
     def on_index_selected(self, index: int) -> None:
         """Show a position and an arrow by the `index`."""
-        # if index < len(self._game.notation):
-        #     self._game.purge_after(index)
-
         position = self._game.positions[index]
         self._game.board = position
 
