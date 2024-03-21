@@ -35,7 +35,7 @@ class EvaluationBar(QProgressBar):
         self.flip_perspective()
 
     def animate(self, evaluation: Score) -> None:
-        """Animate the bar per the given `evaluation`."""
+        """Animate the bar per `evaluation`."""
         if evaluation.is_mate():
             moves_to_mate: int = evaluation.mate() or 0
             is_white_matting: bool = moves_to_mate > 0
