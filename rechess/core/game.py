@@ -120,7 +120,7 @@ class Game(QObject):
 
     def delete_after(self, index: int) -> None:
         """Delete notation and positions after `index`."""
-        delete_after_index: slice = slice(index + 1)
+        delete_after_index: slice = slice(0, index + 1)
         self.notation = self.notation[delete_after_index]
         self.positions = self.positions[delete_after_index]
 
