@@ -40,7 +40,7 @@ class PromotionDialog(QDialog):
             self.knight_button = create_button(get_svg_icon("black-knight"))
 
     def add_buttons_to_box(self) -> None:
-        """Add buttons to a button box to be placed horizontally."""
+        """Add buttons to a button box."""
         self.button_box: QDialogButtonBox = QDialogButtonBox()
 
         self.button_box.addButton(
@@ -61,7 +61,7 @@ class PromotionDialog(QDialog):
         )
 
     def set_horizontal_layout(self) -> None:
-        """Set a horizontal layout for the buttons."""
+        """Set a horizontal layout for the buttons in the button box."""
         self.horizontal_layout: QHBoxLayout = QHBoxLayout()
         self.horizontal_layout.addWidget(self.button_box)
         self.setLayout(self.horizontal_layout)
