@@ -502,7 +502,7 @@ class MainWindow(QMainWindow):
         """Play the `move` by pushing it and refreshing the UI."""
         if self._game.is_legal(move):
             if self._table_view.has_selection():
-                self._game.purge_view_after(self._table_view.current_index)
+                self._game.delete_data_after(self._table_view.linear_index)
 
             self._game.push(move)
             self.refresh_ui()

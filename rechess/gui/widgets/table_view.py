@@ -85,7 +85,7 @@ class TableView(QTableView):
         return self.selectionModel().hasSelection()
 
     @property
-    def current_index(self) -> int:
+    def linear_index(self) -> int:
         """Get a linear index of the currently selected item."""
         current_index: QModelIndex = self.selectionModel().currentIndex()
         linear_index: int = 2 * current_index.row() + current_index.column()
