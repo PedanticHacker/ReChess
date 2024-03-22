@@ -120,9 +120,9 @@ class Game(QObject):
 
     def delete_data_after(self, index: int) -> None:
         """Delete notation and positions data after `index`."""
-        data_after_index: slice = slice(0, index + 1)
-        self.notation = self.notation[data_after_index]
-        self.positions = self.positions[data_after_index]
+        data_after_index: slice = slice(index + 1, len(self.notation))
+        del self.notation[data_after_index]
+        del self.positions[data_after_index]
 
     def is_game_in_progress(self) -> bool:
         """Return True if a game is in progress, else False."""
