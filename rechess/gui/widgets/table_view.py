@@ -8,6 +8,11 @@ from PySide6.QtCore import (
 )
 
 
+SELECT: QItemSelectionModel.SelectionFlag = (
+    QItemSelectionModel.SelectionFlag.ClearAndSelect
+)
+
+
 class TableView(QTableView):
     """A view for showing notation items in a 2-column table."""
 
@@ -46,39 +51,26 @@ class TableView(QTableView):
             row: int = last_row if second_column_data else last_row - 1
             column: int = 0 if second_column_data else 1
             index: QModelIndex = self.model().index(row, column)
-            self.selectionModel().setCurrentIndex(
-                index,
-                QItemSelectionModel.SelectionFlag.Select,
-            )
+            self.selectionModel().setCurrentIndex(index, SELECT)
         else:
-            current_index: QModelIndex = self.selectionModel().currentIndex()
-            linear_index: int = 2 * current_index.row() + current_index.column() - 1
-            previous_row: int = linear_index // 2
-            previous_column: int = linear_index % 2
+            previous_row: int = self.linear_index // 2
+            previous_column: int = self.linear_index % 2
 
             if previous_row >= 0:
                 previous_index: QModelIndex = self.model().index(
                     previous_row,
                     previous_column,
                 )
-                self.selectionModel().setCurrentIndex(
-                    previous_index,
-                    QItemSelectionModel.SelectionFlag.ClearAndSelect,
-                )
+                self.selectionModel().setCurrentIndex(previous_index, SELECT)
 
     def select_next_item(self) -> None:
         """Select the next notation item in the table."""
-        current_index: QModelIndex = self.selectionModel().currentIndex()
-        linear_index: int = 2 * current_index.row() + current_index.column() + 1
-        next_row: int = linear_index // 2
-        next_column: int = linear_index % 2
+        next_row: int = self.linear_index // 2
+        next_column: int = self.linear_index % 2
         next_index: QModelIndex = self.model().index(next_row, next_column)
 
         if next_row < self.model().rowCount() and self.model().data(next_index):
-            self.selectionModel().setCurrentIndex(
-                next_index,
-                QItemSelectionModel.SelectionFlag.ClearAndSelect,
-            )
+            self.selectionModel().setCurrentIndex(next_index, SELECT)
 
     def has_selection(self) -> bool:
         """Check whether there's a selected notation item in the table."""
@@ -94,6 +86,4 @@ class TableView(QTableView):
     @Slot()
     def on_selection_changed(self) -> None:
         """Emit the linear index of the selected notation item."""
-        current_index: QModelIndex = self.selectionModel().currentIndex()
-        linear_index: int = 2 * current_index.row() + current_index.column()
-        self.index_selected.emit(linear_index)
+        self.index_selected.emit(self.linear_index)
