@@ -11,28 +11,28 @@ from PySide6.QtCore import (
 class TableModel(QAbstractTableModel):
     """The model of a table for chess notation."""
 
-    def __init__(self, data: list[str]) -> None:
+    def __init__(self, notation_items: list[str]) -> None:
         super().__init__()
 
-        self._data = data
+        self._notation_items = notation_items
 
     def data(
         self,
         index: QModelIndex | QPersistentModelIndex,
         role: int = Qt.ItemDataRole.DisplayRole,
     ) -> Any:
-        """Get chess notation data and process it for display role."""
+        """Get notation items and process them for display role."""
         if role == Qt.ItemDataRole.DisplayRole:
-            item_index: int = 2 * index.row() + index.column()
+            notation_item_index: int = 2 * index.row() + index.column()
 
-            if 0 <= item_index < len(self._data):
-                return self._data[item_index]
+            if 0 <= notation_item_index < len(self._notation_items):
+                return self._notation_items[notation_item_index]
 
     def flags(
         self,
         index: QModelIndex | QPersistentModelIndex,
     ) -> Qt.ItemFlag:
-        """Set flags for table cells to be enabled and selectable."""
+        """Determine the appropriate flag for a notation item."""
         if self.data(index):
             return Qt.ItemFlag.ItemIsEnabled | Qt.ItemFlag.ItemIsSelectable
         else:
@@ -42,15 +42,15 @@ class TableModel(QAbstractTableModel):
         self,
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
-        """Count the rows needed for the table."""
-        all_data = len(self._data) + 1
-        return all_data // 2
+        """Count the rows needed for notation items."""
+        all_notation_items = len(self._notation_items) + 1
+        return all_notation_items // 2
 
     def columnCount(
         self,
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
-        """Count a fixed set of 2 columns for the table."""
+        """Count a fixed set of 2 columns for notation items."""
         return 2
 
     def headerData(
@@ -59,7 +59,7 @@ class TableModel(QAbstractTableModel):
         orientation: Qt.Orientation,
         role: int = Qt.ItemDataRole.DisplayRole,
     ) -> Any:
-        """Get the data for horizontal and vertical headers."""
+        """Provide data for horizontal and vertical headers."""
         if role == Qt.ItemDataRole.DisplayRole:
             if orientation == Qt.Orientation.Horizontal:
                 return ["White", "Black"][section]
@@ -68,9 +68,9 @@ class TableModel(QAbstractTableModel):
                 return section + 1
 
     def reset(self) -> None:
-        """Reset the model by clearing all the data."""
+        """Reset the model by clearing all notation items."""
         self.beginResetModel()
-        self._data.clear()
+        self._notation_items.clear()
         self.endResetModel()
 
     def refresh_view(self) -> None:
