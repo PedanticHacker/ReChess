@@ -41,41 +41,41 @@ class TableView(QTableView):
         self.model().layoutChanged.connect(self.scrollToBottom)
         self.selectionModel().selectionChanged.connect(self.on_selection_changed)
 
-    def select_last_item(self) -> None:
-        """Select the last notation item that contains data."""
+    def select_last_item_with_data(self) -> None:
+        """Select the last notation item with data."""
         last_row: int = self.model().rowCount() - 1
-        second_column_data: str | None = self.model().data(
-            self.model().index(last_row, 1)
-        )
+        second_column_index: QModelIndex = self.model().index(last_row, 1)
+        second_column_data: str | None = self.model().data(second_column_index)
         row: int = last_row if second_column_data else last_row - 1
         column: int = 0 if second_column_data else 1
-        index: QModelIndex = self.model().index(row, column)
-        self.selectionModel().setCurrentIndex(index, SELECT)
+        last_item_index: QModelIndex = self.model().index(row, column)
+        self.selectionModel().setCurrentIndex(last_item_index, SELECT)
 
     def select_previous_item(self) -> None:
         """Select the previous notation item."""
         if not self.has_selection():
-            self.select_last_item()
-        else:
-            previous_row, previous_column = divmod(self.linear_index - 1, 2)
+            self.select_last_item_with_data()
+            return
 
-            if previous_row >= 0:
-                previous_index: QModelIndex = self.model().index(
-                    previous_row,
-                    previous_column,
-                )
-                self.selectionModel().setCurrentIndex(previous_index, SELECT)
+        previous_row, previous_column = divmod(self.linear_index - 1, 2)
+
+        if previous_row >= 0:
+            previous_index: QModelIndex = self.model().index(
+                previous_row,
+                previous_column,
+            )
+            self.selectionModel().setCurrentIndex(previous_index, SELECT)
 
     def select_next_item(self) -> None:
         """Select the next notation item."""
         if not self.has_selection():
-            self.select_last_item()
-        else:
-            next_row, next_column = divmod(self.linear_index + 1, 2)
-            next_index: QModelIndex = self.model().index(next_row, next_column)
+            return
 
-            if next_row < self.model().rowCount() and self.model().data(next_index):
-                self.selectionModel().setCurrentIndex(next_index, SELECT)
+        next_row, next_column = divmod(self.linear_index + 1, 2)
+        next_index: QModelIndex = self.model().index(next_row, next_column)
+
+        if next_row < self.model().rowCount() and self.model().data(next_index):
+            self.selectionModel().setCurrentIndex(next_index, SELECT)
 
     def has_selection(self) -> bool:
         """Check whether there's a selected notation item."""
