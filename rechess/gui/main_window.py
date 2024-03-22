@@ -503,6 +503,7 @@ class MainWindow(QMainWindow):
         if self._game.is_legal(move):
             if self._table_view.has_selection():
                 self._game.delete_data_after(self._table_view.linear_index)
+                self._table_view.clearSelection()
 
             self._game.push(move)
             self.refresh_ui()
