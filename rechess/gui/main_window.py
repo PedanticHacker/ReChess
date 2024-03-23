@@ -488,7 +488,7 @@ class MainWindow(QMainWindow):
 
     @Slot(int)
     def on_index_selected(self, index: int) -> None:
-        """Show a position and an arrow by the `index`."""
+        """Get a position and an arrow by the `index`."""
         self._game.board = self._game.positions[index]
 
         move = self._game.board.move_stack[index]
