@@ -489,10 +489,9 @@ class MainWindow(QMainWindow):
     @Slot(int)
     def on_index_selected(self, index: int) -> None:
         """Show a position and an arrow by the `index`."""
-        position = self._game.positions[index]
-        self._game.board = position
+        self._game.board = self._game.positions[index]
 
-        move = position.move_stack[index]
+        move = self._game.board.move_stack[index]
         self._game.set_arrow_for(move)
 
         self.refresh_ui()
