@@ -52,6 +52,10 @@ class Game(QObject):
         """Set an arrow for the `move`."""
         self.arrow = [(move.from_square, move.to_square)]
 
+    def clear_arrow(self) -> None:
+        """Clear the arrow from the board."""
+        self.arrow.clear()
+
     def play_sound_effect_for(self, move: Move) -> None:
         """Play a WAV sound effect for the `move`."""
         file_name = "capture.wav" if self.board.is_capture(move) else "move.wav"
@@ -67,6 +71,10 @@ class Game(QObject):
 
         position: Board = self.board.copy()
         self.positions.append(position)
+
+    def set_root_position(self) -> None:
+        """Set all the pieces to their root position."""
+        self.board = self.board.root()
 
     def flip_perspective(self) -> None:
         """Flip the current perspective."""
