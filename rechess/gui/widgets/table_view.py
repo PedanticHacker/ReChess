@@ -59,7 +59,7 @@ class TableView(QTableView):
 
         previous_row, previous_column = divmod(self.linear_index - 1, 2)
 
-        if previous_row >= 0:
+        if previous_row > -1:
             previous_index: QModelIndex = self.model().index(
                 previous_row,
                 previous_column,
