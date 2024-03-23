@@ -32,7 +32,7 @@ class SettingsDialog(QDialog):
         self.setWindowTitle("Settings")
 
     def create_groups(self) -> None:
-        """Create a chess engine group and a time control group."""
+        """Create an engine group and a time control group."""
         self.engine_group: QGroupBox = QGroupBox()
         self.engine_group.setTitle("Engine")
         # self.engine_group.setDisabled()
