@@ -492,7 +492,7 @@ class MainWindow(QMainWindow):
         position = self._game.positions[index]
         self._game.board = position
 
-        move = self._game.board.move_stack[index]
+        move = position.move_stack[index]
         self._game.set_arrow_for(move)
 
         self.refresh_ui()
