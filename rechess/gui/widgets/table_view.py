@@ -65,6 +65,8 @@ class TableView(QTableView):
                 previous_column,
             )
             self.selectionModel().setCurrentIndex(previous_index, SELECT)
+        else:
+            self.selectionModel().setCurrentIndex(QModelIndex(), SELECT)
 
     def select_next_item(self) -> None:
         """Select the next notation item."""
