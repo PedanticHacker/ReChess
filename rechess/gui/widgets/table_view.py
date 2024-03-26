@@ -76,6 +76,8 @@ class TableView(QTableView):
             if self.model().data(first_index):
                 self.selectionModel().setCurrentIndex(first_index, SELECT)
 
+            return
+
         next_row, next_column = divmod(self.linear_index + 1, 2)
         next_index: QModelIndex = self.model().index(next_row, next_column)
 
