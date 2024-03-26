@@ -71,7 +71,11 @@ class TableView(QTableView):
     def select_next_item(self) -> None:
         """Select the next notation item."""
         if not self.has_selection():
-            return
+            first_index = self.model().index(0, 0)
+
+            if self.model().data(first_index):
+                self.selectionModel().setCurrentIndex(first_index, SELECT)
+                return
 
         next_row, next_column = divmod(self.linear_index + 1, 2)
         next_index: QModelIndex = self.model().index(next_row, next_column)
