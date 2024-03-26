@@ -58,9 +58,9 @@ class Game(QObject):
 
     def play_sound_effect_for(self, move: Move) -> None:
         """Play a WAV sound effect for the `move`."""
-        file_name = "capture.wav" if self.board.is_capture(move) else "move.wav"
-        file_path = f"rechess/resources/audio/{file_name}"
-        file_url = QUrl.fromLocalFile(file_path)
+        file_name: str = "capture.wav" if self.board.is_capture(move) else "move.wav"
+        file_path: str = f"rechess/resources/audio/{file_name}"
+        file_url: QUrl = QUrl.fromLocalFile(file_path)
         self.sound_effect.setSource(file_url)
         self.sound_effect.play()
 
