@@ -388,7 +388,7 @@ class MainWindow(QMainWindow):
             self._notifications_label.setText(self._game.result)
             self.offer_new_game()
 
-        if self._game.is_engine_on_turn():
+        if self._game.is_engine_on_turn() and not self._table_view.has_selection():
             self.invoke_engine()
 
     def switch_clock_timers(self) -> None:
