@@ -43,7 +43,7 @@ class Game(QObject):
         self.to_square: Square = -1
 
     def push(self, move: Move) -> None:
-        """Push the `move`."""
+        """Push the `move` on the board."""
         self.set_arrow_for(move)
         self.play_sound_effect_for(move)
         self.set_notation_item_for(move)
