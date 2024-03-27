@@ -41,8 +41,8 @@ class TableView(QTableView):
         self.model().layoutChanged.connect(self.scrollToBottom)
         self.selectionModel().selectionChanged.connect(self.on_selection_changed)
 
-    def select_last_item_with_data(self) -> None:
-        """Select the last notation item with data."""
+    def select_prelast_item(self) -> None:
+        """Select the notation item before the last."""
         last_row: int = self.model().rowCount() - 1
         second_column_index: QModelIndex = self.model().index(last_row, 1)
         second_column_data: str | None = self.model().data(second_column_index)
@@ -53,20 +53,19 @@ class TableView(QTableView):
 
     def select_previous_item(self) -> None:
         """Select the previous notation item."""
+        if self.linear_index == -1:
+            return
+
         if not self.has_selection():
-            self.select_last_item_with_data()
+            self.select_prelast_item()
             return
 
         previous_row, previous_column = divmod(self.linear_index - 1, 2)
-
-        if previous_row >= 0:
-            previous_index: QModelIndex = self.model().index(
-                previous_row,
-                previous_column,
-            )
-            self.selectionModel().setCurrentIndex(previous_index, SELECT)
-        else:
-            self.selectionModel().setCurrentIndex(QModelIndex(), SELECT)
+        previous_index: QModelIndex = self.model().index(
+            previous_row,
+            previous_column,
+        )
+        self.selectionModel().setCurrentIndex(previous_index, SELECT)
 
     def select_next_item(self) -> None:
         """Select the next notation item."""
