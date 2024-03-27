@@ -73,7 +73,7 @@ class Game(QObject):
         self.positions.append(position)
 
     def set_root_position(self) -> None:
-        """Set all the pieces to their root position."""
+        """Set all pieces to their root position."""
         self.board = self.board.root()
 
     def flip_perspective(self) -> None:
