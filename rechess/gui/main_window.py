@@ -493,6 +493,7 @@ class MainWindow(QMainWindow):
             self._game.board = self._game.positions[index].copy()
             move = self._game.board.move_stack[index]
             self._game.set_arrow_for(move)
+            self._game.play_sound_effect_for(move)
         else:
             self._game.clear_arrow()
             self._opening_label.clear()
