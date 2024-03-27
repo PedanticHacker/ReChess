@@ -207,9 +207,8 @@ class MainWindow(QMainWindow):
 
     def create_status_bar(self) -> None:
         """Create a status bar to show various information."""
-        status_bar: QStatusBar = self.statusBar()
-        status_bar.addWidget(self._opening_label)
-        status_bar.addPermanentWidget(self._engine_name_label)
+        self.statusBar().addWidget(self._opening_label)
+        self.statusBar().addPermanentWidget(self._engine_name_label)
         self._engine_name_label.setText(self._engine.name)
 
     def set_grid_layout(self) -> None:

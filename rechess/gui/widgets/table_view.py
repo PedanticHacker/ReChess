@@ -27,7 +27,7 @@ class TableView(QTableView):
         self.connect_events_with_handlers()
 
     def configure_view(self) -> None:
-        """Configure the view to personal preferences."""
+        """Configure the view to non-default settings."""
         self.setShowGrid(False)
         self.setFixedSize(200, 500)
         self.setTabKeyNavigation(False)
