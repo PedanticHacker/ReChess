@@ -81,7 +81,7 @@ class TableView(QTableView):
             self.selectionModel().setCurrentIndex(next_index, SELECT)
 
     def has_selection(self) -> bool:
-        """Check whether there's a notation item that's selected."""
+        """Check whether there's any notation item that's selected."""
         return self.selectionModel().hasSelection()
 
     @property
