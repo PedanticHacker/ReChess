@@ -111,6 +111,10 @@ class Game(QObject):
 
             self.move_played.emit(move)
 
+    def get_move_by(self, index: int) -> Move:
+        """Get a Move object from the move stack by the `index`."""
+        return self.board.move_stack[index]
+
     def get_promotion_piece(self) -> PieceType:
         """Show the promotion dialog to get a promotion piece."""
         promotion_dialog: PromotionDialog = PromotionDialog(self.board.turn)
