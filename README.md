@@ -83,8 +83,8 @@ within the top-level directory of ReChess and then execute the command
 
 ## How to Launch ReChess
 
-To launch ReChess after installing all of its requirements, launch your
-favorite IDE (e.g., PyCharm, VSCode, Wing, Spyder, etc.) or perhaps your
+To launch ReChess, after installing all of its requirements, launch your
+favorite IDE (e.g., PyCharm, VSCode, Wing, Spyder, etc.) or your favorite
 code editor (e.g., Sublime Text, Notepad++, UltraEdit, Atom, etc.) and
 build the `main.py` file, found in the top-level directory of ReChess.
 
