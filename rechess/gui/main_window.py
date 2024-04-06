@@ -489,8 +489,7 @@ class MainWindow(QMainWindow):
     def on_index_selected(self, index: int) -> None:
         """Get a position and an arrow by the `index`."""
         if index >= 0:
-            self._game.board = self._game.positions[index]
-            move = self._game.get_move_by(index)
+            move: Move = self._game.get_move_by(index)
             self._game.set_arrow_for(move)
             self._game.play_sound_effect_for(move)
         else:

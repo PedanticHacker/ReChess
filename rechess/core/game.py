@@ -113,6 +113,7 @@ class Game(QObject):
 
     def get_move_by(self, index: int) -> Move:
         """Get a Move object from the move stack by the `index`."""
+        self.board = self.positions[index]
         return self.board.move_stack[index]
 
     def get_promotion_piece(self) -> PieceType:
