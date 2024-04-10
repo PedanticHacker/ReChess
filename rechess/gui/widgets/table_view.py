@@ -52,11 +52,9 @@ class TableView(QTableView):
 
     def select_previous_item(self) -> None:
         """Select the previous notation item."""
-        if not self.has_selection():
-            if self.linear_index != -1:
-                self.select_prelast_item()
-            else:
-                return
+        if not self.has_selection() and self.linear_index != -1:
+            self.select_prelast_item()
+            return
 
         previous_index = self.get_previous_index()
 
@@ -70,14 +68,14 @@ class TableView(QTableView):
             self.selectionModel().setCurrentIndex(first_index, SELECT)
             return
 
-        next_index = self.get_next_index()
+        next_index: QModelIndex = self.get_next_index()
 
-        if next_index.isValid() and self.model().data(next_index):
+        if self.model().data(next_index):
             self.selectionModel().setCurrentIndex(next_index, SELECT)
 
     def get_previous_index(self) -> QModelIndex:
         """Get the QModelIndex of the previous item, if valid."""
-        if self.linear_index <= 0:
+        if self.linear_index < 0:
             return QModelIndex()
 
         previous_row, previous_column = divmod(self.linear_index - 1, 2)
