@@ -53,6 +53,9 @@ class TableView(QTableView):
     def select_previous_item(self) -> None:
         """Select the previous notation item."""
         if not self.has_selection():
+            if self.linear_index < 0:
+                return
+
             self.select_prelast_item()
             return
 
