@@ -488,14 +488,14 @@ class MainWindow(QMainWindow):
     @Slot(int)
     def on_index_selected(self, index: int) -> None:
         """Set a position and an arrow by the `index`."""
-        if index >= 0:
-            move: Move = self._game.set_move_by(index)
-            self._game.play_sound_effect_for(move)
-            self._game.set_arrow_for(move)
-        else:
+        if index < 0:
             self._game.clear_arrow()
             self._opening_label.clear()
             self._game.set_root_position()
+        else:
+            move: Move = self._game.set_move_by(index)
+            self._game.play_sound_effect_for(move)
+            self._game.set_arrow_for(move)
 
         self.refresh_ui()
 
@@ -504,9 +504,9 @@ class MainWindow(QMainWindow):
         """Play the `move` by pushing it and refreshing the UI."""
         if self._game.is_legal(move):
             if self._table_view.has_selection():
-                self._game.delete_data_after(self._table_view.linear_index)
-                self._table_view.clearSelection()
                 self._table_view.clearFocus()
+                self._table_view.clearSelection()
+                self._game.delete_data_after(self._table_view.linear_index)
 
             self._game.push(move)
             self.refresh_ui()
