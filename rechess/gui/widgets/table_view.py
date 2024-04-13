@@ -42,10 +42,10 @@ class TableView(QTableView):
 
     def select_prelast_item(self) -> None:
         """Select the notation item before the last."""
-        last_row = self.model().rowCount() - 1
-        prelast_item_index = self.model().index(last_row, 1)
+        last_row: int = self.model().rowCount() - 1
+        prelast_item_index: QModelIndex = self.model().index(last_row, 1)
 
-        if not self.model().data(prelast_item_index):
+        if not self.has_data(prelast_item_index):
             prelast_item_index = self.model().index(last_row, 0)
 
         self.selectionModel().setCurrentIndex(prelast_item_index, SELECT)
@@ -93,10 +93,7 @@ class TableView(QTableView):
     def linear_index(self) -> int:
         """Get a linear index of the currently selected item."""
         current_index: QModelIndex = self.selectionModel().currentIndex()
-
-        if current_index.isValid():
-            return 2 * current_index.row() + current_index.column()
-        return -1
+        return 2 * current_index.row() + current_index.column()
 
     @Slot(int)
     def on_selection_changed(self) -> None:
