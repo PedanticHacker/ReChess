@@ -41,13 +41,13 @@ class TableView(QTableView):
         self.selectionModel().selectionChanged.connect(self.on_selection_changed)
 
     def select_prelast_item(self) -> None:
-        """Select the notation item before the last."""
+        """Select the notation item before the last one."""
         last_row: int = self.model().rowCount() - 1
-        prelast_item_index: QModelIndex = self.model().index(last_row, 1)
-
-        if not self.has_data(prelast_item_index):
-            prelast_item_index = self.model().index(last_row, 0)
-
+        second_column_index: QModelIndex = self.model().index(last_row, 1)
+        has_second_column_data: bool = self.has_data(second_column_index)
+        row: int = last_row if has_second_column_data else last_row - 1
+        column: int = 0 if has_second_column_data else 1
+        prelast_item_index: QModelIndex = self.model().index(row, column)
         self.selectionModel().setCurrentIndex(prelast_item_index, SELECT)
 
     def select_previous_item(self) -> None:
@@ -57,8 +57,7 @@ class TableView(QTableView):
             return
 
         previous_index: QModelIndex = self.get_previous_index()
-        if self.has_data(previous_index):
-            self.selectionModel().setCurrentIndex(previous_index, SELECT)
+        self.selectionModel().setCurrentIndex(previous_index, SELECT)
 
     def select_next_item(self) -> None:
         """Select the next notation item."""
@@ -68,16 +67,15 @@ class TableView(QTableView):
             return
 
         next_index: QModelIndex = self.get_next_index()
-        if self.has_data(next_index):
-            self.selectionModel().setCurrentIndex(next_index, SELECT)
+        self.selectionModel().setCurrentIndex(next_index, SELECT)
 
     def get_previous_index(self) -> QModelIndex:
-        """Get the QModelIndex of the previous item."""
+        """Get a QModelIndex of the previous item."""
         previous_row, previous_column = divmod(self.linear_index - 1, 2)
         return self.model().index(previous_row, previous_column)
 
     def get_next_index(self) -> QModelIndex:
-        """Get the QModelIndex of the next item."""
+        """Get a QModelIndex of the next item."""
         next_row, next_column = divmod(self.linear_index + 1, 2)
         return self.model().index(next_row, next_column)
 
