@@ -131,7 +131,7 @@ class Game(QObject):
         # utils.set_config_values()
 
     def delete_data_after(self, index: int) -> None:
-        """Delete notation and positions data after `index`."""
+        """Delete notation items and positions after `index`."""
         data_after_index: slice = slice(index + 1, len(self.notation))
         del self.notation[data_after_index]
         del self.positions[data_after_index]
