@@ -68,7 +68,7 @@ install any requirement that you might be missing.
 
 (1) Firstly, install the Python programming language:
 
-- [**Python 3.12.2**](https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe)
+- [**Python 3.12.3**](https://www.python.org/ftp/python/3.12.3/python-3.12.3-amd64.exe)
 
 (2) Secondly, in a command-line interface with admin privileges, install
 the following:
