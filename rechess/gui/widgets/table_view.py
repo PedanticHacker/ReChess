@@ -7,10 +7,6 @@ from PySide6.QtCore import (
     QItemSelectionModel,
 )
 
-SELECT: QItemSelectionModel.SelectionFlag = (
-    QItemSelectionModel.SelectionFlag.ClearAndSelect
-)
-
 
 class TableView(QTableView):
     """A view for showing notation items in a 2-column table."""
@@ -48,7 +44,7 @@ class TableView(QTableView):
         row: int = last_row if has_second_column_data else last_row - 1
         column: int = 0 if has_second_column_data else 1
         prelast_item_index: QModelIndex = self.model().index(row, column)
-        self.selectionModel().setCurrentIndex(prelast_item_index, SELECT)
+        self.select(prelast_item_index)
 
     def select_previous_item(self) -> None:
         """Select the previous notation item."""
@@ -57,17 +53,21 @@ class TableView(QTableView):
             return
 
         previous_index: QModelIndex = self.get_previous_index()
-        self.selectionModel().setCurrentIndex(previous_index, SELECT)
+        self.select(previous_index)
 
     def select_next_item(self) -> None:
         """Select the next notation item."""
         if not self.has_selection():
-            first_index: QModelIndex = self.model().index(0, 0)
-            self.selectionModel().setCurrentIndex(first_index, SELECT)
+            first_index: QModelIndex = self.get_first_index()
+            self.select(first_index)
             return
 
         next_index: QModelIndex = self.get_next_index()
-        self.selectionModel().setCurrentIndex(next_index, SELECT)
+        self.select(next_index)
+
+    def get_first_index(self) -> QModelIndex:
+        """Get an index of the first notation item."""
+        return self.model().index(0, 0)
 
     def get_previous_index(self) -> QModelIndex:
         """Get a QModelIndex of the previous item."""
@@ -78,6 +78,13 @@ class TableView(QTableView):
         """Get a QModelIndex of the next item."""
         next_row, next_column = divmod(self.linear_index + 1, 2)
         return self.model().index(next_row, next_column)
+
+    def select(self, index: QModelIndex) -> None:
+        """Select a notation item with the `index`."""
+        self.selectionModel().setCurrentIndex(
+            index,
+            QItemSelectionModel.SelectionFlag.ClearAndSelect,
+        )
 
     def has_data(self, index: QModelIndex) -> bool:
         """Check whether a notation item by the `index` has data."""
@@ -94,6 +101,7 @@ class TableView(QTableView):
 
         if current_index.isValid():
             return 2 * current_index.row() + current_index.column()
+
         return -1
 
     @Slot(int)
