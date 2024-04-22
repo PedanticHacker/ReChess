@@ -11,7 +11,7 @@ from PySide6.QtCore import (
 class TableView(QTableView):
     """A view for showing notation items in a 2-column table."""
 
-    index_selected: Signal = Signal(int)
+    item_selected: Signal = Signal()
 
     def __init__(self, table_model: QAbstractTableModel) -> None:
         super().__init__()
@@ -87,7 +87,7 @@ class TableView(QTableView):
         )
 
     def has_data(self, index: QModelIndex) -> bool:
-        """Check whether a notation item by the `index` has data."""
+        """Check whether a notation item with the `index` has data."""
         return self.model().data(index)
 
     def has_selection(self) -> bool:
@@ -96,7 +96,7 @@ class TableView(QTableView):
 
     @property
     def linear_index(self) -> int:
-        """Get a linear index of the currently selected item."""
+        """Get the linear index of a selected notation item."""
         current_index: QModelIndex = self.selectionModel().currentIndex()
 
         if current_index.isValid():
@@ -104,7 +104,7 @@ class TableView(QTableView):
 
         return -1
 
-    @Slot(int)
+    @Slot()
     def on_selection_changed(self) -> None:
         """Emit the linear index of a selected notation item."""
-        self.index_selected.emit(self.linear_index)
+        self.item_selected.emit(self.linear_index)
