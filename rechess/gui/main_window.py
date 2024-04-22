@@ -487,7 +487,7 @@ class MainWindow(QMainWindow):
 
     @Slot(int)
     def on_index_selected(self, index: int) -> None:
-        """Set a position and an arrow by the `index`."""
+        """Set a position and an arrow for the `index`."""
         if index < 0:
             self._game.clear_arrow()
             self._opening_label.clear()

@@ -11,7 +11,7 @@ from PySide6.QtCore import (
 class TableView(QTableView):
     """A view for showing notation items in a 2-column table."""
 
-    item_selected: Signal = Signal()
+    index_selected: Signal = Signal()
 
     def __init__(self, table_model: QAbstractTableModel) -> None:
         super().__init__()
@@ -107,4 +107,4 @@ class TableView(QTableView):
     @Slot()
     def on_selection_changed(self) -> None:
         """Emit the linear index of a selected notation item."""
-        self.item_selected.emit(self.linear_index)
+        self.index_selected.emit(self.linear_index)
