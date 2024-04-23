@@ -11,7 +11,7 @@ from PySide6.QtCore import (
 class TableView(QTableView):
     """A view for showing notation items in a 2-column table."""
 
-    index_selected: Signal = Signal(int)
+    item_selected: Signal = Signal(int)
 
     def __init__(self, table_model: QAbstractTableModel) -> None:
         super().__init__()
@@ -56,7 +56,7 @@ class TableView(QTableView):
         self.select(previous_index)
 
     def select_next_item(self) -> None:
-        """Select the next notation item."""
+        """Select the next notation item by selecting its index."""
         if not self.has_selection():
             first_index: QModelIndex = self.get_first_index()
             self.select(first_index)
@@ -70,12 +70,12 @@ class TableView(QTableView):
         return self.model().index(0, 0)
 
     def get_previous_index(self) -> QModelIndex:
-        """Get a QModelIndex of the previous item."""
+        """Get an index of the previous item."""
         previous_row, previous_column = divmod(self.linear_index - 1, 2)
         return self.model().index(previous_row, previous_column)
 
     def get_next_index(self) -> QModelIndex:
-        """Get a QModelIndex of the next item."""
+        """Get an index of the next item."""
         next_row, next_column = divmod(self.linear_index + 1, 2)
         return self.model().index(next_row, next_column)
 
@@ -106,5 +106,6 @@ class TableView(QTableView):
 
     @Slot(int)
     def on_selection_changed(self) -> None:
-        """Emit the linear index of a selected notation item."""
-        self.index_selected.emit(self.linear_index)
+        """Emit the row index of a selected notation item."""
+        row_index: int = self.selectionModel().currentIndex().row()
+        self.item_selected.emit(row_index)

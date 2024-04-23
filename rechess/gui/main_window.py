@@ -249,7 +249,7 @@ class MainWindow(QMainWindow):
         """Connect various events with specific handlers."""
         self._game.move_played.connect(self.on_move_played)
         self._engine.move_played.connect(self.on_move_played)
-        self._table_view.index_selected.connect(self.on_index_selected)
+        self._table_view.item_selected.connect(self.on_item_selected)
         self._engine.best_move_analyzed.connect(self.on_best_move_analyzed)
         self._engine.white_score_analyzed.connect(self.on_white_score_analyzed)
         self._black_clock.time_expired.connect(self.on_black_clock_time_expired)
@@ -486,14 +486,14 @@ class MainWindow(QMainWindow):
         self._svg_board.draw()
 
     @Slot(int)
-    def on_index_selected(self, index: int) -> None:
-        """Set a position and an arrow for the `index`."""
-        if index < 0:
+    def on_item_selected(self, row_index: int) -> None:
+        """Set a position and an arrow from the `row_index`."""
+        if row_index < 0:
             self._game.clear_arrow()
             self._opening_label.clear()
             self._game.set_root_position()
         else:
-            move: Move = self._game.set_move_by(index)
+            move: Move = self._game.set_move_by(row_index)
             self._game.play_sound_effect_for(move)
             self._game.set_arrow_for(move)
 
