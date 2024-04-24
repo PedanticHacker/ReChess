@@ -6,7 +6,7 @@ from rechess.core import Game
 
 
 class FenEditor(QLineEdit):
-    """An editor for FEN (Forsyth-Edwards Notation) records."""
+    """An editor for editing FEN (Forsyth-Edwards Notation) records."""
 
     def __init__(self, game: Game) -> None:
         super().__init__()
