@@ -10,7 +10,7 @@ from PySide6.QtCore import (
 
 
 class TableView(QTableView):
-    """A view for showing notation items in a 2-column table."""
+    """A view for displaying chess notation items in a 2-column table."""
 
     item_selected: Signal = Signal(int)
 
