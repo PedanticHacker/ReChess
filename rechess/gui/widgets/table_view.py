@@ -40,17 +40,17 @@ class TableView(QTableView):
     def select_prelast_item(self) -> None:
         """Select an item before the last."""
         model: QAbstractItemModel = self.model()
-
         first_column: int = 0
         last_column: int = 1
         last_row: int = model.rowCount() - 1
+        last_index: QModelIndex = model.index(last_row, last_column)
 
-        if self.has_data(model.index(last_row, last_column)):
-            prelast_item_index: QModelIndex = model.index(last_row, last_column)
-        else:
-            prelast_item_index = model.index(last_row, first_column)
-
-        self.select(prelast_item_index)
+        prelast_index: QModelIndex = (
+            model.index(last_row, first_column)
+            if self.has_data(last_index)
+            else model.index(last_row - 1, last_column)
+        )
+        self.select(prelast_index)
 
     def select_previous_item(self) -> None:
         """Select the previous notation item."""
@@ -99,7 +99,7 @@ class TableView(QTableView):
 
     @property
     def linear_index(self) -> int:
-        """Return a linear index of the currently selected item."""
+        """Return the linear index of a selected item."""
         current_index: QModelIndex = self.selectionModel().currentIndex()
 
         if current_index.isValid():
@@ -109,6 +109,5 @@ class TableView(QTableView):
 
     @Slot(int)
     def on_selection_changed(self) -> None:
-        """Emit the index of the currently selected row."""
-        row_index: int = self.selectionModel().currentIndex().row()
-        self.item_selected.emit(row_index)
+        """Emit the linear index of a selected item."""
+        self.item_selected.emit(self.linear_index)

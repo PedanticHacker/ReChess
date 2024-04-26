@@ -481,19 +481,19 @@ class MainWindow(QMainWindow):
 
     @Slot(Move)
     def on_best_move_analyzed(self, best_move: Move) -> None:
-        """Show the given `best_move` from engine analysis."""
+        """Show the `best_move` from engine analysis."""
         self._game.set_arrow_for(best_move)
         self._svg_board.draw()
 
     @Slot(int)
-    def on_item_selected(self, row_index: int) -> None:
-        """Set a position and an arrow from the `row_index`."""
-        if row_index < 0:
+    def on_item_selected(self, index: int) -> None:
+        """Set a position and an arrow from the `index`."""
+        if index < 0:
             self._game.clear_arrow()
             self._opening_label.clear()
             self._game.set_root_position()
         else:
-            move: Move = self._game.set_move_by(row_index)
+            move: Move = self._game.set_move_by(index)
             self._game.play_sound_effect_for(move)
             self._game.set_arrow_for(move)
 
