@@ -40,15 +40,22 @@ class TableView(QTableView):
     def select_prelast_item(self) -> None:
         """Select an item before the last."""
         model: QAbstractItemModel = self.model()
+
+        last_row: int = model.rowCount() - 1
+        prelast_row: int = last_row - 1
+
         first_column: int = 0
         last_column: int = 1
-        last_row: int = model.rowCount() - 1
+
         last_index: QModelIndex = model.index(last_row, last_column)
 
+        index_in_first_column: QModelIndex = model.index(last_row, first_column)
+        index_in_second_column: QModelIndex = model.index(prelast_row, last_column)
+
         prelast_index: QModelIndex = (
-            model.index(last_row, first_column)
+            index_in_first_column
             if self.has_data(last_index)
-            else model.index(last_row - 1, last_column)
+            else index_in_second_column
         )
         self.select(prelast_index)
 
