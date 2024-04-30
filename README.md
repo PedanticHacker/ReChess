@@ -1,9 +1,8 @@
 # ReChess
+
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-## App Description
-
-ReChess is a GUI app for playing chess against a UCI-based engine.
+This project is a GUI app for playing chess against a UCI-based engine.
 
 ### About Source Code
 
