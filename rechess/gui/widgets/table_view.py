@@ -43,14 +43,10 @@ class TableView(QTableView):
 
         last_row: int = model.rowCount() - 1
         prelast_row: int = last_row - 1
+        last_index: QModelIndex = model.index(last_row, 1)
 
-        first_column: int = 0
-        last_column: int = 1
-
-        last_index: QModelIndex = model.index(last_row, last_column)
-
-        index_in_first_column: QModelIndex = model.index(last_row, first_column)
-        index_in_second_column: QModelIndex = model.index(prelast_row, last_column)
+        index_in_first_column: QModelIndex = model.index(last_row, 0)
+        index_in_second_column: QModelIndex = model.index(prelast_row, 1)
 
         prelast_index: QModelIndex = (
             index_in_first_column
@@ -109,7 +105,7 @@ class TableView(QTableView):
         """Return the linear index of a selected item."""
         current_index: QModelIndex = self.selectionModel().currentIndex()
 
-        if current_index.isValid():
+        if current_index:
             return 2 * current_index.row() + current_index.column()
 
         return -1
