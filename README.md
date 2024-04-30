@@ -2,9 +2,9 @@
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-This project is a GUI app for playing chess against a UCI-based engine.
+A GUI app for playing chess against a UCI-based engine.
 
-### About Source Code
+### Source Code
 
 The source code of ReChess is written in the **Python** programming
 language, primarily to be executed with its 3.12 version, but you are
