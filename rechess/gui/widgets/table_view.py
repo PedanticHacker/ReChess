@@ -43,16 +43,16 @@ class TableView(QTableView):
 
         last_row: int = model.rowCount() - 1
         prelast_row: int = last_row - 1
-        last_index: QModelIndex = model.index(last_row, 1)
+        first_column: int = 0
+        last_column: int = 1
 
-        index_in_first_column: QModelIndex = model.index(last_row, 0)
-        index_in_second_column: QModelIndex = model.index(prelast_row, 1)
-
+        last_index: QModelIndex = model.index(last_row, last_column)
+        first_column_index: QModelIndex = model.index(last_row, first_column)
+        second_column_index: QModelIndex = model.index(prelast_row, last_column)
         prelast_index: QModelIndex = (
-            index_in_first_column
-            if self.has_data(last_index)
-            else index_in_second_column
+            first_column_index if self.has_data(last_index) else second_column_index
         )
+
         self.select(prelast_index)
 
     def select_previous_item(self) -> None:
