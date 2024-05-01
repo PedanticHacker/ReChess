@@ -1,7 +1,5 @@
 # ReChess
 
-[![code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-
 A GUI app for playing chess against a UCI-based engine.
 
 ### Source Code
