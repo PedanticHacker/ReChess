@@ -82,7 +82,7 @@ class TableView(QTableView):
         previous_row, previous_column = divmod(self.sequential_index - 1, 2)
         new_index: QModelIndex = self.model().index(previous_row, previous_column)
 
-        return new_index if new_index.isValid() else current_index
+        return new_index
 
     def next_index(self) -> QModelIndex:
         """Get an index of the next item."""
@@ -91,7 +91,7 @@ class TableView(QTableView):
         next_row, next_column = divmod(self.sequential_index + 1, 2)
         new_index: QModelIndex = self.model().index(next_row, next_column)
 
-        return new_index if new_index.isValid() else current_index
+        return new_index
 
     def select(self, index: QModelIndex) -> None:
         """Select a notation item with the `index`."""
@@ -112,12 +112,7 @@ class TableView(QTableView):
     def sequential_index(self) -> int:
         """Return the sequential index of a selected item."""
         current_index: QModelIndex = self.selectionModel().currentIndex()
-
-        return (
-            2 * current_index.row() + current_index.column()
-            if current_index.isValid()
-            else -1
-        )
+        return 2 * current_index.row() + current_index.column()
 
     @Slot(int)
     def on_selection_changed(self) -> None:
