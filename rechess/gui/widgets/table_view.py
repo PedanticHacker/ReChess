@@ -77,12 +77,18 @@ class TableView(QTableView):
 
     def previous_index(self) -> QModelIndex:
         """Get an index of the previous item."""
-        previous_row, previous_column = divmod(self.linear_index - 1, 2)
+        current_index: QModelIndex = self.selectionModel().currentIndex()
+        previous_row, previous_column = divmod(
+            2 * current_index.row() + current_index.column() - 1, 2
+        )
         return self.model().index(previous_row, previous_column)
 
     def next_index(self) -> QModelIndex:
         """Get an index of the next item."""
-        next_row, next_column = divmod(self.linear_index + 1, 2)
+        current_index: QModelIndex = self.selectionModel().currentIndex()
+        next_row, next_column = divmod(
+            2 * current_index.row() + current_index.column() + 1, 2
+        )
         return self.model().index(next_row, next_column)
 
     def select(self, index: QModelIndex) -> None:
@@ -105,7 +111,7 @@ class TableView(QTableView):
         """Return the linear index of a selected item."""
         current_index: QModelIndex = self.selectionModel().currentIndex()
 
-        if current_index:
+        if current_index.isValid():
             return 2 * current_index.row() + current_index.column()
 
         return -1
