@@ -79,23 +79,19 @@ class TableView(QTableView):
         """Get an index of the previous item."""
         current_index: QModelIndex = self.selectionModel().currentIndex()
 
-        row: int = current_index.row()
-        column: int = current_index.column()
-        previous_row, previous_column = divmod(2 * row + column - 1, 2)
-        index: QModelIndex = self.model().index(previous_row, previous_column)
+        previous_row, previous_column = divmod(self.sequential_index - 1, 2)
+        new_index: QModelIndex = self.model().index(previous_row, previous_column)
 
-        return index if index.isValid() else QModelIndex()
+        return new_index if new_index.isValid() else current_index
 
     def next_index(self) -> QModelIndex:
         """Get an index of the next item."""
         current_index: QModelIndex = self.selectionModel().currentIndex()
 
-        row: int = current_index.row()
-        column: int = current_index.column()
-        next_row, next_column = divmod(2 * row + column + 1, 2)
-        index: QModelIndex = self.model().index(next_row, next_column)
+        next_row, next_column = divmod(self.sequential_index + 1, 2)
+        new_index: QModelIndex = self.model().index(next_row, next_column)
 
-        return index if index.isValid() else QModelIndex()
+        return new_index if new_index.isValid() else current_index
 
     def select(self, index: QModelIndex) -> None:
         """Select a notation item with the `index`."""
@@ -113,16 +109,17 @@ class TableView(QTableView):
         return self.selectionModel().hasSelection()
 
     @property
-    def linear_index(self) -> int:
-        """Return the linear index of a selected item."""
+    def sequential_index(self) -> int:
+        """Return the sequential index of a selected item."""
         current_index: QModelIndex = self.selectionModel().currentIndex()
 
-        if current_index.isValid():
-            return 2 * current_index.row() + current_index.column()
-
-        return -1
+        return (
+            2 * current_index.row() + current_index.column()
+            if current_index.isValid()
+            else -1
+        )
 
     @Slot(int)
     def on_selection_changed(self) -> None:
-        """Emit the linear index of a selected item."""
-        self.item_selected.emit(self.linear_index)
+        """Emit the sequential index of a selected item."""
+        self.item_selected.emit(self.sequential_index)

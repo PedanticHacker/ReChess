@@ -120,10 +120,10 @@ class Game(QObject):
         """Get a variation of moves in SAN format from the move stack."""
         return Board().variation_san(self.board.move_stack)
 
-    def set_move_by(self, index: int) -> Move:
-        """Set a move from the move stack by the `index` and return it."""
-        self.board = self.positions[index]
-        return self.board.move_stack[index]
+    def set_move_by(self, sequential_index: int) -> Move:
+        """Set a move from the move stack by the `sequential_index`."""
+        self.board = self.positions[sequential_index]
+        return self.board.move_stack[sequential_index]
 
     def pass_turn_to_engine(self) -> None:
         """Pass the current turn to the engine."""
