@@ -78,18 +78,24 @@ class TableView(QTableView):
     def previous_index(self) -> QModelIndex:
         """Get an index of the previous item."""
         current_index: QModelIndex = self.selectionModel().currentIndex()
-        previous_row, previous_column = divmod(
-            2 * current_index.row() + current_index.column() - 1, 2
-        )
-        return self.model().index(previous_row, previous_column)
+
+        row: int = current_index.row()
+        column: int = current_index.column()
+        previous_row, previous_column = divmod(2 * row + column - 1, 2)
+        index: QModelIndex = self.model().index(previous_row, previous_column)
+
+        return index if index.isValid() else QModelIndex()
 
     def next_index(self) -> QModelIndex:
         """Get an index of the next item."""
         current_index: QModelIndex = self.selectionModel().currentIndex()
-        next_row, next_column = divmod(
-            2 * current_index.row() + current_index.column() + 1, 2
-        )
-        return self.model().index(next_row, next_column)
+
+        row: int = current_index.row()
+        column: int = current_index.column()
+        next_row, next_column = divmod(2 * row + column + 1, 2)
+        index: QModelIndex = self.model().index(next_row, next_column)
+
+        return index if index.isValid() else QModelIndex()
 
     def select(self, index: QModelIndex) -> None:
         """Select a notation item with the `index`."""
