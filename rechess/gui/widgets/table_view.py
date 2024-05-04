@@ -65,6 +65,10 @@ class TableView(QTableView):
 
         if self.has_data(previous_index):
             self.select(previous_index)
+        else:
+            self.clearFocus()
+            self.clearSelection()
+            self.item_selected.emit(-1)
 
     def select_next_item(self) -> None:
         """Select the next notation item by selecting its index."""
@@ -112,16 +116,11 @@ class TableView(QTableView):
 
     @property
     def sequential_index(self) -> int:
-        """Return the sequential index of a selected item."""
+        """Return the sequential index of a selected notation item."""
         current_index: QModelIndex = self.selectionModel().currentIndex()
         return 2 * current_index.row() + current_index.column()
 
     @Slot(int)
     def on_selection_changed(self) -> None:
-        """Emit -1 for the initial position, else a sequential index."""
-        current_index = self.selectionModel().currentIndex()
-
-        if current_index == self.first_index():
-            self.item_selected.emit(-1)
-        else:
-            self.item_selected.emit(self.sequential_index)
+        """Emit the sequential index of a selected notation item."""
+        self.item_selected.emit(self.sequential_index)
