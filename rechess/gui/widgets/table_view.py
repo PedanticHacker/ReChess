@@ -118,5 +118,10 @@ class TableView(QTableView):
 
     @Slot(int)
     def on_selection_changed(self) -> None:
-        """Emit the sequential index of a selected item."""
-        self.item_selected.emit(self.sequential_index)
+        """Emit -1 for the initial position, else a sequential index."""
+        current_index = self.selectionModel().currentIndex()
+
+        if current_index == self.first_index():
+            self.item_selected.emit(-1)
+        else:
+            self.item_selected.emit(self.sequential_index)
