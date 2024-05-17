@@ -34,7 +34,7 @@ class App(QApplication):
 
 
 def main() -> int:
-    """Define app entry point."""
+    """Define the app's entry point."""
     app: App = App()
 
     main_window: MainWindow = MainWindow()
