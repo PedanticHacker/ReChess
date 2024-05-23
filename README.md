@@ -10,10 +10,16 @@ free to make it work on one of its older versions. Note, though, that
 by using the 3.12 version, it is guaranteed that ReChess will work on
 Windows, Linux or macOS.
 
-### Third-Party Software
+### Dependencies
 
-ReChess uses the **PySide6** GUI framework, the **python-chess** library
-and the **Stockfish 16.1** engine.
+ReChess depends upon and extensively uses the **PySide6** GUI framework
+and the **python-chess** chess library.
+
+### 3rd-Party Software
+
+ReChess integrates the **Stockfish 16.1** chess engine by default, but
+any other UCI-based chess engine can also be loaded to play against it
+or to do chessboard position analysis with it.
 
 ### Components
 
