@@ -1,8 +1,18 @@
 from contextlib import suppress
 from typing import Iterator
 
-from chess import (BB_SQUARES, BLACK, WHITE, Board, Color, IllegalMoveError,
-                   Move, PieceType, Square, square)
+from chess import (
+    BB_SQUARES,
+    BLACK,
+    WHITE,
+    Board,
+    Color,
+    IllegalMoveError,
+    Move,
+    PieceType,
+    Square,
+    square,
+)
 from PySide6.QtCore import QObject, QUrl, Signal
 from PySide6.QtMultimedia import QSoundEffect
 
