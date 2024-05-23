@@ -1,12 +1,12 @@
-from platform import system
 from contextlib import suppress
+from platform import system
 
 from chess import Move
 from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
 from PySide6.QtCore import QObject, Signal
 
-from rechess.core import Game
 from rechess import get_config_value
+from rechess.core import Game
 
 
 class Engine(QObject):

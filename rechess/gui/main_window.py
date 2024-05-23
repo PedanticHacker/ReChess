@@ -4,28 +4,14 @@ from chess import Move
 from chess.engine import Score
 from PySide6.QtCore import Qt, QThreadPool, Slot
 from PySide6.QtGui import QCloseEvent, QWheelEvent
-from PySide6.QtWidgets import (
-    QLabel,
-    QWidget,
-    QStatusBar,
-    QFileDialog,
-    QGridLayout,
-    QMainWindow,
-    QMessageBox,
-    QVBoxLayout,
-)
+from PySide6.QtWidgets import (QFileDialog, QGridLayout, QLabel, QMainWindow,
+                               QMessageBox, QStatusBar, QVBoxLayout, QWidget)
 
-from rechess.gui.dialogs import SettingsDialog
-from rechess.core import Engine, Game, TableModel
 from rechess import ClockColor, create_action, get_openings, get_svg_icon
-from rechess.gui.widgets import (
-    Clock,
-    SvgBoard,
-    FenEditor,
-    TableView,
-    EvaluationBar,
-)
-
+from rechess.core import Engine, Game, TableModel
+from rechess.gui.dialogs import SettingsDialog
+from rechess.gui.widgets import (Clock, EvaluationBar, FenEditor, SvgBoard,
+                                 TableView)
 
 TOP: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop
 BOTTOM: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignBottom

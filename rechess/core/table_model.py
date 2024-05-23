@@ -1,11 +1,7 @@
 from typing import Any
 
-from PySide6.QtCore import (
-    Qt,
-    QModelIndex,
-    QAbstractTableModel,
-    QPersistentModelIndex,
-)
+from PySide6.QtCore import (QAbstractTableModel, QModelIndex,
+                            QPersistentModelIndex, Qt)
 
 
 class TableModel(QAbstractTableModel):

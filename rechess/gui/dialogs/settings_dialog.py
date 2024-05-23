@@ -1,16 +1,9 @@
 from json import dump
 
 from PySide6.QtCore import Slot
-from PySide6.QtWidgets import (
-    QDialog,
-    QCheckBox,
-    QComboBox,
-    QGroupBox,
-    QHBoxLayout,
-    QVBoxLayout,
-    QRadioButton,
-    QDialogButtonBox,
-)
+from PySide6.QtWidgets import (QCheckBox, QComboBox, QDialog, QDialogButtonBox,
+                               QGroupBox, QHBoxLayout, QRadioButton,
+                               QVBoxLayout)
 
 from rechess import get_config_value, set_config_values
 

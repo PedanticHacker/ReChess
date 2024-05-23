@@ -1,11 +1,10 @@
-from typing import Iterator
 from contextlib import suppress
+from typing import Iterator
 
-from chess import square
-from chess import BB_SQUARES, BLACK, WHITE
-from chess import Board, Color, IllegalMoveError, Move, PieceType, Square
-from PySide6.QtMultimedia import QSoundEffect
+from chess import (BB_SQUARES, BLACK, WHITE, Board, Color, IllegalMoveError,
+                   Move, PieceType, Square, square)
 from PySide6.QtCore import QObject, QUrl, Signal
+from PySide6.QtMultimedia import QSoundEffect
 
 from rechess import get_config_value
 from rechess.gui.dialogs import PromotionDialog
