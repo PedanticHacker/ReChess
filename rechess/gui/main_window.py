@@ -17,7 +17,7 @@ from PySide6.QtWidgets import (
 
 from rechess.gui.dialogs import SettingsDialog
 from rechess.core import Engine, Game, TableModel
-from rechess import create_action, get_openings, get_svg_icon
+from rechess import ClockColor, create_action, get_openings, get_svg_icon
 from rechess.gui.widgets import (
     Clock,
     SvgBoard,
@@ -26,9 +26,6 @@ from rechess.gui.widgets import (
     EvaluationBar,
 )
 
-
-BLACK_CLOCK_STYLE: str = "color: white; background: black;"
-WHITE_CLOCK_STYLE: str = "color: black; background: white;"
 
 TOP: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop
 BOTTOM: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignBottom
@@ -61,8 +58,8 @@ class MainWindow(QMainWindow):
         self._table_model: TableModel = TableModel(self._game.notation)
         self._table_view: TableView = TableView(self._table_model)
 
-        self._black_clock: Clock = Clock(BLACK_CLOCK_STYLE)
-        self._white_clock: Clock = Clock(WHITE_CLOCK_STYLE)
+        self._black_clock: Clock = Clock(ClockColor.Black)
+        self._white_clock: Clock = Clock(ClockColor.White)
 
         self._opening_label: QLabel = QLabel()
         self._engine_name_label: QLabel = QLabel()

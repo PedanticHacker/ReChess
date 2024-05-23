@@ -1,9 +1,7 @@
-from typing import Literal
-
 from PySide6.QtWidgets import QLCDNumber
 from PySide6.QtCore import Qt, QTimer, Signal, Slot
 
-from rechess import get_config_value
+from rechess import ClockColor, get_config_value
 
 
 class Clock(QLCDNumber):
@@ -11,10 +9,11 @@ class Clock(QLCDNumber):
 
     time_expired: Signal = Signal()
 
-    def __init__(self, style: str) -> None:
+    def __init__(self, clock_color: ClockColor) -> None:
         super().__init__()
 
-        self.setStyleSheet(style)
+        self.setStyleSheet(clock_color)
+
         self.setFixedSize(200, 50)
         self.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 

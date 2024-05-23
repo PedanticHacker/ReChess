@@ -1,3 +1,4 @@
+from .enums import ClockColor
 from .utils import (
     get_openings,
     get_svg_icon,
