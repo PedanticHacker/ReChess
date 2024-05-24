@@ -18,14 +18,7 @@ from PySide6.QtWidgets import (
 from rechess import ClockColor, create_action, get_openings, get_svg_icon
 from rechess.core import Engine, Game, TableModel
 from rechess.gui.dialogs import SettingsDialog
-from rechess.gui.widgets import (
-    Clock,
-    EvaluationBar,
-    FenEditor,
-    SvgBoard,
-    TableView,
-)
-
+from rechess.gui.widgets import Clock, EvaluationBar, FenEditor, SvgBoard, TableView
 
 TOP: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop
 BOTTOM: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignBottom
