@@ -2,7 +2,7 @@ from enum import StrEnum
 
 
 class ClockColor(StrEnum):
-    """Clock colors for the Black player and the White player."""
+    """Black player's clock color and White players's clock color."""
 
     Black: str = "color: white; background: black;"
     White: str = "color: black; background: white;"
