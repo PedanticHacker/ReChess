@@ -41,7 +41,7 @@ class Game(QObject):
         self.arrow.clear()
         self.board.reset()
 
-        self._engine_turn: bool = get_config_value("engine", "white")
+        self._engine_turn: Color = get_config_value("engine", "white")
         self.perspective: Color = not self._engine_turn
 
         self.reset_squares()

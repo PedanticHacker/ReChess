@@ -15,6 +15,10 @@ from PySide6.QtWidgets import (
 from rechess import get_config_value, set_config_values
 
 
+OK: QDialogButtonBox.StandardButton = QDialogButtonBox.StandardButton.Ok
+CANCEL: QDialogButtonBox.StandardButton = QDialogButtonBox.StandardButton.Cancel
+
+
 class SettingsDialog(QDialog):
     """A dialog for changing the settings."""
 
@@ -85,9 +89,7 @@ class SettingsDialog(QDialog):
 
     def set_vertical_layout(self) -> None:
         """Set a vertical layout for the dialog."""
-        self.button_box: QDialogButtonBox = QDialogButtonBox(
-            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel
-        )
+        self.button_box: QDialogButtonBox = QDialogButtonBox(OK | CANCEL)
 
         engine_layout: QVBoxLayout = QVBoxLayout()
         engine_layout.addWidget(self.engine_black_option)
