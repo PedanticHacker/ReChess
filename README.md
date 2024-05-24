@@ -1,6 +1,6 @@
 # ReChess
 
-A GUI app for playing chess against a UCI-based engine.
+A GUI app for playing chess against a UCI-based chess engine.
 
 ### Source Code
 
