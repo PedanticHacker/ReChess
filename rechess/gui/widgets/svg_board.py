@@ -1,8 +1,8 @@
+from __future__ import annotations
+
 from chess import svg
 from PySide6.QtGui import QMouseEvent
 from PySide6.QtSvgWidgets import QSvgWidget
-
-from rechess.core import Game
 
 
 class SvgBoard(QSvgWidget):
