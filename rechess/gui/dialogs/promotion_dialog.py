@@ -5,13 +5,13 @@ from rechess import create_button, get_svg_icon
 
 
 class PromotionDialog(QDialog):
-    """A dialog for selecting a promotion piece."""
+    """A dialog for selecting the promotion piece type."""
 
     def __init__(self, player_color: Color) -> None:
         super().__init__()
 
         self._player_color: Color = player_color
-        self.piece_type: PieceType = PieceType()
+        self._piece_type: PieceType = PieceType()
 
         self.set_title()
         self.create_buttons()
@@ -76,16 +76,21 @@ class PromotionDialog(QDialog):
 
     def on_queen_button_clicked(self) -> None:
         """Change the promoting pawn to a queen."""
-        self.piece_type = QUEEN
+        self._piece_type = QUEEN
 
     def on_rook_button_clicked(self) -> None:
         """Change the promoting pawn to a rook."""
-        self.piece_type = ROOK
+        self._piece_type = ROOK
 
     def on_bishop_button_clicked(self) -> None:
         """Change the promoting pawn to a bishop."""
-        self.piece_type = BISHOP
+        self._piece_type = BISHOP
 
     def on_knight_button_clicked(self) -> None:
         """Change the promoting pawn to a knight."""
-        self.piece_type = KNIGHT
+        self._piece_type = KNIGHT
+
+    @property
+    def piece_type(self) -> PieceType:
+        """Return the selected promotion piece type."""
+        return self._piece_type
