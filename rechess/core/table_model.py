@@ -9,7 +9,7 @@ class TableModel(QAbstractTableModel):
     def __init__(self, notation_items: list[str]) -> None:
         super().__init__()
 
-        self._notation_items = notation_items
+        self._notation_items: list[str] = notation_items
 
     def data(
         self,

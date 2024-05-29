@@ -1,6 +1,7 @@
+from __future__ import annotations
+
 from PySide6.QtCore import (
     QAbstractItemModel,
-    QAbstractTableModel,
     QItemSelectionModel,
     QModelIndex,
     Signal,
