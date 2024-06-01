@@ -451,12 +451,12 @@ class MainWindow(QMainWindow):
         This event handler deals with wheel events of either a mouse or
         a touchpad, be it an upward or a downward roll of the wheel.
         """
-        upward_roll = event.angleDelta().y() > 0
-        downward_roll = event.angleDelta().y() < 0
+        is_upward_roll = event.angleDelta().y() > 0
+        is_downward_roll = event.angleDelta().y() < 0
 
-        if upward_roll:
+        if is_upward_roll:
             self._table_view.select_previous_item()
-        elif downward_roll:
+        elif is_downward_roll:
             self._table_view.select_next_item()
 
     @Slot()
