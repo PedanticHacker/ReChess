@@ -426,12 +426,7 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def closeEvent(self, event: QCloseEvent) -> None:
-        """
-        Respond to the event of closing the main window of ReChess.
-
-        Ask the user with a dialog whether ReChess should quit before
-        the main window is closed.
-        """
+        """Respond to the event of closing the main window."""
         answer: QMessageBox.StandardButton = QMessageBox.question(
             self,
             "Quit",
@@ -445,12 +440,7 @@ class MainWindow(QMainWindow):
             event.ignore()
 
     def wheelEvent(self, event: QWheelEvent) -> None:
-        """
-        Respond to the event of rolling the wheel of a pointing device.
-
-        This event handler deals with wheel events of either a mouse or
-        a touchpad, be it an upward or a downward roll of the wheel.
-        """
+        """Respond to the event of rolling a pointing device's wheel."""
         is_upward_roll = event.angleDelta().y() > 0
         is_downward_roll = event.angleDelta().y() < 0
 
