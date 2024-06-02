@@ -86,7 +86,8 @@ class SettingsDialog(QDialog):
     def set_vertical_layout(self) -> None:
         """Set a vertical layout for the dialog."""
         self.button_box: QDialogButtonBox = QDialogButtonBox(
-            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel
+            QDialogButtonBox.StandardButton.Ok
+            | QDialogButtonBox.StandardButton.Cancel
         )
 
         engine_layout: QVBoxLayout = QVBoxLayout()
