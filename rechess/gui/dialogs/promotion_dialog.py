@@ -1,4 +1,4 @@
-from chess import BISHOP, KNIGHT, QUEEN, ROOK, WHITE, Color, PieceType
+from chess import BISHOP, Color, KNIGHT, PieceType, QUEEN, ROOK, WHITE
 from PySide6.QtWidgets import QDialog, QDialogButtonBox, QHBoxLayout
 
 from rechess.utils import create_button, get_svg_icon
