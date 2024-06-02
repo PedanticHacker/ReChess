@@ -12,7 +12,7 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
 )
 
-from rechess import get_config_value, set_config_values
+from rechess.utils import get_config_value, set_config_values
 
 
 OK: QDialogButtonBox.StandardButton = QDialogButtonBox.StandardButton.Ok

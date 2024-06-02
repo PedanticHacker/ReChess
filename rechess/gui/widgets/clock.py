@@ -1,7 +1,8 @@
 from PySide6.QtCore import Qt, QTimer, Signal, Slot
 from PySide6.QtWidgets import QLCDNumber
 
-from rechess import ClockColor, get_config_value
+from rechess.gui import ClockColor
+from rechess.utils import get_config_value
 
 
 class Clock(QLCDNumber):

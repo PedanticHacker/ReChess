@@ -15,10 +15,12 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from rechess import ClockColor, create_action, get_openings, get_svg_icon
 from rechess.core import Engine, Game, TableModel
+from rechess.gui import ClockColor
 from rechess.gui.dialogs import SettingsDialog
 from rechess.gui.widgets import Clock, EvaluationBar, FenEditor, SvgBoard, TableView
+from rechess.utils import create_action, get_openings, get_svg_icon
+
 
 TOP: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop
 BOTTOM: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignBottom
@@ -38,7 +40,7 @@ class MainWindow(QMainWindow):
         self.set_minimum_size()
         self.create_status_bar()
         self.adjust_engine_buttons()
-        self.connect_events_with_handlers()
+        self.connect_signals_to_slots()
 
     def create_widgets(self) -> None:
         """Create widgets for the main window."""
@@ -235,8 +237,8 @@ class MainWindow(QMainWindow):
             self.stop_analysis_action.setDisabled(True)
             self.start_analysis_action.setDisabled(True)
 
-    def connect_events_with_handlers(self) -> None:
-        """Connect various events with specific handlers."""
+    def connect_signals_to_slots(self) -> None:
+        """Connect the Game's and Engine's signals to slots."""
         self._game.move_played.connect(self.on_move_played)
         self._engine.move_played.connect(self.on_move_played)
         self._table_view.item_selected.connect(self.on_item_selected)
