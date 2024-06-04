@@ -12,7 +12,7 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
 )
 
-from rechess.utils import get_config_value, set_config_values
+from rechess.core import get_config_value, set_config_values
 
 
 class SettingsDialog(QDialog):
@@ -86,8 +86,7 @@ class SettingsDialog(QDialog):
     def set_vertical_layout(self) -> None:
         """Set a vertical layout for the dialog."""
         self.button_box: QDialogButtonBox = QDialogButtonBox(
-            QDialogButtonBox.StandardButton.Ok
-            | QDialogButtonBox.StandardButton.Cancel
+            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel
         )
 
         engine_layout: QVBoxLayout = QVBoxLayout()

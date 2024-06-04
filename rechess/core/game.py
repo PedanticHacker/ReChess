@@ -16,7 +16,7 @@ from chess import (
 from PySide6.QtCore import QObject, QUrl, Signal
 from PySide6.QtMultimedia import QSoundEffect
 
-from rechess.utils import get_config_value
+from rechess.core import get_config_value
 from rechess.gui.dialogs import PromotionDialog
 
 
