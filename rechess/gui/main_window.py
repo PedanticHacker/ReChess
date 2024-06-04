@@ -16,14 +16,9 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from rechess.core import (
-    create_action,
-    Engine,
-    Game,
-    get_openings,
-    get_svg_icon,
-    TableModel,
-)
+from rechess.core import Engine, Game, TableModel
+from rechess.core.utils import create_action, get_openings, get_svg_icon
+
 from rechess.gui.dialogs import SettingsDialog
 from rechess.gui.widgets import Clock, EvaluationBar, FenEditor, SvgBoard, TableView
 

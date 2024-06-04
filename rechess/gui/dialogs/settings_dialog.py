@@ -12,7 +12,7 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
 )
 
-from rechess.core import get_config_value, set_config_values
+from rechess.core.utils import get_config_value, set_config_values
 
 
 class SettingsDialog(QDialog):

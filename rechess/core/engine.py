@@ -7,7 +7,7 @@ from chess import Move
 from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
 from PySide6.QtCore import QObject, Signal
 
-from rechess.core import get_config_value
+from rechess.core.utils import get_config_value
 
 
 class Engine(QObject):

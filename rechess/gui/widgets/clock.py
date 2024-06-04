@@ -3,7 +3,7 @@ from __future__ import annotations
 from PySide6.QtCore import Qt, QTimer, Signal, Slot
 from PySide6.QtWidgets import QLCDNumber
 
-from rechess.core import get_config_value
+from rechess.core.utils import get_config_value
 
 
 class Clock(QLCDNumber):

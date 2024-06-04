@@ -1,7 +1,7 @@
 from chess import BISHOP, Color, KNIGHT, PieceType, QUEEN, ROOK, WHITE
 from PySide6.QtWidgets import QDialog, QDialogButtonBox, QHBoxLayout
 
-from rechess.core import create_button, get_svg_icon
+from rechess.core.utils import create_button, get_svg_icon
 
 
 class PromotionDialog(QDialog):
