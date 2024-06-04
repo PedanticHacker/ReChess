@@ -22,10 +22,6 @@ from rechess.gui.widgets import Clock, EvaluationBar, FenEditor, SvgBoard, Table
 from rechess.utils import create_action, get_openings, get_svg_icon
 
 
-TOP: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop
-BOTTOM: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignBottom
-
-
 class MainWindow(QMainWindow):
     """The main window of ReChess."""
 
@@ -206,14 +202,20 @@ class MainWindow(QMainWindow):
     def set_grid_layout(self) -> None:
         """Set a grid layout for widgets on the main window."""
         self._grid_layout: QGridLayout = QGridLayout()
-        self._grid_layout.addWidget(self._black_clock, 0, 0, 1, 1, TOP)
-        self._grid_layout.addWidget(self._white_clock, 0, 0, 1, 1, BOTTOM)
+        self._grid_layout.addWidget(
+            self._black_clock, 0, 0, 1, 1, Qt.AlignmentFlag.AlignTop
+        )
+        self._grid_layout.addWidget(
+            self._white_clock, 0, 0, 1, 1, Qt.AlignmentFlag.AlignBottom
+        )
         self._grid_layout.addWidget(self._svg_board, 0, 1, 1, 1)
         self._grid_layout.addWidget(self._evaluation_bar, 0, 2, 1, 1)
         self._grid_layout.addWidget(self._table_view, 0, 3, 1, 2)
         self._grid_layout.addWidget(self._notifications_label, 1, 3, 1, 1)
         self._grid_layout.addWidget(self._fen_editor, 1, 1, 1, 1)
-        self._grid_layout.addWidget(self._engine_analysis_label, 2, 1, 1, 1, TOP)
+        self._grid_layout.addWidget(
+            self._engine_analysis_label, 2, 1, 1, 1, Qt.AlignmentFlag.AlignTop
+        )
 
         self._widget_container: QWidget = QWidget()
         self._widget_container.setLayout(self._grid_layout)
