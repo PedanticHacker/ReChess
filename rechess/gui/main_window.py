@@ -16,9 +16,8 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
+from rechess import create_action, get_openings, get_svg_icon
 from rechess.core import Engine, Game, TableModel
-from rechess.core.utils import create_action, get_openings, get_svg_icon
-
 from rechess.gui.dialogs import SettingsDialog
 from rechess.gui.widgets import Clock, EvaluationBar, FenEditor, SvgBoard, TableView
 
@@ -28,7 +27,7 @@ TOP: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop
 
 
 class ClockColor(StrEnum):
-    """Black player's clock color and White players's clock color."""
+    """A color for the clock of the Black and the White player."""
 
     Black: str = "color: white; background: black;"
     White: str = "color: black; background: white;"
