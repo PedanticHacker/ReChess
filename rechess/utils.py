@@ -1,5 +1,5 @@
 from json import dump, load
-from typing import Callable
+from typing import Any, Callable
 
 from PySide6.QtCore import QSize
 from PySide6.QtGui import QAction, QIcon
@@ -34,20 +34,20 @@ def get_app_style(file_name: str) -> str:
         return qss_file.read()
 
 
-def get_config_value(section: str, key: str) -> int | bool:
-    """Get the config value of a `key` from the given `section`."""
+def get_config_value(section: str, key: str) -> Any:
+    """Get the config value of a `key` from a `section`."""
     with open("rechess/config.json") as config_file:
         config_contents = load(config_file)
 
     return config_contents[section][key]
 
 
-def set_config_values(new_config_values: dict[str, dict[str, int | bool]]) -> None:
-    """Set config values from the given `new_config_values`."""
+def set_config_values(section: str, **kwargs: Any) -> None:
+    """Set multiple config values to keys in a `section`."""
     with open("rechess/config.json") as config_file:
         config_contents = load(config_file)
 
-    config_contents |= new_config_values
+    config_contents[section] |= kwargs
 
     with open("rechess/config.json", mode="w", newline="\n") as config_file:
         dump(config_contents, config_file, indent=4)

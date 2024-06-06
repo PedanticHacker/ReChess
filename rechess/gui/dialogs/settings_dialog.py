@@ -86,8 +86,7 @@ class SettingsDialog(QDialog):
     def set_vertical_layout(self) -> None:
         """Set a vertical layout for the dialog."""
         self.button_box: QDialogButtonBox = QDialogButtonBox(
-            QDialogButtonBox.StandardButton.Ok
-            | QDialogButtonBox.StandardButton.Cancel
+            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel
         )
 
         engine_layout: QVBoxLayout = QVBoxLayout()
@@ -116,14 +115,13 @@ class SettingsDialog(QDialog):
     @Slot()
     def on_save_settings(self) -> None:
         """Save any changed settings."""
-        new_config_values: dict[str, dict[str, int | bool]] = {
-            "clock": {
-                "time": self.clock_time_option.currentData(),
-                "increment": self.clock_increment_option.currentData(),
-            },
-            "engine": {
-                "white": self.engine_white_option.isChecked(),
-                "pondering": self.engine_pondering_option.isChecked(),
-            },
-        }
-        set_config_values(new_config_values)
+        set_config_values(
+            "clock",
+            time=self.clock_time_option.currentData(),
+            increment=self.clock_increment_option.currentData(),
+        )
+        set_config_values(
+            "engine",
+            white=self.engine_white_option.isChecked(),
+            pondering=self.engine_pondering_option.isChecked(),
+        )
