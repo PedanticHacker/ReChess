@@ -1,9 +1,18 @@
-from json import dump, load
-from typing import Any, Callable
+import json
+from typing import Any, Callable, Literal
 
 from PySide6.QtCore import QSize
 from PySide6.QtGui import QAction, QIcon
 from PySide6.QtWidgets import QPushButton
+
+
+type ClockSection = Literal["clock"]
+type ClockKey = Literal["time", "increment"]
+type ClockValue = int
+
+type EngineSection = Literal["engine"]
+type EngineKey = Literal["white", "pondering"]
+type EngineValue = bool
 
 
 def create_action(
@@ -37,20 +46,24 @@ def get_app_style(file_name: str) -> str:
 def get_config_value(section: str, key: str) -> Any:
     """Get the config value of a `key` from a `section`."""
     with open("rechess/config.json") as config_file:
-        config_contents = load(config_file)
+        config_contents = json.load(config_file)
 
     return config_contents[section][key]
 
 
-def set_config_values(**section_key_value: Any) -> None:
-    """Set multiple config values to keys in a `section`."""
+def set_config(
+    section: ClockSection | EngineSection,
+    key: ClockKey | EngineKey,
+    value: ClockValue | EngineValue,
+) -> None:
+    """Set a config value under `section` for a `key` with a `value`."""
     with open("rechess/config.json") as config_file:
-        config_contents = load(config_file)
+        config_contents = json.load(config_file)
 
-    config_contents |= section_key_value
+    config_contents[section][key] = value
 
     with open("rechess/config.json", mode="w", newline="\n") as config_file:
-        dump(config_contents, config_file, indent=4)
+        json.dump(config_contents, config_file, indent=4)
         config_file.write("\n")
 
 
