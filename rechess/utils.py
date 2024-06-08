@@ -42,12 +42,12 @@ def get_config_value(section: str, key: str) -> Any:
     return config_contents[section][key]
 
 
-def set_config_values(section: str, **kwargs: Any) -> None:
+def set_config_values(**section_key_value: Any) -> None:
     """Set multiple config values to keys in a `section`."""
     with open("rechess/config.json") as config_file:
         config_contents = load(config_file)
 
-    config_contents[section] |= kwargs
+    config_contents |= section_key_value
 
     with open("rechess/config.json", mode="w", newline="\n") as config_file:
         dump(config_contents, config_file, indent=4)

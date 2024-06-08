@@ -86,7 +86,8 @@ class SettingsDialog(QDialog):
     def set_vertical_layout(self) -> None:
         """Set a vertical layout for the dialog."""
         self.button_box: QDialogButtonBox = QDialogButtonBox(
-            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel
+            QDialogButtonBox.StandardButton.Ok
+            | QDialogButtonBox.StandardButton.Cancel
         )
 
         engine_layout: QVBoxLayout = QVBoxLayout()
@@ -116,12 +117,12 @@ class SettingsDialog(QDialog):
     def on_save_settings(self) -> None:
         """Save any changed settings."""
         set_config_values(
-            "clock",
+            section="clock",
             time=self.clock_time_option.currentData(),
             increment=self.clock_increment_option.currentData(),
         )
         set_config_values(
-            "engine",
+            section="engine",
             white=self.engine_white_option.isChecked(),
             pondering=self.engine_pondering_option.isChecked(),
         )
