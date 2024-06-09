@@ -12,7 +12,7 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
 )
 
-from rechess import get_config_value, set_config_values
+from rechess import get_config_value, set_config_value
 
 
 class SettingsDialog(QDialog):
@@ -116,13 +116,23 @@ class SettingsDialog(QDialog):
     @Slot()
     def on_save_settings(self) -> None:
         """Save any changed settings."""
-        set_config_values(
+        set_config_value(
             section="clock",
-            time=self.clock_time_option.currentData(),
-            increment=self.clock_increment_option.currentData(),
+            key="time",
+            value=self.clock_time_option.currentData(),
         )
-        set_config_values(
+        set_config_value(
+            section="clock",
+            key="increment",
+            value=self.clock_increment_option.currentData(),
+        )
+        set_config_value(
             section="engine",
-            white=self.engine_white_option.isChecked(),
-            pondering=self.engine_pondering_option.isChecked(),
+            key="white",
+            value=self.engine_white_option.isChecked(),
+        )
+        set_config_value(
+            section="engine",
+            key="pondering",
+            value=self.engine_pondering_option.isChecked(),
         )

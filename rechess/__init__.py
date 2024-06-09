@@ -5,5 +5,5 @@ from .utils import (
     get_config_value,
     get_openings,
     get_svg_icon,
-    set_config_values,
+    set_config_value,
 )
