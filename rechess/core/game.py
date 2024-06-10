@@ -15,9 +15,13 @@ from chess import (
 )
 from PySide6.QtCore import QObject, QUrl, Signal
 from PySide6.QtMultimedia import QSoundEffect
+from PySide6.QtWidgets import QDialog
 
 from rechess import get_config_value
 from rechess.gui.dialogs import PromotionDialog
+
+
+type Accepted = QDialog.DialogCode.Accepted
 
 
 class Game(QObject):
@@ -116,14 +120,18 @@ class Game(QObject):
             move: Move = self.board.find_move(origin, target)
 
             if move.promotion:
-                move.promotion = self.get_promotion_piece()
+                move.promotion = self.get_promotion_piece_type()
 
             self.move_played.emit(move)
 
-    def get_promotion_piece(self) -> PieceType:
-        """Show the promotion dialog to get a promotion piece."""
+    def get_promotion_piece_type(self) -> PieceType | None:
+        """Show the promotion dialog to get a promotion piece type."""
         promotion_dialog: PromotionDialog = PromotionDialog(self.board.turn)
-        return promotion_dialog.piece_type
+
+        if promotion_dialog.exec() == Accepted:
+            return promotion_dialog.piece_type
+
+        return None
 
     def get_san_variation(self) -> str:
         """Get a variation of moves in SAN format from the move stack."""
