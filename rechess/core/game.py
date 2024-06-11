@@ -17,7 +17,7 @@ from PySide6.QtCore import QObject, QUrl, Signal
 from PySide6.QtMultimedia import QSoundEffect
 from PySide6.QtWidgets import QDialog
 
-from rechess import get_config_value
+from rechess import get_config_value, set_config_value
 from rechess.gui.dialogs import PromotionDialog
 
 
@@ -90,7 +90,11 @@ class Game(QObject):
 
     def flip_perspective(self) -> None:
         """Flip the current perspective."""
-        self.perspective = not self.perspective
+        set_config_value(
+            "board",
+            "perspective",
+            not self.perspective,
+        )
 
     def get_square_from(self, x: float, y: float) -> None:
         """Get a square from `x` and `y` coordinates."""

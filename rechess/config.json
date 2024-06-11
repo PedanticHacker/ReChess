@@ -1,4 +1,7 @@
 {
+    "board": {
+        "perspective": true
+    },
     "clock": {
         "time": 60,
         "increment": 0

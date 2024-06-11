@@ -6,8 +6,8 @@ from PySide6.QtGui import QAction, QIcon
 from PySide6.QtWidgets import QPushButton
 
 
-type ConfigSection = Literal["clock", "engine"]
-type ConfigKey = Literal["time", "increment", "white", "pondering"]
+type ConfigKey = Literal["increment", "perspective", "pondering", "time", "white"]
+type ConfigSection = Literal["board", "clock", "engine"]
 type ConfigValue = int | bool
 
 

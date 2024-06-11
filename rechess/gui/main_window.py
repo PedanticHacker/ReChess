@@ -39,7 +39,7 @@ class MainWindow(QMainWindow):
     def __init__(self) -> None:
         super().__init__()
 
-        settings_dialog: SettingsDialog = SettingsDialog()
+        self.settings_dialog: SettingsDialog = SettingsDialog()
 
         self.create_widgets()
         self.create_actions()
