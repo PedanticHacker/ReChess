@@ -46,7 +46,7 @@ class Game(QObject):
         self.board.reset()
 
         self._engine_turn: Color = get_config_value("engine", "white")
-        self.perspective: Color = not self._engine_turn
+        self.perspective: Color = get_config_value("board", "perspective")
 
         self.reset_squares()
 
@@ -90,10 +90,12 @@ class Game(QObject):
 
     def flip_perspective(self) -> None:
         """Flip the current perspective."""
+        self.perspective = not self.perspective
+
         set_config_value(
             "board",
             "perspective",
-            not self.perspective,
+            self.perspective,
         )
 
     def get_square_from(self, x: float, y: float) -> None:
