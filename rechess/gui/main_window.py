@@ -27,7 +27,7 @@ TOP: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop
 
 
 class ClockColor(StrEnum):
-    """A color for the clock of the Black and the White player."""
+    """A color for the clock of Black and White players."""
 
     Black: str = "color: white; background: black;"
     White: str = "color: black; background: white;"
