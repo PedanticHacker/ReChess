@@ -4,6 +4,9 @@ from PySide6.QtWidgets import QDialog, QDialogButtonBox, QHBoxLayout
 from rechess import create_button, get_svg_icon
 
 
+type AcceptRole = QDialogButtonBox.ButtonRole.AcceptRole
+
+
 class PromotionDialog(QDialog):
     """A dialog for selecting the promotion piece type."""
 
@@ -11,19 +14,17 @@ class PromotionDialog(QDialog):
         super().__init__()
 
         self._player_color: Color = player_color
-        self._piece_type: PieceType = PieceType()
 
-        self.set_title()
+        self._piece_type: PieceType = PieceType()
+        self._horizontal_layout: QHBoxLayout = QHBoxLayout()
+        self._button_box: QDialogButtonBox = QDialogButtonBox()
+
+        self.setWindowTitle("Pawn Promotion")
+
         self.create_buttons()
         self.add_buttons_to_box()
         self.set_horizontal_layout()
         self.connect_events_with_handlers()
-
-        self.exec()
-
-    def set_title(self) -> None:
-        """Set the dialog's title as Pawn Promotion."""
-        self.setWindowTitle("Pawn Promotion")
 
     def create_buttons(self) -> None:
         """Create buttons as promotion options."""
@@ -40,35 +41,20 @@ class PromotionDialog(QDialog):
 
     def add_buttons_to_box(self) -> None:
         """Add buttons to a button box."""
-        self.button_box: QDialogButtonBox = QDialogButtonBox()
-
-        self.button_box.addButton(
-            self.queen_button,
-            QDialogButtonBox.ButtonRole.AcceptRole,
-        )
-        self.button_box.addButton(
-            self.rook_button,
-            QDialogButtonBox.ButtonRole.AcceptRole,
-        )
-        self.button_box.addButton(
-            self.bishop_button,
-            QDialogButtonBox.ButtonRole.AcceptRole,
-        )
-        self.button_box.addButton(
-            self.knight_button,
-            QDialogButtonBox.ButtonRole.AcceptRole,
-        )
+        self._button_box.addButton(self.queen_button, AcceptRole)
+        self._button_box.addButton(self.rook_button, AcceptRole)
+        self._button_box.addButton(self.bishop_button, AcceptRole)
+        self._button_box.addButton(self.knight_button, AcceptRole)
 
     def set_horizontal_layout(self) -> None:
         """Set a horizontal layout for the buttons in the button box."""
-        self.horizontal_layout: QHBoxLayout = QHBoxLayout()
-        self.horizontal_layout.addWidget(self.button_box)
-        self.setLayout(self.horizontal_layout)
+        self._horizontal_layout.addWidget(self._button_box)
+        self.setLayout(self._horizontal_layout)
 
     def connect_events_with_handlers(self) -> None:
         """Connect various events with specific handlers."""
-        self.button_box.accepted.connect(self.accept)
-        self.button_box.rejected.connect(self.reject)
+        self._button_box.accepted.connect(self.accept)
+        self._button_box.rejected.connect(self.reject)
         self.queen_button.clicked.connect(self.on_queen_button_clicked)
         self.rook_button.clicked.connect(self.on_rook_button_clicked)
         self.bishop_button.clicked.connect(self.on_bishop_button_clicked)

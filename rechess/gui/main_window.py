@@ -39,6 +39,8 @@ class MainWindow(QMainWindow):
     def __init__(self) -> None:
         super().__init__()
 
+        self.settings_dialog: SettingsDialog = SettingsDialog()
+
         self.create_widgets()
         self.create_actions()
         self.create_menu_bar()
@@ -287,8 +289,7 @@ class MainWindow(QMainWindow):
 
     def show_settings_dialog(self) -> None:
         """Show the Settings dialog."""
-        settings_dialog: SettingsDialog = SettingsDialog()
-        settings_dialog.exec()
+        self.settings_dialog.exec()
 
     def load_engine(self) -> None:
         """Show the file manager to load a UCI engine."""
