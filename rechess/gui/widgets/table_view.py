@@ -19,11 +19,6 @@ class TableView(QTableView):
 
         self.setModel(table_model)
 
-        self.configure_view()
-        self.connect_events_with_handlers()
-
-    def configure_view(self) -> None:
-        """Configure the view to non-default settings."""
         self.setShowGrid(False)
         self.setFixedSize(200, 500)
         self.setTabKeyNavigation(False)
@@ -32,8 +27,6 @@ class TableView(QTableView):
         self.verticalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Fixed)
         self.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
 
-    def connect_events_with_handlers(self) -> None:
-        """Connect various events with specific handlers."""
         self.model().layoutChanged.connect(self.scrollToBottom)
         self.selectionModel().selectionChanged.connect(self.on_selection_changed)
 
