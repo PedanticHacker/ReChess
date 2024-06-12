@@ -35,7 +35,7 @@ class Engine(QObject):
             self._loaded_engine = SimpleEngine.popen_uci(file_path)
 
     def play_move(self) -> None:
-        """Play a move by the loaded engine."""
+        """Play a move with the loaded engine."""
         play_result: PlayResult = self._loaded_engine.play(
             limit=Limit(1.0),
             board=self._game.board,
