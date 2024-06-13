@@ -44,7 +44,6 @@ class SvgBoard(QSvgWidget):
         )
         encoded_svg_board: bytes = svg_board.encode()
         self.load(encoded_svg_board)
-        print(self._game.perspective)
 
     def mousePressEvent(self, event: QMouseEvent) -> None:
         """Respond to pressing the primary mouse button."""
