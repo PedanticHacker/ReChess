@@ -3,7 +3,7 @@
         "perspective": true
     },
     "clock": {
-        "time": 60,
+        "time": 300,
         "increment": 0
     },
     "engine": {

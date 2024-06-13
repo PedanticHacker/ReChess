@@ -27,7 +27,7 @@ class Engine(QObject):
             f"rechess/resources/engines/stockfish-16.1/{system().lower()}/"
             f"stockfish{'.exe' if system() == 'Windows' else ''}"
         )
-        self._loaded_engine.configure({"Hash": 512})
+        self._loaded_engine.configure({"Hash": 256})
 
     def load(self, file_path: str) -> None:
         """Load an engine by the given `file_path`."""
