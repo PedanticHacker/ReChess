@@ -91,12 +91,7 @@ class Game(QObject):
     def flip_perspective(self) -> None:
         """Flip the current perspective."""
         self.perspective = not self.perspective
-
-        set_config_value(
-            "board",
-            "perspective",
-            self.perspective,
-        )
+        set_config_value("board", "perspective", self.perspective)
 
     def get_square_from(self, x: float, y: float) -> None:
         """Get a square from `x` and `y` coordinates."""
