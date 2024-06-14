@@ -289,7 +289,9 @@ class MainWindow(QMainWindow):
 
     def show_settings_dialog(self) -> None:
         """Show the Settings dialog."""
-        self.settings_dialog.exec()
+        if self.settings_dialog.exec() == self.settings_dialog.DialogCode.Accepted:
+            self._black_clock.reset()
+            self._white_clock.reset()
 
     def load_engine(self) -> None:
         """Show the file manager to load a UCI engine."""
