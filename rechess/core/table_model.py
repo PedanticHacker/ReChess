@@ -7,6 +7,17 @@ from PySide6.QtCore import (
     Qt,
 )
 
+from rechess.types import (
+    DisplayRole,
+    Horizontal,
+    ItemFlag,
+    ItemIsEnabled,
+    ItemIsSelectable,
+    NoItemFlags,
+    Orientation,
+    Vertical,
+)
+
 
 class TableModel(QAbstractTableModel):
     """The model of a table for chess notation."""
@@ -19,10 +30,10 @@ class TableModel(QAbstractTableModel):
     def data(
         self,
         index: QModelIndex | QPersistentModelIndex,
-        role: int = Qt.ItemDataRole.DisplayRole,
+        role: int = DisplayRole,
     ) -> Any:
         """Get notation items and process them for display role."""
-        if role == Qt.ItemDataRole.DisplayRole:
+        if role == DisplayRole:
             notation_item_index: int = 2 * index.row() + index.column()
 
             if 0 <= notation_item_index < len(self._notation_items):
@@ -31,12 +42,12 @@ class TableModel(QAbstractTableModel):
     def flags(
         self,
         index: QModelIndex | QPersistentModelIndex,
-    ) -> Qt.ItemFlag:
+    ) -> ItemFlag:
         """Determine the appropriate flag for a notation item."""
         if self.data(index):
-            return Qt.ItemFlag.ItemIsEnabled | Qt.ItemFlag.ItemIsSelectable
+            return ItemIsEnabled | ItemIsSelectable
         else:
-            return Qt.ItemFlag.NoItemFlags
+            return NoItemFlags
 
     def rowCount(
         self,
@@ -56,15 +67,15 @@ class TableModel(QAbstractTableModel):
     def headerData(
         self,
         section: int,
-        orientation: Qt.Orientation,
-        role: int = Qt.ItemDataRole.DisplayRole,
+        orientation: Orientation,
+        role: int = DisplayRole,
     ) -> Any:
         """Provide data for horizontal and vertical headers."""
-        if role == Qt.ItemDataRole.DisplayRole:
-            if orientation == Qt.Orientation.Horizontal:
+        if role == DisplayRole:
+            if orientation == Horizontal:
                 return ["White", "Black"][section]
 
-            if orientation == Qt.Orientation.Vertical:
+            if orientation == Vertical:
                 return section + 1
 
     def reset(self) -> None:

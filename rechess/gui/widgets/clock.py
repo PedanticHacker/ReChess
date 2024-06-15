@@ -1,9 +1,8 @@
-from __future__ import annotations
-
-from PySide6.QtCore import Qt, QTimer, Signal, Slot
+from PySide6.QtCore import QTimer, Signal, Slot
 from PySide6.QtWidgets import QLCDNumber
 
-from rechess import get_config_value
+from rechess.types import ClockColor, Flat, PreciseTimer
+from rechess.utils import get_config_value
 
 
 class Clock(QLCDNumber):
@@ -17,11 +16,11 @@ class Clock(QLCDNumber):
         self.setStyleSheet(clock_color)
 
         self.setFixedSize(200, 50)
-        self.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
+        self.setSegmentStyle(Flat)
 
         self._countdown_timer: QTimer = QTimer(self)
         self._countdown_timer.setInterval(1000)
-        self._countdown_timer.setTimerType(Qt.TimerType.PreciseTimer)
+        self._countdown_timer.setTimerType(PreciseTimer)
         self._countdown_timer.timeout.connect(self.update_time)
 
         self.reset()

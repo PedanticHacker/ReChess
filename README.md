@@ -1,14 +1,14 @@
 # ReChess
 
-A GUI app for playing chess against a UCI-based chess engine.
+A GUI app for playing chess against a UCI chess engine.
 
 ### Source Code
 
 The source code of ReChess is written in the **Python** programming
-language, primarily to be executed with its 3.12 version, but you are
+language, primarily to be launched with its 3.12 version, but you are
 free to make it work on one of its older versions. Note, though, that
 by using the 3.12 version, it is guaranteed that ReChess will work on
-Windows, Linux or macOS.
+Windows, Linux-based, or macOS platform.
 
 ### Dependencies
 
@@ -17,15 +17,14 @@ and the **python-chess** chess library.
 
 ### 3rd-Party Software
 
-ReChess integrates the **Stockfish 16.1** chess engine by default, but
-any other UCI-based chess engine can also be loaded to play against it
-or to do chessboard position analysis with it.
+ReChess integrates the **Stockfish** UCI chess engine.
 
-### Components
+### UI Components
 
-ReChess provides all the standard components to play chess, which are an
-SVG board with pieces, chess clocks, a FEN record editor and a table for
-showing move notation in the SAN (Standard Algebraic Notation) format.
+ReChess provides all the UI components for playing chess, which include
+an SVG board with pieces, chess clocks, a FEN record editor, and a table
+for displaying chess move notation in SAN (Standard Algebraic Notation)
+format.
 
 ### Piece Movement
 
@@ -56,13 +55,20 @@ The following screenshots reveal how ReChess looks like.
 ![ReChess on Windows 11](link "ReChess on Windows 11")
 *Promoting a white pawn to a queen, a rook, a bishop or a knight.*
 
-## UCI Engine Integration
+## UCI Chess Engine Integration & Protocol Compatibility
 
-By default, ReChess integrates the UCI-based Stockfish 16.1 engine for
-either the Windows, a Linux-based or the macOS operating system.
+The latest official version of the Stockfish UCI chess engine is
+integrated by default for Windows, Linux-based, and macOS platforms.
 
-A non-default engine can also be loaded and played against, but it must
-support the UCI protocol.
+Custom chess engines can also be loaded and played against in ReChess,
+provided they are compatible with the UCI protocol.
+
+## CECP Protocol Compatibility
+
+Chess engines compatible only with the CECP protocol and designed for
+either an XBoard or a WinBoard GUI cannot be loaded and played against
+in ReChess. It is specifically required that all chess engines must be
+compatible with the UCI protocol for integration and gameplay.
 
 ## Requirements
 

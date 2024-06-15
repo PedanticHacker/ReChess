@@ -2,7 +2,7 @@ from pathlib import Path
 
 from chess import Move
 from chess.engine import Score
-from PySide6.QtCore import Qt, QThreadPool, Slot
+from PySide6.QtCore import QThreadPool, Slot
 from PySide6.QtGui import QCloseEvent, QWheelEvent
 from PySide6.QtWidgets import (
     QFileDialog,
@@ -15,15 +15,11 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from rechess.types import ClockColor
-from rechess.utils import create_action, get_openings, get_svg_icon
 from rechess.core import Engine, Game, TableModel
 from rechess.gui.dialogs import SettingsDialog
 from rechess.gui.widgets import Clock, EvaluationBar, FenEditor, SvgBoard, TableView
-
-
-BOTTOM: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignBottom
-TOP: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop
+from rechess.types import Accepted, Bottom, ClockColor, Top
+from rechess.utils import create_action, get_openings, get_svg_icon
 
 
 class MainWindow(QMainWindow):
@@ -32,9 +28,27 @@ class MainWindow(QMainWindow):
     def __init__(self) -> None:
         super().__init__()
 
-        self.settings_dialog: SettingsDialog = SettingsDialog()
+        self._game: Game = Game()
+        self._engine: Engine = Engine(self._game)
 
-        self.create_widgets()
+        self._svg_board: SvgBoard = SvgBoard(self._game)
+        self._fen_editor: FenEditor = FenEditor(self._game)
+        self._evaluation_bar: EvaluationBar = EvaluationBar(self._game)
+
+        self._black_clock: Clock = Clock(ClockColor.Black)
+        self._white_clock: Clock = Clock(ClockColor.White)
+
+        self._settings_dialog: SettingsDialog = SettingsDialog()
+
+        self._table_model: TableModel = TableModel(self._game.notation)
+        self._table_view: TableView = TableView(self._table_model)
+
+        self._opening_label: QLabel = QLabel()
+        self._engine_name_label: QLabel = QLabel()
+        self._notifications_label: QLabel = QLabel()
+        self._engine_analysis_label: QLabel = QLabel()
+        self._engine_analysis_label.setWordWrap(True)
+
         self.create_actions()
         self.create_menu_bar()
         self.create_tool_bar()
@@ -43,26 +57,6 @@ class MainWindow(QMainWindow):
         self.create_status_bar()
         self.adjust_engine_buttons()
         self.connect_signals_to_slots()
-
-    def create_widgets(self) -> None:
-        """Create widgets for the main window."""
-        self._game: Game = Game()
-        self._engine: Engine = Engine(self._game)
-        self._svg_board: SvgBoard = SvgBoard(self._game)
-        self._fen_editor: FenEditor = FenEditor(self._game)
-        self._evaluation_bar: EvaluationBar = EvaluationBar(self._game)
-
-        self._table_model: TableModel = TableModel(self._game.notation)
-        self._table_view: TableView = TableView(self._table_model)
-
-        self._black_clock: Clock = Clock(ClockColor.Black)
-        self._white_clock: Clock = Clock(ClockColor.White)
-
-        self._opening_label: QLabel = QLabel()
-        self._engine_name_label: QLabel = QLabel()
-        self._notifications_label: QLabel = QLabel()
-        self._engine_analysis_label: QLabel = QLabel()
-        self._engine_analysis_label.setWordWrap(True)
 
     def create_actions(self) -> None:
         """Create actions for menu bar and tool bar."""
@@ -208,21 +202,21 @@ class MainWindow(QMainWindow):
     def set_grid_layout(self) -> None:
         """Set a grid layout for widgets on the main window."""
         self._grid_layout: QGridLayout = QGridLayout()
-        self._grid_layout.addWidget(self._black_clock, 0, 0, 1, 1, TOP)
-        self._grid_layout.addWidget(self._white_clock, 0, 0, 1, 1, BOTTOM)
+        self._grid_layout.addWidget(self._black_clock, 0, 0, 1, 1, Top)
+        self._grid_layout.addWidget(self._white_clock, 0, 0, 1, 1, Bottom)
         self._grid_layout.addWidget(self._svg_board, 0, 1, 1, 1)
         self._grid_layout.addWidget(self._evaluation_bar, 0, 2, 1, 1)
         self._grid_layout.addWidget(self._table_view, 0, 3, 1, 2)
         self._grid_layout.addWidget(self._notifications_label, 1, 3, 1, 1)
         self._grid_layout.addWidget(self._fen_editor, 1, 1, 1, 1)
-        self._grid_layout.addWidget(self._engine_analysis_label, 2, 1, 1, 1, TOP)
+        self._grid_layout.addWidget(self._engine_analysis_label, 2, 1, 1, 1, Top)
 
         self._widget_container: QWidget = QWidget()
         self._widget_container.setLayout(self._grid_layout)
         self.setCentralWidget(self._widget_container)
 
         if self._game.is_perspective_flipped():
-            self.flip_clock_positions()
+            self._flip_clock_alignments()
 
     def set_minimum_size(self) -> None:
         """Set a minimum size to be 1000 by 700 pixels."""
@@ -268,7 +262,7 @@ class MainWindow(QMainWindow):
 
     def flip(self) -> None:
         """Flip the current perspective."""
-        self.flip_clock_positions()
+        self._flip_clock_alignments()
         self._game.flip_perspective()
         self._evaluation_bar.flip_perspective()
         self._svg_board.draw()
@@ -281,8 +275,8 @@ class MainWindow(QMainWindow):
         self.invoke_engine()
 
     def show_settings_dialog(self) -> None:
-        """Show the Settings dialog."""
-        if self.settings_dialog.exec() == self.settings_dialog.DialogCode.Accepted:
+        """Show the Settings dialog to edit the app's settings."""
+        if self._settings_dialog.exec() == Accepted:
             self._black_clock.reset()
             self._white_clock.reset()
 
@@ -314,25 +308,25 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def show_about(self) -> None:
-        """Show the About message."""
+        """Show some information about the app."""
         QMessageBox.about(
             self,
             "About",
             (
-                "A GUI app for playing chess against a UCI engine.\n\n"
+                "A GUI app for playing chess against a UCI chess engine.\n\n"
                 "Copyright 2024 Boštjan Mejak\n"
                 "MIT License"
             ),
         )
 
-    def flip_clock_positions(self) -> None:
-        """Flip the position of the top and the bottom clocks."""
-        if TOP in self._grid_layout.itemAt(0).alignment():
-            self._grid_layout.itemAt(0).setAlignment(BOTTOM)
-            self._grid_layout.itemAt(1).setAlignment(TOP)
+    def _flip_clock_alignments(self) -> None:
+        """Flip the alignments of the top and bottom chess clocks."""
+        if Top in self._grid_layout.itemAt(0).alignment():
+            self._grid_layout.itemAt(0).setAlignment(Bottom)
+            self._grid_layout.itemAt(1).setAlignment(Top)
         else:
-            self._grid_layout.itemAt(0).setAlignment(TOP)
-            self._grid_layout.itemAt(1).setAlignment(BOTTOM)
+            self._grid_layout.itemAt(0).setAlignment(Top)
+            self._grid_layout.itemAt(1).setAlignment(Bottom)
 
         self._grid_layout.update()
 
@@ -354,7 +348,7 @@ class MainWindow(QMainWindow):
         self._fen_editor.setText(self._game.fen)
 
     def show_opening(self) -> None:
-        """Show an ECO code along with an opening name."""
+        """Show the ECO code along with the name of a chess opening."""
         fen: str = self._game.fen
         openings: dict[str, tuple[str, str]] = get_openings()
 
@@ -408,7 +402,7 @@ class MainWindow(QMainWindow):
     def start_new_game(self) -> None:
         """Start a new game by resetting everything."""
         if self._game.is_perspective_flipped():
-            self.flip_clock_positions()
+            self._flip_clock_alignments()
 
         self._black_clock.reset()
         self._white_clock.reset()

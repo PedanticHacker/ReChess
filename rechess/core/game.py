@@ -17,11 +17,9 @@ from PySide6.QtCore import QObject, QUrl, Signal
 from PySide6.QtMultimedia import QSoundEffect
 from PySide6.QtWidgets import QDialog
 
-from rechess import get_config_value, set_config_value
 from rechess.gui.dialogs import PromotionDialog
-
-
-type Accepted = QDialog.DialogCode.Accepted
+from rechess.types import Accepted
+from rechess.utils import get_config_value, set_config_value
 
 
 class Game(QObject):
