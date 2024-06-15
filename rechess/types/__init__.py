@@ -5,7 +5,6 @@ from .aliases import (
     Bottom,
     Cancel,
     DisplayRole,
-    Flat,
     Horizontal,
     ItemFlag,
     ItemIsEnabled,

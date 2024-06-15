@@ -1,5 +1,5 @@
 from PySide6.QtCore import Qt
-from PySide6.QtWidgets import QDialog, QDialogButtonBox, QLCDNumber
+from PySide6.QtWidgets import QDialog, QDialogButtonBox
 
 
 type Accepted = QDialog.DialogCode.Accepted
@@ -13,8 +13,6 @@ type Cancel = QDialogButtonBox.StandardButton.Cancel
 type Ok = QDialogButtonBox.StandardButton.Ok
 
 type DisplayRole = Qt.ItemDataRole.DisplayRole
-
-type Flat = QLCDNumber.SegmentStyle.Flat
 
 type ItemFlag = Qt.ItemFlag
 type ItemIsEnabled = Qt.ItemFlag.ItemIsEnabled
