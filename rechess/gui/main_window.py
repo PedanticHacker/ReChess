@@ -1,4 +1,3 @@
-from enum import StrEnum
 from pathlib import Path
 
 from chess import Move
@@ -16,7 +15,8 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from rechess import create_action, get_openings, get_svg_icon
+from rechess.types import ClockColor
+from rechess.utils import create_action, get_openings, get_svg_icon
 from rechess.core import Engine, Game, TableModel
 from rechess.gui.dialogs import SettingsDialog
 from rechess.gui.widgets import Clock, EvaluationBar, FenEditor, SvgBoard, TableView
@@ -24,13 +24,6 @@ from rechess.gui.widgets import Clock, EvaluationBar, FenEditor, SvgBoard, Table
 
 BOTTOM: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignBottom
 TOP: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop
-
-
-class ClockColor(StrEnum):
-    """A color for the clock of Black and White players."""
-
-    Black: str = "color: white; background: black;"
-    White: str = "color: black; background: white;"
 
 
 class MainWindow(QMainWindow):
