@@ -5,10 +5,13 @@ A GUI app for playing chess against a UCI chess engine.
 ### Source Code
 
 The source code of ReChess is written in the **Python** programming
-language, primarily to be launched with its 3.12 version, but you are
-free to make it work on one of its older versions. Note, though, that
-by using the 3.12 version, it is guaranteed that ReChess will work on
-Windows, Linux-based, or macOS platform.
+language. ReChess is intended to be launched with the 3.12 version of
+the Python interpreter.
+
+You are free to edit the source code and make it work for one of the
+older versions of the Python interpreter, but note that by using the
+3.12 version, it is guaranteed that ReChess will work on Windows,
+Linux-based, and the macOS platform.
 
 ### Dependencies
 
