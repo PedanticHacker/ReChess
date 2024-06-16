@@ -1,7 +1,6 @@
 from chess import BISHOP, Color, KNIGHT, PieceType, QUEEN, ROOK, WHITE
 from PySide6.QtWidgets import QDialog, QDialogButtonBox, QHBoxLayout
 
-from rechess.types import AcceptRole
 from rechess.utils import create_button, get_svg_icon
 
 
@@ -39,10 +38,22 @@ class PromotionDialog(QDialog):
 
     def add_buttons_to_box(self) -> None:
         """Add buttons to a button box."""
-        self._button_box.addButton(self.queen_button, AcceptRole)
-        self._button_box.addButton(self.rook_button, AcceptRole)
-        self._button_box.addButton(self.bishop_button, AcceptRole)
-        self._button_box.addButton(self.knight_button, AcceptRole)
+        self._button_box.addButton(
+            self.queen_button,
+            QDialogButtonBox.ButtonRole.AcceptRole,
+        )
+        self._button_box.addButton(
+            self.rook_button,
+            QDialogButtonBox.ButtonRole.AcceptRole,
+        )
+        self._button_box.addButton(
+            self.bishop_button,
+            QDialogButtonBox.ButtonRole.AcceptRole,
+        )
+        self._button_box.addButton(
+            self.knight_button,
+            QDialogButtonBox.ButtonRole.AcceptRole,
+        )
 
     def set_horizontal_layout(self) -> None:
         """Set a horizontal layout for the buttons in the button box."""

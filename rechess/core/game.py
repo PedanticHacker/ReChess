@@ -18,7 +18,6 @@ from PySide6.QtMultimedia import QSoundEffect
 from PySide6.QtWidgets import QDialog
 
 from rechess.gui.dialogs import PromotionDialog
-from rechess.types import Accepted
 from rechess.utils import get_config_value, set_config_value
 
 
@@ -127,7 +126,7 @@ class Game(QObject):
         """Show the promotion dialog to get a promotion piece type."""
         promotion_dialog: PromotionDialog = PromotionDialog(self.board.turn)
 
-        if promotion_dialog.exec() == Accepted:
+        if promotion_dialog.exec() == QDialog.DialogCode.Accepted:
             return promotion_dialog.piece_type
 
         return None

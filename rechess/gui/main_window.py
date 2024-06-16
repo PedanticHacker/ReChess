@@ -2,9 +2,10 @@ from pathlib import Path
 
 from chess import Move
 from chess.engine import Score
-from PySide6.QtCore import QThreadPool, Slot
+from PySide6.QtCore import Qt, QThreadPool, Slot
 from PySide6.QtGui import QCloseEvent, QWheelEvent
 from PySide6.QtWidgets import (
+    QDialog,
     QFileDialog,
     QGridLayout,
     QLabel,
@@ -16,9 +17,9 @@ from PySide6.QtWidgets import (
 )
 
 from rechess.core import Engine, Game, TableModel
+from rechess.enums import ClockColor
 from rechess.gui.dialogs import SettingsDialog
 from rechess.gui.widgets import Clock, EvaluationBar, FenEditor, SvgBoard, TableView
-from rechess.types import Accepted, Bottom, ClockColor, Top
 from rechess.utils import create_action, get_openings, get_svg_icon
 
 
@@ -202,14 +203,20 @@ class MainWindow(QMainWindow):
     def set_grid_layout(self) -> None:
         """Set a grid layout for widgets on the main window."""
         self._grid_layout: QGridLayout = QGridLayout()
-        self._grid_layout.addWidget(self._black_clock, 0, 0, 1, 1, Top)
-        self._grid_layout.addWidget(self._white_clock, 0, 0, 1, 1, Bottom)
+        self._grid_layout.addWidget(
+            self._black_clock, 0, 0, 1, 1, Qt.AlignmentFlag.AlignTop
+        )
+        self._grid_layout.addWidget(
+            self._white_clock, 0, 0, 1, 1, Qt.AlignmentFlag.AlignBottom
+        )
         self._grid_layout.addWidget(self._svg_board, 0, 1, 1, 1)
         self._grid_layout.addWidget(self._evaluation_bar, 0, 2, 1, 1)
         self._grid_layout.addWidget(self._table_view, 0, 3, 1, 2)
         self._grid_layout.addWidget(self._notifications_label, 1, 3, 1, 1)
         self._grid_layout.addWidget(self._fen_editor, 1, 1, 1, 1)
-        self._grid_layout.addWidget(self._engine_analysis_label, 2, 1, 1, 1, Top)
+        self._grid_layout.addWidget(
+            self._engine_analysis_label, 2, 1, 1, 1, Qt.AlignmentFlag.AlignTop
+        )
 
         self._widget_container: QWidget = QWidget()
         self._widget_container.setLayout(self._grid_layout)
@@ -276,7 +283,7 @@ class MainWindow(QMainWindow):
 
     def show_settings_dialog(self) -> None:
         """Show the Settings dialog to edit the app's settings."""
-        if self._settings_dialog.exec() == Accepted:
+        if self._settings_dialog.exec() == QDialog.DialogCode.Accepted:
             self._black_clock.reset()
             self._white_clock.reset()
 
@@ -321,12 +328,12 @@ class MainWindow(QMainWindow):
 
     def _flip_clock_alignments(self) -> None:
         """Flip the alignments of the top and bottom chess clocks."""
-        if Top in self._grid_layout.itemAt(0).alignment():
-            self._grid_layout.itemAt(0).setAlignment(Bottom)
-            self._grid_layout.itemAt(1).setAlignment(Top)
+        if Qt.AlignmentFlag.AlignTop in self._grid_layout.itemAt(0).alignment():
+            self._grid_layout.itemAt(0).setAlignment(Qt.AlignmentFlag.AlignBottom)
+            self._grid_layout.itemAt(1).setAlignment(Qt.AlignmentFlag.AlignTop)
         else:
-            self._grid_layout.itemAt(0).setAlignment(Top)
-            self._grid_layout.itemAt(1).setAlignment(Bottom)
+            self._grid_layout.itemAt(0).setAlignment(Qt.AlignmentFlag.AlignTop)
+            self._grid_layout.itemAt(1).setAlignment(Qt.AlignmentFlag.AlignBottom)
 
         self._grid_layout.update()
 
