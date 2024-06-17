@@ -86,9 +86,9 @@ any requirement that you might be missing.
 - **PySide6**, by executing the command `pip install PySide6`
 - **python-chess**, by executing the command `pip install chess`
 
-Alternatively, install **PySide6** and **python-chess** with the **pip**
+Alternatively, install **PySide6** and **python-chess** with the pip
 package manager in your command-line interface with admin privileges
-within ReChess' top-level directory and then execute this command:
+within ReChess' top-level directory by executing this command:
 
 ```bash
 pip install -r requirements.txt
