@@ -124,15 +124,25 @@ python-chess library!
 - [PyPI (Python Package Index) page](https://pypi.org/project/chess)
 
 4. Thanks to all developers for their dedicated work on the
-Stockfish chess engine!
+Stockfish UCI chess engine!
 
 - [Source code](https://github.com/official-stockfish/Stockfish)
 - [Downloads page](https://stockfishchess.org/download)
 
 ## License
 
-ReChess is licensed under the MIT License.
+ReChess is licensed under the **MIT License**.
 
-The contents of the license can be found in the `LICENSE.txt` file in
-the top-level directory of ReChess. The file provides all information
-about the permissions, limitations, and conditions of the license.
+See the `LICENSE.txt` file within ReChess' top-level directory about the
+permissions, limitations, and conditions.
+
+If you develop software based on ReChess, you are not obligated to use
+the same license, but you are required to give credit to the original
+author in the copyright notice.
+
+### Copyright Notice Example
+
+```
+Copyright 2023 Boštjan Mejak
+Copyright 2024 Your Name
+```
