@@ -99,7 +99,7 @@ pip install -r requirements.txt
 After installing all of ReChess' requirements, launch your favorite IDE
 (e.g., PyCharm, VSCode, Wing, Spyder, etc.) or your favorite code editor
 (e.g., Sublime Text, Notepad++, UltraEdit, Atom, etc.), then build the
-`main.py` file found in the top-level directory of ReChess.
+`main.py` file found in ReChess' top-level directory.
 
 Alternatively, execute the command `python main.py` in your command-line
 interface within ReChess' top-level directory.
