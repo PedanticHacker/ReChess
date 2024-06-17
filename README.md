@@ -90,7 +90,7 @@ Alternatively, install **PySide6** and **python-chess** with the pip
 package manager in your command-line interface with admin privileges
 within ReChess' top-level directory by executing this command:
 
-```bash
+```
 pip install -r requirements.txt
 ```
 
