@@ -29,7 +29,7 @@ format.
 
 ### Game Rules
 
-ReChess only adheres to the rules of standard chess.
+ReChess adheres only to the rules of standard chess.
 
 > [!NOTE]
 > Chess variants are not supported.
