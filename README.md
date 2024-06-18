@@ -27,19 +27,24 @@ an SVG board with pieces, chess clocks, a FEN record editor, and a table
 for displaying chess move notation in SAN (Standard Algebraic Notation)
 format.
 
-### Movement of Chess Pieces
+### Game Rules
 
-Moving chess pieces on the board adheres to the rules of standard chess.
-
-To move a chess piece from one square to another, click it and then
-click its legal target square.
+ReChess only adheres to the rules of standard chess.
 
 > [!NOTE]
-> Drag-and-drop functionality for moving chess pieces is not supported.
+> Chess variants are not supported.
 
-### Move Legality Indication
+### Chess Moves
 
-After clicking a piece, all the legal squares of that piece are marked with a dot.
+To make a chess move, click the origin square of a chess piece and then
+click its legal square.
+
+> [!NOTE]
+> Drag-and-drop functionality for making chess moves is not supported.
+
+### Legal Square Markers
+
+Upon clicking a chess piece, its legal squares are marked with a dot.
 
 ### Appearance
 
@@ -149,5 +154,5 @@ Copyright <year> <name and surname>
 ```
 
 On the second line, fill out the year in which you are releasing your
-ReChess-based software and then fill out your name and surname, but
-without the `<` and `>` characters.
+ReChess-based software and then fill out your name and surname, without
+the `<` and `>` characters.
