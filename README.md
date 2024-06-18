@@ -34,8 +34,8 @@ Moving chess pieces on the board adheres to the rules of standard chess.
 To move a chess piece from one square to another, click it and then
 click its legal target square.
 
-[!NOTE]
-Drag-and-drop functionality for moving chess pieces is not supported.
+> [!NOTE]
+> Drag-and-drop functionality for moving chess pieces is not supported.
 
 ### Move Legality Indication
 
