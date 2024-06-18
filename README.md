@@ -85,12 +85,12 @@ any requirement that you might be missing.
 
 1. Install the Python programming language:
 
-- [**Python 3.12.4**](https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe)
+    - [**Python 3.12.4**](https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe)
 
 2. In a command-line interface with admin privileges, install these:
 
-- **PySide6**, by executing the command `pip install PySide6`
-- **python-chess**, by executing the command `pip install chess`
+    - **PySide6**, by executing the command `pip install PySide6`
+    - **python-chess**, by executing the command `pip install chess`
 
 Alternatively, install **PySide6** and **python-chess** with the pip
 package manager in your command-line interface with admin privileges
@@ -115,25 +115,25 @@ interface within ReChess' top-level directory.
 1. Thanks to all developers for their dedicated work on the Python
 programming language!
 
-- [Source code](https://github.com/python/cpython)
-- [Downloads page](https://www.python.org/downloads)
+    - [Source code](https://github.com/python/cpython)
+    - [Downloads page](https://www.python.org/downloads)
 
 2. Thanks to all developers for their dedicated work on the PySide6
 GUI framework!
 
-- [PyPI (Python Package Index) page](https://pypi.org/project/PySide6)
+    - [PyPI (Python Package Index) page](https://pypi.org/project/PySide6)
 
 3. Thanks to developer Niklas Fiekas for his dedicated work on the
 python-chess library!
 
-- [Source code](https://github.com/niklasf/python-chess)
-- [PyPI (Python Package Index) page](https://pypi.org/project/chess)
+    - [Source code](https://github.com/niklasf/python-chess)
+    - [PyPI (Python Package Index) page](https://pypi.org/project/chess)
 
 4. Thanks to all developers for their dedicated work on the
 Stockfish UCI chess engine!
 
-- [Source code](https://github.com/official-stockfish/Stockfish)
-- [Downloads page](https://stockfishchess.org/download)
+    - [Source code](https://github.com/official-stockfish/Stockfish)
+    - [Downloads page](https://stockfishchess.org/download)
 
 ## License
 
