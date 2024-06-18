@@ -64,8 +64,8 @@ The following screenshots show how ReChess looks.
 
 ## UCI Chess Engine Integration & Protocol Compatibility
 
-The latest official version of the Stockfish UCI chess engine is
-integrated for Windows, Linux-based, and macOS platforms.
+The latest version of the Stockfish UCI chess engine is integrated in
+ReChess and works on Windows, Linux-based, and macOS platforms.
 
 Custom chess engines can also be loaded and played against in ReChess,
 provided they are compatible with the UCI protocol.
