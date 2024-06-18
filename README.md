@@ -5,11 +5,11 @@ A GUI app for playing chess against a UCI chess engine.
 ### Source Code
 
 ReChess' source code is written in the **Python** programming language.
-ReChess must be launched with Python interpreter's 3.12 version.
+ReChess should be launched with the Python interpreter version 3.12.
 
-You may edit the source code to make it work with older interpreter's
-versions, but note that using version 3.12 guarantees that ReChess will
-work on Windows, Linux-based, and macOS platforms.
+You may edit the source code to make it work with older versions of the
+Python interpreter, but note that using version 3.12 guarantees that
+ReChess will work on Windows, Linux-based, and macOS platforms.
 
 ### Dependencies
 
@@ -27,18 +27,20 @@ an SVG board with pieces, chess clocks, a FEN record editor, and a table
 for displaying chess move notation in SAN (Standard Algebraic Notation)
 format.
 
-### Piece Movement
+### Movement of Chess Pieces
 
-Moving the pieces on the board adheres to the rules of standard chess.
+Moving chess pieces on the board adheres to the rules of standard chess.
 
-To move a piece from one square to another, click the piece and then
-click its target square.
+To move a chess piece from one square to another, click it and then
+click its legal target square.
 
-Note: Drag-and-drop functionality for moving pieces is not supported.
+::: Note
+Drag-and-drop functionality for moving chess pieces is not supported.
+:::
 
 ### Move Legality Indication
 
-After clicking a piece, its legal squares become marked with a dot.
+After clicking a piece, all the legal squares of that piece are marked with a dot.
 
 ### Appearance
 
@@ -133,16 +135,20 @@ Stockfish UCI chess engine!
 
 ReChess is licensed under the **MIT License**.
 
-See the `LICENSE.txt` file within ReChess' top-level directory about the
-permissions, limitations, and conditions.
+See the `LICENSE.txt` file in ReChess' top-level directory about the
+permissions, limitations, and conditions of the license.
 
 If you develop software based on ReChess, you are not obligated to use
-the same license, but you are required to give credit to the original
-author in the copyright notice.
+the same license, but you are required to add the original author's
+copyright notice.
 
-### Copyright Notice Example
+So, your copyright notice would look like this:
 
 ```
-Copyright 2023 Boštjan Mejak
-Copyright 2024 Your Name
+Copyright 2024 Boštjan Mejak
+Copyright <year> <name and surname>
 ```
+
+On the second line, fill out the year in which you are releasing your
+ReChess-based software and then fill out your name and surname, but
+without the `<` and `>` characters.
