@@ -31,7 +31,7 @@ class TableView(QTableView):
         self.selectionModel().selectionChanged.connect(self.on_selection_changed)
 
     def select_prelast_item(self) -> None:
-        """Select an item before the last."""
+        """Select a notation item before the last."""
         model: QAbstractItemModel = self.model()
 
         last_row: int = model.rowCount() - 1
@@ -75,7 +75,7 @@ class TableView(QTableView):
         return self.model().index(0, 0)
 
     def previous_index(self) -> QModelIndex:
-        """Get an index of the previous item."""
+        """Get an index of the previous notation item."""
         current_index: QModelIndex = self.selectionModel().currentIndex()
 
         previous_row, previous_column = divmod(self.sequential_index - 1, 2)
@@ -84,7 +84,7 @@ class TableView(QTableView):
         return new_index
 
     def next_index(self) -> QModelIndex:
-        """Get an index of the next item."""
+        """Get an index of the next notation item."""
         current_index: QModelIndex = self.selectionModel().currentIndex()
 
         next_row, next_column = divmod(self.sequential_index + 1, 2)
