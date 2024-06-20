@@ -1,52 +1,63 @@
 # ReChess
 
-A GUI app for playing chess against a UCI chess engine.
+## What is this?
 
-### Source Code
+This is a ![GUI](https://en.wikipedia.org/wiki/Graphical_user_interface "Graphical User Interface")
+application for playing chess against a ![UCI](https://en.wikipedia.org/wiki/Universal_Chess_Interface "Universal Chess Interface")
+chess engine.
 
-ReChess's source code is written in the **Python** programming language.
-ReChess should be launched with the Python interpreter version 3.12.
+## Which programming language is this written in?
 
-You may edit the source code to make it work with older versions of the
-Python interpreter, but note that using version 3.12 guarantees that
-ReChess will work on Windows, Linux-based, and macOS platforms.
+The source code of ReChess is written completely in **Python**.
 
-### Dependencies
+## Which version of Python are we talking about here?
+
+ReChess should be launched with Python **3.12**.
+
+## Why only 3.12?
+
+I guarantee that using the 3.12 version, ReChess will work on Windows,
+any Linux-based, and macOS platforms.
+
+## What about other Python versions?
+
+You may edit the source code to make it work with older Python versions.
+
+## Are there any dependencies?
 
 ReChess depends upon and extensively uses the **PySide6** GUI framework
 and the **python-chess** library.
 
-### 3rd-Party Software
+## Is there any 3rd-party software involved?
 
-ReChess integrates the **Stockfish** chess engine.
+Yes. ReChess integrates **Stockfish** by default, so like the strongest
+chess engine in the world.
 
-### UI Components
+## What do I get?
 
-ReChess provides all the UI components for playing chess, which include
-an SVG board with pieces, chess clocks, a FEN record editor, and a table
-for displaying chess move notation in SAN (Standard Algebraic Notation)
+ReChess provides you with all the basic stuff for playing chess, so like
+a nice chessboard with stunning chess pieces, two chess clocks, a ![FEN](https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation "Forsyth-Edwards Notation") record editor, and a table for displaying
+chess move notation in the ![SAN](https://en.wikipedia.org/wiki/Algebraic_notation_(chess) "Standard Algebraic Notation")
 format.
 
-### Game Rules
+## Which chess variants are supported?
 
-ReChess adheres only to the rules of standard chess.
+Only standard chess is supported. Chess variants are not supported.
 
-> [!NOTE]
-> Chess variants are not supported.
+## How do I move a chess piece on the chessboard?
 
-### Chess Moves
+To make a chess move, click a chess piece and then click one of its
+legal squares.
 
-To make a chess move, click the origin square of a chess piece and then
-click its legal square.
+## Can't I drag and then drop a chess piece?
 
-> [!NOTE]
-> Drag-and-drop functionality for making chess moves is not supported.
+Nope. Drag-and-drop functionality is not supported, just click-click.
 
-### Legal Square Markers
+## How do I know what's a legal square of a chess piece?
 
 After you click a chess piece, its legal squares are marked with a dot.
 
-### Appearance
+## How does ReChess look?
 
 The following screenshots show how ReChess looks.
 
@@ -57,25 +68,29 @@ The following screenshots show how ReChess looks.
 *Selecting a move from the chess notation table.*
 
 ![ReChess on Windows 11](link "ReChess on Windows 11")
-*Analyzing a position with the integrated chess engine.*
+*Analyzing a position with the default chess engine.*
 
 ![ReChess on Windows 11](link "ReChess on Windows 11")
 *Promoting a white pawn to a queen, a rook, a bishop, or a knight.*
 
-## Chess Engine Integration & Protocol Compatibility
+## What's the default chess engine in ReChess?
 
-The Stockfish chess engine is integrated in ReChess by default and works
-on Windows, Linux-based, and macOS platforms.
+The latest version of the Stockfish chess engine is the default and
+works on Windows, any Linux-based, and macOS platforms.
+
+## What if I want to play against some other chess engine?
 
 Custom chess engines can also be loaded and played against in ReChess,
-provided they are compatible with the UCI protocol.
+but make sure that yours is a ![UCI](https://en.wikipedia.org/wiki/Universal_Chess_Interface "Universal Chess Interface")
+chess engine.
 
-## CECP Protocol Compatibility
+## Why is that?
 
-The chess engines, compatible only with the CECP protocol and designed
-for a WinBoard or an XBoard GUI cannot be loaded and played against in
-ReChess. It is required that all chess engines are compatible with the
-UCI protocol for proper integration and gameplay availability.
+Chess engines that are compatible only with the ![CECP](https://www.chessprogramming.org/Chess_Engine_Communication_Protocol "Chess Engine Communication Protocol") protocol and designed for a ![WinBoard](https://www.chessprogramming.org/WinBoard)
+or an ![XBoard](https://www.chessprogramming.org/XBoard) GUI cannot be
+loaded and played against in ReChess, since there's no support for it,
+unless your ![CECP](https://www.chessprogramming.org/Chess_Engine_Communication_Protocol "Chess Engine Communication Protocol")
+chess engine supports UCI as well, then you're in luck.
 
 ## Requirements
 
@@ -100,58 +115,62 @@ within ReChess's top-level directory by executing this command:
 pip install -r requirements.txt
 ```
 
-## How to Launch ReChess
+## How can I launch ReChess?
 
-After installing all of ReChess' requirements, launch your favorite IDE
-(e.g., PyCharm, VSCode, Wing, Spyder, etc.) or your favorite code editor
-(e.g., Sublime Text, Notepad++, UltraEdit, Atom, etc.), then build the
-`main.py` file found in ReChess's top-level directory.
+After installing ReChess's requirements, launch your favorite ![IDE](https://en.wikipedia.org/wiki/Integrated_development_environment "Integrated Development Environment") (e.g., PyCharm, VSCode, Wing, Spyder, etc.) or
+your favorite code editor (e.g., Sublime Text, Notepad++, UltraEdit,
+Atom, etc.), then build the `main.py` file found in ReChess's top-level
+directory.
 
-Alternatively, execute the `python main.py` command in your command-line
-interface within ReChess's top-level directory.
+Alternatively, you can also execute the `python main.py` command in your
+command-line interface within ReChess's top-level directory.
 
-## Credits and Links
+## Who's to thank for all this?
 
-1. Thanks to all developers for their dedicated work on the Python
+1. Thanks goes to all developers for their dedicated work on the Python
 programming language!
 
     - [Source code](https://github.com/python/cpython)
     - [Downloads page](https://www.python.org/downloads)
 
-2. Thanks to all developers for their dedicated work on the PySide6
+2. Thanks goes to all developers for their dedicated work on the PySide6
 GUI framework!
 
     - [PyPI (Python Package Index) page](https://pypi.org/project/PySide6)
 
-3. Thanks to developer Niklas Fiekas for his dedicated work on the
+3. Thanks goes to developer Niklas Fiekas for his dedicated work on the
 python-chess library!
 
     - [Source code](https://github.com/niklasf/python-chess)
     - [PyPI (Python Package Index) page](https://pypi.org/project/chess)
 
-4. Thanks to all developers for their dedicated work on the Stockfish
-chess engine!
+4. Last but not least, thanks also goes to all developers for their
+dedicated work on the Stockfish chess engine!
 
     - [Source code](https://github.com/official-stockfish/Stockfish)
     - [Downloads page](https://stockfishchess.org/download)
 
-## License
+## What license does ReChess use?
 
 ReChess is licensed under the **MIT License**.
+
+## Where can I see the license?
 
 See the `LICENSE.txt` file in ReChess's top-level directory about the
 permissions, limitations, and conditions of the license.
 
-If you develop software based on ReChess, you are not obligated to use
-the same license, but you are required to add the original author's
-copyright notice.
+## What if I develop an application based on ReChess?
 
-Your copyright notice should look like below. On the second line, change
-the example year to the year when you are releasing your ReChess-based
-software and also change the example name and surname to your legal name
-and your legal surname.
+In that case, you are not obligated to use the same license, but you are
+required to add the original author's copyright notice (i.e., mine).
+
+Your copyright notice would then look like this:
 
 ```
 Copyright 2024 Boštjan Mejak
 Copyright 2024 John Doe
 ```
+
+On the second line, change the year to the one when you are releasing
+your application based on ReChess and also change the name and surname
+to your actual legal name and your actual legal surname.
