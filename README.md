@@ -2,8 +2,8 @@
 
 ## What is this?
 
-This is a ![GUI](https://en.wikipedia.org/wiki/Graphical_user_interface "Graphical User Interface")
-application for playing chess against a ![UCI](https://en.wikipedia.org/wiki/Universal_Chess_Interface "Universal Chess Interface")
+This is a [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface "Graphical User Interface")
+application for playing chess against a [UCI](https://en.wikipedia.org/wiki/Universal_Chess_Interface "Universal Chess Interface")
 chess engine.
 
 ## Which programming language is this written in?
