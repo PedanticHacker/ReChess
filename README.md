@@ -118,9 +118,9 @@ pip install -r requirements.txt
 ## How can I launch ReChess?
 
 After installing ReChess's requirements, launch your favorite [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment "Integrated Development Environment") (e.g., PyCharm, VSCode, Wing, Spyder, etc.) or
-your favorite code editor (e.g., Sublime Text, Notepad++, UltraEdit,
-Atom, etc.), then build the `main.py` file found in ReChess's top-level
-directory.
+your favorite [source-code editor](https://en.wikipedia.org/wiki/Source-code_editor)
+(e.g., Sublime Text, Notepad++, UltraEdit, Atom, etc.), then build the
+`main.py` file found in ReChess's top-level directory.
 
 Alternatively, you can also execute the `python main.py` command in your
 command-line interface within ReChess's top-level directory.
