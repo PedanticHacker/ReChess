@@ -35,14 +35,15 @@ playing and analyzing.
 ## What do I get?
 
 With ReChess, you get all the basic stuff for playing chess:
-SVG chessboard,
-chess clocks,
-FEN record editor,
-table that displays chess move notation in SAN format.
+
+- SVG chessboard
+- chess clocks
+- FEN record editor
+- table that displays chess move notation in SAN format
 
 ### Can I do a chessboard position analysis?
 
-Yep. You can analyze a chessboard position with the default chess engine
+Yes. You can analyze a chessboard position with the default chess engine
 or the one you load yourself.
 
 ## Which chess variants are supported?
@@ -52,11 +53,11 @@ Only standard chess is supported. Chess variants are not supported.
 ## How do I move a piece on the chessboard?
 
 Making a move in ReChess is as simple as a click. Just click a piece and
-then click on one of its legal squares to make your move.
+then click one of its legal squares to make your move.
 
 ### Can I drag and then drop a piece?
 
-Nope. Drag-and-drop functionality is not supported.
+No. Drag-and-drop functionality is not supported.
 
 ### How can I know what's the legal square of a piece?
 
