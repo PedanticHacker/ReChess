@@ -8,7 +8,7 @@ ReChess is an app for playing chess against a chess engine.
 
 That would be **Python**.
 
-## What version of Python are we talking about here?
+### What version of Python are we talking about here?
 
 It would be best if you launch ReChess using Python **3.12**.
 
