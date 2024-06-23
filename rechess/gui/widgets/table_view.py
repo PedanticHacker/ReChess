@@ -41,10 +41,6 @@ class TableView(QTableView):
 
     def select_previous_item(self) -> None:
         """Select the previous notation item by selecting its index."""
-        if not self.has_selection():
-            self.select_first_item()
-            return
-
         previous_index: QModelIndex = self.previous_index()
         self.select(previous_index)
 
