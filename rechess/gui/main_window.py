@@ -367,6 +367,7 @@ class MainWindow(QMainWindow):
         """Refresh the current UI's state to a new state."""
         self._engine.stop_analysis()
         self._table_model.refresh_view()
+        self._table_view.select_last_item()
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
 
@@ -383,7 +384,7 @@ class MainWindow(QMainWindow):
             self._notifications_label.setText(self._game.result)
             self.offer_new_game()
 
-        if self._game.is_engine_on_turn() and not self._table_view.has_selection():
+        if self._game.is_engine_on_turn():
             self.invoke_engine()
 
     def switch_clock_timers(self) -> None:
