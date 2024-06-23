@@ -20,7 +20,7 @@ Windows, Linux, and macOS.
 ### What about other Python versions?
 
 Modifying the source code is quite simple if you're using an older
-version of Python and want to adapt it.
+version of Python and want to adapt to it.
 
 ## Are there any dependencies?
 
