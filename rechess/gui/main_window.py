@@ -476,7 +476,7 @@ class MainWindow(QMainWindow):
     def on_item_selected(self, sequential_index: int) -> None:
         """Set a position and an arrow from the `sequential_index`."""
         if sequential_index > -1:
-            move: Move = self._game.set_move_by(sequential_index)
+            move: Move = self._game.set_move_with(sequential_index)
             self._game.play_sound_effect_for(move)
             self._game.set_arrow_for(move)
         else:
@@ -490,8 +490,9 @@ class MainWindow(QMainWindow):
     def on_move_played(self, move: Move) -> None:
         """Play the `move` by pushing it and refreshing the UI."""
         if self._game.is_legal(move):
-            if self._table_view.sequential_index > -1:
-                self._game.delete_data_after(self._table_view.sequential_index)
+            sequential_index: int = self._table_view.sequential_index()
+            if sequential_index > -1:
+                self._game.delete_data_after(sequential_index)
 
             self._game.push(move)
             self.refresh_ui()
