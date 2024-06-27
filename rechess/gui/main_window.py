@@ -475,7 +475,7 @@ class MainWindow(QMainWindow):
     @Slot(int)
     def on_item_selected(self, sequential_index: int) -> None:
         """Set a position and an arrow from the `sequential_index`."""
-        if sequential_index >= 0:
+        if sequential_index > -1:
             move: Move = self._game.set_move_by(sequential_index)
             self._game.play_sound_effect_for(move)
             self._game.set_arrow_for(move)
@@ -490,7 +490,7 @@ class MainWindow(QMainWindow):
     def on_move_played(self, move: Move) -> None:
         """Play the `move` by pushing it and refreshing the UI."""
         if self._game.is_legal(move):
-            if self._table_view.sequential_index >= 0:
+            if self._table_view.sequential_index > -1:
                 self._game.delete_data_after(self._table_view.sequential_index)
 
             self._game.push(move)
@@ -498,10 +498,10 @@ class MainWindow(QMainWindow):
 
     @Slot(str)
     def on_san_variation_analyzed(self, san_variation: str) -> None:
-        """Show the `san_variation` from engine analysis."""
+        """Show the `san_variation` from chess engine analysis."""
         self._engine_analysis_label.setText(san_variation)
 
     @Slot(Score)
     def on_white_score_analyzed(self, white_score: Score) -> None:
-        """Show a position evaluation as per the `white_score`."""
+        """Show a position evaluation from the `white_score`."""
         self._evaluation_bar.animate(white_score)
