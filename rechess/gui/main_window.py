@@ -241,10 +241,9 @@ class MainWindow(QMainWindow):
             self.start_analysis_action.setDisabled(True)
 
     def connect_signals_to_slots(self) -> None:
-        """Connect the Game's and Engine's signals to slots."""
         self._game.move_played.connect(self.on_move_played)
         self._engine.move_played.connect(self.on_move_played)
-        self._table_view.item_selected.connect(self.on_item_selected)
+        self._svg_board.board_changed.connect(self.on_board_changed)
         self._engine.best_move_analyzed.connect(self.on_best_move_analyzed)
         self._engine.white_score_analyzed.connect(self.on_white_score_analyzed)
         self._black_clock.time_expired.connect(self.on_black_clock_time_expired)
@@ -472,11 +471,13 @@ class MainWindow(QMainWindow):
         self._game.set_arrow_for(best_move)
         self._svg_board.draw()
 
-    @Slot(int)
-    def on_item_selected(self, sequential_index: int) -> None:
-        """Set a position and an arrow from the `sequential_index`."""
-        if sequential_index > -1:
-            move: Move = self._game.set_move_with(sequential_index)
+    @Slot()
+    def on_board_changed(self) -> None:
+        """Set a board position and a move arrow."""
+        ply_index = self._table_view.ply_index
+
+        if ply_index > -1:
+            move: Move = self._game.set_move_with(ply_index)
             self._game.play_sound_effect_for(move)
             self._game.set_arrow_for(move)
         else:
@@ -490,9 +491,9 @@ class MainWindow(QMainWindow):
     def on_move_played(self, move: Move) -> None:
         """Play the `move` by pushing it and refreshing the UI."""
         if self._game.is_legal(move):
-            sequential_index: int = self._table_view.sequential_index
-            if sequential_index > -1:
-                self._game.delete_data_after(sequential_index)
+            ply_index: int = self._table_view.ply_index
+            if ply_index > -1:
+                self._game.delete_data_after(ply_index)
 
             self._game.push(move)
             self.refresh_ui()

@@ -3,16 +3,12 @@ from PySide6.QtCore import (
     QAbstractTableModel,
     QItemSelectionModel,
     QModelIndex,
-    Signal,
-    Slot,
 )
 from PySide6.QtWidgets import QAbstractItemView, QHeaderView, QTableView
 
 
 class TableView(QTableView):
     """A view for displaying notation items in a 2-column table."""
-
-    item_selected: Signal = Signal(int)
 
     def __init__(self, table_model: QAbstractTableModel) -> None:
         super().__init__()
@@ -28,108 +24,46 @@ class TableView(QTableView):
         self.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
 
         self.model().layoutChanged.connect(self.scrollToBottom)
-        self.model().dataChanged.connect(self.select_last_item)
-        self.model().rowsInserted.connect(self.select_last_item)
-        self.selectionModel().selectionChanged.connect(self.on_selection_changed)
-
-    def select_prelast_item(self) -> None:
-        """Select a notation item before the last."""
-        model: QAbstractItemModel = self.model()
-
-        last_row: int = model.rowCount() - 1
-        prelast_row: int = last_row - 1
-        first_column: int = 0
-        last_column: int = 1
-
-        last_index: QModelIndex = model.index(last_row, last_column)
-        first_column_index: QModelIndex = model.index(last_row, first_column)
-        second_column_index: QModelIndex = model.index(prelast_row, last_column)
-        prelast_index: QModelIndex = (
-            first_column_index if self.has_data(last_index) else second_column_index
-        )
-
-        self.select(prelast_index)
 
     def select_last_item(self) -> None:
         """Select the last notation item."""
         last_row: int = self.model().rowCount() - 1
         last_column: int = 1 if self.model().index(last_row, 1).data() else 0
-        last_index: QModelIndex = self.model().index(last_row, last_column)
-        self.select(last_index)
+        last_model_index: QModelIndex = self.model().index(last_row, last_column)
+        self.select(last_model_index)
 
     def select_previous_item(self) -> None:
-        """Select the previous notation item by selecting its index."""
-        previous_index: QModelIndex = self.previous_index()
-
-        if not self.has_selection():
-            self.select_prelast_item()
-            return
-
-        if self.has_data(previous_index):
-            self.select(previous_index)
-        else:
-            self.clearFocus()
-            self.clearSelection()
-            self.item_selected.emit(-1)
-
-        self.select(previous_index)
+        """Select the previous notation item."""
+        self.select(self.previous_index())
 
     def select_next_item(self) -> None:
-        """Select the next notation item by selecting its index."""
-        next_index: QModelIndex = self.next_index()
-
-        if not self.has_selection():
-            self.select_first_item()
-            return
-
-        if self.has_data(next_index):
-            self.select(next_index)
-
-        self.select(next_index)
-
-    def first_index(self) -> QModelIndex:
-        """Get an index of the first notation item."""
-        return self.model().index(0, 0)
+        """Select the next notation item."""
+        self.select(self.next_index())
 
     def select_first_item(self) -> None:
-        """Select the first notation item by selecting its index."""
-        first_index = self.model().index(0, 0)
-        self.select(first_index)
+        """Select the first notation item."""
+        first_model_index = self.model().index(0, 0)
+        self.select(first_model_index)
 
     def previous_index(self) -> QModelIndex:
-        """Get an index of the previous notation item."""
-        current_index: QModelIndex = self.selectionModel().currentIndex()
-        previous_row, previous_column = divmod(self.sequential_index - 1, 2)
+        """Get a model index of the previous notation item."""
+        previous_row, previous_column = divmod(self.ply_index - 1, 2)
         return self.model().index(previous_row, previous_column)
 
     def next_index(self) -> QModelIndex:
-        """Get an index of the next notation item."""
-        current_index: QModelIndex = self.selectionModel().currentIndex()
-        next_row, next_column = divmod(self.sequential_index + 1, 2)
+        """Get a model index of the next notation item."""
+        next_row, next_column = divmod(self.ply_index + 1, 2)
         return self.model().index(next_row, next_column)
 
-    def select(self, index: QModelIndex) -> None:
-        """Select a notation item with the `index`."""
+    def select(self, model_index: QModelIndex) -> None:
+        """Select a notation item with the `model_index`."""
         self.selectionModel().setCurrentIndex(
-            index,
+            model_index,
             QItemSelectionModel.SelectionFlag.ClearAndSelect,
         )
 
-    def has_data(self, index: QModelIndex) -> bool:
-        """Check whether an item with the `index` has data."""
-        return bool(self.model().data(index))
-
-    def has_selection(self) -> bool:
-        """Check whether any item is currently selected."""
-        return self.selectionModel().hasSelection()
-
     @property
-    def sequential_index(self) -> int:
-        """Return the sequential index of a selected notation item."""
+    def ply_index(self) -> int:
+        """Get the index of a ply (i.e., a half-move)."""
         current_index: QModelIndex = self.selectionModel().currentIndex()
         return 2 * current_index.row() + current_index.column()
-
-    @Slot(int)
-    def on_selection_changed(self) -> None:
-        """Emit the sequential index of a selected notation item."""
-        self.item_selected.emit(self.sequential_index)

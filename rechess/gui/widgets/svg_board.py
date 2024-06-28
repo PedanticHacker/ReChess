@@ -1,12 +1,15 @@
 from __future__ import annotations
 
 from chess import svg
+from PySide6.QtCore import Signal
 from PySide6.QtGui import QMouseEvent
 from PySide6.QtSvgWidgets import QSvgWidget
 
 
 class SvgBoard(QSvgWidget):
     """An SVG board with pieces."""
+
+    board_changed: Signal = Signal()
 
     def __init__(self, game: Game) -> None:
         super().__init__()
@@ -49,4 +52,4 @@ class SvgBoard(QSvgWidget):
         """Respond to pressing the primary mouse button."""
         x, y = event.position().x(), event.position().y()
         self._game.get_square_from(x, y)
-        self.draw()
+        self.board_changed.emit()

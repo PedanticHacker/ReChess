@@ -135,19 +135,19 @@ class Game(QObject):
         """Get a variation of moves in SAN format from the move stack."""
         return Board().variation_san(self.board.move_stack)
 
-    def set_move_with(self, sequential_index: int) -> Move:
-        """Set a move with the `sequential_index`."""
-        self.board = self.positions[sequential_index]
-        return self.board.move_stack[sequential_index]
+    def set_move_with(self, ply_index: int) -> Move:
+        """Set a move with the `ply_index`."""
+        self.board = self.positions[ply_index]
+        return self.board.move_stack[ply_index]
 
     def pass_turn_to_engine(self) -> None:
         """Pass the current turn to the engine."""
         self._engine_turn = not self._engine_turn
         # utils.set_config_values()
 
-    def delete_data_after(self, index: int) -> None:
-        """Delete notation items and positions after `index`."""
-        data_after_index: slice = slice(index + 1, len(self.notation))
+    def delete_data_after(self, ply_index: int) -> None:
+        """Delete notation items and positions after `ply_index`."""
+        data_after_index: slice = slice(ply_index + 1, len(self.notation))
         del self.notation[data_after_index]
         del self.positions[data_after_index]
 
