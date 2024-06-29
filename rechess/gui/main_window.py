@@ -456,12 +456,12 @@ class MainWindow(QMainWindow):
 
     @Slot()
     def on_black_clock_time_expired(self) -> None:
-        """Notify that White wins because Black's clock time expired."""
+        """Notify that White wins as Black's clock time has expired."""
         self._notifications_label.setText("White wins on time")
 
     @Slot()
     def on_white_clock_time_expired(self) -> None:
-        """Notify that Black wins because White's clock time expired."""
+        """Notify that Black wins as White's clock time has expired."""
         self._notifications_label.setText("Black wins on time")
 
     @Slot(Move)
