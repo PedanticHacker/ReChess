@@ -145,7 +145,7 @@ class Game(QObject):
         self._engine_turn = not self._engine_turn
         # utils.set_config_values()
 
-    def delete_notation_items_after(self, ply_index: int) -> None:
+    def delete_data_after(self, ply_index: int) -> None:
         """Delete notation items and positions after `ply_index`."""
         after_ply_index: slice = slice(ply_index + 1, len(self.notation))
         del self.notation[after_ply_index]

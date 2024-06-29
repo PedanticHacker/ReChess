@@ -477,7 +477,7 @@ class MainWindow(QMainWindow):
             ply_index: int = self._table_view.ply_index
 
             if ply_index > -1:
-                self._game.delete_notation_items_after(ply_index)
+                self._game.delete_data_after(ply_index)
 
             self._game.push(move)
             self.refresh_ui()
