@@ -145,11 +145,11 @@ class Game(QObject):
         self._engine_turn = not self._engine_turn
         # utils.set_config_values()
 
-    def delete_data_after(self, ply_index: int) -> None:
+    def delete_notation_items_after(self, ply_index: int) -> None:
         """Delete notation items and positions after `ply_index`."""
-        data_after_index: slice = slice(ply_index + 1, len(self.notation))
-        del self.notation[data_after_index]
-        del self.positions[data_after_index]
+        after_ply_index: slice = slice(ply_index + 1, len(self.notation))
+        del self.notation[after_ply_index]
+        del self.positions[after_ply_index]
 
     def is_game_in_progress(self) -> bool:
         """Return True if a game is in progress, else False."""

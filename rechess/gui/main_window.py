@@ -243,7 +243,6 @@ class MainWindow(QMainWindow):
     def connect_signals_to_slots(self) -> None:
         self._game.move_played.connect(self.on_move_played)
         self._engine.move_played.connect(self.on_move_played)
-        self._svg_board.board_changed.connect(self.on_board_changed)
         self._engine.best_move_analyzed.connect(self.on_best_move_analyzed)
         self._engine.white_score_analyzed.connect(self.on_white_score_analyzed)
         self._black_clock.time_expired.connect(self.on_black_clock_time_expired)
@@ -432,7 +431,7 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def closeEvent(self, event: QCloseEvent) -> None:
-        """Respond to the event of closing the main window."""
+        """Ask whether to quit ReChess by closing the main window."""
         answer: QMessageBox.StandardButton = QMessageBox.question(
             self,
             "Quit",
@@ -446,7 +445,7 @@ class MainWindow(QMainWindow):
             event.ignore()
 
     def wheelEvent(self, event: QWheelEvent) -> None:
-        """Respond to the event of rolling a pointing device's wheel."""
+        """Select a notation item upon a mouse wheel roll."""
         is_upward_roll = event.angleDelta().y() > 0
         is_downward_roll = event.angleDelta().y() < 0
 
@@ -457,43 +456,28 @@ class MainWindow(QMainWindow):
 
     @Slot()
     def on_black_clock_time_expired(self) -> None:
-        """Notify that White wins on time."""
+        """Notify that White wins because Black's clock time expired."""
         self._notifications_label.setText("White wins on time")
 
     @Slot()
     def on_white_clock_time_expired(self) -> None:
-        """Notify that Black wins on time."""
+        """Notify that Black wins because White's clock time expired."""
         self._notifications_label.setText("Black wins on time")
 
     @Slot(Move)
     def on_best_move_analyzed(self, best_move: Move) -> None:
-        """Show the `best_move` from engine analysis."""
+        """Show the `best_move` from chess engine analysis."""
         self._game.set_arrow_for(best_move)
         self._svg_board.draw()
-
-    @Slot()
-    def on_board_changed(self) -> None:
-        """Set a board position and a move arrow."""
-        ply_index = self._table_view.ply_index
-
-        if ply_index > -1:
-            move: Move = self._game.set_move_with(ply_index)
-            self._game.play_sound_effect_for(move)
-            self._game.set_arrow_for(move)
-        else:
-            self._game.clear_arrow()
-            self._opening_label.clear()
-            self._game.set_root_position()
-
-        self.refresh_ui()
 
     @Slot(Move)
     def on_move_played(self, move: Move) -> None:
         """Play the `move` by pushing it and refreshing the UI."""
         if self._game.is_legal(move):
             ply_index: int = self._table_view.ply_index
+
             if ply_index > -1:
-                self._game.delete_data_after(ply_index)
+                self._game.delete_notation_items_after(ply_index)
 
             self._game.push(move)
             self.refresh_ui()
