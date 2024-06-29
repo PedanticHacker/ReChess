@@ -243,6 +243,7 @@ class MainWindow(QMainWindow):
     def connect_signals_to_slots(self) -> None:
         self._game.move_played.connect(self.on_move_played)
         self._engine.move_played.connect(self.on_move_played)
+        self._table_view.item_selected.connect(self.on_item_selected)
         self._engine.best_move_analyzed.connect(self.on_best_move_analyzed)
         self._engine.white_score_analyzed.connect(self.on_white_score_analyzed)
         self._black_clock.time_expired.connect(self.on_black_clock_time_expired)
@@ -481,6 +482,20 @@ class MainWindow(QMainWindow):
 
             self._game.push(move)
             self.refresh_ui()
+
+    @Slot(int)
+    def on_item_selected(self, current_ply_index: int) -> None:
+        """Set a position and an arrow from the `current_ply_index`."""
+        if current_ply_index > -1:
+            move: Move = self._game.set_move_with(current_ply_index)
+            self._game.play_sound_effect_for(move)
+            self._game.set_arrow_for(move)
+        else:
+            self._game.clear_arrow()
+            self._opening_label.clear()
+            self._game.set_root_position()
+
+        self.refresh_ui()
 
     @Slot(str)
     def on_san_variation_analyzed(self, san_variation: str) -> None:

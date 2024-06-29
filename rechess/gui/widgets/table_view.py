@@ -3,12 +3,15 @@ from PySide6.QtCore import (
     QAbstractTableModel,
     QItemSelectionModel,
     QModelIndex,
+    Signal,
 )
 from PySide6.QtWidgets import QAbstractItemView, QHeaderView, QTableView
 
 
 class TableView(QTableView):
     """A view for displaying notation items in a 2-column table."""
+
+    item_selected: Signal = Signal(int)
 
     def __init__(self, table_model: QAbstractTableModel) -> None:
         super().__init__()
