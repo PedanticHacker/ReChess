@@ -47,13 +47,23 @@ class TableView(QTableView):
 
     def previous_index(self) -> QModelIndex:
         """Get a model index of the previous notation item."""
-        previous_row, previous_column = divmod(self.ply_index - 1, 2)
-        return self.model().index(previous_row, previous_column)
+        if self.current_ply_index > 0:
+            previous_row, previous_column = divmod(self.current_ply_index - 1, 2)
+            return self.model().index(previous_row, previous_column)
+
+        return QModelIndex()
 
     def next_index(self) -> QModelIndex:
         """Get a model index of the next notation item."""
-        next_row, next_column = divmod(self.ply_index + 1, 2)
-        return self.model().index(next_row, next_column)
+        if self.current_ply_index == -1:
+            self.select_first_item()
+            return self.selectionModel().currentIndex()
+
+        if self.current_ply_index < self.last_ply_index:
+            next_row, next_column = divmod(self.current_ply_index + 1, 2)
+            return self.model().index(next_row, next_column)
+
+        return self.selectionModel().currentIndex()
 
     def select(self, model_index: QModelIndex) -> None:
         """Select a notation item with the `model_index`."""
@@ -63,7 +73,16 @@ class TableView(QTableView):
         )
 
     @property
-    def ply_index(self) -> int:
-        """Get the index of a ply (i.e., a half-move)."""
+    def current_ply_index(self) -> int:
+        """Get the index of the current ply (i.e., a half-move)."""
         current_index: QModelIndex = self.selectionModel().currentIndex()
+
+        if not current_index.isValid():
+            return -1
+
         return 2 * current_index.row() + current_index.column()
+
+    @property
+    def last_ply_index(self) -> int:
+        """Get the maximum valid ply index."""
+        return 2 * self.model().rowCount() - 1

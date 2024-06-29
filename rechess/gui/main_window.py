@@ -474,10 +474,10 @@ class MainWindow(QMainWindow):
     def on_move_played(self, move: Move) -> None:
         """Play the `move` by pushing it and refreshing the UI."""
         if self._game.is_legal(move):
-            ply_index: int = self._table_view.ply_index
+            current_ply_index: int = self._table_view.current_ply_index
 
-            if ply_index > -1:
-                self._game.delete_data_after(ply_index)
+            if current_ply_index > -1:
+                self._game.delete_data_after(current_ply_index)
 
             self._game.push(move)
             self.refresh_ui()
