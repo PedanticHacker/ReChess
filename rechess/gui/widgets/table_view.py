@@ -4,6 +4,7 @@ from PySide6.QtCore import (
     QItemSelectionModel,
     QModelIndex,
     Signal,
+    Slot,
 )
 from PySide6.QtWidgets import QAbstractItemView, QHeaderView, QTableView
 
@@ -27,6 +28,7 @@ class TableView(QTableView):
         self.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
 
         self.model().layoutChanged.connect(self.scrollToBottom)
+        self.selectionModel().selectionChanged.connect(self.on_selection_changed)
 
     def select_last_item(self) -> None:
         """Select the last notation item."""
@@ -89,3 +91,8 @@ class TableView(QTableView):
     def last_ply_index(self) -> int:
         """Get the maximum valid ply index."""
         return 2 * self.model().rowCount() - 1
+
+    @Slot(int)
+    def on_selection_changed(self) -> None:
+        """Emit the current ply index of a selected notation item."""
+        self.item_selected.emit(self.current_ply_index)

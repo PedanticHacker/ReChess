@@ -1,8 +1,11 @@
-from __future__ import annotations
-
 from chess import svg
 from PySide6.QtGui import QMouseEvent
 from PySide6.QtSvgWidgets import QSvgWidget
+
+from rechess.core import Game
+
+
+svg.XX: str = "<circle id='xx' r='5' cx='22' cy='22' fill='lime' stroke='blue'/>"
 
 
 class SvgBoard(QSvgWidget):
@@ -13,9 +16,6 @@ class SvgBoard(QSvgWidget):
 
         self._game: Game = game
 
-        svg.XX: str = (
-            "<circle id='xx' r='5' cx='22' cy='22' fill='lime' stroke='blue'/>"
-        )
         self._colors: dict[str, str] = {
             "coord": "white",
             "margin": "green",

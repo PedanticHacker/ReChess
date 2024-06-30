@@ -1,14 +1,88 @@
 import json
-from typing import Callable, Literal
+from typing import Callable, Literal, overload
 
 from PySide6.QtCore import QSize
 from PySide6.QtGui import QAction, QIcon
 from PySide6.QtWidgets import QPushButton
 
 
-type ConfigKey = Literal["increment", "perspective", "pondering", "time", "white"]
-type ConfigSection = Literal["board", "clock", "engine"]
-type ConfigValue = int | bool
+BoardSection = Literal["board"]
+ClockSection = Literal["clock"]
+EngineSection = Literal["engine"]
+ConfigSection = BoardSection | ClockSection | EngineSection
+
+BoardKey = Literal["perspective"]
+ClockKey = Literal["time", "increment"]
+EngineKey = Literal["pondering", "white"]
+ConfigKey = BoardKey | ClockKey | EngineKey
+
+ConfigValue = int | bool
+
+
+@overload
+def get_config_value(section: BoardSection, key: BoardKey) -> bool:
+    ...
+
+
+@overload
+def get_config_value(section: ClockSection, key: ClockKey) -> int:
+    ...
+
+
+@overload
+def get_config_value(section: EngineSection, key: EngineKey) -> bool:
+    ...
+
+
+def get_config_value(section: ConfigSection, key: ConfigKey) -> ConfigValue:
+    """Get the config value of a `key` from a `section`."""
+    with open("rechess/config.json") as config_file:
+        config_contents = json.load(config_file)
+
+    return config_contents[section][key]
+
+
+@overload
+def set_config_value(
+    section: BoardSection,
+    key: BoardKey,
+    value: bool,
+) -> None:
+    ...
+
+
+@overload
+def set_config_value(
+    section: ClockSection,
+    key: ClockKey,
+    value: int,
+) -> None:
+    ...
+
+
+@overload
+def set_config_value(
+    section: EngineSection,
+    key: EngineKey,
+    value: bool,
+) -> None:
+    ...
+
+
+def set_config_value(
+    section: ConfigSection,
+    key: ConfigKey,
+    value: ConfigValue,
+) -> None:
+    """Set a config `value` to a `key` for a `section`."""
+    with open("rechess/config.json") as config_file:
+        config_contents = json.load(config_file)
+
+    config_contents[section][key] = value
+
+    with open("rechess/config.json", mode="w", newline="\n") as config_file:
+        json.dump(config_contents, config_file, indent=4)
+        config_file.write("\n")
 
 
 def create_action(
@@ -34,33 +108,9 @@ def create_button(icon: QIcon) -> QPushButton:
 
 
 def get_app_style(file_name: str) -> str:
-    """Get an app style by the given `file_name`."""
+    """Get an app style with the given `file_name`."""
     with open(f"rechess/resources/styles/{file_name}.qss") as qss_file:
         return qss_file.read()
-
-
-def get_config_value(section: ConfigSection, key: ConfigKey) -> ConfigValue:
-    """Get the config value of a `key` from a `section`."""
-    with open("rechess/config.json") as config_file:
-        config_contents = json.load(config_file)
-
-    return config_contents[section][key]
-
-
-def set_config_value(
-    section: ConfigSection,
-    key: ConfigKey,
-    value: ConfigValue,
-) -> None:
-    """Set a config `value` to a `key` for a `section`."""
-    with open("rechess/config.json") as config_file:
-        config_contents = json.load(config_file)
-
-    config_contents[section][key] = value
-
-    with open("rechess/config.json", mode="w", newline="\n") as config_file:
-        json.dump(config_contents, config_file, indent=4)
-        config_file.write("\n")
 
 
 def get_svg_icon(file_name: str) -> QIcon:
