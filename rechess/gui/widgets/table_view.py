@@ -79,18 +79,19 @@ class TableView(QTableView):
 
     @property
     def current_ply_index(self) -> int:
-        """Get the index of the current ply (i.e., a half-move)."""
+        """Get an index of the current ply (i.e., a half-move)."""
         current_index: QModelIndex = self.selectionModel().currentIndex()
-
-        if current_index.isValid():
-            return 2 * current_index.row() + current_index.column()
-
-        return -1
+        return (
+            2 * current_index.row() + current_index.column()
+            if current_index.isValid()
+            else -1
+        )
 
     @property
     def last_ply_index(self) -> int:
-        """Get the maximum valid ply index."""
-        return 2 * self.model().rowCount() - 1
+        """Get the last ply index."""
+        all_rows: int = self.model().rowCount()
+        return (2 * all_rows - 1) if all_rows > 0 else -1
 
     @Slot(int)
     def on_selection_changed(self) -> None:
