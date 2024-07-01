@@ -82,10 +82,10 @@ class TableView(QTableView):
         """Get the index of the current ply (i.e., a half-move)."""
         current_index: QModelIndex = self.selectionModel().currentIndex()
 
-        if not current_index.isValid():
-            return -1
+        if current_index.isValid():
+            return 2 * current_index.row() + current_index.column()
 
-        return 2 * current_index.row() + current_index.column()
+        return -1
 
     @property
     def last_ply_index(self) -> int:
