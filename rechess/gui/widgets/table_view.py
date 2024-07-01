@@ -35,20 +35,20 @@ class TableView(QTableView):
         last_row: int = self.model().rowCount() - 1
         last_column: int = 1 if self.model().index(last_row, 1).data() else 0
         last_model_index: QModelIndex = self.model().index(last_row, last_column)
-        self.select(last_model_index)
+        self.select_item_with(last_model_index)
 
     def select_previous_item(self) -> None:
         """Select the previous notation item."""
-        self.select(self.previous_index())
+        self.select_item_with(self.previous_index())
 
     def select_next_item(self) -> None:
         """Select the next notation item."""
-        self.select(self.next_index())
+        self.select_item_with(self.next_index())
 
     def select_first_item(self) -> None:
         """Select the first notation item."""
         first_model_index = self.model().index(0, 0)
-        self.select(first_model_index)
+        self.select_item_with(first_model_index)
 
     def previous_index(self) -> QModelIndex:
         """Get a model index of the previous notation item."""
@@ -70,12 +70,13 @@ class TableView(QTableView):
 
         return self.selectionModel().currentIndex()
 
-    def select(self, model_index: QModelIndex) -> None:
+    def select_item_with(self, model_index: QModelIndex) -> None:
         """Select a notation item with the `model_index`."""
-        self.selectionModel().setCurrentIndex(
-            model_index,
-            QItemSelectionModel.SelectionFlag.ClearAndSelect,
-        )
+        if model_index.isValid():
+            self.selectionModel().setCurrentIndex(
+                model_index,
+                QItemSelectionModel.SelectionFlag.ClearAndSelect,
+            )
 
     @property
     def current_ply_index(self) -> int:
@@ -93,7 +94,7 @@ class TableView(QTableView):
         all_rows: int = self.model().rowCount()
         return (2 * all_rows - 1) if all_rows > 0 else -1
 
-    @Slot(int)
+    @Slot()
     def on_selection_changed(self) -> None:
         """Emit the current ply index of a selected notation item."""
         self.item_selected.emit(self.current_ply_index)
