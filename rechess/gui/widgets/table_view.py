@@ -30,32 +30,32 @@ class TableView(QTableView):
         last_row: int = self.model().rowCount() - 1
         last_column: int = 1 if self.model().index(last_row, 1).data() else 0
         last_model_index: QModelIndex = self.model().index(last_row, last_column)
-        self.select(last_model_index)
+        self.select_model_index(last_model_index)
 
     def select_previous_item(self) -> None:
         """Select the previous notation item."""
-        self.select(self.previous_index())
+        self.select_model_index(self.get_previous_model_index())
 
     def select_next_item(self) -> None:
         """Select the next notation item."""
-        self.select(self.next_index())
+        self.select_model_index(self.get_next_model_index())
 
     def select_first_item(self) -> None:
         """Select the first notation item."""
         first_model_index = self.model().index(0, 0)
-        self.select(first_model_index)
+        self.select_model_index(first_model_index)
 
-    def previous_index(self) -> QModelIndex:
+    def get_previous_model_index(self) -> QModelIndex:
         """Get a model index of the previous notation item."""
         previous_row, previous_column = divmod(self.ply_index - 1, 2)
         return self.model().index(previous_row, previous_column)
 
-    def next_index(self) -> QModelIndex:
+    def get_next_model_index(self) -> QModelIndex:
         """Get a model index of the next notation item."""
         next_row, next_column = divmod(self.ply_index + 1, 2)
         return self.model().index(next_row, next_column)
 
-    def select(self, model_index: QModelIndex) -> None:
+    def select_model_index(self, model_index: QModelIndex) -> None:
         """Select a notation item with the `model_index`."""
         self.selectionModel().setCurrentIndex(
             model_index,
@@ -65,5 +65,5 @@ class TableView(QTableView):
     @property
     def ply_index(self) -> int:
         """Get the index of a ply (i.e., a half-move)."""
-        current_index: QModelIndex = self.selectionModel().currentIndex()
-        return 2 * current_index.row() + current_index.column()
+        current_model_index: QModelIndex = self.selectionModel().currentIndex()
+        return 2 * current_model_index.row() + current_model_index.column()
