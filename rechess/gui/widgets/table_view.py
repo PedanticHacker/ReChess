@@ -1,5 +1,4 @@
 from PySide6.QtCore import (
-    QAbstractItemModel,
     QAbstractTableModel,
     QItemSelectionModel,
     QModelIndex,
@@ -28,7 +27,7 @@ class TableView(QTableView):
         self.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
 
         self.model().layoutChanged.connect(self.scrollToBottom)
-        self.selectionModel().selectionChanged.connect(self.on_selection_changed)
+        self.selectionModel().currentChanged.connect(self.on_current_changed)
 
     def select_last_item(self) -> None:
         """Select the last notation item."""
@@ -45,14 +44,13 @@ class TableView(QTableView):
         """Select the next notation item."""
         self.select_item_with(self.next_index())
 
-    def select_first_item(self) -> None:
-        """Select the first notation item."""
-        first_model_index = self.model().index(0, 0)
-        self.select_item_with(first_model_index)
+    def first_index(self) -> QModelIndex:
+        """Get a model index of the first notation item."""
+        return self.model().index(0, 0)
 
     def previous_index(self) -> QModelIndex:
         """Get a model index of the previous notation item."""
-        if self.current_ply_index > 0:
+        if self.current_ply_index > -1:
             previous_row, previous_column = divmod(self.current_ply_index - 1, 2)
             return self.model().index(previous_row, previous_column)
 
@@ -61,22 +59,17 @@ class TableView(QTableView):
     def next_index(self) -> QModelIndex:
         """Get a model index of the next notation item."""
         if self.current_ply_index == -1:
-            self.select_first_item()
-            return self.selectionModel().currentIndex()
+            return self.first_index()
 
-        if self.current_ply_index < self.last_ply_index:
-            next_row, next_column = divmod(self.current_ply_index + 1, 2)
-            return self.model().index(next_row, next_column)
-
-        return self.selectionModel().currentIndex()
+        next_row, next_column = divmod(self.current_ply_index + 1, 2)
+        return self.model().index(next_row, next_column)
 
     def select_item_with(self, model_index: QModelIndex) -> None:
         """Select a notation item with the `model_index`."""
-        if model_index.isValid():
-            self.selectionModel().setCurrentIndex(
-                model_index,
-                QItemSelectionModel.SelectionFlag.ClearAndSelect,
-            )
+        self.selectionModel().setCurrentIndex(
+            model_index,
+            QItemSelectionModel.SelectionFlag.ClearAndSelect,
+        )
 
     @property
     def current_ply_index(self) -> int:
@@ -88,13 +81,7 @@ class TableView(QTableView):
             else -1
         )
 
-    @property
-    def last_ply_index(self) -> int:
-        """Get the last ply index."""
-        all_rows: int = self.model().rowCount()
-        return (2 * all_rows - 1) if all_rows > 0 else -1
-
     @Slot()
-    def on_selection_changed(self) -> None:
+    def on_current_changed(self) -> None:
         """Emit the current ply index of a selected notation item."""
         self.item_selected.emit(self.current_ply_index)
