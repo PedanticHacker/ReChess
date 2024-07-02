@@ -495,7 +495,7 @@ class MainWindow(QMainWindow):
             self._opening_label.clear()
             self._game.set_root_position()
 
-        self.refresh_ui()
+        self._svg_board.draw()
 
     @Slot(str)
     def on_san_variation_analyzed(self, san_variation: str) -> None:
