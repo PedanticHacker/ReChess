@@ -475,19 +475,19 @@ class MainWindow(QMainWindow):
     def on_move_played(self, move: Move) -> None:
         """Play the `move` by pushing it and refreshing the UI."""
         if self._game.is_legal(move):
-            current_ply_index: int = self._table_view.current_ply_index
+            ply_index: int = self._table_view.ply_index
 
-            if current_ply_index > -1:
-                self._game.delete_data_after(current_ply_index)
+            if ply_index > -1:
+                self._game.delete_data_after(ply_index)
 
             self._game.push(move)
             self.refresh_ui()
 
     @Slot(int)
-    def on_item_selected(self, current_ply_index: int) -> None:
-        """Set a position and an arrow from the `current_ply_index`."""
-        if current_ply_index > -1:
-            move: Move = self._game.set_move_with(current_ply_index)
+    def on_item_selected(self, ply_index: int) -> None:
+        """Set a position and an arrow from the `ply_index`."""
+        if ply_index > -1:
+            move: Move = self._game.set_move_with(ply_index)
             self._game.play_sound_effect_for(move)
             self._game.set_arrow_for(move)
         else:

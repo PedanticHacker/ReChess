@@ -11,6 +11,8 @@ from PySide6.QtWidgets import QAbstractItemView, QHeaderView, QTableView
 class TableView(QTableView):
     """A view for displaying notation items in a 2-column table."""
 
+    item_selected: Signal = Signal(int)
+
     def __init__(self, table_model: QAbstractTableModel) -> None:
         super().__init__()
 
@@ -25,6 +27,7 @@ class TableView(QTableView):
         self.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
 
         self.model().layoutChanged.connect(self.scrollToBottom)
+        self.selectionModel().selectionChanged.connect(self.on_selection_changed)
 
     def select_last_item(self) -> None:
         """Select the last notation item."""
@@ -66,3 +69,8 @@ class TableView(QTableView):
         """Get the index of a ply (i.e., a half-move)."""
         current_model_index: QModelIndex = self.selectionModel().currentIndex()
         return 2 * current_model_index.row() + current_model_index.column()
+
+    @Slot()
+    def on_selection_changed(self) -> None:
+        """Emit a ply index of the selected notation item."""
+        self.item_selected.emit(self.ply_index)
