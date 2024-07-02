@@ -135,10 +135,10 @@ class Game(QObject):
         """Get a variation of moves in SAN format from the move stack."""
         return Board().variation_san(self.board.move_stack)
 
-    def set_move_with(self, ply_index: int) -> Move:
-        """Set a move with the `ply_index`."""
-        self.board = self.positions[ply_index]
-        return self.board.move_stack[ply_index]
+    def set_move_with(self, current_ply_index: int) -> Move:
+        """Set a move with the `current_ply_index`."""
+        self.board = self.positions[current_ply_index]
+        return self.board.move_stack[current_ply_index]
 
     def pass_turn_to_engine(self) -> None:
         """Pass the current turn to the engine."""

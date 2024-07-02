@@ -1,9 +1,9 @@
-from __future__ import annotations
-
 from chess import Color
 from chess.engine import Score
 from PySide6.QtCore import QEasingCurve, QPropertyAnimation, Qt
 from PySide6.QtWidgets import QProgressBar, QSizePolicy
+
+from rechess.core import Game
 
 
 class EvaluationBar(QProgressBar):

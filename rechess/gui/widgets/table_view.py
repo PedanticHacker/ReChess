@@ -1,14 +1,17 @@
 from PySide6.QtCore import (
-    QAbstractItemModel,
     QAbstractTableModel,
     QItemSelectionModel,
     QModelIndex,
+    Signal,
+    Slot,
 )
 from PySide6.QtWidgets import QAbstractItemView, QHeaderView, QTableView
 
 
 class TableView(QTableView):
     """A view for displaying notation items in a 2-column table."""
+
+    item_selected: Signal = Signal(int)
 
     def __init__(self, table_model: QAbstractTableModel) -> None:
         super().__init__()
@@ -24,6 +27,7 @@ class TableView(QTableView):
         self.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
 
         self.model().layoutChanged.connect(self.scrollToBottom)
+        self.selectionModel().currentChanged.connect(self.on_current_changed)
 
     def select_last_item(self) -> None:
         """Select the last notation item."""
@@ -47,12 +51,16 @@ class TableView(QTableView):
 
     def get_previous_model_index(self) -> QModelIndex:
         """Get a model index of the previous notation item."""
-        previous_row, previous_column = divmod(self.ply_index - 1, 2)
-        return self.model().index(previous_row, previous_column)
+        if self.current_ply_index > -1:
+            previous_row, previous_column = divmod(self.current_ply_index - 1, 2)
+            return self.model().index(previous_row, previous_column)
 
     def get_next_model_index(self) -> QModelIndex:
         """Get a model index of the next notation item."""
-        next_row, next_column = divmod(self.ply_index + 1, 2)
+        if self.current_ply_index == -1:
+            return self.first_index()
+
+        next_row, next_column = divmod(self.current_ply_index + 1, 2)
         return self.model().index(next_row, next_column)
 
     def select_model_index(self, model_index: QModelIndex) -> None:
