@@ -27,7 +27,7 @@ class TableView(QTableView):
         self.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
 
         self.model().layoutChanged.connect(self.scrollToBottom)
-        self.selectionModel().selectionChanged.connect(self.on_selection_changed)
+        self.selectionModel().currentChanged.connect(self.on_current_changed)
 
     def select_last_item(self) -> None:
         """Select the last notation item."""
@@ -42,7 +42,12 @@ class TableView(QTableView):
 
     def select_next_item(self) -> None:
         """Select the next notation item."""
-        self.select_model_index(self.get_next_model_index())
+        if self.ply_index < 0:
+            next_model_index: QModelIndex = self.model().index(0, 0)
+        else:
+            next_model_index = self.get_next_model_index()
+
+        self.select_model_index(next_model_index)
 
     def get_previous_model_index(self) -> QModelIndex:
         """Get a model index of the previous notation item."""
@@ -51,11 +56,8 @@ class TableView(QTableView):
 
     def get_next_model_index(self) -> QModelIndex:
         """Get a model index of the next notation item."""
-        if self.ply_index < 0:
-            return self.model().index(0, 0)
-        else:
-            next_row, next_column = divmod(self.ply_index + 1, 2)
-            return self.model().index(next_row, next_column)
+        next_row, next_column = divmod(self.ply_index + 1, 2)
+        return self.model().index(next_row, next_column)
 
     def select_model_index(self, model_index: QModelIndex) -> None:
         """Select a notation item with the `model_index`."""
@@ -71,6 +73,6 @@ class TableView(QTableView):
         return 2 * current_model_index.row() + current_model_index.column()
 
     @Slot()
-    def on_selection_changed(self) -> None:
-        """Emit a ply index of the selected notation item."""
+    def on_current_changed(self) -> None:
+        """Emit a ply index of the currently selected notation item."""
         self.item_selected.emit(self.ply_index)
