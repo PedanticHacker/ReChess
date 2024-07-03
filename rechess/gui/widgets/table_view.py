@@ -38,26 +38,16 @@ class TableView(QTableView):
 
     def select_previous_item(self) -> None:
         """Select the previous notation item."""
-        self.select_model_index(self.get_previous_model_index())
+        self.select_model_index(self.previous_model_index)
 
     def select_next_item(self) -> None:
         """Select the next notation item."""
         if self.ply_index < 0:
             next_model_index: QModelIndex = self.model().index(0, 0)
         else:
-            next_model_index = self.get_next_model_index()
+            next_model_index = self.next_model_index
 
         self.select_model_index(next_model_index)
-
-    def get_previous_model_index(self) -> QModelIndex:
-        """Get a model index of the previous notation item."""
-        previous_row, previous_column = divmod(self.ply_index - 1, 2)
-        return self.model().index(previous_row, previous_column)
-
-    def get_next_model_index(self) -> QModelIndex:
-        """Get a model index of the next notation item."""
-        next_row, next_column = divmod(self.ply_index + 1, 2)
-        return self.model().index(next_row, next_column)
 
     def select_model_index(self, model_index: QModelIndex) -> None:
         """Select a notation item with the `model_index`."""
@@ -71,6 +61,18 @@ class TableView(QTableView):
         """Get the index of a ply (i.e., a half-move)."""
         current_model_index: QModelIndex = self.selectionModel().currentIndex()
         return 2 * current_model_index.row() + current_model_index.column()
+
+    @property
+    def previous_model_index(self) -> QModelIndex:
+        """Get a model index of the previous notation item."""
+        previous_row, previous_column = divmod(self.ply_index - 1, 2)
+        return self.model().index(previous_row, previous_column)
+
+    @property
+    def next_model_index(self) -> QModelIndex:
+        """Get a model index of the next notation item."""
+        next_row, next_column = divmod(self.ply_index + 1, 2)
+        return self.model().index(next_row, next_column)
 
     @Slot()
     def on_current_changed(self) -> None:
