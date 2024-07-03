@@ -68,7 +68,8 @@ class Game(QObject):
 
     def play_sound_effect_for(self, move: Move) -> None:
         """Play a WAV sound effect for the `move`."""
-        file_name: str = "capture.wav" if self.board.is_capture(move) else "move.wav"
+        is_capture: bool = self.board.is_capture(move)
+        file_name: str = "capture.wav" if is_capture else "move.wav"
         file_url: QUrl = QUrl(f"file:rechess/resources/audio/{file_name}")
         self.sound_effect.setSource(file_url)
         self.sound_effect.play()
@@ -135,10 +136,13 @@ class Game(QObject):
         """Get a variation of moves in SAN format from the move stack."""
         return Board().variation_san(self.board.move_stack)
 
-    def set_move_with(self, ply_index: int) -> Move:
-        """Set a move with the `ply_index`."""
-        self.board = self.positions[ply_index]
-        return self.board.move_stack[ply_index]
+    def play_move_with(self, ply_index: int) -> None:
+        """Play a move with the `ply_index`."""
+        self.board = self.positions[ply_index].copy()
+        move: Move = self.board.move_stack[ply_index]
+
+        self.play_sound_effect_for(move)
+        self.set_arrow_for(move)
 
     def pass_turn_to_engine(self) -> None:
         """Pass the current turn to the engine."""

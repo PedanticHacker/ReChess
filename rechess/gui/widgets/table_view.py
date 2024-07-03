@@ -47,7 +47,8 @@ class TableView(QTableView):
         else:
             next_model_index = self.next_model_index
 
-        self.select_model_index(next_model_index)
+        if next_model_index.isValid():
+            self.select_model_index(next_model_index)
 
     def select_model_index(self, model_index: QModelIndex) -> None:
         """Select a notation item with the `model_index`."""
@@ -71,8 +72,13 @@ class TableView(QTableView):
     @property
     def next_model_index(self) -> QModelIndex:
         """Get a model index of the next notation item."""
+        all_rows: int = self.model().rowCount()
         next_row, next_column = divmod(self.ply_index + 1, 2)
-        return self.model().index(next_row, next_column)
+
+        if next_row < all_rows:
+            return self.model().index(next_row, next_column)
+
+        return QModelIndex()
 
     @Slot()
     def on_current_changed(self) -> None:

@@ -487,9 +487,7 @@ class MainWindow(QMainWindow):
     def on_item_selected(self, ply_index: int) -> None:
         """Set a position and an arrow from the `ply_index`."""
         if ply_index > -1:
-            move: Move = self._game.set_move_with(ply_index)
-            self._game.play_sound_effect_for(move)
-            self._game.set_arrow_for(move)
+            self._game.play_move_with(ply_index)
         else:
             self._game.clear_arrow()
             self._opening_label.clear()
