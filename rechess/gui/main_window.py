@@ -457,13 +457,13 @@ class MainWindow(QMainWindow):
 
     @Slot()
     def on_black_clock_time_expired(self) -> None:
-        """Notify that White wins as Black's clock time has expired."""
-        self._notifications_label.setText("White wins on time")
+        """Notify that White won as Black's clock time has expired."""
+        self._notifications_label.setText("White won on time")
 
     @Slot()
     def on_white_clock_time_expired(self) -> None:
-        """Notify that Black wins as White's clock time has expired."""
-        self._notifications_label.setText("Black wins on time")
+        """Notify that Black won as White's clock time has expired."""
+        self._notifications_label.setText("Black won on time")
 
     @Slot(Move)
     def on_best_move_analyzed(self, best_move: Move) -> None:
