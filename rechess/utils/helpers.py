@@ -1,6 +1,7 @@
 import json
 from typing import Callable, Literal, overload
 
+import psutil
 from PySide6.QtCore import QSize
 from PySide6.QtGui import QAction, QIcon
 from PySide6.QtWidgets import QPushButton
@@ -20,18 +21,15 @@ ConfigValue = int | bool
 
 
 @overload
-def get_config_value(section: BoardSection, key: BoardKey) -> bool:
-    ...
+def get_config_value(section: BoardSection, key: BoardKey) -> bool: ...
 
 
 @overload
-def get_config_value(section: ClockSection, key: ClockKey) -> int:
-    ...
+def get_config_value(section: ClockSection, key: ClockKey) -> int: ...
 
 
 @overload
-def get_config_value(section: EngineSection, key: EngineKey) -> bool:
-    ...
+def get_config_value(section: EngineSection, key: EngineKey) -> bool: ...
 
 
 def get_config_value(section: ConfigSection, key: ConfigKey) -> ConfigValue:
@@ -47,8 +45,7 @@ def set_config_value(
     section: BoardSection,
     key: BoardKey,
     value: bool,
-) -> None:
-    ...
+) -> None: ...
 
 
 @overload
@@ -56,8 +53,7 @@ def set_config_value(
     section: ClockSection,
     key: ClockKey,
     value: int,
-) -> None:
-    ...
+) -> None: ...
 
 
 @overload
@@ -65,8 +61,7 @@ def set_config_value(
     section: EngineSection,
     key: EngineKey,
     value: bool,
-) -> None:
-    ...
+) -> None: ...
 
 
 def set_config_value(
@@ -111,6 +106,27 @@ def get_app_style(file_name: str) -> str:
     """Get an app style with the given `file_name`."""
     with open(f"rechess/resources/styles/{file_name}.qss") as qss_file:
         return qss_file.read()
+
+
+def get_optimal_hash() -> int:
+    """Get 70% of available RAM in MB as optimal hash size."""
+    available_ram = psutil.virtual_memory().available
+    megabytes_factor = 1048576
+    seventy_percent = 0.70
+    return round(available_ram / megabytes_factor * seventy_percent)
+
+
+def get_optimal_threads() -> int:
+    """Get optimal CPU threads, reserving 1 thread for other tasks."""
+    available_threads = psutil.cpu_count(logical=True)
+    reserved_threads = 1
+    minimum_threads = 1
+    return max(minimum_threads, available_threads - reserved_threads)
+
+
+def get_engine_config() -> dict[str, int]:
+    """Get the configuration dictionary for a UCI chess engine."""
+    return {"Hash": get_optimal_hash(), "Threads": get_optimal_threads()}
 
 
 def get_svg_icon(file_name: str) -> QIcon:

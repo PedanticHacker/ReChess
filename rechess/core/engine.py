@@ -7,7 +7,7 @@ from chess import Move
 from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
 from PySide6.QtCore import QObject, Signal
 
-from rechess.utils import get_config_value
+from rechess.utils import get_config_value, get_engine_config
 
 
 class Engine(QObject):
@@ -27,14 +27,14 @@ class Engine(QObject):
             f"rechess/resources/engines/stockfish-16.1/{system().lower()}/"
             f"stockfish{'.exe' if system() == 'Windows' else ''}"
         )
-        self._loaded_engine.configure({"Hash": 2048, "Threads": 6})
+        self._loaded_engine.configure(get_engine_config())
 
     def load(self, file_path: str) -> None:
         """Load an engine by the given `file_path`."""
         with suppress(EngineError):
             self._loaded_engine.quit()
             self._loaded_engine = SimpleEngine.popen_uci(file_path)
-            self._loaded_engine.configure({"Hash": 2048, "Threads": 6})
+            self._loaded_engine.configure(get_engine_config())
 
     def play_move(self) -> None:
         """Play a move with the loaded engine."""
