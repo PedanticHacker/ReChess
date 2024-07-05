@@ -34,6 +34,7 @@ class Engine(QObject):
         with suppress(EngineError):
             self._loaded_engine.quit()
             self._loaded_engine = SimpleEngine.popen_uci(file_path)
+            self._loaded_engine.configure({"Hash": 2048, "Threads": 6})
 
     def play_move(self) -> None:
         """Play a move with the loaded engine."""
