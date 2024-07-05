@@ -38,8 +38,8 @@ class Engine(QObject):
     def play_move(self) -> None:
         """Play a move with the loaded engine."""
         play_result: PlayResult = self._loaded_engine.play(
-            limit=Limit(depth=20),
             board=self._game.board,
+            limit=Limit(depth=30),
             ponder=get_config_value("engine", "pondering"),
         )
         self.move_played.emit(play_result.move)
@@ -48,7 +48,10 @@ class Engine(QObject):
         """Start analyzing the current position."""
         self._analyzing = True
 
-        with self._loaded_engine.analysis(self._game.board) as analysis:
+        with self._loaded_engine.analysis(
+            board=self._game.board,
+            limit=Limit(depth=40),
+        ) as analysis:
             for info in analysis:
                 if not self._analyzing:
                     break
