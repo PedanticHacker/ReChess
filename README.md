@@ -24,8 +24,8 @@ version of Python and want to adapt to it.
 
 ## Are there any dependencies?
 
-ReChess depends upon and extensively uses the **PySide6** GUI framework
-and the **python-chess** library.
+ReChess depends upon the *psutil* OS monitoring library, the **PySide6**
+GUI framework, and the **python-chess** library.
 
 ### Is there any 3rd-party software involved?
 
@@ -106,13 +106,13 @@ Click the provided links to install any missing ones.
     - [**Python 3.12.4**](https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe)
 
 2. In a command-line interface with admin privileges, install these:
-
+    - **psutil**, by executing the command `pip install psutil`
     - **PySide6**, by executing the command `pip install PySide6`
     - **python-chess**, by executing the command `pip install chess`
 
-Alternatively, you can also install **PySide6** and **python-chess**
-with the *pip* package manager in your command-line interface within
-ReChess's top-level directory, then execute this command:
+Alternatively, you can also install those three requirements with the
+*pip* package manager in your command-line interface within ReChess's
+top-level directory, then execute this command:
 
 ```bash
 pip install -r requirements.txt
@@ -136,18 +136,24 @@ programming language!
     - [Source code](https://github.com/python/cpython)
     - [Downloads page](https://www.python.org/downloads)
 
-2. Thanks to all the developers for their dedicated work on the PySide6
+2. Thanks to the developer Giampaolo Rodola for his dedicated work on
+the psutil OS monitoring library!
+
+    - [Source code](https://github.com/giampaolo/psutil)
+    - [PyPI (Python Package Index) page](https://pypi.org/project/psutil)
+
+3. Thanks to all the developers for their dedicated work on the PySide6
 GUI framework!
 
     - [PyPI (Python Package Index) page](https://pypi.org/project/PySide6)
 
-3. Thanks to the developer Niklas Fiekas for his dedicated work on the
+4. Thanks to the developer Niklas Fiekas for his dedicated work on the
 python-chess library!
 
     - [Source code](https://github.com/niklasf/python-chess)
     - [PyPI (Python Package Index) page](https://pypi.org/project/chess)
 
-4. Last but not least, thanks to all the developers for their dedicated
+5. Last but not least, thanks to all the developers for their dedicated
 work on the Stockfish chess engine!
 
     - [Source code](https://github.com/official-stockfish/Stockfish)
