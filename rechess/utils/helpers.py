@@ -21,53 +21,34 @@ ConfigValue = int | bool
 
 
 @overload
-def get_config_value(section: BoardSection, key: BoardKey) -> bool:
-    ...
+def get_config_value(section: BoardSection, key: BoardKey) -> bool: ...
 
 
 @overload
-def get_config_value(section: ClockSection, key: ClockKey) -> int:
-    ...
+def get_config_value(section: ClockSection, key: ClockKey) -> int: ...
 
 
 @overload
-def get_config_value(section: EngineSection, key: EngineKey) -> bool:
-    ...
+def get_config_value(section: EngineSection, key: EngineKey) -> bool: ...
 
 
 def get_config_value(section: ConfigSection, key: ConfigKey) -> ConfigValue:
     """Get the config value of a `key` from a `section`."""
     with open("rechess/config.json") as config_file:
         config_contents = json.load(config_file)
-
     return config_contents[section][key]
 
 
 @overload
-def set_config_value(
-    section: BoardSection,
-    key: BoardKey,
-    value: bool,
-) -> None:
-    ...
+def set_config_value(section: BoardSection, key: BoardKey, value: bool) -> None: ...
 
 
 @overload
-def set_config_value(
-    section: ClockSection,
-    key: ClockKey,
-    value: int,
-) -> None:
-    ...
+def set_config_value(section: ClockSection, key: ClockKey, value: int) -> None: ...
 
 
 @overload
-def set_config_value(
-    section: EngineSection,
-    key: EngineKey,
-    value: bool,
-) -> None:
-    ...
+def set_config_value(section: EngineSection, key: EngineKey, value: bool) -> None: ...
 
 
 def set_config_value(
@@ -78,7 +59,6 @@ def set_config_value(
     """Set a config `value` to a `key` for a `section`."""
     with open("rechess/config.json") as config_file:
         config_contents = json.load(config_file)
-
     config_contents[section][key] = value
 
     with open("rechess/config.json", mode="w", newline="\n") as config_file:
