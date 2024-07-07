@@ -21,15 +21,18 @@ ConfigValue = int | bool
 
 
 @overload
-def get_config_value(section: BoardSection, key: BoardKey) -> bool: ...
+def get_config_value(section: BoardSection, key: BoardKey) -> bool:
+    ...
 
 
 @overload
-def get_config_value(section: ClockSection, key: ClockKey) -> int: ...
+def get_config_value(section: ClockSection, key: ClockKey) -> int:
+    ...
 
 
 @overload
-def get_config_value(section: EngineSection, key: EngineKey) -> bool: ...
+def get_config_value(section: EngineSection, key: EngineKey) -> bool:
+    ...
 
 
 def get_config_value(section: ConfigSection, key: ConfigKey) -> ConfigValue:
@@ -40,15 +43,18 @@ def get_config_value(section: ConfigSection, key: ConfigKey) -> ConfigValue:
 
 
 @overload
-def set_config_value(section: BoardSection, key: BoardKey, value: bool) -> None: ...
+def set_config_value(section: BoardSection, key: BoardKey, value: bool) -> None:
+    ...
 
 
 @overload
-def set_config_value(section: ClockSection, key: ClockKey, value: int) -> None: ...
+def set_config_value(section: ClockSection, key: ClockKey, value: int) -> None:
+    ...
 
 
 @overload
-def set_config_value(section: EngineSection, key: EngineKey, value: bool) -> None: ...
+def set_config_value(section: EngineSection, key: EngineKey, value: bool) -> None:
+    ...
 
 
 def set_config_value(
