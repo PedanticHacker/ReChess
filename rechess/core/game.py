@@ -88,7 +88,7 @@ class Game(QObject):
 
     def flip_perspective(self) -> None:
         """Flip the current perspective."""
-        self.perspective = not self.perspective
+        self.perspective = not get_config_value("board", "perspective")
         set_config_value("board", "perspective", self.perspective)
 
     def get_square_from(self, x: float, y: float) -> None:
@@ -139,15 +139,14 @@ class Game(QObject):
     def play_move_with(self, ply_index: int) -> None:
         """Play a move with the `ply_index`."""
         self.board = self.positions[ply_index].copy()
-        move: Move = self.board.move_stack[ply_index]
 
-        self.play_sound_effect_for(move)
+        move: Move = self.board.move_stack[ply_index]
         self.set_arrow_for(move)
 
     def pass_turn_to_engine(self) -> None:
         """Pass the current turn to the engine."""
-        self._engine_turn = not self._engine_turn
-        # utils.set_config_values()
+        self._engine_turn = not get_config_value("engine", "white")
+        set_config_value("engine", "white", self._engine_turn)
 
     def delete_data_after(self, ply_index: int) -> None:
         """Delete notation items and positions after `ply_index`."""
