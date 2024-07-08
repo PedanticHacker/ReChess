@@ -136,8 +136,8 @@ class Game(QObject):
         """Get a variation of moves in SAN format from the move stack."""
         return Board().variation_san(self.board.move_stack)
 
-    def play_move_with(self, ply_index: int) -> None:
-        """Play a move with the `ply_index`."""
+    def set_move_with(self, ply_index: int) -> None:
+        """Set a move with the `ply_index`."""
         self.board = self.positions[ply_index].copy()
 
         move: Move = self.board.move_stack[ply_index]
