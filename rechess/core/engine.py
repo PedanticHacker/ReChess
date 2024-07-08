@@ -38,9 +38,15 @@ class Engine(QObject):
 
     def play_move(self) -> None:
         """Play a move with the loaded engine."""
+        loaded_engine_limit: Limit = Limit(
+            depth=30,
+            black_clock=None,
+            white_clock=None,
+        )
+
         play_result: PlayResult = self._loaded_engine.play(
             board=self._game.board,
-            limit=Limit(depth=30),
+            limit=loaded_engine_limit,
             ponder=get_config_value("engine", "pondering"),
         )
         self.move_played.emit(play_result.move)
