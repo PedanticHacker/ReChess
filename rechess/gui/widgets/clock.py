@@ -26,15 +26,15 @@ class Clock(QLCDNumber):
         self.reset()
 
     def reset(self) -> None:
-        """Reset the clock's time to values from the settings."""
+        """Reset the clock's time to values from the config."""
         seconds: int = get_config_value("clock", "time")
         increment: int = get_config_value("clock", "increment")
         self.time: int = seconds + increment
 
-        self.show_time()
+        self.display_time()
 
-    def show_time(self) -> None:
-        """Show the current clock's time."""
+    def display_time(self) -> None:
+        """Display the clock's time."""
         time_text, time_text_length = self.format_time()
         self.setDigitCount(time_text_length)
         self.display(time_text)
@@ -65,6 +65,6 @@ class Clock(QLCDNumber):
         """Subtract 1 second from the clock's time."""
         if self.time:
             self.time -= 1
-            self.show_time()
+            self.display_time()
         else:
             self.time_expired.emit()
