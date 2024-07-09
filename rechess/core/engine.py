@@ -41,7 +41,9 @@ class Engine(QObject):
         loaded_engine_limit: Limit = Limit(
             depth=30,
             black_clock=None,
+            black_inc=None,
             white_clock=None,
+            white_inc=None,
         )
 
         play_result: PlayResult = self._loaded_engine.play(
