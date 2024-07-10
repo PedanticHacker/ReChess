@@ -8,12 +8,12 @@ from rechess.core import Game
 class SvgBoard(QSvgWidget):
     """An SVG board with pieces."""
 
+    svg.XX = "<circle id='xx' r='5' cx='22' cy='22' fill='lime' stroke='blue'/>"
+
     def __init__(self, game: Game) -> None:
         super().__init__()
 
         self._game: Game = game
-
-        svg.XX = "<circle id='xx' r='5' cx='22' cy='22' fill='lime' stroke='blue'/>"
 
         self._colors: dict[str, str] = {
             "coord": "white",
