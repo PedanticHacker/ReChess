@@ -26,9 +26,9 @@ version of Python and want to adapt to it.
 
 Yes. ReChess depends upon these things:
 
-- PySide6: A framework for developing cross-platform GUI apps
-- python-chess: A library for developing chess-based apps
-- psutil: A library for getting operating system metrics
+    - PySide6: A framework for developing cross-platform GUI apps
+    - python-chess: A library for developing chess-based apps
+    - psutil: A library for getting operating system metrics
 
 ### Is there any 3rd-party software involved?
 
@@ -39,10 +39,10 @@ playing and analyzing.
 
 With ReChess, you get all the basic features for playing chess:
 
-- SVG chessboard
-- chess clocks
-- FEN record editor
-- table that displays chess move notation in SAN format
+    - SVG chessboard
+    - chess clocks
+    - FEN record editor
+    - table that displays chess move notation in SAN format
 
 ### Can I do a chessboard position analysis?
 
