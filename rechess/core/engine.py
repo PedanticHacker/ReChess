@@ -22,7 +22,7 @@ class Engine(QObject):
         super().__init__()
 
         self._game: Game = game
-        self._analyzing: bool = False
+        self._is_analyzing: bool = False
         self._loaded_engine: SimpleEngine = SimpleEngine.popen_uci(
             f"rechess/resources/engines/stockfish-16.1/{system().lower()}/"
             f"stockfish{'.exe' if system() == 'Windows' else ''}"
@@ -41,20 +41,20 @@ class Engine(QObject):
         play_result: PlayResult = self._loaded_engine.play(
             board=self._game.board,
             limit=Limit(depth=30),
-            ponder=get_config_value("engine", "pondering"),
+            ponder=get_config_value("engine", "is_pondering"),
         )
         self.move_played.emit(play_result.move)
 
     def start_analysis(self) -> None:
         """Start analyzing the current position."""
-        self._analyzing = True
+        self._is_analyzing = True
 
         with self._loaded_engine.analysis(
             board=self._game.board,
             limit=Limit(depth=40),
         ) as analysis:
             for info in analysis:
-                if not self._analyzing:
+                if not self._is_analyzing:
                     break
 
                 if "pv" in info:
@@ -69,7 +69,7 @@ class Engine(QObject):
 
     def stop_analysis(self) -> None:
         """Stop analyzing the current position."""
-        self._analyzing = False
+        self._is_analyzing = False
 
     def quit(self) -> None:
         """End the CPU task of a loaded engine."""

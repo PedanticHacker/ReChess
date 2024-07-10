@@ -36,7 +36,7 @@ class SettingsDialog(QDialog):
     def create_options(self) -> None:
         """Create options that will represent the settings."""
         is_engine_white: bool = get_config_value("engine", "white")
-        is_engine_pondering: bool = get_config_value("engine", "pondering")
+        is_engine_pondering: bool = get_config_value("engine", "is_pondering")
 
         clock_time: int = get_config_value("clock", "time")
         clock_increment: int = get_config_value("clock", "increment")
@@ -49,9 +49,9 @@ class SettingsDialog(QDialog):
         self._engine_white_option.setText("White")
         self._engine_white_option.setChecked(is_engine_white)
 
-        self._engine_pondering_option: QCheckBox = QCheckBox()
-        self._engine_pondering_option.setText("Pondering")
-        self._engine_pondering_option.setChecked(is_engine_pondering)
+        self._engine_ponder_option: QCheckBox = QCheckBox()
+        self._engine_ponder_option.setText("Ponder")
+        self._engine_ponder_option.setChecked(is_engine_pondering)
 
         self._clock_time_option: QComboBox = QComboBox()
         self._clock_time_option.addItem("1 minute", 60)
@@ -85,7 +85,7 @@ class SettingsDialog(QDialog):
         engine_layout: QVBoxLayout = QVBoxLayout()
         engine_layout.addWidget(self._engine_black_option)
         engine_layout.addWidget(self._engine_white_option)
-        engine_layout.addWidget(self._engine_pondering_option)
+        engine_layout.addWidget(self._engine_ponder_option)
         self._engine_group.setLayout(engine_layout)
 
         time_control_layout: QHBoxLayout = QHBoxLayout()
@@ -125,6 +125,6 @@ class SettingsDialog(QDialog):
         )
         set_config_value(
             section="engine",
-            key="pondering",
-            value=self._engine_pondering_option.isChecked(),
+            key="is_pondering",
+            value=self._engine_ponder_option.isChecked(),
         )

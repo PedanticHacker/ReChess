@@ -14,7 +14,7 @@ ConfigSection = BoardSection | ClockSection | EngineSection
 
 BoardKey = Literal["perspective"]
 ClockKey = Literal["time", "increment"]
-EngineKey = Literal["pondering", "white"]
+EngineKey = Literal["is_pondering", "white"]
 ConfigKey = BoardKey | ClockKey | EngineKey
 
 ConfigValue = int | bool

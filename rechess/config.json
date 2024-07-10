@@ -8,6 +8,6 @@
     },
     "engine": {
         "white": false,
-        "pondering": false
+        "is_pondering": false
     }
 }

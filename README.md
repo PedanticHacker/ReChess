@@ -24,17 +24,20 @@ version of Python and want to adapt to it.
 
 ## Are there any dependencies?
 
-ReChess depends upon the *psutil* OS monitoring library, the **PySide6**
-GUI framework, and the **python-chess** library.
+Yes. ReChess depends upon these things:
+
+- PySide6: A framework for developing cross-platform GUI apps
+- python-chess: A library for developing chess-based apps
+- psutil: A library for getting operating system metrics
 
 ### Is there any 3rd-party software involved?
 
 Yes. ReChess integrates **Stockfish**, a powerful chess engine for
 playing and analyzing.
 
-## What do I get?
+## What features do I get?
 
-With ReChess, you get all the basic stuff for playing chess:
+With ReChess, you get all the basic features for playing chess:
 
 - SVG chessboard
 - chess clocks
