@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 from contextlib import suppress
 from platform import system
 
@@ -7,6 +5,7 @@ from chess import Move
 from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
 from PySide6.QtCore import QObject, Signal
 
+from rechess.core import Game
 from rechess.utils import get_config_value, get_engine_config
 
 
