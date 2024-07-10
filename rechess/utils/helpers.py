@@ -1,5 +1,5 @@
 import json
-from typing import Callable, Literal, overload
+from typing import Callable, Literal, overload, TypeAlias
 
 import psutil
 from PySide6.QtCore import QSize
@@ -7,32 +7,29 @@ from PySide6.QtGui import QAction, QIcon
 from PySide6.QtWidgets import QPushButton
 
 
-BoardSection = Literal["board"]
-ClockSection = Literal["clock"]
-EngineSection = Literal["engine"]
-ConfigSection = BoardSection | ClockSection | EngineSection
+BoardSection: TypeAlias = Literal["board"]
+ClockSection: TypeAlias = Literal["clock"]
+EngineSection: TypeAlias = Literal["engine"]
+ConfigSection: TypeAlias = BoardSection | ClockSection | EngineSection
 
-BoardKey = Literal["perspective"]
-ClockKey = Literal["time", "increment"]
-EngineKey = Literal["is_pondering", "white"]
-ConfigKey = BoardKey | ClockKey | EngineKey
+BoardKey: TypeAlias = Literal["perspective"]
+ClockKey: TypeAlias = Literal["time", "increment"]
+EngineKey: TypeAlias = Literal["is_pondering", "white"]
+ConfigKey: TypeAlias = BoardKey | ClockKey | EngineKey
 
-ConfigValue = int | bool
-
-
-@overload
-def get_config_value(section: BoardSection, key: BoardKey) -> bool:
-    ...
+ConfigValue: TypeAlias = int | bool
 
 
 @overload
-def get_config_value(section: ClockSection, key: ClockKey) -> int:
-    ...
+def get_config_value(section: BoardSection, key: BoardKey) -> bool: ...
 
 
 @overload
-def get_config_value(section: EngineSection, key: EngineKey) -> bool:
-    ...
+def get_config_value(section: ClockSection, key: ClockKey) -> int: ...
+
+
+@overload
+def get_config_value(section: EngineSection, key: EngineKey) -> bool: ...
 
 
 def get_config_value(section: ConfigSection, key: ConfigKey) -> ConfigValue:
@@ -43,18 +40,15 @@ def get_config_value(section: ConfigSection, key: ConfigKey) -> ConfigValue:
 
 
 @overload
-def set_config_value(section: BoardSection, key: BoardKey, value: bool) -> None:
-    ...
+def set_config_value(section: BoardSection, key: BoardKey, value: bool) -> None: ...
 
 
 @overload
-def set_config_value(section: ClockSection, key: ClockKey, value: int) -> None:
-    ...
+def set_config_value(section: ClockSection, key: ClockKey, value: int) -> None: ...
 
 
 @overload
-def set_config_value(section: EngineSection, key: EngineKey, value: bool) -> None:
-    ...
+def set_config_value(section: EngineSection, key: EngineKey, value: bool) -> None: ...
 
 
 def set_config_value(

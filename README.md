@@ -14,13 +14,14 @@ It would be best if you launch ReChess using Python **3.12**.
 
 ### Why 3.12?
 
-By using Python 3.12, ReChess will work on all major platforms, so
+As tested, ReChess works on all major platforms using Python 3.12, so on
 Windows, Linux, and macOS.
 
 ### What about other Python versions?
 
-Modifying the source code is quite simple if you're using an older
-version of Python and want to adapt to it.
+ReChess should work using a Python version older than 3.12, but surely
+won't work using a 2.x version. Feel free to modify the source code to
+adapt it to your specific version, if necessary.
 
 ## Are there any dependencies?
 
