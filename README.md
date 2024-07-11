@@ -54,13 +54,13 @@ Only standard chess is supported. Chess variants are not supported.
 Making a move in ReChess is as simple as a click. Just click a piece and
 then click one of its legal squares to make your move.
 
-### Can I drag and then drop a piece?
-
-No. Drag-and-drop functionality is not supported.
-
 ### How can I know what's the legal square of a piece?
 
 After you click a piece, all of its legal squares get marked with a dot.
+
+### Can I drag and then drop a piece?
+
+No. Drag-and-drop functionality is not supported.
 
 ## How does ReChess look?
 
