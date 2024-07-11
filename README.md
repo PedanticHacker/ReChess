@@ -129,8 +129,12 @@ PyCharm, VSCode, Wing, Spyder, etc.) or your favorite source-code editor
 (e.g., Sublime Text, Notepad++, UltraEdit, Atom, etc.), then run the
 `main.py` file found in ReChess's top-level directory.
 
-Alternatively, you can also execute the `python main.py` command in your
-command-line interface within ReChess's top-level directory.
+Alternatively, you can also execute this command in your command-line
+interface within ReChess's top-level directory:
+
+```bash
+python main.py
+```
 
 ## Who should get thanks for ReChess?
 
