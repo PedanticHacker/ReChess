@@ -93,7 +93,7 @@ works on Windows, Linux, and macOS platforms.
 You can load and play against any chess engine in ReChess, but make sure
 it is a UCI chess engine.
 
-### Why does it have to be UCI?
+### Why does it have to be a UCI chess engine?
 
 Chess engines, compatible only with CECP and designed for a WinBoard or
 an XBoard GUI, can't be loaded and played against in ReChess because it
@@ -102,21 +102,21 @@ then you're in luck.
 
 ## Are there any requirements I must have for ReChess?
 
-Yes. You should have specific requirements before launching ReChess.
-Click the provided links to install any missing ones.
+Yes. You should have specific requirements installed.
 
-1. Install the Python programming language:
+1. Install this version of the Python programming language:
 
     - [**Python 3.12.4**](https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe)
 
-2. In a command-line interface with admin privileges, install these:
+2. In your command-line interface, install:
     - **psutil**, by executing the command `pip install psutil`
     - **PySide6**, by executing the command `pip install PySide6`
     - **python-chess**, by executing the command `pip install chess`
 
-Alternatively, you can also install those three requirements with the
+Alternatively, you can also install these three requirements with the
 *pip* package manager in your command-line interface within ReChess's
-top-level directory, then execute this command:
+top-level directory, while making sure Python is installed first, then
+execute this command:
 
 ```bash
 pip install -r requirements.txt
@@ -141,7 +141,7 @@ programming language!
     - [Downloads page](https://www.python.org/downloads)
 
 2. Thanks to the developer Giampaolo Rodola for his dedicated work on
-the psutil OS monitoring library!
+the psutil library!
 
     - [Source code](https://github.com/giampaolo/psutil)
     - [PyPI (Python Package Index) page](https://pypi.org/project/psutil)
