@@ -45,11 +45,6 @@ With ReChess, you get all the basic features for playing chess:
 - FEN record editor
 - table that displays chess move notation in SAN format
 
-### Can I do a chessboard position analysis?
-
-Yes. You can analyze a chessboard position with the default chess engine
-or the one you load yourself.
-
 ## Which chess variants are supported?
 
 Only standard chess is supported. Chess variants are not supported.
@@ -99,6 +94,11 @@ Chess engines, compatible only with CECP and designed for a WinBoard or
 an XBoard GUI, can't be loaded and played against in ReChess because it
 doesn't support this protocol. If your chess engine also supports UCI,
 then you're in luck.
+
+### Can I do a chessboard position analysis?
+
+Yes. You can analyze a chessboard position with the default chess engine
+or the one you load yourself.
 
 ## Are there any requirements I must have for ReChess?
 
