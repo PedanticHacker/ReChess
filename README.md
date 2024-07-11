@@ -115,7 +115,7 @@ Yes. You should have specific requirements installed.
 
 Alternatively, you can also install these three requirements with the
 *pip* package manager in your command-line interface within ReChess's
-top-level directory, while making sure Python is installed first, then
+top-level directory, but make sure Python is installed first, then
 execute this command:
 
 ```bash
