@@ -28,8 +28,8 @@ class Clock(QLCDNumber):
 
     def reset(self) -> None:
         """Reset the clock's time to values from the config."""
-        seconds: int = get_config_value("clock", "time")
-        increment: int = get_config_value("clock", "increment")
+        seconds: float = get_config_value("clock", "time")
+        increment: float = get_config_value("clock", "increment")
         self.time: float = seconds + increment
         self.display_time()
 
@@ -70,10 +70,9 @@ class Clock(QLCDNumber):
 
     @Slot()
     def update_time(self) -> None:
-        """Update the remaining time on the clock."""
+        """Update the remaining clock's time."""
         self.update_elapsed_time()
 
-        if self.time <= 0:
-            self.time = 0
-            self.display_time()
+        if not self.time:
+            self._countdown_timer.stop()
             self.time_expired.emit()

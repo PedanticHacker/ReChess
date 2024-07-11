@@ -3,8 +3,8 @@
         "perspective": true
     },
     "clock": {
-        "time": 300,
-        "increment": 0
+        "time": 300.0,
+        "increment": 0.0
     },
     "engine": {
         "white": false,

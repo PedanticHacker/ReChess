@@ -17,7 +17,7 @@ ClockKey: TypeAlias = Literal["time", "increment"]
 EngineKey: TypeAlias = Literal["is_pondering", "white"]
 ConfigKey: TypeAlias = BoardKey | ClockKey | EngineKey
 
-ConfigValue: TypeAlias = int | bool
+ConfigValue: TypeAlias = float | bool
 
 
 @overload
@@ -26,7 +26,7 @@ def get_config_value(section: BoardSection, key: BoardKey) -> bool:
 
 
 @overload
-def get_config_value(section: ClockSection, key: ClockKey) -> int:
+def get_config_value(section: ClockSection, key: ClockKey) -> float:
     ...
 
 
