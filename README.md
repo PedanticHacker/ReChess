@@ -96,8 +96,8 @@ it is a UCI chess engine.
 ### Why does it have to be UCI?
 
 Chess engines, compatible only with CECP and designed for a WinBoard or
-an XBoard GUI, cannot be loaded and played against in ReChess because it
-does not support this protocol. If your chess engine also supports UCI,
+an XBoard GUI, can't be loaded and played against in ReChess because it
+doesn't support this protocol. If your chess engine also supports UCI,
 then you're in luck.
 
 ## Are there any requirements I must have for ReChess?
