@@ -54,7 +54,7 @@ Only standard chess is supported. Chess variants are not supported.
 Making a move in ReChess is as simple as a click. Just click a piece and
 then click one of its legal squares to make your move.
 
-### How can I know what's the legal square of a piece?
+### How do I know what's the legal square of a piece?
 
 After you click a piece, all of its legal squares get marked with a dot.
 
