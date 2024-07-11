@@ -60,6 +60,8 @@ class MainWindow(QMainWindow):
         self.adjust_engine_buttons()
         self.connect_signals_to_slots()
 
+        self.switch_clock_timers()
+
     def create_actions(self) -> None:
         """Create actions for menu bar and tool bar."""
         self.about_action = create_action(
@@ -251,6 +253,15 @@ class MainWindow(QMainWindow):
         self._white_clock.time_expired.connect(self.on_white_clock_time_expired)
         self._engine.san_variation_analyzed.connect(self.on_san_variation_analyzed)
 
+    def switch_clock_timers(self) -> None:
+        """Activate the clock's timer for the player on turn."""
+        if self._game.is_white_on_turn():
+            self._black_clock.stop_timer()
+            self._white_clock.start_timer()
+        else:
+            self._white_clock.stop_timer()
+            self._black_clock.start_timer()
+
     def invoke_engine(self) -> None:
         """Invoke the loaded engine to play a move."""
         QThreadPool.globalInstance().start(self._engine.play_move)
@@ -288,7 +299,7 @@ class MainWindow(QMainWindow):
             self._white_clock.reset()
 
     def load_engine(self) -> None:
-        """Show the file manager to load a UCI engine."""
+        """Show the file manager to load a UCI chess engine."""
         engine_file, _ = QFileDialog.getOpenFileName(
             self,
             "File Manager",
@@ -300,7 +311,7 @@ class MainWindow(QMainWindow):
             self.start_new_engine(engine_file)
 
     def start_new_engine(self, engine_file: str) -> None:
-        """Load a new engine from `engine_file`."""
+        """Start a new chess engine from the `engine_file`."""
         self.stop_analysis()
         self._game.arrow.clear()
         self._engine_analysis_label.clear()
@@ -315,7 +326,7 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def show_about(self) -> None:
-        """Show some information about the app."""
+        """Show some info about the app."""
         QMessageBox.about(
             self,
             "About",
@@ -386,15 +397,6 @@ class MainWindow(QMainWindow):
 
         if self._game.is_engine_on_turn():
             self.invoke_engine()
-
-    def switch_clock_timers(self) -> None:
-        """Activate the clock's timer for the player on turn."""
-        if self._game.is_white_on_turn():
-            self._black_clock.stop_timer()
-            self._white_clock.start_timer()
-        else:
-            self._white_clock.stop_timer()
-            self._black_clock.start_timer()
 
     def offer_new_game(self) -> None:
         """Show a dialog offering to start a new game."""
@@ -476,11 +478,7 @@ class MainWindow(QMainWindow):
     def on_move_played(self, move: Move) -> None:
         """Play the `move` by pushing it and refreshing the UI."""
         if self._game.is_legal(move):
-            ply_index: int = self._table_view.ply_index
-
-            if ply_index > -1:
-                self._game.delete_data_after(ply_index)
-
+            self._game.delete_data_after(self._table_view.ply_index)
             self._game.push(move)
             self.refresh_ui()
 

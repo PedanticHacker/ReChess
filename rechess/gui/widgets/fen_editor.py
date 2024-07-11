@@ -46,4 +46,4 @@ class FenEditor(QLineEdit):
                 self.clearFocus()
                 self.reset_background_color()
                 self._game.board = board
-                # self._svg_board.draw() or emit a signal
+                # self._svg_board.draw()

@@ -41,6 +41,8 @@ class Game(QObject):
         """Set the starting state of a game."""
         self.arrow.clear()
         self.board.reset()
+        self.notation.clear()
+        self.positions.clear()
 
         self._engine_turn: Color = get_config_value("engine", "white")
         self.perspective: Color = get_config_value("board", "perspective")
@@ -53,17 +55,22 @@ class Game(QObject):
         self.to_square: Square = -1
 
     def push(self, move: Move) -> None:
-        """Push the `move` on the board."""
+        """Push the `move`."""
         self.set_arrow_for(move)
         self.play_sound_effect_for(move)
-        self.set_notation_item_for(move)
+
+        notation_item: str = self.board.san_and_push(move)
+        self.notation.append(notation_item)
+
+        position: Board = self.board.copy()
+        self.positions.append(position)
 
     def set_arrow_for(self, move: Move) -> None:
         """Set an arrow for the `move`."""
         self.arrow = [(move.from_square, move.to_square)]
 
     def clear_arrow(self) -> None:
-        """Clear the arrow from the board."""
+        """Clear the arrow from the chessboard."""
         self.arrow.clear()
 
     def play_sound_effect_for(self, move: Move) -> None:
@@ -73,14 +80,6 @@ class Game(QObject):
         file_url: QUrl = QUrl(f"file:rechess/resources/audio/{file_name}")
         self.sound_effect.setSource(file_url)
         self.sound_effect.play()
-
-    def set_notation_item_for(self, move: Move) -> None:
-        """Set a notation item for the `move`."""
-        notation_item: str = self.board.san_and_push(move)
-        self.notation.append(notation_item)
-
-        position: Board = self.board.copy()
-        self.positions.append(position)
 
     def set_root_position(self) -> None:
         """Set all pieces to their root position."""
@@ -150,9 +149,12 @@ class Game(QObject):
 
     def delete_data_after(self, ply_index: int) -> None:
         """Delete notation items and positions after `ply_index`."""
-        after_ply_index: slice = slice(ply_index + 1, len(self.notation))
-        del self.notation[after_ply_index]
-        del self.positions[after_ply_index]
+        if ply_index < 0:
+            self.set_new_game()
+        else:
+            after_ply_index: slice = slice(ply_index + 1, len(self.notation))
+            del self.notation[after_ply_index]
+            del self.positions[after_ply_index]
 
     def is_game_in_progress(self) -> bool:
         """Return True if a game is in progress, else False."""

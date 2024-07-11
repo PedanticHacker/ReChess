@@ -10,7 +10,7 @@ from rechess.utils import get_config_value, get_engine_config
 
 
 class Engine(QObject):
-    """A mechanism to communicate with a UCI engine."""
+    """A mechanism to communicate with a UCI chess engine."""
 
     move_played: Signal = Signal(Move)
     best_move_analyzed: Signal = Signal(Move)
@@ -29,14 +29,14 @@ class Engine(QObject):
         self._loaded_engine.configure(get_engine_config())
 
     def load(self, file_path: str) -> None:
-        """Load an engine by the given `file_path`."""
+        """Load a chess engine with the `file_path`."""
         with suppress(EngineError):
             self._loaded_engine.quit()
             self._loaded_engine = SimpleEngine.popen_uci(file_path)
             self._loaded_engine.configure(get_engine_config())
 
     def play_move(self) -> None:
-        """Play a move with the loaded engine."""
+        """Play a move with the loaded chess engine."""
         play_result: PlayResult = self._loaded_engine.play(
             board=self._game.board,
             limit=Limit(depth=30),
@@ -45,7 +45,7 @@ class Engine(QObject):
         self.move_played.emit(play_result.move)
 
     def start_analysis(self) -> None:
-        """Start analyzing the current position."""
+        """Start analyzing a chessboard position."""
         self._is_analyzing = True
 
         with self._loaded_engine.analysis(
@@ -67,14 +67,14 @@ class Engine(QObject):
                     self.san_variation_analyzed.emit(san_variation)
 
     def stop_analysis(self) -> None:
-        """Stop analyzing the current position."""
+        """Stop analyzing a chessboard position."""
         self._is_analyzing = False
 
     def quit(self) -> None:
-        """End the CPU task of a loaded engine."""
+        """End the CPU task of a loaded chess engine."""
         self._loaded_engine.quit()
 
     @property
     def name(self) -> str:
-        """Get the name of a loaded engine."""
+        """Get the name of a loaded chess engine."""
         return self._loaded_engine.id["name"]
