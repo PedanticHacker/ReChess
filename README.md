@@ -21,7 +21,7 @@ Windows, Linux, and macOS.
 
 ReChess should work using a Python version older than 3.12, but surely
 won't work using a 2.x version. Feel free to modify the source code to
-adapt it to your specific version, if necessary.
+adapt it to your specific Python version, if necessary.
 
 ## Are there any dependencies?
 
