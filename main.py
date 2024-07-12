@@ -11,8 +11,8 @@ from rechess.gui import MainWindow
 from rechess.utils import get_app_style, get_svg_icon
 
 
-class AppSession(QApplication):
-    """The app's session, locked to be launched only once."""
+class ReChess(QApplication):
+    """The ReChess GUI app, locked to be launched only once."""
 
     def __init__(self) -> None:
         super().__init__()
@@ -28,19 +28,19 @@ class AppSession(QApplication):
         else:
             sys.exit()
 
-    def launch(self) -> int:
-        """Launch the app's session."""
-        return self.exec()
+    def launch(self) -> None:
+        """Launch the ReChess GUI app."""
+        self.exec()
 
 
-def main() -> int:
-    """Define the app's entry point."""
-    app_session: AppSession = AppSession()
+def main() -> None:
+    """Define ReChess's entry point."""
+    re_chess: ReChess = ReChess()
 
     main_window: MainWindow = MainWindow()
     main_window.show_maximized()
 
-    return app_session.launch()
+    re_chess.launch()
 
 
 if __name__ == "__main__":
