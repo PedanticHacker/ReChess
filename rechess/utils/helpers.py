@@ -116,18 +116,18 @@ def get_optimal_threads() -> int:
     return max(minimum_threads, available_threads - reserved_threads)
 
 
-def get_engine_config() -> dict[str, int]:
-    """Get the configuration dictionary for a UCI chess engine."""
+def get_engine_configuration() -> dict[str, int]:
+    """Get a configuration for a UCI chess engine."""
     return {"Hash": get_optimal_hash(), "Threads": get_optimal_threads()}
 
 
 def get_svg_icon(file_name: str) -> QIcon:
-    """Get an SVG icon from the given `file_name`."""
+    """Get an SVG icon with the `file_name`."""
     return QIcon(f"rechess/resources/icons/{file_name}.svg")
 
 
 def get_openings() -> dict[str, tuple[str, str]]:
-    """Get a dictionary of openings."""
+    """Get a dictionary of chess openings."""
     return {
         "rnbqkb1r/pppppppp/5n2/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 1 2": (
             "B02",
