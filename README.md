@@ -31,14 +31,14 @@ Yes. ReChess depends upon these things:
 - python-chess: A library for developing chess apps
 - psutil: A library for getting operating system metrics
 
-### Is there any 3rd-party software involved?
+### Is there any 3rd-party software used?
 
-Yes. ReChess integrates **Stockfish**, a powerful chess engine for
-playing and analyzing.
+Yes. ReChess uses **Stockfish**, a powerful chess engine for playing and
+analyzing.
 
-## What features do I get?
+## What features does ReChess provide?
 
-With ReChess, you get all the basic features for playing chess:
+You get all the basic features for playing chess:
 
 - SVG chessboard
 - chess clocks
