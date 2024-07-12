@@ -25,11 +25,11 @@ adapt it to your specific Python version, if necessary.
 
 ## Are there any dependencies?
 
-Yes. ReChess depends upon these things:
+Yes. ReChess depends upon:
 
-- PySide6: A framework for developing cross-platform GUI apps
-- python-chess: A library for developing chess apps
-- psutil: A library for getting operating system metrics
+- **psutil**: A library for getting operating system metrics
+- **PySide6**: A framework for developing cross-platform GUI apps
+- **python-chess**: A library for developing chess apps
 
 ### Is there any 3rd-party software used?
 
