@@ -10,7 +10,7 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
 )
 
-from rechess.utils import get_config_value, set_config_value
+from rechess.utils import get_setting_value, set_setting_value
 
 
 class SettingsDialog(QDialog):
@@ -35,11 +35,11 @@ class SettingsDialog(QDialog):
 
     def create_options(self) -> None:
         """Create options that will represent the settings."""
-        is_engine_white: bool = get_config_value("engine", "white")
-        is_engine_pondering: bool = get_config_value("engine", "is_pondering")
+        is_engine_white: bool = get_setting_value("engine", "is_white")
+        is_engine_pondering: bool = get_setting_value("engine", "is_pondering")
 
-        clock_time: int = get_config_value("clock", "time")
-        clock_increment: int = get_config_value("clock", "increment")
+        clock_time: int = get_setting_value("clock", "time")
+        clock_increment: int = get_setting_value("clock", "increment")
 
         self._engine_black_option: QRadioButton = QRadioButton()
         self._engine_black_option.setText("Black")
@@ -101,29 +101,29 @@ class SettingsDialog(QDialog):
 
     def connect_events_with_handlers(self) -> None:
         """Connect various events with specific handlers."""
-        self.accepted.connect(self.on_save_settings)
+        self.accepted.connect(self.on_accepted)
         self._button_box.accepted.connect(self.accept)
         self._button_box.rejected.connect(self.reject)
 
     @Slot()
-    def on_save_settings(self) -> None:
-        """Save any changed settings."""
-        set_config_value(
+    def on_accepted(self) -> None:
+        """Save the settings upon clicking the OK button."""
+        set_setting_value(
             section="clock",
             key="time",
             value=self._clock_time_option.currentData(),
         )
-        set_config_value(
+        set_setting_value(
             section="clock",
             key="increment",
             value=self._clock_increment_option.currentData(),
         )
-        set_config_value(
+        set_setting_value(
             section="engine",
-            key="white",
+            key="is_white",
             value=self._engine_white_option.isChecked(),
         )
-        set_config_value(
+        set_setting_value(
             section="engine",
             key="is_pondering",
             value=self._engine_ponder_option.isChecked(),

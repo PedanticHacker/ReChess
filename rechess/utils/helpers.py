@@ -10,66 +10,66 @@ from PySide6.QtWidgets import QPushButton
 BoardSection: TypeAlias = Literal["board"]
 ClockSection: TypeAlias = Literal["clock"]
 EngineSection: TypeAlias = Literal["engine"]
-ConfigSection: TypeAlias = BoardSection | ClockSection | EngineSection
+SettingSection: TypeAlias = BoardSection | ClockSection | EngineSection
 
 BoardKey: TypeAlias = Literal["perspective"]
 ClockKey: TypeAlias = Literal["time", "increment"]
-EngineKey: TypeAlias = Literal["is_pondering", "white"]
-ConfigKey: TypeAlias = BoardKey | ClockKey | EngineKey
+EngineKey: TypeAlias = Literal["is_pondering", "is_white"]
+SettingKey: TypeAlias = BoardKey | ClockKey | EngineKey
 
-ConfigValue: TypeAlias = float | bool
+SettingValue: TypeAlias = float | bool
 
 
 @overload
-def get_config_value(section: BoardSection, key: BoardKey) -> bool:
+def get_setting_value(section: BoardSection, key: BoardKey) -> bool:
     ...
 
 
 @overload
-def get_config_value(section: ClockSection, key: ClockKey) -> float:
+def get_setting_value(section: ClockSection, key: ClockKey) -> float:
     ...
 
 
 @overload
-def get_config_value(section: EngineSection, key: EngineKey) -> bool:
+def get_setting_value(section: EngineSection, key: EngineKey) -> bool:
     ...
 
 
-def get_config_value(section: ConfigSection, key: ConfigKey) -> ConfigValue:
-    """Get the config value of a `key` from a `section`."""
-    with open("rechess/config.json") as config_file:
-        config_contents = json.load(config_file)
-    return config_contents[section][key]
+def get_setting_value(section: SettingSection, key: SettingKey) -> SettingValue:
+    """Get a JSON value of the `key` from the `section`."""
+    with open("rechess/settings.json") as settings_file:
+        settings_data = json.load(settings_file)
+    return settings_data[section][key]
 
 
 @overload
-def set_config_value(section: BoardSection, key: BoardKey, value: bool) -> None:
-    ...
-
-
-@overload
-def set_config_value(section: ClockSection, key: ClockKey, value: int) -> None:
+def set_setting_value(section: BoardSection, key: BoardKey, value: bool) -> None:
     ...
 
 
 @overload
-def set_config_value(section: EngineSection, key: EngineKey, value: bool) -> None:
+def set_setting_value(section: ClockSection, key: ClockKey, value: int) -> None:
     ...
 
 
-def set_config_value(
-    section: ConfigSection,
-    key: ConfigKey,
-    value: ConfigValue,
+@overload
+def set_setting_value(section: EngineSection, key: EngineKey, value: bool) -> None:
+    ...
+
+
+def set_setting_value(
+    section: SettingSection,
+    key: SettingKey,
+    value: SettingValue,
 ) -> None:
-    """Set a config `value` to a `key` for a `section`."""
-    with open("rechess/config.json") as config_file:
-        config_contents = json.load(config_file)
-    config_contents[section][key] = value
+    """Set the JSON `value` to the `key` for the `section`."""
+    with open("rechess/settings.json") as settings_file:
+        settings_data = json.load(settings_file)
+    settings_data[section][key] = value
 
-    with open("rechess/config.json", mode="w", newline="\n") as config_file:
-        json.dump(config_contents, config_file, indent=4)
-        config_file.write("\n")
+    with open("rechess/settings.json", mode="w", newline="\n") as settings_file:
+        json.dump(settings_data, settings_file, indent=4)
+        settings_file.write("\n")
 
 
 def create_action(

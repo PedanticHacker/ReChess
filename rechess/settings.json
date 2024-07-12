@@ -7,7 +7,7 @@
         "increment": 0.0
     },
     "engine": {
-        "white": false,
+        "is_white": false,
         "is_pondering": false
     }
 }

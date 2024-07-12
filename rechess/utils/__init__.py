@@ -2,9 +2,9 @@ from .helpers import (
     create_action,
     create_button,
     get_app_style,
-    get_config_value,
     get_engine_config,
     get_openings,
+    get_setting_value,
     get_svg_icon,
-    set_config_value,
+    set_setting_value,
 )

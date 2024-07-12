@@ -18,7 +18,7 @@ from PySide6.QtMultimedia import QSoundEffect
 from PySide6.QtWidgets import QDialog
 
 from rechess.gui.dialogs import PromotionDialog
-from rechess.utils import get_config_value, set_config_value
+from rechess.utils import get_setting_value, set_setting_value
 
 
 class Game(QObject):
@@ -44,8 +44,8 @@ class Game(QObject):
         self.notation.clear()
         self.positions.clear()
 
-        self._engine_turn: Color = get_config_value("engine", "white")
-        self.perspective: Color = get_config_value("board", "perspective")
+        self._engine_turn: Color = get_setting_value("engine", "is_white")
+        self.perspective: Color = get_setting_value("board", "perspective")
 
         self.reset_squares()
 
@@ -87,8 +87,8 @@ class Game(QObject):
 
     def flip_perspective(self) -> None:
         """Flip the current perspective."""
-        self.perspective = not get_config_value("board", "perspective")
-        set_config_value("board", "perspective", self.perspective)
+        self.perspective = not get_setting_value("board", "perspective")
+        set_setting_value("board", "perspective", self.perspective)
 
     def get_square_from(self, x: float, y: float) -> None:
         """Get a square from `x` and `y` coordinates."""
@@ -144,8 +144,8 @@ class Game(QObject):
 
     def pass_turn_to_engine(self) -> None:
         """Pass the current turn to the engine."""
-        self._engine_turn = not get_config_value("engine", "white")
-        set_config_value("engine", "white", self._engine_turn)
+        self._engine_turn = not get_setting_value("engine", "is_white")
+        set_setting_value("engine", "is_white", self._engine_turn)
 
     def delete_data_after(self, ply_index: int) -> None:
         """Delete notation items and positions after `ply_index`."""
