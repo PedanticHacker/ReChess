@@ -1,8 +1,8 @@
 # ReChess
 
-## What is this?
+## What's this?
 
-ReChess is an app for playing chess against a chess engine.
+ReChess is an app for playing chess against a UCI chess engine.
 
 ## In what programming language is ReChess written?
 
