@@ -38,8 +38,8 @@ class SettingsDialog(QDialog):
         is_engine_white: bool = get_setting_value("engine", "is_white")
         is_engine_pondering: bool = get_setting_value("engine", "is_pondering")
 
-        clock_time: int = get_setting_value("clock", "time")
-        clock_increment: int = get_setting_value("clock", "increment")
+        clock_time: float = get_setting_value("clock", "time")
+        clock_increment: float = get_setting_value("clock", "increment")
 
         self._engine_black_option: QRadioButton = QRadioButton()
         self._engine_black_option.setText("Black")
@@ -78,8 +78,7 @@ class SettingsDialog(QDialog):
     def set_vertical_layout(self) -> None:
         """Set a vertical layout for the dialog."""
         self._button_box: QDialogButtonBox = QDialogButtonBox(
-            QDialogButtonBox.StandardButton.Ok
-            | QDialogButtonBox.StandardButton.Cancel
+            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel
         )
 
         engine_layout: QVBoxLayout = QVBoxLayout()
