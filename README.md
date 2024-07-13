@@ -33,17 +33,33 @@ Yes. ReChess depends upon:
 
 ### Is there any 3rd-party software used?
 
-Yes. ReChess uses **Stockfish**, a powerful chess engine for playing and
-analyzing.
+Yes. ReChess uses **Stockfish**, a powerful UCI chess engine for playing
+and analyzing.
 
 ## What features does ReChess provide?
 
 You get all the basic features for playing chess:
 
-- SVG chessboard
 - chess clocks
+- SVG chessboard
 - FEN record editor
-- table that displays chess move notation in SAN format
+- table displaying chess move notation in SAN format
+
+## Is that it?
+
+There are also some additional features:
+
+- navigate through move history by scrolling your mouse wheel upwards or
+downwards, or making a corresponding touchpad gesture, and play the game
+from whatever historic move onwards, if you like
+- play against the latest official version of the Stockfish chess engine
+- analyze a chessboard position
+- load a UCI chess engine to play against it or to analyze with it
+- flip the chessboard
+- force the loaded chess engine to make a move
+- paste a FEN record from the clipboard simply by double-clicking the
+FEN record editor and analyze that position or play a game from that
+position onwards
 
 ## Which chess variants are supported?
 
