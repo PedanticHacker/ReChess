@@ -47,7 +47,7 @@ You get all the basic features for playing chess:
 
 ## Is that it?
 
-There are also some additional features:
+There are also some additional features that you get. You can:
 
 - navigate through move history by scrolling your mouse wheel upwards or
 downwards, or making a corresponding touchpad gesture, and play the game
