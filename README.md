@@ -47,10 +47,10 @@ You get all the basic features for playing chess:
 
 ## Is that it?
 
-There are also some additional features that you get. You can:
+There are also many functionalities you can utilize:
 
 - navigate through move history by scrolling your mouse wheel upwards or
-downwards, or making a corresponding touchpad gesture, and play the game
+downwards, or making a corresponding touchpad gesture, and play a game
 from whatever historic move onwards, if you like
 - play against the latest official version of the Stockfish chess engine
 - analyze a chessboard position
