@@ -337,7 +337,8 @@ class MainWindow(QMainWindow):
 
         self._svg_board.draw()
 
-        self.invoke_engine()
+        if self._game.is_engine_on_turn():
+            self.invoke_engine()
 
     def show_about(self) -> None:
         """Show some info about the app."""
@@ -408,8 +409,10 @@ class MainWindow(QMainWindow):
             self._white_clock.stop_timer()
             self._notifications_label.setText(self._game.result)
             self.offer_new_game()
+            return
 
-        self.invoke_engine()
+        if self._game.is_engine_on_turn():
+            self.invoke_engine()
 
     def offer_new_game(self) -> None:
         """Show a dialog offering to start a new game."""
@@ -444,7 +447,8 @@ class MainWindow(QMainWindow):
 
         self._svg_board.draw()
 
-        self.invoke_engine()
+        if self._game.is_engine_on_turn():
+            self.invoke_engine()
 
     def closeEvent(self, event: QCloseEvent) -> None:
         """Ask whether to quit ReChess by closing the main window."""
