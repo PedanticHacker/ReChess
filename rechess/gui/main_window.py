@@ -71,10 +71,9 @@ class MainWindow(QMainWindow):
         self.set_grid_layout()
         self.set_minimum_size()
         self.create_status_bar()
+        self.switch_clock_timers()
         self.adjust_engine_buttons()
         self.connect_signals_to_slots()
-
-        self.switch_clock_timers()
 
     def create_actions(self) -> None:
         """Create actions for menu bar and tool bar."""
@@ -217,6 +216,15 @@ class MainWindow(QMainWindow):
         self.statusBar().addPermanentWidget(self._engine_name_label)
         self._engine_name_label.setText(self._engine.name)
 
+    def switch_clock_timers(self) -> None:
+        """Activate the clock's timer for the player on turn."""
+        if self._game.is_white_on_turn():
+            self._black_clock.stop_timer()
+            self._white_clock.start_timer()
+        else:
+            self._white_clock.stop_timer()
+            self._black_clock.start_timer()
+
     def set_grid_layout(self) -> None:
         """Set a grid layout for widgets on the main window."""
         self._grid_layout: QGridLayout = QGridLayout()
@@ -266,15 +274,6 @@ class MainWindow(QMainWindow):
         self._black_clock.time_expired.connect(self.on_black_clock_time_expired)
         self._white_clock.time_expired.connect(self.on_white_clock_time_expired)
         self._engine.san_variation_analyzed.connect(self.on_san_variation_analyzed)
-
-    def switch_clock_timers(self) -> None:
-        """Activate the clock's timer for the player on turn."""
-        if self._game.is_white_on_turn():
-            self._black_clock.stop_timer()
-            self._white_clock.start_timer()
-        else:
-            self._white_clock.stop_timer()
-            self._black_clock.start_timer()
 
     def invoke_engine(self) -> None:
         """Invoke the loaded engine to play a move."""
