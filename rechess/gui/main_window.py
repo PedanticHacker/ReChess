@@ -19,7 +19,13 @@ from PySide6.QtWidgets import (
 from rechess.core import Game, TableModel
 from rechess.enums import ClockColor
 from rechess.gui.dialogs import SettingsDialog
-from rechess.gui.widgets import Clock, EvaluationBar, FenEditor, SvgBoard, TableView
+from rechess.gui.widgets import (
+    Clock,
+    EvaluationBar,
+    FenEditor,
+    SvgBoard,
+    TableView,
+)
 from rechess.uci import Engine
 from rechess.utils import (
     chess_openings,
@@ -44,7 +50,7 @@ class MainWindow(QMainWindow):
         self._fen_editor: FenEditor = FenEditor(self._game)
         self._evaluation_bar: EvaluationBar = EvaluationBar(self._game)
 
-        self._settings_dialog: SettingsDialog = SettingsDialog(self._game)
+        self._settings_dialog: SettingsDialog = SettingsDialog()
 
         self._black_clock: Clock = Clock(ClockColor.Black)
         self._white_clock: Clock = Clock(ClockColor.White)
@@ -111,8 +117,8 @@ class MainWindow(QMainWindow):
             name="Settings...",
             shortcut="Ctrl+Shift+S",
             icon=svg_icon("settings"),
-            handler=self.show_settings_dialog,
-            status_tip="Shows the Settings dialog.",
+            handler=self.display_settings_dialog,
+            status_tip="Displays the Settings dialog.",
         )
         self.start_analysis_action = create_action(
             name="Start analysis",
@@ -297,13 +303,13 @@ class MainWindow(QMainWindow):
 
     def play_move_now(self) -> None:
         """Force the loaded chess engine to play a move now."""
-        self.invoke_engine()
-
         self.flip()
         self.invoke_engine()
 
-    def show_settings_dialog(self) -> None:
-        """Show the Settings dialog to edit the app's settings."""
+    def display_settings_dialog(self) -> None:
+        """Display the Settings dialog to edit the app's settings."""
+        self._settings_dialog.disable_groups_if(self._game.playing)
+
         if self._settings_dialog.exec() == QDialog.DialogCode.Accepted:
             self._black_clock.reset()
             self._white_clock.reset()

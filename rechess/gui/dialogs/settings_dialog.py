@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 from PySide6.QtCore import Slot
 from PySide6.QtWidgets import (
     QCheckBox,
@@ -12,23 +10,20 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
 )
 
-# from rechess.core import Game
 from rechess.utils import set_setting_value, setting_value
 
 
 class SettingsDialog(QDialog):
-    """A dialog for changing the settings."""
+    """A dialog for changing the app's settings."""
 
-    def __init__(self, game: Game) -> None:
+    def __init__(self) -> None:
         super().__init__()
 
         self._engine_group: QGroupBox = QGroupBox()
         self._engine_group.setTitle("Engine")
-        self._engine_group.setDisabled(game.is_game_in_progress())
 
         self._time_control_group: QGroupBox = QGroupBox()
         self._time_control_group.setTitle("Time control")
-        self._time_control_group.setDisabled(game.is_game_in_progress())
 
         self.create_options()
         self.set_vertical_layout()
@@ -107,6 +102,11 @@ class SettingsDialog(QDialog):
         self.accepted.connect(self.on_accepted)
         self._button_box.accepted.connect(self.accept)
         self._button_box.rejected.connect(self.reject)
+
+    def disable_groups_if(self, playing: bool) -> None:
+        """Disable the engine and time control groups if `playing`."""
+        self._engine_group.setDisabled(playing)
+        self._time_control_group.setDisabled(playing)
 
     @Slot()
     def on_accepted(self) -> None:

@@ -41,6 +41,11 @@ class Game(QObject):
         return self.board.fen()
 
     @property
+    def playing(self) -> bool:
+        """Return True if a chess game is playing, else False."""
+        return bool(self.notation_items)
+
+    @property
     def king_square(self) -> Square | None:
         """Get the square of a king in check."""
         if self.board.is_check():
@@ -154,10 +159,6 @@ class Game(QObject):
 
         return None
 
-    def san_variation(self) -> str:
-        """Get a variation of moves in SAN format from the move stack."""
-        return Board().variation_san(self.board.move_stack)
-
     def set_move_with(self, ply_index: int) -> None:
         """Set a move with the `ply_index`."""
         self.board = self.positions[ply_index].copy()
@@ -177,10 +178,6 @@ class Game(QObject):
     def is_engine_on_turn(self) -> bool:
         """Return True if the chess engine is on turn, else False."""
         return self.board.turn == setting_value("engine", "is_white")
-
-    def is_game_in_progress(self) -> bool:
-        """Return True if a chess game is in progress, else False."""
-        return bool(self.notation_items)
 
     def is_game_over(self) -> bool:
         """Return True if the current chess game is over, else False."""

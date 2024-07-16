@@ -36,9 +36,9 @@ class EvaluationBar(QProgressBar):
         self.flip_appearance()
 
     def flip_appearance(self) -> None:
-        """Flip the appearance of the bar's chunk by inverting it."""
-        flipped_orientation: bool = not setting_value("board", "orientation")
-        self.setInvertedAppearance(flipped_orientation)
+        """Flip the appearance of the bar's chunk by orientation."""
+        orientation: bool = setting_value("board", "orientation")
+        self.setInvertedAppearance(orientation)
 
     def animate(self, evaluation: Score) -> None:
         """Animate the bar's chunk per the `evaluation`."""
