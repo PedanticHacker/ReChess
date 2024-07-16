@@ -10,7 +10,7 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
 )
 
-from rechess.utils import get_setting_value, set_setting_value
+from rechess.utils import set_setting_value, setting_value
 
 
 class SettingsDialog(QDialog):
@@ -34,12 +34,12 @@ class SettingsDialog(QDialog):
         self.connect_events_with_handlers()
 
     def create_options(self) -> None:
-        """Create options that will represent the settings."""
-        is_engine_white: bool = get_setting_value("engine", "is_white")
-        is_engine_pondering: bool = get_setting_value("engine", "is_pondering")
+        """Create options to represent the settings."""
+        is_engine_white: bool = setting_value("engine", "is_white")
+        is_engine_pondering: bool = setting_value("engine", "is_pondering")
 
-        clock_time: float = get_setting_value("clock", "time")
-        clock_increment: float = get_setting_value("clock", "increment")
+        clock_time: float = setting_value("clock", "time")
+        clock_increment: float = setting_value("clock", "increment")
 
         self._engine_black_option: QRadioButton = QRadioButton()
         self._engine_black_option.setText("Black")
@@ -107,7 +107,7 @@ class SettingsDialog(QDialog):
 
     @Slot()
     def on_accepted(self) -> None:
-        """Save the settings upon clicking the OK button."""
+        """Save the settings upon clicking the dialog's OK button."""
         set_setting_value(
             section="clock",
             key="time",

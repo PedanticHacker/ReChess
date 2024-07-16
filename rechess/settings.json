@@ -1,6 +1,6 @@
 {
     "board": {
-        "perspective": true
+        "orientation": true
     },
     "clock": {
         "time": 300.0,

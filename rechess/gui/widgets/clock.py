@@ -2,7 +2,7 @@ from PySide6.QtCore import QElapsedTimer, Qt, QTimer, Signal, Slot
 from PySide6.QtWidgets import QLCDNumber
 
 from rechess.enums import ClockColor
-from rechess.utils import get_setting_value
+from rechess.utils import setting_value
 
 
 class Clock(QLCDNumber):
@@ -27,9 +27,9 @@ class Clock(QLCDNumber):
         self.reset()
 
     def reset(self) -> None:
-        """Reset the clock's time to values from the config."""
-        seconds: float = get_setting_value("clock", "time")
-        increment: float = get_setting_value("clock", "increment")
+        """Reset the clock's time to values from the settings."""
+        seconds: float = setting_value("clock", "time")
+        increment: float = setting_value("clock", "increment")
         self.time: float = seconds + increment
         self.display_time()
 

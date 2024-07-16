@@ -8,7 +8,7 @@ from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QApplication
 
 from rechess.gui import MainWindow
-from rechess.utils import get_app_style, get_svg_icon
+from rechess.utils import app_style, svg_icon
 
 
 class ReChess(QApplication):
@@ -23,8 +23,8 @@ class ReChess(QApplication):
             self.setApplicationName("ReChess")
             self.setDesktopFileName("ReChess")
             self.setApplicationVersion("1.0.0")
-            self.setWindowIcon(get_svg_icon("logo"))
-            self.setStyleSheet(get_app_style("general"))
+            self.setWindowIcon(svg_icon("logo"))
+            self.setStyleSheet(app_style("general"))
         else:
             sys.exit()
 

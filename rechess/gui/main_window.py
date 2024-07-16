@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from chess import Move
+from chess import BLACK, Move
 from chess.engine import Score
 from PySide6.QtCore import Qt, QThreadPool, Slot
 from PySide6.QtGui import QCloseEvent, QWheelEvent
@@ -21,7 +21,13 @@ from rechess.enums import ClockColor
 from rechess.gui.dialogs import SettingsDialog
 from rechess.gui.widgets import Clock, EvaluationBar, FenEditor, SvgBoard, TableView
 from rechess.uci import Engine
-from rechess.utils import create_action, get_openings, get_svg_icon
+from rechess.utils import (
+    chess_openings,
+    create_action,
+    svg_icon,
+    set_setting_value,
+    setting_value,
+)
 
 
 class MainWindow(QMainWindow):
@@ -45,9 +51,10 @@ class MainWindow(QMainWindow):
         self._table_model: TableModel = TableModel(self._game.notation)
         self._table_view: TableView = TableView(self._table_model)
 
-        self._opening_label: QLabel = QLabel()
+        self._chess_opening_label: QLabel = QLabel()
         self._engine_name_label: QLabel = QLabel()
         self._notifications_label: QLabel = QLabel()
+
         self._engine_analysis_label: QLabel = QLabel()
         self._engine_analysis_label.setWordWrap(True)
 
@@ -67,42 +74,42 @@ class MainWindow(QMainWindow):
         self.about_action = create_action(
             name="About",
             shortcut="Ctrl+I",
+            icon=svg_icon("about"),
             handler=self.show_about,
-            icon=get_svg_icon("about"),
             status_tip="Shows the About message.",
         )
         self.flip_action = create_action(
             name="Flip",
             handler=self.flip,
+            icon=svg_icon("flip"),
             shortcut="Ctrl+Shift+F",
-            icon=get_svg_icon("flip"),
             status_tip="Flips the current perspective.",
         )
         self.load_engine_action = create_action(
             shortcut="Ctrl+E",
             name="Load engine...",
             handler=self.load_engine,
-            icon=get_svg_icon("load-engine"),
+            icon=svg_icon("load-engine"),
             status_tip="Shows the file manager.",
         )
         self.new_game_action = create_action(
             name="New game",
             shortcut="Ctrl+Shift+N",
+            icon=svg_icon("new-game"),
             handler=self.offer_new_game,
-            icon=get_svg_icon("new-game"),
             status_tip="Offers a new game.",
         )
         self.play_move_now_action = create_action(
             name="Play move now",
             shortcut="Ctrl+Shift+P",
             handler=self.play_move_now,
-            icon=get_svg_icon("play-move-now"),
+            icon=svg_icon("play-move-now"),
             status_tip="Forces the engine to play a move.",
         )
         self.settings_action = create_action(
             name="Settings...",
             shortcut="Ctrl+Shift+S",
-            icon=get_svg_icon("settings"),
+            icon=svg_icon("settings"),
             handler=self.show_settings_dialog,
             status_tip="Shows the Settings dialog.",
         )
@@ -110,21 +117,21 @@ class MainWindow(QMainWindow):
             name="Start analysis",
             shortcut="Ctrl+Shift+A",
             handler=self.start_analysis,
-            icon=get_svg_icon("start-analysis"),
+            icon=svg_icon("start-analysis"),
             status_tip="Starts the engine analysis.",
         )
         self.stop_analysis_action = create_action(
             name="Stop analysis",
             shortcut="Ctrl+Shift+X",
             handler=self.stop_analysis,
-            icon=get_svg_icon("stop-analysis"),
+            icon=svg_icon("stop-analysis"),
             status_tip="Stops the engine analysis.",
         )
         self.quit_action = create_action(
             name="Quit...",
             handler=self.quit,
             shortcut="Ctrl+Q",
-            icon=get_svg_icon("quit"),
+            icon=svg_icon("quit"),
             status_tip="Offers to quit ReChess.",
         )
 
@@ -199,7 +206,7 @@ class MainWindow(QMainWindow):
 
     def create_status_bar(self) -> None:
         """Create a status bar to show various information."""
-        self.statusBar().addWidget(self._opening_label)
+        self.statusBar().addWidget(self._chess_opening_label)
         self.statusBar().addPermanentWidget(self._engine_name_label)
         self._engine_name_label.setText(self._engine.name)
 
@@ -225,8 +232,8 @@ class MainWindow(QMainWindow):
         self._widget_container.setLayout(self._grid_layout)
         self.setCentralWidget(self._widget_container)
 
-        if self._game.is_perspective_flipped():
-            self._flip_clock_alignments()
+        if setting_value("board", "orientation") == BLACK:
+            self.flip_clock_alignments()
 
     def set_minimum_size(self) -> None:
         """Set a minimum size to be 1000 by 700 pixels."""
@@ -279,15 +286,17 @@ class MainWindow(QMainWindow):
         self.close()
 
     def flip(self) -> None:
-        """Flip the current perspective."""
-        self._flip_clock_alignments()
-        self._game.flip_perspective()
-        self._evaluation_bar.flip_perspective()
+        """Flip the orientation of the chessboard and other widgets."""
+        flipped_orientation: bool = not setting_value("board", "orientation")
+        set_setting_value("board", "orientation", flipped_orientation)
+
+        self.flip_clock_alignments()
+        self._evaluation_bar.flip_appearance()
         self._svg_board.draw()
 
     def play_move_now(self) -> None:
-        """Pass the turn to the loaded engine to play a move."""
-        self._game.pass_turn_to_engine()
+        """Force the loaded chess engine to play a move now."""
+        self.invoke_engine()
 
         self.flip()
         self.invoke_engine()
@@ -322,8 +331,7 @@ class MainWindow(QMainWindow):
 
         self._svg_board.draw()
 
-        if self._game.is_engine_on_turn():
-            self.invoke_engine()
+        self.invoke_engine()
 
     def show_about(self) -> None:
         """Show some info about the app."""
@@ -337,7 +345,7 @@ class MainWindow(QMainWindow):
             ),
         )
 
-    def _flip_clock_alignments(self) -> None:
+    def flip_clock_alignments(self) -> None:
         """Flip the alignments of the top and bottom chess clocks."""
         if Qt.AlignmentFlag.AlignTop in self._grid_layout.itemAt(0).alignment():
             self._grid_layout.itemAt(0).setAlignment(Qt.AlignmentFlag.AlignBottom)
@@ -360,19 +368,19 @@ class MainWindow(QMainWindow):
         self._engine.stop_analysis()
         self.adjust_engine_buttons()
 
-    def show_fen(self) -> None:
-        """Show a FEN (Forsyth-Edwards Notation) in the FEN editor."""
+    def display_fen(self) -> None:
+        """Display a FEN record in the FEN editor."""
         self._fen_editor.reset_background_color()
         self._fen_editor.setText(self._game.fen)
 
-    def show_opening(self) -> None:
-        """Show the ECO code along with the name of a chess opening."""
-        fen: str = self._game.fen
-        openings: dict[str, tuple[str, str]] = get_openings()
+    def display_chess_opening(self) -> None:
+        """Display an ECO code and the name of a chess opening."""
+        fen_record: str = self._game.fen_record
+        chess_openings: dict[str, tuple[str, str]] = chess_openings()
 
-        if fen in openings:
-            eco_code, opening_name = openings[fen]
-            self._opening_label.setText(f"{eco_code}: {opening_name}")
+        if fen_record in chess_openings:
+            eco_code, chess_opening_name = chess_openings[fen_record]
+            self._chess_openings_label.setText(f"{eco_code}: {chess_opening_name}")
 
     def refresh_ui(self) -> None:
         """Refresh the current UI's state to a new state."""
@@ -382,10 +390,10 @@ class MainWindow(QMainWindow):
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
 
-        self.show_fen()
-        self.show_opening()
+        self.display_fen()
         self.switch_clock_timers()
         self.adjust_engine_buttons()
+        self.display_chess_opening()
 
         self._svg_board.draw()
 
@@ -395,8 +403,7 @@ class MainWindow(QMainWindow):
             self._notifications_label.setText(self._game.result)
             self.offer_new_game()
 
-        if self._game.is_engine_on_turn():
-            self.invoke_engine()
+        self.invoke_engine()
 
     def offer_new_game(self) -> None:
         """Show a dialog offering to start a new game."""
@@ -411,12 +418,12 @@ class MainWindow(QMainWindow):
 
     def start_new_game(self) -> None:
         """Start a new game by resetting everything."""
-        if self._game.is_perspective_flipped():
-            self._flip_clock_alignments()
+        if self._game.is_board_flipped:
+            self.flip_clock_alignments()
 
         self._black_clock.reset()
         self._white_clock.reset()
-        self._opening_label.clear()
+        self._chess_opening_label.clear()
 
         self._game.set_new_game()
         self._table_model.reset()
@@ -431,8 +438,7 @@ class MainWindow(QMainWindow):
 
         self._svg_board.draw()
 
-        if self._game.is_engine_on_turn():
-            self.invoke_engine()
+        self.invoke_engine()
 
     def closeEvent(self, event: QCloseEvent) -> None:
         """Ask whether to quit ReChess by closing the main window."""
@@ -489,7 +495,7 @@ class MainWindow(QMainWindow):
             self._game.set_move_with(ply_index)
         else:
             self._game.clear_arrow()
-            self._opening_label.clear()
+            self._chess_opening_label.clear()
             self._game.set_root_position()
 
         self._svg_board.draw()

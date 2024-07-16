@@ -1,12 +1,11 @@
 from contextlib import suppress
-from platform import system
 
 from chess import Move
 from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
 from PySide6.QtCore import QObject, Signal
 
 from rechess.core import Game
-from rechess.utils import get_engine_configuration, get_setting_value
+from rechess.utils import engine_configuration, setting_value, stockfish_engine
 
 
 class Engine(QObject):
@@ -21,26 +20,25 @@ class Engine(QObject):
         super().__init__()
 
         self._game: Game = game
+
         self._is_analyzing: bool = False
-        self._loaded_engine: SimpleEngine = SimpleEngine.popen_uci(
-            f"rechess/resources/engines/stockfish-16.1/{system().lower()}/"
-            f"stockfish{'.exe' if system() == 'Windows' else ''}"
-        )
-        self._loaded_engine.configure(get_engine_configuration())
+
+        self._loaded_engine: SimpleEngine = SimpleEngine.popen_uci(stockfish_engine)
+        self._loaded_engine.configure(engine_configuration())
 
     def load(self, file_path: str) -> None:
         """Load a chess engine with the `file_path`."""
         with suppress(EngineError):
             self._loaded_engine.quit()
             self._loaded_engine = SimpleEngine.popen_uci(file_path)
-            self._loaded_engine.configure(get_engine_configuration())
+            self._loaded_engine.configure(engine_configuration())
 
     def play_move(self) -> None:
         """Play a move with the loaded chess engine."""
         play_result: PlayResult = self._loaded_engine.play(
             board=self._game.board,
             limit=Limit(depth=30),
-            ponder=get_setting_value("engine", "is_pondering"),
+            ponder=setting_value("engine", "is_pondering"),
         )
         self.move_played.emit(play_result.move)
 

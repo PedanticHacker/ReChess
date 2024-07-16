@@ -4,6 +4,7 @@ from PySide6.QtCore import QEasingCurve, QPropertyAnimation, Qt
 from PySide6.QtWidgets import QProgressBar, QSizePolicy
 
 from rechess.core import Game
+from rechess.utils import setting_value
 
 
 class EvaluationBar(QProgressBar):
@@ -32,10 +33,15 @@ class EvaluationBar(QProgressBar):
         """Reset the bar's appearance."""
         self.hide()
         self.reset()
-        self.flip_perspective()
+        self.flip_appearance()
+
+    def flip_appearance(self) -> None:
+        """Flip the appearance of the bar's chunk by inverting it."""
+        flipped_orientation: bool = not setting_value("board", "orientation")
+        self.setInvertedAppearance(flipped_orientation)
 
     def animate(self, evaluation: Score) -> None:
-        """Animate the bar per `evaluation`."""
+        """Animate the bar's chunk per the `evaluation`."""
         if evaluation.is_mate():
             moves_to_mate: int = evaluation.mate() or 0
             is_white_matting: bool = moves_to_mate > 0
@@ -49,7 +55,3 @@ class EvaluationBar(QProgressBar):
         self.setFormat(evaluation_text)
         self._animation.setEndValue(animation_value)
         self._animation.start()
-
-    def flip_perspective(self) -> None:
-        """Flip the bar's perspective."""
-        self.setInvertedAppearance(self._game.perspective)
