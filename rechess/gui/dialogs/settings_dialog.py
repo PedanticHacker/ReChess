@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from PySide6.QtCore import Slot
 from PySide6.QtWidgets import (
     QCheckBox,
@@ -10,24 +12,25 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
 )
 
+# from rechess.core import Game
 from rechess.utils import set_setting_value, setting_value
 
 
 class SettingsDialog(QDialog):
     """A dialog for changing the settings."""
 
-    def __init__(self) -> None:
+    def __init__(self, game: Game) -> None:
         super().__init__()
 
         self.setWindowTitle("Settings")
 
         self._engine_group: QGroupBox = QGroupBox()
         self._engine_group.setTitle("Engine")
-        # self._engine_group.setDisabled()
+        self._engine_group.setDisabled(game.is_game_in_progress())
 
         self._time_control_group: QGroupBox = QGroupBox()
         self._time_control_group.setTitle("Time control")
-        # self._time_control_group.setDisabled()
+        self._time_control_group.setDisabled(game.is_game_in_progress())
 
         self.create_options()
         self.set_vertical_layout()

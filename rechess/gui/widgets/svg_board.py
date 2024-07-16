@@ -48,5 +48,5 @@ class SvgBoard(QSvgWidget):
     def mousePressEvent(self, event: QMouseEvent) -> None:
         """Select a square upon a mouse button press."""
         x, y = event.position().x(), event.position().y()
-        self._game.get_square_from(x, y)
+        self._game.square_from(x, y)
         self.draw()

@@ -120,8 +120,8 @@ def engine_configuration() -> dict[str, int]:
     return {"Hash": _optimal_hash_size(), "Threads": _optimal_cpu_threads()}
 
 
-def stockfish_engine() -> str:
-    """Return a path to the Stockfish chess engine."""
+def stockfish() -> str:
+    """Return a file path to the default Stockfish 16.1 chess engine."""
     return (
         f"rechess/resources/engines/stockfish-16.1/{system().lower()}/"
         f"stockfish{'.exe' if system() == 'Windows' else ''}"

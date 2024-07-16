@@ -37,18 +37,19 @@ class MainWindow(QMainWindow):
         super().__init__()
 
         self._game: Game = Game()
+
         self._engine: Engine = Engine(self._game)
 
         self._svg_board: SvgBoard = SvgBoard(self._game)
         self._fen_editor: FenEditor = FenEditor(self._game)
         self._evaluation_bar: EvaluationBar = EvaluationBar(self._game)
 
+        self._settings_dialog: SettingsDialog = SettingsDialog(self._game)
+
         self._black_clock: Clock = Clock(ClockColor.Black)
         self._white_clock: Clock = Clock(ClockColor.White)
 
-        self._settings_dialog: SettingsDialog = SettingsDialog()
-
-        self._table_model: TableModel = TableModel(self._game.notation)
+        self._table_model: TableModel = TableModel(self._game.notation_items)
         self._table_view: TableView = TableView(self._table_model)
 
         self._chess_opening_label: QLabel = QLabel()
@@ -368,19 +369,19 @@ class MainWindow(QMainWindow):
         self._engine.stop_analysis()
         self.adjust_engine_buttons()
 
-    def display_fen(self) -> None:
+    def display_fen_record(self) -> None:
         """Display a FEN record in the FEN editor."""
         self._fen_editor.reset_background_color()
-        self._fen_editor.setText(self._game.fen)
+        self._fen_editor.setText(self._game.fen_record)
 
     def display_chess_opening(self) -> None:
         """Display an ECO code and the name of a chess opening."""
         fen_record: str = self._game.fen_record
-        chess_openings: dict[str, tuple[str, str]] = chess_openings()
+        chess_openings_storage: dict[str, tuple[str, str]] = chess_openings()
 
-        if fen_record in chess_openings:
-            eco_code, chess_opening_name = chess_openings[fen_record]
-            self._chess_openings_label.setText(f"{eco_code}: {chess_opening_name}")
+        if fen_record in chess_openings_storage:
+            eco_code, chess_opening_name = chess_openings_storage[fen_record]
+            self._chess_opening_label.setText(f"{eco_code}: {chess_opening_name}")
 
     def refresh_ui(self) -> None:
         """Refresh the current UI's state to a new state."""
@@ -390,7 +391,7 @@ class MainWindow(QMainWindow):
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
 
-        self.display_fen()
+        self.display_fen_record()
         self.switch_clock_timers()
         self.adjust_engine_buttons()
         self.display_chess_opening()
@@ -418,7 +419,7 @@ class MainWindow(QMainWindow):
 
     def start_new_game(self) -> None:
         """Start a new game by resetting everything."""
-        if self._game.is_board_flipped:
+        if setting_value("board", "orientation") == BLACK:
             self.flip_clock_alignments()
 
         self._black_clock.reset()
@@ -432,7 +433,7 @@ class MainWindow(QMainWindow):
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
 
-        self.show_fen()
+        self.display_fen_record()
         self.switch_clock_timers()
         self.adjust_engine_buttons()
 
@@ -495,8 +496,8 @@ class MainWindow(QMainWindow):
             self._game.set_move_with(ply_index)
         else:
             self._game.clear_arrow()
-            self._chess_opening_label.clear()
             self._game.set_root_position()
+            self._chess_opening_label.clear()
 
         self._svg_board.draw()
 

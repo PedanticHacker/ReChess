@@ -3,7 +3,6 @@ from typing import Iterator
 
 from chess import (
     BB_SQUARES,
-    BLACK,
     WHITE,
     Board,
     IllegalMoveError,
@@ -17,11 +16,11 @@ from PySide6.QtMultimedia import QSoundEffect
 from PySide6.QtWidgets import QDialog
 
 from rechess.gui.dialogs import PromotionDialog
-from rechess.utils import set_setting_value, setting_value
+from rechess.utils import setting_value
 
 
 class Game(QObject):
-    """An implementation of the standard game."""
+    """A standard chess game."""
 
     move_played: Signal = Signal(Move)
 
@@ -29,8 +28,8 @@ class Game(QObject):
         super().__init__()
 
         self.board: Board = Board()
-        self.notation: list[str] = []
         self.positions: list[Board] = []
+        self.notation_items: list[str] = []
         self.arrow: list[tuple[Square, Square]] = []
         self.sound_effect: QSoundEffect = QSoundEffect()
 
@@ -73,10 +72,8 @@ class Game(QObject):
         """Set the starting state of a standard chess game."""
         self.arrow.clear()
         self.board.reset()
-        self.notation.clear()
         self.positions.clear()
-
-        self.is_engine_white: bool = setting_value("engine", "is_white")
+        self.notation_items.clear()
 
         self.reset_squares()
 
@@ -91,7 +88,7 @@ class Game(QObject):
         self.play_sound_effect_for(move)
 
         notation_item: str = self.board.san_and_push(move)
-        self.notation.append(notation_item)
+        self.notation_items.append(notation_item)
 
         position: Board = self.board.copy()
         self.positions.append(position)
@@ -116,9 +113,9 @@ class Game(QObject):
         """Set all pieces to their root position."""
         self.board = self.board.root()
 
-    def get_square_from(self, x: float, y: float) -> None:
+    def square_from(self, x: float, y: float) -> None:
         """Get a square from `x` and `y` coordinates."""
-        file, rank = self.get_file_and_rank_from(x, y)
+        file, rank = self.file_and_rank_from(x, y)
 
         if self.from_square == -1:
             self.from_square = square(file, rank)
@@ -127,14 +124,14 @@ class Game(QObject):
             self.find_move(self.from_square, self.to_square)
             self.reset_squares()
 
-    def get_file_and_rank_from(self, x: float, y: float) -> tuple[int, int]:
+    def file_and_rank_from(self, x: float, y: float) -> tuple[int, int]:
         """Detect a file and a rank from the `x` and `y` coordinates."""
         if setting_value("board", "orientation") == WHITE:
-            file: float = (x - 18) / 58
-            rank: float = 7 - (y - 18) / 58
+            file: float = (x - 18) // 58
+            rank: float = 7 - (y - 18) // 58
         else:
-            file = 7 - (x - 18) / 58
-            rank = (y - 18) / 58
+            file = 7 - (x - 18) // 58
+            rank = (y - 18) // 58
 
         return round(file), round(rank)
 
@@ -144,11 +141,11 @@ class Game(QObject):
             move: Move = self.board.find_move(origin, target)
 
             if move.promotion:
-                move.promotion = self.get_promotion_piece_type()
+                move.promotion = self.promotion_piece_type()
 
             self.move_played.emit(move)
 
-    def get_promotion_piece_type(self) -> PieceType | None:
+    def promotion_piece_type(self) -> PieceType | None:
         """Show the promotion dialog to get a promotion piece type."""
         promotion_dialog: PromotionDialog = PromotionDialog(self.board.turn)
 
@@ -157,7 +154,7 @@ class Game(QObject):
 
         return None
 
-    def get_san_variation(self) -> str:
+    def san_variation(self) -> str:
         """Get a variation of moves in SAN format from the move stack."""
         return Board().variation_san(self.board.move_stack)
 
@@ -173,16 +170,20 @@ class Game(QObject):
         if ply_index < 0:
             self.set_new_game()
         else:
-            after_ply_index: slice = slice(ply_index + 1, len(self.notation))
-            del self.notation[after_ply_index]
+            after_ply_index: slice = slice(ply_index + 1, len(self.notation_items))
             del self.positions[after_ply_index]
+            del self.notation_items[after_ply_index]
+
+    def is_engine_on_turn(self) -> bool:
+        """Return True if the chess engine is on turn, else False."""
+        return self.board.turn == setting_value("engine", "is_white")
 
     def is_game_in_progress(self) -> bool:
-        """Return True if a game is in progress, else False."""
-        return bool(self.notation)
+        """Return True if a chess game is in progress, else False."""
+        return bool(self.notation_items)
 
     def is_game_over(self) -> bool:
-        """Return True if the current game is over, else False."""
+        """Return True if the current chess game is over, else False."""
         return self.board.is_game_over(claim_draw=True)
 
     def is_legal(self, move: Move) -> bool:

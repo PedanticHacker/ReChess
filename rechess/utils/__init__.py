@@ -5,7 +5,7 @@ from .helpers import (
     engine_configuration,
     set_setting_value,
     setting_value,
-    stockfish_engine,
+    stockfish,
     svg_icon,
 )
 from .storage import chess_openings

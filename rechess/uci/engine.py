@@ -5,7 +5,7 @@ from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
 from PySide6.QtCore import QObject, Signal
 
 from rechess.core import Game
-from rechess.utils import engine_configuration, setting_value, stockfish_engine
+from rechess.utils import engine_configuration, setting_value, stockfish
 
 
 class Engine(QObject):
@@ -23,11 +23,11 @@ class Engine(QObject):
 
         self._is_analyzing: bool = False
 
-        self._loaded_engine: SimpleEngine = SimpleEngine.popen_uci(stockfish_engine)
+        self._loaded_engine: SimpleEngine = SimpleEngine.popen_uci(stockfish())
         self._loaded_engine.configure(engine_configuration())
 
     def load(self, file_path: str) -> None:
-        """Load a chess engine with the `file_path`."""
+        """Load a UCI chess engine with the `file_path`."""
         with suppress(EngineError):
             self._loaded_engine.quit()
             self._loaded_engine = SimpleEngine.popen_uci(file_path)
