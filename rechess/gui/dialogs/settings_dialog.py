@@ -22,8 +22,6 @@ class SettingsDialog(QDialog):
     def __init__(self, game: Game) -> None:
         super().__init__()
 
-        self.setWindowTitle("Settings")
-
         self._engine_group: QGroupBox = QGroupBox()
         self._engine_group.setTitle("Engine")
         self._engine_group.setDisabled(game.is_game_in_progress())
@@ -35,6 +33,8 @@ class SettingsDialog(QDialog):
         self.create_options()
         self.set_vertical_layout()
         self.connect_events_with_handlers()
+
+        self.setWindowTitle("Settings")
 
     def create_options(self) -> None:
         """Create options to represent the settings."""
