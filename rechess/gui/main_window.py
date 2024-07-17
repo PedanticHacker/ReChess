@@ -364,29 +364,29 @@ class MainWindow(QMainWindow):
         self._grid_layout.update()
 
     def start_analysis(self) -> None:
-        """Start analyzing the current chessboard position."""
+        """Start analyzing current chessboard position."""
         self.invoke_analysis()
         self._evaluation_bar.show()
         self.stop_analysis_action.setEnabled(True)
         self.start_analysis_action.setDisabled(True)
 
     def stop_analysis(self) -> None:
-        """Stop analyzing the current chessboard position."""
+        """Stop analyzing current chessboard position."""
         self._engine.stop_analysis()
         self.adjust_engine_buttons()
 
-    def display_fen_record(self) -> None:
-        """Display a FEN record in the FEN editor."""
+    def show_fen(self) -> None:
+        """Show FEN in FEN editor."""
         self._fen_editor.reset_background_color()
-        self._fen_editor.setText(self._game.fen_record)
+        self._fen_editor.setText(self._game.fen)
 
     def display_chess_opening(self) -> None:
-        """Display an ECO code and the name of a chess opening."""
-        fen_record: str = self._game.fen_record
+        """Display ECO code and chess opening name."""
+        fen: str = self._game.fen
         chess_openings_storage: dict[str, tuple[str, str]] = chess_openings()
 
-        if fen_record in chess_openings_storage:
-            eco_code, chess_opening_name = chess_openings_storage[fen_record]
+        if fen in chess_openings_storage:
+            eco_code, chess_opening_name = chess_openings_storage[fen]
             self._chess_opening_label.setText(f"{eco_code}: {chess_opening_name}")
 
     def refresh_ui(self) -> None:
@@ -397,7 +397,7 @@ class MainWindow(QMainWindow):
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
 
-        self.display_fen_record()
+        self.show_fen()
         self.switch_clock_timers()
         self.adjust_engine_buttons()
         self.display_chess_opening()
@@ -441,7 +441,7 @@ class MainWindow(QMainWindow):
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
 
-        self.display_fen_record()
+        self.show_fen()
         self.switch_clock_timers()
         self.adjust_engine_buttons()
 
