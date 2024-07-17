@@ -37,7 +37,7 @@ from rechess.utils import (
 
 
 class MainWindow(QMainWindow):
-    """The main window of ReChess."""
+    """The main window of the app."""
 
     def __init__(self) -> None:
         super().__init__()
@@ -66,8 +66,8 @@ class MainWindow(QMainWindow):
         self._engine_analysis_label.setWordWrap(True)
 
         self.create_actions()
-        self.create_menu_bar()
-        self.create_tool_bar()
+        self.create_menubar()
+        self.create_toolbar()
         self.set_grid_layout()
         self.set_minimum_size()
         self.create_status_bar()
@@ -76,27 +76,27 @@ class MainWindow(QMainWindow):
         self.connect_signals_to_slots()
 
     def create_actions(self) -> None:
-        """Create actions for menu bar and tool bar."""
+        """Create actions to be used by a menubar and a toolbar."""
         self.about_action = create_action(
             name="About",
             shortcut="Ctrl+I",
             icon=svg_icon("about"),
             handler=self.show_about,
-            status_tip="Shows the About message.",
+            status_tip="Show the app's description, copyright, and license.",
         )
         self.flip_action = create_action(
             name="Flip",
             handler=self.flip,
             icon=svg_icon("flip"),
             shortcut="Ctrl+Shift+F",
-            status_tip="Flips the current perspective.",
+            status_tip="Flips the chessboard and its related widgets.",
         )
         self.load_engine_action = create_action(
             shortcut="Ctrl+E",
             name="Load engine...",
             handler=self.load_engine,
             icon=svg_icon("load-engine"),
-            status_tip="Shows the file manager.",
+            status_tip="Shows the file manager to load a UCI chess engine.",
         )
         self.new_game_action = create_action(
             name="New game",
@@ -110,51 +110,51 @@ class MainWindow(QMainWindow):
             shortcut="Ctrl+Shift+P",
             handler=self.play_move_now,
             icon=svg_icon("play-move-now"),
-            status_tip="Forces the engine to play a move.",
+            status_tip="Forces the loaded chess engine to play a move now.",
         )
         self.settings_action = create_action(
             name="Settings...",
             shortcut="Ctrl+Shift+S",
             icon=svg_icon("settings"),
-            handler=self.display_settings_dialog,
-            status_tip="Displays the Settings dialog.",
+            handler=self.show_settings_dialog,
+            status_tip="Shows the Settings dialog to edit the app's settings.",
         )
         self.start_analysis_action = create_action(
             name="Start analysis",
             shortcut="Ctrl+Shift+A",
             handler=self.start_analysis,
             icon=svg_icon("start-analysis"),
-            status_tip="Starts the engine analysis.",
+            status_tip="Starts analyzing the current chessboard position.",
         )
         self.stop_analysis_action = create_action(
             name="Stop analysis",
             shortcut="Ctrl+Shift+X",
             handler=self.stop_analysis,
             icon=svg_icon("stop-analysis"),
-            status_tip="Stops the engine analysis.",
+            status_tip="Stops analyzing the current chessboard position.",
         )
         self.quit_action = create_action(
             name="Quit...",
             handler=self.quit,
             shortcut="Ctrl+Q",
             icon=svg_icon("quit"),
-            status_tip="Offers to quit ReChess.",
+            status_tip="Offers to quit the app.",
         )
 
-    def create_menu_bar(self) -> None:
-        """Create a menu bar with actions in separate menus."""
+    def create_menubar(self) -> None:
+        """Create a menubar with actions in separate menus."""
 
-        # Menu bar
-        menu_bar = self.menuBar()
+        # Menubar
+        menubar = self.menuBar()
 
         # General menu
-        general_menu = menu_bar.addMenu("General")
+        general_menu = menubar.addMenu("General")
 
         # Edit menu
-        edit_menu = menu_bar.addMenu("Edit")
+        edit_menu = menubar.addMenu("Edit")
 
         # Help menu
-        help_menu = menu_bar.addMenu("Help")
+        help_menu = menubar.addMenu("Help")
 
         # General menu > Load engine...
         general_menu.addAction(self.load_engine_action)
@@ -171,8 +171,8 @@ class MainWindow(QMainWindow):
         # Help menu > About
         help_menu.addAction(self.about_action)
 
-    def create_tool_bar(self) -> None:
-        """Create a tool bar with buttons in separate areas."""
+    def create_toolbar(self) -> None:
+        """Create a toolbar with buttons in separate areas."""
 
         # General area
         general_area = self.addToolBar("General")
@@ -189,7 +189,7 @@ class MainWindow(QMainWindow):
         # Edit area > New game
         edit_area.addAction(self.new_game_action)
 
-        # Edit area > Flip sides
+        # Edit area > Flip orientation
         edit_area.addAction(self.flip_action)
 
         # Edit area > Play move now
@@ -292,7 +292,7 @@ class MainWindow(QMainWindow):
         self.close()
 
     def flip(self) -> None:
-        """Flip the orientation of the chessboard and other widgets."""
+        """Flip the chessboard and its related widgets."""
         flipped_orientation: bool = not setting_value("board", "orientation")
         set_setting_value("board", "orientation", flipped_orientation)
 
@@ -302,11 +302,10 @@ class MainWindow(QMainWindow):
 
     def play_move_now(self) -> None:
         """Force the loaded chess engine to play a move now."""
-        self.flip()
         self.invoke_engine()
 
-    def display_settings_dialog(self) -> None:
-        """Display the Settings dialog to edit the app's settings."""
+    def show_settings_dialog(self) -> None:
+        """Show the Settings dialog to edit the app's settings."""
         self._settings_dialog.disable_groups_if(self._game.playing)
 
         if self._settings_dialog.exec() == QDialog.DialogCode.Accepted:
@@ -341,7 +340,7 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def show_about(self) -> None:
-        """Show some info about the app."""
+        """Show the app's description, copyright, and license."""
         QMessageBox.about(
             self,
             "About",
@@ -364,14 +363,14 @@ class MainWindow(QMainWindow):
         self._grid_layout.update()
 
     def start_analysis(self) -> None:
-        """Start analyzing the current position."""
+        """Start analyzing the current chessboard position."""
         self.invoke_analysis()
         self._evaluation_bar.show()
         self.stop_analysis_action.setEnabled(True)
         self.start_analysis_action.setDisabled(True)
 
     def stop_analysis(self) -> None:
-        """Stop analyzing the current position."""
+        """Stop analyzing the current chessboard position."""
         self._engine.stop_analysis()
         self.adjust_engine_buttons()
 
@@ -390,7 +389,7 @@ class MainWindow(QMainWindow):
             self._chess_opening_label.setText(f"{eco_code}: {chess_opening_name}")
 
     def refresh_ui(self) -> None:
-        """Refresh the current UI's state to a new state."""
+        """Refresh the current state of the UI."""
         self._engine.stop_analysis()
         self._table_model.refresh_view()
         self._table_view.select_last_item()
@@ -451,11 +450,11 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def closeEvent(self, event: QCloseEvent) -> None:
-        """Ask whether to quit ReChess by closing the main window."""
+        """Ask whether to quit the app by closing the main window."""
         answer: QMessageBox.StandardButton = QMessageBox.question(
             self,
-            "Quit",
-            "Do you want to quit ReChess?",
+            "Quit App",
+            "Do you want to quit the app?",
         )
 
         if answer == answer.Yes:

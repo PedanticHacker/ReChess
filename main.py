@@ -20,6 +20,7 @@ class ReChess(QApplication):
         self._lock_file: QLockFile = QLockFile("ReChess.lock")
 
         if self._lock_file.tryLock(1):
+            self.setStyle("fusion")
             self.setApplicationName("ReChess")
             self.setDesktopFileName("ReChess")
             self.setApplicationVersion("1.0.0")
