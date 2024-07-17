@@ -492,12 +492,12 @@ class MainWindow(QMainWindow):
 
     @Slot()
     def on_fen_validated(self) -> None:
-        """Update the chessboard position for validated FEN."""
+        """Update chessboard position based on validated FEN."""
         self._svg_board.draw()
 
     @Slot(int)
     def on_item_selected(self, ply_index: int) -> None:
-        """Select a notation index with the `ply_index`."""
+        """Select notation index with `ply_index`."""
         if ply_index > -1:
             self._game.set_move_with(ply_index)
         else:
@@ -509,7 +509,7 @@ class MainWindow(QMainWindow):
 
     @Slot(Move)
     def on_move_played(self, move: Move) -> None:
-        """Play the `move` by pushing it and refreshing the UI."""
+        """Play `move` by pushing it and refreshing UI."""
         if self._game.is_legal(move):
             self._game.delete_data_after(self._table_view.ply_index)
             self._game.push(move)
@@ -517,10 +517,10 @@ class MainWindow(QMainWindow):
 
     @Slot(str)
     def on_san_variation_analyzed(self, san_variation: str) -> None:
-        """Show the `san_variation` from chess engine analysis."""
+        """Show `san_variation` from chess engine analysis."""
         self._engine_analysis_label.setText(san_variation)
 
     @Slot(Score)
     def on_white_score_analyzed(self, white_score: Score) -> None:
-        """Show a position evaluation from the `white_score`."""
+        """Show chessboard position evaluation from `white_score`."""
         self._evaluation_bar.animate(white_score)

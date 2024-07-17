@@ -3,10 +3,11 @@ from PySide6.QtGui import QMouseEvent
 from PySide6.QtWidgets import QLineEdit
 
 from rechess.core import Game
+from rechess.utils import is_valid
 
 
 class FenEditor(QLineEdit):
-    """An editor for editing FEN (Forsyth-Edwards Notation)."""
+    """Editor for editing FEN (Forsyth-Edwards Notation)."""
 
     validated: Signal = Signal()
 
@@ -23,24 +24,24 @@ class FenEditor(QLineEdit):
         self.textEdited.connect(self.on_fen_edited)
 
     def set_red_background_color(self) -> None:
-        """Set the background color to red as a warning indication."""
+        """Set background color to red as warning indication."""
         self.setStyleSheet("background: red;")
 
     def reset_background_color(self) -> None:
-        """Reset the background color to the default lime color."""
+        """Reset background color to default lime color."""
         self.setStyleSheet("background: lime;")
 
     def mouseDoubleClickEvent(self, event: QMouseEvent) -> None:
-        """Select all text and paste a FEN record from the clipboard."""
+        """Paste FEN from clipboard on mouse double-click."""
         self.selectAll()
         self.paste()
 
     @Slot(str)
-    def on_fen_edited(self, edited_fen: str) -> None:
-        """Try to set a valid chessboard position from `edited_fen`."""
+    def on_fen_edited(self, new_fen: str) -> None:
+        """Attempt to set chessboard position from `new_fen`."""
         try:
             board = self._game.board
-            board.set_fen(edited_fen)
+            board.set_fen(new_fen)
         except (IndexError, ValueError):
             self.set_red_background_color()
         else:
