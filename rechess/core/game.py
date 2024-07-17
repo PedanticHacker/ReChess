@@ -36,14 +36,9 @@ class Game(QObject):
         self.set_new_game()
 
     @property
-    def fen_record(self) -> str:
-        """Get a FEN record of the current chessboard position."""
+    def fen(self) -> str:
+        """Get FEN of the current chessboard position."""
         return self.board.fen()
-
-    @property
-    def playing(self) -> bool:
-        """Return True if a chess game is playing, else False."""
-        return bool(self.notation_items)
 
     @property
     def king_square(self) -> Square | None:
@@ -63,8 +58,13 @@ class Game(QObject):
         return [legal_move.to_square for legal_move in legal_moves]
 
     @property
+    def playing(self) -> bool:
+        """Return True if a chess game is playing, else False."""
+        return bool(self.notation_items)
+
+    @property
     def result(self) -> str:
-        """Show the result of a game."""
+        """Show the result of a chess game."""
         result_rewordings = {
             "1/2-1/2": "Draw",
             "0-1": "Black wins",

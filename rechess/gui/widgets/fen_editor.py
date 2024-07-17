@@ -1,4 +1,4 @@
-from PySide6.QtCore import Qt, Slot
+from PySide6.QtCore import Qt, Signal, Slot
 from PySide6.QtGui import QMouseEvent
 from PySide6.QtWidgets import QLineEdit
 
@@ -6,7 +6,9 @@ from rechess.core import Game
 
 
 class FenEditor(QLineEdit):
-    """An editor for editing FEN (Forsyth-Edwards Notation) records."""
+    """An editor for editing FEN (Forsyth-Edwards Notation)."""
+
+    validated: Signal = Signal()
 
     def __init__(self, game: Game) -> None:
         super().__init__()
@@ -15,10 +17,10 @@ class FenEditor(QLineEdit):
 
         self.setMaxLength(90)
         self.setFixedSize(500, 20)
-        self.setText(self._game.fen_record)
+        self.setText(self._game.fen)
         self.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.textEdited.connect(self.on_text_edited)
+        self.textEdited.connect(self.on_fen_edited)
 
     def set_red_background_color(self) -> None:
         """Set the background color to red as a warning indication."""
@@ -34,16 +36,16 @@ class FenEditor(QLineEdit):
         self.paste()
 
     @Slot(str)
-    def on_text_edited(self, edited_text: str) -> None:
-        """Try to set a valid position from `edited_text`."""
+    def on_fen_edited(self, edited_fen: str) -> None:
+        """Try to set a valid chessboard position from `edited_fen`."""
         try:
             board = self._game.board
-            board.set_fen(edited_text)
+            board.set_fen(edited_fen)
         except (IndexError, ValueError):
             self.set_red_background_color()
         else:
             if board.is_valid():
+                self._game.board = board
                 self.clearFocus()
                 self.reset_background_color()
-                self._game.board = board
-                # self._svg_board.draw()
+                self.validated.emit()

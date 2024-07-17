@@ -268,6 +268,7 @@ class MainWindow(QMainWindow):
     def connect_signals_to_slots(self) -> None:
         self._game.move_played.connect(self.on_move_played)
         self._engine.move_played.connect(self.on_move_played)
+        self._fen_editor.validated.connect(self.on_fen_validated)
         self._table_view.item_selected.connect(self.on_item_selected)
         self._engine.best_move_analyzed.connect(self.on_best_move_analyzed)
         self._engine.white_score_analyzed.connect(self.on_white_score_analyzed)
@@ -473,6 +474,12 @@ class MainWindow(QMainWindow):
         elif is_downward_roll:
             self._table_view.select_next_item()
 
+    @Slot(Move)
+    def on_best_move_analyzed(self, best_move: Move) -> None:
+        """Show the `best_move` from chess engine analysis."""
+        self._game.set_arrow_for(best_move)
+        self._svg_board.draw()
+
     @Slot()
     def on_black_clock_time_expired(self) -> None:
         """Notify that White won as Black's clock time has expired."""
@@ -483,19 +490,10 @@ class MainWindow(QMainWindow):
         """Notify that Black won as White's clock time has expired."""
         self._notifications_label.setText("Black won on time")
 
-    @Slot(Move)
-    def on_best_move_analyzed(self, best_move: Move) -> None:
-        """Show the `best_move` from chess engine analysis."""
-        self._game.set_arrow_for(best_move)
+    @Slot()
+    def on_fen_validated(self) -> None:
+        """Update the chessboard position for validated FEN."""
         self._svg_board.draw()
-
-    @Slot(Move)
-    def on_move_played(self, move: Move) -> None:
-        """Play the `move` by pushing it and refreshing the UI."""
-        if self._game.is_legal(move):
-            self._game.delete_data_after(self._table_view.ply_index)
-            self._game.push(move)
-            self.refresh_ui()
 
     @Slot(int)
     def on_item_selected(self, ply_index: int) -> None:
@@ -508,6 +506,14 @@ class MainWindow(QMainWindow):
             self._chess_opening_label.clear()
 
         self._svg_board.draw()
+
+    @Slot(Move)
+    def on_move_played(self, move: Move) -> None:
+        """Play the `move` by pushing it and refreshing the UI."""
+        if self._game.is_legal(move):
+            self._game.delete_data_after(self._table_view.ply_index)
+            self._game.push(move)
+            self.refresh_ui()
 
     @Slot(str)
     def on_san_variation_analyzed(self, san_variation: str) -> None:
