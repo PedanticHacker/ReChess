@@ -3,7 +3,6 @@ from PySide6.QtGui import QMouseEvent
 from PySide6.QtWidgets import QLineEdit
 
 from rechess.core import Game
-from rechess.utils import is_valid
 
 
 class FenEditor(QLineEdit):
