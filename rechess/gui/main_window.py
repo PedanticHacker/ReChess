@@ -50,13 +50,13 @@ class MainWindow(QMainWindow):
         self._fen_editor: FenEditor = FenEditor(self._game)
         self._evaluation_bar: EvaluationBar = EvaluationBar(self._game)
 
-        self._settings_dialog: SettingsDialog = SettingsDialog()
-
         self._black_clock: Clock = Clock(ClockColor.Black)
         self._white_clock: Clock = Clock(ClockColor.White)
 
         self._table_model: TableModel = TableModel(self._game.notation_items)
         self._table_view: TableView = TableView(self._table_model)
+
+        self._settings_dialog: SettingsDialog = SettingsDialog()
 
         self._chess_opening_label: QLabel = QLabel()
         self._engine_name_label: QLabel = QLabel()
