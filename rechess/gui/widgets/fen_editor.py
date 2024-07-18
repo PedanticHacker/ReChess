@@ -1,8 +1,7 @@
+from chess import Board
 from PySide6.QtCore import Qt, Signal, Slot
 from PySide6.QtGui import QMouseEvent
 from PySide6.QtWidgets import QLineEdit
-
-from rechess.core import Game
 
 
 class FenEditor(QLineEdit):
@@ -10,14 +9,14 @@ class FenEditor(QLineEdit):
 
     validated: Signal = Signal()
 
-    def __init__(self, game: Game) -> None:
+    def __init__(self, board: Board) -> None:
         super().__init__()
 
-        self._game: Game = game
+        self._board: Board = board
 
         self.setMaxLength(90)
         self.setFixedSize(500, 20)
-        self.setText(self._game.fen)
+        self.setText(self._board.fen())
         self.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.textEdited.connect(self.on_fen_edited)
@@ -39,13 +38,11 @@ class FenEditor(QLineEdit):
     def on_fen_edited(self, new_fen: str) -> None:
         """Attempt to set chessboard position from `new_fen`."""
         try:
-            board = self._game.board
-            board.set_fen(new_fen)
+            self._board.set_fen(new_fen)
         except (IndexError, ValueError):
             self.set_red_background_color()
         else:
-            if board.is_valid():
-                self._game.board = board
+            if self._board.is_valid():
                 self.clearFocus()
                 self.reset_background_color()
                 self.validated.emit()

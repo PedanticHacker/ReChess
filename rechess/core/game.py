@@ -20,7 +20,7 @@ from rechess.utils import setting_value
 
 
 class Game(QObject):
-    """A standard chess game."""
+    """Standard chess game."""
 
     move_played: Signal = Signal(Move)
 
@@ -36,20 +36,15 @@ class Game(QObject):
         self.set_new_game()
 
     @property
-    def fen(self) -> str:
-        """Get FEN of the current chessboard position."""
-        return self.board.fen()
-
-    @property
     def king_square(self) -> Square | None:
-        """Get the square of a king in check."""
+        """Return square of king in check."""
         if self.board.is_check():
             return self.board.king(self.board.turn)
         return None
 
     @property
     def legal_moves(self) -> list[Square] | None:
-        """Get all legal moves for a piece from its origin square."""
+        """Return legal moves for piece from its origin square."""
         if self.from_square == -1:
             return None
 
@@ -59,12 +54,12 @@ class Game(QObject):
 
     @property
     def playing(self) -> bool:
-        """Return True if a chess game is playing, else False."""
+        """Return True if playing game, else False."""
         return bool(self.notation_items)
 
     @property
     def result(self) -> str:
-        """Show the result of a chess game."""
+        """Return game result."""
         result_rewordings = {
             "1/2-1/2": "Draw",
             "0-1": "Black wins",
@@ -74,7 +69,7 @@ class Game(QObject):
         return result_rewordings[self.board.result(claim_draw=True)]
 
     def set_new_game(self) -> None:
-        """Set the starting state of a standard chess game."""
+        """Set starting state of standard chess game."""
         self.arrow.clear()
         self.board.reset()
         self.positions.clear()
@@ -83,12 +78,12 @@ class Game(QObject):
         self.reset_squares()
 
     def reset_squares(self) -> None:
-        """Reset the origin and target squares of a piece."""
+        """Reset origin and target squares of piece."""
         self.from_square: Square = -1
         self.to_square: Square = -1
 
     def push(self, move: Move) -> None:
-        """Push the `move`."""
+        """Push `move`."""
         self.set_arrow_for(move)
         self.play_sound_effect_for(move)
 
@@ -99,15 +94,15 @@ class Game(QObject):
         self.positions.append(position)
 
     def set_arrow_for(self, move: Move) -> None:
-        """Set an arrow for the `move`."""
+        """Set arrow for `move`."""
         self.arrow = [(move.from_square, move.to_square)]
 
     def clear_arrow(self) -> None:
-        """Clear the arrow from the chessboard."""
+        """Clear arrow from chessboard."""
         self.arrow.clear()
 
     def play_sound_effect_for(self, move: Move) -> None:
-        """Play a WAV sound effect for the `move`."""
+        """Play WAV sound effect for `move`."""
         is_capture: bool = self.board.is_capture(move)
         file_name: str = "capture.wav" if is_capture else "move.wav"
         file_url: QUrl = QUrl(f"file:rechess/resources/audio/{file_name}")
@@ -119,7 +114,7 @@ class Game(QObject):
         self.board = self.board.root()
 
     def square_from(self, x: float, y: float) -> None:
-        """Get a square from `x` and `y` coordinates."""
+        """Detect square from `x` and `y` coordinates."""
         file, rank = self.file_and_rank_from(x, y)
 
         if self.from_square == -1:
@@ -130,7 +125,7 @@ class Game(QObject):
             self.reset_squares()
 
     def file_and_rank_from(self, x: float, y: float) -> tuple[int, int]:
-        """Detect a file and a rank from the `x` and `y` coordinates."""
+        """Detect file and rank from `x` and `y` coordinates."""
         if setting_value("board", "orientation") == WHITE:
             file: float = (x - 18) // 58
             rank: float = 7 - (y - 18) // 58
@@ -141,7 +136,7 @@ class Game(QObject):
         return round(file), round(rank)
 
     def find_move(self, origin: Square, target: Square) -> None:
-        """Find a move from the `origin` and `target` squares."""
+        """Find legal move from `origin` and `target` squares."""
         with suppress(IllegalMoveError):
             move: Move = self.board.find_move(origin, target)
 
@@ -151,7 +146,7 @@ class Game(QObject):
             self.move_played.emit(move)
 
     def promotion_piece_type(self) -> PieceType | None:
-        """Show the promotion dialog to get a promotion piece type."""
+        """Return promotion piece type from promotion dialog."""
         promotion_dialog: PromotionDialog = PromotionDialog(self.board.turn)
 
         if promotion_dialog.exec() == QDialog.DialogCode.Accepted:
@@ -160,7 +155,7 @@ class Game(QObject):
         return None
 
     def set_move_with(self, ply_index: int) -> None:
-        """Set a move with the `ply_index`."""
+        """Set move with `ply_index`."""
         self.board = self.positions[ply_index].copy()
 
         move: Move = self.board.move_stack[ply_index]
@@ -176,15 +171,15 @@ class Game(QObject):
             del self.notation_items[after_ply_index]
 
     def is_engine_on_turn(self) -> bool:
-        """Return True if the chess engine is on turn, else False."""
+        """Return True if chess engine is on turn, else False."""
         return self.board.turn == setting_value("engine", "is_white")
 
     def is_game_over(self) -> bool:
-        """Return True if the current chess game is over, else False."""
+        """Return True if chess game is over, else False."""
         return self.board.is_game_over(claim_draw=True)
 
     def is_legal(self, move: Move) -> bool:
-        """Check whether the `move` is legal in the current position."""
+        """Return True if `move` is legal, else False."""
         return self.board.is_legal(move)
 
     def is_white_on_turn(self) -> bool:

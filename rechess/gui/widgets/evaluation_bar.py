@@ -3,17 +3,14 @@ from chess.engine import Score
 from PySide6.QtCore import QEasingCurve, QPropertyAnimation, Qt
 from PySide6.QtWidgets import QProgressBar, QSizePolicy
 
-from rechess.core import Game
 from rechess.utils import setting_value
 
 
 class EvaluationBar(QProgressBar):
     """A bar showing an engine's evaluation of a position."""
 
-    def __init__(self, game: Game) -> None:
+    def __init__(self) -> None:
         super().__init__()
-
-        self._game: Game = game
 
         self._size_policy = self.sizePolicy()
         self._size_policy.setRetainSizeWhenHidden(True)

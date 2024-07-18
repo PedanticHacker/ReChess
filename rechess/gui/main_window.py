@@ -37,29 +37,26 @@ from rechess.utils import (
 
 
 class MainWindow(QMainWindow):
-    """The main window of the app."""
+    """App's main window containing all widgets."""
 
     def __init__(self) -> None:
         super().__init__()
 
         self._game: Game = Game()
-
         self._engine: Engine = Engine(self._game)
-
-        self._svg_board: SvgBoard = SvgBoard(self._game)
-        self._fen_editor: FenEditor = FenEditor(self._game)
-        self._evaluation_bar: EvaluationBar = EvaluationBar(self._game)
+        self._table_model: TableModel = TableModel(self._game.notation_items)
 
         self._black_clock: Clock = Clock(ClockColor.Black)
         self._white_clock: Clock = Clock(ClockColor.White)
 
-        self._table_model: TableModel = TableModel(self._game.notation_items)
+        self._svg_board: SvgBoard = SvgBoard(self._game)
+        self._fen_editor: FenEditor = FenEditor(self._game.board)
         self._table_view: TableView = TableView(self._table_model)
+        self._evaluation_bar: EvaluationBar = EvaluationBar()
 
         self._chess_opening_label: QLabel = QLabel()
         self._engine_name_label: QLabel = QLabel()
         self._notifications_label: QLabel = QLabel()
-
         self._engine_analysis_label: QLabel = QLabel()
         self._engine_analysis_label.setWordWrap(True)
 
@@ -69,14 +66,14 @@ class MainWindow(QMainWindow):
         self.create_menubar()
         self.create_toolbar()
         self.set_grid_layout()
+        self.create_statusbar()
         self.set_minimum_size()
-        self.create_status_bar()
         self.switch_clock_timers()
         self.adjust_engine_buttons()
         self.connect_signals_to_slots()
 
     def create_actions(self) -> None:
-        """Create actions to be used by a menubar and a toolbar."""
+        """Create actions to be used by menubar and toolbar."""
         self.about_action = create_action(
             name="About",
             shortcut="Ctrl+I",
@@ -142,7 +139,7 @@ class MainWindow(QMainWindow):
         )
 
     def create_menubar(self) -> None:
-        """Create a menubar with actions in separate menus."""
+        """Create menubar with actions in separate menus."""
 
         # Menubar
         menubar = self.menuBar()
@@ -172,7 +169,7 @@ class MainWindow(QMainWindow):
         help_menu.addAction(self.about_action)
 
     def create_toolbar(self) -> None:
-        """Create a toolbar with buttons in separate areas."""
+        """Create toolbar with buttons in separate areas."""
 
         # General area
         general_area = self.addToolBar("General")
@@ -210,21 +207,6 @@ class MainWindow(QMainWindow):
         # Help area > About
         help_area.addAction(self.about_action)
 
-    def create_status_bar(self) -> None:
-        """Create a status bar to show various information."""
-        self.statusBar().addWidget(self._chess_opening_label)
-        self.statusBar().addPermanentWidget(self._engine_name_label)
-        self._engine_name_label.setText(self._engine.name)
-
-    def switch_clock_timers(self) -> None:
-        """Activate the clock's timer for the player on turn."""
-        if self._game.is_white_on_turn():
-            self._black_clock.stop_timer()
-            self._white_clock.start_timer()
-        else:
-            self._white_clock.stop_timer()
-            self._black_clock.start_timer()
-
     def set_grid_layout(self) -> None:
         """Set a grid layout for widgets on the main window."""
         self._grid_layout: QGridLayout = QGridLayout()
@@ -250,9 +232,24 @@ class MainWindow(QMainWindow):
         if setting_value("board", "orientation") == BLACK:
             self.flip_clock_alignments()
 
+    def create_statusbar(self) -> None:
+        """Create statusbar to display various info."""
+        self.statusBar().addWidget(self._chess_opening_label)
+        self.statusBar().addPermanentWidget(self._engine_name_label)
+        self._engine_name_label.setText(self._engine.name)
+
     def set_minimum_size(self) -> None:
         """Set a minimum size to be 1000 by 700 pixels."""
         self.setMinimumSize(1000, 700)
+
+    def switch_clock_timers(self) -> None:
+        """Activate the clock's timer for the player on turn."""
+        if self._game.is_white_on_turn():
+            self._black_clock.stop_timer()
+            self._white_clock.start_timer()
+        else:
+            self._white_clock.stop_timer()
+            self._black_clock.start_timer()
 
     def adjust_engine_buttons(self) -> None:
         """Adjust the state of the engine's tool bar buttons."""
@@ -377,12 +374,11 @@ class MainWindow(QMainWindow):
 
     def show_fen(self) -> None:
         """Show FEN in FEN editor."""
-        self._fen_editor.reset_background_color()
-        self._fen_editor.setText(self._game.fen)
+        self._fen_editor.setText(self._game.board.fen())
 
     def display_chess_opening(self) -> None:
         """Display ECO code and chess opening name."""
-        fen: str = self._game.fen
+        fen: str = self._game.board.fen()
         chess_openings_storage: dict[str, tuple[str, str]] = chess_openings()
 
         if fen in chess_openings_storage:
@@ -426,7 +422,7 @@ class MainWindow(QMainWindow):
             self.start_new_game()
 
     def start_new_game(self) -> None:
-        """Start a new game by resetting everything."""
+        """Start new game by resetting everything."""
         if setting_value("board", "orientation") == BLACK:
             self.flip_clock_alignments()
 
@@ -451,7 +447,7 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def closeEvent(self, event: QCloseEvent) -> None:
-        """Ask whether to quit the app by closing the main window."""
+        """Ask whether to quit app by closing main window."""
         answer: QMessageBox.StandardButton = QMessageBox.question(
             self,
             "Quit App",
@@ -465,7 +461,7 @@ class MainWindow(QMainWindow):
             event.ignore()
 
     def wheelEvent(self, event: QWheelEvent) -> None:
-        """Select a notation item upon a mouse wheel roll."""
+        """Select notation item on mouse wheel roll."""
         is_upward_roll = event.angleDelta().y() > 0
         is_downward_roll = event.angleDelta().y() < 0
 
@@ -476,7 +472,7 @@ class MainWindow(QMainWindow):
 
     @Slot(Move)
     def on_best_move_analyzed(self, best_move: Move) -> None:
-        """Show the `best_move` from chess engine analysis."""
+        """Show `best_move` from chess engine analysis."""
         self._game.set_arrow_for(best_move)
         self._svg_board.draw()
 
@@ -492,12 +488,12 @@ class MainWindow(QMainWindow):
 
     @Slot()
     def on_fen_validated(self) -> None:
-        """Update chessboard position based on validated FEN."""
-        self._svg_board.draw()
+        """Refresh UI based on valid FEN."""
+        self.refresh_ui()
 
     @Slot(int)
     def on_item_selected(self, ply_index: int) -> None:
-        """Select notation index with `ply_index`."""
+        """Select notation item with `ply_index`."""
         if ply_index > -1:
             self._game.set_move_with(ply_index)
         else:
@@ -505,6 +501,7 @@ class MainWindow(QMainWindow):
             self._game.set_root_position()
             self._chess_opening_label.clear()
 
+        self.show_fen()
         self._svg_board.draw()
 
     @Slot(Move)
