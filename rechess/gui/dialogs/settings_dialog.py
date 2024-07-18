@@ -14,7 +14,7 @@ from rechess.utils import set_setting_value, setting_value
 
 
 class SettingsDialog(QDialog):
-    """A dialog for changing the app's settings."""
+    """Dialog for changing app's settings."""
 
     def __init__(self) -> None:
         super().__init__()
@@ -32,7 +32,7 @@ class SettingsDialog(QDialog):
         self.setWindowTitle("Settings")
 
     def create_options(self) -> None:
-        """Create options to represent the settings."""
+        """Create options to represent settings."""
         is_engine_white: bool = setting_value("engine", "is_white")
         is_engine_pondering: bool = setting_value("engine", "is_pondering")
 
@@ -74,7 +74,7 @@ class SettingsDialog(QDialog):
         )
 
     def set_vertical_layout(self) -> None:
-        """Set a vertical layout for the dialog."""
+        """Set vertical layout for dialog."""
         self._button_box: QDialogButtonBox = QDialogButtonBox(
             QDialogButtonBox.StandardButton.Ok
             | QDialogButtonBox.StandardButton.Cancel
@@ -104,13 +104,13 @@ class SettingsDialog(QDialog):
         self._button_box.rejected.connect(self.reject)
 
     def disable_groups_if(self, playing: bool) -> None:
-        """Disable the engine and time control groups if `playing`."""
+        """Disable engine and time control groups if `playing`."""
         self._engine_group.setDisabled(playing)
         self._time_control_group.setDisabled(playing)
 
     @Slot()
     def on_accepted(self) -> None:
-        """Save the settings upon clicking the dialog's OK button."""
+        """Save settings on clicking dialog's OK button."""
         set_setting_value(
             section="clock",
             key="time",

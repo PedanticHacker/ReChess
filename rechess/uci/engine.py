@@ -9,7 +9,7 @@ from rechess.utils import engine_configuration, setting_value, stockfish
 
 
 class Engine(QObject):
-    """A mechanism to communicate with a UCI chess engine."""
+    """UCI chess engine manager."""
 
     move_played: Signal = Signal(Move)
     best_move_analyzed: Signal = Signal(Move)
@@ -21,20 +21,20 @@ class Engine(QObject):
 
         self._game: Game = game
 
-        self._is_analyzing: bool = False
+        self._analyzing: bool = False
 
         self._loaded_engine: SimpleEngine = SimpleEngine.popen_uci(stockfish())
         self._loaded_engine.configure(engine_configuration())
 
     def load(self, file_path: str) -> None:
-        """Load a UCI chess engine with the `file_path`."""
+        """Load UCI chess engine with `file_path`."""
         with suppress(EngineError):
             self._loaded_engine.quit()
             self._loaded_engine = SimpleEngine.popen_uci(file_path)
             self._loaded_engine.configure(engine_configuration())
 
     def play_move(self) -> None:
-        """Play a move with the loaded chess engine."""
+        """Play move with loaded chess engine."""
         play_result: PlayResult = self._loaded_engine.play(
             board=self._game.board,
             limit=Limit(depth=30),
@@ -43,15 +43,15 @@ class Engine(QObject):
         self.move_played.emit(play_result.move)
 
     def start_analysis(self) -> None:
-        """Start analyzing a chessboard position."""
-        self._is_analyzing = True
+        """Start analyzing chessboard position."""
+        self._analyzing = True
 
         with self._loaded_engine.analysis(
             board=self._game.board,
             limit=Limit(depth=40),
         ) as analysis:
             for info in analysis:
-                if not self._is_analyzing:
+                if not self._analyzing:
                     break
 
                 if "pv" in info:
@@ -65,14 +65,14 @@ class Engine(QObject):
                     self.san_variation_analyzed.emit(san_variation)
 
     def stop_analysis(self) -> None:
-        """Stop analyzing a chessboard position."""
-        self._is_analyzing = False
+        """Stop analyzing chessboard position."""
+        self._analyzing = False
 
     def quit(self) -> None:
-        """End the CPU task of a loaded chess engine."""
+        """Quit CPU process of loaded chess engine."""
         self._loaded_engine.quit()
 
     @property
     def name(self) -> str:
-        """Get the name of a loaded chess engine."""
+        """Return name of loaded chess engine."""
         return self._loaded_engine.id["name"]
