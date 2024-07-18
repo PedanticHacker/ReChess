@@ -56,14 +56,14 @@ class MainWindow(QMainWindow):
         self._table_model: TableModel = TableModel(self._game.notation_items)
         self._table_view: TableView = TableView(self._table_model)
 
-        self._settings_dialog: SettingsDialog = SettingsDialog()
-
         self._chess_opening_label: QLabel = QLabel()
         self._engine_name_label: QLabel = QLabel()
         self._notifications_label: QLabel = QLabel()
 
         self._engine_analysis_label: QLabel = QLabel()
         self._engine_analysis_label.setWordWrap(True)
+
+        self._settings_dialog: SettingsDialog = SettingsDialog()
 
         self.create_actions()
         self.create_menubar()
