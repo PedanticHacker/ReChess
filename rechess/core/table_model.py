@@ -9,7 +9,7 @@ from PySide6.QtCore import (
 
 
 class TableModel(QAbstractTableModel):
-    """The model of a table for chess notation."""
+    """Model of table for chess notation."""
 
     def __init__(self, notation_items: list[str]) -> None:
         super().__init__()
@@ -21,7 +21,7 @@ class TableModel(QAbstractTableModel):
         index: QModelIndex | QPersistentModelIndex,
         role: int = Qt.ItemDataRole.DisplayRole,
     ) -> Any:
-        """Get notation items and process them for display role."""
+        """Return notation items and process them for display role."""
         if role == Qt.ItemDataRole.DisplayRole:
             notation_item_index: int = 2 * index.row() + index.column()
 
@@ -32,7 +32,7 @@ class TableModel(QAbstractTableModel):
         self,
         index: QModelIndex | QPersistentModelIndex,
     ) -> Qt.ItemFlag:
-        """Determine the appropriate flag for a notation item."""
+        """Determine appropriate flag for notation item."""
         if self.data(index):
             return Qt.ItemFlag.ItemIsEnabled | Qt.ItemFlag.ItemIsSelectable
         else:
@@ -42,7 +42,7 @@ class TableModel(QAbstractTableModel):
         self,
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
-        """Count the rows needed for notation items."""
+        """Count rows needed for notation items."""
         all_notation_items = len(self._notation_items) + 1
         return all_notation_items // 2
 
@@ -50,7 +50,7 @@ class TableModel(QAbstractTableModel):
         self,
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
-        """Count a fixed set of 2 columns for notation items."""
+        """Count fixed set of 2 columns for notation items."""
         return 2
 
     def headerData(
@@ -68,11 +68,11 @@ class TableModel(QAbstractTableModel):
                 return section + 1
 
     def reset(self) -> None:
-        """Reset the model by clearing all notation items."""
+        """Reset model by clearing all notation items."""
         self.beginResetModel()
         self._notation_items.clear()
         self.endResetModel()
 
     def refresh_view(self) -> None:
-        """Refresh the view due to changes in the model's layout."""
+        """Refresh view due to changes in model's layout."""
         self.layoutChanged.emit()

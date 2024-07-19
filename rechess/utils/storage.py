@@ -1,10 +1,9 @@
 def chess_openings() -> dict[str, tuple[str, str]]:
     """
-    Return a dictionary of chess openings.
+    Return dictionary of chess openings.
 
-    Each key in the dictionary is a FEN record as a string that maps to
-    a value, which is a tuple containing an ECO code and the name of a
-    chess opening.
+    Each key in dictionary is FEN as string that maps to value as tuple
+    containing ECO code and chess opening name.
     """
     return {
         "rnbqkb1r/pppppppp/5n2/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 1 2": (

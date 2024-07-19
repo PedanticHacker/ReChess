@@ -69,10 +69,10 @@ class Engine(QObject):
         self._analyzing = False
 
     def quit(self) -> None:
-        """Quit CPU process of loaded chess engine."""
+        """Quit CPU process of loaded UCI chess engine."""
         self._loaded_engine.quit()
 
     @property
     def name(self) -> str:
-        """Return name of loaded chess engine."""
+        """Return name of loaded UCI chess engine."""
         return self._loaded_engine.id["name"]

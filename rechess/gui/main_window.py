@@ -79,7 +79,7 @@ class MainWindow(QMainWindow):
             shortcut="Ctrl+I",
             icon=svg_icon("about"),
             handler=self.show_about,
-            status_tip="Show the app's description, copyright, and license.",
+            status_tip="Shows the app's description, copyright, and license.",
         )
         self.flip_action = create_action(
             name="Flip",
@@ -107,7 +107,7 @@ class MainWindow(QMainWindow):
             shortcut="Ctrl+Shift+P",
             handler=self.play_move_now,
             icon=svg_icon("play-move-now"),
-            status_tip="Forces the loaded chess engine to play a move now.",
+            status_tip="Forces the loaded UCI chess engine to play a move now.",
         )
         self.settings_action = create_action(
             name="Settings...",
@@ -208,7 +208,7 @@ class MainWindow(QMainWindow):
         help_area.addAction(self.about_action)
 
     def set_grid_layout(self) -> None:
-        """Set a grid layout for widgets on the main window."""
+        """Set grid layout for widgets on main window."""
         self._grid_layout: QGridLayout = QGridLayout()
         self._grid_layout.addWidget(
             self._black_clock, 0, 0, 1, 1, Qt.AlignmentFlag.AlignTop
@@ -239,11 +239,11 @@ class MainWindow(QMainWindow):
         self._engine_name_label.setText(self._engine.name)
 
     def set_minimum_size(self) -> None:
-        """Set a minimum size to be 1000 by 700 pixels."""
+        """Set minimum size to be 1000 by 700 pixels."""
         self.setMinimumSize(1000, 700)
 
     def switch_clock_timers(self) -> None:
-        """Activate the clock's timer for the player on turn."""
+        """Activate clock's timer for player on turn."""
         if self._game.is_white_on_turn():
             self._black_clock.stop_timer()
             self._white_clock.start_timer()
@@ -252,7 +252,7 @@ class MainWindow(QMainWindow):
             self._black_clock.start_timer()
 
     def adjust_engine_buttons(self) -> None:
-        """Adjust the state of the engine's tool bar buttons."""
+        """Adjust state of UCI chess engine's toolbar buttons."""
         self.play_move_now_action.setEnabled(True)
         self.start_analysis_action.setEnabled(True)
         self.stop_analysis_action.setDisabled(True)
@@ -274,23 +274,23 @@ class MainWindow(QMainWindow):
         self._engine.san_variation_analyzed.connect(self.on_san_variation_analyzed)
 
     def invoke_engine(self) -> None:
-        """Invoke the loaded engine to play a move."""
+        """Invoke loaded UCI chess engine to play move."""
         QThreadPool.globalInstance().start(self._engine.play_move)
 
     def invoke_analysis(self) -> None:
-        """Invoke the loaded engine to start an analysis."""
+        """Invoke loaded UCI chess engine to start analysis."""
         QThreadPool.globalInstance().start(self._engine.start_analysis)
 
     def show_maximized(self) -> None:
-        """Show the main window in maximized size."""
+        """Show main window in maximized size."""
         self.showMaximized()
 
     def quit(self) -> None:
-        """Trigger the main window's close event."""
+        """Trigger main window's close event."""
         self.close()
 
     def flip(self) -> None:
-        """Flip the chessboard and its related widgets."""
+        """Flip chessboard and its related widgets."""
         flipped_orientation: bool = not setting_value("board", "orientation")
         set_setting_value("board", "orientation", flipped_orientation)
 
@@ -299,11 +299,11 @@ class MainWindow(QMainWindow):
         self._svg_board.draw()
 
     def play_move_now(self) -> None:
-        """Force the loaded chess engine to play a move now."""
+        """Force loaded UCI chess engine to play move now."""
         self.invoke_engine()
 
     def show_settings_dialog(self) -> None:
-        """Show the Settings dialog to edit the app's settings."""
+        """Show Settings dialog to edit app's settings."""
         self._settings_dialog.disable_groups_if(self._game.playing)
 
         if self._settings_dialog.exec() == QDialog.DialogCode.Accepted:
@@ -311,7 +311,7 @@ class MainWindow(QMainWindow):
             self._white_clock.reset()
 
     def load_engine(self) -> None:
-        """Show the file manager to load a UCI chess engine."""
+        """Show file manager to load UCI chess engine."""
         engine_file, _ = QFileDialog.getOpenFileName(
             self,
             "File Manager",
@@ -323,7 +323,7 @@ class MainWindow(QMainWindow):
             self.start_new_engine(engine_file)
 
     def start_new_engine(self, engine_file: str) -> None:
-        """Start a new chess engine from the `engine_file`."""
+        """Start new UCI chess engine from `engine_file`."""
         self.stop_analysis()
         self._game.arrow.clear()
         self._engine_analysis_label.clear()
@@ -338,7 +338,7 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def show_about(self) -> None:
-        """Show the app's description, copyright, and license."""
+        """Show app's description, copyright, and license."""
         QMessageBox.about(
             self,
             "About",
@@ -350,7 +350,7 @@ class MainWindow(QMainWindow):
         )
 
     def flip_clock_alignments(self) -> None:
-        """Flip the alignments of the top and bottom chess clocks."""
+        """Flip alignments of top and bottom chess clocks."""
         if Qt.AlignmentFlag.AlignTop in self._grid_layout.itemAt(0).alignment():
             self._grid_layout.itemAt(0).setAlignment(Qt.AlignmentFlag.AlignBottom)
             self._grid_layout.itemAt(1).setAlignment(Qt.AlignmentFlag.AlignTop)
@@ -386,7 +386,7 @@ class MainWindow(QMainWindow):
             self._chess_opening_label.setText(f"{eco_code}: {chess_opening_name}")
 
     def refresh_ui(self) -> None:
-        """Refresh the current state of the UI."""
+        """Refresh current state of UI."""
         self._engine.stop_analysis()
         self._table_model.refresh_view()
         self._table_view.select_last_item()
@@ -411,7 +411,7 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def offer_new_game(self) -> None:
-        """Show a dialog offering to start a new game."""
+        """Show dialog offering to start new game."""
         answer: QMessageBox.StandardButton = QMessageBox.question(
             self,
             "New Game",
@@ -472,7 +472,7 @@ class MainWindow(QMainWindow):
 
     @Slot(Move)
     def on_best_move_analyzed(self, best_move: Move) -> None:
-        """Show `best_move` from chess engine analysis."""
+        """Show `best_move` from UCI chess engine analysis."""
         self._game.set_arrow_for(best_move)
         self._svg_board.draw()
 
@@ -514,7 +514,7 @@ class MainWindow(QMainWindow):
 
     @Slot(str)
     def on_san_variation_analyzed(self, san_variation: str) -> None:
-        """Show `san_variation` from chess engine analysis."""
+        """Show `san_variation` from UCI chess engine analysis."""
         self._engine_analysis_label.setText(san_variation)
 
     @Slot(Score)

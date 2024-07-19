@@ -7,7 +7,7 @@ from rechess.utils import setting_value
 
 
 class SvgBoard(QSvgWidget):
-    """An SVG chessboard with chess pieces."""
+    """SVG chessboard with chess pieces."""
 
     svg.XX = "<circle id='xx' r='5' cx='22' cy='22' fill='lime' stroke='blue'/>"
 
@@ -33,7 +33,7 @@ class SvgBoard(QSvgWidget):
         self.draw()
 
     def draw(self) -> None:
-        """Draw the current chessboard position."""
+        """Draw current chessboard position."""
         svg_board: str = svg.board(
             colors=self._colors,
             board=self._game.board,
@@ -46,7 +46,7 @@ class SvgBoard(QSvgWidget):
         self.load(encoded_svg_board)
 
     def mousePressEvent(self, event: QMouseEvent) -> None:
-        """Select a square upon a mouse button press."""
+        """Select square on mouse button press."""
         x, y = event.position().x(), event.position().y()
         self._game.square_from(x, y)
         self.draw()

@@ -9,7 +9,7 @@ from PySide6.QtWidgets import QAbstractItemView, QHeaderView, QTableView
 
 
 class TableView(QTableView):
-    """A view for displaying notation items in a 2-column table."""
+    """View for displaying notation items in 2-column table."""
 
     item_selected: Signal = Signal(int)
 
@@ -30,18 +30,18 @@ class TableView(QTableView):
         self.selectionModel().currentChanged.connect(self.on_current_changed)
 
     def select_last_item(self) -> None:
-        """Select the last notation item."""
+        """Select last notation item."""
         last_row: int = self.model().rowCount() - 1
         last_column: int = 1 if self.model().index(last_row, 1).data() else 0
         last_model_index: QModelIndex = self.model().index(last_row, last_column)
         self.select_model_index(last_model_index)
 
     def select_previous_item(self) -> None:
-        """Select the previous notation item."""
+        """Select previous notation item."""
         self.select_model_index(self.previous_model_index)
 
     def select_next_item(self) -> None:
-        """Select the next notation item."""
+        """Select next notation item."""
         if self.ply_index < 0:
             next_model_index: QModelIndex = self.model().index(0, 0)
         else:
@@ -51,7 +51,7 @@ class TableView(QTableView):
             self.select_model_index(next_model_index)
 
     def select_model_index(self, model_index: QModelIndex) -> None:
-        """Select a notation item with the `model_index`."""
+        """Select notation item with `model_index`."""
         self.selectionModel().setCurrentIndex(
             model_index,
             QItemSelectionModel.SelectionFlag.ClearAndSelect,
@@ -59,19 +59,19 @@ class TableView(QTableView):
 
     @property
     def ply_index(self) -> int:
-        """Get the index of a ply (i.e., a half-move)."""
+        """Return index of ply (i.e., half-move)."""
         current_model_index: QModelIndex = self.selectionModel().currentIndex()
         return 2 * current_model_index.row() + current_model_index.column()
 
     @property
     def previous_model_index(self) -> QModelIndex:
-        """Get a model index of the previous notation item."""
+        """Return model index of previous notation item."""
         previous_row, previous_column = divmod(self.ply_index - 1, 2)
         return self.model().index(previous_row, previous_column)
 
     @property
     def next_model_index(self) -> QModelIndex:
-        """Get a model index of the next notation item."""
+        """Return model index of next notation item."""
         all_rows: int = self.model().rowCount()
         next_row, next_column = divmod(self.ply_index + 1, 2)
 
@@ -82,5 +82,5 @@ class TableView(QTableView):
 
     @Slot()
     def on_current_changed(self) -> None:
-        """Emit a ply index of the currently selected notation item."""
+        """Emit ply index of currently selected notation item."""
         self.item_selected.emit(self.ply_index)
