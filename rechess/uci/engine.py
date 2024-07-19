@@ -34,7 +34,7 @@ class Engine(QObject):
             self._loaded_engine.configure(engine_configuration())
 
     def play_move(self) -> None:
-        """Play move with loaded chess engine."""
+        """Play a move with loaded UCI chess engine."""
         play_result: PlayResult = self._loaded_engine.play(
             board=self._game.board,
             limit=Limit(depth=30),
@@ -43,7 +43,7 @@ class Engine(QObject):
         self.move_played.emit(play_result.move)
 
     def start_analysis(self) -> None:
-        """Start analyzing chessboard position."""
+        """Start analyzing current chessboard position."""
         self._analyzing = True
 
         with self._loaded_engine.analysis(
@@ -65,14 +65,14 @@ class Engine(QObject):
                     self.san_variation_analyzed.emit(san_variation)
 
     def stop_analysis(self) -> None:
-        """Stop analyzing chessboard position."""
+        """Stop analyzing current chessboard position."""
         self._analyzing = False
 
     def quit(self) -> None:
-        """Quit CPU process of loaded UCI chess engine."""
+        """Quit UCI chess engine's CPU process."""
         self._loaded_engine.quit()
 
     @property
     def name(self) -> str:
-        """Return name of loaded UCI chess engine."""
+        """Return loaded UCI chess engine's name."""
         return self._loaded_engine.id["name"]

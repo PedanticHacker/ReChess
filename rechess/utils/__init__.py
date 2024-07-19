@@ -8,4 +8,4 @@ from .helpers import (
     stockfish,
     svg_icon,
 )
-from .storage import chess_openings
+from .container import chess_openings
