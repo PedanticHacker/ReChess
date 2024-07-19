@@ -25,8 +25,8 @@ class SvgBoard(QSvgWidget):
             "arrow blue": "#00308880",
             "arrow green": "#15781b80",
             "arrow yellow": "#e68f0080",
-            "square dark lastmove": "#8b000080",
-            "square light lastmove": "#8b000080",
+            "square dark lastmove": "#e68f0080",
+            "square light lastmove": "#e68f0080",
         }
 
         self.setFixedSize(500, 500)
@@ -37,7 +37,7 @@ class SvgBoard(QSvgWidget):
         svg_board: str = svg.board(
             colors=self._colors,
             board=self._game.board,
-            arrows=self._game.arrow,
+            arrows=self._game.arrows,
             check=self._game.king_square,
             squares=self._game.legal_moves,
             orientation=setting_value("board", "orientation"),

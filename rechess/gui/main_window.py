@@ -233,17 +233,17 @@ class MainWindow(QMainWindow):
             self.flip_clock_alignments()
 
     def create_statusbar(self) -> None:
-        """Create statusbar to display various info."""
+        """Create the statusbar for displaying various info."""
         self.statusBar().addWidget(self._chess_opening_label)
         self.statusBar().addPermanentWidget(self._engine_name_label)
         self._engine_name_label.setText(self._engine.name)
 
     def set_minimum_size(self) -> None:
-        """Set minimum size to be 1000 by 700 pixels."""
+        """Set the minimum size to be 1000 by 700 pixels."""
         self.setMinimumSize(1000, 700)
 
     def switch_clock_timers(self) -> None:
-        """Activate clock's timer for player on turn."""
+        """Activate chess clock's timer for the player on turn."""
         if self._game.is_white_on_turn():
             self._black_clock.stop_timer()
             self._white_clock.start_timer()
@@ -274,23 +274,23 @@ class MainWindow(QMainWindow):
         self._engine.san_variation_analyzed.connect(self.on_san_variation_analyzed)
 
     def invoke_engine(self) -> None:
-        """Invoke loaded UCI chess engine to play move."""
+        """Invoke the loaded UCI chess engine to play a move."""
         QThreadPool.globalInstance().start(self._engine.play_move)
 
     def invoke_analysis(self) -> None:
-        """Invoke loaded UCI chess engine to start analysis."""
+        """Invoke the loaded UCI chess engine to start analysis."""
         QThreadPool.globalInstance().start(self._engine.start_analysis)
 
     def show_maximized(self) -> None:
-        """Show main window in maximized size."""
+        """Show the main window in maximized size."""
         self.showMaximized()
 
     def quit(self) -> None:
-        """Trigger main window's close event."""
+        """Trigger the main window's close event."""
         self.close()
 
     def flip(self) -> None:
-        """Flip chessboard and its related widgets."""
+        """Flip the chessboard and its related widgets."""
         flipped_orientation: bool = not setting_value("board", "orientation")
         set_setting_value("board", "orientation", flipped_orientation)
 
@@ -299,11 +299,11 @@ class MainWindow(QMainWindow):
         self._svg_board.draw()
 
     def play_move_now(self) -> None:
-        """Force loaded UCI chess engine to play move now."""
+        """Force the loaded UCI chess engine to play a move now."""
         self.invoke_engine()
 
     def show_settings_dialog(self) -> None:
-        """Show Settings dialog to edit app's settings."""
+        """Show Settings dialog to edit the app's settings."""
         self._settings_dialog.disable_groups_if(self._game.playing)
 
         if self._settings_dialog.exec() == QDialog.DialogCode.Accepted:
@@ -311,7 +311,7 @@ class MainWindow(QMainWindow):
             self._white_clock.reset()
 
     def load_engine(self) -> None:
-        """Show file manager to load UCI chess engine."""
+        """Show the file manager to load a UCI chess engine."""
         engine_file, _ = QFileDialog.getOpenFileName(
             self,
             "File Manager",
@@ -323,9 +323,9 @@ class MainWindow(QMainWindow):
             self.start_new_engine(engine_file)
 
     def start_new_engine(self, engine_file: str) -> None:
-        """Start new UCI chess engine from `engine_file`."""
+        """Start the new UCI chess engine from `engine_file`."""
         self.stop_analysis()
-        self._game.arrow.clear()
+        self._game.clear_arrows()
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
 
@@ -472,8 +472,8 @@ class MainWindow(QMainWindow):
 
     @Slot(Move)
     def on_best_move_analyzed(self, best_move: Move) -> None:
-        """Show `best_move` from UCI chess engine analysis."""
-        self._game.set_arrow_for(best_move)
+        """Show `best_move` from UCI chess engine analysis as arrow."""
+        self._game.set_arrow(best_move)
         self._svg_board.draw()
 
     @Slot()
@@ -495,9 +495,9 @@ class MainWindow(QMainWindow):
     def on_item_selected(self, ply_index: int) -> None:
         """Select notation item with `ply_index`."""
         if ply_index > -1:
-            self._game.set_move_with(ply_index)
+            self._game.set_move_from(ply_index)
         else:
-            self._game.clear_arrow()
+            self._game.clear_arrows()
             self._game.set_root_position()
             self._chess_opening_label.clear()
 

@@ -32,8 +32,8 @@ QProgressBar::chunk {
 
 QTableView {
     font: bold;
-    color: white;
+    color: black;
     font-size: 12px;
     background: lime;
-    selection-background-color: blue;
+    selection-background-color: #15781b80;
 }
