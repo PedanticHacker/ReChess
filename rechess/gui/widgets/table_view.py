@@ -66,14 +66,16 @@ class TableView(QTableView):
     @property
     def previous_model_index(self) -> QModelIndex:
         """Return model index of previous notation item."""
-        previous_row, previous_column = divmod(self.ply_index - 1, 2)
+        previous_row: int = (self.ply_index - 1) // 2
+        previous_column: int = (self.ply_index - 1) % 2
         return self.model().index(previous_row, previous_column)
 
     @property
     def next_model_index(self) -> QModelIndex:
         """Return model index of next notation item."""
         all_rows: int = self.model().rowCount()
-        next_row, next_column = divmod(self.ply_index + 1, 2)
+        next_row: int = (self.ply_index + 1) // 2
+        next_column: int = (self.ply_index + 1) % 2
 
         if next_row < all_rows:
             return self.model().index(next_row, next_column)

@@ -12,7 +12,7 @@ from rechess.utils import app_style, svg_icon
 
 
 class ReChess(QApplication):
-    """ReChess GUI app, locked to be launched only once."""
+    """The ReChess GUI app, locked to be launched only once."""
 
     def __init__(self) -> None:
         super().__init__()
@@ -30,12 +30,12 @@ class ReChess(QApplication):
             sys.exit()
 
     def launch(self) -> None:
-        """Launch ReChess GUI app."""
+        """Execute the main loop which launches ReChess."""
         self.exec()
 
 
 def main() -> None:
-    """Define entry point for ReChess GUI app."""
+    """Launch ReChess from here."""
     re_chess: ReChess = ReChess()
 
     main_window: MainWindow = MainWindow()

@@ -59,7 +59,7 @@ class Game(QObject):
 
     @property
     def result(self) -> str:
-        """Return game result."""
+        """Return result of current chess game."""
         result_rewordings = {
             "1/2-1/2": "Draw",
             "0-1": "Black wins",
@@ -78,12 +78,12 @@ class Game(QObject):
         self.reset_squares()
 
     def reset_squares(self) -> None:
-        """Reset origin and target squares of piece."""
+        """Reset origin and target squares of chess piece."""
         self.from_square: Square = -1
         self.to_square: Square = -1
 
     def push(self, move: Move) -> None:
-        """Push `move`."""
+        """Push `move` on chessboard."""
         self.set_arrow_for(move)
         self.play_sound_effect_for(move)
 
@@ -102,7 +102,7 @@ class Game(QObject):
         self.arrow.clear()
 
     def play_sound_effect_for(self, move: Move) -> None:
-        """Play WAV sound effect for `move`."""
+        """Play sound effect for `move`."""
         is_capture: bool = self.board.is_capture(move)
         file_name: str = "capture.wav" if is_capture else "move.wav"
         file_url: QUrl = QUrl(f"file:rechess/resources/audio/{file_name}")
@@ -113,9 +113,9 @@ class Game(QObject):
         """Set all pieces to their root position."""
         self.board = self.board.root()
 
-    def square_from(self, x: float, y: float) -> None:
-        """Detect square from `x` and `y` coordinates."""
-        file, rank = self.file_and_rank_from(x, y)
+    def locate_square_from(self, x: float, y: float) -> None:
+        """Locate square from `x` and `y` coordinates."""
+        file, rank = self.locate_file_and_rank_from(x, y)
 
         if self.from_square == -1:
             self.from_square = square(file, rank)
@@ -124,8 +124,8 @@ class Game(QObject):
             self.find_move(self.from_square, self.to_square)
             self.reset_squares()
 
-    def file_and_rank_from(self, x: float, y: float) -> tuple[int, int]:
-        """Detect file and rank from `x` and `y` coordinates."""
+    def locate_file_and_rank_from(self, x: float, y: float) -> tuple[int, int]:
+        """Locate file and rank from `x` and `y` coordinates."""
         if setting_value("board", "orientation") == WHITE:
             file: float = (x - 18) // 58
             rank: float = 7 - (y - 18) // 58
@@ -171,7 +171,7 @@ class Game(QObject):
             del self.notation_items[after_ply_index]
 
     def is_engine_on_turn(self) -> bool:
-        """Return True if chess engine is on turn, else False."""
+        """Return True if UCI chess engine is on turn, else False."""
         return self.board.turn == setting_value("engine", "is_white")
 
     def is_game_over(self) -> bool:
