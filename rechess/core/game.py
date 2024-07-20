@@ -60,7 +60,7 @@ class Game(QObject):
 
     @property
     def result(self) -> str:
-        """Return current game's result."""
+        """Return the current game's result."""
         result_rewordings = {
             "1/2-1/2": "Draw",
             "0-1": "Black wins",
@@ -70,7 +70,7 @@ class Game(QObject):
         return result_rewordings[self.board.result(claim_draw=True)]
 
     def set_new_game(self) -> None:
-        """Reset current game to starting state."""
+        """Reset the current game to starting state."""
         self.board.reset()
         self.arrows.clear()
         self.positions.clear()
@@ -84,7 +84,7 @@ class Game(QObject):
         self.to_square: Square = -1
 
     def push(self, move: Move) -> None:
-        """Push `move`."""
+        """Push the `move` on the chessboard."""
         self.set_arrow(move)
         self.play_sound_effect(move)
 
