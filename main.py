@@ -30,12 +30,12 @@ class ReChess(QApplication):
             sys.exit()
 
     def launch(self) -> None:
-        """Execute main loop which launches ReChess."""
+        """Execute the main loop which launches ReChess."""
         self.exec()
 
 
 def main() -> None:
-    """Define main entry point."""
+    """Define the main entry point."""
     re_chess: ReChess = ReChess()
 
     main_window: MainWindow = MainWindow()
