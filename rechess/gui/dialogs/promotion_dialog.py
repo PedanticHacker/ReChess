@@ -5,7 +5,7 @@ from rechess.utils import create_button, svg_icon
 
 
 class PromotionDialog(QDialog):
-    """Dialog for selecting promotion piece type."""
+    """The dialog for selecting a promotion piece type."""
 
     def __init__(self, player_color: Color) -> None:
         super().__init__()
@@ -34,7 +34,7 @@ class PromotionDialog(QDialog):
             self.knight_button = create_button(svg_icon("black-knight"))
 
     def add_buttons_to_box(self) -> None:
-        """Add buttons to button box."""
+        """Add buttons to a button box."""
         self.button_box: QDialogButtonBox = QDialogButtonBox(self)
 
         self.button_box.addButton(
@@ -55,7 +55,7 @@ class PromotionDialog(QDialog):
         )
 
     def set_horizontal_layout(self) -> None:
-        """Set horizontal layout for buttons in button box."""
+        """Set horizontal layout for buttons in the button box."""
         horizontal_layout: QHBoxLayout = QHBoxLayout(self)
         horizontal_layout.addWidget(self.button_box)
         self.setLayout(horizontal_layout)
@@ -70,22 +70,22 @@ class PromotionDialog(QDialog):
         self.knight_button.clicked.connect(self.on_knight_button_clicked)
 
     def on_queen_button_clicked(self) -> None:
-        """Change promoting pawn to queen."""
+        """Change the promoting pawn to a queen."""
         self._piece_type = QUEEN
 
     def on_rook_button_clicked(self) -> None:
-        """Change promoting pawn to rook."""
+        """Change the promoting pawn to a rook."""
         self._piece_type = ROOK
 
     def on_bishop_button_clicked(self) -> None:
-        """Change promoting pawn to bishop."""
+        """Change the promoting pawn to a bishop."""
         self._piece_type = BISHOP
 
     def on_knight_button_clicked(self) -> None:
-        """Change promoting pawn to knight."""
+        """Change the promoting pawn to a knight."""
         self._piece_type = KNIGHT
 
     @property
     def piece_type(self) -> PieceType:
-        """Return selected promotion piece type."""
+        """Return the selected promotion piece type."""
         return self._piece_type
