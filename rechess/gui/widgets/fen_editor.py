@@ -19,14 +19,14 @@ class FenEditor(QLineEdit):
         self.setText(self._board.fen())
         self.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.textEdited.connect(self.on_fen_edited)
+        self.textEdited.connect(self.on_text_edited)
 
     def set_red_background_color(self) -> None:
-        """Set background color to red as warning indication."""
+        """Set background color to red as a warning indication."""
         self.setStyleSheet("background: red;")
 
     def reset_background_color(self) -> None:
-        """Reset background color to default lime color."""
+        """Reset background color to the default lime color."""
         self.setStyleSheet("background: lime;")
 
     def mouseDoubleClickEvent(self, event: QMouseEvent) -> None:
@@ -35,10 +35,10 @@ class FenEditor(QLineEdit):
         self.paste()
 
     @Slot(str)
-    def on_fen_edited(self, new_fen: str) -> None:
-        """Attempt to set chessboard position from `new_fen`."""
+    def on_text_edited(self, new_text: str) -> None:
+        """Try to set a valid chessboard position from `new_text`."""
         try:
-            self._board.set_fen(new_fen)
+            self._board.set_fen(new_text)
         except (IndexError, ValueError):
             self.set_red_background_color()
         else:

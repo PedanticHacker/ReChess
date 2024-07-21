@@ -33,7 +33,7 @@ class SvgBoard(QSvgWidget):
         self.draw()
 
     def draw(self) -> None:
-        """Draw current chessboard position."""
+        """Draw the current chessboard position."""
         svg_board: str = svg.board(
             colors=self._colors,
             board=self._game.board,
@@ -46,7 +46,7 @@ class SvgBoard(QSvgWidget):
         self.load(encoded_svg_board)
 
     def mousePressEvent(self, event: QMouseEvent) -> None:
-        """Select square on mouse button press."""
+        """Select a square on mouse button press."""
         x: float = event.position().x()
         y: float = event.position().y()
         self._game.locate_square_from(x, y)
