@@ -14,7 +14,7 @@ from rechess.utils import set_setting_value, setting_value
 
 
 class SettingsDialog(QDialog):
-    """Dialog for changing app's settings."""
+    """The dialog for changing settings."""
 
     def __init__(self) -> None:
         super().__init__()
@@ -32,7 +32,7 @@ class SettingsDialog(QDialog):
         self.setWindowTitle("Settings")
 
     def create_options(self) -> None:
-        """Create options to represent settings."""
+        """Create options that represent settings."""
         is_engine_white: bool = setting_value("engine", "is_white")
         is_engine_pondering: bool = setting_value("engine", "is_pondering")
 
@@ -74,10 +74,9 @@ class SettingsDialog(QDialog):
         )
 
     def set_vertical_layout(self) -> None:
-        """Set vertical layout for dialog."""
+        """Set vertical layout for the dialog."""
         self._button_box: QDialogButtonBox = QDialogButtonBox(
-            QDialogButtonBox.StandardButton.Ok
-            | QDialogButtonBox.StandardButton.Cancel
+            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel
         )
 
         engine_layout: QVBoxLayout = QVBoxLayout()
@@ -110,7 +109,7 @@ class SettingsDialog(QDialog):
 
     @Slot()
     def on_accepted(self) -> None:
-        """Save settings on clicking dialog's OK button."""
+        """Save settings on clicking the dialog's OK button."""
         set_setting_value(
             section="clock",
             key="time",
