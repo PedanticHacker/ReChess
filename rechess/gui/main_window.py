@@ -243,16 +243,20 @@ class MainWindow(QMainWindow):
         self.setMinimumSize(1000, 700)
 
     def switch_clock_timers(self) -> None:
-        """Activate chess clock's timer for the player on turn."""
+        """Activate the clock timer for a player on turn."""
         if self._game.is_white_on_turn():
             self._black_clock.stop_timer()
             self._white_clock.start_timer()
+            if self._game.playing:
+                self._black_clock.add_increment()
         else:
             self._white_clock.stop_timer()
             self._black_clock.start_timer()
+            if self._game.playing:
+                self._white_clock.add_increment()
 
     def adjust_engine_buttons(self) -> None:
-        """Adjust state of UCI chess engine's toolbar buttons."""
+        """Adjust the state of UCI chess engine's toolbar buttons."""
         self.play_move_now_action.setEnabled(True)
         self.start_analysis_action.setEnabled(True)
         self.stop_analysis_action.setDisabled(True)
@@ -263,6 +267,7 @@ class MainWindow(QMainWindow):
             self.start_analysis_action.setDisabled(True)
 
     def connect_signals_to_slots(self) -> None:
+        """Connect various signals to appropriate slots."""
         self._game.move_played.connect(self.on_move_played)
         self._engine.move_played.connect(self.on_move_played)
         self._fen_editor.validated.connect(self.on_fen_validated)
@@ -488,7 +493,7 @@ class MainWindow(QMainWindow):
 
     @Slot()
     def on_fen_validated(self) -> None:
-        """Refresh UI based on valid FEN."""
+        """Refresh the UI after FEN has been validated."""
         self.refresh_ui()
 
     @Slot(int)
@@ -506,7 +511,7 @@ class MainWindow(QMainWindow):
 
     @Slot(Move)
     def on_move_played(self, move: Move) -> None:
-        """Play `move` by pushing it and refreshing UI."""
+        """Play `move` by pushing it and refreshing the UI."""
         if self._game.is_legal(move):
             self._game.delete_data_after(self._table_view.ply_index)
             self._game.push(move)

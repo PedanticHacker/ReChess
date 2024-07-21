@@ -6,7 +6,7 @@ from rechess.utils import setting_value
 
 
 class Clock(QLCDNumber):
-    """Chess clock with 30 millisecond timer accuracy."""
+    """A chess clock with 30 millisecond timer accuracy."""
 
     time_expired: Signal = Signal()
 
@@ -27,22 +27,21 @@ class Clock(QLCDNumber):
         self.reset()
 
     def reset(self) -> None:
-        """Reset clock to time and increment from settings."""
-        seconds: float = setting_value("clock", "time")
-        increment: float = setting_value("clock", "increment")
-        self.time: float = seconds + increment
+        """Set time to values from settings."""
+        self.time: float = setting_value("clock", "time")
+        self.increment: float = setting_value("clock", "increment")
         self.display_time()
 
     def display_time(self) -> None:
-        """Display time on clock in hh:mm:ss or mm:ss format."""
-        time_text: str = self.format_time()
-        self.setDigitCount(len(time_text))
-        self.display(time_text)
+        """Display time in hh:mm:ss or mm:ss format."""
+        time_as_text: str = self.format_time()
+        self.setDigitCount(len(time_as_text))
+        self.display(time_as_text)
 
     def format_time(self) -> str:
-        """Convert numerial time to hh:mm:ss or mm:ss format."""
-        total_seconds: int = round(self.time)
-        hours, remaining_time = divmod(total_seconds, 3600)
+        """Return time in hh:mm:ss or mm:ss format."""
+        time_in_seconds: int = round(self.time)
+        hours, remaining_time = divmod(time_in_seconds, 3600)
         minutes, seconds = divmod(remaining_time, 60)
         return (
             f"{hours:02}:{minutes:02}:{seconds:02}"
@@ -51,19 +50,24 @@ class Clock(QLCDNumber):
         )
 
     def start_timer(self) -> None:
-        """Activate timer countdown and track elapsed time."""
+        """Track elapsed time and start timer countdown."""
         self._elapsed_timer.start()
         self._timer.start()
 
     def stop_timer(self) -> None:
-        """Deactivate timer countdown by pausing time on clock."""
+        """Stop timer countdown."""
         self._timer.stop()
+
+    def add_increment(self) -> None:
+        """Add increment to time."""
+        self.time += self.increment
+        self.display_time()
 
     @Slot()
     def update_time(self) -> None:
-        """Display decremented time and check whether time expired."""
-        elapsed_seconds: float = self._elapsed_timer.restart() / 1000.0
-        self.time -= elapsed_seconds
+        """Display decremented time and handle time expiration."""
+        elapsed_time: float = self._elapsed_timer.restart() / 1000.0
+        self.time -= elapsed_time
         self.display_time()
 
         if self.time <= 0.0:
