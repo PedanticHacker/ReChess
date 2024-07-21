@@ -8,8 +8,8 @@ from rechess.chess import ClassicChess
 from rechess.utils import engine_configuration, setting_value, stockfish
 
 
-class Engine(QObject):
-    """Manager for a UCI chess engine."""
+class UciEngine(QObject):
+    """UCI chess engine manager."""
 
     move_played: Signal = Signal(Move)
     best_move_analyzed: Signal = Signal(Move)
@@ -27,14 +27,14 @@ class Engine(QObject):
         self._loaded_engine.configure(engine_configuration())
 
     def load(self, file_path: str) -> None:
-        """Load UCI chess engine with `file_path`."""
+        """Load a UCI chess engine with `file_path`."""
         with suppress(EngineError):
             self._loaded_engine.quit()
             self._loaded_engine = SimpleEngine.popen_uci(file_path)
             self._loaded_engine.configure(engine_configuration())
 
     def play_move(self) -> None:
-        """Play a move with loaded UCI chess engine."""
+        """Play a move with the loaded UCI chess engine."""
         play_result: PlayResult = self._loaded_engine.play(
             board=self._game.board,
             limit=Limit(depth=30),
@@ -43,7 +43,7 @@ class Engine(QObject):
         self.move_played.emit(play_result.move)
 
     def start_analysis(self) -> None:
-        """Start analyzing current chessboard position."""
+        """Start analyzing the current chessboard position."""
         self._analyzing = True
 
         with self._loaded_engine.analysis(
@@ -65,14 +65,14 @@ class Engine(QObject):
                     self.san_variation_analyzed.emit(san_variation)
 
     def stop_analysis(self) -> None:
-        """Stop analyzing current chessboard position."""
+        """Stop analyzing the current chessboard position."""
         self._analyzing = False
 
     def quit(self) -> None:
-        """Quit UCI chess engine's CPU process."""
+        """Quit the loaded UCI chess engine's CPU process."""
         self._loaded_engine.quit()
 
     @property
     def name(self) -> str:
-        """Return loaded UCI chess engine's name."""
+        """Return the loaded UCI chess engine's name."""
         return self._loaded_engine.id["name"]

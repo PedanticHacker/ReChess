@@ -1,3 +1,3 @@
-from .engine import Engine
+from .engine import UciEngine
 
-__all__ = ["Engine"]
+__all__ = ["UciEngine"]

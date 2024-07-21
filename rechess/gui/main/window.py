@@ -26,7 +26,7 @@ from rechess.gui.widgets import (
     FenEditor,
     SvgBoard,
 )
-from rechess.uci import Engine
+from rechess.uci import UciEngine
 from rechess.utils import (
     create_action,
     svg_icon,
@@ -42,7 +42,7 @@ class MainWindow(QMainWindow):
         super().__init__()
 
         self._game: ClassicChess = ClassicChess()
-        self._engine: Engine = Engine(self._game)
+        self._engine: UciEngine = UciEngine(self._game)
         self._table_model: TableModel = TableModel(self._game.notation_items)
 
         self._black_clock: Clock = Clock(ClockColor.Black)
