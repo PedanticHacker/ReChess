@@ -4,22 +4,22 @@ from chess import Move
 from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
 from PySide6.QtCore import QObject, Signal
 
-from rechess.core import Game
+from rechess.chess import ClassicChess
 from rechess.utils import engine_configuration, setting_value, stockfish
 
 
 class Engine(QObject):
-    """UCI chess engine manager."""
+    """Manager for a UCI chess engine."""
 
     move_played: Signal = Signal(Move)
     best_move_analyzed: Signal = Signal(Move)
     san_variation_analyzed: Signal = Signal(str)
     white_score_analyzed: Signal = Signal(Score)
 
-    def __init__(self, game: Game) -> None:
+    def __init__(self, game: ClassicChess) -> None:
         super().__init__()
 
-        self._game: Game = game
+        self._game: ClassicChess = game
 
         self._analyzing: bool = False
 

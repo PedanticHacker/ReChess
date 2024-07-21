@@ -1,2 +1,4 @@
-from .promotion_dialog import PromotionDialog
-from .settings_dialog import SettingsDialog
+from .promotion import PromotionDialog
+from .settings import SettingsDialog
+
+__all__ = ["PromotionDialog", "SettingsDialog"]

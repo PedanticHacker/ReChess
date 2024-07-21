@@ -9,7 +9,7 @@ from PySide6.QtWidgets import QAbstractItemView, QHeaderView, QTableView
 
 
 class TableView(QTableView):
-    """View for displaying notation items in 2-column table."""
+    """The view for displaying chess notation in a 2-column table."""
 
     item_selected: Signal = Signal(int)
 
