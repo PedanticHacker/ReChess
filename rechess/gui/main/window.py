@@ -16,8 +16,9 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from rechess.chess import chess_openings, ClassicChess
+from rechess.chess import chess_openings
 from rechess.enums import ClockColor
+from rechess.game import ClassicGame
 from rechess.gui.dialogs import SettingsDialog
 from rechess.gui.table import TableModel, TableView
 from rechess.gui.widgets import (
@@ -41,7 +42,7 @@ class MainWindow(QMainWindow):
     def __init__(self) -> None:
         super().__init__()
 
-        self._game: ClassicChess = ClassicChess()
+        self._game: ClassicGame = ClassicGame()
         self._engine: UciEngine = UciEngine(self._game)
         self._table_model: TableModel = TableModel(self._game.notation_items)
 

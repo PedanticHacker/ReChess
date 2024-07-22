@@ -20,8 +20,8 @@ from rechess.gui.dialogs import PromotionDialog
 from rechess.utils import setting_value
 
 
-class ClassicChess(QObject):
-    """Rules of classic chess."""
+class ClassicGame(QObject):
+    """Rules of classic chess game."""
 
     move_played: Signal = Signal(Move)
 
@@ -105,11 +105,11 @@ class ClassicChess(QObject):
         ]
 
     def clear_arrows(self) -> None:
-        """Clear any arrows on the chessboard."""
+        """Clear all arrows on the chessboard."""
         self.arrows.clear()
 
     def play_sound_effect(self, move: Move) -> None:
-        """Play a sound effect for `move`."""
+        """Play a sound effect relative to `move`."""
         is_capture: bool = self.board.is_capture(move)
         file_name: str = "capture.wav" if is_capture else "move.wav"
         file_url: QUrl = QUrl(f"file:rechess/resources/audio/{file_name}")
@@ -169,7 +169,7 @@ class ClassicChess(QObject):
         self.set_arrow(move)
 
     def delete_data_after(self, ply_index: int) -> None:
-        """Delete notation items and positions after `ply_index`."""
+        """Delete positions and notation items after `ply_index`."""
         if ply_index < 0:
             self.set_new_game()
         else:

@@ -6,8 +6,8 @@ from PySide6.QtWidgets import QProgressBar, QSizePolicy
 from rechess.utils import setting_value
 
 
-class EvaluationBar(QProgressBar):
-    """Bar showing UCI chess engine's chessboard position evaluation."""
+class EvaluationBarWidget(QProgressBar):
+    """Widget displaying chessboard position evaluation."""
 
     def __init__(self) -> None:
         super().__init__()
@@ -27,18 +27,18 @@ class EvaluationBar(QProgressBar):
         self.reset_appearance()
 
     def reset_appearance(self) -> None:
-        """Reset bar's appearance."""
+        """Reset the bar's appearance."""
         self.hide()
         self.reset()
         self.flip_appearance()
 
     def flip_appearance(self) -> None:
-        """Flip appearance of bar's chunk by orientation."""
+        """Flip the bar's chunk appearance relative to orientation."""
         orientation: bool = setting_value("board", "orientation")
         self.setInvertedAppearance(orientation)
 
     def animate(self, evaluation: Score) -> None:
-        """Animate bar's chunk with `evaluation`."""
+        """Animate the bar's chunk based on `evaluation`."""
         if evaluation.is_mate():
             moves_to_mate: int = evaluation.mate() or 0
             is_white_matting: bool = moves_to_mate > 0
