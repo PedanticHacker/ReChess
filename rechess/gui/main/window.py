@@ -1,4 +1,5 @@
 from pathlib import Path
+from typing import Literal
 
 from chess import BLACK, Move
 from chess.engine import Score
@@ -36,6 +37,10 @@ from rechess.utils import (
 )
 
 
+Bottom: Literal[Qt.AlignmentFlag.AlignBottom] = Qt.AlignmentFlag.AlignBottom
+Top: Literal[Qt.AlignmentFlag.AlignTop] = Qt.AlignmentFlag.AlignTop
+
+
 class MainWindow(QMainWindow):
     """App's main window containing all widgets."""
 
@@ -57,7 +62,9 @@ class MainWindow(QMainWindow):
         self._chess_opening_label: QLabel = QLabel()
         self._engine_name_label: QLabel = QLabel()
         self._notifications_label: QLabel = QLabel()
+
         self._engine_analysis_label: QLabel = QLabel()
+        self._engine_analysis_label.setAlignment(Top)
         self._engine_analysis_label.setWordWrap(True)
 
         self._settings_dialog: SettingsDialog = SettingsDialog()
@@ -210,20 +217,14 @@ class MainWindow(QMainWindow):
     def set_grid_layout(self) -> None:
         """Set grid layout for widgets on main window."""
         self._grid_layout: QGridLayout = QGridLayout()
-        self._grid_layout.addWidget(
-            self._black_clock, 0, 0, 1, 1, Qt.AlignmentFlag.AlignTop
-        )
-        self._grid_layout.addWidget(
-            self._white_clock, 0, 0, 1, 1, Qt.AlignmentFlag.AlignBottom
-        )
+        self._grid_layout.addWidget(self._black_clock, 0, 0, 1, 1, Top)
+        self._grid_layout.addWidget(self._white_clock, 0, 0, 1, 1, Bottom)
         self._grid_layout.addWidget(self._svg_board, 0, 1, 1, 1)
         self._grid_layout.addWidget(self._evaluation_bar, 0, 2, 1, 1)
         self._grid_layout.addWidget(self._table_view, 0, 3, 1, 2)
-        self._grid_layout.addWidget(self._notifications_label, 1, 3, 1, 1)
+        self._grid_layout.addWidget(self._notifications_label, 1, 3, 1, 1, Top)
         self._grid_layout.addWidget(self._fen_editor, 1, 1, 1, 1)
-        self._grid_layout.addWidget(
-            self._engine_analysis_label, 2, 1, 1, 1, Qt.AlignmentFlag.AlignTop
-        )
+        self._grid_layout.addWidget(self._engine_analysis_label, 2, 1, 1, 1)
 
         self._widget_container: QWidget = QWidget()
         self._widget_container.setLayout(self._grid_layout)
