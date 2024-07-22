@@ -7,7 +7,7 @@ from PySide6.QtCore import QLockFile
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QApplication
 
-from rechess.gui import MainWindow
+from rechess.gui.main import MainWindow
 from rechess.utils import app_style, svg_icon
 
 
