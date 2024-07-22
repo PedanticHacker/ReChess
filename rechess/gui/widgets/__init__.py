@@ -1,6 +1,11 @@
-from .clock import Clock
-from .evaluation_bar import EvaluationBar
-from .fen_editor import FenEditor
-from .svg_board import SvgBoard
+from .clock import ClockWidget
+from .evaluation_bar import EvaluationBarWidget
+from .fen_editor import FenEditorWidget
+from .svg_board import SvgBoardWidget
 
-__all__ = ["Clock", "EvaluationBar", "FenEditor", "SvgBoard"]
+__all__ = [
+    "ClockWidget",
+    "EvaluationBarWidget",
+    "FenEditorWidget",
+    "SvgBoardWidget",
+]

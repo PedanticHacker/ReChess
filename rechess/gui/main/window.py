@@ -22,10 +22,10 @@ from rechess.game import ClassicGame
 from rechess.gui.dialogs import SettingsDialog
 from rechess.gui.table import TableModel, TableView
 from rechess.gui.widgets import (
-    Clock,
-    EvaluationBar,
-    FenEditor,
-    SvgBoard,
+    ClockWidget,
+    EvaluationBarWidget,
+    FenEditorWidget,
+    SvgBoardWidget,
 )
 from rechess.uci import UciEngine
 from rechess.utils import (
@@ -46,13 +46,13 @@ class MainWindow(QMainWindow):
         self._engine: UciEngine = UciEngine(self._game)
         self._table_model: TableModel = TableModel(self._game.notation_items)
 
-        self._black_clock: Clock = Clock(ClockColor.Black)
-        self._white_clock: Clock = Clock(ClockColor.White)
+        self._black_clock: ClockWidget = ClockWidget(ClockColor.Black)
+        self._white_clock: ClockWidget = ClockWidget(ClockColor.White)
 
-        self._svg_board: SvgBoard = SvgBoard(self._game)
-        self._fen_editor: FenEditor = FenEditor(self._game.board)
+        self._svg_board: SvgBoardWidget = SvgBoardWidget(self._game)
+        self._fen_editor: FenEditorWidget = FenEditorWidget(self._game.board)
         self._table_view: TableView = TableView(self._table_model)
-        self._evaluation_bar: EvaluationBar = EvaluationBar()
+        self._evaluation_bar: EvaluationBarWidget = EvaluationBarWidget()
 
         self._chess_opening_label: QLabel = QLabel()
         self._engine_name_label: QLabel = QLabel()
