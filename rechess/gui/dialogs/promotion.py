@@ -13,11 +13,14 @@ class PromotionDialog(QDialog):
         self._player_color: Color = player_color
         self._piece: PieceType = PieceType()
 
+        self.set_title()
         self.create_buttons()
         self.add_buttons_to_box()
         self.set_horizontal_layout()
         self.connect_signals_to_slots()
 
+    def set_title(self) -> None:
+        """Set the dialog's title to be Pawn Promotion."""
         self.setWindowTitle("Pawn Promotion")
 
     def create_buttons(self) -> None:

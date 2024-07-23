@@ -19,17 +19,25 @@ class SettingsDialog(QDialog):
     def __init__(self) -> None:
         super().__init__()
 
-        self._engine_group: QGroupBox = QGroupBox()
-        self._engine_group.setTitle("Engine")
+        self._button_box: QDialogButtonBox = QDialogButtonBox(
+            QDialogButtonBox.StandardButton.Save
+            | QDialogButtonBox.StandardButton.Cancel
+        )
 
-        self._time_control_group: QGroupBox = QGroupBox()
-        self._time_control_group.setTitle("Time control")
-
+        self.set_title()
+        self.create_groups()
         self.create_options()
         self.set_vertical_layout()
         self.connect_signals_to_slots()
 
+    def set_title(self) -> None:
+        """Set the dialog's title to be Settings."""
         self.setWindowTitle("Settings")
+
+    def create_groups(self) -> None:
+        """Create groups to display related settings together."""
+        self._engine_group: QGroupBox = QGroupBox("Engine")
+        self._time_control_group: QGroupBox = QGroupBox("Time Control")
 
     def create_options(self) -> None:
         """Create options that represent settings."""
@@ -75,10 +83,6 @@ class SettingsDialog(QDialog):
 
     def set_vertical_layout(self) -> None:
         """Set the dialog's layout to be vertical."""
-        self._button_box: QDialogButtonBox = QDialogButtonBox(
-            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel
-        )
-
         engine_layout: QVBoxLayout = QVBoxLayout()
         engine_layout.addWidget(self._engine_black_option)
         engine_layout.addWidget(self._engine_white_option)
@@ -90,11 +94,11 @@ class SettingsDialog(QDialog):
         time_control_layout.addWidget(self._clock_increment_option)
         self._time_control_group.setLayout(time_control_layout)
 
-        vertical_layout: QVBoxLayout = QVBoxLayout()
-        vertical_layout.addWidget(self._engine_group)
-        vertical_layout.addWidget(self._time_control_group)
-        vertical_layout.addWidget(self._button_box)
-        self.setLayout(vertical_layout)
+        dialog_vertical_layout: QVBoxLayout = QVBoxLayout()
+        dialog_vertical_layout.addWidget(self._engine_group)
+        dialog_vertical_layout.addWidget(self._time_control_group)
+        dialog_vertical_layout.addWidget(self._button_box)
+        self.setLayout(dialog_vertical_layout)
 
     def connect_signals_to_slots(self) -> None:
         """Connect dialog signals to their respective slot methods."""
