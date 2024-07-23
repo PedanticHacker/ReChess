@@ -1,5 +1,4 @@
 from pathlib import Path
-from typing import Literal
 
 from chess import BLACK, Move
 from chess.engine import Score
@@ -37,8 +36,8 @@ from rechess.utils import (
 )
 
 
-Bottom: Literal[Qt.AlignmentFlag.AlignBottom] = Qt.AlignmentFlag.AlignBottom
-Top: Literal[Qt.AlignmentFlag.AlignTop] = Qt.AlignmentFlag.AlignTop
+Bottom: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignBottom
+Top: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop
 
 
 class MainWindow(QMainWindow):
@@ -86,7 +85,7 @@ class MainWindow(QMainWindow):
             shortcut="Ctrl+I",
             icon=svg_icon("about"),
             handler=self.show_about,
-            status_tip="Shows the app's description, copyright, and license.",
+            status_tip="Shows app description, copyright, and license.",
         )
         self.flip_action = create_action(
             name="Flip",
@@ -121,7 +120,7 @@ class MainWindow(QMainWindow):
             shortcut="Ctrl+Shift+S",
             icon=svg_icon("settings"),
             handler=self.show_settings_dialog,
-            status_tip="Shows the Settings dialog to edit the app's settings.",
+            status_tip="Shows the Settings dialog to edit app settings.",
         )
         self.start_analysis_action = create_action(
             name="Start analysis",
@@ -309,8 +308,8 @@ class MainWindow(QMainWindow):
         self.invoke_engine()
 
     def show_settings_dialog(self) -> None:
-        """Show Settings dialog to edit the app's settings."""
-        self._settings_dialog.disable_groups_if(self._game.playing)
+        """Show the Settings dialog to edit app settings."""
+        self._settings_dialog.set_groups_disabled(self._game.playing)
 
         if self._settings_dialog.exec() == QDialog.DialogCode.Accepted:
             self._black_clock.reset()
@@ -344,7 +343,7 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def show_about(self) -> None:
-        """Show app's description, copyright, and license."""
+        """Show app description, copyright, and license."""
         QMessageBox.about(
             self,
             "About",
@@ -357,12 +356,12 @@ class MainWindow(QMainWindow):
 
     def flip_clock_alignments(self) -> None:
         """Flip alignments of top and bottom chess clocks."""
-        if Qt.AlignmentFlag.AlignTop in self._grid_layout.itemAt(0).alignment():
-            self._grid_layout.itemAt(0).setAlignment(Qt.AlignmentFlag.AlignBottom)
-            self._grid_layout.itemAt(1).setAlignment(Qt.AlignmentFlag.AlignTop)
+        if Top in self._grid_layout.itemAt(0).alignment():
+            self._grid_layout.itemAt(0).setAlignment(Bottom)
+            self._grid_layout.itemAt(1).setAlignment(Top)
         else:
-            self._grid_layout.itemAt(0).setAlignment(Qt.AlignmentFlag.AlignTop)
-            self._grid_layout.itemAt(1).setAlignment(Qt.AlignmentFlag.AlignBottom)
+            self._grid_layout.itemAt(0).setAlignment(Top)
+            self._grid_layout.itemAt(1).setAlignment(Bottom)
 
         self._grid_layout.update()
 

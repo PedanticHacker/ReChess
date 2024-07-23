@@ -109,7 +109,7 @@ class ClassicGame(QObject):
         self.arrows.clear()
 
     def play_sound_effect(self, move: Move) -> None:
-        """Play a sound effect relative to `move`."""
+        """Play a sound effect from `move`."""
         is_capture: bool = self.board.is_capture(move)
         file_name: str = "capture.wav" if is_capture else "move.wav"
         file_url: QUrl = QUrl(f"file:rechess/resources/audio/{file_name}")
@@ -148,16 +148,16 @@ class ClassicGame(QObject):
             move: Move = self.board.find_move(origin, target)
 
             if move.promotion:
-                move.promotion = self.promotion_piece_type()
+                move.promotion = self.promotion_piece()
 
             self.move_played.emit(move)
 
-    def promotion_piece_type(self) -> PieceType | None:
-        """Return a promotion piece type from promotion dialog."""
+    def promotion_piece(self) -> PieceType | None:
+        """Return a promotion piece from the promotion dialog."""
         promotion_dialog: PromotionDialog = PromotionDialog(self.board.turn)
 
         if promotion_dialog.exec() == QDialog.DialogCode.Accepted:
-            return promotion_dialog.piece_type
+            return promotion_dialog.piece
 
         return None
 

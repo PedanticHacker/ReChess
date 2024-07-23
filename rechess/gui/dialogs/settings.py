@@ -14,7 +14,7 @@ from rechess.utils import set_setting_value, setting_value
 
 
 class SettingsDialog(QDialog):
-    """The dialog for changing settings."""
+    """Dialog for editing app settings."""
 
     def __init__(self) -> None:
         super().__init__()
@@ -27,7 +27,7 @@ class SettingsDialog(QDialog):
 
         self.create_options()
         self.set_vertical_layout()
-        self.connect_events_with_handlers()
+        self.connect_signals_to_slots()
 
         self.setWindowTitle("Settings")
 
@@ -74,10 +74,9 @@ class SettingsDialog(QDialog):
         )
 
     def set_vertical_layout(self) -> None:
-        """Set vertical layout for the dialog."""
+        """Set the dialog's layout to be vertical."""
         self._button_box: QDialogButtonBox = QDialogButtonBox(
-            QDialogButtonBox.StandardButton.Ok
-            | QDialogButtonBox.StandardButton.Cancel
+            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel
         )
 
         engine_layout: QVBoxLayout = QVBoxLayout()
@@ -97,20 +96,20 @@ class SettingsDialog(QDialog):
         vertical_layout.addWidget(self._button_box)
         self.setLayout(vertical_layout)
 
-    def connect_events_with_handlers(self) -> None:
-        """Connect various events with specific handlers."""
+    def connect_signals_to_slots(self) -> None:
+        """Connect dialog signals to their respective slot methods."""
         self.accepted.connect(self.on_accepted)
         self._button_box.accepted.connect(self.accept)
         self._button_box.rejected.connect(self.reject)
 
-    def disable_groups_if(self, playing: bool) -> None:
-        """Disable engine and time control groups if `playing`."""
-        self._engine_group.setDisabled(playing)
-        self._time_control_group.setDisabled(playing)
+    def set_groups_disabled(self, disable: bool) -> None:
+        """Disable engine and time control groups if `disable` is True."""
+        self._engine_group.setDisabled(disable)
+        self._time_control_group.setDisabled(disable)
 
     @Slot()
     def on_accepted(self) -> None:
-        """Save settings on clicking the dialog's OK button."""
+        """Save settings when the dialog's OK button is clicked."""
         set_setting_value(
             section="clock",
             key="time",
