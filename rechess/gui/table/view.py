@@ -51,7 +51,7 @@ class TableView(QTableView):
             self.select_model_index(next_model_index)
 
     def select_model_index(self, model_index: QModelIndex) -> None:
-        """Select notation item with `model_index`."""
+        """Select notation item from `model_index`."""
         self.selectionModel().setCurrentIndex(
             model_index,
             QItemSelectionModel.SelectionFlag.ClearAndSelect,

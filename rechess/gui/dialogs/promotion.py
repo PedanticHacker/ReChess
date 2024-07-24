@@ -20,7 +20,7 @@ class PromotionDialog(QDialog):
         self.connect_signals_to_slots()
 
     def set_title(self) -> None:
-        """Set the dialog's title to be Pawn Promotion."""
+        """Set the dialog's title."""
         self.setWindowTitle("Pawn Promotion")
 
     def create_buttons(self) -> None:
@@ -73,22 +73,22 @@ class PromotionDialog(QDialog):
         self.knight_button.clicked.connect(self.on_knight_button_clicked)
 
     def on_queen_button_clicked(self) -> None:
-        """Set a queen to replace the promoting pawn."""
+        """Set the promotion piece to queen."""
         self._piece = QUEEN
 
     def on_rook_button_clicked(self) -> None:
-        """Set a rook to replace the promoting pawn."""
+        """Set the promotion piece to rook."""
         self._piece = ROOK
 
     def on_bishop_button_clicked(self) -> None:
-        """Set a bishop to replace the promoting pawn."""
+        """Set the promotion piece to bishop."""
         self._piece = BISHOP
 
     def on_knight_button_clicked(self) -> None:
-        """Set a knight to replace the promoting pawn."""
+        """Set the promotion piece to knight."""
         self._piece = KNIGHT
 
     @property
     def piece(self) -> PieceType:
-        """Return the selected promotion piece."""
+        """Set the promotion piece to queen."""
         return self._piece

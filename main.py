@@ -35,7 +35,7 @@ class ReChess(QApplication):
 
 
 def main() -> None:
-    """Define the main entry point."""
+    """Initialize and launch ReChess GUI app."""
     re_chess: ReChess = ReChess()
 
     main_window: MainWindow = MainWindow()

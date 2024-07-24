@@ -31,7 +31,7 @@ class SettingsDialog(QDialog):
         self.connect_signals_to_slots()
 
     def set_title(self) -> None:
-        """Set the dialog's title to be Settings."""
+        """Set the dialog's title."""
         self.setWindowTitle("Settings")
 
     def create_groups(self) -> None:
