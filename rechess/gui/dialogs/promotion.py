@@ -64,7 +64,7 @@ class PromotionDialog(QDialog):
         self.setLayout(horizontal_layout)
 
     def connect_signals_to_slots(self) -> None:
-        """Connect button signals to their respective slot methods."""
+        """Connect button signals to corresponding slot methods."""
         self.button_box.accepted.connect(self.accept)
         self.button_box.rejected.connect(self.reject)
         self.queen_button.clicked.connect(self.on_queen_button_clicked)

@@ -41,7 +41,7 @@ Top: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop
 
 
 class MainWindow(QMainWindow):
-    """App's main window containing all widgets."""
+    """Main window to contain all widgets."""
 
     def __init__(self) -> None:
         super().__init__()
@@ -233,17 +233,17 @@ class MainWindow(QMainWindow):
             self.flip_clock_alignments()
 
     def create_statusbar(self) -> None:
-        """Create the statusbar for displaying various info."""
+        """Create statusbar for displaying various info."""
         self.statusBar().addWidget(self._chess_opening_label)
         self.statusBar().addPermanentWidget(self._engine_name_label)
         self._engine_name_label.setText(self._engine.name)
 
     def set_minimum_size(self) -> None:
-        """Set the minimum size to be 1000 by 700 pixels."""
+        """Set minimum size to be 1000 by 700 pixels."""
         self.setMinimumSize(1000, 700)
 
     def switch_clock_timers(self) -> None:
-        """Activate the clock timer for a player on turn."""
+        """Activate clock timer for player on turn."""
         if self._game.is_white_on_turn():
             self._black_clock.stop_timer()
             self._white_clock.start_timer()
@@ -256,7 +256,7 @@ class MainWindow(QMainWindow):
                 self._white_clock.add_increment()
 
     def adjust_engine_buttons(self) -> None:
-        """Adjust the state of UCI chess engine's toolbar buttons."""
+        """Adjust state of UCI chess engine's toolbar buttons."""
         self.play_move_now_action.setEnabled(True)
         self.start_analysis_action.setEnabled(True)
         self.stop_analysis_action.setDisabled(True)
@@ -267,7 +267,7 @@ class MainWindow(QMainWindow):
             self.start_analysis_action.setDisabled(True)
 
     def connect_signals_to_slots(self) -> None:
-        """Connect various signals to appropriate slots."""
+        """Connect component signals to corresponding slot methods."""
         self._game.move_played.connect(self.on_move_played)
         self._engine.move_played.connect(self.on_move_played)
         self._fen_editor.validated.connect(self.on_fen_validated)
@@ -279,23 +279,23 @@ class MainWindow(QMainWindow):
         self._engine.san_variation_analyzed.connect(self.on_san_variation_analyzed)
 
     def invoke_engine(self) -> None:
-        """Invoke the loaded UCI chess engine to play a move."""
+        """Invoke loaded UCI chess engine to play move."""
         QThreadPool.globalInstance().start(self._engine.play_move)
 
     def invoke_analysis(self) -> None:
-        """Invoke the loaded UCI chess engine to start analysis."""
+        """Invoke loaded UCI chess engine to start analysis."""
         QThreadPool.globalInstance().start(self._engine.start_analysis)
 
     def show_maximized(self) -> None:
-        """Show the main window in maximized size."""
+        """Show main window in maximized size."""
         self.showMaximized()
 
     def quit(self) -> None:
-        """Trigger the main window's close event."""
+        """Trigger main window's close event."""
         self.close()
 
     def flip(self) -> None:
-        """Flip the chessboard and its related widgets."""
+        """Flip chessboard and its related widgets."""
         flipped_orientation: bool = not setting_value("board", "orientation")
         set_setting_value("board", "orientation", flipped_orientation)
 
@@ -304,11 +304,11 @@ class MainWindow(QMainWindow):
         self._svg_board.draw()
 
     def play_move_now(self) -> None:
-        """Force the loaded UCI chess engine to play a move now."""
+        """Force loaded UCI chess engine to play move now."""
         self.invoke_engine()
 
     def show_settings_dialog(self) -> None:
-        """Show the Settings dialog to edit app settings."""
+        """Show Settings dialog to edit settings."""
         self._settings_dialog.set_groups_disabled(self._game.playing)
 
         if self._settings_dialog.exec() == QDialog.DialogCode.Accepted:
@@ -316,7 +316,7 @@ class MainWindow(QMainWindow):
             self._white_clock.reset()
 
     def load_engine(self) -> None:
-        """Show the file manager to load a UCI chess engine."""
+        """Show file manager to load UCI chess engine."""
         engine_file, _ = QFileDialog.getOpenFileName(
             self,
             "File Manager",
@@ -328,7 +328,7 @@ class MainWindow(QMainWindow):
             self.start_new_engine(engine_file)
 
     def start_new_engine(self, engine_file: str) -> None:
-        """Start the new UCI chess engine from `engine_file`."""
+        """Start new UCI chess engine from `engine_file`."""
         self.stop_analysis()
         self._game.clear_arrows()
         self._engine_analysis_label.clear()
@@ -452,11 +452,11 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def closeEvent(self, event: QCloseEvent) -> None:
-        """Ask whether to quit app by closing main window."""
+        """Ask whether to quit ReChess by closing main window."""
         answer: QMessageBox.StandardButton = QMessageBox.question(
             self,
-            "Quit App",
-            "Do you want to quit the app?",
+            "Quit",
+            "Do you want to quit ReChess?",
         )
 
         if answer == answer.Yes:
@@ -493,12 +493,12 @@ class MainWindow(QMainWindow):
 
     @Slot()
     def on_fen_validated(self) -> None:
-        """Refresh the UI after FEN has been validated."""
+        """Refresh UI after FEN has been validated."""
         self.refresh_ui()
 
     @Slot(int)
     def on_item_selected(self, ply_index: int) -> None:
-        """Select notation item with `ply_index`."""
+        """Select notation item from `ply_index`."""
         if ply_index > -1:
             self._game.set_move_from(ply_index)
         else:
@@ -511,7 +511,7 @@ class MainWindow(QMainWindow):
 
     @Slot(Move)
     def on_move_played(self, move: Move) -> None:
-        """Play `move` by pushing it and refreshing the UI."""
+        """Play `move` by pushing it and refreshing UI."""
         if self._game.is_legal(move):
             self._game.delete_data_after(self._table_view.ply_index)
             self._game.push(move)

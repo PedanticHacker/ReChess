@@ -14,7 +14,7 @@ from rechess.utils import set_setting_value, setting_value
 
 
 class SettingsDialog(QDialog):
-    """Dialog for editing app settings."""
+    """Dialog for editing settings."""
 
     def __init__(self) -> None:
         super().__init__()
@@ -31,7 +31,7 @@ class SettingsDialog(QDialog):
         self.connect_signals_to_slots()
 
     def set_title(self) -> None:
-        """Set the dialog's title."""
+        """Set dialog's title."""
         self.setWindowTitle("Settings")
 
     def create_groups(self) -> None:
@@ -82,7 +82,7 @@ class SettingsDialog(QDialog):
         )
 
     def set_vertical_layout(self) -> None:
-        """Set the dialog's layout to be vertical."""
+        """Set dialog's layout to be vertical."""
         engine_layout: QVBoxLayout = QVBoxLayout()
         engine_layout.addWidget(self._engine_black_option)
         engine_layout.addWidget(self._engine_white_option)
@@ -101,7 +101,7 @@ class SettingsDialog(QDialog):
         self.setLayout(dialog_vertical_layout)
 
     def connect_signals_to_slots(self) -> None:
-        """Connect dialog signals to their respective slot methods."""
+        """Connect dialog signals to corresponding slot methods."""
         self.accepted.connect(self.on_accepted)
         self._button_box.accepted.connect(self.accept)
         self._button_box.rejected.connect(self.reject)
@@ -113,7 +113,7 @@ class SettingsDialog(QDialog):
 
     @Slot()
     def on_accepted(self) -> None:
-        """Save settings when the dialog's OK button is clicked."""
+        """Save settings on pressing dialog's Save button."""
         set_setting_value(
             section="clock",
             key="time",
