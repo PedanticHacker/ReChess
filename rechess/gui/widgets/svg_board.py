@@ -49,5 +49,5 @@ class SvgBoardWidget(QSvgWidget):
         """Select square on mouse button press."""
         x: float = event.position().x()
         y: float = event.position().y()
-        self._game.locate_square_from(x, y)
+        self._game.locate_square(x, y)
         self.draw()

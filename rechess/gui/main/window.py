@@ -498,9 +498,9 @@ class MainWindow(QMainWindow):
 
     @Slot(int)
     def on_item_selected(self, ply_index: int) -> None:
-        """Select notation item from `ply_index`."""
+        """Set move from `ply_index`."""
         if ply_index > -1:
-            self._game.set_move_from(ply_index)
+            self._game.set_move(ply_index)
         else:
             self._game.clear_arrows()
             self._game.set_root_position()

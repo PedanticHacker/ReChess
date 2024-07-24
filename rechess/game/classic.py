@@ -38,14 +38,14 @@ class ClassicGame(QObject):
 
     @property
     def king_square(self) -> Square | None:
-        """Return the square of a king in check."""
+        """Return square of king in check."""
         if self.board.is_check():
             return self.board.king(self.board.turn)
         return None
 
     @property
     def legal_moves(self) -> list[Square] | None:
-        """Return legal moves for a piece from its origin square."""
+        """Return legal moves for piece from its origin square."""
         if self.from_square == -1:
             return None
 
@@ -55,12 +55,12 @@ class ClassicGame(QObject):
 
     @property
     def playing(self) -> bool:
-        """Return True if playing a game, else False."""
+        """Return True if playing game, else False."""
         return bool(self.notation_items)
 
     @property
     def result(self) -> str:
-        """Return the current game's result."""
+        """Return current game's result."""
         result_rewordings = {
             "1/2-1/2": "Draw",
             "0-1": "Black wins",
@@ -70,7 +70,7 @@ class ClassicGame(QObject):
         return result_rewordings[self.board.result(claim_draw=True)]
 
     def set_new_game(self) -> None:
-        """Reset the current game to starting state."""
+        """Reset current game to starting state."""
         self.board.reset()
         self.arrows.clear()
         self.positions.clear()
@@ -79,12 +79,12 @@ class ClassicGame(QObject):
         self.reset_squares()
 
     def reset_squares(self) -> None:
-        """Reset a piece's origin and target squares."""
+        """Reset piece's origin and target squares."""
         self.from_square: Square = -1
         self.to_square: Square = -1
 
     def push(self, move: Move) -> None:
-        """Push `move` on the chessboard."""
+        """Push `move` on chessboard."""
         self.set_arrow(move)
         self.play_sound_effect(move)
 
@@ -95,7 +95,7 @@ class ClassicGame(QObject):
         self.positions.append(position)
 
     def set_arrow(self, move: Move) -> None:
-        """Set an arrow on the chessboard from `move`."""
+        """Set arrow on chessboard from `move`."""
         self.arrows = [
             Arrow(
                 tail=move.from_square,
@@ -105,11 +105,11 @@ class ClassicGame(QObject):
         ]
 
     def clear_arrows(self) -> None:
-        """Clear all arrows on the chessboard."""
+        """Clear all arrows on chessboard."""
         self.arrows.clear()
 
     def play_sound_effect(self, move: Move) -> None:
-        """Play a sound effect from `move`."""
+        """Play sound effect from `move`."""
         is_capture: bool = self.board.is_capture(move)
         file_name: str = "capture.wav" if is_capture else "move.wav"
         file_url: QUrl = QUrl(f"file:rechess/resources/audio/{file_name}")
@@ -120,9 +120,9 @@ class ClassicGame(QObject):
         """Set all pieces to their root position."""
         self.board = self.board.root()
 
-    def locate_square_from(self, x: float, y: float) -> None:
-        """Locate a square from `x` and `y` coordinates."""
-        file, rank = self.locate_file_and_rank_from(x, y)
+    def locate_square(self, x: float, y: float) -> None:
+        """Locate square from `x` and `y` coordinates."""
+        file, rank = self.locate_file_and_rank(x, y)
 
         if self.from_square == -1:
             self.from_square = square(file, rank)
@@ -131,8 +131,8 @@ class ClassicGame(QObject):
             self.find_move(self.from_square, self.to_square)
             self.reset_squares()
 
-    def locate_file_and_rank_from(self, x: float, y: float) -> tuple[int, int]:
-        """Locate a file and a rank from `x` and `y` coordinates."""
+    def locate_file_and_rank(self, x: float, y: float) -> tuple[int, int]:
+        """Locate file and rank from `x` and `y` coordinates."""
         if setting_value("board", "orientation") == WHITE:
             file: float = (x - 18) // 58
             rank: float = 7 - (y - 18) // 58
@@ -143,7 +143,7 @@ class ClassicGame(QObject):
         return round(file), round(rank)
 
     def find_move(self, origin: Square, target: Square) -> None:
-        """Find a legal move from `origin` and `target` squares."""
+        """Find legal move from `origin` and `target` squares."""
         with suppress(IllegalMoveError):
             move: Move = self.board.find_move(origin, target)
 
@@ -153,7 +153,7 @@ class ClassicGame(QObject):
             self.move_played.emit(move)
 
     def promotion_piece(self) -> PieceType | None:
-        """Return a promotion piece from the promotion dialog."""
+        """Return promotion piece from promotion dialog."""
         promotion_dialog: PromotionDialog = PromotionDialog(self.board.turn)
 
         if promotion_dialog.exec() == QDialog.DialogCode.Accepted:
@@ -161,8 +161,8 @@ class ClassicGame(QObject):
 
         return None
 
-    def set_move_from(self, ply_index: int) -> None:
-        """Set a move from `ply_index`."""
+    def set_move(self, ply_index: int) -> None:
+        """Set move from `ply_index`."""
         self.board = self.positions[ply_index].copy()
 
         move: Move = self.board.move_stack[ply_index]
