@@ -308,11 +308,11 @@ class MainWindow(QMainWindow):
         self.invoke_engine()
 
     def show_settings_dialog(self) -> None:
-        """Show Settings dialog to edit settings."""
+        """Show Settings dialog to edit settings and apply if saved."""
         if self._settings_dialog.exec() == QDialog.DialogCode.Accepted:
-            self.apply_settings()
+            self.apply_saved_settings()
 
-    def apply_settings(self) -> None:
+    def apply_saved_settings(self) -> None:
         pass
 
     def load_engine(self) -> None:
