@@ -317,15 +317,15 @@ class MainWindow(QMainWindow):
 
     def load_engine(self) -> None:
         """Show file manager to load UCI chess engine."""
-        engine_file, _ = QFileDialog.getOpenFileName(
+        file_path, _ = QFileDialog.getOpenFileName(
             self,
             "File Manager",
             Path.home().as_posix(),
             "UCI chess engine (*.exe)",
         )
 
-        if engine_file:
-            self.start_new_engine(engine_file)
+        if file_path:
+            self.start_new_engine(file_path)
 
     def start_new_engine(self, engine_file: str) -> None:
         """Start new UCI chess engine from `engine_file`."""
