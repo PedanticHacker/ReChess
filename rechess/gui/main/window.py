@@ -327,14 +327,14 @@ class MainWindow(QMainWindow):
         if file_path:
             self.start_new_engine(file_path)
 
-    def start_new_engine(self, engine_file: str) -> None:
-        """Start new UCI chess engine from `engine_file`."""
+    def start_new_engine(self, file_path: str) -> None:
+        """Start new UCI chess engine from `file_path`."""
         self.stop_analysis()
         self._game.clear_arrows()
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
 
-        self._engine.load(engine_file)
+        self._engine.load(file_path)
         self._engine_name_label.setText(self._engine.name)
 
         self._svg_board.draw()
