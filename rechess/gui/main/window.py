@@ -347,7 +347,7 @@ class MainWindow(QMainWindow):
 
         self._svg_board.draw()
 
-        if self._game.is_engine_on_turn():
+        if self._game.is_engine_on_turn() and not self._game.is_game_over():
             self.invoke_engine()
 
     def show_about(self) -> None:
@@ -420,7 +420,7 @@ class MainWindow(QMainWindow):
             self.offer_new_game()
             return
 
-        if self._game.is_engine_on_turn():
+        if self._game.is_engine_on_turn() and not self._game.is_game_over():
             self.invoke_engine()
 
     def offer_new_game(self) -> None:
@@ -456,7 +456,7 @@ class MainWindow(QMainWindow):
 
         self._svg_board.draw()
 
-        if self._game.is_engine_on_turn():
+        if self._game.is_engine_on_turn() and not self._game.is_game_over():
             self.invoke_engine()
 
     def closeEvent(self, event: QCloseEvent) -> None:
