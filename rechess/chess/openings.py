@@ -1,5 +1,5 @@
 def chess_openings() -> dict[str, tuple[str, str]]:
-    """Return a dictionary containing chess openings."""
+    """Return dictionary containing chess openings."""
     return {
         "rnbqkb1r/pppppppp/5n2/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 1 2": (
             "B02",

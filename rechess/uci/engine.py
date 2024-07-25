@@ -69,7 +69,7 @@ class UciEngine(QObject):
         self._analyzing = False
 
     def quit(self) -> None:
-        """Quit loaded UCI chess engine's CPU process."""
+        """Quit loaded UCI chess engine's CPU task."""
         self._loaded_engine.quit()
 
     @property

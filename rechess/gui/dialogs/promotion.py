@@ -5,7 +5,7 @@ from rechess.utils import create_button, svg_icon
 
 
 class PromotionDialog(QDialog):
-    """Dialog for selecting a pawn promotion piece."""
+    """Dialog for selecting pawn promotion piece."""
 
     def __init__(self, player_color: Color) -> None:
         super().__init__()
@@ -20,7 +20,7 @@ class PromotionDialog(QDialog):
         self.connect_signals_to_slots()
 
     def set_title(self) -> None:
-        """Set the dialog's title."""
+        """Set dialog's title."""
         self.setWindowTitle("Pawn Promotion")
 
     def create_buttons(self) -> None:
@@ -37,7 +37,7 @@ class PromotionDialog(QDialog):
             self.knight_button = create_button(svg_icon("black-knight"))
 
     def add_buttons_to_box(self) -> None:
-        """Add promotion buttons to a button box."""
+        """Add promotion buttons to button box."""
         self.button_box: QDialogButtonBox = QDialogButtonBox(self)
 
         self.button_box.addButton(
@@ -58,7 +58,7 @@ class PromotionDialog(QDialog):
         )
 
     def set_horizontal_layout(self) -> None:
-        """Set horizontal layout for the promotion buttons."""
+        """Set horizontal layout for promotion buttons."""
         horizontal_layout: QHBoxLayout = QHBoxLayout(self)
         horizontal_layout.addWidget(self.button_box)
         self.setLayout(horizontal_layout)
@@ -73,22 +73,22 @@ class PromotionDialog(QDialog):
         self.knight_button.clicked.connect(self.on_knight_button_clicked)
 
     def on_queen_button_clicked(self) -> None:
-        """Set the promotion piece to queen."""
+        """Set promotion piece to queen."""
         self._piece = QUEEN
 
     def on_rook_button_clicked(self) -> None:
-        """Set the promotion piece to rook."""
+        """Set promotion piece to rook."""
         self._piece = ROOK
 
     def on_bishop_button_clicked(self) -> None:
-        """Set the promotion piece to bishop."""
+        """Set promotion piece to bishop."""
         self._piece = BISHOP
 
     def on_knight_button_clicked(self) -> None:
-        """Set the promotion piece to knight."""
+        """Set promotion piece to knight."""
         self._piece = KNIGHT
 
     @property
     def piece(self) -> PieceType:
-        """Set the promotion piece to queen."""
+        """Return selected promotion piece."""
         return self._piece

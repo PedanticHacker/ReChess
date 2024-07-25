@@ -30,7 +30,7 @@ class ReChess(QApplication):
             sys.exit()
 
     def launch(self) -> None:
-        """Launch ReChess by executing the main loop."""
+        """Launch ReChess by executing main loop."""
         self.exec()
 
 

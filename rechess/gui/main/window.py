@@ -41,7 +41,7 @@ Top: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop
 
 
 class MainWindow(QMainWindow):
-    """Main window to contain all widgets."""
+    """Main window containing all widgets."""
 
     def __init__(self) -> None:
         super().__init__()
@@ -247,12 +247,12 @@ class MainWindow(QMainWindow):
         if self._game.is_white_on_turn():
             self._black_clock.stop_timer()
             self._white_clock.start_timer()
-            if self._game.playing:
+            if self._game.is_in_progress():
                 self._black_clock.add_increment()
         else:
             self._white_clock.stop_timer()
             self._black_clock.start_timer()
-            if self._game.playing:
+            if self._game.is_in_progress():
                 self._white_clock.add_increment()
 
     def adjust_engine_buttons(self) -> None:
@@ -261,7 +261,7 @@ class MainWindow(QMainWindow):
         self.start_analysis_action.setEnabled(True)
         self.stop_analysis_action.setDisabled(True)
 
-        if self._game.is_game_over():
+        if self._game.is_over():
             self.play_move_now_action.setDisabled(True)
             self.stop_analysis_action.setDisabled(True)
             self.start_analysis_action.setDisabled(True)
@@ -309,18 +309,18 @@ class MainWindow(QMainWindow):
 
     def show_settings_dialog(self) -> None:
         """Show Settings dialog to edit settings and apply if saved."""
-        self._settings_dialog.set_groups_disabled(self._game.playing)
+        self._settings_dialog.set_groups_disabled(self._game.is_in_progress())
 
         if self._settings_dialog.exec() == QDialog.DialogCode.Accepted:
             self.apply_saved_settings()
 
     def apply_saved_settings(self) -> None:
         """Act on settings being saved by applying them."""
-        if not self._game.playing:
+        if not self._game.is_in_progress():
             self._black_clock.reset()
             self._white_clock.reset()
 
-        if self._game.is_engine_on_turn() and not self._game.is_game_over():
+        if self._game.is_engine_on_turn() and not self._game.is_over():
             self.invoke_engine()
 
     def load_engine(self) -> None:
@@ -347,7 +347,7 @@ class MainWindow(QMainWindow):
 
         self._svg_board.draw()
 
-        if self._game.is_engine_on_turn() and not self._game.is_game_over():
+        if self._game.is_engine_on_turn() and not self._game.is_over():
             self.invoke_engine()
 
     def show_about(self) -> None:
@@ -413,18 +413,18 @@ class MainWindow(QMainWindow):
 
         self._svg_board.draw()
 
-        if self._game.is_game_over():
+        if self._game.is_over():
             self._black_clock.stop_timer()
             self._white_clock.stop_timer()
             self._notifications_label.setText(self._game.result)
             self.offer_new_game()
             return
 
-        if self._game.is_engine_on_turn() and not self._game.is_game_over():
+        if self._game.is_engine_on_turn() and not self._game.is_over():
             self.invoke_engine()
 
     def offer_new_game(self) -> None:
-        """Show dialog offering to start new game."""
+        """Show dialog offering to start new chess game."""
         answer: QMessageBox.StandardButton = QMessageBox.question(
             self,
             "New Game",
@@ -435,7 +435,7 @@ class MainWindow(QMainWindow):
             self.start_new_game()
 
     def start_new_game(self) -> None:
-        """Start new game by resetting everything."""
+        """Start new chess game by resetting everything."""
         if setting_value("board", "orientation") == BLACK:
             self.flip_clock_alignments()
 
@@ -456,7 +456,7 @@ class MainWindow(QMainWindow):
 
         self._svg_board.draw()
 
-        if self._game.is_engine_on_turn() and not self._game.is_game_over():
+        if self._game.is_engine_on_turn():
             self.invoke_engine()
 
     def closeEvent(self, event: QCloseEvent) -> None:

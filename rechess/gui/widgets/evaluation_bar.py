@@ -7,7 +7,7 @@ from rechess.utils import setting_value
 
 
 class EvaluationBarWidget(QProgressBar):
-    """Widget displaying chessboard position evaluation."""
+    """Bar widget for animating chessboard position evaluation."""
 
     def __init__(self) -> None:
         super().__init__()
@@ -27,18 +27,18 @@ class EvaluationBarWidget(QProgressBar):
         self.reset_appearance()
 
     def reset_appearance(self) -> None:
-        """Reset the bar's appearance."""
+        """Reset bar's appearance."""
         self.hide()
         self.reset()
         self.flip_appearance()
 
     def flip_appearance(self) -> None:
-        """Flip the bar's chunk appearance relative to orientation."""
+        """Flip bar's chunk appearance relative to orientation."""
         orientation: bool = setting_value("board", "orientation")
         self.setInvertedAppearance(orientation)
 
     def animate(self, evaluation: Score) -> None:
-        """Animate the bar's chunk based on `evaluation`."""
+        """Animate bar's chunk from `evaluation`."""
         if evaluation.is_mate():
             moves_to_mate: int = evaluation.mate() or 0
             is_white_matting: bool = moves_to_mate > 0

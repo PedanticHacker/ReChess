@@ -21,7 +21,7 @@ from rechess.utils import setting_value
 
 
 class ClassicGame(QObject):
-    """Rules of classic chess game."""
+    """Implementation of classic chess game."""
 
     move_played: Signal = Signal(Move)
 
@@ -54,13 +54,8 @@ class ClassicGame(QObject):
         return [legal_move.to_square for legal_move in legal_moves]
 
     @property
-    def playing(self) -> bool:
-        """Return True if playing game, else False."""
-        return bool(self.notation_items)
-
-    @property
     def result(self) -> str:
-        """Return current game's result."""
+        """Return current chess game's result."""
         result_rewordings = {
             "1/2-1/2": "Draw",
             "0-1": "Black wins",
@@ -70,7 +65,7 @@ class ClassicGame(QObject):
         return result_rewordings[self.board.result(claim_draw=True)]
 
     def set_new_game(self) -> None:
-        """Reset current game to starting state."""
+        """Reset current chess game to starting state."""
         self.board.reset()
         self.arrows.clear()
         self.positions.clear()
@@ -181,13 +176,17 @@ class ClassicGame(QObject):
         """Return True if UCI chess engine is on turn, else False."""
         return self.board.turn == setting_value("engine", "is_white")
 
-    def is_game_over(self) -> bool:
-        """Return True if chess game is over, else False."""
-        return self.board.is_game_over(claim_draw=True)
+    def is_in_progress(self) -> bool:
+        """Return True if chess game is in progress, else False."""
+        return bool(self.notation_items)
 
     def is_legal(self, move: Move) -> bool:
         """Return True if `move` is legal, else False."""
         return self.board.is_legal(move)
+
+    def is_over(self) -> bool:
+        """Return True if chess game is over, else False."""
+        return self.board.is_game_over(claim_draw=True)
 
     def is_white_on_turn(self) -> bool:
         """Return True if White is on turn, else False."""

@@ -7,7 +7,7 @@ from rechess.utils import setting_value
 
 
 class SvgBoardWidget(QSvgWidget):
-    """SVG chessboard widget with pieces."""
+    """SVG chessboard widget containing chess pieces."""
 
     svg.XX = "<circle id='xx' r='5' cx='22' cy='22' fill='lime' stroke='blue'/>"
 

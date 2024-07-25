@@ -30,7 +30,7 @@ def _optimal_hash_size() -> int:
 
 
 def _optimal_threads() -> int:
-    """Return optimal number of threads, reserving 1 for other tasks."""
+    """Return optimal threads, reserving 1 for other CPU tasks."""
     available_threads = cpu_count(logical=True)
     reserved_threads = 1
     minimum_threads = 1
@@ -38,18 +38,15 @@ def _optimal_threads() -> int:
 
 
 @overload
-def setting_value(section: BoardSection, key: BoardKey) -> bool:
-    ...
+def setting_value(section: BoardSection, key: BoardKey) -> bool: ...
 
 
 @overload
-def setting_value(section: ClockSection, key: ClockKey) -> float:
-    ...
+def setting_value(section: ClockSection, key: ClockKey) -> float: ...
 
 
 @overload
-def setting_value(section: EngineSection, key: EngineKey) -> bool:
-    ...
+def setting_value(section: EngineSection, key: EngineKey) -> bool: ...
 
 
 def setting_value(section: SettingSection, key: SettingKey) -> SettingValue:
@@ -60,18 +57,15 @@ def setting_value(section: SettingSection, key: SettingKey) -> SettingValue:
 
 
 @overload
-def set_setting_value(section: BoardSection, key: BoardKey, value: bool) -> None:
-    ...
+def set_setting_value(section: BoardSection, key: BoardKey, value: bool) -> None: ...
 
 
 @overload
-def set_setting_value(section: ClockSection, key: ClockKey, value: float) -> None:
-    ...
+def set_setting_value(section: ClockSection, key: ClockKey, value: float) -> None: ...
 
 
 @overload
-def set_setting_value(section: EngineSection, key: EngineKey, value: bool) -> None:
-    ...
+def set_setting_value(section: EngineSection, key: EngineKey, value: bool) -> None: ...
 
 
 def set_setting_value(
@@ -109,7 +103,7 @@ def create_action(
 
 
 def create_button(icon: QIcon) -> QPushButton:
-    """Create button with `icon`."""
+    """Create button from `icon`."""
     button = QPushButton()
     button.setIcon(icon)
     button.setIconSize(QSize(56, 56))
