@@ -309,11 +309,19 @@ class MainWindow(QMainWindow):
 
     def show_settings_dialog(self) -> None:
         """Show Settings dialog to edit settings and apply if saved."""
+        self._settings_dialog.set_groups_disabled(self._game.playing)
+
         if self._settings_dialog.exec() == QDialog.DialogCode.Accepted:
             self.apply_saved_settings()
 
     def apply_saved_settings(self) -> None:
-        pass
+        """Act on settings being saved by applying them."""
+        if not self._game.playing:
+            self._black_clock.reset()
+            self._white_clock.reset()
+
+        if self._game.is_engine_on_turn() and not self._game.is_game_over():
+            self.invoke_engine()
 
     def load_engine(self) -> None:
         """Show file manager to load UCI chess engine."""

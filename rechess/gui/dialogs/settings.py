@@ -106,6 +106,11 @@ class SettingsDialog(QDialog):
         self._button_box.accepted.connect(self.accept)
         self._button_box.rejected.connect(self.reject)
 
+    def set_groups_disabled(self, disable: bool) -> None:
+        """Disable engine and time control groups if `disable` is True."""
+        self._engine_group.setDisabled(disable)
+        self._time_control_group.setDisabled(disable)
+
     @Slot()
     def on_accepted(self) -> None:
         """Save settings on pressing dialog's Save button."""
