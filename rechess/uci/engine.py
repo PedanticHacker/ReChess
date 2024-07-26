@@ -55,7 +55,7 @@ class UciEngine(QObject):
                     break
 
                 if "pv" in info:
-                    pv: list[Move] = info["pv"]
+                    pv: list[Move] = info["pv"][0:40]
                     best_move: Move = pv[0]
                     san_variation: str = self._game.board.variation_san(pv)
                     white_score: Score = info["score"].white()

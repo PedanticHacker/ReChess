@@ -27,15 +27,15 @@ class EvaluationBarWidget(QProgressBar):
         self.reset_appearance()
 
     def reset_appearance(self) -> None:
-        """Reset bar's appearance."""
+        """Hide, reset bar's value, and flip bar's chunk appearance."""
         self.hide()
         self.reset()
         self.flip_appearance()
 
     def flip_appearance(self) -> None:
-        """Flip bar's chunk appearance relative to orientation."""
-        orientation: bool = setting_value("board", "orientation")
-        self.setInvertedAppearance(orientation)
+        """Flip bar's chunk appearance per chessboard orientation."""
+        board_orientation: bool = setting_value("board", "orientation")
+        self.setInvertedAppearance(board_orientation)
 
     def animate(self, evaluation: Score) -> None:
         """Animate bar's chunk from `evaluation`."""
