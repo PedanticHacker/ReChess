@@ -1,43 +1,48 @@
 QDialog {
-    font-size: 12px;
-    background: lime;
+    background-color: lime;
+}
+
+QHeaderView {
+    background-color: green;
 }
 
 QLabel {
-    font: bold;
-    font-size: 12px;
+    color: black;
 }
 
 QLineEdit {
-    font: bold;
     color: white;
-    font-size: 12px;
-    background: lime;
+    background-color: lime;
 }
 
 QMainWindow {
-    background: yellow;
+    background-color: yellow;
+}
+
+QMenu {
+    background-color: green;
+}
+
+QMenuBar {
+    background-color: green;
 }
 
 QProgressBar {
-    font: bold;
     color: lime;
-    font-size: 12px;
     text-align: center;
+    background-color: white;
 }
 
 QProgressBar::chunk {
-    background: black;
+    background-color: black;
 }
 
 QTableView {
-    font: bold;
     color: black;
-    font-size: 12px;
-    background: lime;
+    background-color: lime;
     selection-background-color: #15781b80;
 }
 
 QToolBar {
-    background: yellow;
+    background-color: green;
 }

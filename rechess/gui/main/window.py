@@ -58,9 +58,11 @@ class MainWindow(QMainWindow):
         self._table_view: TableView = TableView(self._table_model)
         self._evaluation_bar: EvaluationBarWidget = EvaluationBarWidget()
 
-        self._chess_opening_label: QLabel = QLabel()
         self._engine_name_label: QLabel = QLabel()
+        self._chess_opening_label: QLabel = QLabel()
+
         self._notifications_label: QLabel = QLabel()
+        self._notifications_label.setFixedWidth(self._table_view.width())
 
         self._engine_analysis_label: QLabel = QLabel()
         self._engine_analysis_label.setAlignment(Top)
@@ -221,7 +223,7 @@ class MainWindow(QMainWindow):
         self._grid_layout.addWidget(self._svg_board, 0, 1, 1, 1)
         self._grid_layout.addWidget(self._evaluation_bar, 0, 2, 1, 1)
         self._grid_layout.addWidget(self._table_view, 0, 3, 1, 2)
-        self._grid_layout.addWidget(self._notifications_label, 1, 3, 1, 1, Top)
+        self._grid_layout.addWidget(self._notifications_label, 1, 3, 1, 1)
         self._grid_layout.addWidget(self._fen_editor, 1, 1, 1, 1)
         self._grid_layout.addWidget(self._engine_analysis_label, 2, 1, 1, 1)
 
