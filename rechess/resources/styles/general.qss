@@ -7,28 +7,27 @@ QHeaderView {
 }
 
 QLabel {
-    color: black;
+    font-weight: bold;
 }
 
 QLineEdit {
-    color: white;
+    font-weight: bold;
     background-color: lime;
 }
 
-QMainWindow {
-    background-color: yellow;
-}
-
 QMenu {
+    font-weight: bold;
     background-color: green;
 }
 
 QMenuBar {
+    font-weight: bold;
     background-color: green;
 }
 
 QProgressBar {
     color: lime;
+    font-weight: bold;
     text-align: center;
     background-color: white;
 }
@@ -38,7 +37,7 @@ QProgressBar::chunk {
 }
 
 QTableView {
-    color: black;
+    font-weight: bold;
     background-color: lime;
     selection-background-color: #15781b80;
 }

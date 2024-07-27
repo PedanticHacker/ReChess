@@ -108,7 +108,7 @@ class MainWindow(QMainWindow):
             shortcut="Ctrl+Shift+N",
             icon=svg_icon("new-game"),
             handler=self.offer_new_game,
-            status_tip="Offers a new game.",
+            status_tip="Offers to start a new game.",
         )
         self.play_move_now_action = create_action(
             name="Play move now",

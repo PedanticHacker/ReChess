@@ -15,7 +15,6 @@ class ClockWidget(QLCDNumber):
 
         self.setFixedSize(200, 50)
         self.setStyleSheet(clock_color)
-        self.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self._timer: QTimer = QTimer(self)
         self._timer.setInterval(30)
