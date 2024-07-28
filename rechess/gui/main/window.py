@@ -17,7 +17,6 @@ from PySide6.QtWidgets import (
 )
 
 from rechess.chess import chess_openings
-from rechess.enums import ClockColor
 from rechess.game import ClassicGame
 from rechess.gui.dialogs import SettingsDialog
 from rechess.gui.table import TableModel, TableView
@@ -27,6 +26,7 @@ from rechess.gui.widgets import (
     FenEditorWidget,
     SvgBoardWidget,
 )
+from rechess.types import ClockColor
 from rechess.uci import UciEngine
 from rechess.utils import (
     create_action,
