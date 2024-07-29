@@ -11,8 +11,8 @@ from rechess.utils import engine_configuration, setting_value, stockfish
 class UciEngine(QObject):
     """UCI chess engine manager."""
 
-    move_played: Signal = Signal(Move)
     best_move_analyzed: Signal = Signal(Move)
+    move_played: Signal = Signal(Move)
     san_variation_analyzed: Signal = Signal(str)
     white_score_analyzed: Signal = Signal(Score)
 
@@ -56,13 +56,14 @@ class UciEngine(QObject):
 
                 if "pv" in info:
                     pv: list[Move] = info["pv"][0:40]
+
                     best_move: Move = pv[0]
                     san_variation: str = self._game.board.variation_san(pv)
                     white_score: Score = info["score"].white()
 
                     self.best_move_analyzed.emit(best_move)
-                    self.white_score_analyzed.emit(white_score)
                     self.san_variation_analyzed.emit(san_variation)
+                    self.white_score_analyzed.emit(white_score)
 
     def stop_analysis(self) -> None:
         """Stop analyzing current chessboard position."""

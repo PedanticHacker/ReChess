@@ -101,7 +101,7 @@ class MainWindow(QMainWindow):
             name="Load engine...",
             handler=self.load_engine,
             icon=svg_icon("load-engine"),
-            status_tip="Shows the file manager to load a UCI chess engine.",
+            status_tip="Shows the file manager to load a chess engine.",
         )
         self.new_game_action = create_action(
             name="New game",
@@ -115,7 +115,7 @@ class MainWindow(QMainWindow):
             shortcut="Ctrl+Shift+P",
             handler=self.play_move_now,
             icon=svg_icon("play-move-now"),
-            status_tip="Forces the loaded UCI chess engine to play a move now.",
+            status_tip="Forces the loaded chess engine to play a move now.",
         )
         self.settings_action = create_action(
             name="Settings...",
@@ -258,7 +258,7 @@ class MainWindow(QMainWindow):
                 self._white_clock.add_increment()
 
     def adjust_engine_buttons(self) -> None:
-        """Adjust state of UCI chess engine's toolbar buttons."""
+        """Adjust state of chess engine's toolbar buttons."""
         self.play_move_now_action.setEnabled(True)
         self.start_analysis_action.setEnabled(True)
         self.stop_analysis_action.setDisabled(True)
@@ -281,11 +281,11 @@ class MainWindow(QMainWindow):
         self._engine.san_variation_analyzed.connect(self.on_san_variation_analyzed)
 
     def invoke_engine(self) -> None:
-        """Invoke loaded UCI chess engine to play move."""
+        """Invoke loaded chess engine to play move."""
         QThreadPool.globalInstance().start(self._engine.play_move)
 
     def invoke_analysis(self) -> None:
-        """Invoke loaded UCI chess engine to start analysis."""
+        """Invoke loaded chess engine to start analysis."""
         QThreadPool.globalInstance().start(self._engine.start_analysis)
 
     def show_maximized(self) -> None:
@@ -306,7 +306,7 @@ class MainWindow(QMainWindow):
         self._svg_board.draw()
 
     def play_move_now(self) -> None:
-        """Force loaded UCI chess engine to play move now."""
+        """Force loaded chess engine to play move now."""
         self.invoke_engine()
 
     def show_settings_dialog(self) -> None:
@@ -326,19 +326,19 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def load_engine(self) -> None:
-        """Show file manager to load UCI chess engine."""
+        """Show file manager to load chess engine."""
         file_path, _ = QFileDialog.getOpenFileName(
             self,
             "File Manager",
             Path.home().as_posix(),
-            "UCI chess engine (*.exe)",
+            "Chess engine (*.exe)",
         )
 
         if file_path:
             self.start_new_engine(file_path)
 
     def start_new_engine(self, file_path: str) -> None:
-        """Start new UCI chess engine from `file_path`."""
+        """Start new chess engine from `file_path`."""
         self.stop_analysis()
         self._game.clear_arrows()
         self._engine_analysis_label.clear()
@@ -358,7 +358,7 @@ class MainWindow(QMainWindow):
             self,
             "About",
             (
-                "A GUI app for playing chess against a UCI chess engine.\n\n"
+                "A GUI app for playing chess against a chess engine.\n\n"
                 "Copyright 2024 Boštjan Mejak\n"
                 "MIT License"
             ),
@@ -487,7 +487,7 @@ class MainWindow(QMainWindow):
 
     @Slot(Move)
     def on_best_move_analyzed(self, best_move: Move) -> None:
-        """Show `best_move` from UCI chess engine analysis as arrow."""
+        """Show `best_move` from chess engine analysis as arrow."""
         self._game.set_arrow(best_move)
         self._svg_board.draw()
 
@@ -529,7 +529,7 @@ class MainWindow(QMainWindow):
 
     @Slot(str)
     def on_san_variation_analyzed(self, san_variation: str) -> None:
-        """Show `san_variation` from UCI chess engine analysis."""
+        """Show `san_variation` from chess engine analysis."""
         self._engine_analysis_label.setText(san_variation)
 
     @Slot(Score)
