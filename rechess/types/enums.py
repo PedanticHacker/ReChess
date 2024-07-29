@@ -2,7 +2,7 @@ from enum import StrEnum
 
 
 class ClockColor(StrEnum):
-    """Color enum for Black and White player's chess clock."""
+    """CSS colors enum for Black and White players' chess clocks."""
 
-    Black: str = "color: white; background: black;"
-    White: str = "color: black; background: white;"
+    Black: str = "color: white; background-color: black;"
+    White: str = "color: black; background-color: white;"
