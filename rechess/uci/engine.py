@@ -4,7 +4,7 @@ from chess import Move
 from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
 from PySide6.QtCore import QObject, Signal
 
-from rechess.game import ClassicGame
+from rechess.types import Game
 from rechess.utils import engine_configuration, setting_value, stockfish
 
 
@@ -16,10 +16,10 @@ class UciEngine(QObject):
     san_variation_analyzed: Signal = Signal(str)
     white_score_analyzed: Signal = Signal(Score)
 
-    def __init__(self, game: ClassicGame) -> None:
+    def __init__(self, game: Game) -> None:
         super().__init__()
 
-        self._game: ClassicGame = game
+        self._game: Game = game
 
         self._analyzing: bool = False
 

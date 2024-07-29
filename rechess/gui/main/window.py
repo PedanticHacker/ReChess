@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from chess import BLACK, Move
+from chess import BLACK, Board, Move
 from chess.engine import Score
 from PySide6.QtCore import Qt, QThreadPool, Slot
 from PySide6.QtGui import QCloseEvent, QWheelEvent
@@ -26,7 +26,7 @@ from rechess.gui.widgets import (
     FenEditorWidget,
     SvgBoardWidget,
 )
-from rechess.types import ClockColor
+from rechess.types import ClockColor, Engine, Game
 from rechess.uci import UciEngine
 from rechess.utils import (
     create_action,
@@ -46,8 +46,8 @@ class MainWindow(QMainWindow):
     def __init__(self) -> None:
         super().__init__()
 
-        self._game: ClassicGame = ClassicGame()
-        self._engine: UciEngine = UciEngine(self._game)
+        self._game: Game = ClassicGame(Board())
+        self._engine: Engine = UciEngine(self._game)
         self._table_model: TableModel = TableModel(self._game.notation_items)
 
         self._black_clock: ClockWidget = ClockWidget(ClockColor.Black)

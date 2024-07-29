@@ -25,22 +25,33 @@ class ClassicGame(QObject):
 
     move_played: Signal = Signal(Move)
 
-    def __init__(self) -> None:
+    def __init__(self, board: Board) -> None:
         super().__init__()
 
-        self.board: Board = Board()
-        self.arrows: list[Arrow] = []
-        self.positions: list[Board] = []
-        self.notation_items: list[str] = []
-        self.sound_effect: QSoundEffect = QSoundEffect()
+        self._board: Board = board
+
+        self._arrows: list[Arrow] = []
+        self._positions: list[Board] = []
+        self._notation_items: list[str] = []
+        self._sound_effect: QSoundEffect = QSoundEffect()
 
         self.set_new_game()
 
     @property
+    def arrows(self) -> list[Arrow]:
+        """Return arrows on chessboard."""
+        return self._arrows
+
+    @property
+    def board(self) -> Board:
+        """Return current state of chessboard."""
+        return self._board
+
+    @property
     def king_square(self) -> Square | None:
         """Return square of king in check."""
-        if self.board.is_check():
-            return self.board.king(self.board.turn)
+        if self._board.is_check():
+            return self._board.king(self._board.turn)
         return None
 
     @property
@@ -50,8 +61,13 @@ class ClassicGame(QObject):
             return None
 
         square: Square = BB_SQUARES[self.from_square]
-        legal_moves: Iterator[Move] = self.board.generate_legal_moves(square)
+        legal_moves: Iterator[Move] = self._board.generate_legal_moves(square)
         return [legal_move.to_square for legal_move in legal_moves]
+
+    @property
+    def notation_items(self) -> list[str]:
+        """Return notation items."""
+        return self._notation_items
 
     @property
     def result(self) -> str:
@@ -62,14 +78,14 @@ class ClassicGame(QObject):
             "1-0": "White wins",
             "*": "Undetermined game",
         }
-        return result_rewordings[self.board.result(claim_draw=True)]
+        return result_rewordings[self._board.result(claim_draw=True)]
 
     def set_new_game(self) -> None:
         """Reset current chess game to starting state."""
-        self.board.reset()
-        self.arrows.clear()
-        self.positions.clear()
-        self.notation_items.clear()
+        self._board.reset()
+        self._arrows.clear()
+        self._positions.clear()
+        self._notation_items.clear()
 
         self.reset_squares()
 
@@ -83,15 +99,15 @@ class ClassicGame(QObject):
         self.set_arrow(move)
         self.play_sound_effect(move)
 
-        notation_item: str = self.board.san_and_push(move)
-        self.notation_items.append(notation_item)
+        notation_item: str = self._board.san_and_push(move)
+        self._notation_items.append(notation_item)
 
-        position: Board = self.board.copy()
-        self.positions.append(position)
+        position: Board = self._board.copy()
+        self._positions.append(position)
 
     def set_arrow(self, move: Move) -> None:
         """Set arrow on chessboard from `move`."""
-        self.arrows = [
+        self._arrows = [
             Arrow(
                 tail=move.from_square,
                 head=move.to_square,
@@ -101,19 +117,19 @@ class ClassicGame(QObject):
 
     def clear_arrows(self) -> None:
         """Clear all arrows on chessboard."""
-        self.arrows.clear()
+        self._arrows.clear()
 
     def play_sound_effect(self, move: Move) -> None:
         """Play sound effect from `move`."""
-        is_capture: bool = self.board.is_capture(move)
+        is_capture: bool = self._board.is_capture(move)
         file_name: str = "capture.wav" if is_capture else "move.wav"
         file_url: QUrl = QUrl(f"file:rechess/resources/audio/{file_name}")
-        self.sound_effect.setSource(file_url)
-        self.sound_effect.play()
+        self._sound_effect.setSource(file_url)
+        self._sound_effect.play()
 
     def set_root_position(self) -> None:
         """Set all pieces to their root position."""
-        self.board = self.board.root()
+        self._board = self._board.root()
 
     def locate_square(self, x: float, y: float) -> None:
         """Locate square from `x` and `y` coordinates."""
@@ -140,7 +156,7 @@ class ClassicGame(QObject):
     def find_move(self, origin: Square, target: Square) -> None:
         """Find legal move from `origin` and `target` squares."""
         with suppress(IllegalMoveError):
-            move: Move = self.board.find_move(origin, target)
+            move: Move = self._board.find_move(origin, target)
 
             if move.promotion:
                 move.promotion = self.promotion_piece()
@@ -149,7 +165,7 @@ class ClassicGame(QObject):
 
     def promotion_piece(self) -> PieceType | None:
         """Return promotion piece from promotion dialog."""
-        promotion_dialog: PromotionDialog = PromotionDialog(self.board.turn)
+        promotion_dialog: PromotionDialog = PromotionDialog(self._board.turn)
 
         if promotion_dialog.exec() == QDialog.DialogCode.Accepted:
             return promotion_dialog.piece
@@ -158,9 +174,9 @@ class ClassicGame(QObject):
 
     def set_move(self, ply_index: int) -> None:
         """Set move from `ply_index`."""
-        self.board = self.positions[ply_index].copy()
+        self._board = self._positions[ply_index].copy()
 
-        move: Move = self.board.move_stack[ply_index]
+        move: Move = self._board.move_stack[ply_index]
         self.set_arrow(move)
 
     def delete_data_after(self, ply_index: int) -> None:
@@ -168,26 +184,26 @@ class ClassicGame(QObject):
         if ply_index < 0:
             self.set_new_game()
         else:
-            after_ply_index: slice = slice(ply_index + 1, len(self.notation_items))
-            del self.positions[after_ply_index]
-            del self.notation_items[after_ply_index]
+            after_ply_index: slice = slice(ply_index + 1, len(self._notation_items))
+            del self._positions[after_ply_index]
+            del self._notation_items[after_ply_index]
 
     def is_engine_on_turn(self) -> bool:
         """Return True if UCI chess engine is on turn, else False."""
-        return self.board.turn == setting_value("engine", "is_white")
+        return self._board.turn == setting_value("engine", "is_white")
 
     def is_in_progress(self) -> bool:
         """Return True if chess game is in progress, else False."""
-        return bool(self.notation_items)
+        return bool(self._notation_items)
 
     def is_legal(self, move: Move) -> bool:
         """Return True if `move` is legal, else False."""
-        return self.board.is_legal(move)
+        return self._board.is_legal(move)
 
     def is_over(self) -> bool:
         """Return True if chess game is over, else False."""
-        return self.board.is_game_over(claim_draw=True)
+        return self._board.is_game_over(claim_draw=True)
 
     def is_white_on_turn(self) -> bool:
         """Return True if White is on turn, else False."""
-        return self.board.turn == WHITE
+        return self._board.turn == WHITE
