@@ -4,42 +4,6 @@ from chess import Board, Move, Square
 from chess.svg import Arrow
 
 
-class Engine(Protocol):
-    """Protocol for implementing specific chess engine."""
-
-    best_move_analyzed: ClassVar  # Signal(Move)
-    move_played: ClassVar  # Signal(Move)
-    san_variation_analyzed: ClassVar  # Signal(str)
-    white_score_analyzed: ClassVar  # Signal(Score)
-
-    _game: Game
-
-    @property
-    def name(self) -> str:
-        """Return loaded chess engine's name."""
-        raise NotImplementedError("`name` property must be implemented")
-
-    def load(self, file_path: str) -> None:
-        """Load chess engine from `file_path`."""
-        raise NotImplementedError("`load` method must be implemented")
-
-    def play_move(self) -> None:
-        """Play move with loaded chess engine."""
-        raise NotImplementedError("`play_move` method must be implemented")
-
-    def start_analysis(self) -> None:
-        """Start analyzing current chessboard position."""
-        raise NotImplementedError("`start_analysis` method must be implemented")
-
-    def stop_analysis(self) -> None:
-        """Stop analyzing current chessboard position."""
-        raise NotImplementedError("`stop_analysis` method must be implemented")
-
-    def quit(self) -> None:
-        """Quit loaded chess engine's CPU task."""
-        raise NotImplementedError("`quit` method must be implemented")
-
-
 class Game(Protocol):
     """Protocol for implementing specific chess game."""
 
@@ -132,3 +96,39 @@ class Game(Protocol):
     def is_white_on_turn(self) -> bool:
         """Return True if White is on turn, else False."""
         raise NotImplementedError("`is_white_on_turn` method must be implemented")
+
+
+class Engine(Protocol):
+    """Protocol for implementing specific chess engine."""
+
+    best_move_analyzed: ClassVar  # Signal(Move)
+    move_played: ClassVar  # Signal(Move)
+    san_variation_analyzed: ClassVar  # Signal(str)
+    white_score_analyzed: ClassVar  # Signal(Score)
+
+    _game: Game
+
+    @property
+    def name(self) -> str:
+        """Return loaded chess engine's name."""
+        raise NotImplementedError("`name` property must be implemented")
+
+    def load(self, file_path: str) -> None:
+        """Load chess engine from `file_path`."""
+        raise NotImplementedError("`load` method must be implemented")
+
+    def play_move(self) -> None:
+        """Play move with loaded chess engine."""
+        raise NotImplementedError("`play_move` method must be implemented")
+
+    def start_analysis(self) -> None:
+        """Start analyzing current chessboard position."""
+        raise NotImplementedError("`start_analysis` method must be implemented")
+
+    def stop_analysis(self) -> None:
+        """Stop analyzing current chessboard position."""
+        raise NotImplementedError("`stop_analysis` method must be implemented")
+
+    def quit(self) -> None:
+        """Quit loaded chess engine's CPU task."""
+        raise NotImplementedError("`quit` method must be implemented")
