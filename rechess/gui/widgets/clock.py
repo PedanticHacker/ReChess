@@ -13,8 +13,10 @@ class ClockWidget(QLCDNumber):
     def __init__(self, clock_color: ClockColor) -> None:
         super().__init__()
 
-        self.setFixedSize(200, 50)
         self.setStyleSheet(clock_color)
+
+        self.setFixedSize(200, 50)
+        self.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self._timer: QTimer = QTimer(self)
         self._timer.setInterval(30)
