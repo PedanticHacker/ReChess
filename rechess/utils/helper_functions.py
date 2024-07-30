@@ -1,5 +1,5 @@
 import json
-from platform import system
+import platform
 from typing import Callable, Literal, overload, TypeAlias
 
 from psutil import cpu_count, virtual_memory
@@ -60,29 +60,45 @@ def setting_value(section: SettingSection, key: SettingKey) -> SettingValue:
 
 
 @overload
-def set_setting_value(section: BoardSection, key: BoardKey, value: bool) -> None:
+def set_setting_value(
+    section: BoardSection,
+    key: BoardKey,
+    value: bool,
+) -> None:
     ...
 
 
 @overload
-def set_setting_value(section: ClockSection, key: ClockKey, value: float) -> None:
+def set_setting_value(
+    section: ClockSection,
+    key: ClockKey,
+    value: float,
+) -> None:
     ...
 
 
 @overload
-def set_setting_value(section: EngineSection, key: EngineKey, value: bool) -> None:
+def set_setting_value(
+    section: EngineSection,
+    key: EngineKey,
+    value: bool,
+) -> None:
     ...
 
 
 def set_setting_value(
-    section: SettingSection, key: SettingKey, value: SettingValue
+    section: SettingSection,
+    key: SettingKey,
+    value: SettingValue,
 ) -> None:
     """Set JSON `value` to `key` for `section`."""
     with open("rechess/settings.json") as settings_file:
         settings_data = json.load(settings_file)
     settings_data[section][key] = value
 
-    with open("rechess/settings.json", mode="w", newline="\n") as settings_file:
+    with open(
+        "rechess/settings.json", mode="w", newline="\n"
+    ) as settings_file:
         json.dump(settings_data, settings_file, indent=4)
         settings_file.write("\n")
 
@@ -123,9 +139,10 @@ def engine_configuration() -> dict[str, int]:
 
 def stockfish() -> str:
     """Return file path to default Stockfish 16.1 chess engine."""
+    platform_name = platform.system().lower()
     return (
-        f"rechess/resources/engines/stockfish-16.1/{system().lower()}/"
-        f"stockfish{'.exe' if system() == 'Windows' else ''}"
+        f"rechess/resources/engines/stockfish-16.1/{platform_name}/"
+        f"stockfish{'.exe' if platform_name == "windows" else ''}"
     )
 
 
