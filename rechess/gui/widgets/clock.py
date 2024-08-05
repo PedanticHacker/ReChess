@@ -67,10 +67,10 @@ class ClockWidget(QLCDNumber):
     @Slot()
     def update_time(self) -> None:
         """Display decremented time and handle time expiration."""
-        elapsed_time: float = self._elapsed_timer.restart() / 1000.0
-        self.time -= elapsed_time
-        self.display_time()
-
-        if self.time <= 0.0:
+        if self.time > 0.0:
+            elapsed_time: float = self._elapsed_timer.restart() / 1000.0
+            self.time -= elapsed_time
+            self.display_time()
+        else:
             self._timer.stop()
             self.time_expired.emit()
