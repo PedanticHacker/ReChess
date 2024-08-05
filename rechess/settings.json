@@ -3,7 +3,7 @@
         "orientation": true
     },
     "clock": {
-        "time": 300.0,
+        "time": 60.0,
         "increment": 0.0
     },
     "engine": {
