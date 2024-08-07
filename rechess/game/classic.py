@@ -80,6 +80,11 @@ class ClassicGame(QObject):
         }
         return result_rewordings[self._board.result(claim_draw=True)]
 
+    @property
+    def turn(self) -> bool:
+        """Return current turn."""
+        return self._board.turn
+
     def set_new_game(self) -> None:
         """Reset current chess game to starting state."""
         self._board.reset()
@@ -189,7 +194,7 @@ class ClassicGame(QObject):
             del self._notation_items[after_ply_index]
 
     def is_engine_on_turn(self) -> bool:
-        """Return True if UCI chess engine is on turn, else False."""
+        """Return True if chess engine is on turn, else False."""
         return self._board.turn == setting_value("engine", "is_white")
 
     def is_in_progress(self) -> bool:

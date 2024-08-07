@@ -1,3 +1,5 @@
+from math import isclose
+
 from PySide6.QtCore import QElapsedTimer, Qt, QTimer, Slot
 from PySide6.QtWidgets import QLCDNumber
 
@@ -64,11 +66,12 @@ class ClockWidget(QLCDNumber):
 
     @Slot()
     def update_time(self) -> None:
-        """Display elapsed time and handle time expiration."""
-        if self.time > 0.0:
-            elapsed_time: float = self._elapsed_timer.restart() / 1000.0
-            self.time -= elapsed_time
-            self.display_time()
-        else:
+        """Display elapsed time and check for time expiration."""
+        elapsed_time: float = self._elapsed_timer.restart() / 1000.0
+        self.time -= elapsed_time
+        self.display_time()
+
+        if isclose(self.time, 0.0, abs_tol=0.03):
+            self.time = 0.0
             self._timer.stop()
-            self.display("LOSE")
+            self.setStyleSheet("color: red;")

@@ -115,7 +115,7 @@ class MainWindow(QMainWindow):
             shortcut="Ctrl+Shift+P",
             handler=self.play_move_now,
             icon=svg_icon("play-move-now"),
-            status_tip="Forces the loaded chess engine to play a move now.",
+            status_tip="Forces the loaded chess engine to play a move for the current turn.",
         )
         self.settings_action = create_action(
             name="Settings...",
@@ -304,7 +304,7 @@ class MainWindow(QMainWindow):
         self._svg_board.draw()
 
     def play_move_now(self) -> None:
-        """Force loaded chess engine to play move now."""
+        """Force loaded chess engine to play move for current turn."""
         self.invoke_engine()
 
     def show_settings_dialog(self) -> None:
@@ -505,6 +505,8 @@ class MainWindow(QMainWindow):
             self._chess_opening_label.clear()
 
         self.show_fen()
+        self.adjust_engine_buttons()
+
         self._svg_board.draw()
 
     @Slot(Move)

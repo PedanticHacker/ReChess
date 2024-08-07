@@ -41,6 +41,11 @@ class Game(Protocol):
         """Return current chess game's result."""
         raise NotImplementedError("`result` property must be implemented")
 
+    @property
+    def turn(self) -> bool:
+        """Return current turn."""
+        raise NotImplementedError("`turn` property must be implemented")
+
     def clear_arrows(self) -> None:
         """Clear all arrows on chessboard."""
         raise NotImplementedError("`clear_arrows` method must be implemented")
@@ -78,7 +83,7 @@ class Game(Protocol):
         raise NotImplementedError("`set_root_position` method must be implemented")
 
     def is_engine_on_turn(self) -> bool:
-        """Return True if UCI chess engine is on turn, else False."""
+        """Return True if chess engine is on turn, else False."""
         raise NotImplementedError("`is_engine_on_turn` method must be implemented")
 
     def is_in_progress(self) -> bool:
