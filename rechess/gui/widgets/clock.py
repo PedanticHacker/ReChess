@@ -1,6 +1,6 @@
 from math import isclose
 
-from PySide6.QtCore import QElapsedTimer, Qt, QTimer, Slot
+from PySide6.QtCore import QElapsedTimer, Qt, QTimer, Signal, Slot
 from PySide6.QtWidgets import QLCDNumber
 
 from rechess.types import ClockColor
@@ -9,6 +9,8 @@ from rechess.utils import setting_value
 
 class ClockWidget(QLCDNumber):
     """Chess clock widget with 30 millisecond timer accuracy."""
+
+    time_expired: Signal = Signal()
 
     def __init__(self, clock_color: ClockColor) -> None:
         super().__init__()
@@ -67,11 +69,11 @@ class ClockWidget(QLCDNumber):
     @Slot()
     def update_time(self) -> None:
         """Display elapsed time and check for time expiration."""
-        elapsed_time: float = self._elapsed_timer.restart() / 1000.0
-        self.time -= elapsed_time
-        self.display_time()
-
         if isclose(self.time, 0.0, abs_tol=0.03):
             self.time = 0.0
             self._timer.stop()
-            self.setStyleSheet("color: red;")
+            self.time_expired.emit()
+        else:
+            elapsed_time: float = self._elapsed_timer.restart() / 1000.0
+            self.time -= elapsed_time
+            self.display_time()

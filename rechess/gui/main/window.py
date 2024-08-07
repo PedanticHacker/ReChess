@@ -276,6 +276,8 @@ class MainWindow(QMainWindow):
         self._table_view.item_selected.connect(self.on_item_selected)
         self._engine.best_move_analyzed.connect(self.on_best_move_analyzed)
         self._engine.white_score_analyzed.connect(self.on_white_score_analyzed)
+        self._black_clock.time_expired.connect(self.on_black_clock_time_expired)
+        self._white_clock.time_expired.connect(self.on_white_clock_time_expired)
         self._engine.san_variation_analyzed.connect(self.on_san_variation_analyzed)
 
     def invoke_engine(self) -> None:
@@ -305,6 +307,7 @@ class MainWindow(QMainWindow):
 
     def play_move_now(self) -> None:
         """Force loaded chess engine to play move for current turn."""
+        set_setting_value("engine", "is_white", self._game.turn)
         self.invoke_engine()
 
     def show_settings_dialog(self) -> None:
@@ -488,6 +491,16 @@ class MainWindow(QMainWindow):
         """Show `best_move` from chess engine analysis as arrow."""
         self._game.set_arrow(best_move)
         self._svg_board.draw()
+
+    @Slot()
+    def on_black_clock_time_expired(self) -> None:
+        """Notify that White won as Black's clock time has expired."""
+        self._notifications_label.setText("White won on time")
+
+    @Slot()
+    def on_white_clock_time_expired(self) -> None:
+        """Notify that Black won as White's clock time has expired."""
+        self._notifications_label.setText("Black won on time")
 
     @Slot()
     def on_fen_validated(self) -> None:
