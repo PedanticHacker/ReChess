@@ -2,7 +2,7 @@
 
 ## What's this?
 
-ReChess is an app for playing chess against a UCI chess engine.
+ReChess is an app for playing chess against a chess engine.
 
 ## In what programming language is ReChess written?
 
@@ -54,12 +54,11 @@ downwards, or making a corresponding touchpad gesture, and play a game
 from whatever historic move onwards, if you like
 - play against the latest official version of the Stockfish chess engine
 - analyze a chessboard position
-- load a UCI chess engine to play against it or to analyze with it
+- load a chess engine to play against it or to analyze with it
 - flip the chessboard
-- force the loaded chess engine to make a move
-- paste a FEN record from the clipboard simply by double-clicking the
-FEN record editor and analyze that position or play a game from that
-position onwards
+- force the chess engine to play a move even if it's not on turn
+- paste a FEN from the clipboard by double-clicking the FEN editor, then
+you can analyze the chessboard position or play a game from there
 
 ## Which chess variants are supported?
 
@@ -131,8 +130,7 @@ Yes. You should have specific requirements installed.
 
 Alternatively, you can also install these three requirements with the
 *pip* package manager in your command-line interface within ReChess's
-top-level directory, but make sure Python is installed first, then
-execute this command:
+top-level directory, if Python is installed, then execute this command:
 
 ```bash
 pip install -r requirements.txt
@@ -187,7 +185,7 @@ work on the Stockfish chess engine!
 
 ReChess uses the **MIT License**.
 
-### Where can I see the license?
+### Where can I see ReChess's license?
 
 See the `LICENSE.txt` file in ReChess's top-level directory about the
 permissions, limitations, and conditions of the license.
