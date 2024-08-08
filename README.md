@@ -42,10 +42,10 @@ You get all the basic features for playing chess:
 
 - chess clocks
 - SVG chessboard
-- FEN record editor
-- table displaying chess move notation in SAN format
+- FEN editor
+- table for displaying chess move notation in SAN format
 
-## Is that it?
+### Is that it?
 
 There are also many functionalities you can utilize:
 
@@ -56,9 +56,9 @@ from whatever historic move onwards, if you like
 - analyze a chessboard position
 - load a chess engine to play against it or to analyze with it
 - flip the chessboard
-- force the chess engine to play a move even if it's not on turn
+- force the chess engine to make a move when its opponent is on turn
 - paste a FEN from the clipboard by double-clicking the FEN editor, then
-you can analyze the chessboard position or play a game from there
+analyze the chessboard position or play a game from there onwards
 
 ## Which chess variants are supported?
 
