@@ -7,7 +7,7 @@ from chess.svg import Arrow
 class Game(Protocol):
     """Protocol for implementing specific chess game."""
 
-    move_played: Any
+    move_played: Any  # ClassVar[Signal[Move]]
 
     _board: Board
 
@@ -106,10 +106,10 @@ class Game(Protocol):
 class Engine(Protocol):
     """Protocol for implementing specific chess engine."""
 
-    best_move_analyzed: Any
-    move_played: Any
-    san_variation_analyzed: Any
-    white_score_analyzed: Any
+    best_move_analyzed: Any  # ClassVar[Signal[Move]]
+    move_played: Any  # ClassVar[Signal[Move]]
+    san_variation_analyzed: Any  # ClassVar[Signal[str]]
+    white_score_analyzed: Any  # ClassVar[Signal[Score]]
 
     _game: Game
 
