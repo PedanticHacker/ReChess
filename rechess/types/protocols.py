@@ -2,7 +2,6 @@ from typing import Any, Protocol
 
 from chess import Board, Move, Square
 from chess.svg import Arrow
-from PySide6.QtCore import Signal
 
 
 class Game(Protocol):
