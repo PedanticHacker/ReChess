@@ -7,9 +7,10 @@ from .helper_functions import (
     setting_value,
     stockfish,
     svg_icon,
+    svg_piece,
 )
 
-__all__ = [
+__all__: list[str] = [
     "app_style",
     "create_action",
     "create_button",
@@ -18,4 +19,5 @@ __all__ = [
     "setting_value",
     "stockfish",
     "svg_icon",
+    "svg_piece",
 ]

@@ -1,3 +1,3 @@
 from .engine import UciEngine
 
-__all__ = ["UciEngine"]
+__all__: list[str] = ["UciEngine"]

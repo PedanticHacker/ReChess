@@ -38,18 +38,15 @@ def _optimal_threads() -> int:
 
 
 @overload
-def setting_value(section: BoardSection, key: BoardKey) -> bool:
-    ...
+def setting_value(section: BoardSection, key: BoardKey) -> bool: ...
 
 
 @overload
-def setting_value(section: ClockSection, key: ClockKey) -> float:
-    ...
+def setting_value(section: ClockSection, key: ClockKey) -> float: ...
 
 
 @overload
-def setting_value(section: EngineSection, key: EngineKey) -> bool:
-    ...
+def setting_value(section: EngineSection, key: EngineKey) -> bool: ...
 
 
 def setting_value(section: SettingSection, key: SettingKey) -> SettingValue:
@@ -60,30 +57,15 @@ def setting_value(section: SettingSection, key: SettingKey) -> SettingValue:
 
 
 @overload
-def set_setting_value(
-    section: BoardSection,
-    key: BoardKey,
-    value: bool,
-) -> None:
-    ...
+def set_setting_value(section: BoardSection, key: BoardKey, value: bool) -> None: ...
 
 
 @overload
-def set_setting_value(
-    section: ClockSection,
-    key: ClockKey,
-    value: float,
-) -> None:
-    ...
+def set_setting_value(section: ClockSection, key: ClockKey, value: float) -> None: ...
 
 
 @overload
-def set_setting_value(
-    section: EngineSection,
-    key: EngineKey,
-    value: bool,
-) -> None:
-    ...
+def set_setting_value(section: EngineSection, key: EngineKey, value: bool) -> None: ...
 
 
 def set_setting_value(
@@ -96,9 +78,7 @@ def set_setting_value(
         settings_data = json.load(settings_file)
     settings_data[section][key] = value
 
-    with open(
-        "rechess/settings.json", mode="w", newline="\n"
-    ) as settings_file:
+    with open("rechess/settings.json", mode="w", newline="\n") as settings_file:
         json.dump(settings_data, settings_file, indent=4)
         settings_file.write("\n")
 
@@ -146,6 +126,11 @@ def stockfish() -> str:
     )
 
 
-def svg_icon(file_name: str) -> QIcon:
-    """Return SVG icon from `file_name`."""
-    return QIcon(f"rechess/resources/icons/{file_name}.svg")
+def svg_icon(name: str) -> QIcon:
+    """Return SVG icon from `name`."""
+    return QIcon(f":/icons/{name}.svg")
+
+
+def svg_piece(name: str) -> QIcon:
+    """Return SVG piece from `name`."""
+    return QIcon(f":/pieces/{name}.svg")
