@@ -7,7 +7,6 @@ from .helper_functions import (
     setting_value,
     stockfish,
     svg_icon,
-    svg_piece,
 )
 
 __all__: list[str] = [
@@ -19,5 +18,4 @@ __all__: list[str] = [
     "setting_value",
     "stockfish",
     "svg_icon",
-    "svg_piece",
 ]

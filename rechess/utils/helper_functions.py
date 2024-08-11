@@ -126,11 +126,6 @@ def stockfish() -> str:
     )
 
 
-def svg_icon(name: str) -> QIcon:
-    """Return SVG icon from `name`."""
-    return QIcon(f":/icons/{name}.svg")
-
-
-def svg_piece(name: str) -> QIcon:
-    """Return SVG piece from `name`."""
-    return QIcon(f":/pieces/{name}.svg")
+def svg_icon(file_name: str) -> QIcon:
+    """Return SVG icon from `file_name`."""
+    return QIcon(f":/icons/{file_name}.svg")

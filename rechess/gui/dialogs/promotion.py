@@ -1,7 +1,7 @@
 from chess import BISHOP, Color, KNIGHT, PieceType, QUEEN, ROOK, WHITE
 from PySide6.QtWidgets import QDialog, QDialogButtonBox, QHBoxLayout
 
-from rechess.utils import create_button, svg_piece
+from rechess.utils import create_button, svg_icon
 
 
 class PromotionDialog(QDialog):
@@ -26,15 +26,15 @@ class PromotionDialog(QDialog):
     def create_buttons(self) -> None:
         """Create buttons for each promotion piece option."""
         if self._player_color == WHITE:
-            self.queen_button = create_button(svg_piece("white-queen"))
-            self.rook_button = create_button(svg_piece("white-rook"))
-            self.bishop_button = create_button(svg_piece("white-bishop"))
-            self.knight_button = create_button(svg_piece("white-knight"))
+            self.queen_button = create_button(svg_icon("white-queen"))
+            self.rook_button = create_button(svg_icon("white-rook"))
+            self.bishop_button = create_button(svg_icon("white-bishop"))
+            self.knight_button = create_button(svg_icon("white-knight"))
         else:
-            self.queen_button = create_button(svg_piece("black-queen"))
-            self.rook_button = create_button(svg_piece("black-rook"))
-            self.bishop_button = create_button(svg_piece("black-bishop"))
-            self.knight_button = create_button(svg_piece("black-knight"))
+            self.queen_button = create_button(svg_icon("black-queen"))
+            self.rook_button = create_button(svg_icon("black-rook"))
+            self.bishop_button = create_button(svg_icon("black-bishop"))
+            self.knight_button = create_button(svg_icon("black-knight"))
 
     def add_buttons_to_box(self) -> None:
         """Add promotion buttons to button box."""
