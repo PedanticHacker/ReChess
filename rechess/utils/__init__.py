@@ -1,3 +1,4 @@
+from . import icons
 from .helper_functions import (
     app_style,
     create_action,
