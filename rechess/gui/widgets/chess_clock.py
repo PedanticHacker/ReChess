@@ -7,7 +7,7 @@ from rechess.types import ClockColor
 from rechess.utils import setting_value
 
 
-class ClockWidget(QLCDNumber):
+class ChessClockWidget(QLCDNumber):
     """Chess clock widget with 30 millisecond timer accuracy."""
 
     time_expired: Signal = Signal()
