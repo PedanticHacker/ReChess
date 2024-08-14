@@ -10,7 +10,7 @@ from rechess.gui.main import MainWindow
 from rechess.utils import app_style, svg_icon
 
 
-class GuiApp(QApplication):
+class App(QApplication):
     """GUI app, locked to be launched only once."""
 
     def __init__(self) -> None:
@@ -29,18 +29,18 @@ class GuiApp(QApplication):
             sys.exit()
 
     def launch(self) -> None:
-        """Launch ReChess by executing main loop."""
+        """Launch app by executing main loop."""
         self.exec()
 
 
 def main() -> None:
-    """Initialize and launch ReChess."""
-    gui_app: GuiApp = GuiApp()
+    """Initialize and launch app."""
+    app: App = App()
 
     main_window: MainWindow = MainWindow()
     main_window.show_maximized()
 
-    gui_app.launch()
+    app.launch()
 
 
 if __name__ == "__main__":
