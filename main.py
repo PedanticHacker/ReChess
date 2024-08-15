@@ -11,7 +11,7 @@ from rechess.utils import app_style, svg_icon
 
 
 class App(QApplication):
-    """GUI app, locked to be launched only once."""
+    """Custom-styled ReChess GUI app locked to be launched only once."""
 
     def __init__(self) -> None:
         super().__init__()
@@ -29,12 +29,12 @@ class App(QApplication):
             sys.exit()
 
     def launch(self) -> None:
-        """Launch app by executing main loop."""
+        """Launch ReChess GUI app by executing main loop."""
         self.exec()
 
 
 def main() -> None:
-    """Initialize and launch app."""
+    """Initialize and launch ReChess GUI app."""
     app: App = App()
 
     main_window: MainWindow = MainWindow()
