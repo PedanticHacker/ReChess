@@ -102,7 +102,6 @@ class ClassicGame(QObject):
     def push(self, move: Move) -> None:
         """Push `move` on chessboard."""
         self.set_arrow(move)
-        self.play_sound_effect(move)
 
         notation_item: str = self._board.san_and_push(move)
         self._notation_items.append(notation_item)
@@ -183,6 +182,7 @@ class ClassicGame(QObject):
 
         move: Move = self._board.move_stack[ply_index]
         self.set_arrow(move)
+        self.play_sound_effect(move)
 
     def delete_data_after(self, ply_index: int) -> None:
         """Delete positions and notation items after `ply_index`."""
