@@ -16,7 +16,7 @@ class EvaluationBarWidget(QProgressBar):
         self._size_policy.setRetainSizeWhenHidden(True)
 
         self._animation: QPropertyAnimation = QPropertyAnimation(self, b"value")
-        self._animation.setEasingCurve(QEasingCurve.Type.InOutQuint)
+        self._animation.setEasingCurve(QEasingCurve.Type.InOutSine)
         self._animation.valueChanged.connect(self.update)
 
         self.setRange(0, 1000)
@@ -27,18 +27,17 @@ class EvaluationBarWidget(QProgressBar):
         self.reset_appearance()
 
     def reset_appearance(self) -> None:
-        """Hide, reset bar's value, and flip bar's chunk appearance."""
+        """Hide widget and flip widget's chunk appearance."""
         self.hide()
-        self.reset()
         self.flip_appearance()
 
     def flip_appearance(self) -> None:
-        """Flip bar's chunk appearance per chessboard orientation."""
+        """Flip widget's chunk appearance per chessboard orientation."""
         board_orientation: bool = setting_value("board", "orientation")
         self.setInvertedAppearance(board_orientation)
 
     def animate(self, evaluation: Score) -> None:
-        """Animate bar's chunk from `evaluation`."""
+        """Animate widget's chunk from `evaluation`."""
         if evaluation.is_mate():
             moves_to_mate: int = evaluation.mate() or 0
             is_white_matting: bool = moves_to_mate > 0
