@@ -76,9 +76,10 @@ class TableView(QTableView):
         all_rows: int = self.model().rowCount()
         next_row: int = (self.ply_index + 1) // 2
         next_column: int = (self.ply_index + 1) % 2
+        next_index: QModelIndex = self.model().index(next_row, next_column)
 
-        if next_row < all_rows:
-            return self.model().index(next_row, next_column)
+        if next_row < all_rows and next_index.data():
+            return next_index
 
         return QModelIndex()
 

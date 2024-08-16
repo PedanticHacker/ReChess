@@ -62,10 +62,6 @@ class Game(Protocol):
         """Locate square from `x` and `y` coordinates."""
         raise NotImplementedError("`locate_square` method must be implemented")
 
-    def play_sound_effect(self, move: Move) -> None:
-        """Play sound effect from `move`."""
-        raise NotImplementedError("`play_sound_effect` method must be implemented")
-
     def push(self, move: Move) -> None:
         """Push `move` on chessboard."""
         raise NotImplementedError("`push` method must be implemented")
