@@ -13,8 +13,8 @@ class UciEngine(QObject):
 
     best_move_analyzed: Signal = Signal(Move)
     move_played: Signal = Signal(Move)
-    san_variation_analyzed: Signal = Signal(str)
-    white_score_analyzed: Signal = Signal(Score)
+    score_analyzed: Signal = Signal(Score)
+    variation_analyzed: Signal = Signal(str)
 
     def __init__(self, game: Game) -> None:
         super().__init__()
@@ -58,12 +58,12 @@ class UciEngine(QObject):
                     pv: list[Move] = info["pv"][0:40]
 
                     best_move: Move = pv[0]
-                    san_variation: str = self._game.board.variation_san(pv)
-                    white_score: Score = info["score"].white()
+                    variation: str = self._game.board.variation_san(pv)
+                    score: Score = info["score"].white()
 
                     self.best_move_analyzed.emit(best_move)
-                    self.san_variation_analyzed.emit(san_variation)
-                    self.white_score_analyzed.emit(white_score)
+                    self.score_analyzed.emit(score)
+                    self.variation_analyzed.emit(variation)
 
     def stop_analysis(self) -> None:
         """Stop analyzing current chessboard position."""

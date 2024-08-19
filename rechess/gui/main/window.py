@@ -270,15 +270,17 @@ class MainWindow(QMainWindow):
 
     def connect_signals_to_slots(self) -> None:
         """Connect component signals to corresponding slot methods."""
-        self._game.move_played.connect(self.on_move_played)
         self._engine.move_played.connect(self.on_move_played)
+        self._engine.variation_analyzed.connect(self.on_variation_analyzed)
+        self._engine.best_move_analyzed.connect(self.on_best_move_analyzed)
+        self._engine.score_analyzed.connect(self.on_score_analyzed)
+
+        self._game.move_played.connect(self.on_move_played)
         self._fen_editor.validated.connect(self.on_fen_validated)
         self._table_view.item_selected.connect(self.on_item_selected)
-        self._engine.best_move_analyzed.connect(self.on_best_move_analyzed)
-        self._engine.white_score_analyzed.connect(self.on_white_score_analyzed)
+
         self._black_clock.time_expired.connect(self.on_black_clock_time_expired)
         self._white_clock.time_expired.connect(self.on_white_clock_time_expired)
-        self._engine.san_variation_analyzed.connect(self.on_san_variation_analyzed)
 
     def invoke_engine(self) -> None:
         """Invoke loaded chess engine to play move."""
@@ -531,11 +533,11 @@ class MainWindow(QMainWindow):
             self.refresh_ui()
 
     @Slot(str)
-    def on_san_variation_analyzed(self, san_variation: str) -> None:
-        """Show `san_variation` from chess engine analysis."""
-        self._engine_analysis_label.setText(san_variation)
+    def on_variation_analyzed(self, variation: str) -> None:
+        """Show `variation` from chess engine analysis."""
+        self._engine_analysis_label.setText(variation)
 
     @Slot(Score)
-    def on_white_score_analyzed(self, white_score: Score) -> None:
-        """Show chessboard position evaluation from `white_score`."""
-        self._evaluation_bar.animate(white_score)
+    def on_score_analyzed(self, score: Score) -> None:
+        """Show chessboard position evaluation from `score`."""
+        self._evaluation_bar.animate(score)

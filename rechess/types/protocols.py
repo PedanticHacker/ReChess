@@ -108,8 +108,8 @@ class Engine(Protocol):
 
     best_move_analyzed: Any  # ClassVar[Signal[Move]]
     move_played: Any  # ClassVar[Signal[Move]]
-    san_variation_analyzed: Any  # ClassVar[Signal[str]]
-    white_score_analyzed: Any  # ClassVar[Signal[Score]]
+    score_analyzed: Any  # ClassVar[Signal[Score]]
+    variation_analyzed: Any  # ClassVar[Signal[str]]
 
     _game: Game
 

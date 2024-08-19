@@ -76,4 +76,5 @@ class ChessClockWidget(QLCDNumber):
         else:
             elapsed_time: float = self._elapsed_timer.restart() / 1000.0
             self.time -= elapsed_time
-            self.display_time()
+
+        self.display_time()
