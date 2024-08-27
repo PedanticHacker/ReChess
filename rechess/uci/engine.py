@@ -1,3 +1,5 @@
+import os
+import stat
 from contextlib import suppress
 
 from chess import Move
