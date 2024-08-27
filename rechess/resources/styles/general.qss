@@ -11,6 +11,7 @@ QLabel {
 }
 
 QLineEdit {
+    font-size: 13px;
     font-weight: bold;
     background-color: lime;
 }
