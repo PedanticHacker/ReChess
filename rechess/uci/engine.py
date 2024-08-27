@@ -23,13 +23,13 @@ class UciEngine(QObject):
 
         self._analyzing: bool = False
 
-        self._loaded_engine: SimpleEngine = SimpleEngine.popen_uci(stockfish())
-        self._loaded_engine.configure(engine_configuration())
+        self.load(stockfish())
 
     def load(self, file_path: str) -> None:
         """Load UCI chess engine from `file_path`."""
         with suppress(EngineError):
-            self._loaded_engine.quit()
+            os.chmod(file_path, os.stat(file_path).st_mode | stat.S_IXUSR)
+
             self._loaded_engine = SimpleEngine.popen_uci(file_path)
             self._loaded_engine.configure(engine_configuration())
 
