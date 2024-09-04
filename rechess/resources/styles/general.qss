@@ -16,6 +16,10 @@ QLineEdit {
     background-color: lime;
 }
 
+QMainWindow {
+    background-color: grey;
+}
+
 QMenu {
     font-weight: bold;
     background-color: green;
