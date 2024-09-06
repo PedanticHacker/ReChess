@@ -401,9 +401,7 @@ class MainWindow(QMainWindow):
 
         if fen in chess_openings_storage:
             eco_code, chess_opening_name = chess_openings_storage[fen]
-            self._chess_opening_label.setText(
-                f"{eco_code}: {chess_opening_name}"
-            )
+            self._chess_opening_label.setText(f"{eco_code}: {chess_opening_name}")
 
     def refresh_ui(self) -> None:
         """Refresh current state of UI."""

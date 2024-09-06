@@ -88,7 +88,7 @@ The following screenshots show how ReChess looks.
 *Selecting a move from the chess notation table.*
 
 ![ReChess on Windows 11](link "ReChess on Windows 11")
-*Analyzing a position with the default chess engine.*
+*Analyzing a position with the default Stockfish 17 chess engine.*
 
 ![ReChess on Windows 11](link "ReChess on Windows 11")
 *Promoting a white pawn to a queen, a rook, a bishop, or a knight.*

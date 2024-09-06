@@ -118,10 +118,10 @@ def engine_configuration() -> dict[str, int]:
 
 
 def stockfish() -> str:
-    """Return file path to default Stockfish 16.1 chess engine."""
+    """Return file path to default Stockfish 17 chess engine."""
     platform_name = platform.system().lower()
     return (
-        f"rechess/resources/engines/stockfish-16.1/{platform_name}/"
+        f"rechess/resources/engines/stockfish-17/{platform_name}/"
         f"stockfish{'.exe' if platform_name == "windows" else ''}"
     )
 
