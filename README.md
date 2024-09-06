@@ -87,7 +87,7 @@ The following screenshots show how ReChess looks.
 ![ReChess on Windows 11](https://github.com/user-attachments/assets/6fcf6da5-4b36-47e7-941f-45a072d225b0 "ReChess on Windows 11")
 *Selecting a move from the chess notation table.*
 
-![ReChess on Windows 11](link "ReChess on Windows 11")
+![ReChess on Windows 11](https://github.com/user-attachments/assets/d67930c3-4a04-4f26-8ed3-8c4eb6a91e0d "ReChess on Windows 11")
 *Analyzing a position with the default Stockfish 17 chess engine.*
 
 ![ReChess on Windows 11](link "ReChess on Windows 11")
