@@ -81,7 +81,7 @@ No. Drag-and-drop functionality is not supported.
 
 The following screenshots show how ReChess looks.
 
-![ReChess on Windows 11](link "ReChess on Windows 11")
+![ReChess on Windows 11](https://github.com/user-attachments/assets/da2af218-dac0-4c47-8585-9086ab6f44fe> "ReChess on Windows 11")
 *Changing the settings.*
 
 ![ReChess on Windows 11](link "ReChess on Windows 11")
