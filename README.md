@@ -90,7 +90,7 @@ The following screenshots show how ReChess looks.
 ![ReChess on Windows 11](https://github.com/user-attachments/assets/d67930c3-4a04-4f26-8ed3-8c4eb6a91e0d "ReChess on Windows 11")
 *Analyzing a position with the default Stockfish 17 chess engine.*
 
-![ReChess on Windows 11](link "ReChess on Windows 11")
+![ReChess on Windows 11](https://github.com/user-attachments/assets/fb5c67ba-f931-49aa-b25c-5e2167d57a07 "ReChess on Windows 11")
 *Promoting a white pawn to a queen, a rook, a bishop, or a knight.*
 
 ## What's the default chess engine in ReChess?
