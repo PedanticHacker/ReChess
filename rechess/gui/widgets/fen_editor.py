@@ -17,7 +17,6 @@ class FenEditorWidget(QLineEdit):
         self.setMaxLength(90)
         self.setFixedSize(500, 20)
         self.setText(self._board.fen())
-        self.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.textEdited.connect(self.on_text_edited)
 
