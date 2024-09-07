@@ -4,7 +4,7 @@ import platform
 from typing import Callable, Literal, overload, TypeAlias
 
 from psutil import cpu_count, virtual_memory
-from PySide6.QtCore import QLockFile, QSize
+from PySide6.QtCore import QSize
 from PySide6.QtGui import QAction, QIcon
 from PySide6.QtWidgets import QApplication, QPushButton
 
@@ -119,13 +119,8 @@ def engine_configuration() -> dict[str, int]:
 
 
 def prepare_app() -> QApplication:
-    """Prepare ReChess GUI app and lock it to be launched only once."""
+    """Prepare ReChess GUI app by setting basic requirements."""
     app: QApplication = QApplication()
-    lock_file: QLockFile = QLockFile("ReChess.lock")
-
-    if not lock_file.tryLock(1):
-        sys.exit()
-
     app.setApplicationName("ReChess")
     app.setApplicationVersion("1.0")
     app.setDesktopFileName("ReChess")
