@@ -7,7 +7,7 @@ from PySide6.QtCore import QLockFile
 from PySide6.QtWidgets import QApplication
 
 from rechess.gui import MainWindow
-from rechess.utils import prepare_app
+from rechess.utils import initialize_app
 
 
 def main() -> None:
@@ -17,7 +17,7 @@ def main() -> None:
     if not lock_file.tryLock(1):
         sys.exit()
 
-    app: QApplication = prepare_app()
+    app: QApplication = initialize_app()
 
     main_window: MainWindow = MainWindow()
     main_window.show_maximized()

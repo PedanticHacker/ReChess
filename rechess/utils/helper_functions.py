@@ -117,8 +117,8 @@ def engine_configuration() -> dict[str, int]:
     return {"Hash": _optimal_hash_size(), "Threads": _optimal_threads()}
 
 
-def prepare_app() -> QApplication:
-    """Prepare ReChess GUI app by setting basic requirements."""
+def initialize_app() -> QApplication:
+    """Initialize ReChess GUI app and set some basics."""
     app: QApplication = QApplication()
     app.setApplicationName("ReChess")
     app.setApplicationVersion("1.0")
