@@ -1,4 +1,3 @@
-import sys
 import json
 import platform
 from typing import Callable, Literal, overload, TypeAlias
