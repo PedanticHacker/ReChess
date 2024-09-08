@@ -11,7 +11,7 @@ from rechess.utils import initialize_app
 
 
 def main() -> None:
-    """Prepare ReChess GUI app and lock it to be launched only once."""
+    """Initialize app and lock it to be launched only once."""
     lock_file: QLockFile = QLockFile("ReChess.lock")
 
     if not lock_file.tryLock(1):
