@@ -121,9 +121,10 @@ Yes. You should have specific requirements installed.
 
 1. Install this version of the Python programming language:
 
-    - [**Python 3.12.5**](https://www.python.org/ftp/python/3.12.5/python-3.12.5-amd64.exe)
+    - [**Python 3.12.6**](https://www.python.org/ftp/python/3.12.6/python-3.12.6-amd64.exe)
 
 2. In your command-line interface, install:
+
     - **psutil**, by executing the command `pip install psutil`
     - **PySide6**, by executing the command `pip install PySide6`
     - **python-chess**, by executing the command `pip install chess`
