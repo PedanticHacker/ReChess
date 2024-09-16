@@ -1,7 +1,6 @@
 import os
 import stat
 from contextlib import suppress
-from subprocess import CalledProcessError, run
 
 from chess import Move
 from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
@@ -30,8 +29,7 @@ class UciEngine(QObject):
 
     def load(self, file_path: str) -> None:
         """Load UCI chess engine from `file_path`."""
-        with suppress(CalledProcessError, EngineError):
-            run(["xattr", "-d", "com.apple.quarantine", file_path])
+        with suppress(EngineError):
             os.chmod(file_path, os.stat(file_path).st_mode | stat.S_IXUSR)
 
             self._loaded_engine = SimpleEngine.popen_uci(file_path)
