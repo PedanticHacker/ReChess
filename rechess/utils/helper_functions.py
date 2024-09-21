@@ -116,9 +116,13 @@ def create_button(icon: QIcon) -> QPushButton:
 
 
 def delete_quarantine_attribute(file_name) -> None:
-    """On macOS, delete quarantine attribute for `file_name`."""
+    """Delete quarantine attribute on macOS for `file_name`."""
     if platform.system() == "Darwin":
-        subprocess.run(["xattr", "-d", "com.apple.quarantine", file_name])
+        attributes = ["xattr", "-l", file_name]
+        result = subprocess.run(attributes, capture_output=True, text=True)
+
+        if "com.apple.quarantine" in result.stdout:
+            subprocess.run(["xattr", "-d", "com.apple.quarantine", file_name])
 
 
 def engine_configuration() -> dict[str, int]:
