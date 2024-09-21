@@ -1,8 +1,8 @@
 import json
 import os
-import platform
 import stat
 import subprocess
+from platform import system
 from typing import Callable, Literal, overload, TypeAlias
 
 from psutil import cpu_count, virtual_memory
@@ -38,6 +38,16 @@ def _optimal_threads() -> int:
     reserved_threads = 1
     minimum_threads = 1
     return max(minimum_threads, available_threads - reserved_threads)
+
+
+def _stockfish_file_name() -> str:
+    """Return platform-specific file name of Stockfish chess engine."""
+    return "stockfish.exe" if _system_name() == "windows" else "stockfish"
+
+
+def _system_name() -> str:
+    """Return operating system name in lowercase."""
+    return "macos" if system() == "Darwin" else system().lower()
 
 
 @overload
@@ -88,7 +98,7 @@ def set_setting_value(
 
 def app_style(file_name: str) -> str:
     """Return app style from `file_name`."""
-    with open(f"rechess/resources/styles/{file_name}.qss") as qss_file:
+    with open(f"rechess/assets/styles/{file_name}.qss") as qss_file:
         return qss_file.read()
 
 
@@ -116,12 +126,15 @@ def create_button(icon: QIcon) -> QPushButton:
 
 
 def delete_quarantine_attribute(file_name) -> None:
-    """Delete quarantine attribute on macOS for `file_name`."""
-    if platform.system() == "Darwin":
-        attributes = ["xattr", "-l", file_name]
-        result = subprocess.run(attributes, capture_output=True, text=True)
+    """Delete quarantine attribute for `file_name` on macOS."""
+    if _system_name() == "macos":
+        file_attributes = subprocess.run(
+            ["xattr", "-l", file_name],
+            capture_output=True,
+            text=True,
+        )
 
-        if "com.apple.quarantine" in result.stdout:
+        if "com.apple.quarantine" in file_attributes.stdout:
             subprocess.run(["xattr", "-d", "com.apple.quarantine", file_name])
 
 
@@ -150,10 +163,9 @@ def make_executable(file_name) -> None:
 
 def stockfish() -> str:
     """Return file path to default Stockfish 17 chess engine."""
-    platform_name = platform.system().lower()
     return (
-        f"rechess/resources/engines/stockfish-17/{platform_name}/"
-        f"stockfish{'.exe' if platform_name == "windows" else ''}"
+        f"rechess/assets/engines/stockfish-17/{_system_name()}"
+        f"/{_stockfish_file_name()}"
     )
 
 

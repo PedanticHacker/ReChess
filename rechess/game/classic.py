@@ -128,7 +128,7 @@ class ClassicGame(QObject):
         """Play sound effect from `move`."""
         is_capture: bool = self._board.is_capture(move)
         file_name: str = "capture.wav" if is_capture else "move.wav"
-        file_url: QUrl = QUrl(f"file:rechess/resources/audio/{file_name}")
+        file_url: QUrl = QUrl(f"file:rechess/assets/audio/{file_name}")
         self._sound_effect.setSource(file_url)
         self._sound_effect.play()
 
