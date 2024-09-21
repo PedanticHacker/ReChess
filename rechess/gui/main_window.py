@@ -330,24 +330,24 @@ class MainWindow(QMainWindow):
 
     def load_engine(self) -> None:
         """Show file manager to load chess engine."""
-        file_path, _ = QFileDialog.getOpenFileName(
+        file_name, _ = QFileDialog.getOpenFileName(
             self,
             "File Manager",
             Path.home().as_posix(),
             "Chess engine (*.exe)",
         )
 
-        if file_path:
-            self.start_new_engine(file_path)
+        if file_name:
+            self.start_new_engine(file_name)
 
-    def start_new_engine(self, file_path: str) -> None:
-        """Start new chess engine from `file_path`."""
+    def start_new_engine(self, file_name: str) -> None:
+        """Start new chess engine from `file_name`."""
         self.stop_analysis()
         self._game.clear_arrows()
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
 
-        self._engine.load(file_path)
+        self._engine.load(file_name)
         self._engine_name_label.setText(self._engine.name)
 
         self._svg_board.draw()

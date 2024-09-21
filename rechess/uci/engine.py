@@ -1,5 +1,3 @@
-import os
-import stat
 from contextlib import suppress
 
 from chess import Move
@@ -7,7 +5,13 @@ from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
 from PySide6.QtCore import QObject, Signal
 
 from rechess.types import Game
-from rechess.utils import engine_configuration, setting_value, stockfish
+from rechess.utils import (
+    delete_quarantine_attribute,
+    engine_configuration,
+    make_executable,
+    setting_value,
+    stockfish,
+)
 
 
 class UciEngine(QObject):
@@ -27,12 +31,13 @@ class UciEngine(QObject):
 
         self.load(stockfish())
 
-    def load(self, file_path: str) -> None:
-        """Load UCI chess engine from `file_path`."""
+    def load(self, file_name: str) -> None:
+        """Load UCI chess engine from `file_name`."""
         with suppress(EngineError):
-            os.chmod(file_path, os.stat(file_path).st_mode | stat.S_IXUSR)
+            delete_quarantine_attribute(file_name)
+            make_executable(file_name)
 
-            self._loaded_engine = SimpleEngine.popen_uci(file_path)
+            self._loaded_engine = SimpleEngine.popen_uci(file_name)
             self._loaded_engine.configure(engine_configuration())
 
     def play_move(self) -> None:

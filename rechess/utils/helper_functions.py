@@ -1,5 +1,8 @@
 import json
+import os
 import platform
+import stat
+import subprocess
 from typing import Callable, Literal, overload, TypeAlias
 
 from psutil import cpu_count, virtual_memory
@@ -112,6 +115,12 @@ def create_button(icon: QIcon) -> QPushButton:
     return button
 
 
+def delete_quarantine_attribute(file_name) -> None:
+    """On macOS, delete quarantine attribute for `file_name`."""
+    if platform.system() == "Darwin":
+        subprocess.run(["xattr", "-d", "com.apple.quarantine", file_name])
+
+
 def engine_configuration() -> dict[str, int]:
     """Return optimal configuration for UCI chess engine."""
     return {"Hash": _optimal_hash_size(), "Threads": _optimal_threads()}
@@ -128,6 +137,11 @@ def initialize_app() -> QApplication:
     app.setWindowIcon(svg_icon("logo"))
 
     return app
+
+
+def make_executable(file_name) -> None:
+    """Make `file_name` be executable."""
+    os.chmod(file_name, os.stat(file_name).st_mode | stat.S_IXUSR)
 
 
 def stockfish() -> str:
