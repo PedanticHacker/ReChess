@@ -62,6 +62,7 @@ class MainWindow(QMainWindow):
         self._chess_opening_label: QLabel = QLabel()
 
         self._notifications_label: QLabel = QLabel()
+        self._notifications_label.setObjectName("notifications")
         self._notifications_label.setFixedWidth(self._table_view.width())
 
         self._engine_analysis_label: QLabel = QLabel()
@@ -394,8 +395,8 @@ class MainWindow(QMainWindow):
         """Show FEN in FEN editor."""
         self._fen_editor.setText(self._game.board.fen())
 
-    def display_chess_opening(self) -> None:
-        """Display ECO code and chess opening name."""
+    def show_chess_opening(self) -> None:
+        """Show ECO code and chess opening name."""
         fen: str = self._game.board.fen()
         chess_openings_storage: dict[str, tuple[str, str]] = chess_openings()
 
@@ -412,9 +413,9 @@ class MainWindow(QMainWindow):
         self._evaluation_bar.reset_appearance()
 
         self.show_fen()
+        self.show_chess_opening()
         self.switch_clock_timers()
         self.adjust_engine_buttons()
-        self.display_chess_opening()
 
         self._svg_board.draw()
 
@@ -520,6 +521,7 @@ class MainWindow(QMainWindow):
             self._chess_opening_label.clear()
 
         self.show_fen()
+        self.show_chess_opening()
         self.adjust_engine_buttons()
 
         self._svg_board.draw()

@@ -11,10 +11,17 @@ QLabel {
     font-weight: bold;
 }
 
+QLabel#notifications {
+    color: black;
+    background-color: lime;
+    qproperty-alignment: "AlignCenter";
+}
+
 QLineEdit {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
     background-color: lime;
+    qproperty-alignment: "AlignCenter";
 }
 
 QMenu {

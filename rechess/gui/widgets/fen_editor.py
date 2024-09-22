@@ -22,11 +22,11 @@ class FenEditorWidget(QLineEdit):
 
     def set_red_background_color(self) -> None:
         """Set background color to red as warning indication."""
-        self.setStyleSheet("background: red;")
+        self.setStyleSheet("background-color: red;")
 
     def reset_background_color(self) -> None:
-        """Reset background color to default one."""
-        self.setStyleSheet("background: lime;")
+        """Reset background color to default lime."""
+        self.setStyleSheet("background-color: lime;")
 
     def mouseDoubleClickEvent(self, event: QMouseEvent) -> None:
         """Paste FEN from clipboard on mouse double-click."""
