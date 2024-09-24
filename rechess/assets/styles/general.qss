@@ -48,6 +48,7 @@ QProgressBar::chunk {
 
 QStatusBar {
     background-color: green;
+    color: white;
 }
 
 QTableView {
