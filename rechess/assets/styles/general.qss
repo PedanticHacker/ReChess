@@ -12,34 +12,34 @@ QLabel {
 }
 
 QLabel#notifications {
-    color: black;
     background-color: lime;
+    font-size: 12px;
     qproperty-alignment: "AlignCenter";
 }
 
 QLineEdit {
-    color: black;
+    background-color: lime;
+    color: white;
     font-size: 12px;
     font-weight: bold;
-    background-color: lime;
     qproperty-alignment: "AlignCenter";
 }
 
 QMenu {
-    font-weight: bold;
     background-color: green;
+    font-weight: bold;
 }
 
 QMenuBar {
-    font-weight: bold;
     background-color: green;
+    font-weight: bold;
 }
 
 QProgressBar {
+    background-color: white;
     color: green;
     font-weight: bold;
     text-align: center;
-    background-color: white;
 }
 
 QProgressBar::chunk {
@@ -51,8 +51,8 @@ QStatusBar {
 }
 
 QTableView {
-    font-weight: bold;
     background-color: lime;
+    font-weight: bold;
     selection-background-color: #15781b80;
 }
 
