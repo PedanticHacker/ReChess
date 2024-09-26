@@ -385,11 +385,13 @@ class MainWindow(QMainWindow):
         self._evaluation_bar.show()
         self.stop_analysis_action.setEnabled(True)
         self.start_analysis_action.setDisabled(True)
+        self._notifications_label.setText("Analyzing...")
 
     def stop_analysis(self) -> None:
         """Stop analyzing current chessboard position."""
         self._engine.stop_analysis()
         self.adjust_engine_buttons()
+        self._notifications_label.clear()
 
     def show_fen(self) -> None:
         """Show FEN in FEN editor."""
@@ -408,9 +410,11 @@ class MainWindow(QMainWindow):
         """Refresh current state of UI."""
         self._engine.stop_analysis()
         self._table_model.refresh_view()
+        self._notifications_label.clear()
         self._table_view.select_last_item()
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
+        self._fen_editor.reset_background_color()
 
         self.show_fen()
         self.show_chess_opening()
@@ -455,6 +459,7 @@ class MainWindow(QMainWindow):
         self._notifications_label.clear()
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
+        self._fen_editor.reset_background_color()
 
         self.show_fen()
         self.switch_clock_timers()
@@ -523,6 +528,7 @@ class MainWindow(QMainWindow):
         self.show_fen()
         self.show_chess_opening()
         self.adjust_engine_buttons()
+        self._notifications_label.clear()
 
         self._svg_board.draw()
 

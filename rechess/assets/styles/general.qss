@@ -25,6 +25,10 @@ QLineEdit {
     qproperty-alignment: "AlignCenter";
 }
 
+QMainWindow {
+    background-color: seagreen;
+}
+
 QMenu {
     background-color: green;
     font-weight: bold;

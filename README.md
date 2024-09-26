@@ -81,16 +81,16 @@ No. Drag-and-drop functionality is not supported.
 
 The following screenshots show how ReChess looks.
 
-![ReChess on Windows 11](https://github.com/user-attachments/assets/da2af218-dac0-4c47-8585-9086ab6f44fe "ReChess on Windows 11")
+![ReChess on Windows 11](https://github.com/user-attachments/assets/bb1c558d-44aa-48da-9cb1-13999da84bf9 "ReChess on Windows 11")
 *Changing the settings.*
 
-![ReChess on Windows 11](https://github.com/user-attachments/assets/6fcf6da5-4b36-47e7-941f-45a072d225b0 "ReChess on Windows 11")
+![ReChess on Windows 11](https://github.com/user-attachments/assets/6aff84c3-b4c1-44f9-a1e9-ac49f80e49b4 "ReChess on Windows 11")
 *Selecting a move from the chess notation table.*
 
-![ReChess on Windows 11](https://github.com/user-attachments/assets/d67930c3-4a04-4f26-8ed3-8c4eb6a91e0d "ReChess on Windows 11")
+![ReChess on Windows 11](https://github.com/user-attachments/assets/c61260a8-747f-44ad-893b-71cc509f427b "ReChess on Windows 11")
 *Analyzing a position with the default Stockfish 17 chess engine.*
 
-![ReChess on Windows 11](https://github.com/user-attachments/assets/fb5c67ba-f931-49aa-b25c-5e2167d57a07 "ReChess on Windows 11")
+![ReChess on Windows 11](https://github.com/user-attachments/assets/d92bd7e4-1ffa-4d34-912a-2bbb4d35dc03 "ReChess on Windows 11")
 *Promoting a white pawn to a queen, a rook, a bishop, or a knight.*
 
 ## What's the default chess engine in ReChess?
