@@ -286,10 +286,12 @@ class MainWindow(QMainWindow):
     def invoke_engine(self) -> None:
         """Invoke loaded chess engine to play move."""
         QThreadPool.globalInstance().start(self._engine.play_move)
+        self._notifications_label.setText("Thinking...")
 
     def invoke_analysis(self) -> None:
         """Invoke loaded chess engine to start analysis."""
         QThreadPool.globalInstance().start(self._engine.start_analysis)
+        self._notifications_label.setText("Analyzing...")
 
     def show_maximized(self) -> None:
         """Show main window in maximized size."""
@@ -344,6 +346,7 @@ class MainWindow(QMainWindow):
     def start_new_engine(self, file_name: str) -> None:
         """Start new chess engine from `file_name`."""
         self.stop_analysis()
+
         self._game.clear_arrows()
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
@@ -385,7 +388,6 @@ class MainWindow(QMainWindow):
         self._evaluation_bar.show()
         self.stop_analysis_action.setEnabled(True)
         self.start_analysis_action.setDisabled(True)
-        self._notifications_label.setText("Analyzing...")
 
     def stop_analysis(self) -> None:
         """Stop analyzing current chessboard position."""
@@ -408,9 +410,9 @@ class MainWindow(QMainWindow):
 
     def refresh_ui(self) -> None:
         """Refresh current state of UI."""
-        self._engine.stop_analysis()
+        self.stop_analysis()
+
         self._table_model.refresh_view()
-        self._notifications_label.clear()
         self._table_view.select_last_item()
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
@@ -419,7 +421,6 @@ class MainWindow(QMainWindow):
         self.show_fen()
         self.show_chess_opening()
         self.switch_clock_timers()
-        self.adjust_engine_buttons()
 
         self._svg_board.draw()
 
@@ -455,15 +456,14 @@ class MainWindow(QMainWindow):
 
         self._game.set_new_game()
         self._table_model.reset()
-        self._engine.stop_analysis()
-        self._notifications_label.clear()
+
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
         self._fen_editor.reset_background_color()
 
         self.show_fen()
+        self.stop_analysis()
         self.switch_clock_timers()
-        self.adjust_engine_buttons()
 
         self._svg_board.draw()
 
