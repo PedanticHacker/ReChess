@@ -9,7 +9,7 @@ from rechess.utils import setting_value
 class SvgBoardWidget(QSvgWidget):
     """SVG chessboard widget containing chess pieces."""
 
-    svg.XX = "<circle id='xx' r='5' cx='22' cy='22' fill='green'/>"
+    svg.XX = "<circle id='xx' r='5' cx='22' cy='22' stroke='green' fill='lime'/>"
 
     def __init__(self, game: Game) -> None:
         super().__init__()
