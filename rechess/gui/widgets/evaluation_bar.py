@@ -40,8 +40,7 @@ class EvaluationBarWidget(QProgressBar):
         """Animate widget's chunk from `evaluation`."""
         if evaluation.is_mate():
             moves_to_mate: int = evaluation.mate() or 0
-            is_white_matting: bool = moves_to_mate > 0
-            animation_value: int = 0 if is_white_matting else 1000
+            animation_value: int = 0 if moves_to_mate > 0 else 1000
             evaluation_text: str = f"M{abs(moves_to_mate)}"
         else:
             score: int = evaluation.score() or 0
