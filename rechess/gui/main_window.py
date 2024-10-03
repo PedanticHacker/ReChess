@@ -33,6 +33,7 @@ from rechess.utils import (
     svg_icon,
     set_setting_value,
     setting_value,
+    system_name,
 )
 
 
@@ -337,7 +338,7 @@ class MainWindow(QMainWindow):
             self,
             "File Manager",
             Path.home().as_posix(),
-            "Chess engine (*.exe)",
+            "Chess engine (*.exe)" if system_name() == "windows" else "",
         )
 
         if file_name:

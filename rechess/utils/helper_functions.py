@@ -42,12 +42,7 @@ def _optimal_threads() -> int:
 
 def _stockfish_file_name() -> str:
     """Return platform-specific file name of Stockfish chess engine."""
-    return "stockfish.exe" if _system_name() == "windows" else "stockfish"
-
-
-def _system_name() -> str:
-    """Return operating system name in lowercase."""
-    return "macos" if system() == "Darwin" else system().lower()
+    return "stockfish.exe" if system_name() == "windows" else "stockfish"
 
 
 @overload
@@ -127,7 +122,7 @@ def create_button(icon: QIcon) -> QPushButton:
 
 def delete_quarantine_attribute(file_name) -> None:
     """Delete quarantine attribute for `file_name` on macOS."""
-    if _system_name() == "macos":
+    if system_name() == "macos":
         file_attributes = subprocess.run(
             ["xattr", "-l", file_name],
             capture_output=True,
@@ -164,7 +159,7 @@ def make_executable(file_name) -> None:
 def stockfish() -> str:
     """Return file path to default Stockfish 17 chess engine."""
     return (
-        f"rechess/assets/engines/stockfish-17/{_system_name()}"
+        f"rechess/assets/engines/stockfish-17/{system_name()}"
         f"/{_stockfish_file_name()}"
     )
 
@@ -172,3 +167,8 @@ def stockfish() -> str:
 def svg_icon(file_name: str) -> QIcon:
     """Return SVG icon from `file_name`."""
     return QIcon(f":/icons/{file_name}.svg")
+
+
+def system_name() -> str:
+    """Return operating system name in lowercase."""
+    return "macos" if system() == "Darwin" else system().lower()
