@@ -1,14 +1,13 @@
-from typing import ClassVar, Protocol
+from typing import Any, Protocol
 
 from chess import Board, Move, Square
 from chess.svg import Arrow
-from PySide6.QtCore import Signal
 
 
 class Game(Protocol):
     """Protocol for implementing specific chess game."""
 
-    move_played: ClassVar[Signal]
+    move_played: Any
 
     _board: Board
 
@@ -107,10 +106,10 @@ class Game(Protocol):
 class Engine(Protocol):
     """Protocol for implementing specific chess engine."""
 
-    best_move_analyzed: ClassVar[Signal]
-    move_played: ClassVar[Signal]
-    score_analyzed: ClassVar[Signal]
-    variation_analyzed: ClassVar[Signal]
+    best_move_analyzed: Any
+    move_played: Any
+    score_analyzed: Any
+    variation_analyzed: Any
 
     _game: Game
 
