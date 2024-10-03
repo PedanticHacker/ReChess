@@ -121,7 +121,7 @@ Yes. You should have specific requirements installed.
 
 1. Install this version of the Python programming language:
 
-    - [**Python 3.12.6**](https://www.python.org/ftp/python/3.12.6/python-3.12.6-amd64.exe)
+    - [**Python 3.12.7**](https://www.python.org/ftp/python/3.12.7/python-3.12.7-amd64.exe)
 
 2. In your command-line interface, install:
 
