@@ -533,6 +533,9 @@ class MainWindow(QMainWindow):
 
         self._svg_board.draw()
 
+        if self._game.is_over():
+            self._notifications_label.setText(self._game.result)
+
     @Slot(Move)
     def on_move_played(self, move: Move) -> None:
         """Play `move` by pushing it and refreshing UI."""
