@@ -29,7 +29,6 @@ class SvgBoardWidget(QSvgWidget):
             "square light lastmove": "#e68f0080",
         }
 
-        self.setFixedSize(500, 500)
         self.draw()
 
     def draw(self) -> None:
