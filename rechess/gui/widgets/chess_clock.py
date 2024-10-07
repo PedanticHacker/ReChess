@@ -1,5 +1,3 @@
-from math import isclose
-
 from PySide6.QtCore import QElapsedTimer, Qt, QTimer, Signal, Slot
 from PySide6.QtWidgets import QLCDNumber
 
@@ -20,10 +18,10 @@ class ChessClockWidget(QLCDNumber):
         self.setFixedSize(200, 50)
         self.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
-        self._timer: QTimer = QTimer(self)
-        self._timer.setInterval(30)
-        self._timer.setTimerType(Qt.TimerType.PreciseTimer)
-        self._timer.timeout.connect(self.update_time)
+        self._countdown_timer: QTimer = QTimer(self)
+        self._countdown_timer.setInterval(30)
+        self._countdown_timer.setTimerType(Qt.TimerType.PreciseTimer)
+        self._countdown_timer.timeout.connect(self.update_time)
 
         self._elapsed_timer: QElapsedTimer = QElapsedTimer()
 
@@ -55,11 +53,11 @@ class ChessClockWidget(QLCDNumber):
     def start_timer(self) -> None:
         """Track elapsed time and start timer countdown."""
         self._elapsed_timer.start()
-        self._timer.start()
+        self._countdown_timer.start()
 
     def stop_timer(self) -> None:
         """Stop timer countdown."""
-        self._timer.stop()
+        self._countdown_timer.stop()
 
     def add_increment(self) -> None:
         """Add increment to time."""
@@ -69,9 +67,9 @@ class ChessClockWidget(QLCDNumber):
     @Slot()
     def update_time(self) -> None:
         """Display elapsed time and check for time expiration."""
-        if isclose(self.time, 0.0, abs_tol=0.03):
+        if self.time < 0.03:
             self.time = 0.0
-            self._timer.stop()
+            self._countdown_timer.stop()
             self.time_expired.emit()
         else:
             elapsed_time: float = self._elapsed_timer.restart() / 1000.0
