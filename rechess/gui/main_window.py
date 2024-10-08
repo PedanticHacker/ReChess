@@ -70,8 +70,6 @@ class MainWindow(QMainWindow):
         self._engine_analysis_label.setAlignment(Top)
         self._engine_analysis_label.setWordWrap(True)
 
-        self._settings_dialog: SettingsDialog = SettingsDialog()
-
         self.create_actions()
         self.create_menubar()
         self.create_toolbar()
@@ -81,6 +79,9 @@ class MainWindow(QMainWindow):
         self.switch_clock_timers()
         self.adjust_engine_buttons()
         self.connect_signals_to_slots()
+
+        if self._game.is_engine_on_turn():
+            self.invoke_engine()
 
     def create_actions(self) -> None:
         """Create actions to be used by menubar and toolbar."""
@@ -318,9 +319,10 @@ class MainWindow(QMainWindow):
 
     def show_settings_dialog(self) -> None:
         """Show Settings dialog to edit settings and apply if saved."""
-        self._settings_dialog.set_groups_disabled(self._game.is_in_progress())
+        settings_dialog: SettingsDialog = SettingsDialog()
+        settings_dialog.set_groups_disabled(self._game.is_in_progress())
 
-        if self._settings_dialog.exec() == QDialog.DialogCode.Accepted:
+        if settings_dialog.exec() == QDialog.DialogCode.Accepted:
             self.apply_saved_settings()
 
     def apply_saved_settings(self) -> None:
