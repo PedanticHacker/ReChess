@@ -2,6 +2,10 @@ QDialog {
     background-color: lime;
 }
 
+QDialog *:disabled {
+    color: gray;
+}
+
 QHeaderView {
     background-color: green;
 }
