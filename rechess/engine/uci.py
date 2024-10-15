@@ -37,6 +37,7 @@ class UciEngine(QObject):
             delete_quarantine_attribute(file_name)
             make_executable(file_name)
 
+            self.quit()
             self._loaded_engine = SimpleEngine.popen_uci(file_name)
             self._loaded_engine.configure(engine_configuration())
 
@@ -78,7 +79,8 @@ class UciEngine(QObject):
 
     def quit(self) -> None:
         """Quit loaded UCI chess engine's CPU task."""
-        self._loaded_engine.quit()
+        if hasattr(self, "_loaded_engine"):
+            self._loaded_engine.quit()
 
     @property
     def name(self) -> str:
