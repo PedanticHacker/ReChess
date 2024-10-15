@@ -59,7 +59,7 @@ QStatusBar {
 QTableView {
     background-color: limegreen;
     font-weight: bold;
-    selection-background-color: #15781b80;
+    selection-background-color: green;
 }
 
 QToolBar {
