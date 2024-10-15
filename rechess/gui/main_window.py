@@ -529,9 +529,11 @@ class MainWindow(QMainWindow):
             self._chess_opening_label.clear()
 
         self.show_fen()
+        self.stop_analysis()
         self.show_chess_opening()
-        self.adjust_engine_buttons()
         self._notifications_label.clear()
+        self._engine_analysis_label.clear()
+        self._evaluation_bar.reset_appearance()
 
         self._svg_board.draw()
 
