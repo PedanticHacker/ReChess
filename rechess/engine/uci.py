@@ -62,7 +62,7 @@ class UciEngine(QObject):
                     break
 
                 if "pv" in info:
-                    pv: list[Move] = info["pv"][0:15]
+                    pv: list[Move] = info["pv"]
 
                     best_move: Move = pv[0]
                     variation: str = self._game.board.variation_san(pv)
