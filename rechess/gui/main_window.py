@@ -153,16 +153,16 @@ class MainWindow(QMainWindow):
         """Create menubar with actions in separate menus."""
 
         # Menubar
-        menubar = self.menuBar()
+        self.menubar = self.menuBar()
 
         # General menu
-        general_menu = menubar.addMenu("General")
+        general_menu = self.menubar.addMenu("General")
 
         # Edit menu
-        edit_menu = menubar.addMenu("Edit")
+        edit_menu = self.menubar.addMenu("Edit")
 
         # Help menu
-        help_menu = menubar.addMenu("Help")
+        help_menu = self.menubar.addMenu("Help")
 
         # General menu > Load engine...
         general_menu.addAction(self.load_engine_action)
