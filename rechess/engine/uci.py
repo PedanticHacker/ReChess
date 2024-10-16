@@ -79,7 +79,7 @@ class UciEngine(QObject):
 
     def quit(self) -> None:
         """Quit loaded UCI chess engine's CPU task."""
-        if hasattr(self, "_loaded_engine"):
+        with suppress(AttributeError):
             self._loaded_engine.quit()
 
     @property
