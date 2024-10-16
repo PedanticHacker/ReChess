@@ -87,7 +87,7 @@ class MainWindow(QMainWindow):
         """Create actions to be used by menubar and toolbar."""
         self.about_action = create_action(
             name="About",
-            shortcut="Ctrl+I",
+            shortcut="F1",
             icon=svg_icon("about"),
             handler=self.show_about,
             status_tip="Shows app description, copyright, and license.",
@@ -95,12 +95,12 @@ class MainWindow(QMainWindow):
         self.flip_action = create_action(
             name="Flip",
             handler=self.flip,
+            shortcut="Ctrl+F",
             icon=svg_icon("flip"),
-            shortcut="Ctrl+Shift+F",
             status_tip="Flips the chessboard and its related widgets.",
         )
         self.load_engine_action = create_action(
-            shortcut="Ctrl+E",
+            shortcut="Ctrl+L",
             name="Load engine...",
             handler=self.load_engine,
             icon=svg_icon("load-engine"),
@@ -108,35 +108,35 @@ class MainWindow(QMainWindow):
         )
         self.new_game_action = create_action(
             name="New game",
-            shortcut="Ctrl+Shift+N",
+            shortcut="Ctrl+N",
             icon=svg_icon("new-game"),
             handler=self.offer_new_game,
             status_tip="Offers to start a new game.",
         )
         self.play_move_now_action = create_action(
+            shortcut="Ctrl+P",
             name="Play move now",
-            shortcut="Ctrl+Shift+P",
             handler=self.play_move_now,
             icon=svg_icon("play-move-now"),
             status_tip="Forces the chess engine to play on the current turn.",
         )
         self.settings_action = create_action(
+            shortcut="Ctrl+,",
             name="Settings...",
-            shortcut="Ctrl+Shift+S",
             icon=svg_icon("settings"),
             handler=self.show_settings_dialog,
             status_tip="Shows the Settings dialog to edit app settings.",
         )
         self.start_analysis_action = create_action(
+            shortcut="F3",
             name="Start analysis",
-            shortcut="Ctrl+Shift+A",
             handler=self.start_analysis,
             icon=svg_icon("start-analysis"),
             status_tip="Starts analyzing the current chessboard position.",
         )
         self.stop_analysis_action = create_action(
+            shortcut="F4",
             name="Stop analysis",
-            shortcut="Ctrl+Shift+X",
             handler=self.stop_analysis,
             icon=svg_icon("stop-analysis"),
             status_tip="Stops analyzing the current chessboard position.",
