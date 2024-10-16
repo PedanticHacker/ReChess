@@ -106,7 +106,7 @@ def create_action(
     handler: Callable,
 ) -> QAction:
     """Create action for toolbar or menubar item."""
-    action = QAction(icon, name)
+    action = QAction(icon, name, parent)
     action.setShortcut(shortcut)
     action.setStatusTip(status_tip)
     action.triggered.connect(handler)
