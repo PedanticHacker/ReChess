@@ -156,28 +156,28 @@ class MainWindow(QMainWindow):
         self.menubar = self.menuBar()
 
         # General menu
-        general_menu = self.menubar.addMenu("General")
+        self.general_menu = self.menubar.addMenu("General")
 
         # Edit menu
-        edit_menu = self.menubar.addMenu("Edit")
+        self.edit_menu = self.menubar.addMenu("Edit")
 
         # Help menu
-        help_menu = self.menubar.addMenu("Help")
+        self.help_menu = self.menubar.addMenu("Help")
 
         # General menu > Load engine...
-        general_menu.addAction(self.load_engine_action)
+        self.general_menu.addAction(self.load_engine_action)
 
         # General menu separator
-        general_menu.addSeparator()
+        self.general_menu.addSeparator()
 
         # General menu > Quit...
-        general_menu.addAction(self.quit_action)
+        self.general_menu.addAction(self.quit_action)
 
         # Edit menu > Settings...
-        edit_menu.addAction(self.settings_action)
+        self.edit_menu.addAction(self.settings_action)
 
         # Help menu > About
-        help_menu.addAction(self.about_action)
+        self.help_menu.addAction(self.about_action)
 
     def create_toolbar(self) -> None:
         """Create toolbar with buttons in separate areas."""
