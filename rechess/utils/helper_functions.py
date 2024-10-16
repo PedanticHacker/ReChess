@@ -6,7 +6,7 @@ from platform import system
 from typing import Callable, Literal, overload, TypeAlias
 
 from psutil import cpu_count, virtual_memory
-from PySide6.QtCore import QSize
+from PySide6.QtCore import QObject, QSize
 from PySide6.QtGui import QAction, QIcon
 from PySide6.QtWidgets import QApplication, QPushButton
 
@@ -101,6 +101,7 @@ def create_action(
     name: str,
     icon: QIcon,
     shortcut: str,
+    parent: QObject,
     status_tip: str,
     handler: Callable,
 ) -> QAction:
