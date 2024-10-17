@@ -86,7 +86,6 @@ class MainWindow(QMainWindow):
     def create_actions(self) -> None:
         """Create actions to be used by menubar and toolbar."""
         self.about_action = create_action(
-            parent=self,
             name="About",
             shortcut="F1",
             icon=svg_icon("about"),
@@ -95,14 +94,12 @@ class MainWindow(QMainWindow):
         )
         self.flip_action = create_action(
             name="Flip",
-            parent=self,
             handler=self.flip,
             shortcut="Ctrl+F",
             icon=svg_icon("flip"),
             status_tip="Flips the chessboard and its related widgets.",
         )
         self.load_engine_action = create_action(
-            parent=self,
             shortcut="Ctrl+L",
             name="Load engine...",
             handler=self.load_engine,
@@ -110,7 +107,6 @@ class MainWindow(QMainWindow):
             status_tip="Shows the file manager to load a chess engine.",
         )
         self.new_game_action = create_action(
-            parent=self,
             name="New game",
             shortcut="Ctrl+N",
             icon=svg_icon("new-game"),
@@ -118,7 +114,6 @@ class MainWindow(QMainWindow):
             status_tip="Offers to start a new game.",
         )
         self.play_move_now_action = create_action(
-            parent=self,
             shortcut="Ctrl+P",
             name="Play move now",
             handler=self.play_move_now,
@@ -126,7 +121,6 @@ class MainWindow(QMainWindow):
             status_tip="Forces the chess engine to play on the current turn.",
         )
         self.settings_action = create_action(
-            parent=self,
             shortcut="Ctrl+,",
             name="Settings...",
             icon=svg_icon("settings"),
@@ -134,7 +128,6 @@ class MainWindow(QMainWindow):
             status_tip="Shows the Settings dialog to edit app settings.",
         )
         self.start_analysis_action = create_action(
-            parent=self,
             shortcut="F3",
             name="Start analysis",
             handler=self.start_analysis,
@@ -142,7 +135,6 @@ class MainWindow(QMainWindow):
             status_tip="Starts analyzing the current chessboard position.",
         )
         self.stop_analysis_action = create_action(
-            parent=self,
             shortcut="F4",
             name="Stop analysis",
             handler=self.stop_analysis,
@@ -150,7 +142,6 @@ class MainWindow(QMainWindow):
             status_tip="Stops analyzing the current chessboard position.",
         )
         self.quit_action = create_action(
-            parent=self,
             name="Quit...",
             handler=self.quit,
             shortcut="Ctrl+Q",
@@ -162,31 +153,31 @@ class MainWindow(QMainWindow):
         """Create menubar with actions in separate menus."""
 
         # Menubar
-        self.menubar = self.menuBar()
+        menubar = self.menuBar()
 
         # General menu
-        self.general_menu = self.menubar.addMenu("General")
+        general_menu = menubar.addMenu("General")
 
         # Edit menu
-        self.edit_menu = self.menubar.addMenu("Edit")
+        edit_menu = menubar.addMenu("Edit")
 
         # Help menu
-        self.help_menu = self.menubar.addMenu("Help")
+        help_menu = menubar.addMenu("Help")
 
         # General menu > Load engine...
-        self.general_menu.addAction(self.load_engine_action)
+        general_menu.addAction(self.load_engine_action)
 
         # General menu separator
-        self.general_menu.addSeparator()
+        general_menu.addSeparator()
 
         # General menu > Quit...
-        self.general_menu.addAction(self.quit_action)
+        general_menu.addAction(self.quit_action)
 
         # Edit menu > Settings...
-        self.edit_menu.addAction(self.settings_action)
+        edit_menu.addAction(self.settings_action)
 
         # Help menu > About
-        self.help_menu.addAction(self.about_action)
+        help_menu.addAction(self.about_action)
 
     def create_toolbar(self) -> None:
         """Create toolbar with buttons in separate areas."""
