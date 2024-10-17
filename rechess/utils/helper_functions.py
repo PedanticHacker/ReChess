@@ -141,14 +141,13 @@ def engine_configuration() -> dict[str, int]:
 def initialize_app() -> QApplication:
     """Initialize ReChess GUI app and set some basics."""
     app: QApplication = QApplication()
+    app.setApplicationDisplayName("ReChess")
     app.setApplicationName("ReChess")
     app.setApplicationVersion("1.0")
     app.setDesktopFileName("ReChess")
-    app.setApplicationDisplayName("ReChess")
     app.setStyle("fusion")
     app.setStyleSheet(app_style("general"))
     app.setWindowIcon(svg_icon("logo"))
-
     return app
 
 
