@@ -1,5 +1,5 @@
 from chess import BISHOP, Color, KNIGHT, PieceType, QUEEN, ROOK, WHITE
-from PySide6.QtWidgets import QDialog, QDialogButtonBox, QHBoxLayout
+from PySide6.QtWidgets import QDialog, QHBoxLayout
 
 from rechess.utils import create_button, svg_icon
 
@@ -15,7 +15,6 @@ class PromotionDialog(QDialog):
 
         self.set_title()
         self.create_buttons()
-        self.add_buttons_to_box()
         self.set_horizontal_layout()
         self.connect_signals_to_slots()
 
@@ -36,37 +35,18 @@ class PromotionDialog(QDialog):
             self.bishop_button = create_button(svg_icon("black-bishop"))
             self.knight_button = create_button(svg_icon("black-knight"))
 
-    def add_buttons_to_box(self) -> None:
-        """Add promotion buttons to button box."""
-        self.button_box: QDialogButtonBox = QDialogButtonBox(self)
-
-        self.button_box.addButton(
-            self.queen_button,
-            QDialogButtonBox.ButtonRole.AcceptRole,
-        )
-        self.button_box.addButton(
-            self.rook_button,
-            QDialogButtonBox.ButtonRole.AcceptRole,
-        )
-        self.button_box.addButton(
-            self.bishop_button,
-            QDialogButtonBox.ButtonRole.AcceptRole,
-        )
-        self.button_box.addButton(
-            self.knight_button,
-            QDialogButtonBox.ButtonRole.AcceptRole,
-        )
-
     def set_horizontal_layout(self) -> None:
         """Set horizontal layout for promotion buttons."""
-        horizontal_layout: QHBoxLayout = QHBoxLayout(self)
-        horizontal_layout.addWidget(self.button_box)
-        self.setLayout(horizontal_layout)
+        layout: QHBoxLayout = QHBoxLayout()
+        layout.addWidget(self.queen_button)
+        layout.addWidget(self.rook_button)
+        layout.addWidget(self.bishop_button)
+        layout.addWidget(self.knight_button)
+
+        self.setLayout(layout)
 
     def connect_signals_to_slots(self) -> None:
         """Connect button signals to corresponding slot methods."""
-        self.button_box.accepted.connect(self.accept)
-        self.button_box.rejected.connect(self.reject)
         self.queen_button.clicked.connect(self.on_queen_button_clicked)
         self.rook_button.clicked.connect(self.on_rook_button_clicked)
         self.bishop_button.clicked.connect(self.on_bishop_button_clicked)
@@ -75,18 +55,22 @@ class PromotionDialog(QDialog):
     def on_queen_button_clicked(self) -> None:
         """Set promotion piece to queen."""
         self._piece = QUEEN
+        self.accept()
 
     def on_rook_button_clicked(self) -> None:
         """Set promotion piece to rook."""
         self._piece = ROOK
+        self.accept()
 
     def on_bishop_button_clicked(self) -> None:
         """Set promotion piece to bishop."""
         self._piece = BISHOP
+        self.accept()
 
     def on_knight_button_clicked(self) -> None:
         """Set promotion piece to knight."""
         self._piece = KNIGHT
+        self.accept()
 
     @property
     def piece(self) -> PieceType:
