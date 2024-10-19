@@ -18,7 +18,7 @@ from PySide6.QtWidgets import (
 
 from rechess.engine import UciEngine
 from rechess.enums import ClockColor
-from rechess.game import ClassicGame
+from rechess.game import StandardGame
 from rechess.gui.dialogs import SettingsDialog
 from rechess.gui.table import TableModel, TableView
 from rechess.gui.widgets import (
@@ -47,7 +47,7 @@ class MainWindow(QMainWindow):
     def __init__(self) -> None:
         super().__init__()
 
-        self._game: ClassicGame = ClassicGame(Board())
+        self._game: StandardGame = StandardGame(Board())
         self._engine: UciEngine = UciEngine(self._game)
         self._table_model: TableModel = TableModel(self._game.notation_items)
 

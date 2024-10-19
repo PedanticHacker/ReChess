@@ -2,7 +2,7 @@
 
 ## What's this?
 
-ReChess is an app for playing chess against a chess engine.
+ReChess is an app for playing standard chess against a chess engine.
 
 ## In what programming language is ReChess written?
 
@@ -113,7 +113,7 @@ then you're in luck.
 ### Can I do a chessboard position analysis?
 
 Yes. You can analyze a chessboard position with the default chess engine
-or the one you load yourself.
+or a UCI chess engine you load yourself.
 
 ## Are there any requirements I must have for ReChess?
 
@@ -142,10 +142,10 @@ pip install -r requirements.txt
 After installing ReChess's requirements, launch your favorite IDE (e.g.,
 PyCharm, VSCode, Wing, Spyder, etc.) or your favorite source-code editor
 (e.g., Sublime Text, Notepad++, UltraEdit, Atom, etc.), then run the
-`main.py` file found in ReChess's top-level directory.
+`main.py` file found in ReChess's top-level folder/directory.
 
 Alternatively, you can also execute this command in your command-line
-interface within ReChess's top-level directory:
+interface within ReChess's top-level folder/directory:
 
 ```bash
 python main.py
@@ -203,5 +203,5 @@ Copyright 2024 Boštjan Mejak
 Copyright 2024 John Doe
 ```
 
-On the second line, update your app's release year and your legal first
-and last name.
+On the second line, write the actual year of your app's release and your
+legal first and last name.

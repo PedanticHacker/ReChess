@@ -1,3 +1,3 @@
-from .classic import ClassicGame
+from .standard import StandardGame
 
-__all__: list[str] = ["ClassicGame"]
+__all__: list[str] = ["StandardGame"]

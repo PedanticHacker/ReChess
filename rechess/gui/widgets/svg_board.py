@@ -2,7 +2,7 @@ from chess import svg
 from PySide6.QtGui import QMouseEvent
 from PySide6.QtSvgWidgets import QSvgWidget
 
-from rechess.game import ClassicGame
+from rechess.game import StandardGame
 from rechess.utils import setting_value
 
 
@@ -11,10 +11,10 @@ class SvgBoardWidget(QSvgWidget):
 
     svg.XX = "<circle id='xx' r='5' cx='22' cy='22' stroke='green' fill='lime'/>"
 
-    def __init__(self, game: ClassicGame) -> None:
+    def __init__(self, game: StandardGame) -> None:
         super().__init__()
 
-        self._game: ClassicGame = game
+        self._game: StandardGame = game
 
         self._colors: dict[str, str] = {
             "coord": "white",
