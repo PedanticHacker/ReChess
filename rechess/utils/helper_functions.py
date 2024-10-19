@@ -1,8 +1,8 @@
 import json
 import os
+import platform
 import stat
 import subprocess
-from platform import system
 from typing import Callable, Literal, overload, TypeAlias
 
 from psutil import cpu_count, virtual_memory
@@ -171,4 +171,5 @@ def svg_icon(file_name: str) -> QIcon:
 
 def system_name() -> str:
     """Return operating system name in lowercase."""
-    return "macos" if system() == "Darwin" else system().lower()
+    operating_system = platform.system().lower()
+    return "macos" if operating_system == "darwin" else operating_system
