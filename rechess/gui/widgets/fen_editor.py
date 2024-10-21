@@ -21,7 +21,7 @@ class FenEditorWidget(QLineEdit):
         self.textEdited.connect(self.on_text_edited)
 
     def set_red_background_color(self) -> None:
-        """Set background color to red as warning indication."""
+        """Set background color to red as warning."""
         self.setStyleSheet("background-color: red;")
 
     def reset_background_color(self) -> None:
