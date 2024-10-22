@@ -86,11 +86,11 @@ class MainWindow(QMainWindow):
     def create_actions(self) -> None:
         """Create actions to be used by menubar and toolbar."""
         self.about_action = create_action(
-            name="About",
             shortcut="F1",
+            name="About ReChess",
             icon=svg_icon("about"),
             handler=self.show_about,
-            status_tip="Shows app description, copyright, and license.",
+            status_tip="Shows info about ReChess, copyright, and license.",
         )
         self.flip_action = create_action(
             name="Flip",
@@ -104,14 +104,14 @@ class MainWindow(QMainWindow):
             name="Load engine...",
             handler=self.load_engine,
             icon=svg_icon("load-engine"),
-            status_tip="Shows the file manager to load a chess engine.",
+            status_tip="Shows the file manager to load a UCI chess engine.",
         )
         self.new_game_action = create_action(
             name="New game",
             shortcut="Ctrl+N",
             icon=svg_icon("new-game"),
             handler=self.offer_new_game,
-            status_tip="Offers to start a new game.",
+            status_tip="Shows a dialog offering to start a new chess game.",
         )
         self.play_move_now_action = create_action(
             shortcut="Ctrl+P",
@@ -146,7 +146,7 @@ class MainWindow(QMainWindow):
             handler=self.quit,
             shortcut="Ctrl+Q",
             icon=svg_icon("quit"),
-            status_tip="Offers to quit the app.",
+            status_tip="Offers to quit ReChess.",
         )
 
     def create_menubar(self) -> None:
@@ -300,7 +300,7 @@ class MainWindow(QMainWindow):
         self.showMaximized()
 
     def quit(self) -> None:
-        """Trigger main window's close event."""
+        """Trigger main window's close event to quit ReChess."""
         self.close()
 
     def flip(self) -> None:
@@ -335,12 +335,12 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def load_engine(self) -> None:
-        """Show file manager to load chess engine."""
+        """Show file manager to load UCI chess engine."""
         file_name, _ = QFileDialog.getOpenFileName(
             self,
             "File Manager",
             Path.home().as_posix(),
-            "Chess engine (*.exe)" if system_name() == "windows" else "",
+            "UCI chess engine (*.exe)" if system_name() == "windows" else "",
         )
 
         if file_name:
@@ -363,12 +363,12 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def show_about(self) -> None:
-        """Show app description, copyright, and license."""
+        """Show info about ReChess, copyright, and license."""
         QMessageBox.about(
             self,
             "About",
             (
-                "A GUI app for playing chess against a chess engine.\n\n"
+                "A GUI app for playing chess against a UCI chess engine.\n\n"
                 "Copyright 2024 Boštjan Mejak\n"
                 "MIT License"
             ),
@@ -431,7 +431,6 @@ class MainWindow(QMainWindow):
             self._black_clock.stop_timer()
             self._white_clock.stop_timer()
             self._notifications_label.setText(self._game.result)
-            self.offer_new_game()
             return
 
         if self._game.is_engine_on_turn() and not self._game.is_over():
