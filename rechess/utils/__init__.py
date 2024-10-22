@@ -1,6 +1,7 @@
 from . import icons
 from .helper_functions import (
     app_style,
+    board_colors,
     create_action,
     create_button,
     delete_quarantine_attribute,
@@ -16,6 +17,7 @@ from .helper_functions import (
 
 __all__: list[str] = [
     "app_style",
+    "board_colors",
     "create_action",
     "create_button",
     "delete_quarantine_attribute",
