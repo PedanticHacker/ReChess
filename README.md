@@ -2,7 +2,7 @@
 
 ## What's this?
 
-ReChess is an app for playing regular chess against a UCI chess engine.
+ReChess is an app for playing standard chess against a UCI chess engine.
 
 ## In what programming language is ReChess written?
 
@@ -10,11 +10,11 @@ That would be **Python**.
 
 ### What version of Python are we talking about here?
 
-It would be best if you launch ReChess using Python **3.12**.
+It would be best if you launch ReChess using Python **3.13**.
 
-### Why 3.12?
+### Why 3.13 specifically?
 
-As tested, ReChess works on all major platforms using Python 3.12, so on
+As tested, ReChess works on all major platforms using Python 3.13, so on
 Windows, Linux, and macOS.
 
 ### What about other Python versions?
@@ -62,7 +62,7 @@ analyze the chessboard position or play a game from there onwards
 
 ## Which chess variants are supported?
 
-Only regular chess is supported. Other chess variants are not supported.
+Only standard chess is supported. Chess variants are not supported.
 
 ## How do I move a piece on the chessboard?
 
@@ -131,8 +131,8 @@ Yes. You should have specific requirements installed.
 
 Alternatively, you can also install these three requirements with the
 *pip* package manager in your command-line interface within ReChess's
-top-level folder/directory, provided that Python is installed, then
-execute this command:
+top-level folder/directory, provided that *pip* was installed as part of
+Python installation, then execute this command:
 
 ```bash
 pip install -r requirements.txt
@@ -192,17 +192,17 @@ ReChess uses the **MIT License**.
 See the `LICENSE.txt` file in ReChess's top-level directory about the
 permissions, limitations, and conditions of the license.
 
-### What if I develop an app based on ReChess?
+### Can I develop an app based on ReChess?
 
-You can use whatever license you want for your app, provided you include
-my copyright notice above yours.
+Yes. For your app, you can use whatever license, but make sure that you
+include my copyright notice above yours.
 
-Your copyright notice should look like this:
+Your copyright notice should be like this:
 
 ```
 Copyright 2024 Boštjan Mejak
 Copyright 2024 John Doe
 ```
 
-On the second line, provide the actual year of your app's release and
-your legal first and last name.
+On the second line, provide the year in which you are releasing your app
+and provide your legal first and last name. That's it.

@@ -27,7 +27,7 @@ from rechess.gui.widgets import (
     FenEditorWidget,
     SvgBoardWidget,
 )
-from rechess.openings import chess_openings
+from rechess.openings import eco_openings
 from rechess.utils import (
     create_action,
     svg_icon,
@@ -60,7 +60,7 @@ class MainWindow(QMainWindow):
         self._evaluation_bar: EvaluationBarWidget = EvaluationBarWidget()
 
         self._engine_name_label: QLabel = QLabel()
-        self._chess_opening_label: QLabel = QLabel()
+        self._openings_label: QLabel = QLabel()
 
         self._notifications_label: QLabel = QLabel()
         self._notifications_label.setObjectName("notifications")
@@ -239,7 +239,7 @@ class MainWindow(QMainWindow):
 
     def create_statusbar(self) -> None:
         """Create statusbar for displaying various info."""
-        self.statusBar().addWidget(self._chess_opening_label)
+        self.statusBar().addWidget(self._openings_label)
         self.statusBar().addPermanentWidget(self._engine_name_label)
         self._engine_name_label.setText(self._engine.name)
 
@@ -402,14 +402,14 @@ class MainWindow(QMainWindow):
         """Show FEN in FEN editor."""
         self._fen_editor.setText(self._game.board.fen())
 
-    def show_chess_opening(self) -> None:
-        """Show ECO code and chess opening name."""
+    def show_opening(self) -> None:
+        """Show ECO code and opening name."""
         fen: str = self._game.board.fen()
-        chess_openings_storage: dict[str, tuple[str, str]] = chess_openings()
+        openings: dict[str, tuple[str, str]] = eco_openings()
 
-        if fen in chess_openings_storage:
-            eco_code, chess_opening_name = chess_openings_storage[fen]
-            self._chess_opening_label.setText(f"{eco_code}: {chess_opening_name}")
+        if fen in openings:
+            eco_code, opening_name = openings[fen]
+            self._openings_label.setText(f"{eco_code}: {opening_name}")
 
     def refresh_ui(self) -> None:
         """Refresh current state of UI."""
@@ -422,7 +422,7 @@ class MainWindow(QMainWindow):
         self._fen_editor.reset_background_color()
 
         self.show_fen()
-        self.show_chess_opening()
+        self.show_opening()
         self.switch_clock_timers()
 
         self._svg_board.draw()
@@ -454,7 +454,7 @@ class MainWindow(QMainWindow):
 
         self._black_clock.reset()
         self._white_clock.reset()
-        self._chess_opening_label.clear()
+        self._openings_label.clear()
 
         self._game.set_new_game()
         self._table_model.reset()
@@ -525,11 +525,11 @@ class MainWindow(QMainWindow):
         else:
             self._game.clear_arrows()
             self._game.set_root_position()
-            self._chess_opening_label.clear()
+            self._openings_label.clear()
 
         self.show_fen()
+        self.show_opening()
         self.stop_analysis()
-        self.show_chess_opening()
         self._notifications_label.clear()
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()

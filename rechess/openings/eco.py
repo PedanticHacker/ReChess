@@ -1,5 +1,5 @@
-def chess_openings() -> dict[str, tuple[str, str]]:
-    """Return dictionary containing chess openings."""
+def eco_openings() -> dict[str, tuple[str, str]]:
+    """Return dict that maps FEN keys to ECO codes and opening names."""
     return {
         "rnbqkb1r/pppppppp/5n2/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 1 2": (
             "B02",

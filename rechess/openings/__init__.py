@@ -1,3 +1,3 @@
-from .chess import chess_openings
+from .eco import eco_openings
 
-__all__: list[str] = ["chess_openings"]
+__all__: list[str] = ["eco_openings"]
