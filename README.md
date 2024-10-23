@@ -2,7 +2,7 @@
 
 ## What's this?
 
-ReChess is an app for playing standard chess against a chess engine.
+ReChess is an app for playing regular chess against a UCI chess engine.
 
 ## In what programming language is ReChess written?
 
@@ -19,7 +19,7 @@ Windows, Linux, and macOS.
 
 ### What about other Python versions?
 
-ReChess should work using a Python version older than 3.12, but surely
+ReChess should work using a Python version older than 3.13, but surely
 won't work using a 2.x version. Feel free to modify the source code to
 adapt it to your specific Python version, if necessary.
 
@@ -62,7 +62,7 @@ analyze the chessboard position or play a game from there onwards
 
 ## Which chess variants are supported?
 
-Only standard chess is supported. Chess variants are not supported.
+Only regular chess is supported. Other chess variants are not supported.
 
 ## How do I move a piece on the chessboard?
 
@@ -131,7 +131,8 @@ Yes. You should have specific requirements installed.
 
 Alternatively, you can also install these three requirements with the
 *pip* package manager in your command-line interface within ReChess's
-top-level directory, if Python is installed, then execute this command:
+top-level folder/directory, provided that Python is installed, then
+execute this command:
 
 ```bash
 pip install -r requirements.txt
@@ -203,5 +204,5 @@ Copyright 2024 Boštjan Mejak
 Copyright 2024 John Doe
 ```
 
-On the second line, write the actual year of your app's release and your
-legal first and last name.
+On the second line, provide the actual year of your app's release and
+your legal first and last name.
