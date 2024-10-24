@@ -15,7 +15,7 @@ from rechess.utils import (
 
 
 class UciEngine(QObject):
-    """UCI chess engine manager."""
+    """Manager for UCI chess engine."""
 
     best_move_analyzed: Signal = Signal(Move)
     move_played: Signal = Signal(Move)
