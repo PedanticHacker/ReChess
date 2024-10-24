@@ -2,7 +2,7 @@ from chess import svg
 from PySide6.QtGui import QMouseEvent
 from PySide6.QtSvgWidgets import QSvgWidget
 
-from rechess.game import StandardChess
+from rechess.game import ChessGame
 from rechess.utils import board_colors, setting_value
 
 
@@ -11,10 +11,10 @@ class SvgBoardWidget(QSvgWidget):
 
     svg.XX = "<circle id='xx' r='5' cx='22' cy='22' stroke='green' fill='lime'/>"
 
-    def __init__(self, game: StandardChess) -> None:
+    def __init__(self, game: ChessGame) -> None:
         super().__init__()
 
-        self._game: StandardChess = game
+        self._game: ChessGame = game
 
         self.draw()
 
@@ -32,7 +32,7 @@ class SvgBoardWidget(QSvgWidget):
         self.load(encoded_svg_board)
 
     def mousePressEvent(self, event: QMouseEvent) -> None:
-        """Locate square on mouse button press."""
+        """Locate chessboard square on mouse button press."""
         x: float = event.position().x()
         y: float = event.position().y()
         self._game.locate_square(x, y)
