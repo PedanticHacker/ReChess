@@ -18,7 +18,7 @@ from PySide6.QtWidgets import (
 
 from rechess.engine import UciEngine
 from rechess.enums import ClockColor
-from rechess.game import StandardGame
+from rechess.game import StandardChess
 from rechess.gui.dialogs import SettingsDialog
 from rechess.gui.table import TableModel, TableView
 from rechess.gui.widgets import (
@@ -27,7 +27,7 @@ from rechess.gui.widgets import (
     FenEditorWidget,
     SvgBoardWidget,
 )
-from rechess.openings import eco_openings
+from rechess.openings import openings_storage
 from rechess.utils import (
     create_action,
     svg_icon,
@@ -47,7 +47,7 @@ class MainWindow(QMainWindow):
     def __init__(self) -> None:
         super().__init__()
 
-        self._game: StandardGame = StandardGame(Board())
+        self._game: StandardChess = StandardChess(Board())
         self._engine: UciEngine = UciEngine(self._game)
         self._table_model: TableModel = TableModel(self._game.notation_items)
 
@@ -405,7 +405,7 @@ class MainWindow(QMainWindow):
     def show_opening(self) -> None:
         """Show ECO code and opening name."""
         fen: str = self._game.board.fen()
-        openings: dict[str, tuple[str, str]] = eco_openings()
+        openings: dict[str, tuple[str, str]] = openings_storage()
 
         if fen in openings:
             eco_code, opening_name = openings[fen]

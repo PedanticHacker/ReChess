@@ -13,16 +13,17 @@ from PySide6.QtWidgets import (
 from rechess.utils import set_setting_value, setting_value
 
 
+Cancel: QDialogButtonBox.StandardButton = QDialogButtonBox.StandardButton.Cancel
+Save: QDialogButtonBox.StandardButton = QDialogButtonBox.StandardButton.Save
+
+
 class SettingsDialog(QDialog):
     """Dialog for editing settings."""
 
     def __init__(self) -> None:
         super().__init__()
 
-        self._button_box: QDialogButtonBox = QDialogButtonBox(
-            QDialogButtonBox.StandardButton.Save
-            | QDialogButtonBox.StandardButton.Cancel
-        )
+        self._button_box: QDialogButtonBox = QDialogButtonBox(Save | Cancel)
 
         self.set_title()
         self.create_groups()
@@ -82,7 +83,7 @@ class SettingsDialog(QDialog):
         )
 
     def set_vertical_layout(self) -> None:
-        """Set dialog's layout to be vertical."""
+        """Set dialog's widget layout to be vertical."""
         engine_layout: QVBoxLayout = QVBoxLayout()
         engine_layout.addWidget(self._engine_black_option)
         engine_layout.addWidget(self._engine_white_option)
@@ -94,14 +95,14 @@ class SettingsDialog(QDialog):
         time_control_layout.addWidget(self._clock_increment_option)
         self._time_control_group.setLayout(time_control_layout)
 
-        dialog_vertical_layout: QVBoxLayout = QVBoxLayout()
-        dialog_vertical_layout.addWidget(self._engine_group)
-        dialog_vertical_layout.addWidget(self._time_control_group)
-        dialog_vertical_layout.addWidget(self._button_box)
-        self.setLayout(dialog_vertical_layout)
+        vertical_layout: QVBoxLayout = QVBoxLayout()
+        vertical_layout.addWidget(self._engine_group)
+        vertical_layout.addWidget(self._time_control_group)
+        vertical_layout.addWidget(self._button_box)
+        self.setLayout(vertical_layout)
 
     def connect_signals_to_slots(self) -> None:
-        """Connect dialog signals to corresponding slot methods."""
+        """Connect dialog's signals to corresponding slot methods."""
         self.accepted.connect(self.on_accepted)
         self._button_box.accepted.connect(self.accept)
         self._button_box.rejected.connect(self.reject)

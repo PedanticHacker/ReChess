@@ -1,5 +1,10 @@
-def eco_openings() -> dict[str, tuple[str, str]]:
-    """Return dict that maps FEN keys to ECO codes and opening names."""
+def openings_storage() -> dict[str, tuple[str, str]]:
+    """
+    Return chess openings stored in dictionary.
+
+    Each dictionary key is FEN that maps to tuple containing ECO code
+    and chess opening name.
+    """
     return {
         "rnbqkb1r/pppppppp/5n2/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 1 2": (
             "B02",

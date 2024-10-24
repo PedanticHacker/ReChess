@@ -31,14 +31,14 @@ Yes. ReChess depends upon:
 - **PySide6**: A framework for developing cross-platform GUI apps
 - **python-chess**: A library for developing chess apps
 
-### Is there any 3rd-party software used?
+### Is there any 3rd-party software integrated?
 
-Yes. ReChess uses **Stockfish**, a powerful UCI chess engine for playing
-and analyzing.
+Yes. ReChess integrates **Stockfish**, a powerful UCI chess engine for
+playing and analyzing a standard chess game.
 
 ## What features does ReChess provide?
 
-You get all the basic features for playing chess:
+You get all the basic features for playing standard chess:
 
 - chess clocks
 - SVG chessboard
@@ -69,7 +69,7 @@ Only standard chess is supported. Chess variants are not supported.
 Making a move in ReChess is as simple as a click. Just click a piece and
 then click one of its legal squares to make your move.
 
-### How do I know what's the legal square of a piece?
+### How do I know what is the legal square of a piece?
 
 After you click a piece, all of its legal squares get marked with a dot.
 

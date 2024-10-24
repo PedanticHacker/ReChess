@@ -4,7 +4,7 @@ from chess import Move
 from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
 from PySide6.QtCore import QObject, Signal
 
-from rechess.game import StandardGame
+from rechess.game import StandardChess
 from rechess.utils import (
     delete_quarantine_attribute,
     engine_configuration,
@@ -15,17 +15,17 @@ from rechess.utils import (
 
 
 class UciEngine(QObject):
-    """Manager for UCI chess engine."""
+    """Manager for UCI chess engine processing."""
 
     best_move_analyzed: Signal = Signal(Move)
     move_played: Signal = Signal(Move)
     score_analyzed: Signal = Signal(Score)
     variation_analyzed: Signal = Signal(str)
 
-    def __init__(self, game: StandardGame) -> None:
+    def __init__(self, game: StandardChess) -> None:
         super().__init__()
 
-        self._game: StandardGame = game
+        self._game: StandardChess = game
 
         self._analyzing: bool = False
 

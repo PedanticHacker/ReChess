@@ -20,8 +20,8 @@ from rechess.gui.dialogs import PromotionDialog
 from rechess.utils import setting_value
 
 
-class StandardGame(QObject):
-    """Implementation of standard chess game."""
+class StandardChess(QObject):
+    """Game with rules of standard chess."""
 
     move_played: Signal = Signal(Move)
 

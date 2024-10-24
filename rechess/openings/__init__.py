@@ -1,3 +1,3 @@
-from .eco import eco_openings
+from .storage import openings_storage
 
-__all__: list[str] = ["eco_openings"]
+__all__: list[str] = ["openings_storage"]
