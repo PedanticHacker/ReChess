@@ -389,12 +389,16 @@ class MainWindow(QMainWindow):
         """Start analyzing current chessboard position."""
         self.invoke_analysis()
         self._evaluation_bar.show()
+        self._black_clock.stop_timer()
+        self._white_clock.stop_timer()
         self.stop_analysis_action.setEnabled(True)
         self.start_analysis_action.setDisabled(True)
 
     def stop_analysis(self) -> None:
         """Stop analyzing current chessboard position."""
         self._engine.stop_analysis()
+
+        self.switch_clock_timers()
         self.adjust_engine_buttons()
         self._notifications_label.clear()
 
