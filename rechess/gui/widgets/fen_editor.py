@@ -5,7 +5,7 @@ from PySide6.QtWidgets import QLineEdit
 
 
 class FenEditorWidget(QLineEdit):
-    """Editor widget for editing FEN (Forsyth-Edwards Notation)."""
+    """Widget for editing FEN (Forsyth-Edwards Notation)."""
 
     validated: Signal = Signal()
 

@@ -491,13 +491,12 @@ class MainWindow(QMainWindow):
             event.ignore()
 
     def wheelEvent(self, event: QWheelEvent) -> None:
-        """Select notation item on mouse wheel roll."""
-        is_upward_roll = event.angleDelta().y() > 0
-        is_downward_roll = event.angleDelta().y() < 0
+        """Select notation item on mouse wheel event."""
+        wheel_step: int = event.angleDelta().y()
 
-        if is_upward_roll:
+        if wheel_step > 0:
             self._table_view.select_previous_item()
-        elif is_downward_roll:
+        elif wheel_step < 0:
             self._table_view.select_next_item()
 
     @Slot(Move)
