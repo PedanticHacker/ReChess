@@ -4,7 +4,7 @@
 import sys
 
 from PySide6.QtCore import QLockFile
-from PySide6.QtWidgets import QApplication
+from PySide6.QtWidgets import QApplication, QMessageBox, QWidget
 
 from rechess.gui import MainWindow
 from rechess.utils import initialize_app
@@ -15,7 +15,9 @@ def main() -> None:
     lock_file: QLockFile = QLockFile("ReChess.lock")
 
     if not lock_file.tryLock(1):
-        sys.exit()
+        initialize_app()
+        QMessageBox.warning(QWidget(), "Warning", "ReChess is already running.")
+        sys.exit(1)
 
     app: QApplication = initialize_app()
 
