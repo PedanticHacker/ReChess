@@ -282,8 +282,8 @@ class MainWindow(QMainWindow):
         self._fen_editor.validated.connect(self.on_fen_validated)
         self._table_view.item_selected.connect(self.on_item_selected)
 
-        self._black_clock.time_expired.connect(self.on_black_clock_time_expired)
-        self._white_clock.time_expired.connect(self.on_white_clock_time_expired)
+        self._black_clock.time_expired.connect(self.on_black_time_expired)
+        self._white_clock.time_expired.connect(self.on_white_time_expired)
 
     def invoke_engine(self) -> None:
         """Invoke loaded chess engine to play move."""
@@ -507,13 +507,13 @@ class MainWindow(QMainWindow):
         self._svg_board.draw()
 
     @Slot()
-    def on_black_clock_time_expired(self) -> None:
-        """Notify that White won as Black's clock time has expired."""
+    def on_black_time_expired(self) -> None:
+        """Notify that White won as Black's time has expired."""
         self._notifications_label.setText("White won on time")
 
     @Slot()
-    def on_white_clock_time_expired(self) -> None:
-        """Notify that Black won as White's clock time has expired."""
+    def on_white_time_expired(self) -> None:
+        """Notify that Black won as White's time has expired."""
         self._notifications_label.setText("Black won on time")
 
     @Slot()
