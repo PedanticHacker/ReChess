@@ -540,6 +540,8 @@ class MainWindow(QMainWindow):
         self.show_fen()
         self.show_opening()
         self.stop_analysis()
+        self._black_clock.stop_timer()
+        self._white_clock.stop_timer()
         self._notifications_label.clear()
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
