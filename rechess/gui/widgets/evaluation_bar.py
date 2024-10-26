@@ -39,13 +39,11 @@ class EvaluationBarWidget(QProgressBar):
     def animate(self, evaluation: Score) -> None:
         """Animate widget's chunk from `evaluation`."""
         if evaluation.is_mate():
-            moves_to_mate: int = evaluation.mate() or 0
-            animation_value: int = 0 if moves_to_mate > 0 else 1000
-            evaluation_text: str = f"M{abs(moves_to_mate)}"
+            animation_value: int = 0 if evaluation.mate() > 0 else 1000
+            evaluation_text: str = f"M{evaluation.mate()}"
         else:
-            score: int = evaluation.score() or 0
-            animation_value = 500 - score
-            evaluation_text = f"{score / 100 :.2f}"
+            animation_value = 500 - evaluation.score()
+            evaluation_text = f"{evaluation.score() / 100 :.2f}"
 
         self.setFormat(evaluation_text)
         self._animation.setEndValue(animation_value)
