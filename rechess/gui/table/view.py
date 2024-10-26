@@ -2,9 +2,11 @@ from PySide6.QtCore import (
     QAbstractTableModel,
     QItemSelectionModel,
     QModelIndex,
+    Qt,
     Signal,
     Slot,
 )
+from PySide6.QtGui import QKeyEvent
 from PySide6.QtWidgets import QAbstractItemView, QHeaderView, QTableView
 
 
@@ -28,6 +30,32 @@ class TableView(QTableView):
 
         self.model().layoutChanged.connect(self.scrollToBottom)
         self.selectionModel().currentChanged.connect(self.on_current_changed)
+
+    @property
+    def ply_index(self) -> int:
+        """Return index of ply (i.e., half-move)."""
+        current_model_index: QModelIndex = self.selectionModel().currentIndex()
+        return 2 * current_model_index.row() + current_model_index.column()
+
+    @property
+    def previous_model_index(self) -> QModelIndex:
+        """Return model index of previous notation item."""
+        previous_row: int = (self.ply_index - 1) // 2
+        previous_column: int = (self.ply_index - 1) % 2
+        return self.model().index(previous_row, previous_column)
+
+    @property
+    def next_model_index(self) -> QModelIndex:
+        """Return model index of next notation item."""
+        all_rows: int = self.model().rowCount()
+        next_row: int = (self.ply_index + 1) // 2
+        next_column: int = (self.ply_index + 1) % 2
+        next_index: QModelIndex = self.model().index(next_row, next_column)
+
+        if next_row < all_rows and next_index.data():
+            return next_index
+
+        return QModelIndex()
 
     def select_last_item(self) -> None:
         """Select last notation item."""
@@ -57,31 +85,12 @@ class TableView(QTableView):
             QItemSelectionModel.SelectionFlag.ClearAndSelect,
         )
 
-    @property
-    def ply_index(self) -> int:
-        """Return index of ply (i.e., half-move)."""
-        current_model_index: QModelIndex = self.selectionModel().currentIndex()
-        return 2 * current_model_index.row() + current_model_index.column()
-
-    @property
-    def previous_model_index(self) -> QModelIndex:
-        """Return model index of previous notation item."""
-        previous_row: int = (self.ply_index - 1) // 2
-        previous_column: int = (self.ply_index - 1) % 2
-        return self.model().index(previous_row, previous_column)
-
-    @property
-    def next_model_index(self) -> QModelIndex:
-        """Return model index of next notation item."""
-        all_rows: int = self.model().rowCount()
-        next_row: int = (self.ply_index + 1) // 2
-        next_column: int = (self.ply_index + 1) % 2
-        next_index: QModelIndex = self.model().index(next_row, next_column)
-
-        if next_row < all_rows and next_index.data():
-            return next_index
-
-        return QModelIndex()
+    def keyPressEvent(self, event: QKeyEvent) -> None:
+        """Select notation item on pressing left or right arrow key."""
+        if event.key() == Qt.Key.Key_Left:
+            self.select_previous_item()
+        elif event.key() == Qt.Key.Key_Right:
+            self.select_next_item()
 
     @Slot()
     def on_current_changed(self) -> None:

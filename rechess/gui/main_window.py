@@ -3,7 +3,7 @@ from pathlib import Path
 from chess import BLACK, Board, Move
 from chess.engine import Score
 from PySide6.QtCore import Qt, QThreadPool, Slot
-from PySide6.QtGui import QCloseEvent, QKeyEvent, QWheelEvent
+from PySide6.QtGui import QCloseEvent, QWheelEvent
 from PySide6.QtWidgets import (
     QDialog,
     QFileDialog,
@@ -489,13 +489,6 @@ class MainWindow(QMainWindow):
             event.accept()
         else:
             event.ignore()
-
-    def keyPressEvent(self, event: QKeyEvent) -> None:
-        """Select notation item on pressing left or right arrow key."""
-        if event.key() == Qt.Key.Key_Left:
-            self._table_view.select_previous_item()
-        elif event.key() == Qt.Key.Key_Right:
-            self._table_view.select_next_item()
 
     def wheelEvent(self, event: QWheelEvent) -> None:
         """Select notation item on scrolling mouse wheel."""
