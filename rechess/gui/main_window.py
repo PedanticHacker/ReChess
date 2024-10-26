@@ -535,7 +535,6 @@ class MainWindow(QMainWindow):
         self.stop_analysis()
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
-        self._notifications_label.clear()
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
         self._fen_editor.reset_background_color()
