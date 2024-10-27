@@ -99,15 +99,15 @@ def app_style(file_name: str) -> str:
 
 def board_colors() -> dict[str, str]:
     return {
+        "arrow blue": "#00308880",
+        "arrow green": "#15781b80",
+        "arrow red": "#88202080",
+        "arrow yellow": "#e68f0080",
         "coord": "white",
         "margin": "green",
         "square dark": "lime",
-        "square light": "white",
-        "arrow red": "#88202080",
-        "arrow blue": "#00308880",
-        "arrow green": "#15781b80",
-        "arrow yellow": "#e68f0080",
         "square dark lastmove": "#e68f0080",
+        "square light": "white",
         "square light lastmove": "#e68f0080",
     }
 
