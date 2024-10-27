@@ -3,7 +3,7 @@ QDialog {
 }
 
 QHeaderView {
-    background-color: green;
+    background-color: limegreen;
 }
 
 QLabel {
@@ -59,7 +59,7 @@ QStatusBar {
 QTableView {
     background-color: limegreen;
     font-weight: bold;
-    selection-background-color: green;
+    selection-background-color: seagreen;
 }
 
 QToolBar {
