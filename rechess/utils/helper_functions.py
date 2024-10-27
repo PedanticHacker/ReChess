@@ -161,7 +161,7 @@ def initialize_app() -> QApplication:
     app.setApplicationVersion("1.0")
     app.setDesktopFileName("ReChess")
     app.setStyle("fusion")
-    app.setStyleSheet(app_style("general"))
+    app.setStyleSheet(app_style("forest"))
     app.setWindowIcon(svg_icon("logo"))
     return app
 
