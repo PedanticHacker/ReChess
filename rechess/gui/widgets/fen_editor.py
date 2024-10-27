@@ -25,11 +25,12 @@ class FenEditorWidget(QLineEdit):
         self.setStyleSheet("background-color: red;")
 
     def reset_background_color(self) -> None:
-        """Reset background color to default lime green."""
-        self.setStyleSheet("background-color: limegreen;")
+        """Reset background color to default."""
+        self.setStyleSheet("background-color: #3b3330;")
 
     def mouseDoubleClickEvent(self, event: QMouseEvent) -> None:
         """Paste FEN from clipboard on mouse double-click."""
+        self.clearFocus()
         self.selectAll()
         self.paste()
 

@@ -97,21 +97,6 @@ def app_style(file_name: str) -> str:
         return qss_file.read()
 
 
-def board_colors() -> dict[str, str]:
-    return {
-        "arrow blue": "#00308880",
-        "arrow green": "#15781b80",
-        "arrow red": "#88202080",
-        "arrow yellow": "#e68f0080",
-        "coord": "white",
-        "margin": "green",
-        "square dark": "lime",
-        "square dark lastmove": "#e68f0080",
-        "square light": "white",
-        "square light lastmove": "#e68f0080",
-    }
-
-
 def create_action(
     name: str,
     icon: QIcon,
@@ -161,7 +146,7 @@ def initialize_app() -> QApplication:
     app.setApplicationVersion("1.0")
     app.setDesktopFileName("ReChess")
     app.setStyle("fusion")
-    app.setStyleSheet(app_style("forest"))
+    app.setStyleSheet(app_style("onyx"))
     app.setWindowIcon(svg_icon("logo"))
     return app
 
