@@ -66,18 +66,3 @@ QTableView {
 QToolBar {
     background-color: #3b3330;
 }
-
-SvgBoardWidget {
-   qproperty-arrowBlueColor: #00308880;
-   qproperty-arrowGreenColor: #15781B80;
-   qproperty-arrowRedColor: #88202080;
-   qproperty-arrowYellowColor: #e68f00b3;
-   qproperty-coordColor: #e5e5e5;
-   qproperty-darkLastmoveColor: #362f2c;
-   qproperty-darkSquareColor: #2f2a28;
-   qproperty-innerBorderColor: #2f2a28;
-   qproperty-lightLastmoveColor: #4d4340;
-   qproperty-lightSquareColor: #433a36;
-   qproperty-marginColor: #3b3330;
-   qproperty-outerBorderColor: #2f2a28;
-}

@@ -97,6 +97,24 @@ def app_style(file_name: str) -> str:
         return qss_file.read()
 
 
+def board_colors() -> dict[str, str]:
+    """Provide default colors for chessboard elements."""
+    return {
+        "arrow blue": "#00308880",
+        "arrow green": "#15781b80",
+        "arrow red": "#88202080",
+        "arrow yellow": "#e68f00b3",
+        "coord": "#e5e5e5",
+        "inner border": "#2f2a28",
+        "margin": "#3b3330",
+        "outer border": "#2f2a28",
+        "square dark": "#2f2a28",
+        "square dark lastmove": "#362f2c",
+        "square light": "#433a36",
+        "square light lastmove": "#4d4340",
+    }
+
+
 def create_action(
     name: str,
     icon: QIcon,
