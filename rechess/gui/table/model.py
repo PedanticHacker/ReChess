@@ -9,7 +9,7 @@ from PySide6.QtCore import (
 
 
 class TableModel(QAbstractTableModel):
-    """Model for containing chess notation."""
+    """Model for containing and managing chess notation."""
 
     def __init__(self, notation_items: list[str]) -> None:
         super().__init__()
