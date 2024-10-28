@@ -41,7 +41,7 @@ QMenuBar {
 
 QProgressBar {
     background-color: ghostwhite;
-    color: #3b3330;
+    color: darkslategray;
     font-size: 11px;
     font-weight: bold;
     text-align: center;
