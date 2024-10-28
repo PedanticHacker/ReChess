@@ -1,68 +1,68 @@
 QDialog {
-    background-color: #3b3330;
+    background-color: #45403d;
 }
 
 QHeaderView {
-    background-color: #3b3330;
+    background-color: #45403d;
 }
 
 QLabel {
-    color: #e5e5e5;
+    color: #f2f0ef;
     font-weight: bold;
 }
 
 QLabel#notifications {
-    background-color: #3b3330;
+    background-color: #45403d;
     font-size: 12px;
     qproperty-alignment: "AlignCenter";
 }
 
 QLineEdit {
-    background-color: #3b3330;
-    color: #e5e5e5;
+    background-color: #45403d;
+    color: #f2f0ef;
     font-size: 12px;
     font-weight: bold;
     qproperty-alignment: "AlignCenter";
 }
 
 QMainWindow {
-    background-color: #2f2a28;
+    background-color: #352f2d;
 }
 
 QMenu {
-    background-color: #3b3330;
+    background-color: #45403d;
     font-weight: bold;
 }
 
 QMenuBar {
-    background-color: #3b3330;
+    background-color: #45403d;
     font-weight: bold;
 }
 
 QProgressBar {
-    background-color: ghostwhite;
-    color: darkslategray;
+    background-color: #f2f0ef;
+    color: #45403d;
     font-size: 11px;
     font-weight: bold;
     text-align: center;
 }
 
 QProgressBar::chunk {
-    background-color: black;
+    background-color: #5c5552;
 }
 
 QStatusBar {
-    background-color: #3b3330;
-    color: #e5e5e5;
+    background-color: #45403d;
+    color: #f2f0ef;
 }
 
 QTableView {
-    background-color: #433a36;
-    color: #e5e5e5;
+    background-color: #45403d;
+    color: #f2f0ef;
     font-weight: bold;
-    selection-background-color: #2f2a28;
+    selection-background-color: #352f2d;
 }
 
 QToolBar {
-    background-color: #3b3330;
+    background-color: #45403d;
 }
