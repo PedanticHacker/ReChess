@@ -16,14 +16,11 @@ class SvgBoardWidget(QSvgWidget):
 
         self._game: ChessGame = game
 
-        self.update()
-
     def mousePressEvent(self, event: QMouseEvent) -> None:
         """Locate square on mouse button press."""
         x: float = event.position().x()
         y: float = event.position().y()
         self._game.locate_square(x, y)
-        self.update()
 
     def paintEvent(self, event: QPaintEvent) -> None:
         """Paint current state of board."""
