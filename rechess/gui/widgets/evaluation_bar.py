@@ -20,7 +20,7 @@ class EvaluationBarWidget(QProgressBar):
         self._animation.valueChanged.connect(self.update)
 
         self.setRange(0, 1000)
-        self.setFixedSize(40, 500)
+        self.setFixedSize(45, 500)
         self.setSizePolicy(self._size_policy)
         self.setOrientation(Qt.Orientation.Vertical)
 
