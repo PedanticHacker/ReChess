@@ -491,7 +491,7 @@ class MainWindow(QMainWindow):
             event.ignore()
 
     def wheelEvent(self, event: QWheelEvent) -> None:
-        """Select notation item on scrolling mouse wheel."""
+        """Select notation item on mouse wheel scroll."""
         wheel_step: int = event.angleDelta().y()
 
         if wheel_step > 0:
@@ -559,5 +559,5 @@ class MainWindow(QMainWindow):
 
     @Slot(Score)
     def on_score_analyzed(self, score: Score) -> None:
-        """Show chessboard position evaluation from `score`."""
+        """Show position evaluation from `score`."""
         self._evaluation_bar.animate(score)
