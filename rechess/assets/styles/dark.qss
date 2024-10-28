@@ -1,5 +1,6 @@
 QDialog {
     background-color: #45403d;
+    border: 1px solid #5c5552;
 }
 
 QHeaderView {
@@ -23,10 +24,23 @@ QLineEdit {
     font-size: 12px;
     font-weight: bold;
     qproperty-alignment: "AlignCenter";
+    border: 1px solid #5c5552;
+    border-radius: 3px;
+    padding: 2px 4px;
+}
+
+QLineEdit:hover {
+    border: 1px solid #f2f0ef;
+}
+
+QLineEdit:focus {
+    border: 1px solid #f2f0ef;
+    background-color: #352f2d;
 }
 
 QMainWindow {
     background-color: #352f2d;
+    border: 1px solid #5c5552;
 }
 
 QMenu {
@@ -34,9 +48,49 @@ QMenu {
     font-weight: bold;
 }
 
+QMenu::item {
+    padding: 6px 20px;
+}
+
+QMenu::item:hover {
+    background-color: #5c5552;
+}
+
+QMenu::separator {
+    height: 1px;
+    background-color: #5c5552;
+    margin: 4px 0px;
+}
+
 QMenuBar {
     background-color: #45403d;
     font-weight: bold;
+}
+
+QMenuBar::item:selected {
+    background-color: #5c5552;
+}
+
+QPushButton {
+    background-color: #5c5552;
+    color: #f2f0ef;
+    border: none;
+    border-radius: 3px;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #6b635f;
+}
+
+QPushButton:pressed {
+    background-color: #45403d;
+}
+
+QPushButton:disabled {
+    background-color: #45403d;
+    color: #8c8885;
 }
 
 QProgressBar {
@@ -45,10 +99,64 @@ QProgressBar {
     font-size: 11px;
     font-weight: bold;
     text-align: center;
+    border-radius: 3px;
 }
 
 QProgressBar::chunk {
     background-color: #5c5552;
+    border-radius: 3px;
+}
+
+QScrollBar:vertical {
+    background-color: #45403d;
+    width: 12px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #5c5552;
+    min-height: 20px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #6b635f;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+QScrollBar:horizontal {
+    background-color: #45403d;
+    height: 12px;
+    margin: 0px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: #5c5552;
+    min-width: 20px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background-color: #6b635f;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal {
+    background: none;
 }
 
 QStatusBar {
@@ -61,8 +169,24 @@ QTableView {
     color: #f2f0ef;
     font-weight: bold;
     selection-background-color: #352f2d;
+    border: none;
+    gridline-color: #5c5552;
+}
+
+QTableView::item:hover {
+    background-color: #5c5552;
 }
 
 QToolBar {
     background-color: #45403d;
+    border: none;
+    padding: 2px;
+    spacing: 2px;
+}
+
+QToolTip {
+    background-color: #352f2d;
+    color: #f2f0ef;
+    border: 1px solid #5c5552;
+    padding: 4px;
 }

@@ -98,20 +98,20 @@ def app_style(file_name: str) -> str:
 
 
 def board_colors() -> dict[str, str]:
-    """Provide default colors for chessboard elements."""
+    """Provide colors for board elements."""
     return {
         "arrow blue": "#00308880",
         "arrow green": "#15781b80",
         "arrow red": "#88202080",
         "arrow yellow": "#e68f00b3",
-        "coord": "#e5e5e5",
-        "inner border": "#2f2a28",
-        "margin": "#3b3330",
-        "outer border": "#2f2a28",
-        "square dark": "#2f2a28",
-        "square dark lastmove": "#362f2c",
-        "square light": "#433a36",
-        "square light lastmove": "#4d4340",
+        "coord": "#f2f0ef",
+        "inner border": "#352f2d",
+        "margin": "#45403d",
+        "outer border": "#352f2d",
+        "square dark": "#352f2d",
+        "square dark lastmove": "#45403d",
+        "square light": "#5c5552",
+        "square light lastmove": "#6b635f",
     }
 
 
