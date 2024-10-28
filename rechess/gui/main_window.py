@@ -310,7 +310,7 @@ class MainWindow(QMainWindow):
 
         self.flip_clock_alignments()
         self._evaluation_bar.flip_appearance()
-        self._svg_board.draw()
+        self._svg_board.update()
 
     def play_move_now(self) -> None:
         """Force chess engine to play on current turn."""
@@ -357,7 +357,7 @@ class MainWindow(QMainWindow):
         self._engine.load(file_name)
         self._engine_name_label.setText(self._engine.name)
 
-        self._svg_board.draw()
+        self._svg_board.update()
 
         if self._game.is_engine_on_turn() and not self._game.is_over():
             self.invoke_engine()
@@ -429,7 +429,7 @@ class MainWindow(QMainWindow):
         self.show_opening()
         self.switch_clock_timers()
 
-        self._svg_board.draw()
+        self._svg_board.update()
 
         if self._game.is_over():
             self._black_clock.stop_timer()
@@ -471,7 +471,7 @@ class MainWindow(QMainWindow):
         self.stop_analysis()
         self.switch_clock_timers()
 
-        self._svg_board.draw()
+        self._svg_board.update()
 
         if self._game.is_engine_on_turn():
             self.invoke_engine()
@@ -503,7 +503,7 @@ class MainWindow(QMainWindow):
     def on_best_move_analyzed(self, best_move: Move) -> None:
         """Show `best_move` from chess engine analysis as arrow."""
         self._game.set_arrow(best_move)
-        self._svg_board.draw()
+        self._svg_board.update()
 
     @Slot()
     def on_black_time_expired(self) -> None:
@@ -539,7 +539,7 @@ class MainWindow(QMainWindow):
         self._evaluation_bar.reset_appearance()
         self._fen_editor.reset_background_color()
 
-        self._svg_board.draw()
+        self._svg_board.update()
 
         if self._game.is_over():
             self._notifications_label.setText(self._game.result)
