@@ -34,4 +34,5 @@ class SvgBoardWidget(QSvgWidget):
         )
         encoded_svg_board: bytes = svg_board.encode()
         self.load(encoded_svg_board)
+
         super().paintEvent(event)
