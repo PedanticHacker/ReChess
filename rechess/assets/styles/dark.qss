@@ -81,7 +81,7 @@ QMenuBar::item:selected {
 
 QPushButton {
   background-color: #45403d;
-  border: none;
+  border: 1px;
   border-radius: 4px;
   color: #f5f3f2;
   font-weight: bold;

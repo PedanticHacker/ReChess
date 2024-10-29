@@ -417,10 +417,10 @@ class MainWindow(QMainWindow):
         self.stop_analysis()
 
         self._table_model.refresh_view()
-        self._table_view.select_last_item()
         self._engine_analysis_label.clear()
+        self._table_view.select_last_item()
+        self._fen_editor.hide_warning_effect()
         self._evaluation_bar.reset_appearance()
-        self._fen_editor.reset_background_color()
 
         self.show_fen()
         self.show_opening()
@@ -459,8 +459,8 @@ class MainWindow(QMainWindow):
         self._table_model.reset()
 
         self._engine_analysis_label.clear()
+        self._fen_editor.hide_warning_effect()
         self._evaluation_bar.reset_appearance()
-        self._fen_editor.reset_background_color()
 
         self.show_fen()
         self.stop_analysis()
@@ -528,8 +528,8 @@ class MainWindow(QMainWindow):
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
         self._engine_analysis_label.clear()
+        self._fen_editor.hide_warning_effect()
         self._evaluation_bar.reset_appearance()
-        self._fen_editor.reset_background_color()
 
         if self._game.is_over():
             self._notifications_label.setText(self._game.result)
