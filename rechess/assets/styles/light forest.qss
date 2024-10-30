@@ -42,12 +42,10 @@ QLineEdit:focus {
 
 QLineEdit:hover {
   background-color: #dde8d9;
-  border: 1px solid #3f5a2e;
 }
 
 QMainWindow {
   background-color: #e8efe6;
-  border: 1px solid #506f46;
 }
 
 QMenu {
@@ -57,10 +55,12 @@ QMenu {
 
 QMenu::item {
   color: #2c3e1e;
+  margin: 4px;
 }
 
 QMenu::item:selected {
   background-color: #95a88c;
+  border-radius: 4px;
 }
 
 QMenuBar {

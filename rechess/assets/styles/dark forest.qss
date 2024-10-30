@@ -42,12 +42,10 @@ QLineEdit:focus {
 
 QLineEdit:hover {
   background-color: #384738;
-  border: 1px solid #5f735f;
 }
 
 QMainWindow {
   background-color: #2d382d;
-  border: 1px solid #4d5f4d;
 }
 
 QMenu {
@@ -57,27 +55,21 @@ QMenu {
 
 QMenu::item {
   color: #dde5dd;
+  margin: 4px;
 }
 
 QMenu::item:selected {
   background-color: #4d5f4d;
+  border-radius: 4px;
 }
 
 QMenuBar {
   background-color: #2d382d;
-  border-bottom: 1px solid #4d5f4d;
-  color: #dde5dd;
   font-weight: bold;
-}
-
-QMenuBar::item {
-  background-color: transparent;
-  padding: 4px 12px;
 }
 
 QMenuBar::item:selected {
   background-color: #4d5f4d;
-  border-radius: 4px;
 }
 
 QPushButton {
