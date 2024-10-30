@@ -7,7 +7,7 @@ from typing import Callable, Literal, overload, TypeAlias
 
 from psutil import cpu_count, virtual_memory
 from PySide6.QtCore import QSize
-from PySide6.QtGui import QAction, QIcon
+from PySide6.QtGui import QAction, QColor, QIcon, QPixmap
 from PySide6.QtWidgets import QApplication, QPushButton
 
 
@@ -92,11 +92,11 @@ def set_setting_value(
 
 
 def create_action(
+    handler: Callable,
+    icon: QIcon,
     name: str,
     shortcut: str,
     status_tip: str,
-    handler: Callable,
-    icon: QIcon = QIcon(),
 ) -> QAction:
     """Create action for toolbar or menubar item."""
     action = QAction(icon, name)
@@ -107,11 +107,18 @@ def create_action(
 
 
 def create_button(icon: QIcon) -> QPushButton:
-    """Create button from `icon`."""
+    """Create button with `icon`."""
     button = QPushButton()
     button.setIcon(icon)
     button.setIconSize(QSize(56, 56))
     return button
+
+
+def create_style_icon(color: str) -> QIcon:
+    """Create square icon filled with `color`."""
+    pixmap = QPixmap(16, 16)
+    pixmap.fill(QColor(color))
+    return QIcon(pixmap)
 
 
 def delete_quarantine_attribute(file_name) -> None:
@@ -158,7 +165,7 @@ def stockfish() -> str:
 
 
 def svg_icon(file_name: str) -> QIcon:
-    """Return SVG icon from `file_name`."""
+    """Return SVG icon with `file_name`."""
     return QIcon(f":/icons/{file_name}.svg")
 
 

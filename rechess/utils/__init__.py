@@ -2,6 +2,7 @@ from . import icons
 from .helper_functions import (
     create_action,
     create_button,
+    create_style_icon,
     delete_quarantine_attribute,
     engine_configuration,
     initialize_app,
@@ -16,6 +17,7 @@ from .helper_functions import (
 __all__: list[str] = [
     "create_action",
     "create_button",
+    "create_style_icon",
     "delete_quarantine_attribute",
     "engine_configuration",
     "initialize_app",

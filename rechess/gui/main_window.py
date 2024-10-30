@@ -30,6 +30,7 @@ from rechess.gui.widgets import (
 from rechess.openings import openings_storage
 from rechess.utils import (
     create_action,
+    create_style_icon,
     svg_icon,
     set_setting_value,
     setting_value,
@@ -46,6 +47,8 @@ class MainWindow(QMainWindow):
 
     def __init__(self) -> None:
         super().__init__()
+
+        self.apply_style("light forest")
 
         self._game: ChessGame = ChessGame(Board())
         self._engine: UciEngine = UciEngine(self._game)
@@ -80,8 +83,6 @@ class MainWindow(QMainWindow):
         self.adjust_engine_buttons()
         self.connect_signals_to_slots()
 
-        self.apply_style("forest")
-
         if self._game.is_engine_on_turn():
             self.invoke_engine()
 
@@ -94,6 +95,13 @@ class MainWindow(QMainWindow):
             handler=self.show_about,
             status_tip="Shows info about ReChess, copyright, and license.",
         )
+        self.dark_forest_style_action = create_action(
+            shortcut="Alt+F1",
+            name="Dark forest",
+            icon=create_style_icon("#4d5f4d"),
+            status_tip="Applies the dark forest style.",
+            handler=lambda: self.apply_style("dark forest"),
+        )
         self.flip_action = create_action(
             name="Flip",
             handler=self.flip,
@@ -101,11 +109,12 @@ class MainWindow(QMainWindow):
             icon=svg_icon("flip"),
             status_tip="Flips the chessboard and its related widgets.",
         )
-        self.forest_style_action = create_action(
-            name="Forest",
-            shortcut="Alt+F",
-            handler=lambda: self.apply_style("forest"),
-            status_tip="Apply forest theme with fresh greens and bark browns.",
+        self.light_forest_style_action = create_action(
+            shortcut="Alt+F2",
+            name="Light forest",
+            icon=create_style_icon("#b8c6a3"),
+            status_tip="Applies the light forest style.",
+            handler=lambda: self.apply_style("light forest"),
         )
         self.load_engine_action = create_action(
             shortcut="Ctrl+L",
@@ -184,8 +193,11 @@ class MainWindow(QMainWindow):
         # General menu > Quit...
         general_menu.addAction(self.quit_action)
 
-        # Style menu > Forest
-        style_menu.addAction(self.forest_style_action)
+        # Style menu > Dark forest
+        style_menu.addAction(self.dark_forest_style_action)
+
+        # Style menu > Light forest
+        style_menu.addAction(self.light_forest_style_action)
 
         # Edit menu > Settings...
         edit_menu.addAction(self.settings_action)
