@@ -112,18 +112,18 @@ class SvgBoardWidget(QSvgWidget):
     def paintEvent(self, event: QPaintEvent) -> None:
         """Paint current state of board."""
         board_colors: dict[str, str] = {
-            "arrow blue": getattr(self, "_arrow_blue").name(),
-            "arrow green": getattr(self, "_arrow_green").name(),
-            "arrow red": getattr(self, "_arrow_red").name(),
-            "arrow yellow": getattr(self, "_arrow_yellow").name(),
-            "coord": getattr(self, "_coord").name(),
-            "inner border": getattr(self, "_inner_border").name(),
-            "margin": getattr(self, "_margin").name(),
-            "outer border": getattr(self, "_outer_border").name(),
-            "square dark": getattr(self, "_square_dark").name(),
-            "square dark lastmove": getattr(self, "_square_dark_lastmove").name(),
-            "square light": getattr(self, "_square_light").name(),
-            "square light lastmove": getattr(self, "_square_light_lastmove").name(),
+            "arrow blue": self._arrow_blue.name(),
+            "arrow green": self._arrow_green.name(),
+            "arrow red": self._arrow_red.name(),
+            "arrow yellow": self._arrow_yellow.name(),
+            "coord": self._coord.name(),
+            "inner border": self._inner_border.name(),
+            "margin": self._margin.name(),
+            "outer border": self._outer_border.name(),
+            "square dark": self._square_dark.name(),
+            "square dark lastmove": self._square_dark_lastmove.name(),
+            "square light": self._square_light.name(),
+            "square light lastmove": self._square_light_lastmove.name(),
         }
 
         svg_board: str = svg.board(
