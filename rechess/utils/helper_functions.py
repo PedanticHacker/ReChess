@@ -91,36 +91,12 @@ def set_setting_value(
         settings_file.write("\n")
 
 
-def app_style(file_name: str) -> str:
-    """Return app style from `file_name`."""
-    with open(f"rechess/assets/styles/{file_name}.qss") as qss_file:
-        return qss_file.read()
-
-
-def board_colors() -> dict[str, str]:
-    """Provide colors for chessboard elements."""
-    return {
-        "arrow blue": "#0056ff70",
-        "arrow green": "#1a9c2270",
-        "arrow red": "#cc262670",
-        "arrow yellow": "#ffa000a0",
-        "coord": "#f5f3f2",
-        "inner border": "#2c2826",
-        "margin": "#352f2d",
-        "outer border": "#2c2826",
-        "square dark": "#2c2826",
-        "square dark lastmove": "#352f2d",
-        "square light": "#45403d",
-        "square light lastmove": "#5c5552",
-    }
-
-
 def create_action(
     name: str,
-    icon: QIcon,
     shortcut: str,
     status_tip: str,
     handler: Callable,
+    icon: QIcon = QIcon(),
 ) -> QAction:
     """Create action for toolbar or menubar item."""
     action = QAction(icon, name)
@@ -164,7 +140,6 @@ def initialize_app() -> QApplication:
     app.setApplicationVersion("1.0")
     app.setDesktopFileName("ReChess")
     app.setStyle("fusion")
-    app.setStyleSheet(app_style("dark"))
     app.setWindowIcon(svg_icon("logo"))
     return app
 

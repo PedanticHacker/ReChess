@@ -80,6 +80,8 @@ class MainWindow(QMainWindow):
         self.adjust_engine_buttons()
         self.connect_signals_to_slots()
 
+        self.apply_style("forest")
+
         if self._game.is_engine_on_turn():
             self.invoke_engine()
 
@@ -98,6 +100,12 @@ class MainWindow(QMainWindow):
             shortcut="Ctrl+F",
             icon=svg_icon("flip"),
             status_tip="Flips the chessboard and its related widgets.",
+        )
+        self.forest_style_action = create_action(
+            name="Forest",
+            shortcut="Alt+F",
+            handler=lambda: self.apply_style("forest"),
+            status_tip="Apply forest theme with fresh greens and bark browns.",
         )
         self.load_engine_action = create_action(
             shortcut="Ctrl+L",
@@ -158,6 +166,9 @@ class MainWindow(QMainWindow):
         # General menu
         general_menu = menubar.addMenu("General")
 
+        # Style menu
+        style_menu = menubar.addMenu("Style")
+
         # Edit menu
         edit_menu = menubar.addMenu("Edit")
 
@@ -172,6 +183,9 @@ class MainWindow(QMainWindow):
 
         # General menu > Quit...
         general_menu.addAction(self.quit_action)
+
+        # Style menu > Forest
+        style_menu.addAction(self.forest_style_action)
 
         # Edit menu > Settings...
         edit_menu.addAction(self.settings_action)
@@ -332,6 +346,11 @@ class MainWindow(QMainWindow):
 
         if self._game.is_engine_on_turn() and not self._game.is_over():
             self.invoke_engine()
+
+    def apply_style(self, file_name: str) -> None:
+        """Apply style from `file_name`."""
+        with open(f"rechess/assets/styles/{file_name}.qss") as qss_file:
+            self.setStyleSheet(qss_file.read())
 
     def load_engine(self) -> None:
         """Show file manager to load UCI chess engine."""
