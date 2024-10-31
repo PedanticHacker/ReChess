@@ -1,3 +1,4 @@
+from functools import partial
 from pathlib import Path
 
 from chess import BLACK, Board, Move
@@ -87,83 +88,83 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def create_actions(self) -> None:
-        """Create actions to be used by menubar and toolbar."""
+        """Create actions for menubar items and toolbar buttons."""
         self.about_action = create_action(
-            shortcut="F1",
-            name="About ReChess",
-            icon=svg_icon("about"),
             handler=self.show_about,
+            icon=svg_icon("about"),
+            name="About ReChess",
+            shortcut="F1",
             status_tip="Shows info about ReChess, copyright, and license.",
         )
         self.dark_forest_style_action = create_action(
-            shortcut="Alt+F1",
-            name="Dark forest",
+            handler=partial(self.apply_style, "dark forest"),
             icon=create_style_icon("#4d5f4d"),
+            name="Dark forest",
+            shortcut="Alt+F1",
             status_tip="Applies the dark forest style.",
-            handler=lambda: self.apply_style("dark forest"),
         )
         self.flip_action = create_action(
-            name="Flip",
             handler=self.flip,
-            shortcut="Ctrl+F",
             icon=svg_icon("flip"),
+            name="Flip",
+            shortcut="Ctrl+F",
             status_tip="Flips the chessboard and its related widgets.",
         )
         self.light_forest_style_action = create_action(
-            shortcut="Alt+F2",
-            name="Light forest",
+            handler=partial(self.apply_style, "light forest"),
             icon=create_style_icon("#b8c6a3"),
+            name="Light forest",
+            shortcut="Alt+F2",
             status_tip="Applies the light forest style.",
-            handler=lambda: self.apply_style("light forest"),
         )
         self.load_engine_action = create_action(
-            shortcut="Ctrl+L",
-            name="Load engine...",
             handler=self.load_engine,
             icon=svg_icon("load-engine"),
+            name="Load engine...",
+            shortcut="Ctrl+L",
             status_tip="Shows the file manager to load a UCI chess engine.",
         )
         self.new_game_action = create_action(
+            handler=self.offer_new_game,
+            icon=svg_icon("new-game"),
             name="New game",
             shortcut="Ctrl+N",
-            icon=svg_icon("new-game"),
-            handler=self.offer_new_game,
             status_tip="Shows a dialog offering to start a new chess game.",
         )
         self.play_move_now_action = create_action(
-            shortcut="Ctrl+P",
-            name="Play move now",
             handler=self.play_move_now,
             icon=svg_icon("play-move-now"),
-            status_tip="Forces the chess engine to play on the current turn.",
+            name="Play move now",
+            shortcut="Ctrl+P",
+            status_tip="Forces the UCI chess engine to play on current turn.",
+        )
+        self.quit_action = create_action(
+            handler=self.quit,
+            icon=svg_icon("quit"),
+            name="Quit...",
+            shortcut="Ctrl+Q",
+            status_tip="Offers to quit ReChess.",
         )
         self.settings_action = create_action(
-            shortcut="Ctrl+,",
-            name="Settings...",
-            icon=svg_icon("settings"),
             handler=self.show_settings_dialog,
+            icon=svg_icon("settings"),
+            name="Settings...",
+            shortcut="Ctrl+,",
             status_tip="Shows the Settings dialog to edit app settings.",
         )
         self.start_analysis_action = create_action(
-            shortcut="F3",
-            name="Start analysis",
             handler=self.start_analysis,
             icon=svg_icon("start-analysis"),
-            status_tip="Starts analyzing the current chessboard position.",
+            name="Start analysis",
+            shortcut="F3",
+            status_tip="Starts analyzing the current position.",
         )
         self.stop_analysis_action = create_action(
-            shortcut="F4",
-            name="Stop analysis",
             handler=self.stop_analysis,
             icon=svg_icon("stop-analysis"),
-            status_tip="Stops analyzing the current chessboard position.",
-        )
-        self.quit_action = create_action(
-            name="Quit...",
-            handler=self.quit,
-            shortcut="Ctrl+Q",
-            icon=svg_icon("quit"),
-            status_tip="Offers to quit ReChess.",
+            name="Stop analysis",
+            shortcut="F4",
+            status_tip="Stops analyzing the current position.",
         )
 
     def create_menubar(self) -> None:

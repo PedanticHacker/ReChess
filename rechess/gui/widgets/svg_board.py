@@ -1,6 +1,6 @@
 from chess import svg
 from PySide6.QtCore import Property
-from PySide6.QtGui import QColor, QMouseEvent, QPaintEvent
+from PySide6.QtGui import QColor, QPaintEvent
 from PySide6.QtSvgWidgets import QSvgWidget
 
 from rechess.game import ChessGame
@@ -18,67 +18,56 @@ class SvgBoardWidget(QSvgWidget):
         lambda self: self._arrow_blue,
         lambda self, color: setattr(self, "_arrow_blue", color),
     )
-
     arrow_green: Property = Property(
         QColor,
         lambda self: self._arrow_green,
         lambda self, color: setattr(self, "_arrow_green", color),
     )
-
     arrow_red: Property = Property(
         QColor,
         lambda self: self._arrow_red,
         lambda self, color: setattr(self, "_arrow_red", color),
     )
-
     arrow_yellow: Property = Property(
         QColor,
         lambda self: self._arrow_yellow,
         lambda self, color: setattr(self, "_arrow_yellow", color),
     )
-
     coord: Property = Property(
         QColor,
         lambda self: self._coord,
         lambda self, color: setattr(self, "_coord", color),
     )
-
     inner_border: Property = Property(
         QColor,
         lambda self: self._inner_border,
         lambda self, color: setattr(self, "_inner_border", color),
     )
-
     margin: Property = Property(
         QColor,
         lambda self: self._margin,
         lambda self, color: setattr(self, "_margin", color),
     )
-
     outer_border: Property = Property(
         QColor,
         lambda self: self._outer_border,
         lambda self, color: setattr(self, "_outer_border", color),
     )
-
     square_dark: Property = Property(
         QColor,
         lambda self: self._square_dark,
         lambda self, color: setattr(self, "_square_dark", color),
     )
-
     square_dark_lastmove: Property = Property(
         QColor,
         lambda self: self._square_dark_lastmove,
         lambda self, color: setattr(self, "_square_dark_lastmove", color),
     )
-
     square_light: Property = Property(
         QColor,
         lambda self: self._square_light,
         lambda self, color: setattr(self, "_square_light", color),
     )
-
     square_light_lastmove: Property = Property(
         QColor,
         lambda self: self._square_light_lastmove,
@@ -88,7 +77,7 @@ class SvgBoardWidget(QSvgWidget):
     def __init__(self, game: ChessGame) -> None:
         super().__init__()
 
-        self._game: ChessGame = game
+        self._game = game
 
         self._arrow_blue: QColor = QColor()
         self._arrow_green: QColor = QColor()
@@ -103,15 +92,9 @@ class SvgBoardWidget(QSvgWidget):
         self._square_light: QColor = QColor()
         self._square_light_lastmove: QColor = QColor()
 
-    def mousePressEvent(self, event: QMouseEvent) -> None:
-        """Locate square on mouse button press."""
-        x: float = event.position().x()
-        y: float = event.position().y()
-        self._game.locate_square(x, y)
-
-    def paintEvent(self, event: QPaintEvent) -> None:
-        """Paint current state of board."""
-        board_colors: dict[str, str] = {
+    def _colors(self) -> dict[str, str]:
+        """Return dictionary with color values for board elements."""
+        return {
             "arrow blue": self._arrow_blue.name(),
             "arrow green": self._arrow_green.name(),
             "arrow red": self._arrow_red.name(),
@@ -126,15 +109,16 @@ class SvgBoardWidget(QSvgWidget):
             "square light lastmove": self._square_light_lastmove.name(),
         }
 
-        svg_board: str = svg.board(
+    def paintEvent(self, event: QPaintEvent) -> None:
+        """Paint current state of board."""
+        svg_board = svg.board(
             arrows=self._game.arrows,
             board=self._game.board,
-            check=self._game.king_square,
-            colors=board_colors,
+            check=self._game.king_in_check,
+            colors=self._colors(),
             orientation=setting_value("board", "orientation"),
             squares=self._game.legal_moves,
         )
-        encoded_svg_board: bytes = svg_board.encode()
-        self.load(encoded_svg_board)
+        self.load(svg_board.encode())
 
         super().paintEvent(event)

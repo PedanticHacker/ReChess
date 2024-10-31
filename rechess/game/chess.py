@@ -48,7 +48,7 @@ class ChessGame(QObject):
         return self._board
 
     @property
-    def king_square(self) -> Square | None:
+    def king_in_check(self) -> Square | None:
         """Return square of king in check."""
         if self._board.is_check():
             return self._board.king(self._board.turn)
