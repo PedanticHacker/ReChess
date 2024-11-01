@@ -49,7 +49,7 @@ class MainWindow(QMainWindow):
     def __init__(self) -> None:
         super().__init__()
 
-        self.apply_style("light forest")
+        self.apply_style("dark forest")
 
         self._game: ChessGame = ChessGame(Board())
         self._engine: UciEngine = UciEngine(self._game)
@@ -98,7 +98,7 @@ class MainWindow(QMainWindow):
         )
         self.dark_forest_style_action = create_action(
             handler=partial(self.apply_style, "dark forest"),
-            icon=create_style_icon("#4d5f4d"),
+            icon=create_style_icon("#2d382d"),
             name="Dark forest",
             shortcut="Alt+F1",
             status_tip="Applies the dark forest style.",
@@ -112,7 +112,7 @@ class MainWindow(QMainWindow):
         )
         self.light_forest_style_action = create_action(
             handler=partial(self.apply_style, "light forest"),
-            icon=create_style_icon("#b8c6a3"),
+            icon=create_style_icon("#e8efe6"),
             name="Light forest",
             shortcut="Alt+F2",
             status_tip="Applies the light forest style.",
