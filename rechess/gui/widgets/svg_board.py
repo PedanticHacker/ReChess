@@ -1,6 +1,6 @@
 from chess import svg
 from PySide6.QtCore import Property
-from PySide6.QtGui import QColor, QPaintEvent
+from PySide6.QtGui import QColor, QMouseEvent, QPaintEvent
 from PySide6.QtSvgWidgets import QSvgWidget
 
 from rechess.game import ChessGame
@@ -108,6 +108,12 @@ class SvgBoardWidget(QSvgWidget):
             "square light": self._square_light.name(),
             "square light lastmove": self._square_light_lastmove.name(),
         }
+
+    def mousePressEvent(self, event: QMouseEvent) -> None:
+        """Locate square on mouse button press."""
+        x: float = event.position().x()
+        y: float = event.position().y()
+        self._game.locate_square(x, y)
 
     def paintEvent(self, event: QPaintEvent) -> None:
         """Paint current state of board."""
