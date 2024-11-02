@@ -31,10 +31,10 @@ from rechess.gui.widgets import (
 from rechess.openings import openings_storage
 from rechess.utils import (
     create_action,
-    create_style_icon,
-    svg_icon,
     set_setting_value,
     setting_value,
+    style_icon,
+    svg_icon,
     system_name,
 )
 
@@ -49,7 +49,7 @@ class MainWindow(QMainWindow):
     def __init__(self) -> None:
         super().__init__()
 
-        self.apply_style("dark forest")
+        self.apply_style("dark-forest")
 
         self._game: ChessGame = ChessGame(Board())
         self._engine: UciEngine = UciEngine(self._game)
@@ -97,18 +97,32 @@ class MainWindow(QMainWindow):
             status_tip="Shows info about ReChess, copyright, and license.",
         )
         self.dark_forest_style_action = create_action(
-            handler=partial(self.apply_style, "dark forest"),
-            icon=create_style_icon("#2d382d"),
+            handler=partial(self.apply_style, "dark-forest"),
+            icon=style_icon("#2d382d"),
             name="Dark forest",
             shortcut="Alt+F1",
             status_tip="Applies the dark forest style.",
         )
         self.dark_mint_style_action = create_action(
-            handler=partial(self.apply_style, "dark mint"),
-            icon=create_style_icon("#1a2e2e"),
+            handler=partial(self.apply_style, "dark-mint"),
+            icon=style_icon("#1a2e2e"),
             name="Dark mint",
             shortcut="Alt+F2",
             status_tip="Applies the dark mint style.",
+        )
+        self.dark_nebula_style_action = create_action(
+            handler=partial(self.apply_style, "dark-nebula"),
+            icon=style_icon("#1a1025"),
+            name="Dark nebula",
+            shortcut="Alt+F3",
+            status_tip="Applies the dark nebula style.",
+        )
+        self.dark_ocean_style_action = create_action(
+            handler=partial(self.apply_style, "dark-ocean"),
+            icon=style_icon("#1a2838"),
+            name="Dark ocean",
+            shortcut="Alt+F4",
+            status_tip="Applies the dark ocean style.",
         )
         self.flip_action = create_action(
             handler=self.flip,
@@ -118,18 +132,32 @@ class MainWindow(QMainWindow):
             status_tip="Flips the chessboard and its related widgets.",
         )
         self.light_forest_style_action = create_action(
-            handler=partial(self.apply_style, "light forest"),
-            icon=create_style_icon("#e8efe6"),
+            handler=partial(self.apply_style, "light-forest"),
+            icon=style_icon("#e8efe6"),
             name="Light forest",
-            shortcut="Alt+F3",
+            shortcut="Alt+F5",
             status_tip="Applies the light forest style.",
         )
         self.light_mint_style_action = create_action(
-            handler=partial(self.apply_style, "light mint"),
-            icon=create_style_icon("#ebf5f3"),
+            handler=partial(self.apply_style, "light-mint"),
+            icon=style_icon("#ebf5f3"),
             name="Light mint",
-            shortcut="Alt+F4",
+            shortcut="Alt+F6",
             status_tip="Applies the light mint style.",
+        )
+        self.light_nebula_style_action = create_action(
+            handler=partial(self.apply_style, "light-nebula"),
+            icon=style_icon("#f4ebff"),
+            name="Light nebula",
+            shortcut="Alt+F7",
+            status_tip="Applies the light nebula style.",
+        )
+        self.light_ocean_style_action = create_action(
+            handler=partial(self.apply_style, "light-ocean"),
+            icon=style_icon("#ebf3f8"),
+            name="Light ocean",
+            shortcut="Alt+F8",
+            status_tip="Applies the light ocean style.",
         )
         self.load_engine_action = create_action(
             handler=self.load_engine,
@@ -214,11 +242,23 @@ class MainWindow(QMainWindow):
         # Style menu > Dark mint
         style_menu.addAction(self.dark_mint_style_action)
 
+        # Style menu > Dark nebula
+        style_menu.addAction(self.dark_nebula_style_action)
+
+        # Style menu > Dark ocean
+        style_menu.addAction(self.dark_ocean_style_action)
+
         # Style menu > Light forest
         style_menu.addAction(self.light_forest_style_action)
 
         # Style menu > Light mint
         style_menu.addAction(self.light_mint_style_action)
+
+        # Style menu > Light nebula
+        style_menu.addAction(self.light_nebula_style_action)
+
+        # Style menu > Light ocean
+        style_menu.addAction(self.light_ocean_style_action)
 
         # Edit menu > Settings...
         edit_menu.addAction(self.settings_action)

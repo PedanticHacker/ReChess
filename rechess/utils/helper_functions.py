@@ -114,13 +114,6 @@ def create_button(icon: QIcon) -> QPushButton:
     return button
 
 
-def create_style_icon(color: str) -> QIcon:
-    """Create square icon filled with `color`."""
-    pixmap = QPixmap(16, 16)
-    pixmap.fill(QColor(color))
-    return QIcon(pixmap)
-
-
 def delete_quarantine_attribute(file_name) -> None:
     """Delete quarantine attribute for `file_name` on macOS."""
     if system_name() == "macos":
@@ -162,6 +155,13 @@ def stockfish() -> str:
         f"rechess/assets/engines/stockfish-17/{system_name()}"
         f"/{_stockfish_file_name()}"
     )
+
+
+def style_icon(color: str) -> QIcon:
+    """Return square icon filled with `color`."""
+    pixmap = QPixmap(16, 16)
+    pixmap.fill(QColor(color))
+    return QIcon(pixmap)
 
 
 def svg_icon(file_name: str) -> QIcon:
