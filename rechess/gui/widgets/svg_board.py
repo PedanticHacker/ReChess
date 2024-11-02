@@ -13,26 +13,6 @@ svg.XX = "<circle id='xx' r='5' cx='22' cy='22' stroke='#303030' fill='#e5e5e5'/
 class SvgBoardWidget(QSvgWidget):
     """Board with interactive pieces as SVG widget."""
 
-    arrow_blue: Property = Property(
-        QColor,
-        lambda self: self._arrow_blue,
-        lambda self, color: setattr(self, "_arrow_blue", color),
-    )
-    arrow_green: Property = Property(
-        QColor,
-        lambda self: self._arrow_green,
-        lambda self, color: setattr(self, "_arrow_green", color),
-    )
-    arrow_red: Property = Property(
-        QColor,
-        lambda self: self._arrow_red,
-        lambda self, color: setattr(self, "_arrow_red", color),
-    )
-    arrow_yellow: Property = Property(
-        QColor,
-        lambda self: self._arrow_yellow,
-        lambda self, color: setattr(self, "_arrow_yellow", color),
-    )
     coord: Property = Property(
         QColor,
         lambda self: self._coord,
@@ -79,10 +59,6 @@ class SvgBoardWidget(QSvgWidget):
 
         self._game = game
 
-        self._arrow_blue: QColor = QColor()
-        self._arrow_green: QColor = QColor()
-        self._arrow_red: QColor = QColor()
-        self._arrow_yellow: QColor = QColor()
         self._coord: QColor = QColor()
         self._inner_border: QColor = QColor()
         self._margin: QColor = QColor()
@@ -95,10 +71,6 @@ class SvgBoardWidget(QSvgWidget):
     def _colors(self) -> dict[str, str]:
         """Return dictionary with color values for board elements."""
         return {
-            "arrow blue": self._arrow_blue.name(),
-            "arrow green": self._arrow_green.name(),
-            "arrow red": self._arrow_red.name(),
-            "arrow yellow": self._arrow_yellow.name(),
             "coord": self._coord.name(),
             "inner border": self._inner_border.name(),
             "margin": self._margin.name(),

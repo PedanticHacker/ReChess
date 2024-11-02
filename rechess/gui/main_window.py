@@ -103,6 +103,13 @@ class MainWindow(QMainWindow):
             shortcut="Alt+F1",
             status_tip="Applies the dark forest style.",
         )
+        self.dark_mint_style_action = create_action(
+            handler=partial(self.apply_style, "dark mint"),
+            icon=create_style_icon("#1a2e2e"),
+            name="Dark mint",
+            shortcut="Alt+F2",
+            status_tip="Applies the dark mint style.",
+        )
         self.flip_action = create_action(
             handler=self.flip,
             icon=svg_icon("flip"),
@@ -114,8 +121,15 @@ class MainWindow(QMainWindow):
             handler=partial(self.apply_style, "light forest"),
             icon=create_style_icon("#e8efe6"),
             name="Light forest",
-            shortcut="Alt+F2",
+            shortcut="Alt+F3",
             status_tip="Applies the light forest style.",
+        )
+        self.light_mint_style_action = create_action(
+            handler=partial(self.apply_style, "light mint"),
+            icon=create_style_icon("#ebf5f3"),
+            name="Light mint",
+            shortcut="Alt+F4",
+            status_tip="Applies the light mint style.",
         )
         self.load_engine_action = create_action(
             handler=self.load_engine,
@@ -197,8 +211,14 @@ class MainWindow(QMainWindow):
         # Style menu > Dark forest
         style_menu.addAction(self.dark_forest_style_action)
 
+        # Style menu > Dark mint
+        style_menu.addAction(self.dark_mint_style_action)
+
         # Style menu > Light forest
         style_menu.addAction(self.light_forest_style_action)
+
+        # Style menu > Light mint
+        style_menu.addAction(self.light_mint_style_action)
 
         # Edit menu > Settings...
         edit_menu.addAction(self.settings_action)

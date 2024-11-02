@@ -193,16 +193,12 @@ QToolTip {
 }
 
 SvgBoardWidget {
-  qproperty-arrow_blue: #00308880;
-  qproperty-arrow_green: #15781b80;
-  qproperty-arrow_red: #88202080;
-  qproperty-arrow_yellow: #e68f00b3;
   qproperty-coord: #2c3e1e;
   qproperty-inner_border: #506f46;
   qproperty-margin: #d9e4d5;
   qproperty-outer_border: #2c3e1e;
-  qproperty-square_dark: #506f46;
-  qproperty-square_dark_lastmove: #3f5a2e;
+  qproperty-square_dark: #8b6b47;
+  qproperty-square_dark_lastmove: #755a3c;
   qproperty-square_light: #b8c6a3;
   qproperty-square_light_lastmove: #95a88c;
 }
