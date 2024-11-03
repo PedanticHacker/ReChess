@@ -59,6 +59,7 @@ from whatever historic move onwards, if you like
 - force the chess engine to make a move when its opponent is on turn
 - paste a FEN from the clipboard by double-clicking the FEN editor, then
 analyze the chessboard position or play a game from there onwards
+- change the app style to one of the dark ones or the light ones
 
 ## Which chess variants are supported?
 
