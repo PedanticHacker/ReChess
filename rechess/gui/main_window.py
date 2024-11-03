@@ -31,11 +31,11 @@ from rechess.gui.widgets import (
 from rechess.openings import openings_storage
 from rechess.utils import (
     create_action,
+    platform_name,
     set_setting_value,
     setting_value,
     style_icon,
     svg_icon,
-    system_name,
 )
 
 
@@ -427,25 +427,25 @@ class MainWindow(QMainWindow):
 
     def load_engine(self) -> None:
         """Show file manager to load UCI chess engine."""
-        file_name, _ = QFileDialog.getOpenFileName(
+        path_to_file, _ = QFileDialog.getOpenFileName(
             self,
             "File Manager",
             Path.home().as_posix(),
-            "UCI chess engine (*.exe)" if system_name() == "windows" else "",
+            "UCI chess engine (*.exe)" if platform_name() == "windows" else "",
         )
 
-        if file_name:
-            self.start_new_engine(file_name)
+        if path_to_file:
+            self.start_new_engine(path_to_file)
 
-    def start_new_engine(self, file_name: str) -> None:
-        """Start new chess engine from `file_name`."""
+    def start_new_engine(self, path_to_file: str) -> None:
+        """Start new UCI chess engine from file at `path_to_file`."""
         self.stop_analysis()
 
         self._game.clear_arrows()
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
 
-        self._engine.load(file_name)
+        self._engine.load_from_file_at(path_to_file)
         self._engine_name_label.setText(self._engine.name)
 
         if self._game.is_engine_on_turn() and not self._game.is_over():

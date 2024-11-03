@@ -11,6 +11,9 @@ from PySide6.QtGui import QAction, QColor, QIcon, QPixmap
 from PySide6.QtWidgets import QApplication, QPushButton
 
 
+PATH_TO_SETTINGS: str = "rechess/settings.json"
+
+
 BoardSection: TypeAlias = Literal["board"]
 ClockSection: TypeAlias = Literal["clock"]
 EngineSection: TypeAlias = Literal["engine"]
@@ -22,27 +25,31 @@ EngineKey: TypeAlias = Literal["is_pondering", "is_white"]
 SettingKey: TypeAlias = BoardKey | ClockKey | EngineKey
 
 SettingValue: TypeAlias = bool | float
+SettingsDict: TypeAlias = dict[str, dict[str, SettingValue]]
+
+
+def _optimal_cpu_threads() -> int:
+    """Return all CPU threads, but reserve 1 for other CPU tasks."""
+    cpu_threads: int | None = cpu_count()
+    return 1 if not cpu_threads or cpu_threads == 1 else cpu_threads - 1
 
 
 def _optimal_hash_size() -> int:
-    """Return 70% of available RAM in MB as optimal hash size."""
-    available_ram = virtual_memory().available
-    megabytes_factor = 1048576
-    seventy_percent = 0.70
-    return round(available_ram / megabytes_factor * seventy_percent)
+    """Return approximately 70% of available RAM."""
+    SEVENTY_PERCENT: int = 1497966
+    available_ram: int = virtual_memory().available
+    return available_ram // SEVENTY_PERCENT
 
 
-def _optimal_threads() -> int:
-    """Return optimal threads, reserving 1 for other CPU tasks."""
-    available_threads = cpu_count(logical=True)
-    reserved_threads = 1
-    minimum_threads = 1
-    return max(minimum_threads, available_threads - reserved_threads)
+def _settings() -> SettingsDict:
+    """Return all settings from file."""
+    with open(PATH_TO_SETTINGS) as file:
+        return json.load(file)
 
 
-def _stockfish_file_name() -> str:
-    """Return platform-specific file name of Stockfish chess engine."""
-    return "stockfish.exe" if system_name() == "windows" else "stockfish"
+def _stockfish_filename() -> str:
+    """Return platform-specific filename of Stockfish chess engine."""
+    return "stockfish.exe" if platform_name() == "windows" else "stockfish"
 
 
 @overload
@@ -58,10 +65,9 @@ def setting_value(section: EngineSection, key: EngineKey) -> bool: ...
 
 
 def setting_value(section: SettingSection, key: SettingKey) -> SettingValue:
-    """Return JSON value of `key` from `section`."""
-    with open("rechess/settings.json") as settings_file:
-        settings_data = json.load(settings_file)
-    return settings_data[section][key]
+    """Return value of `key` from `section`."""
+    settings: SettingsDict = _settings()
+    return settings[section][key]
 
 
 @overload
@@ -81,14 +87,13 @@ def set_setting_value(
     key: SettingKey,
     value: SettingValue,
 ) -> None:
-    """Set JSON `value` to `key` for `section`."""
-    with open("rechess/settings.json") as settings_file:
-        settings_data = json.load(settings_file)
-    settings_data[section][key] = value
+    """Set `value` to `key` for `section`."""
+    settings: SettingsDict = _settings()
+    settings[section][key] = value
 
-    with open("rechess/settings.json", mode="w", newline="\n") as settings_file:
-        json.dump(settings_data, settings_file, indent=4)
-        settings_file.write("\n")
+    with open(PATH_TO_SETTINGS, mode="w", newline="\n") as file:
+        json.dump(settings, file, indent=4)
+        file.write("\n")
 
 
 def create_action(
@@ -99,7 +104,7 @@ def create_action(
     status_tip: str,
 ) -> QAction:
     """Create action for toolbar or menubar item."""
-    action = QAction(icon, name)
+    action: QAction = QAction(icon, name)
     action.setShortcut(shortcut)
     action.setStatusTip(status_tip)
     action.triggered.connect(handler)
@@ -108,32 +113,32 @@ def create_action(
 
 def create_button(icon: QIcon) -> QPushButton:
     """Create button with `icon`."""
-    button = QPushButton()
+    button: QPushButton = QPushButton()
     button.setIcon(icon)
     button.setIconSize(QSize(56, 56))
     return button
 
 
-def delete_quarantine_attribute(file_name) -> None:
-    """Delete quarantine attribute for `file_name` on macOS."""
-    if system_name() == "macos":
-        file_attributes = subprocess.run(
-            ["xattr", "-l", file_name],
+def delete_quarantine_attribute(path_to_file: str) -> None:
+    """Delete quarantine attribute for file at `path_to_file` on macOS."""
+    if platform_name() == "macos":
+        file_attributes: str = subprocess.run(
+            ["xattr", "-l", path_to_file],
             capture_output=True,
             text=True,
-        )
+        ).stdout
 
-        if "com.apple.quarantine" in file_attributes.stdout:
-            subprocess.run(["xattr", "-d", "com.apple.quarantine", file_name])
+        if "com.apple.quarantine" in file_attributes:
+            subprocess.run(["xattr", "-d", "com.apple.quarantine", path_to_file])
 
 
 def engine_configuration() -> dict[str, int]:
     """Return optimal configuration for UCI chess engine."""
-    return {"Hash": _optimal_hash_size(), "Threads": _optimal_threads()}
+    return {"Hash": _optimal_hash_size(), "Threads": _optimal_cpu_threads()}
 
 
 def initialize_app() -> QApplication:
-    """Initialize ReChess GUI app and set some basics."""
+    """Initialize ReChess GUI app with basic settings."""
     app: QApplication = QApplication()
     app.setApplicationDisplayName("ReChess")
     app.setApplicationName("ReChess")
@@ -144,32 +149,32 @@ def initialize_app() -> QApplication:
     return app
 
 
-def make_executable(file_name) -> None:
-    """Make `file_name` be executable."""
-    os.chmod(file_name, os.stat(file_name).st_mode | stat.S_IXUSR)
+def make_executable(path_to_file: str) -> None:
+    """Make file at `path_to_file` be executable."""
+    os.chmod(path_to_file, os.stat(path_to_file).st_mode | stat.S_IXUSR)
 
 
-def stockfish() -> str:
-    """Return file path to default Stockfish 17 chess engine."""
+def path_to_stockfish() -> str:
+    """Return path to executable file of Stockfish 17."""
     return (
-        f"rechess/assets/engines/stockfish-17/{system_name()}"
-        f"/{_stockfish_file_name()}"
+        f"rechess/assets/engines/stockfish-17/{platform_name()}"
+        f"/{_stockfish_filename()}"
     )
+
+
+def platform_name() -> str:
+    """Return platform name in lowercase."""
+    name: str = platform.system().lower()
+    return "macos" if name == "darwin" else name
 
 
 def style_icon(color: str) -> QIcon:
     """Return square icon filled with `color`."""
-    pixmap = QPixmap(16, 16)
+    pixmap: QPixmap = QPixmap(16, 16)
     pixmap.fill(QColor(color))
     return QIcon(pixmap)
 
 
-def svg_icon(file_name: str) -> QIcon:
-    """Return SVG icon with `file_name`."""
-    return QIcon(f":/icons/{file_name}.svg")
-
-
-def system_name() -> str:
-    """Return operating system name in lowercase."""
-    operating_system = platform.system().lower()
-    return "macos" if operating_system == "darwin" else operating_system
+def svg_icon(filename: str) -> QIcon:
+    """Return SVG icon from file at `filename`."""
+    return QIcon(f":/icons/{filename}.svg")

@@ -197,8 +197,8 @@ SvgBoardWidget {
   qproperty-inner_border: #4d5f4d;
   qproperty-margin: #334033;
   qproperty-outer_border: #4d5f4d;
-  qproperty-square_dark: #735d4c;
-  qproperty-square_dark_lastmove: #614d3f;
+  qproperty-square_dark: #4d4d3f;
+  qproperty-square_dark_lastmove: #3f3f34;
   qproperty-square_light: #5f735f;
   qproperty-square_light_lastmove: #6b806b;
 }

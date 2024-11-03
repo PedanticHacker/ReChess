@@ -6,12 +6,12 @@ from .helper_functions import (
     engine_configuration,
     initialize_app,
     make_executable,
+    path_to_stockfish,
+    platform_name,
     set_setting_value,
     setting_value,
-    stockfish,
     style_icon,
     svg_icon,
-    system_name,
 )
 
 __all__: list[str] = [
@@ -21,10 +21,10 @@ __all__: list[str] = [
     "engine_configuration",
     "initialize_app",
     "make_executable",
+    "path_to_stockfish",
+    "platform_name",
     "set_setting_value",
     "setting_value",
-    "stockfish",
     "style_icon",
     "svg_icon",
-    "system_name",
 ]

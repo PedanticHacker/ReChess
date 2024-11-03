@@ -9,8 +9,8 @@ from rechess.utils import (
     delete_quarantine_attribute,
     engine_configuration,
     make_executable,
+    path_to_stockfish,
     setting_value,
-    stockfish,
 )
 
 
@@ -29,16 +29,16 @@ class UciEngine(QObject):
 
         self._analyzing: bool = False
 
-        self.load(stockfish())
+        self.load_from_file_at(path_to_stockfish())
 
-    def load(self, file_name: str) -> None:
-        """Load UCI chess engine from `file_name`."""
+    def load_from_file_at(self, path_to_file: str) -> None:
+        """Load UCI chess engine from file at `path_to_file`."""
         with suppress(EngineError):
-            delete_quarantine_attribute(file_name)
-            make_executable(file_name)
+            delete_quarantine_attribute(path_to_file)
+            make_executable(path_to_file)
 
             self.quit()
-            self._loaded_engine = SimpleEngine.popen_uci(file_name)
+            self._loaded_engine = SimpleEngine.popen_uci(path_to_file)
             self._loaded_engine.configure(engine_configuration())
 
     def play_move(self) -> None:
