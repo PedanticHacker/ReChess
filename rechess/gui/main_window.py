@@ -508,10 +508,11 @@ class MainWindow(QMainWindow):
         """Refresh current state of UI."""
         self.stop_analysis()
 
+        self._fen_editor.hide_warning()
         self._table_model.refresh_view()
         self._engine_analysis_label.clear()
         self._table_view.select_last_item()
-        self._fen_editor.hide_warning_effect()
+
         self._evaluation_bar.reset_appearance()
 
         self.show_fen()
@@ -550,8 +551,8 @@ class MainWindow(QMainWindow):
         self._game.set_new_game()
         self._table_model.reset()
 
+        self._fen_editor.hide_warning()
         self._engine_analysis_label.clear()
-        self._fen_editor.hide_warning_effect()
         self._evaluation_bar.reset_appearance()
 
         self.show_fen()
@@ -619,8 +620,9 @@ class MainWindow(QMainWindow):
         self.stop_analysis()
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
+        self._fen_editor.hide_warning()
         self._engine_analysis_label.clear()
-        self._fen_editor.hide_warning_effect()
+
         self._evaluation_bar.reset_appearance()
 
         if self._game.is_over():

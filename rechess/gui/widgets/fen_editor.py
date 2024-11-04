@@ -1,7 +1,7 @@
 from chess import Board
-from PySide6.QtCore import Qt, Signal, Slot
+from PySide6.QtCore import Signal, Slot
 from PySide6.QtGui import QMouseEvent
-from PySide6.QtWidgets import QGraphicsColorizeEffect, QLineEdit
+from PySide6.QtWidgets import QLineEdit
 
 
 class FenEditorWidget(QLineEdit):
@@ -14,29 +14,20 @@ class FenEditorWidget(QLineEdit):
 
         self._board: Board = board
 
-        self._create_colorize_effect()
-
         self.setMaxLength(90)
         self.setFixedSize(500, 20)
         self.setText(self._board.fen())
 
         self.textEdited.connect(self.on_text_edited)
 
-    def _create_colorize_effect(self) -> None:
-        """Create, configure, and initially hide colorize effect."""
-        self._colorize_effect: QGraphicsColorizeEffect = QGraphicsColorizeEffect(self)
-        self._colorize_effect.setColor(Qt.GlobalColor.red)
-        self._colorize_effect.setStrength(0.5)
-        self._colorize_effect.setEnabled(False)
-        self.setGraphicsEffect(self._colorize_effect)
+    def show_warning(self) -> None:
+        """Show background color in red to indicate invalid FEN."""
+        self.setStyleSheet("background-color: red;")
 
-    def show_warning_effect(self) -> None:
-        """Show colorize effect in red to indicate warning."""
-        self._colorize_effect.setEnabled(True)
-
-    def hide_warning_effect(self) -> None:
-        """Hide colorize effect in red to indicate normal state."""
-        self._colorize_effect.setEnabled(False)
+    def hide_warning(self) -> None:
+        """Hide background color in red to indicate valid FEN."""
+        self.setStyleSheet("")
+        self.clearFocus()
 
     def mouseDoubleClickEvent(self, event: QMouseEvent) -> None:
         """Paste FEN from clipboard on mouse double-click."""
@@ -46,13 +37,13 @@ class FenEditorWidget(QLineEdit):
 
     @Slot(str)
     def on_text_edited(self, edited_text: str) -> None:
-        """Try to set valid chessboard position from `edited_text`."""
+        """Try to set valid position from `edited_text`."""
         try:
             self._board.set_fen(edited_text)
         except (IndexError, ValueError):
-            self.show_warning_effect()
+            self.show_warning()
         else:
             if self._board.is_valid():
                 self.clearFocus()
-                self.hide_warning_effect()
+                self.hide_warning()
                 self.validated.emit()
