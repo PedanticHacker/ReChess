@@ -32,7 +32,7 @@ class TableModel(QAbstractTableModel):
         self,
         index: QModelIndex | QPersistentModelIndex,
     ) -> Qt.ItemFlag:
-        """Return flags for enabling and selecting items with moves."""
+        """Return flags for move at `index`."""
         if self.data(index):
             return Qt.ItemFlag.ItemIsEnabled | Qt.ItemFlag.ItemIsSelectable
         else:
