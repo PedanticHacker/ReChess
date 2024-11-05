@@ -53,7 +53,7 @@ class MainWindow(QMainWindow):
 
         self._game: ChessGame = ChessGame(Board())
         self._engine: UciEngine = UciEngine(self._game)
-        self._table_model: TableModel = TableModel(self._game.notation_items)
+        self._table_model: TableModel = TableModel(self._game.notation)
 
         self._black_clock: ChessClockWidget = ChessClockWidget(ClockColor.Black)
         self._white_clock: ChessClockWidget = ChessClockWidget(ClockColor.White)

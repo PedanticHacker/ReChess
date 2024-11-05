@@ -21,7 +21,7 @@ from rechess.utils import setting_value
 
 
 class ChessGame(QObject):
-    """Implementation of chess game rules."""
+    """Implementation of chess game."""
 
     move_played: Signal = Signal(Move)
 
@@ -31,20 +31,20 @@ class ChessGame(QObject):
         self._board: Board = board
 
         self._arrows: list[Arrow] = []
+        self._notation: list[str] = []
         self._positions: list[Board] = []
-        self._notation_items: list[str] = []
         self._sound_effect: QSoundEffect = QSoundEffect()
 
         self.set_new_game()
 
     @property
     def arrows(self) -> list[Arrow]:
-        """Return arrows on chessboard."""
+        """Return arrows on board."""
         return self._arrows
 
     @property
     def board(self) -> Board:
-        """Return current state of chessboard."""
+        """Return current state of board."""
         return self._board
 
     @property
@@ -56,7 +56,7 @@ class ChessGame(QObject):
 
     @property
     def legal_moves(self) -> list[Square] | None:
-        """Return legal moves for piece from its origin square."""
+        """Return legal moves for piece."""
         if self.from_square == -1:
             return None
 
@@ -65,13 +65,13 @@ class ChessGame(QObject):
         return [legal_move.to_square for legal_move in legal_moves]
 
     @property
-    def notation_items(self) -> list[str]:
-        """Return notation items."""
-        return self._notation_items
+    def notation(self) -> list[str]:
+        """Return chess notation in SAN format."""
+        return self._notation
 
     @property
     def result(self) -> str:
-        """Return current chess game's result."""
+        """Return result of current game."""
         result_rewordings = {
             "1/2-1/2": "Draw",
             "0-1": "Black wins",
@@ -86,49 +86,43 @@ class ChessGame(QObject):
         return self._board.turn
 
     def set_new_game(self) -> None:
-        """Reset current chess game to starting state."""
-        self._board.reset()
+        """Reset current game to starting state."""
         self._arrows.clear()
+        self._board.reset()
+        self._notation.clear()
         self._positions.clear()
-        self._notation_items.clear()
 
         self.reset_squares()
 
     def reset_squares(self) -> None:
-        """Reset piece's origin and target squares."""
+        """Reset origin and target squares of piece."""
         self.from_square: Square = -1
         self.to_square: Square = -1
 
     def push(self, move: Move) -> None:
-        """Push `move` on chessboard."""
+        """Push `move` on board."""
         self.set_arrow(move)
         self.play_sound_effect(move)
 
         notation_item: str = self._board.san_and_push(move)
-        self._notation_items.append(notation_item)
+        self._notation.append(notation_item)
 
         position: Board = self._board.copy()
         self._positions.append(position)
 
     def set_arrow(self, move: Move) -> None:
-        """Set arrow on chessboard from `move`."""
-        self._arrows = [
-            Arrow(
-                tail=move.from_square,
-                head=move.to_square,
-                color="green",
-            )
-        ]
+        """Set arrow for `move`."""
+        self._arrows = [Arrow(move.from_square, move.to_square)]
 
     def clear_arrows(self) -> None:
-        """Clear all arrows on chessboard."""
+        """Clear all arrows on board."""
         self._arrows.clear()
 
     def play_sound_effect(self, move: Move) -> None:
-        """Play sound effect from `move`."""
+        """Play sound effect for `move`."""
         is_capture: bool = self._board.is_capture(move)
-        file_name: str = "capture.wav" if is_capture else "move.wav"
-        file_url: QUrl = QUrl(f"file:rechess/assets/audio/{file_name}")
+        filename: str = "capture.wav" if is_capture else "move.wav"
+        file_url: QUrl = QUrl(f"file:rechess/assets/audio/{filename}")
         self._sound_effect.setSource(file_url)
         self._sound_effect.play()
 
@@ -185,28 +179,28 @@ class ChessGame(QObject):
         self.set_arrow(move)
 
     def delete_data_after(self, ply_index: int) -> None:
-        """Delete positions and notation items after `ply_index`."""
+        """Delete notation and positions after `ply_index`."""
         if ply_index < 0:
             self.set_new_game()
         else:
-            after_ply_index: slice = slice(ply_index + 1, len(self._notation_items))
+            after_ply_index: slice = slice(ply_index + 1, len(self._notation))
+            del self._notation[after_ply_index]
             del self._positions[after_ply_index]
-            del self._notation_items[after_ply_index]
 
     def is_engine_on_turn(self) -> bool:
-        """Return True if chess engine is on turn, else False."""
+        """Return True if engine is on turn, else False."""
         return self._board.turn == setting_value("engine", "is_white")
 
     def is_in_progress(self) -> bool:
-        """Return True if chess game is in progress, else False."""
-        return bool(self._notation_items)
+        """Return True if game is in progress, else False."""
+        return bool(self._notation)
 
     def is_legal(self, move: Move) -> bool:
         """Return True if `move` is legal, else False."""
         return self._board.is_legal(move)
 
     def is_over(self) -> bool:
-        """Return True if chess game is over, else False."""
+        """Return True if game is over, else False."""
         return self._board.is_game_over(claim_draw=True)
 
     def is_white_on_turn(self) -> bool:
