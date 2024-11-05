@@ -158,16 +158,16 @@ class ChessGame(QObject):
             move: Move = self._board.find_move(origin, target)
 
             if move.promotion:
-                move.promotion = self.promotion_piece()
+                move.promotion = self.promotion_piece_type()
 
             self.move_played.emit(move)
 
-    def promotion_piece(self) -> PieceType | None:
-        """Return promotion piece from promotion dialog."""
+    def promotion_piece_type(self) -> PieceType | None:
+        """Return promotion piece type from promotion dialog."""
         promotion_dialog: PromotionDialog = PromotionDialog(self._board.turn)
 
         if promotion_dialog.exec() == QDialog.DialogCode.Accepted:
-            return promotion_dialog.piece
+            return promotion_dialog.piece_type
 
         return None
 
@@ -188,21 +188,21 @@ class ChessGame(QObject):
             del self._positions[after_ply_index]
 
     def is_engine_on_turn(self) -> bool:
-        """Return True if engine is on turn, else False."""
+        """Return True if engine is on turn."""
         return self._board.turn == setting_value("engine", "is_white")
 
     def is_in_progress(self) -> bool:
-        """Return True if game is in progress, else False."""
+        """Return True if game is in progress."""
         return bool(self._notation)
 
     def is_legal(self, move: Move) -> bool:
-        """Check whether `move` follows chess rules."""
+        """Return True if `move` is legal."""
         return self._board.is_legal(move)
 
     def is_over(self) -> bool:
-        """Return True if game is over, else False."""
+        """Return True if game is over."""
         return self._board.is_game_over(claim_draw=True)
 
     def is_white_on_turn(self) -> bool:
-        """Return True if White is on turn, else False."""
+        """Return True if White is on turn."""
         return self._board.turn == WHITE
