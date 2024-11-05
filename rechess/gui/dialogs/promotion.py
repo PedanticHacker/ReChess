@@ -5,7 +5,7 @@ from rechess.utils import create_button, svg_icon
 
 
 class PromotionDialog(QDialog):
-    """Dialog for selecting promotion piece type."""
+    """Dialog with buttons for selecting promotion piece type."""
 
     def __init__(self, player_color: Color) -> None:
         super().__init__()
