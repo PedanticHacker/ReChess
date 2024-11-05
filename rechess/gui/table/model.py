@@ -9,30 +9,30 @@ from PySide6.QtCore import (
 
 
 class TableModel(QAbstractTableModel):
-    """Model for containing and managing chess notation."""
+    """Model for displaying moves in two-column table format."""
 
-    def __init__(self, notation_items: list[str]) -> None:
+    def __init__(self, moves: list[str]) -> None:
         super().__init__()
 
-        self._notation_items: list[str] = notation_items
+        self._moves: list[str] = moves
 
     def data(
         self,
         index: QModelIndex | QPersistentModelIndex,
         role: int = Qt.ItemDataRole.DisplayRole,
     ) -> Any:
-        """Return notation items and process them for display role."""
+        """Return move at `index` for default display `role`."""
         if role == Qt.ItemDataRole.DisplayRole:
-            notation_item_index: int = 2 * index.row() + index.column()
+            move_index: int = 2 * index.row() + index.column()
 
-            if 0 <= notation_item_index < len(self._notation_items):
-                return self._notation_items[notation_item_index]
+            if 0 <= move_index < len(self._moves):
+                return self._moves[move_index]
 
     def flags(
         self,
         index: QModelIndex | QPersistentModelIndex,
     ) -> Qt.ItemFlag:
-        """Determine appropriate flag for notation item."""
+        """Return flags for enabling and selecting items with moves."""
         if self.data(index):
             return Qt.ItemFlag.ItemIsEnabled | Qt.ItemFlag.ItemIsSelectable
         else:
@@ -42,15 +42,15 @@ class TableModel(QAbstractTableModel):
         self,
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
-        """Count rows needed for all notation items."""
-        all_notation_items = len(self._notation_items) + 1
-        return all_notation_items // 2
+        """Return number of rows needed to display all moves."""
+        all_moves = len(self._moves) + 1
+        return all_moves // 2
 
     def columnCount(
         self,
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
-        """Count fixed set of 2 columns for all notation items."""
+        """Return two columns for moves of White and Black."""
         return 2
 
     def headerData(
@@ -59,7 +59,7 @@ class TableModel(QAbstractTableModel):
         orientation: Qt.Orientation,
         role: int = Qt.ItemDataRole.DisplayRole,
     ) -> Any:
-        """Provide data for horizontal and vertical headers."""
+        """Return column headers and row numbers."""
         if role == Qt.ItemDataRole.DisplayRole:
             if orientation == Qt.Orientation.Horizontal:
                 return ["White", "Black"][section]
@@ -68,11 +68,11 @@ class TableModel(QAbstractTableModel):
                 return section + 1
 
     def reset(self) -> None:
-        """Reset model by clearing all notation items."""
+        """Reset model by clearing all moves."""
         self.beginResetModel()
-        self._notation_items.clear()
+        self._moves.clear()
         self.endResetModel()
 
     def refresh_view(self) -> None:
-        """Refresh view due to changes in model's layout."""
+        """Refresh view to reflect model changes."""
         self.layoutChanged.emit()

@@ -31,7 +31,7 @@ class ChessGame(QObject):
         self._board: Board = board
 
         self._arrows: list[Arrow] = []
-        self._notation: list[str] = []
+        self._moves: list[str] = []
         self._positions: list[Board] = []
         self._sound_effect: QSoundEffect = QSoundEffect()
 
@@ -65,9 +65,9 @@ class ChessGame(QObject):
         return [legal_move.to_square for legal_move in legal_moves]
 
     @property
-    def notation(self) -> list[str]:
-        """Return game moves in Standard Algebraic Notation (SAN)."""
-        return self._notation
+    def moves(self) -> list[str]:
+        """Return moves in Standard Algebraic Notation (SAN)."""
+        return self._moves
 
     @property
     def result(self) -> str:
@@ -89,7 +89,7 @@ class ChessGame(QObject):
         """Reset current game to starting state."""
         self._arrows.clear()
         self._board.reset()
-        self._notation.clear()
+        self._moves.clear()
         self._positions.clear()
 
         self.reset_squares()
@@ -105,7 +105,7 @@ class ChessGame(QObject):
         self.play_sound_effect(move)
 
         notation_item: str = self._board.san_and_push(move)
-        self._notation.append(notation_item)
+        self._moves.append(notation_item)
 
         position: Board = self._board.copy()
         self._positions.append(position)
@@ -172,19 +172,19 @@ class ChessGame(QObject):
         return None
 
     def set_move(self, ply_index: int) -> None:
-        """Set move from `ply_index`."""
+        """Set move at `ply_index`."""
         self._board = self._positions[ply_index].copy()
 
         move: Move = self._board.move_stack[ply_index]
         self.set_arrow(move)
 
     def delete_data_after(self, ply_index: int) -> None:
-        """Delete notation and positions after `ply_index`."""
+        """Delete moves and positions after `ply_index`."""
         if ply_index < 0:
             self.set_new_game()
         else:
-            after_ply_index: slice = slice(ply_index + 1, len(self._notation))
-            del self._notation[after_ply_index]
+            after_ply_index: slice = slice(ply_index + 1, len(self._moves))
+            del self._moves[after_ply_index]
             del self._positions[after_ply_index]
 
     def is_engine_on_turn(self) -> bool:
@@ -193,7 +193,7 @@ class ChessGame(QObject):
 
     def is_in_progress(self) -> bool:
         """Return True if game is in progress."""
-        return bool(self._notation)
+        return bool(self._moves)
 
     def is_legal(self, move: Move) -> bool:
         """Return True if `move` is legal."""
