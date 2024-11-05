@@ -111,7 +111,7 @@ class ChessGame(QObject):
         self._positions.append(position)
 
     def set_arrow(self, move: Move) -> None:
-        """Display visual arrow on board for `move`."""
+        """Display visual arrow marker on board for `move`."""
         self._arrows = [Arrow(move.from_square, move.to_square)]
 
     def clear_arrows(self) -> None:
@@ -131,7 +131,7 @@ class ChessGame(QObject):
         self._board = self._board.root()
 
     def locate_square(self, x: float, y: float) -> None:
-        """Convert `x` and `y` coordinates to square coordinates."""
+        """Convert mouse coordinates to square coordinates."""
         file, rank = self.locate_file_and_rank(x, y)
 
         if self.from_square == -1:
@@ -142,7 +142,7 @@ class ChessGame(QObject):
             self.reset_squares()
 
     def locate_file_and_rank(self, x: float, y: float) -> tuple[int, int]:
-        """Convert `x` and `y` coordinates to file and rank."""
+        """Convert square coordinates to file and rank."""
         if setting_value("board", "orientation") == WHITE:
             file: float = (x - 18) // 58
             rank: float = 7 - (y - 18) // 58
