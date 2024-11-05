@@ -15,7 +15,7 @@ from rechess.utils import (
 
 
 class UciEngine(QObject):
-    """Communication with UCI chess engine."""
+    """Communication with UCI-compatible chess engine."""
 
     best_move_analyzed: Signal = Signal(Move)
     move_played: Signal = Signal(Move)
