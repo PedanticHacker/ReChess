@@ -21,7 +21,7 @@ from rechess.utils import setting_value
 
 
 class ChessGame(QObject):
-    """Implementation of chess game mechanics."""
+    """Manages chess game state, moves, and UI interactions."""
 
     move_played: Signal = Signal(Move)
 
@@ -39,12 +39,12 @@ class ChessGame(QObject):
 
     @property
     def arrows(self) -> list[Arrow]:
-        """Return arrows on board."""
+        """Return visual arrow markers displayed on board."""
         return self._arrows
 
     @property
     def board(self) -> Board:
-        """Return current state of board."""
+        """Return piece positions and game state."""
         return self._board
 
     @property
@@ -66,7 +66,7 @@ class ChessGame(QObject):
 
     @property
     def notation(self) -> list[str]:
-        """Return chess notation in SAN format."""
+        """Return game moves in Standard Algebraic Notation (SAN)."""
         return self._notation
 
     @property
@@ -82,7 +82,7 @@ class ChessGame(QObject):
 
     @property
     def turn(self) -> bool:
-        """Return current turn."""
+        """Return which player is currently on turn."""
         return self._board.turn
 
     def set_new_game(self) -> None:
@@ -100,7 +100,7 @@ class ChessGame(QObject):
         self.to_square: Square = -1
 
     def push(self, move: Move) -> None:
-        """Push `move` on board."""
+        """Execute `move` and update game state."""
         self.set_arrow(move)
         self.play_sound_effect(move)
 
@@ -111,11 +111,11 @@ class ChessGame(QObject):
         self._positions.append(position)
 
     def set_arrow(self, move: Move) -> None:
-        """Set arrow for `move`."""
+        """Display visual arrow on board for `move`."""
         self._arrows = [Arrow(move.from_square, move.to_square)]
 
     def clear_arrows(self) -> None:
-        """Clear all arrows on board."""
+        """Clear all visual arrow markers from board."""
         self._arrows.clear()
 
     def play_sound_effect(self, move: Move) -> None:
@@ -127,11 +127,11 @@ class ChessGame(QObject):
         self._sound_effect.play()
 
     def set_root_position(self) -> None:
-        """Set all pieces to their root position."""
+        """Reset pieces on board to initial position."""
         self._board = self._board.root()
 
     def locate_square(self, x: float, y: float) -> None:
-        """Locate square from `x` and `y` coordinates."""
+        """Convert `x` and `y` coordinates to square coordinates."""
         file, rank = self.locate_file_and_rank(x, y)
 
         if self.from_square == -1:
@@ -142,7 +142,7 @@ class ChessGame(QObject):
             self.reset_squares()
 
     def locate_file_and_rank(self, x: float, y: float) -> tuple[int, int]:
-        """Locate file and rank from `x` and `y` coordinates."""
+        """Convert `x` and `y` coordinates to file and rank."""
         if setting_value("board", "orientation") == WHITE:
             file: float = (x - 18) // 58
             rank: float = 7 - (y - 18) // 58
@@ -196,7 +196,7 @@ class ChessGame(QObject):
         return bool(self._notation)
 
     def is_legal(self, move: Move) -> bool:
-        """Return True if `move` is legal, else False."""
+        """Check whether `move` follows chess rules."""
         return self._board.is_legal(move)
 
     def is_over(self) -> bool:
