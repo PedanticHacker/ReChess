@@ -21,7 +21,7 @@ from rechess.utils import setting_value
 
 
 class ChessGame(QObject):
-    """Implementation of chess game."""
+    """Implementation of chess game mechanics."""
 
     move_played: Signal = Signal(Move)
 
