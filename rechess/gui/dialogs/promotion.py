@@ -54,22 +54,22 @@ class PromotionDialog(QDialog):
         self.knight_button.clicked.connect(self.on_knight_button_clicked)
 
     def on_queen_button_clicked(self) -> None:
-        """Set promotion piece type as queen."""
+        """Set promotion piece type to queen."""
         self._piece_type = QUEEN
         self.accept()
 
     def on_rook_button_clicked(self) -> None:
-        """Set promotion piece type as rook."""
+        """Set promotion piece type to rook."""
         self._piece_type = ROOK
         self.accept()
 
     def on_bishop_button_clicked(self) -> None:
-        """Set promotion piece type as bishop."""
+        """Set promotion piece type to bishop."""
         self._piece_type = BISHOP
         self.accept()
 
     def on_knight_button_clicked(self) -> None:
-        """Set promotion piece type as knight."""
+        """Set promotion piece type to knight."""
         self._piece_type = KNIGHT
         self.accept()
 
