@@ -21,7 +21,7 @@ class TableModel(QAbstractTableModel):
         index: QModelIndex | QPersistentModelIndex,
         role: int = Qt.ItemDataRole.DisplayRole,
     ) -> Any:
-        """Return move at `index` for default display `role`."""
+        """Return move at `index`."""
         if role == Qt.ItemDataRole.DisplayRole:
             move_index: int = 2 * index.row() + index.column()
 
