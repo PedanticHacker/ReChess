@@ -1,11 +1,11 @@
 QDialog {
-  background-color: #e8efe6;
+  background-color: #95a88c;
   border: 1px solid #506f46;
   border-radius: 4px;
 }
 
 QHeaderView {
-  background-color: #e8efe6;
+  background-color: #95a88c;
   border-bottom: 1px solid #506f46;
   color: #2c3e1e;
   font-weight: bold;
@@ -18,7 +18,7 @@ QLabel {
 }
 
 QLabel#notifications {
-  background-color: #d9e4d5;
+  background-color: #a5b69c;
   border: 1px solid #506f46;
   border-radius: 4px;
   margin: 0px;
@@ -26,7 +26,7 @@ QLabel#notifications {
 }
 
 QLineEdit {
-  background-color: #d9e4d5;
+  background-color: #a5b69c;
   border: 1px solid #506f46;
   border-radius: 4px;
   color: #2c3e1e;
@@ -36,22 +36,22 @@ QLineEdit {
 }
 
 QLineEdit:focus {
-  background-color: #e8efe6;
+  background-color: #95a88c;
   border: 1px solid #2c3e1e;
 }
 
 QLineEdit:hover {
-  background-color: #dde8d9;
+  background-color: #9aad91;
   border: 1px solid #3f5a2e;
 }
 
 QMainWindow {
-  background-color: #e8efe6;
+  background-color: #95a88c;
   border: 1px solid #506f46;
 }
 
 QMenu {
-  background-color: #d9e4d5;
+  background-color: #a5b69c;
   border: 1px solid #506f46;
   border-radius: 4px;
   font-weight: bold;
@@ -66,7 +66,7 @@ QMenu::item {
 }
 
 QMenu::item:selected {
-  background-color: #95a88c;
+  background-color: #85987c;
   border-radius: 2px;
 }
 
@@ -77,27 +77,26 @@ QMenu::separator {
 }
 
 QMenuBar {
-  background-color: #e8efe6;
+  background-color: #95a88c;
   border-bottom: 1px solid #506f46;
   font-weight: bold;
 }
 
 QMenuBar::item:selected {
-  background-color: #b8c6a3;
+  background-color: #85987c;
 }
 
 QPushButton {
   background-color: #506f46;
-  border: 1px;
   border-radius: 4px;
-  color: #e8efe6;
+  color: #b5c4ac;
   font-weight: bold;
   padding: 8px 16px;
 }
 
 QPushButton:disabled {
-  background-color: #95a88c;
-  color: #d9e4d5;
+  background-color: #85987c;
+  color: #a5b69c;
 }
 
 QPushButton:hover {
@@ -109,7 +108,7 @@ QPushButton:pressed {
 }
 
 QProgressBar {
-  background-color: #e8efe6;
+  background-color: white;
   border: 1px solid #506f46;
   border-radius: 4px;
   color: #2c3e1e;
@@ -119,73 +118,73 @@ QProgressBar {
 }
 
 QProgressBar::chunk {
-  background-color: #506f46;
+  background-color: black;
   border-radius: 3px;
 }
 
 QScrollBar:horizontal {
-  background-color: #e8efe6;
+  background-color: #95a88c;
   height: 14px;
   margin: 0px;
 }
 
 QScrollBar:vertical {
-  background-color: #e8efe6;
+  background-color: #95a88c;
   margin: 0px;
   width: 14px;
 }
 
 QScrollBar::handle:horizontal {
-  background-color: #506f46;
+  background-color: #85987c;
   border-radius: 7px;
   margin: 2px;
   min-width: 24px;
 }
 
 QScrollBar::handle:horizontal:hover {
-  background-color: #3f5a2e;
+  background-color: #506f46;
 }
 
 QScrollBar::handle:vertical {
-  background-color: #506f46;
+  background-color: #85987c;
   border-radius: 7px;
   margin: 2px;
   min-height: 24px;
 }
 
 QScrollBar::handle:vertical:hover {
-  background-color: #3f5a2e;
+  background-color: #506f46;
 }
 
 QStatusBar {
-  background-color: #e8efe6;
+  background-color: #95a88c;
   border-top: 1px solid #506f46;
   color: #2c3e1e;
 }
 
 QTableView {
-  background-color: #d9e4d5;
+  background-color: #a5b69c;
   border: 1px solid #506f46;
   border-radius: 4px;
   color: #2c3e1e;
   font-weight: bold;
   gridline-color: #506f46;
-  selection-background-color: #b8c6a3;
+  selection-background-color: #85987c;
 }
 
 QTableView::item:hover {
-  background-color: #b8c6a3;
+  background-color: #85987c;
 }
 
 QToolBar {
-  background-color: #e8efe6;
+  background-color: #95a88c;
   border-bottom: 1px solid #506f46;
   padding: 4px;
   spacing: 4px;
 }
 
 QToolTip {
-  background-color: #e8efe6;
+  background-color: #95a88c;
   border: 1px solid #506f46;
   border-radius: 4px;
   color: #2c3e1e;
@@ -195,10 +194,10 @@ QToolTip {
 SvgBoardWidget {
   qproperty-coord: #2c3e1e;
   qproperty-inner_border: #506f46;
-  qproperty-margin: #d9e4d5;
+  qproperty-margin: #a5b69c;
   qproperty-outer_border: #2c3e1e;
   qproperty-square_dark: #8b6b47;
   qproperty-square_dark_lastmove: #755a3c;
   qproperty-square_light: #b8c6a3;
-  qproperty-square_light_lastmove: #95a88c;
+  qproperty-square_light_lastmove: #85987c;
 }
