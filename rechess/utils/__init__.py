@@ -1,4 +1,4 @@
-from . import icons
+from . import icon_registration
 from .helper_functions import (
     create_action,
     create_button,
