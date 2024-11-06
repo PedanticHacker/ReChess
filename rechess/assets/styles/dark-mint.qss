@@ -66,7 +66,7 @@ QMenu::item {
 }
 
 QMenu::item:selected {
-  background-color: #4d8080;
+  background-color: #386b6b;
   border-radius: 2px;
 }
 
@@ -88,7 +88,6 @@ QMenuBar::item:selected {
 
 QPushButton {
   background-color: #386b6b;
-  border: 1px;
   border-radius: 4px;
   color: #c5e0e0;
   font-weight: bold;
@@ -109,17 +108,17 @@ QPushButton:pressed {
 }
 
 QProgressBar {
-  background-color: #1a2e2e;
+  background-color: white;
   border: 1px solid #386b6b;
   border-radius: 4px;
-  color: #c5e0e0;
+  color: #1c4b45;
   font-size: 13px;
   font-weight: bold;
   text-align: center;
 }
 
 QProgressBar::chunk {
-  background-color: #386b6b;
+  background-color: black;
   border-radius: 3px;
 }
 
