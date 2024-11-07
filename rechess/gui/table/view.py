@@ -57,6 +57,10 @@ class TableView(QTableView):
 
         return QModelIndex()
 
+    def clear_selection(self) -> None:
+        """Clear selection by invalidating current model index."""
+        self.select_model_index(QModelIndex())
+
     def select_last_item(self) -> None:
         """Select last notation item."""
         last_row: int = self.model().rowCount() - 1
