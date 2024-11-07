@@ -420,9 +420,9 @@ class MainWindow(QMainWindow):
         if self._game.is_engine_on_turn() and not self._game.is_over():
             self.invoke_engine()
 
-    def apply_style(self, file_name: str) -> None:
-        """Apply style from `file_name`."""
-        with open(f"rechess/assets/styles/{file_name}.qss") as qss_file:
+    def apply_style(self, filename: str) -> None:
+        """Apply style from QSS file with `filename`."""
+        with open(f"rechess/assets/styles/{filename}.qss") as qss_file:
             self.setStyleSheet(qss_file.read())
 
     def load_engine(self) -> None:
