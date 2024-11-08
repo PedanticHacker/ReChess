@@ -31,8 +31,8 @@ class ChessGame(QObject):
         self._board: Board = board
 
         self._arrows: list[Arrow] = []
-        self._moves: list[str] = []
         self._positions: list[Board] = []
+        self._san_moves: list[str] = []
         self._sound_effect: QSoundEffect = QSoundEffect()
 
         self.set_new_game()
@@ -44,7 +44,7 @@ class ChessGame(QObject):
 
     @property
     def board(self) -> Board:
-        """Return piece positions and game state."""
+        """Return board that includes piece positions and game state."""
         return self._board
 
     @property
@@ -56,7 +56,7 @@ class ChessGame(QObject):
 
     @property
     def legal_moves(self) -> list[Square] | None:
-        """Return legal moves for piece."""
+        """Return squares that indicate legal moves for piece."""
         if self.from_square == -1:
             return None
 
@@ -65,9 +65,9 @@ class ChessGame(QObject):
         return [legal_move.to_square for legal_move in legal_moves]
 
     @property
-    def moves(self) -> list[str]:
-        """Return moves in Standard Algebraic Notation (SAN)."""
-        return self._moves
+    def san_moves(self) -> list[str]:
+        """Return moves in standard algebraic notation (SAN)."""
+        return self._san_moves
 
     @property
     def result(self) -> str:
@@ -89,7 +89,7 @@ class ChessGame(QObject):
         """Reset current game to starting state."""
         self._arrows.clear()
         self._board.reset()
-        self._moves.clear()
+        self._san_moves.clear()
         self._positions.clear()
 
         self.reset_squares()
@@ -104,8 +104,8 @@ class ChessGame(QObject):
         self.set_arrow(move)
         self.play_sound_effect(move)
 
-        notation_item: str = self._board.san_and_push(move)
-        self._moves.append(notation_item)
+        san_move: str = self._board.san_and_push(move)
+        self._san_moves.append(san_move)
 
         position: Board = self._board.copy()
         self._positions.append(position)
@@ -122,7 +122,7 @@ class ChessGame(QObject):
         """Play sound effect for `move`."""
         is_capture: bool = self._board.is_capture(move)
         filename: str = "capture.wav" if is_capture else "move.wav"
-        file_url: QUrl = QUrl(f"file:rechess/assets/audio/{filename}")
+        file_url: QUrl = QUrl.fromLocalFile(f"rechess/assets/audio/{filename}")
         self._sound_effect.setSource(file_url)
         self._sound_effect.play()
 
@@ -183,8 +183,8 @@ class ChessGame(QObject):
         if ply_index < 0:
             self.set_new_game()
         else:
-            after_ply_index: slice = slice(ply_index + 1, len(self._moves))
-            del self._moves[after_ply_index]
+            after_ply_index: slice = slice(ply_index + 1, len(self._san_moves))
+            del self._san_moves[after_ply_index]
             del self._positions[after_ply_index]
 
     def is_engine_on_turn(self) -> bool:
@@ -193,7 +193,7 @@ class ChessGame(QObject):
 
     def is_in_progress(self) -> bool:
         """Return True if game is in progress."""
-        return bool(self._moves)
+        return bool(self._san_moves)
 
     def is_legal(self, move: Move) -> bool:
         """Return True if `move` is legal."""

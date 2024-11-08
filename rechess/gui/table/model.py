@@ -9,30 +9,30 @@ from PySide6.QtCore import (
 
 
 class TableModel(QAbstractTableModel):
-    """Model for displaying moves in two-column table format."""
+    """Model for displaying SAN moves in two-column table."""
 
-    def __init__(self, moves: list[str]) -> None:
+    def __init__(self, san_moves: list[str]) -> None:
         super().__init__()
 
-        self._moves: list[str] = moves
+        self._san_moves: list[str] = san_moves
 
     def data(
         self,
         index: QModelIndex | QPersistentModelIndex,
         role: int = Qt.ItemDataRole.DisplayRole,
     ) -> Any:
-        """Return move at `index`."""
+        """Return SAN move at `index`."""
         if role == Qt.ItemDataRole.DisplayRole:
-            move_index: int = 2 * index.row() + index.column()
+            san_move_index: int = 2 * index.row() + index.column()
 
-            if 0 <= move_index < len(self._moves):
-                return self._moves[move_index]
+            if 0 <= san_move_index < len(self._san_moves):
+                return self._san_moves[san_move_index]
 
     def flags(
         self,
         index: QModelIndex | QPersistentModelIndex,
     ) -> Qt.ItemFlag:
-        """Return flags as access to move at `index`."""
+        """Return flags as access to SAN move at `index`."""
         if self.data(index):
             return Qt.ItemFlag.ItemIsEnabled | Qt.ItemFlag.ItemIsSelectable
         else:
@@ -42,15 +42,15 @@ class TableModel(QAbstractTableModel):
         self,
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
-        """Return number of rows needed to display all moves."""
-        all_moves = len(self._moves) + 1
-        return all_moves // 2
+        """Return number of rows needed to display all SAN moves."""
+        all_san_moves = len(self._san_moves) + 1
+        return all_san_moves // 2
 
     def columnCount(
         self,
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
-        """Return two columns for moves of White and Black."""
+        """Return two columns for SAN moves of White and Black."""
         return 2
 
     def headerData(
@@ -68,9 +68,9 @@ class TableModel(QAbstractTableModel):
                 return section + 1
 
     def reset(self) -> None:
-        """Reset model by clearing all moves."""
+        """Reset model by clearing all SAN moves."""
         self.beginResetModel()
-        self._moves.clear()
+        self._san_moves.clear()
         self.endResetModel()
 
     def refresh_view(self) -> None:

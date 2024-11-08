@@ -2,7 +2,7 @@
 
 ## What's this?
 
-ReChess is an app for playing standard chess against a UCI chess engine.
+ReChess is an app for playing chess against a UCI chess engine.
 
 ## In what programming language is ReChess written?
 
@@ -21,7 +21,7 @@ Windows, Linux, and macOS.
 
 ReChess should work using a Python version older than 3.13, but surely
 won't work using a 2.x version. Feel free to modify the source code to
-adapt it to your specific Python version, if necessary.
+adapt it to your specific Python version, if required.
 
 ## Are there any dependencies?
 
@@ -34,49 +34,52 @@ Yes. ReChess depends upon:
 ### Is there any 3rd-party software integrated?
 
 Yes. ReChess integrates **Stockfish**, a powerful UCI chess engine for
-playing and analyzing a standard chess game.
+playing and analyzing a chess game.
 
 ## What features does ReChess provide?
 
-You get all the basic features for playing standard chess:
+You get all the basic features for playing chess:
 
 - chess clocks
 - SVG chessboard
 - FEN editor
-- table for displaying chess move notation in SAN format
+- table for showing chess move notation in standard algebraic notation
+(SAN) format
 
 ### Is that it?
 
 There are also many functionalities you can utilize:
 
 - navigate through move history by scrolling your mouse wheel upwards or
-downwards, or making a corresponding touchpad gesture, and play a game
-from whatever historic move onwards, if you like
+downwards, or make a corresponding touchpad gesture, and play a game
+from whichever move onwards
 - play against the latest official version of the Stockfish chess engine
 - analyze a chessboard position
-- load a chess engine to play against it or to analyze with it
+- load a UCI chess engine to play against it or to analyze with it
 - flip the chessboard
-- force the chess engine to make a move when its opponent is on turn
+- force the loaded UCI chess engine to make a move when its opponent is
+on turn
 - paste a FEN from the clipboard by double-clicking the FEN editor, then
-analyze the chessboard position or play a game from there onwards
-- change the app style to one of the dark ones or the light ones
+analyze the chessboard position or play the game from there onwards
+- change the app style to one of the dark or light ones
 
 ## Which chess variants are supported?
 
-Only standard chess is supported. Chess variants are not supported.
+Chess variants are not supported. There are no plans they will ever be.
 
-## How do I move a piece on the chessboard?
+## How do I move a piece on the board?
 
 Making a move in ReChess is as simple as a click. Just click a piece and
 then click one of its legal squares to make your move.
 
-### How do I know what is the legal square of a piece?
+### How do I know which legal squares are availabe for a piece?
 
 After you click a piece, all of its legal squares get marked with a dot.
+That's how you know.
 
 ### Can I drag and then drop a piece?
 
-No. Drag-and-drop functionality is not supported.
+No. Drag-and-drop functionality is not supported, just click-click.
 
 ## How does ReChess look?
 
@@ -106,23 +109,31 @@ it is a UCI chess engine.
 
 ### Why does it have to be a UCI chess engine?
 
-Chess engines, compatible only with CECP and designed for a WinBoard or
-an XBoard GUI, can't be loaded and played against in ReChess because it
-doesn't support this protocol. If your chess engine also supports UCI,
-then you're in luck.
+Chess engines, compatible only with Chess Engine Communication Protocol
+(CECP) and designed for either the WinBoard GUI (for Windows) or for the
+XBoard GUI (for Unix-based platforms like Linux), can't be loaded and
+hence can't be played against in ReChess because it doesn't support this
+protocol. However, if your chess engine also happens to be compatible
+with the UCI protocol, then you're in luck.
 
-### Can I do a chessboard position analysis?
+### Can I analyze a position with a UCI chess engine?
 
-Yes. You can analyze a chessboard position with the default chess engine
-or a UCI chess engine you load yourself.
+Yes. You can analyze a position with the default Stockfish chess engine
+or a UCI-compatible chess engine you load yourself.
 
 ## Are there any requirements I must have for ReChess?
 
-Yes. You should have specific requirements installed.
+Yes. You must have specific requirements installed.
 
-1. Install this version of the Python programming language for Windows:
+If not installed already, make sure to do it in this order:
+
+1. For Windows, install Python using this installer:
 
     - [**Python 3.13.0**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-amd64.exe)
+
+* For macOS version 10.13 or later, use this installer:
+
+    - [**Python 3.13.0**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-macos11.pkg)
 
 2. In your command-line interface, install:
 
@@ -130,7 +141,7 @@ Yes. You should have specific requirements installed.
     - **PySide6**, by executing the command `pip install PySide6`
     - **python-chess**, by executing the command `pip install chess`
 
-Alternatively, you can also install these three requirements with the
+Alternatively, you can also install the last three requirements with the
 *pip* package manager in your command-line interface within ReChess's
 top-level folder/directory, provided that *pip* was installed as part of
 Python installation, then execute this command:
@@ -198,7 +209,7 @@ permissions, limitations, and conditions of the license.
 Yes. For your app, you can use whatever license, but make sure that you
 include my copyright notice above yours.
 
-Your copyright notice should be like this:
+Your copyright notice should look like this:
 
 ```
 Copyright 2024 Boštjan Mejak
