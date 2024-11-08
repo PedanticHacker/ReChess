@@ -200,8 +200,8 @@ ReChess uses the **MIT License**.
 
 ### Where can I see ReChess's license?
 
-See the `LICENSE.txt` file in ReChess's top-level directory about the
-permissions, limitations, and conditions of the license.
+See the `LICENSE.txt` file in ReChess's top-level folder/directory about
+the permissions, limitations, and conditions of the license.
 
 ### Can I develop an app based on ReChess?
 
