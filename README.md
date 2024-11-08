@@ -104,19 +104,19 @@ works on Windows, Linux, and macOS platforms.
 
 ### What if I want to play against some other chess engine?
 
-You can load and play against any chess engine in ReChess, but make sure
-it is a UCI chess engine.
+You can load and then play against any chess engine in ReChess, just
+make sure it is a UCI-compatible one.
 
-### Why does it have to be a UCI chess engine?
+### Why does it have to be a UCI-compatible chess engine?
 
-Chess engines, compatible only with Chess Engine Communication Protocol
-(CECP) and designed for either the WinBoard GUI (for Windows) or for the
-XBoard GUI (for Unix-based platforms like Linux), can't be loaded and
-hence can't be played against in ReChess because it doesn't support this
-protocol. However, if your chess engine also happens to be compatible
-with the UCI protocol, then you're in luck.
+Chess engines, compatible only with the chess engine communication
+protocol (CECP) and designed for either the WinBoard GUI (for Windows)
+or for the XBoard GUI (for Unix-based platforms like Linux), can't be
+loaded and hence can't be played against in ReChess because it doesn't
+support this type of protocol. However, if your chess engine is also
+compatible with the UCI protocol, then you're in luck.
 
-### Can I analyze a position with a UCI chess engine?
+### Can I analyze a position?
 
 Yes. You can analyze a position with the default Stockfish chess engine
 or a UCI-compatible chess engine you load yourself.
@@ -149,6 +149,10 @@ Python installation, then execute this command:
 ```bash
 pip install -r requirements.txt
 ```
+
+> :memo: **Note**
+> On macOS, all *pip* commands start with `pip3`, not `pip`. That's a
+minor quirk that you need to be aware of.
 
 ## How can I launch ReChess?
 
