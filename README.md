@@ -147,7 +147,7 @@ pip install -r requirements.txt
 ```
 
 > :memo: On macOS, all *pip* commands start with `pip3`, not `pip`.
-That's a minor quirk that you need to be aware of.
+That's a minor quirk to be aware of.
 
 ## How can I launch ReChess?
 
