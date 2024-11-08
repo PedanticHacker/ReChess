@@ -127,32 +127,27 @@ Yes. You must have specific requirements installed.
 
 If not installed already, make sure to do it in this order:
 
-1. For Windows, install Python using this installer:
+1. For Windows, install Python using this installer and make sure to
+select the Install Now option when it launches:
 
     - [**Python 3.13.0**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-amd64.exe)
 
-* For macOS version 10.13 or later, use this installer:
+For macOS version 10.13 or later, use [**this installer**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-macos11.pkg).
 
-    - [**Python 3.13.0**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-macos11.pkg)
-
-2. In your command-line interface, install:
+2. In your command-line interface, install these Python packages:
 
     - **psutil**, by executing the command `pip install psutil`
     - **PySide6**, by executing the command `pip install PySide6`
     - **python-chess**, by executing the command `pip install chess`
 
-Alternatively, you can also install the last three requirements with the
-*pip* package manager in your command-line interface within ReChess's
-top-level folder/directory, provided that *pip* was installed as part of
-Python installation, then execute this command:
+Alternatively, you can also execute this command to achieve the same:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-> :memo: **Note**
-> On macOS, all *pip* commands start with `pip3`, not `pip`. That's a
-minor quirk that you need to be aware of.
+> :memo: On macOS, all *pip* commands start with `pip3`, not `pip`.
+That's a minor quirk that you need to be aware of.
 
 ## How can I launch ReChess?
 
