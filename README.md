@@ -121,16 +121,16 @@ compatible with the UCI protocol, then you're in luck.
 Yes. You can analyze a position with the default Stockfish chess engine
 or a UCI-compatible chess engine you load yourself.
 
-## Are there any requirements I must have for ReChess?
+## Are there any requirements I must meet to launch ReChess?
 
-Yes. You must have specific requirements installed.
+Yes. You must have some things installed. If not installed already,
+install them in this order:
 
-If not installed already, make sure to do it in this order:
+1. For a 64-bit Windows 10 or 11, install Python by clicking the link to
+the installer located below. (We will need the *pip* package manager, so
+make sure to select the Install Now option when the installer launches.)
 
-1. For Windows, install Python using this installer and make sure to
-select the Install Now option when it launches:
-
-    - [**Python 3.13.0**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-amd64.exe)
+    - [**Python 3.13.0 for Windows**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-amd64.exe)
 
 For macOS version 10.13 or later, use [**this installer**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-macos11.pkg).
 
