@@ -61,7 +61,7 @@ from whichever move onwards
 on turn
 - paste a FEN from the clipboard by double-clicking the FEN editor, then
 analyze the chessboard position or play the game from there onwards
-- change the app style to one of the dark or light ones
+- select from one of the dark or light styles
 
 ## Which chess variants are supported?
 
