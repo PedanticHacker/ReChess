@@ -155,7 +155,7 @@ def make_executable(path_to_file: str) -> None:
 
 
 def path_to_stockfish() -> str:
-    """Return path to executable file of Stockfish 17."""
+    """Return path to executable file of Stockfish 17 chess engine."""
     return (
         f"rechess/assets/engines/stockfish-17/{platform_name()}"
         f"/{_stockfish_filename()}"

@@ -2,7 +2,7 @@ def openings_storage() -> dict[str, tuple[str, str]]:
     """
     Return chess openings stored in dictionary.
 
-    Each dictionary key is FEN that maps to tuple containing ECO code
+    Each key of dictionary is FEN that maps to tuple containing ECO code
     and chess opening name.
     """
     return {
