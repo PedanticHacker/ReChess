@@ -5,9 +5,9 @@ from PySide6.QtWidgets import QLineEdit
 
 
 class FenEditorWidget(QLineEdit):
-    """Widget for editing FEN (Forsyth-Edwards Notation)."""
+    """Widget for viewing and editing Forsyth-Edwards notation (FEN)."""
 
-    validated: Signal = Signal()
+    fen_validated: Signal = Signal()
 
     def __init__(self, board: Board) -> None:
         super().__init__()
@@ -17,33 +17,28 @@ class FenEditorWidget(QLineEdit):
         self.setMaxLength(90)
         self.setFixedSize(500, 20)
         self.setText(self._board.fen())
-
-        self.textEdited.connect(self.on_text_edited)
+        self.textEdited.connect(self.validate_fen)
 
     def show_warning(self) -> None:
-        """Show background color in red to indicate invalid FEN."""
+        """Show red background color to indicate invalid FEN."""
         self.setStyleSheet("background-color: red;")
 
     def hide_warning(self) -> None:
-        """Hide background color in red to indicate valid FEN."""
+        """Hide red background color to indicate valid FEN."""
         self.setStyleSheet("")
-        self.clearFocus()
 
     def mouseDoubleClickEvent(self, event: QMouseEvent) -> None:
         """Paste FEN from clipboard on mouse double-click."""
-        self.clearFocus()
         self.selectAll()
         self.paste()
 
     @Slot(str)
-    def on_text_edited(self, edited_text: str) -> None:
-        """Try to set valid position from `edited_text`."""
+    def validate_fen(self, fen: str) -> None:
+        """Validate `fen` and set new position from it."""
         try:
-            self._board.set_fen(edited_text)
+            self._board.set_fen(fen)
         except (IndexError, ValueError):
             self.show_warning()
         else:
             if self._board.is_valid():
-                self.clearFocus()
-                self.hide_warning()
-                self.validated.emit()
+                self.fen_validated.emit()

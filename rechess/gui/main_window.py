@@ -51,14 +51,15 @@ class MainWindow(QMainWindow):
 
         self._game: ChessGame = ChessGame(Board())
         self._engine: UciEngine = UciEngine(self._game)
+
         self._table_model: TableModel = TableModel(self._game.san_moves)
+        self._table_view: TableView = TableView(self._table_model)
 
         self._black_clock: ChessClockWidget = ChessClockWidget(ClockColor.Black)
         self._white_clock: ChessClockWidget = ChessClockWidget(ClockColor.White)
 
         self._svg_board: SvgBoardWidget = SvgBoardWidget(self._game)
         self._fen_editor: FenEditorWidget = FenEditorWidget(self._game.board)
-        self._table_view: TableView = TableView(self._table_model)
         self._evaluation_bar: EvaluationBarWidget = EvaluationBarWidget()
 
         self._engine_name_label: QLabel = QLabel()
@@ -360,25 +361,23 @@ class MainWindow(QMainWindow):
 
     def connect_signals_to_slots(self) -> None:
         """Connect component signals to corresponding slot methods."""
-        self._engine.move_played.connect(self.on_move_played)
-        self._engine.variation_analyzed.connect(self.on_variation_analyzed)
-        self._engine.best_move_analyzed.connect(self.on_best_move_analyzed)
-        self._engine.score_analyzed.connect(self.on_score_analyzed)
-
-        self._game.move_played.connect(self.on_move_played)
-        self._fen_editor.validated.connect(self.on_fen_validated)
-        self._table_view.item_selected.connect(self.on_item_selected)
-
         self._black_clock.time_expired.connect(self.on_black_time_expired)
+        self._engine.best_move_analyzed.connect(self.on_best_move_analyzed)
+        self._engine.move_played.connect(self.on_move_played)
+        self._engine.score_analyzed.connect(self.on_score_analyzed)
+        self._engine.variation_analyzed.connect(self.on_variation_analyzed)
+        self._fen_editor.fen_validated.connect(self.on_fen_validated)
+        self._game.move_played.connect(self.on_move_played)
+        self._table_view.item_selected.connect(self.on_item_selected)
         self._white_clock.time_expired.connect(self.on_white_time_expired)
 
     def invoke_engine(self) -> None:
-        """Invoke loaded chess engine to play move."""
+        """Invoke chess engine to play move."""
         QThreadPool.globalInstance().start(self._engine.play_move)
         self._notifications_label.setText("Thinking...")
 
     def invoke_analysis(self) -> None:
-        """Invoke loaded chess engine to start analysis."""
+        """Invoke chess engine to start analysis."""
         QThreadPool.globalInstance().start(self._engine.start_analysis)
         self._notifications_label.setText("Analyzing...")
 
@@ -495,11 +494,13 @@ class MainWindow(QMainWindow):
 
     def show_fen(self) -> None:
         """Show FEN in FEN editor."""
-        self._fen_editor.setText(self._game.board.fen())
+        self._fen_editor.setText(self._game.fen)
+        self._fen_editor.hide_warning()
+        self._fen_editor.clearFocus()
 
     def show_opening(self) -> None:
         """Show ECO code and opening name."""
-        fen: str = self._game.board.fen()
+        fen: str = self._game.fen
         openings: dict[str, tuple[str, str]] = openings_storage()
 
         if fen in openings:
@@ -510,7 +511,6 @@ class MainWindow(QMainWindow):
         """Refresh current state of UI."""
         self.stop_analysis()
 
-        self._fen_editor.hide_warning()
         self._table_model.refresh_view()
         self._engine_analysis_label.clear()
         self._table_view.select_last_item()
@@ -553,7 +553,6 @@ class MainWindow(QMainWindow):
         self._game.set_new_game()
         self._table_model.reset()
 
-        self._fen_editor.hide_warning()
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
 
@@ -622,7 +621,6 @@ class MainWindow(QMainWindow):
         self.stop_analysis()
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
-        self._fen_editor.hide_warning()
         self._engine_analysis_label.clear()
 
         self._evaluation_bar.reset_appearance()

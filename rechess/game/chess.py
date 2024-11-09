@@ -39,13 +39,18 @@ class ChessGame(QObject):
 
     @property
     def arrows(self) -> list[Arrow]:
-        """Return visual arrow markers displayed on board."""
+        """Return arrow markers shown on board."""
         return self._arrows
 
     @property
     def board(self) -> Board:
-        """Return board that includes piece positions and game state."""
+        """Return board with included positions and game state."""
         return self._board
+
+    @property
+    def fen(self) -> str:
+        """Return current FEN."""
+        return self._board.fen()
 
     @property
     def king_in_check(self) -> Square | None:
@@ -111,11 +116,11 @@ class ChessGame(QObject):
         self._positions.append(position)
 
     def set_arrow(self, move: Move) -> None:
-        """Display visual arrow marker on board for `move`."""
+        """Set arrow marker on board for `move`."""
         self._arrows = [Arrow(move.from_square, move.to_square)]
 
     def clear_arrows(self) -> None:
-        """Clear all visual arrow markers from board."""
+        """Clear all arrow markers from board."""
         self._arrows.clear()
 
     def play_sound_effect(self, move: Move) -> None:
