@@ -32,18 +32,18 @@ class UciEngine(QObject):
         self.load_from_file_at(path_to_stockfish())
 
     def load_from_file_at(self, path_to_file: str) -> None:
-        """Load UCI chess engine from file at `path_to_file`."""
+        """Load chess engine from file at `path_to_file`."""
         with suppress(EngineError):
             delete_quarantine_attribute(path_to_file)
             make_executable(path_to_file)
 
             self.quit()
-            self._loaded_engine = SimpleEngine.popen_uci(path_to_file)
-            self._loaded_engine.configure(engine_configuration())
+            self._engine = SimpleEngine.popen_uci(path_to_file)
+            self._engine.configure(engine_configuration())
 
     def play_move(self) -> None:
-        """Play move with loaded UCI chess engine."""
-        play_result: PlayResult = self._loaded_engine.play(
+        """Make chess engine to play move."""
+        play_result: PlayResult = self._engine.play(
             board=self._game.board,
             limit=Limit(depth=30),
             ponder=setting_value("engine", "is_pondering"),
@@ -51,10 +51,10 @@ class UciEngine(QObject):
         self.move_played.emit(play_result.move)
 
     def start_analysis(self) -> None:
-        """Start analyzing current chessboard position."""
+        """Start analyzing current position."""
         self._analyzing = True
 
-        with self._loaded_engine.analysis(
+        with self._engine.analysis(
             board=self._game.board,
             limit=Limit(depth=40),
         ) as analysis:
@@ -74,15 +74,15 @@ class UciEngine(QObject):
                     self.variation_analyzed.emit(variation)
 
     def stop_analysis(self) -> None:
-        """Stop analyzing current chessboard position."""
+        """Stop analyzing current position."""
         self._analyzing = False
 
     def quit(self) -> None:
-        """Quit loaded UCI chess engine's CPU task."""
+        """Quit chess engine's CPU task."""
         with suppress(AttributeError):
-            self._loaded_engine.quit()
+            self._engine.quit()
 
     @property
     def name(self) -> str:
-        """Return loaded UCI chess engine's name."""
-        return self._loaded_engine.id["name"]
+        """Return chess engine's name."""
+        return self._engine.id["name"]
