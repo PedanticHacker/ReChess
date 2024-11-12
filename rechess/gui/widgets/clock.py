@@ -1,7 +1,7 @@
 from PySide6.QtCore import QElapsedTimer, Qt, QTimer, Signal, Slot
 from PySide6.QtWidgets import QLCDNumber
 
-from rechess.enums import ClockColor
+from rechess.gui import ClockColor
 from rechess.utils import setting_value
 
 

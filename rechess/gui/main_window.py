@@ -18,8 +18,8 @@ from PySide6.QtWidgets import (
 )
 
 from rechess.engine import UciEngine
-from rechess.enums import ClockColor
 from rechess.game import ChessGame
+from rechess.gui import ClockColor
 from rechess.gui.dialogs import SettingsDialog
 from rechess.gui.table import TableModel, TableView
 from rechess.gui.widgets import (

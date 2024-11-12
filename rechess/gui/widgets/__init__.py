@@ -1,5 +1,5 @@
 from .board import BoardWidget
-from .clock import ClockWidget
+from .clock import ClockColor, ClockWidget
 from .evaluation_bar import EvaluationBarWidget
 from .fen_editor import FenEditorWidget
 
