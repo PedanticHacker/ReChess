@@ -424,8 +424,6 @@ class MainWindow(QMainWindow):
         with open(f"rechess/assets/styles/{filename}.qss") as qss_file:
             self.setStyleSheet(qss_file.read())
 
-        self._table_view.clear_selection()
-
     def load_engine(self) -> None:
         """Show file manager to load UCI chess engine."""
         path_to_file, _ = QFileDialog.getOpenFileName(
