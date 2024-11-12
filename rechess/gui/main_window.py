@@ -28,9 +28,9 @@ from rechess.gui.widgets import (
     EvaluationBarWidget,
     FenEditorWidget,
 )
-from rechess.openings import openings_storage
 from rechess.utils import (
     create_action,
+    find_opening,
     platform_name,
     set_setting_value,
     setting_value,
@@ -498,11 +498,10 @@ class MainWindow(QMainWindow):
 
     def show_opening(self) -> None:
         """Show ECO code and opening name."""
-        fen: str = self._game.fen
-        openings: dict[str, tuple[str, str]] = openings_storage()
+        opening: tuple[str, str] | None = find_opening(self._game.fen)
 
-        if fen in openings:
-            eco_code, opening_name = openings[fen]
+        if opening:
+            eco_code, opening_name = opening
             self._openings_label.setText(f"{eco_code}: {opening_name}")
 
     def refresh_ui(self) -> None:

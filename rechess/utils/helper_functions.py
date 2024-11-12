@@ -91,8 +91,8 @@ def set_setting_value(
     settings: SettingsDict = _settings()
     settings[section][key] = value
 
-    with open(PATH_TO_SETTINGS, mode="w", newline="\n") as file:
-        json.dump(settings, file, indent=4)
+    with open(PATH_TO_SETTINGS, mode="w", encoding="utf-8", newline="\n") as file:
+        json.dump(settings, file, indent=2)
         file.write("\n")
 
 
@@ -135,6 +135,13 @@ def delete_quarantine_attribute(path_to_file: str) -> None:
 def engine_configuration() -> dict[str, int]:
     """Return optimal configuration for UCI chess engine."""
     return {"Hash": _optimal_hash_size(), "Threads": _optimal_cpu_threads()}
+
+
+def find_opening(fen: str) -> tuple[str, str] | None:
+    """Return ECO code and opening name for `fen`."""
+    with open("rechess/openings.json", encoding="utf-8") as json_file:
+        openings = json.load(json_file)
+    return openings.get(fen)
 
 
 def initialize_app() -> QApplication:
