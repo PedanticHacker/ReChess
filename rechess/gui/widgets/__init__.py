@@ -1,13 +1,13 @@
-from .chess_clock import ChessClockWidget
+from .board import BoardWidget
+from .clock import ClockWidget
 from .evaluation_bar import EvaluationBarWidget
 from .fen_editor import FenEditorWidget
-from .svg_board import SvgBoardWidget
 
 
 __all__: list[str] = [
-    "ChessClockWidget",
+    "BoardWidget",
+    "ClockWidget",
     "EvaluationBarWidget",
     "FenEditorWidget",
     "MainWindow",
-    "SvgBoardWidget",
 ]

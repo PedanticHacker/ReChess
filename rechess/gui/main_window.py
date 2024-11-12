@@ -23,10 +23,10 @@ from rechess.game import ChessGame
 from rechess.gui.dialogs import SettingsDialog
 from rechess.gui.table import TableModel, TableView
 from rechess.gui.widgets import (
-    ChessClockWidget,
+    BoardWidget,
+    ClockWidget,
     EvaluationBarWidget,
     FenEditorWidget,
-    SvgBoardWidget,
 )
 from rechess.openings import openings_storage
 from rechess.utils import (
@@ -49,18 +49,20 @@ class MainWindow(QMainWindow):
     def __init__(self) -> None:
         super().__init__()
 
+        self.apply_style("dark-forest")
+
         self._game: ChessGame = ChessGame(Board())
         self._engine: UciEngine = UciEngine(self._game)
 
         self._table_model: TableModel = TableModel(self._game.san_moves)
         self._table_view: TableView = TableView(self._table_model)
 
-        self._black_clock: ChessClockWidget = ChessClockWidget(ClockColor.Black)
-        self._white_clock: ChessClockWidget = ChessClockWidget(ClockColor.White)
+        self._black_clock: ClockWidget = ClockWidget(ClockColor.Black)
+        self._white_clock: ClockWidget = ClockWidget(ClockColor.White)
 
-        self._svg_board: SvgBoardWidget = SvgBoardWidget(self._game)
-        self._fen_editor: FenEditorWidget = FenEditorWidget(self._game.board)
+        self._board: BoardWidget = BoardWidget(self._game)
         self._evaluation_bar: EvaluationBarWidget = EvaluationBarWidget()
+        self._fen_editor: FenEditorWidget = FenEditorWidget(self._game.board)
 
         self._engine_name_label: QLabel = QLabel()
         self._openings_label: QLabel = QLabel()
@@ -82,8 +84,6 @@ class MainWindow(QMainWindow):
         self.switch_clock_timers()
         self.adjust_engine_buttons()
         self.connect_signals_to_slots()
-
-        self.apply_style("dark-forest")
 
         if self._game.is_engine_on_turn():
             self.invoke_engine()
@@ -311,7 +311,7 @@ class MainWindow(QMainWindow):
         self._grid_layout: QGridLayout = QGridLayout()
         self._grid_layout.addWidget(self._black_clock, 0, 0, 1, 1, Top)
         self._grid_layout.addWidget(self._white_clock, 0, 0, 1, 1, Bottom)
-        self._grid_layout.addWidget(self._svg_board, 0, 1, 1, 1)
+        self._grid_layout.addWidget(self._board, 0, 1, 1, 1)
         self._grid_layout.addWidget(self._evaluation_bar, 0, 2, 1, 1)
         self._grid_layout.addWidget(self._table_view, 0, 3, 1, 2)
         self._grid_layout.addWidget(self._notifications_label, 1, 3, 1, 1)

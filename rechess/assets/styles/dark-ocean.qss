@@ -191,7 +191,7 @@ QToolTip {
   padding: 6px;
 }
 
-SvgBoardWidget {
+BoardWidget {
   qproperty-coord: #c5d9e8;
   qproperty-inner_border: #385f80;
   qproperty-margin: #344d69;

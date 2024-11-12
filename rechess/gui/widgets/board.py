@@ -10,8 +10,8 @@ from rechess.utils import setting_value
 svg.XX = "<circle id='xx' r='5' cx='22' cy='22' stroke='#303030' fill='#e5e5e5'/>"
 
 
-class SvgBoardWidget(QSvgWidget):
-    """Board with interactive pieces as SVG widget."""
+class BoardWidget(QSvgWidget):
+    """Board with interactive pieces."""
 
     coord: Property = Property(
         QColor,
