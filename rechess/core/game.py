@@ -20,8 +20,8 @@ from rechess.ui.dialogs import PromotionDialog
 from rechess.utils import setting_value
 
 
-class ChessGame(QObject):
-    """Manages chess game state, moves, and UI interactions."""
+class Game(QObject):
+    """Chess game state, moves, and UI interactions."""
 
     move_played: Signal = Signal(Move)
 

@@ -3,7 +3,7 @@ from PySide6.QtCore import Property
 from PySide6.QtGui import QColor, QMouseEvent, QPaintEvent
 from PySide6.QtSvgWidgets import QSvgWidget
 
-from rechess.game import ChessGame
+from rechess.core import Game
 from rechess.utils import setting_value
 
 
@@ -54,10 +54,10 @@ class BoardWidget(QSvgWidget):
         lambda self, color: setattr(self, "_square_light_lastmove", color),
     )
 
-    def __init__(self, game: ChessGame) -> None:
+    def __init__(self, game: Game) -> None:
         super().__init__()
 
-        self._game = game
+        self._game: Game = game
 
         self._coord: QColor = QColor()
         self._inner_border: QColor = QColor()

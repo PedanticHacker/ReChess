@@ -17,8 +17,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from rechess.engine import UciEngine
-from rechess.game import ChessGame
+from rechess.core import Engine, Game
 from rechess.ui import ClockColor
 from rechess.ui.dialogs import SettingsDialog
 from rechess.ui.table import TableModel, TableView
@@ -51,8 +50,8 @@ class MainWindow(QMainWindow):
 
         self.apply_style("dark-forest")
 
-        self._game: ChessGame = ChessGame(Board())
-        self._engine: UciEngine = UciEngine(self._game)
+        self._game: Game = Game(Board())
+        self._engine: Engine = Engine(self._game)
 
         self._table_model: TableModel = TableModel(self._game.san_moves)
         self._table_view: TableView = TableView(self._table_model)

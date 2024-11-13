@@ -1,10 +1,10 @@
 from contextlib import suppress
+from typing import TypeAlias
 
 from chess import Move
 from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
 from PySide6.QtCore import QObject, Signal
 
-from rechess.game import ChessGame
 from rechess.utils import (
     delete_quarantine_attribute,
     engine_configuration,
@@ -14,7 +14,10 @@ from rechess.utils import (
 )
 
 
-class UciEngine(QObject):
+Game: TypeAlias = object
+
+
+class Engine(QObject):
     """Communication with UCI-compatible chess engine."""
 
     best_move_analyzed: Signal = Signal(Move)
@@ -22,11 +25,10 @@ class UciEngine(QObject):
     score_analyzed: Signal = Signal(Score)
     variation_analyzed: Signal = Signal(str)
 
-    def __init__(self, game: ChessGame) -> None:
+    def __init__(self, game: Game) -> None:
         super().__init__()
 
-        self._game: ChessGame = game
-
+        self._game: Game = game
         self._analyzing: bool = False
 
         self.load_from_file_at(path_to_stockfish())
