@@ -3,20 +3,20 @@ from typing import Iterator
 
 from chess import (
     BB_SQUARES,
+    WHITE,
     Board,
     IllegalMoveError,
     Move,
     PieceType,
     Square,
     square,
-    WHITE,
 )
 from chess.svg import Arrow
 from PySide6.QtCore import QObject, QUrl, Signal
 from PySide6.QtMultimedia import QSoundEffect
 from PySide6.QtWidgets import QDialog
 
-from rechess.gui.dialogs import PromotionDialog
+from rechess.ui.dialogs import PromotionDialog
 from rechess.utils import setting_value
 
 

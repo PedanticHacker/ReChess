@@ -6,7 +6,7 @@ import sys
 from PySide6.QtCore import QLockFile
 from PySide6.QtWidgets import QApplication, QMessageBox, QWidget
 
-from rechess.gui import MainWindow
+from rechess.ui import MainWindow
 from rechess.utils import initialize_app
 
 

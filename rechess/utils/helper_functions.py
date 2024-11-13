@@ -3,7 +3,7 @@ import os
 import platform
 import stat
 import subprocess
-from typing import Callable, Literal, overload, TypeAlias
+from typing import Callable, Literal, TypeAlias, overload
 
 from psutil import cpu_count, virtual_memory
 from PySide6.QtCore import QSize
