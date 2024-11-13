@@ -9,7 +9,7 @@ from PySide6.QtCore import (
 
 
 class TableModel(QAbstractTableModel):
-    """Model for displaying SAN moves in two-column table."""
+    """Model for managing SAN moves in two-column table."""
 
     def __init__(self, san_moves: list[str]) -> None:
         super().__init__()

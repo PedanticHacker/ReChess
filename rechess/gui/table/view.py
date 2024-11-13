@@ -11,7 +11,7 @@ from PySide6.QtWidgets import QAbstractItemView, QHeaderView, QTableView
 
 
 class TableView(QTableView):
-    """View for displaying chess notation in 2-column table."""
+    """View for displaying SAN moves in two-column table."""
 
     item_selected: Signal = Signal(int)
 
