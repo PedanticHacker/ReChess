@@ -89,7 +89,7 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def create_actions(self) -> None:
-        """Create actions for menubar items and toolbar buttons."""
+        """Create actions for menubar menus or toolbar buttons."""
         self.about_action = create_action(
             handler=self.show_about,
             icon=svg_icon("about"),
@@ -349,7 +349,7 @@ class MainWindow(QMainWindow):
                 self._white_clock.add_increment()
 
     def adjust_engine_buttons(self) -> None:
-        """Adjust state of chess engine's toolbar buttons."""
+        """Adjust state of UCI chess engine's toolbar buttons."""
         self.play_move_now_action.setEnabled(True)
         self.start_analysis_action.setEnabled(True)
         self.stop_analysis_action.setDisabled(True)
@@ -372,12 +372,12 @@ class MainWindow(QMainWindow):
         self._white_clock.time_expired.connect(self.on_white_time_expired)
 
     def invoke_engine(self) -> None:
-        """Invoke chess engine to play move."""
+        """Invoke UCI chess engine to play move."""
         QThreadPool.globalInstance().start(self._engine.play_move)
         self._notifications_label.setText("Thinking...")
 
     def invoke_analysis(self) -> None:
-        """Invoke chess engine to start analysis."""
+        """Invoke UCI chess engine to start analysis."""
         QThreadPool.globalInstance().start(self._engine.start_analysis)
         self._notifications_label.setText("Analyzing...")
 
@@ -390,7 +390,7 @@ class MainWindow(QMainWindow):
         self.close()
 
     def flip(self) -> None:
-        """Flip chessboard and its related widgets."""
+        """Flip board and its related widgets."""
         flipped_orientation: bool = not setting_value("board", "orientation")
         set_setting_value("board", "orientation", flipped_orientation)
 
@@ -398,12 +398,12 @@ class MainWindow(QMainWindow):
         self._evaluation_bar.flip_appearance()
 
     def play_move_now(self) -> None:
-        """Force chess engine to play on current turn."""
+        """Force UCI chess engine to play move on current turn."""
         set_setting_value("engine", "is_white", self._game.turn)
         self.invoke_engine()
 
     def show_settings_dialog(self) -> None:
-        """Show Settings dialog to edit settings and apply if saved."""
+        """Show dialog to edit settings and apply them if saved."""
         settings_dialog: SettingsDialog = SettingsDialog()
         settings_dialog.set_groups_disabled(self._game.is_in_progress())
 
@@ -474,7 +474,7 @@ class MainWindow(QMainWindow):
         self._grid_layout.update()
 
     def start_analysis(self) -> None:
-        """Start analyzing current chessboard position."""
+        """Start analyzing current position."""
         self.invoke_analysis()
         self._evaluation_bar.show()
         self._black_clock.stop_timer()
@@ -483,7 +483,7 @@ class MainWindow(QMainWindow):
         self.start_analysis_action.setDisabled(True)
 
     def stop_analysis(self) -> None:
-        """Stop analyzing current chessboard position."""
+        """Stop analyzing current position."""
         self._engine.stop_analysis()
 
         self.switch_clock_timers()
@@ -528,10 +528,10 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def offer_new_game(self) -> None:
-        """Show dialog offering to start new chess game."""
+        """Show dialog offering to start new game."""
         answer: QMessageBox.StandardButton = QMessageBox.question(
             self,
-            "New Game",
+            "New game",
             "Do you want to start a new game?",
         )
 
@@ -539,7 +539,7 @@ class MainWindow(QMainWindow):
             self.start_new_game()
 
     def start_new_game(self) -> None:
-        """Start new chess game by resetting everything."""
+        """Start new game by resetting everything."""
         if setting_value("board", "orientation") == BLACK:
             self.flip()
 
@@ -575,7 +575,7 @@ class MainWindow(QMainWindow):
             event.ignore()
 
     def wheelEvent(self, event: QWheelEvent) -> None:
-        """Select notation item on mouse wheel scroll."""
+        """Select SAN move in table view on mouse wheel scroll."""
         wheel_step: int = event.angleDelta().y()
 
         if wheel_step > 0:

@@ -103,7 +103,7 @@ def create_action(
     shortcut: str,
     status_tip: str,
 ) -> QAction:
-    """Create action for toolbar or menubar item."""
+    """Create action for menubar menu or toolbar button."""
     action: QAction = QAction(icon, name)
     action.setShortcut(shortcut)
     action.setStatusTip(status_tip)
