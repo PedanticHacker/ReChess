@@ -1,7 +1,7 @@
 from functools import partial
 from pathlib import Path
 
-from chess import BLACK, Board, Move
+from chess import BLACK, Move
 from chess.engine import Score
 from PySide6.QtCore import Qt, QThreadPool, Slot
 from PySide6.QtGui import QCloseEvent, QWheelEvent
@@ -21,12 +21,7 @@ from rechess.core import Engine, Game
 from rechess.ui import ClockColor
 from rechess.ui.dialogs import SettingsDialog
 from rechess.ui.table import TableModel, TableView
-from rechess.ui.widgets import (
-    BoardWidget,
-    ClockWidget,
-    EvaluationBarWidget,
-    FenEditorWidget,
-)
+from rechess.ui.widgets import Board, Clock, EvaluationBar, FenEditor
 from rechess.utils import (
     create_action,
     find_opening,
@@ -50,18 +45,18 @@ class MainWindow(QMainWindow):
 
         self.apply_style("dark-forest")
 
-        self._game: Game = Game(Board())
+        self._game: Game = Game()
         self._engine: Engine = Engine(self._game)
 
         self._table_model: TableModel = TableModel(self._game.san_moves)
         self._table_view: TableView = TableView(self._table_model)
 
-        self._black_clock: ClockWidget = ClockWidget(ClockColor.Black)
-        self._white_clock: ClockWidget = ClockWidget(ClockColor.White)
+        self._black_clock: Clock = Clock(ClockColor.Black)
+        self._white_clock: Clock = Clock(ClockColor.White)
 
-        self._board: BoardWidget = BoardWidget(self._game)
-        self._evaluation_bar: EvaluationBarWidget = EvaluationBarWidget()
-        self._fen_editor: FenEditorWidget = FenEditorWidget(self._game.board)
+        self._board: Board = Board(self._game)
+        self._evaluation_bar: EvaluationBar = EvaluationBar()
+        self._fen_editor: FenEditor = FenEditor(self._game.board)
 
         self._engine_name_label: QLabel = QLabel()
         self._openings_label: QLabel = QLabel()

@@ -10,7 +10,7 @@ from rechess.utils import setting_value
 svg.XX = "<circle id='xx' r='5' cx='22' cy='22' stroke='#303030' fill='#e5e5e5'/>"
 
 
-class BoardWidget(QSvgWidget):
+class Board(QSvgWidget):
     """Board with interactive pieces."""
 
     coord: Property = Property(

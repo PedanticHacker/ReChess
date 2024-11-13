@@ -6,7 +6,7 @@ from PySide6.QtWidgets import QProgressBar, QSizePolicy
 from rechess.utils import setting_value
 
 
-class EvaluationBarWidget(QProgressBar):
+class EvaluationBar(QProgressBar):
     """Bar widget for animating board position evaluation."""
 
     def __init__(self) -> None:

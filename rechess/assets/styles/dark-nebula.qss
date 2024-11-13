@@ -1,4 +1,4 @@
-BoardWidget {
+Board {
   qproperty-coord: #e2d4f5;
   qproperty-inner_border: #6b35b0;
   qproperty-margin: #3d2159;

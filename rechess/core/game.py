@@ -25,10 +25,10 @@ class Game(QObject):
 
     move_played: Signal = Signal(Move)
 
-    def __init__(self, board: Board) -> None:
+    def __init__(self) -> None:
         super().__init__()
 
-        self._board: Board = board
+        self._board: Board = Board()
 
         self._arrows: list[Arrow] = []
         self._positions: list[Board] = []
@@ -44,7 +44,7 @@ class Game(QObject):
 
     @property
     def board(self) -> Board:
-        """Return board with included positions and game state."""
+        """Return board with game state."""
         return self._board
 
     @property
