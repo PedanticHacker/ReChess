@@ -11,7 +11,6 @@ class PromotionDialog(QDialog):
         super().__init__()
 
         self._player_color: Color = player_color
-
         self._piece_type: PieceType = PieceType()
 
         self.set_title()
