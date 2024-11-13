@@ -1,3 +1,14 @@
+BoardWidget {
+  qproperty-coord: #3a1066;
+  qproperty-inner_border: #9d4ee6;
+  qproperty-margin: #d395ff;
+  qproperty-outer_border: #3a1066;
+  qproperty-square_dark: #a346f2;
+  qproperty-square_dark_lastmove: #9339e0;
+  qproperty-square_light: #e9ccff;
+  qproperty-square_light_lastmove: #b375e7;
+}
+
 QDialog {
   background-color: #c385f7;
   border: 1px solid #9d4ee6;
@@ -189,15 +200,4 @@ QToolTip {
   border-radius: 4px;
   color: #3a1066;
   padding: 6px;
-}
-
-BoardWidget {
-  qproperty-coord: #3a1066;
-  qproperty-inner_border: #9d4ee6;
-  qproperty-margin: #d395ff;
-  qproperty-outer_border: #3a1066;
-  qproperty-square_dark: #a346f2;
-  qproperty-square_dark_lastmove: #9339e0;
-  qproperty-square_light: #e9ccff;
-  qproperty-square_light_lastmove: #b375e7;
 }
