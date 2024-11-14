@@ -49,7 +49,8 @@ def path_to_stockfish() -> str:
 
 def delete_quarantine_attribute(path_to_file: str) -> None:
     """Delete quarantine attribute for file at `path_to_file`."""
-    subprocess.run(["xattr", "-d", "com.apple.quarantine", path_to_file])
+    if hasattr(os, "removexattr"):
+        os.removexattr(path_to_file, "com.apple.quarantine")
 
 
 def make_executable(path_to_file: str) -> None:

@@ -15,7 +15,7 @@ from rechess.utils import (
 
 
 class Engine(QObject):
-    """Communication with UCI-compatible chess engine."""
+    """Communication with UCI-compatible engine."""
 
     best_move_analyzed: Signal = Signal(Move)
     move_played: Signal = Signal(Move)
@@ -31,17 +31,16 @@ class Engine(QObject):
         self.load_from_file_at(path_to_stockfish())
 
     def load_from_file_at(self, path_to_file: str) -> None:
-        """Load chess engine from file at `path_to_file`."""
-        with suppress(Exception):
-            delete_quarantine_attribute(path_to_file)
-            make_executable(path_to_file)
+        """Load engine from file at `path_to_file`."""
+        delete_quarantine_attribute(path_to_file)
+        make_executable(path_to_file)
 
-            self.quit()
-            self._engine = SimpleEngine.popen_uci(path_to_file)
-            self._engine.configure(engine_configuration())
+        self.quit()
+        self._engine = SimpleEngine.popen_uci(path_to_file)
+        self._engine.configure(engine_configuration())
 
     def play_move(self) -> None:
-        """Make chess engine to play move."""
+        """Make engine to play move."""
         play_result: PlayResult = self._engine.play(
             board=self._game.board,
             limit=Limit(depth=30),
@@ -77,11 +76,13 @@ class Engine(QObject):
         self._analyzing = False
 
     def quit(self) -> None:
-        """Quit chess engine's CPU task."""
+        """Quit engine's CPU task."""
         with suppress(AttributeError):
             self._engine.quit()
 
     @property
     def name(self) -> str:
-        """Return chess engine's name."""
-        return self._engine.id["name"]
+        """Return engine's name."""
+        with suppress(AttributeError):
+            return self._engine.id["name"]
+        return ""
