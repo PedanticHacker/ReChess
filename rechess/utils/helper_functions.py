@@ -35,40 +35,26 @@ def platform_name() -> str:
 
 
 def _stockfish_filename() -> str:
-    """Return platform-specific filename of Stockfish chess engine."""
+    """Return platform-specific filename of Stockfish engine."""
     return "stockfish.exe" if platform_name() == "windows" else "stockfish"
 
 
 def path_to_stockfish() -> str:
-    """Return path to executable file of Stockfish 17 chess engine."""
+    """Return path to executable file of Stockfish 17 engine."""
     return (
         f"rechess/assets/engines/stockfish-17/{platform_name()}"
         f"/{_stockfish_filename()}"
     )
 
 
+def delete_quarantine_attribute(path_to_file: str) -> None:
+    """Delete quarantine attribute for file at `path_to_file`."""
+    subprocess.run(["xattr", "-d", "com.apple.quarantine", path_to_file])
+
+
 def make_executable(path_to_file: str) -> None:
     """Make file at `path_to_file` be executable."""
     os.chmod(path_to_file, os.stat(path_to_file).st_mode | stat.S_IXUSR)
-
-
-def delete_quarantine_attribute(path_to_file: str) -> None:
-    """Delete quarantine attribute for file at `path_to_file` on macOS."""
-    if platform_name() == "macos":
-        file_attributes: str = subprocess.run(
-            ["xattr", "-l", path_to_file],
-            capture_output=True,
-            text=True,
-        ).stdout
-
-        if "com.apple.quarantine" in file_attributes:
-            subprocess.run(["xattr", "-d", "com.apple.quarantine", path_to_file])
-
-
-def _optimal_cpu_threads() -> int:
-    """Return all CPU threads, but reserve 1 for other CPU tasks."""
-    cpu_threads: int | None = cpu_count()
-    return 1 if not cpu_threads or cpu_threads == 1 else cpu_threads - 1
 
 
 def _optimal_hash_size() -> int:
@@ -78,8 +64,14 @@ def _optimal_hash_size() -> int:
     return available_ram // SEVENTY_PERCENT
 
 
+def _optimal_cpu_threads() -> int:
+    """Return all CPU threads, but reserve one for other CPU tasks."""
+    cpu_threads: int | None = cpu_count()
+    return 1 if not cpu_threads or cpu_threads == 1 else cpu_threads - 1
+
+
 def engine_configuration() -> dict[str, int]:
-    """Return optimal configuration for UCI chess engine."""
+    """Return optimal configuration for engine."""
     return {"Hash": _optimal_hash_size(), "Threads": _optimal_cpu_threads()}
 
 
@@ -90,80 +82,43 @@ def _settings() -> SettingsDict:
 
 
 @overload
-def setting_value(
-    section: BoardSection,
-    key: BoardKey,
-) -> bool: ...
-
-
+def setting_value(section: BoardSection, key: BoardKey) -> bool: ...
 @overload
-def setting_value(
-    section: ClockSection,
-    key: ClockKey,
-) -> float: ...
-
-
+def setting_value(section: ClockSection, key: ClockKey) -> float: ...
 @overload
-def setting_value(
-    section: EngineSection,
-    key: EngineKey,
-) -> bool: ...
+def setting_value(section: EngineSection, key: EngineKey) -> bool: ...
 
 
-def setting_value(
-    section: SettingSection,
-    key: SettingKey,
-) -> SettingValue:
+def setting_value(section: SettingSection, key: SettingKey) -> SettingValue:
     """Return value of `key` from `section`."""
-    settings: SettingsDict = _settings()
-    return settings[section][key]
+    settings_dict: SettingsDict = _settings()
+    return settings_dict[section][key]
 
 
 @overload
-def set_setting_value(
-    section: BoardSection,
-    key: BoardKey,
-    value: bool,
-) -> None: ...
-
-
+def set_setting_value(section: BoardSection, key: BoardKey, value: bool) -> None: ...
 @overload
-def set_setting_value(
-    section: ClockSection,
-    key: ClockKey,
-    value: float,
-) -> None: ...
-
-
+def set_setting_value(section: ClockSection, key: ClockKey, value: float) -> None: ...
 @overload
-def set_setting_value(
-    section: EngineSection,
-    key: EngineKey,
-    value: bool,
-) -> None: ...
+def set_setting_value(section: EngineSection, key: EngineKey, value: bool) -> None: ...
 
 
 def set_setting_value(
-    section: SettingSection,
-    key: SettingKey,
-    value: SettingValue,
+    section: SettingSection, key: SettingKey, value: SettingValue
 ) -> None:
     """Set `value` to `key` for `section`."""
     settings_dict: SettingsDict = _settings()
     settings_dict[section][key] = value
 
     with open(
-        PATH_TO_SETTINGS_FILE,
-        mode="w",
-        encoding="utf-8",
-        newline="\n",
+        PATH_TO_SETTINGS_FILE, mode="w", encoding="utf-8", newline="\n"
     ) as settings_file:
         json.dump(settings_dict, settings_file, indent=2)
         settings_file.write("\n")
 
 
 def find_opening(fen: str) -> tuple[str, str] | None:
-    """Return ECO code and opening name for `fen`."""
+    """Return ECO code and opening name based on `fen`."""
     with open("rechess/openings.json", encoding="utf-8") as json_file:
         openings = json.load(json_file)
     return openings.get(fen)
@@ -182,11 +137,7 @@ def initialize_app() -> QApplication:
 
 
 def create_action(
-    handler: Callable,
-    icon: QIcon,
-    name: str,
-    shortcut: str,
-    status_tip: str,
+    handler: Callable, icon: QIcon, name: str, shortcut: str, status_tip: str
 ) -> QAction:
     """Create action for menubar menu or toolbar button."""
     action: QAction = QAction(icon, name)

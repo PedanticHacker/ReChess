@@ -1,8 +1,6 @@
-# ReChess
-
 ## What's this?
 
-ReChess is an app for playing chess against a UCI chess engine.
+This is ReChess, an app for playing chess against a UCI engine.
 
 ## In what programming language is ReChess written?
 
@@ -72,7 +70,7 @@ then click one of its legal squares to make your move.
 After you click a piece, all of its legal squares get marked with a dot.
 That's how you know.
 
-### Can I drag and then drop a piece?
+### Can I drag and drop a piece?
 
 No. Drag-and-drop functionality is not supported, just click-click.
 
@@ -185,7 +183,7 @@ python-chess library!
     - [PyPI (Python Package Index) page](https://pypi.org/project/chess)
 
 5. Last but not least, thanks to all developers for their dedicated work
-on the Stockfish chess engine!
+on the Stockfish engine!
 
     - [Source code](https://github.com/official-stockfish/Stockfish)
     - [Downloads page](https://stockfishchess.org/download)
@@ -194,7 +192,7 @@ on the Stockfish chess engine!
 
 ReChess uses the **MIT License**.
 
-### Where can I see ReChess's license?
+### Where can I see the license?
 
 See the `LICENSE.txt` file in ReChess's top-level directory about the
 permissions, limitations, and conditions of the license.

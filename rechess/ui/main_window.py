@@ -450,14 +450,14 @@ class MainWindow(QMainWindow):
             self,
             "About",
             (
-                "A GUI app for playing chess against a UCI chess engine.\n\n"
+                "App for playing chess against a UCI engine.\n\n"
                 "Copyright 2024 Boštjan Mejak\n"
                 "MIT License"
             ),
         )
 
     def flip_clock_alignments(self) -> None:
-        """Flip alignments of top and bottom chess clocks."""
+        """Flip alignments of top and bottom clocks."""
         if Top in self._grid_layout.itemAt(0).alignment():
             self._grid_layout.itemAt(0).setAlignment(Bottom)
             self._grid_layout.itemAt(1).setAlignment(Top)
@@ -555,11 +555,11 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def closeEvent(self, event: QCloseEvent) -> None:
-        """Ask whether to quit ReChess by closing main window."""
+        """Ask whether to quit by closing main window."""
         answer: QMessageBox.StandardButton = QMessageBox.question(
             self,
             "Quit",
-            "Do you want to quit ReChess?",
+            "Do you want to quit?",
         )
 
         if answer == answer.Yes:
@@ -569,7 +569,7 @@ class MainWindow(QMainWindow):
             event.ignore()
 
     def wheelEvent(self, event: QWheelEvent) -> None:
-        """Select SAN move in table view on mouse wheel scroll."""
+        """Select item in table view on mouse wheel scroll."""
         wheel_step: int = event.angleDelta().y()
 
         if wheel_step > 0:
@@ -579,7 +579,7 @@ class MainWindow(QMainWindow):
 
     @Slot(Move)
     def on_best_move_analyzed(self, best_move: Move) -> None:
-        """Show `best_move` from chess engine analysis as arrow."""
+        """Based on engine analysis, show `best_move` as arrow."""
         self._game.set_arrow(best_move)
 
     @Slot()
@@ -598,10 +598,10 @@ class MainWindow(QMainWindow):
         self.refresh_ui()
 
     @Slot(int)
-    def on_item_selected(self, ply_index: int) -> None:
-        """Set move from `ply_index`."""
-        if ply_index > -1:
-            self._game.set_move(ply_index)
+    def on_item_selected(self, item_index: int) -> None:
+        """Set move based on `item_index`."""
+        if item_index > -1:
+            self._game.set_move(item_index)
         else:
             self._game.clear_arrows()
             self._game.set_root_position()
@@ -623,16 +623,16 @@ class MainWindow(QMainWindow):
     def on_move_played(self, move: Move) -> None:
         """Play `move` by pushing it and refreshing UI."""
         if self._game.is_legal(move):
-            self._game.delete_data_after(self._table_view.ply_index)
+            self._game.delete_data_after(self._table_view.item_index)
             self._game.push(move)
             self.refresh_ui()
 
     @Slot(str)
     def on_variation_analyzed(self, variation: str) -> None:
-        """Show `variation` from chess engine analysis."""
+        """Show `variation` based on engine analysis."""
         self._engine_analysis_label.setText(variation)
 
     @Slot(Score)
     def on_score_analyzed(self, score: Score) -> None:
-        """Show position evaluation from `score`."""
+        """Show position evaluation based on `score`."""
         self._evaluation_bar.animate(score)

@@ -14,9 +14,6 @@ from rechess.utils import (
 )
 
 
-Game: TypeAlias = object
-
-
 class Engine(QObject):
     """Communication with UCI-compatible chess engine."""
 
@@ -25,17 +22,17 @@ class Engine(QObject):
     score_analyzed: Signal = Signal(Score)
     variation_analyzed: Signal = Signal(str)
 
-    def __init__(self, game: Game) -> None:
+    def __init__(self, game) -> None:
         super().__init__()
 
-        self._game: Game = game
+        self._game = game
         self._analyzing: bool = False
 
         self.load_from_file_at(path_to_stockfish())
 
     def load_from_file_at(self, path_to_file: str) -> None:
         """Load chess engine from file at `path_to_file`."""
-        with suppress(EngineError):
+        with suppress(Exception):
             delete_quarantine_attribute(path_to_file)
             make_executable(path_to_file)
 
