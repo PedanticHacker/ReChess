@@ -176,21 +176,21 @@ class Game(QObject):
 
         return None
 
-    def set_move(self, move_index: int) -> None:
-        """Set move at `move_index`."""
-        self._board = self._positions[move_index].copy()
+    def set_move(self, item_index: int) -> None:
+        """Set move based on `item_index`."""
+        self._board = self._positions[item_index].copy()
 
-        move: Move = self._board.move_stack[move_index]
+        move: Move = self._board.move_stack[item_index]
         self.set_arrow(move)
 
-    def delete_data_after(self, move_index: int) -> None:
-        """Delete moves and positions after `move_index`."""
-        if move_index < 0:
+    def delete_data_after(self, item_index: int) -> None:
+        """Delete moves and positions after `item_index`."""
+        if item_index < 0:
             self.set_new_game()
         else:
-            after_move_index: slice = slice(move_index + 1, len(self._moves))
-            del self._moves[after_move_index]
-            del self._positions[after_move_index]
+            after_item_index: slice = slice(item_index + 1, len(self._moves))
+            del self._moves[after_item_index]
+            del self._positions[after_item_index]
 
     def is_engine_on_turn(self) -> bool:
         """Return True if engine is on turn."""
