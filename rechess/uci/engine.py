@@ -1,5 +1,4 @@
 from contextlib import suppress
-from typing import TypeAlias
 
 from chess import Move
 from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
