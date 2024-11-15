@@ -414,7 +414,7 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def apply_style(self, filename: str) -> None:
-        """Apply style from QSS file with `filename`."""
+        """Apply style from QSS file at `filename`."""
         with open(f"rechess/assets/styles/{filename}.qss") as qss_file:
             self.setStyleSheet(qss_file.read())
 
