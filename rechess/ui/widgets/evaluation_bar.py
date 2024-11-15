@@ -7,7 +7,7 @@ from rechess.utils import setting_value
 
 
 class EvaluationBar(QProgressBar):
-    """Bar widget for animating board position evaluation."""
+    """Bar for animating position evaluation."""
 
     def __init__(self) -> None:
         super().__init__()
