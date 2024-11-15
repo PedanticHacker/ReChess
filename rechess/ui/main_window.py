@@ -610,6 +610,7 @@ class MainWindow(QMainWindow):
         self.show_fen()
         self.show_opening()
         self.stop_analysis()
+        self._game.reset_squares()
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
         self._engine_analysis_label.clear()
