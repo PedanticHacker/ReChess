@@ -5,6 +5,7 @@ from chess import Move
 from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
 from PySide6.QtCore import QObject, Signal
 
+from rechess.core import Game
 from rechess.utils import (
     delete_quarantine_attribute,
     engine_configuration,
@@ -22,10 +23,10 @@ class Engine(QObject):
     score_analyzed: Signal = Signal(Score)
     variation_analyzed: Signal = Signal(str)
 
-    def __init__(self, game) -> None:
+    def __init__(self, game: Game) -> None:
         super().__init__()
 
-        self._game = game
+        self._game: Game = game
         self._analyzing: bool = False
 
         self.load_from_file_at(path_to_stockfish())
