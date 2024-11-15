@@ -614,7 +614,6 @@ class MainWindow(QMainWindow):
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
         self._engine_analysis_label.clear()
-
         self._evaluation_bar.reset_appearance()
 
         if self._game.is_over():
