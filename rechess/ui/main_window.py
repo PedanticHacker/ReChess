@@ -419,7 +419,7 @@ class MainWindow(QMainWindow):
             self.setStyleSheet(qss_file.read())
 
     def load_engine(self) -> None:
-        """Show file manager to load UCI engine."""
+        """Show file manager to load engine."""
         path_to_file, _ = QFileDialog.getOpenFileName(
             self,
             "File Manager",
