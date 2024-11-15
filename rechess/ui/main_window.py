@@ -380,7 +380,7 @@ class MainWindow(QMainWindow):
         self.showMaximized()
 
     def quit(self) -> None:
-        """Trigger main window's close event to quit ReChess."""
+        """Trigger main window's close event to quit."""
         self.close()
 
     def flip(self) -> None:
@@ -392,7 +392,7 @@ class MainWindow(QMainWindow):
         self._evaluation_bar.flip_appearance()
 
     def play_move_now(self) -> None:
-        """Force UCI chess engine to play move on current turn."""
+        """Force UCI engine to play move on current turn."""
         set_setting_value("engine", "is_white", self._game.turn)
         self.invoke_engine()
 
@@ -419,19 +419,19 @@ class MainWindow(QMainWindow):
             self.setStyleSheet(qss_file.read())
 
     def load_engine(self) -> None:
-        """Show file manager to load UCI chess engine."""
+        """Show file manager to load UCI engine."""
         path_to_file, _ = QFileDialog.getOpenFileName(
             self,
             "File Manager",
             Path.home().as_posix(),
-            "UCI chess engine (*.exe)" if platform_name() == "windows" else "",
+            "UCI engine (*.exe)" if platform_name() == "windows" else "",
         )
 
         if path_to_file:
             self.start_new_engine(path_to_file)
 
     def start_new_engine(self, path_to_file: str) -> None:
-        """Start new UCI chess engine from file at `path_to_file`."""
+        """Start new UCI engine from file at `path_to_file`."""
         self.stop_analysis()
 
         self._game.clear_arrows()
@@ -621,7 +621,7 @@ class MainWindow(QMainWindow):
 
     @Slot(Move)
     def on_move_played(self, move: Move) -> None:
-        """Play `move` by pushing it and refreshing UI."""
+        """Play `move` and refresh UI."""
         if self._game.is_legal(move):
             self._game.delete_data_after(self._table_view.item_index)
             self._game.push(move)

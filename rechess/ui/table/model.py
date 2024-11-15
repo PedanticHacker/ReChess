@@ -42,7 +42,7 @@ class TableModel(QAbstractTableModel):
         self,
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
-        """Return number of rows needed to display all items."""
+        """Return rows needed for all items."""
         all_items = len(self._items) + 1
         return all_items // 2
 
@@ -50,7 +50,7 @@ class TableModel(QAbstractTableModel):
         self,
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
-        """Return two columns for items."""
+        """Return two columns for all items."""
         return 2
 
     def headerData(
