@@ -23,10 +23,10 @@ class TableModel(QAbstractTableModel):
     ) -> Any:
         """Return item at `index`."""
         if role == Qt.ItemDataRole.DisplayRole:
-            san_move_index: int = 2 * index.row() + index.column()
+            item_index: int = 2 * index.row() + index.column()
 
-            if 0 <= san_move_index < len(self._items):
-                return self._items[san_move_index]
+            if 0 <= item_index < len(self._items):
+                return self._items[item_index]
 
     def flags(
         self,

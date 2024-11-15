@@ -48,7 +48,7 @@ class MainWindow(QMainWindow):
         self._game: Game = Game()
         self._engine: Engine = Engine(self._game)
 
-        self._table_model: TableModel = TableModel(self._game.san_moves)
+        self._table_model: TableModel = TableModel(self._game.moves)
         self._table_view: TableView = TableView(self._table_model)
 
         self._black_clock: Clock = Clock(ClockColor.Black)

@@ -31,8 +31,8 @@ class Game(QObject):
         self._board: Board = Board()
 
         self._arrows: list[Arrow] = []
+        self._moves: list[str] = []
         self._positions: list[Board] = []
-        self._san_moves: list[str] = []
         self._sound_effect: QSoundEffect = QSoundEffect()
 
         self.set_new_game()
@@ -70,9 +70,9 @@ class Game(QObject):
         return [legal_move.to_square for legal_move in legal_moves]
 
     @property
-    def san_moves(self) -> list[str]:
+    def moves(self) -> list[str]:
         """Return moves in standard algebraic notation (SAN)."""
-        return self._san_moves
+        return self._moves
 
     @property
     def result(self) -> str:
@@ -94,7 +94,7 @@ class Game(QObject):
         """Reset current game to starting state."""
         self._arrows.clear()
         self._board.reset()
-        self._san_moves.clear()
+        self._moves.clear()
         self._positions.clear()
 
         self.reset_squares()
@@ -109,8 +109,8 @@ class Game(QObject):
         self.set_arrow(move)
         self.play_sound_effect(move)
 
-        san_move: str = self._board.san_and_push(move)
-        self._san_moves.append(san_move)
+        new_move: str = self._board.san_and_push(move)
+        self._moves.append(new_move)
 
         position: Board = self._board.copy()
         self._positions.append(position)
@@ -176,21 +176,21 @@ class Game(QObject):
 
         return None
 
-    def set_move(self, ply_index: int) -> None:
-        """Set move at `ply_index`."""
-        self._board = self._positions[ply_index].copy()
+    def set_move(self, move_index: int) -> None:
+        """Set move at `move_index`."""
+        self._board = self._positions[move_index].copy()
 
-        move: Move = self._board.move_stack[ply_index]
+        move: Move = self._board.move_stack[move_index]
         self.set_arrow(move)
 
-    def delete_data_after(self, ply_index: int) -> None:
-        """Delete moves and positions after `ply_index`."""
-        if ply_index < 0:
+    def delete_data_after(self, move_index: int) -> None:
+        """Delete moves and positions after `move_index`."""
+        if move_index < 0:
             self.set_new_game()
         else:
-            after_ply_index: slice = slice(ply_index + 1, len(self._san_moves))
-            del self._san_moves[after_ply_index]
-            del self._positions[after_ply_index]
+            after_move_index: slice = slice(move_index + 1, len(self._moves))
+            del self._moves[after_move_index]
+            del self._positions[after_move_index]
 
     def is_engine_on_turn(self) -> bool:
         """Return True if engine is on turn."""
@@ -198,7 +198,7 @@ class Game(QObject):
 
     def is_in_progress(self) -> bool:
         """Return True if game is in progress."""
-        return bool(self._san_moves)
+        return bool(self._moves)
 
     def is_legal(self, move: Move) -> bool:
         """Return True if `move` is legal."""
