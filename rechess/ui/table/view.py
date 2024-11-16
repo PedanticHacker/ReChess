@@ -6,7 +6,7 @@ from PySide6.QtCore import (
     Signal,
     Slot,
 )
-from PySide6.QtGui import QKeyEvent
+from PySide6.QtGui import QFocusEvent, QKeyEvent
 from PySide6.QtWidgets import QAbstractItemView, QHeaderView, QTableView
 
 
@@ -83,6 +83,10 @@ class TableView(QTableView):
             model_index,
             QItemSelectionModel.SelectionFlag.ClearAndSelect,
         )
+
+    def focusInEvent(self, event: QFocusEvent) -> None:
+        """Ignore focusing this widget on showing main window."""
+        event.ignore()
 
     def keyPressEvent(self, event: QKeyEvent) -> None:
         """Select item by pressing left or right keyboard arrow key."""
