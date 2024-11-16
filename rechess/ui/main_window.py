@@ -44,7 +44,7 @@ class MainWindow(QMainWindow):
     def __init__(self) -> None:
         super().__init__()
 
-        self.apply_style(setting_value("appearance", "style"))
+        self.apply_style(setting_value("ui", "style"))
 
         self._game: Game = Game()
         self._engine: Engine = Engine(self._game)
@@ -415,10 +415,10 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def apply_style(self, filename: str) -> None:
-        """Apply style from QSS file at `filename`."""
+        """Apply style from QSS file at `filename` and set setting."""
         with open(f"rechess/assets/styles/{filename}.qss") as qss_file:
             self.setStyleSheet(qss_file.read())
-        set_setting_value("appearance", "style", filename)
+        set_setting_value("ui", "style", filename)
 
     def load_engine(self) -> None:
         """Show file manager to load engine."""

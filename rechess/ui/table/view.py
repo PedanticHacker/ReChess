@@ -85,7 +85,7 @@ class TableView(QTableView):
         )
 
     def focusInEvent(self, event: QFocusEvent) -> None:
-        """Ignore focusing this widget on showing main window."""
+        """Ignore focus-in event to prevent automatic item selection."""
         event.ignore()
 
     def keyPressEvent(self, event: QKeyEvent) -> None:

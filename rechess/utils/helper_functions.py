@@ -17,15 +17,17 @@ PATH_TO_SETTINGS_FILE: str = "rechess/settings.json"
 BoardSection: TypeAlias = Literal["board"]
 ClockSection: TypeAlias = Literal["clock"]
 EngineSection: TypeAlias = Literal["engine"]
-SettingSection: TypeAlias = BoardSection | ClockSection | EngineSection
+UiSection: TypeAlias = Literal["ui"]
+SettingSection: TypeAlias = BoardSection | ClockSection | EngineSection | UiSection
 
 BoardKey: TypeAlias = Literal["orientation"]
 ClockKey: TypeAlias = Literal["time", "increment"]
 EngineKey: TypeAlias = Literal["is_pondering", "is_white"]
-SettingKey: TypeAlias = BoardKey | ClockKey | EngineKey
+StyleKey: TypeAlias = Literal["style"]
+SettingKey: TypeAlias = BoardKey | ClockKey | EngineKey | StyleKey
 
-SettingValue: TypeAlias = bool | float
-SettingsDict: TypeAlias = dict[str, dict[str, SettingValue]]
+SettingValue: TypeAlias = bool | float | str
+SettingsDict: TypeAlias = dict[SettingSection, dict[SettingKey, SettingValue]]
 
 
 def platform_name() -> str:
@@ -88,8 +90,8 @@ def setting_value(section: BoardSection, key: BoardKey) -> bool: ...
 def setting_value(section: ClockSection, key: ClockKey) -> float: ...
 @overload
 def setting_value(section: EngineSection, key: EngineKey) -> bool: ...
-
-
+@overload
+def setting_value(section: UiSection, key: StyleKey) -> str: ...
 def setting_value(section: SettingSection, key: SettingKey) -> SettingValue:
     """Return value of `key` from `section`."""
     settings_dict: SettingsDict = _settings()
@@ -102,17 +104,22 @@ def set_setting_value(section: BoardSection, key: BoardKey, value: bool) -> None
 def set_setting_value(section: ClockSection, key: ClockKey, value: float) -> None: ...
 @overload
 def set_setting_value(section: EngineSection, key: EngineKey, value: bool) -> None: ...
-
-
+@overload
+def set_setting_value(section: UiSection, key: StyleKey, value: str) -> None: ...
 def set_setting_value(
-    section: SettingSection, key: SettingKey, value: SettingValue
+    section: SettingSection,
+    key: SettingKey,
+    value: SettingValue,
 ) -> None:
     """Set `value` to `key` for `section`."""
     settings_dict: SettingsDict = _settings()
     settings_dict[section][key] = value
 
     with open(
-        PATH_TO_SETTINGS_FILE, mode="w", encoding="utf-8", newline="\n"
+        PATH_TO_SETTINGS_FILE,
+        mode="w",
+        encoding="utf-8",
+        newline="\n",
     ) as settings_file:
         json.dump(settings_dict, settings_file, indent=2)
         settings_file.write("\n")

@@ -1,7 +1,4 @@
 {
-  "appearance": {
-    "style": "light-mint"
-  },
   "board": {
     "orientation": true
   },
@@ -12,5 +9,8 @@
   "engine": {
     "is_white": false,
     "is_pondering": false
+  },
+  "ui": {
+    "style": "dark-mint"
   }
 }
