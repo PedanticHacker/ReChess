@@ -1,4 +1,7 @@
 {
+  "appearance": {
+    "style": "light-mint"
+  },
   "board": {
     "orientation": true
   },
