@@ -21,7 +21,7 @@ from rechess.utils import setting_value
 
 
 class Game(QObject):
-    """Chess game state, moves, and UI interactions."""
+    """Chess game state, moves, and UI interaction management."""
 
     move_played: Signal = Signal(Move)
 

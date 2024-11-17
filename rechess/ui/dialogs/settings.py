@@ -18,7 +18,7 @@ Save: QDialogButtonBox.StandardButton = QDialogButtonBox.StandardButton.Save
 
 
 class SettingsDialog(QDialog):
-    """Dialog for editing settings."""
+    """Dialog for changing and saving settings."""
 
     def __init__(self) -> None:
         super().__init__()
@@ -36,7 +36,7 @@ class SettingsDialog(QDialog):
         self.setWindowTitle("Settings")
 
     def create_groups(self) -> None:
-        """Create groups to display related settings together."""
+        """Create groups for related settings to be put together."""
         self._engine_group: QGroupBox = QGroupBox("Engine")
         self._time_control_group: QGroupBox = QGroupBox("Time Control")
 
@@ -83,7 +83,7 @@ class SettingsDialog(QDialog):
         )
 
     def set_vertical_layout(self) -> None:
-        """Set dialog's widget layout to be vertical."""
+        """Set layout of dialog's widgets to be vertical."""
         engine_layout: QVBoxLayout = QVBoxLayout()
         engine_layout.addWidget(self._engine_black_option)
         engine_layout.addWidget(self._engine_white_option)
@@ -102,7 +102,7 @@ class SettingsDialog(QDialog):
         self.setLayout(vertical_layout)
 
     def connect_signals_to_slots(self) -> None:
-        """Connect dialog's signals to corresponding slot methods."""
+        """Connect result signals to appropriate slot methods."""
         self.accepted.connect(self.on_accepted)
         self._button_box.accepted.connect(self.accept)
         self._button_box.rejected.connect(self.reject)
