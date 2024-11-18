@@ -20,10 +20,7 @@ def main() -> None:
         sys.exit(1)
 
     app: QApplication = initialize_app()
-
-    main_window: MainWindow = MainWindow()
-    main_window.show_maximized()
-
+    MainWindow()
     app.exec()
 
 

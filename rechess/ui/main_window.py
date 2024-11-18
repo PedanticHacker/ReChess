@@ -70,18 +70,23 @@ class MainWindow(QMainWindow):
         self._engine_analysis_label.setAlignment(Top)
         self._engine_analysis_label.setWordWrap(True)
 
+        self.set_size()
         self.create_actions()
         self.create_menubar()
         self.create_toolbar()
         self.set_grid_layout()
         self.create_statusbar()
-        self.set_minimum_size()
         self.switch_clock_timers()
         self.adjust_engine_buttons()
         self.connect_signals_to_slots()
 
         if self._game.is_engine_on_turn():
             self.invoke_engine()
+
+    def set_size(self) -> None:
+        """Limit minimum size to 1000 by 700 pixels, shown maximized."""
+        self.setMinimumSize(1000, 700)
+        self.showMaximized()
 
     def create_actions(self) -> None:
         """Create actions for menubar menus or toolbar buttons."""
@@ -326,10 +331,6 @@ class MainWindow(QMainWindow):
         self.statusBar().addPermanentWidget(self._engine_name_label)
         self._engine_name_label.setText(self._engine.name)
 
-    def set_minimum_size(self) -> None:
-        """Set minimum size to be 1000 by 700 pixels."""
-        self.setMinimumSize(1000, 700)
-
     def switch_clock_timers(self) -> None:
         """Activate clock timer for player on turn."""
         if self._game.is_white_on_turn():
@@ -375,10 +376,6 @@ class MainWindow(QMainWindow):
         """Invoke UCI chess engine to start analysis."""
         QThreadPool.globalInstance().start(self._engine.start_analysis)
         self._notifications_label.setText("Analyzing...")
-
-    def show_maximized(self) -> None:
-        """Show main window in maximized size."""
-        self.showMaximized()
 
     def quit(self) -> None:
         """Trigger main window's close event to quit."""
