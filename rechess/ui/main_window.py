@@ -106,7 +106,7 @@ class MainWindow(QMainWindow):
             self.flip_clock_alignments()
 
     def create_actions(self) -> None:
-        """Create actions for menubar menus or toolbar buttons."""
+        """Create actions for menubar and toolbar."""
         self.about_action = create_action(
             handler=self.show_about,
             icon=svg_icon("about"),
