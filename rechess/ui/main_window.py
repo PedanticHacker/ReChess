@@ -95,9 +95,9 @@ class MainWindow(QMainWindow):
         """Set grid layout for widgets."""
         self._grid_layout: QGridLayout = QGridLayout()
         self._grid_layout.addWidget(self._black_clock, 0, 0, 1, 1, Top)
-        self._grid_layout.addWidget(self._engine_name_label, 1, 0, 1, 1)
-        self._grid_layout.addWidget(self._human_name_label, 1, 0, 1, 1)
         self._grid_layout.addWidget(self._white_clock, 0, 0, 1, 1, Bottom)
+        self._grid_layout.addWidget(self._engine_name_label, 0, 0, 1, 1, Top)
+        self._grid_layout.addWidget(self._human_name_label, 1, 0, 1, 1, Bottom)
         self._grid_layout.addWidget(self._board, 0, 1, 1, 1)
         self._grid_layout.addWidget(self._evaluation_bar, 0, 2, 1, 1)
         self._grid_layout.addWidget(self._table_view, 0, 3, 1, 2)
