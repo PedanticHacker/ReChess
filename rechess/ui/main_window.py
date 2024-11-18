@@ -65,6 +65,7 @@ class MainWindow(QMainWindow):
         self._engine_name_label.setText(self._engine.name)
 
         self._human_name_label: QLabel = QLabel()
+        self._human_name_label.setText("Human")
 
         self._notifications_label: QLabel = QLabel()
         self._notifications_label.setObjectName("notifications")
@@ -94,6 +95,8 @@ class MainWindow(QMainWindow):
         """Set grid layout for widgets."""
         self._grid_layout: QGridLayout = QGridLayout()
         self._grid_layout.addWidget(self._black_clock, 0, 0, 1, 1, Top)
+        self._grid_layout.addWidget(self._engine_name_label, 1, 0, 1, 1)
+        self._grid_layout.addWidget(self._human_name_label, 1, 0, 1, 1)
         self._grid_layout.addWidget(self._white_clock, 0, 0, 1, 1, Bottom)
         self._grid_layout.addWidget(self._board, 0, 1, 1, 1)
         self._grid_layout.addWidget(self._evaluation_bar, 0, 2, 1, 1)
