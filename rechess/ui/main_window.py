@@ -12,8 +12,6 @@ from PySide6.QtWidgets import (
     QLabel,
     QMainWindow,
     QMessageBox,
-    QStatusBar,
-    QVBoxLayout,
     QWidget,
 )
 
