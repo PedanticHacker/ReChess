@@ -69,10 +69,10 @@ class MainWindow(QMainWindow):
         self._engine_analysis_label.setWordWrap(True)
 
         self.set_size()
+        self.set_layout()
         self.create_actions()
         self.create_menubar()
         self.create_toolbar()
-        self.set_grid_layout()
         self.create_statusbar()
         self.switch_clock_timers()
         self.adjust_engine_buttons()
@@ -85,6 +85,25 @@ class MainWindow(QMainWindow):
         """Limit minimum size to 1000 by 700 pixels, shown maximized."""
         self.setMinimumSize(1000, 700)
         self.showMaximized()
+
+    def set_layout(self) -> None:
+        """Set grid layout for widgets."""
+        self._grid_layout: QGridLayout = QGridLayout()
+        self._grid_layout.addWidget(self._black_clock, 0, 0, 1, 1, Top)
+        self._grid_layout.addWidget(self._white_clock, 0, 0, 1, 1, Bottom)
+        self._grid_layout.addWidget(self._board, 0, 1, 1, 1)
+        self._grid_layout.addWidget(self._evaluation_bar, 0, 2, 1, 1)
+        self._grid_layout.addWidget(self._table_view, 0, 3, 1, 2)
+        self._grid_layout.addWidget(self._notifications_label, 1, 3, 1, 1)
+        self._grid_layout.addWidget(self._fen_editor, 1, 1, 1, 1)
+        self._grid_layout.addWidget(self._engine_analysis_label, 2, 1, 1, 1)
+
+        self._widget_container: QWidget = QWidget()
+        self._widget_container.setLayout(self._grid_layout)
+        self.setCentralWidget(self._widget_container)
+
+        if setting_value("board", "orientation") == BLACK:
+            self.flip_clock_alignments()
 
     def create_actions(self) -> None:
         """Create actions for menubar menus or toolbar buttons."""
@@ -303,25 +322,6 @@ class MainWindow(QMainWindow):
 
         # Help area > About
         help_area.addAction(self.about_action)
-
-    def set_grid_layout(self) -> None:
-        """Set grid layout for widgets on main window."""
-        self._grid_layout: QGridLayout = QGridLayout()
-        self._grid_layout.addWidget(self._black_clock, 0, 0, 1, 1, Top)
-        self._grid_layout.addWidget(self._white_clock, 0, 0, 1, 1, Bottom)
-        self._grid_layout.addWidget(self._board, 0, 1, 1, 1)
-        self._grid_layout.addWidget(self._evaluation_bar, 0, 2, 1, 1)
-        self._grid_layout.addWidget(self._table_view, 0, 3, 1, 2)
-        self._grid_layout.addWidget(self._notifications_label, 1, 3, 1, 1)
-        self._grid_layout.addWidget(self._fen_editor, 1, 1, 1, 1)
-        self._grid_layout.addWidget(self._engine_analysis_label, 2, 1, 1, 1)
-
-        self._widget_container: QWidget = QWidget()
-        self._widget_container.setLayout(self._grid_layout)
-        self.setCentralWidget(self._widget_container)
-
-        if setting_value("board", "orientation") == BLACK:
-            self.flip_clock_alignments()
 
     def create_statusbar(self) -> None:
         """Create statusbar for displaying various info."""
