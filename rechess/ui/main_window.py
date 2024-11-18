@@ -57,16 +57,20 @@ class MainWindow(QMainWindow):
         self._evaluation_bar: EvaluationBar = EvaluationBar()
         self._fen_editor: FenEditor = FenEditor(self._game.board)
 
+        self._engine_analysis_label: QLabel = QLabel()
+        self._engine_analysis_label.setAlignment(Top)
+        self._engine_analysis_label.setWordWrap(True)
+
         self._engine_name_label: QLabel = QLabel()
-        self._openings_label: QLabel = QLabel()
+        self._engine_name_label.setText(self._engine.name)
+
+        self._human_name_label: QLabel = QLabel()
 
         self._notifications_label: QLabel = QLabel()
         self._notifications_label.setObjectName("notifications")
         self._notifications_label.setFixedWidth(self._table_view.width())
 
-        self._engine_analysis_label: QLabel = QLabel()
-        self._engine_analysis_label.setAlignment(Top)
-        self._engine_analysis_label.setWordWrap(True)
+        self._openings_label: QLabel = QLabel()
 
         self.set_size()
         self.set_layout()
@@ -326,8 +330,6 @@ class MainWindow(QMainWindow):
     def create_statusbar(self) -> None:
         """Create statusbar for displaying various info."""
         self.statusBar().addWidget(self._openings_label)
-        self.statusBar().addPermanentWidget(self._engine_name_label)
-        self._engine_name_label.setText(self._engine.name)
 
     def switch_clock_timers(self) -> None:
         """Activate clock timer for player on turn."""
