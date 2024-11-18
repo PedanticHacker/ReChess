@@ -82,7 +82,7 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def set_size(self) -> None:
-        """Limit minimum size to 1000 by 700 pixels, shown maximized."""
+        """Limit minimum size to 1000 by 700 pixels, show maximized."""
         self.setMinimumSize(1000, 700)
         self.showMaximized()
 
