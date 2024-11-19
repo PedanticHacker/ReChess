@@ -2,6 +2,7 @@ from chess import svg
 from PySide6.QtCore import Property
 from PySide6.QtGui import QColor, QMouseEvent, QPaintEvent
 from PySide6.QtSvgWidgets import QSvgWidget
+from PySide6.QtWidgets import QSizePolicy
 
 from rechess.core import Game
 from rechess.utils import setting_value
@@ -67,6 +68,8 @@ class Board(QSvgWidget):
         self._square_dark_lastmove: QColor = QColor()
         self._square_light: QColor = QColor()
         self._square_light_lastmove: QColor = QColor()
+
+        self.setFixedSize(600, 600)
 
     def _colors(self) -> dict[str, str]:
         """Return dictionary with color values for board elements."""

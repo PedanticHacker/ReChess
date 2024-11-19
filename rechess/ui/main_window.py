@@ -3,7 +3,7 @@ from pathlib import Path
 
 from chess import BLACK, Move
 from chess.engine import Score
-from PySide6.QtCore import Qt, QThreadPool, Slot
+from PySide6.QtCore import QThreadPool, Qt, Slot
 from PySide6.QtGui import QCloseEvent, QWheelEvent
 from PySide6.QtWidgets import (
     QDialog,
@@ -12,6 +12,8 @@ from PySide6.QtWidgets import (
     QLabel,
     QMainWindow,
     QMessageBox,
+    QSizePolicy,
+    QVBoxLayout,
     QWidget,
 )
 
@@ -92,25 +94,32 @@ class MainWindow(QMainWindow):
         self.showMaximized()
 
     def set_layout(self) -> None:
-        """Set grid layout for widgets."""
+        """Set layout for widgets with fixed positions in grid."""
         self._grid_layout: QGridLayout = QGridLayout()
-        self._grid_layout.addWidget(self._black_clock, 0, 0, 1, 1, Top)
-        self._grid_layout.addWidget(self._white_clock, 0, 0, 1, 1, Bottom)
-        self._grid_layout.addWidget(self._engine_name_label, 0, 0, 1, 1, Top)
-        self._grid_layout.addWidget(self._human_name_label, 1, 0, 1, 1, Bottom)
-        self._grid_layout.addWidget(self._board, 0, 1, 1, 1)
-        self._grid_layout.addWidget(self._evaluation_bar, 0, 2, 1, 1)
-        self._grid_layout.addWidget(self._table_view, 0, 3, 1, 2)
-        self._grid_layout.addWidget(self._notifications_label, 1, 3, 1, 1)
-        self._grid_layout.addWidget(self._fen_editor, 1, 1, 1, 1)
-        self._grid_layout.addWidget(self._engine_analysis_label, 2, 1, 1, 1)
 
-        self._widget_container: QWidget = QWidget()
-        self._widget_container.setLayout(self._grid_layout)
-        self.setCentralWidget(self._widget_container)
+        self._grid_layout.addWidget(self._black_clock, 1, 1, Top)
+        self._grid_layout.addWidget(self._engine_name_label, 2, 1, Top)
+        self._grid_layout.addWidget(self._white_clock, 3, 1, Bottom)
+        self._grid_layout.addWidget(self._human_name_label, 4, 1, Bottom)
+        self._grid_layout.addWidget(self._board, 1, 2, 4, 1)
+        self._grid_layout.addWidget(self._evaluation_bar, 1, 3, 4, 1)
+        self._grid_layout.addWidget(self._table_view, 1, 4, 4, 1)
+        self._grid_layout.addWidget(self._notifications_label, 5, 4)
+        self._grid_layout.addWidget(self._fen_editor, 5, 2)
+        self._grid_layout.addWidget(self._engine_analysis_label, 6, 2)
+
+        self._grid_layout.setRowStretch(0, 1)
+        self._grid_layout.setRowStretch(5, 2)
+        self._grid_layout.setRowStretch(7, 1)
+        self._grid_layout.setColumnStretch(0, 1)
+        self._grid_layout.setColumnStretch(5, 1)
+
+        self._central_widget: QWidget = QWidget()
+        self._central_widget.setLayout(self._grid_layout)
+        self.setCentralWidget(self._central_widget)
 
         if setting_value("board", "orientation") == BLACK:
-            self.flip_clock_alignments()
+            self.flip()
 
     def create_actions(self) -> None:
         """Create actions for menubar and toolbar."""
@@ -386,10 +395,11 @@ class MainWindow(QMainWindow):
 
     def flip(self) -> None:
         """Flip board and its related widgets."""
-        flipped_orientation: bool = not setting_value("board", "orientation")
-        set_setting_value("board", "orientation", flipped_orientation)
+        reversed_orientation: bool = not setting_value("board", "orientation")
+        set_setting_value("board", "orientation", reversed_orientation)
 
-        self.flip_clock_alignments()
+        self.flip_clock_alignment()
+        self.flip_player_name_alignment()
         self._evaluation_bar.flip_appearance()
 
     def play_move_now(self) -> None:
@@ -458,16 +468,35 @@ class MainWindow(QMainWindow):
             ),
         )
 
-    def flip_clock_alignments(self) -> None:
-        """Flip alignments of top and bottom clocks."""
-        if Top in self._grid_layout.itemAt(0).alignment():
-            self._grid_layout.itemAt(0).setAlignment(Bottom)
-            self._grid_layout.itemAt(1).setAlignment(Top)
-        else:
-            self._grid_layout.itemAt(0).setAlignment(Top)
-            self._grid_layout.itemAt(1).setAlignment(Bottom)
+    def flip_clock_alignment(self) -> None:
+        """Flip alignment of Black and White player's clock."""
+        black_player_clock_item = self._grid_layout.itemAtPosition(1, 1)
+        white_player_clock_item = self._grid_layout.itemAtPosition(3, 1)
 
-        self._grid_layout.update()
+        new_black_player_clock_alignment: Qt.AlignmentFlag = (
+            Top if black_player_clock_item.alignment() == Bottom else Bottom
+        )
+        new_white_player_clock_alignment: Qt.AlignmentFlag = (
+            Bottom if white_player_clock_item.alignment() == Top else Top
+        )
+
+        black_player_clock_item.setAlignment(new_black_player_clock_alignment)
+        white_player_clock_item.setAlignment(new_white_player_clock_alignment)
+
+    def flip_player_name_alignment(self) -> None:
+        """Flip alignment of engine and human player name's label."""
+        engine_name_label_item = self._grid_layout.itemAtPosition(2, 1)
+        human_name_label_item = self._grid_layout.itemAtPosition(4, 1)
+
+        new_engine_name_label_alignment: Qt.AlignmentFlag = (
+            Top if engine_name_label_item.alignment() == Bottom else Bottom
+        )
+        new_human_name_label_alignment: Qt.AlignmentFlag = (
+            Bottom if human_name_label_item.alignment() == Top else Top
+        )
+
+        engine_name_label_item.setAlignment(new_engine_name_label_alignment)
+        human_name_label_item.setAlignment(new_human_name_label_alignment)
 
     def start_analysis(self) -> None:
         """Start analyzing current position."""

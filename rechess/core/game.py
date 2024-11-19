@@ -149,11 +149,11 @@ class Game(QObject):
     def locate_file_and_rank(self, x: float, y: float) -> tuple[int, int]:
         """Convert square coordinates to file and rank."""
         if setting_value("board", "orientation") == WHITE:
-            file: float = (x - 18) // 58
-            rank: float = 7 - (y - 18) // 58
+            file: float = (x - 20) // 70
+            rank: float = 7 - (y - 20) // 70
         else:
-            file = 7 - (x - 18) // 58
-            rank = (y - 18) // 58
+            file = 7 - (x - 20) // 70
+            rank = (y - 20) // 70
 
         return round(file), round(rank)
 
