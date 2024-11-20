@@ -473,25 +473,25 @@ class MainWindow(QMainWindow):
 
     def flip_clock_alignment(self) -> None:
         """Flip alignment of clocks belonging to Black and White."""
-        black_clock = self._grid_layout.itemAtPosition(1, 1)
-        white_clock = self._grid_layout.itemAtPosition(4, 1)
+        black_clock = self._grid_layout.itemAtPosition(1, 1).widget()
+        white_clock = self._grid_layout.itemAtPosition(4, 1).widget()
 
-        black_clock_alignment = black_clock.alignment()
-        white_clock_alignment = white_clock.alignment()
+        self._grid_layout.removeWidget(black_clock)
+        self._grid_layout.removeWidget(white_clock)
 
-        black_clock.setAlignment(white_clock_alignment)
-        white_clock.setAlignment(black_clock_alignment)
+        self._grid_layout.addWidget(black_clock, 4, 1, Bottom)
+        self._grid_layout.addWidget(white_clock, 1, 1, Top)
 
     def flip_name_alignment(self) -> None:
         """Flip alignment of engine and human name labels."""
-        engine_name_label = self._grid_layout.itemAtPosition(2, 1)
-        human_name_label = self._grid_layout.itemAtPosition(5, 1)
+        engine_label = self._grid_layout.itemAtPosition(2, 1).widget()
+        human_label = self._grid_layout.itemAtPosition(5, 1).widget()
 
-        engine_name_label_alignment = engine_name_label.alignment()
-        human_name_label_alignment = human_name_label.alignment()
+        self._grid_layout.removeWidget(engine_label)
+        self._grid_layout.removeWidget(human_label)
 
-        engine_name_label.setAlignment(human_name_label_alignment)
-        human_name_label.setAlignment(engine_name_label_alignment)
+        self._grid_layout.addWidget(engine_label, 5, 1, Bottom)
+        self._grid_layout.addWidget(human_label, 2, 1, Top)
 
     def start_analysis(self) -> None:
         """Start analyzing current position."""
