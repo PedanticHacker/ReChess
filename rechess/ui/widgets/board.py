@@ -12,7 +12,7 @@ svg.XX = "<circle id='xx' r='5' cx='22' cy='22' stroke='#303030' fill='#e5e5e5'/
 
 
 class Board(QSvgWidget):
-    """SVG-based chessboard with interactive pieces."""
+    """SVG-based board with interactive pieces."""
 
     coord: Property = Property(
         QColor,
@@ -68,8 +68,6 @@ class Board(QSvgWidget):
         self._square_dark_lastmove: QColor = QColor()
         self._square_light: QColor = QColor()
         self._square_light_lastmove: QColor = QColor()
-
-        self.setFixedSize(600, 600)
 
     def _colors(self) -> dict[str, str]:
         """Return dictionary with color values for board elements."""

@@ -14,8 +14,8 @@ class FenEditor(QLineEdit):
 
         self._board: Board = board
 
-        self.setMaxLength(90)
-        self.setFixedSize(600, 20)
+        self.setMaxLength(80)
+        self.setFixedWidth(600)
         self.setText(self._board.fen())
         self.textEdited.connect(self.validate_fen)
 
