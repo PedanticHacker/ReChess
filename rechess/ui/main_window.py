@@ -1,9 +1,9 @@
 from functools import partial
 from pathlib import Path
 
-from chess import BLACK, Move
+from chess import Move
 from chess.engine import Score
-from PySide6.QtCore import QThreadPool, Qt, Slot
+from PySide6.QtCore import QThreadPool, Slot
 from PySide6.QtGui import QCloseEvent, QWheelEvent
 from PySide6.QtWidgets import (
     QDialog,
@@ -12,8 +12,6 @@ from PySide6.QtWidgets import (
     QLabel,
     QMainWindow,
     QMessageBox,
-    QSizePolicy,
-    QVBoxLayout,
     QWidget,
 )
 
@@ -32,10 +30,6 @@ from rechess.utils import (
     style_icon,
     svg_icon,
 )
-
-
-Bottom: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignBottom
-Top: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignTop
 
 
 class MainWindow(QMainWindow):
@@ -99,10 +93,10 @@ class MainWindow(QMainWindow):
         """Set layout for widgets with fixed positions in grid."""
         self._grid_layout: QGridLayout = QGridLayout()
 
-        self._grid_layout.addWidget(self._black_clock, 1, 1, Top)
-        self._grid_layout.addWidget(self._engine_name_label, 2, 1, Top)
-        self._grid_layout.addWidget(self._white_clock, 4, 1, Bottom)
-        self._grid_layout.addWidget(self._human_name_label, 5, 1, Bottom)
+        self._grid_layout.addWidget(self._black_clock, 1, 1)
+        self._grid_layout.addWidget(self._engine_name_label, 2, 1)
+        self._grid_layout.addWidget(self._white_clock, 4, 1)
+        self._grid_layout.addWidget(self._human_name_label, 5, 1)
         self._grid_layout.addWidget(self._board, 1, 2, 4, 1)
         self._grid_layout.addWidget(self._evaluation_bar, 1, 3, 4, 1)
         self._grid_layout.addWidget(self._table_view, 1, 4, 4, 1)
@@ -121,7 +115,7 @@ class MainWindow(QMainWindow):
         self._central_widget.setLayout(self._grid_layout)
         self.setCentralWidget(self._central_widget)
 
-        if setting_value("board", "orientation") == BLACK:
+        if setting_value("engine", "is_white"):
             self.flip()
 
     def create_actions(self) -> None:
@@ -406,8 +400,9 @@ class MainWindow(QMainWindow):
         self._evaluation_bar.flip_appearance()
 
     def play_move_now(self) -> None:
-        """Force UCI engine to play move on current turn."""
+        """Force engine to play move on current turn."""
         set_setting_value("engine", "is_white", self._game.turn)
+        self.flip()
         self.invoke_engine()
 
     def show_settings_dialog(self) -> None:
@@ -472,26 +467,26 @@ class MainWindow(QMainWindow):
         )
 
     def flip_clock_alignment(self) -> None:
-        """Flip alignment of clocks belonging to Black and White."""
-        black_clock = self._grid_layout.itemAtPosition(1, 1).widget()
-        white_clock = self._grid_layout.itemAtPosition(4, 1).widget()
+        """Flip alignment of Black's and White's clock."""
+        black_clock: QWidget = self._grid_layout.itemAtPosition(1, 1).widget()
+        white_clock: QWidget = self._grid_layout.itemAtPosition(4, 1).widget()
 
         self._grid_layout.removeWidget(black_clock)
         self._grid_layout.removeWidget(white_clock)
 
-        self._grid_layout.addWidget(black_clock, 4, 1, Bottom)
-        self._grid_layout.addWidget(white_clock, 1, 1, Top)
+        self._grid_layout.addWidget(black_clock, 4, 1)
+        self._grid_layout.addWidget(white_clock, 1, 1)
 
     def flip_name_alignment(self) -> None:
-        """Flip alignment of engine and human name labels."""
-        engine_label = self._grid_layout.itemAtPosition(2, 1).widget()
-        human_label = self._grid_layout.itemAtPosition(5, 1).widget()
+        """Flip alignment of engine's and human's name label."""
+        engine_label: QWidget = self._grid_layout.itemAtPosition(2, 1).widget()
+        human_label: QWidget = self._grid_layout.itemAtPosition(5, 1).widget()
 
         self._grid_layout.removeWidget(engine_label)
         self._grid_layout.removeWidget(human_label)
 
-        self._grid_layout.addWidget(engine_label, 5, 1, Bottom)
-        self._grid_layout.addWidget(human_label, 2, 1, Top)
+        self._grid_layout.addWidget(engine_label, 5, 1)
+        self._grid_layout.addWidget(human_label, 2, 1)
 
     def start_analysis(self) -> None:
         """Start analyzing current position."""
@@ -560,7 +555,7 @@ class MainWindow(QMainWindow):
 
     def start_new_game(self) -> None:
         """Start new game by resetting everything."""
-        if setting_value("board", "orientation") == BLACK:
+        if setting_value("engine", "is_white"):
             self.flip()
 
         self._black_clock.reset()
