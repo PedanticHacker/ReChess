@@ -19,20 +19,28 @@ QHeaderView {
   background-color: #87a6c3;
   border-bottom: 1px solid #4d85bd;
   color: #1c3e66;
+  font-size: 15px;
   font-weight: bold;
 }
 
 QLabel {
   color: #1c3e66;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold;
 }
 
-QLabel#notifications {
+QLabel#analysis {
   background-color: #97b6d3;
   border: 1px solid #4d85bd;
   border-radius: 4px;
-  margin: 0px;
+  min-height: 80px;
+}
+
+QLabel#engine, QLabel#human, QLabel#notifications {
+  background-color: #97b6d3;
+  border: 1px solid #4d85bd;
+  border-radius: 4px;
+  min-height: 20px;
   qproperty-alignment: "AlignCenter";
 }
 
@@ -41,8 +49,9 @@ QLineEdit {
   border: 1px solid #4d85bd;
   border-radius: 4px;
   color: #1c3e66;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold;
+  min-height: 20px;
   qproperty-alignment: "AlignCenter";
 }
 
@@ -178,6 +187,7 @@ QTableView {
   border: 1px solid #4d85bd;
   border-radius: 4px;
   color: #1c3e66;
+  font-size: 15px;
   font-weight: bold;
   gridline-color: #4d85bd;
   selection-background-color: #7796b3;

@@ -19,20 +19,28 @@ QHeaderView {
   background-color: #1f291f;
   border-bottom: 1px solid #3d4f3d;
   color: #dde5dd;
+  font-size: 15px;
   font-weight: bold;
 }
 
 QLabel {
   color: #dde5dd;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold;
 }
 
-QLabel#notifications {
+QLabel#analysis {
   background-color: #2d382d;
   border: 1px solid #3d4f3d;
   border-radius: 4px;
-  margin: 0px;
+  min-height: 80px;
+}
+
+QLabel#engine, QLabel#human, QLabel#notifications {
+  background-color: #2d382d;
+  border: 1px solid #3d4f3d;
+  border-radius: 4px;
+  min-height: 20px;
   qproperty-alignment: "AlignCenter";
 }
 
@@ -41,8 +49,9 @@ QLineEdit {
   border: 1px solid #3d4f3d;
   border-radius: 4px;
   color: #dde5dd;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold;
+  min-height: 20px;
   qproperty-alignment: "AlignCenter";
 }
 
@@ -107,6 +116,7 @@ QPushButton {
 
 QPushButton:disabled {
   background-color: #2d382d;
+  color: #6b806b;
 }
 
 QPushButton:hover {
@@ -177,6 +187,7 @@ QTableView {
   border: 1px solid #3d4f3d;
   border-radius: 4px;
   color: #dde5dd;
+  font-size: 15px;
   font-weight: bold;
   gridline-color: #3d4f3d;
   selection-background-color: #3d4f3d;
