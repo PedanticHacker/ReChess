@@ -27,12 +27,13 @@ QLabel {
   color: #c5e0e0;
   font-size: 15px;
   font-weight: bold;
-  border: 1px solid #386b6b;
-  border-radius: 4px;
 }
 
 QLabel#analysis {
-  min-height: 50px;
+  background-color: #223a3a;
+  border: 1px solid #386b6b;
+  border-radius: 4px;
+  min-height: 80px;
 }
 
 QLabel#engine, QLabel#human, QLabel#notifications {
