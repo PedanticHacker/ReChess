@@ -62,6 +62,7 @@ class MainWindow(QMainWindow):
         self._engine_analysis_label: QLabel = QLabel()
         self._engine_analysis_label.setAlignment(Top)
         self._engine_analysis_label.setWordWrap(True)
+        self._engine_analysis_label.setMinimumHeight(100)
 
         self._engine_name_label: QLabel = QLabel()
         self._engine_name_label.setText(self._engine.name)
@@ -99,8 +100,8 @@ class MainWindow(QMainWindow):
 
         self._grid_layout.addWidget(self._black_clock, 1, 1, Top)
         self._grid_layout.addWidget(self._engine_name_label, 2, 1, Top)
-        self._grid_layout.addWidget(self._white_clock, 3, 1, Bottom)
-        self._grid_layout.addWidget(self._human_name_label, 4, 1, Bottom)
+        self._grid_layout.addWidget(self._white_clock, 3, 1, 2, 1, Bottom)
+        self._grid_layout.addWidget(self._human_name_label, 5, 1, Bottom)
         self._grid_layout.addWidget(self._board, 1, 2, 4, 1)
         self._grid_layout.addWidget(self._evaluation_bar, 1, 3, 4, 1)
         self._grid_layout.addWidget(self._table_view, 1, 4, 4, 1)
