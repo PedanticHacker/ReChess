@@ -461,7 +461,7 @@ class MainWindow(QMainWindow):
             self,
             "About",
             (
-                "UI-based app for playing chess against an engine.\n\n"
+                "This is a UI-based app for playing chess.\n\n"
                 "Copyright 2024 Boštjan Mejak\n"
                 "MIT License"
             ),
