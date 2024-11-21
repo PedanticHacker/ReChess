@@ -35,7 +35,7 @@ class Game(QObject):
         self._positions: list[Board] = []
         self._sound_effect: QSoundEffect = QSoundEffect()
 
-        self.set_new_game()
+        self.prepare_new_game()
 
     @property
     def arrows(self) -> list[Arrow]:
@@ -87,13 +87,14 @@ class Game(QObject):
 
     @property
     def turn(self) -> bool:
-        """Return which player is currently on turn."""
+        """Return True if White is on turn."""
         return self._board.turn
 
-    def set_new_game(self) -> None:
-        """Reset current game to starting state."""
-        self._arrows.clear()
+    def prepare_new_game(self) -> None:
+        """Prepare new game by resetting state of current game."""
         self._board.reset()
+
+        self._arrows.clear()
         self._moves.clear()
         self._positions.clear()
 
@@ -105,8 +106,8 @@ class Game(QObject):
         self.to_square: Square = -1
 
     def push(self, move: Move) -> None:
-        """Execute `move` and update game state."""
-        self.set_arrow(move)
+        """Update game state by pushing `move`."""
+        self.show_arrow(move)
         self.play_sound_effect(move)
 
         new_move: str = self._board.san_and_push(move)
@@ -115,8 +116,8 @@ class Game(QObject):
         position: Board = self._board.copy()
         self._positions.append(position)
 
-    def set_arrow(self, move: Move) -> None:
-        """Set arrow marker on board for `move`."""
+    def show_arrow(self, move: Move) -> None:
+        """Show arrow marker on board for `move`."""
         self._arrows = [Arrow(move.from_square, move.to_square)]
 
     def clear_arrows(self) -> None:
@@ -181,12 +182,12 @@ class Game(QObject):
         self._board = self._positions[item_index].copy()
 
         move: Move = self._board.move_stack[item_index]
-        self.set_arrow(move)
+        self.show_arrow(move)
 
     def delete_data_after(self, item_index: int) -> None:
         """Delete moves and positions after `item_index`."""
         if item_index < 0:
-            self.set_new_game()
+            self.prepare_new_game()
         else:
             after_item_index: slice = slice(item_index + 1, len(self._moves))
             del self._moves[after_item_index]

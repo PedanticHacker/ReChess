@@ -115,6 +115,9 @@ class MainWindow(QMainWindow):
         self._central_widget.setLayout(self._grid_layout)
         self.setCentralWidget(self._central_widget)
 
+        if setting_value("engine", "is_white"):
+            self.flip()
+
     def create_actions(self) -> None:
         """Create menu and toolbar actions."""
         self.about_action = create_action(
@@ -400,9 +403,9 @@ class MainWindow(QMainWindow):
         self._evaluation_bar.flip_appearance()
 
     def play_move_now(self) -> None:
-        """Force engine to play move on current turn."""
-        set_setting_value("engine", "is_white", self._game.turn)
-        self.invoke_engine()
+        """Force engine to play move, despite not being on turn."""
+        if not self._game.is_engine_on_turn():
+            self.invoke_engine()
 
     def show_settings_dialog(self) -> None:
         """Show dialog to edit settings."""
@@ -552,13 +555,14 @@ class MainWindow(QMainWindow):
 
     def start_new_game(self) -> None:
         """Start new game by resetting and clearing everything."""
+        self._game.prepare_new_game()
+
         self._black_clock.reset()
         self._white_clock.reset()
 
         self._table_model.reset()
         self._evaluation_bar.reset()
 
-        self._game.set_new_game()
         self._openings_label.clear()
         self._notifications_label.clear()
         self._engine_analysis_label.clear()
@@ -594,8 +598,8 @@ class MainWindow(QMainWindow):
 
     @Slot(Move)
     def on_best_move_analyzed(self, best_move: Move) -> None:
-        """Based on engine analysis, show `best_move` as arrow."""
-        self._game.set_arrow(best_move)
+        """Show `best_move` as arrow marker based on engine analysis."""
+        self._game.show_arrow(best_move)
 
     @Slot()
     def on_black_time_expired(self) -> None:

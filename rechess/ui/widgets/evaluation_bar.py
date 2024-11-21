@@ -28,7 +28,7 @@ class EvaluationBar(QProgressBar):
         self.flip_appearance()
 
     def flip_appearance(self) -> None:
-        """Flip bar's appearance based on board orientation."""
+        """Flip bar's chunk appearance based on board orientation."""
         board_orientation: bool = setting_value("board", "orientation")
         self.setInvertedAppearance(board_orientation)
 
