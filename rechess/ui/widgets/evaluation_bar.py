@@ -12,27 +12,23 @@ class EvaluationBar(QProgressBar):
     def __init__(self) -> None:
         super().__init__()
 
-        self._size_policy = self.sizePolicy()
-        self._size_policy.setRetainSizeWhenHidden(True)
-
         self._animation: QPropertyAnimation = QPropertyAnimation(self, b"value")
         self._animation.setEasingCurve(QEasingCurve.Type.InOutSine)
         self._animation.valueChanged.connect(self.update)
 
         self.setRange(0, 1000)
-        self.setFixedSize(45, 600)
-        self.setSizePolicy(self._size_policy)
+        self.setFixedSize(50, 600)
         self.setOrientation(Qt.Orientation.Vertical)
 
         self.reset_appearance()
 
     def reset_appearance(self) -> None:
-        """Hide bar and flip it based on board orientation."""
-        self.hide()
+        """Reset evaluation's progress and flip bar's appearance."""
+        self.reset()
         self.flip_appearance()
 
     def flip_appearance(self) -> None:
-        """Flip bar based on board orientation."""
+        """Flip bar's appearance based on board orientation."""
         board_orientation: bool = setting_value("board", "orientation")
         self.setInvertedAppearance(board_orientation)
 

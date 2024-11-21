@@ -3,7 +3,7 @@ from pathlib import Path
 
 from chess import Move
 from chess.engine import Score
-from PySide6.QtCore import QThreadPool, Slot
+from PySide6.QtCore import Qt, QThreadPool, Slot
 from PySide6.QtGui import QCloseEvent, QWheelEvent
 from PySide6.QtWidgets import (
     QDialog,
@@ -54,8 +54,8 @@ class MainWindow(QMainWindow):
         self._fen_editor: FenEditor = FenEditor(self._game.board)
 
         self._engine_analysis_label: QLabel = QLabel()
-        self._engine_analysis_label.setAlignment(Top)
         self._engine_analysis_label.setObjectName("analysis")
+        self._engine_analysis_label.setAlignment(Qt.AlignmentFlag.AlignTop)
         self._engine_analysis_label.setWordWrap(True)
 
         self._engine_name_label: QLabel = QLabel()
@@ -391,9 +391,9 @@ class MainWindow(QMainWindow):
         self.close()
 
     def flip(self) -> None:
-        """Flip board and its related widgets."""
-        reversed_orientation: bool = not setting_value("board", "orientation")
-        set_setting_value("board", "orientation", reversed_orientation)
+        """Flip board, clocks, name labels, and evaluation bar."""
+        flipped_orientation: bool = not setting_value("board", "orientation")
+        set_setting_value("board", "orientation", flipped_orientation)
 
         self.flip_clock_alignment()
         self.flip_name_alignment()
@@ -402,6 +402,7 @@ class MainWindow(QMainWindow):
     def play_move_now(self) -> None:
         """Force engine to play move on current turn."""
         set_setting_value("engine", "is_white", self._game.turn)
+
         self.flip()
         self.invoke_engine()
 
@@ -491,25 +492,27 @@ class MainWindow(QMainWindow):
     def start_analysis(self) -> None:
         """Start analyzing current position."""
         self.invoke_analysis()
-        self._evaluation_bar.show()
+
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
+
         self.stop_analysis_action.setEnabled(True)
         self.start_analysis_action.setDisabled(True)
 
     def stop_analysis(self) -> None:
         """Stop analyzing current position."""
         self._engine.stop_analysis()
+        self._notifications_label.clear()
+        self._evaluation_bar.reset_appearance()
 
         self.switch_clock_timers()
         self.adjust_engine_buttons()
-        self._notifications_label.clear()
 
     def show_fen(self) -> None:
-        """Show FEN in FEN editor."""
-        self._fen_editor.setText(self._game.fen)
-        self._fen_editor.hide_warning()
+        """Show FEN in editor."""
         self._fen_editor.clearFocus()
+        self._fen_editor.hide_warning()
+        self._fen_editor.setText(self._game.fen)
 
     def show_opening(self) -> None:
         """Show ECO code and opening name."""
@@ -521,16 +524,15 @@ class MainWindow(QMainWindow):
 
     def refresh_ui(self) -> None:
         """Refresh current state of UI."""
-        self.stop_analysis()
-
         self._table_model.refresh_view()
-        self._engine_analysis_label.clear()
         self._table_view.select_last_item()
 
+        self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
 
         self.show_fen()
         self.show_opening()
+        self.stop_analysis()
         self.switch_clock_timers()
 
         if self._game.is_over():
@@ -554,19 +556,19 @@ class MainWindow(QMainWindow):
             self.start_new_game()
 
     def start_new_game(self) -> None:
-        """Start new game by resetting everything."""
+        """Start new game by resetting and clearing everything."""
         if setting_value("engine", "is_white"):
             self.flip()
 
         self._black_clock.reset()
         self._white_clock.reset()
-        self._openings_label.clear()
+
+        self._table_model.reset()
+        self._evaluation_bar.reset()
 
         self._game.set_new_game()
-        self._table_model.reset()
-
+        self._openings_label.clear()
         self._engine_analysis_label.clear()
-        self._evaluation_bar.reset_appearance()
 
         self.show_fen()
         self.stop_analysis()
