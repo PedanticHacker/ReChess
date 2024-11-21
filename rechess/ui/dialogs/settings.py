@@ -43,7 +43,7 @@ class SettingsDialog(QDialog):
     def create_options(self) -> None:
         """Create options that represent settings."""
         is_engine_white: bool = setting_value("engine", "is_white")
-        is_engine_pondering: bool = setting_value("engine", "is_pondering")
+        is_engine_ponder_on: bool = setting_value("engine", "is_ponder_on")
 
         clock_time: float = setting_value("clock", "time")
         clock_increment: float = setting_value("clock", "increment")
@@ -58,7 +58,7 @@ class SettingsDialog(QDialog):
 
         self._engine_ponder_option: QCheckBox = QCheckBox()
         self._engine_ponder_option.setText("Ponder")
-        self._engine_ponder_option.setChecked(is_engine_pondering)
+        self._engine_ponder_option.setChecked(is_engine_ponder_on)
 
         self._clock_time_option: QComboBox = QComboBox()
         self._clock_time_option.addItem("1 minute", 60.0)
@@ -107,11 +107,6 @@ class SettingsDialog(QDialog):
         self._button_box.accepted.connect(self.accept)
         self._button_box.rejected.connect(self.reject)
 
-    def set_groups_disabled(self, disable: bool) -> None:
-        """Disable engine and time control groups if `disable` is True."""
-        self._engine_group.setDisabled(disable)
-        self._time_control_group.setDisabled(disable)
-
     @Slot()
     def on_accepted(self) -> None:
         """Save settings on pressing dialog's Save button."""
@@ -132,6 +127,6 @@ class SettingsDialog(QDialog):
         )
         set_setting_value(
             section="engine",
-            key="is_pondering",
+            key="is_ponder_on",
             value=self._engine_ponder_option.isChecked(),
         )

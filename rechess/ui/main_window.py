@@ -1,7 +1,7 @@
 from functools import partial
 from pathlib import Path
 
-from chess import Color, Move
+from chess import Move
 from chess.engine import Score
 from PySide6.QtCore import Qt, QThreadPool, Slot
 from PySide6.QtGui import QCloseEvent, QWheelEvent
@@ -114,9 +114,6 @@ class MainWindow(QMainWindow):
         self._central_widget: QWidget = QWidget()
         self._central_widget.setLayout(self._grid_layout)
         self.setCentralWidget(self._central_widget)
-
-        if setting_value("engine", "is_white"):
-            self.flip()
 
     def create_actions(self) -> None:
         """Create menu and toolbar actions."""
@@ -354,7 +351,7 @@ class MainWindow(QMainWindow):
                 self._white_clock.add_increment()
 
     def adjust_toolbar_buttons(self) -> None:
-        """Adjust state of toolbar buttons for engine."""
+        """Adjust state of engine-related toolbar buttons."""
         self.play_move_now_action.setEnabled(True)
         self.start_analysis_action.setEnabled(True)
         self.stop_analysis_action.setDisabled(True)
@@ -392,8 +389,11 @@ class MainWindow(QMainWindow):
 
     def flip(self) -> None:
         """Flip board, clocks, player names, and evaluation bar."""
-        flipped_color: Color = not setting_value("board", "orientation")
-        set_setting_value("board", "orientation", flipped_color)
+        set_setting_value(
+            "board",
+            "orientation",
+            not setting_value("board", "orientation"),
+        )
 
         self.flip_clocks()
         self.flip_player_names()
@@ -407,7 +407,6 @@ class MainWindow(QMainWindow):
     def show_settings_dialog(self) -> None:
         """Show dialog to edit settings."""
         settings_dialog: SettingsDialog = SettingsDialog()
-        settings_dialog.set_groups_disabled(self._game.is_in_progress())
 
         if settings_dialog.exec() == QDialog.DialogCode.Accepted:
             self.apply_saved_settings()
@@ -433,7 +432,7 @@ class MainWindow(QMainWindow):
             self,
             "File Manager",
             Path.home().as_posix(),
-            "UCI engine (*.exe)" if platform_name() == "windows" else "",
+            "Chess engine (*.exe)",
         )
 
         if path_to_file:
@@ -523,13 +522,13 @@ class MainWindow(QMainWindow):
         self._table_model.refresh_view()
         self._table_view.select_last_item()
 
+        self._notifications_label.clear()
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
 
         self.show_fen()
         self.show_opening()
         self.stop_analysis()
-        self.switch_clock_timers()
 
         if self._game.is_over():
             self._black_clock.stop_timer()
@@ -561,11 +560,11 @@ class MainWindow(QMainWindow):
 
         self._game.set_new_game()
         self._openings_label.clear()
+        self._notifications_label.clear()
         self._engine_analysis_label.clear()
 
         self.show_fen()
         self.stop_analysis()
-        self.switch_clock_timers()
 
         if self._game.is_engine_on_turn():
             self.invoke_engine()
@@ -575,7 +574,7 @@ class MainWindow(QMainWindow):
         answer: QMessageBox.StandardButton = QMessageBox.question(
             self,
             "Quit",
-            "Do you want to quit?",
+            "Do you really want to quit?",
         )
 
         if answer == answer.Yes:
@@ -629,6 +628,7 @@ class MainWindow(QMainWindow):
         self._game.reset_squares()
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
+        self._notifications_label.clear()
         self._engine_analysis_label.clear()
         self._evaluation_bar.reset_appearance()
 

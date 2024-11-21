@@ -8,7 +8,7 @@
   },
   "engine": {
     "is_white": false,
-    "is_pondering": false
+    "is_ponder_on": false
   },
   "ui": {
     "style": "dark-nebula"

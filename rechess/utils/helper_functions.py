@@ -22,7 +22,7 @@ SettingSection: TypeAlias = BoardSection | ClockSection | EngineSection | UiSect
 
 BoardKey: TypeAlias = Literal["orientation"]
 ClockKey: TypeAlias = Literal["time", "increment"]
-EngineKey: TypeAlias = Literal["is_pondering", "is_white"]
+EngineKey: TypeAlias = Literal["is_white", "is_ponder_on"]
 StyleKey: TypeAlias = Literal["style"]
 SettingKey: TypeAlias = BoardKey | ClockKey | EngineKey | StyleKey
 

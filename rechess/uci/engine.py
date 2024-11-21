@@ -44,7 +44,7 @@ class Engine(QObject):
         play_result: PlayResult = self._engine.play(
             board=self._game.board,
             limit=Limit(depth=30),
-            ponder=setting_value("engine", "is_pondering"),
+            ponder=setting_value("engine", "is_ponder_on"),
         )
         self.move_played.emit(play_result.move)
 
@@ -61,7 +61,7 @@ class Engine(QObject):
                     break
 
                 if "pv" in info:
-                    pv: list[Move] = info["pv"][0:50]
+                    pv: list[Move] = info["pv"][0:40]
 
                     best_move: Move = pv[0]
                     variation: str = self._game.board.variation_san(pv)
