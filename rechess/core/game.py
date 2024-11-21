@@ -44,13 +44,18 @@ class Game(QObject):
 
     @property
     def board(self) -> Board:
-        """Return board with game state."""
+        """Return current state of board."""
         return self._board
 
     @property
     def fen(self) -> str:
         """Return current FEN."""
         return self._board.fen()
+
+    @fen.setter
+    def fen(self, value) -> None:
+        """Set new FEN based on `value`."""
+        self._board.set_fen(value)
 
     @property
     def king_in_check(self) -> Square | None:
@@ -208,6 +213,10 @@ class Game(QObject):
     def is_over(self) -> bool:
         """Return True if game is over."""
         return self._board.is_game_over(claim_draw=True)
+
+    def is_valid(self) -> bool:
+        """Return True if board setup is valid."""
+        return self._board.is_valid()
 
     def is_white_on_turn(self) -> bool:
         """Return True if White is on turn."""

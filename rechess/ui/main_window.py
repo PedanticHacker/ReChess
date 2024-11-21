@@ -50,8 +50,8 @@ class MainWindow(QMainWindow):
         self._white_clock: Clock = Clock(ClockColor.White)
 
         self._board: Board = Board(self._game)
+        self._fen_editor: FenEditor = FenEditor(self._game)
         self._evaluation_bar: EvaluationBar = EvaluationBar()
-        self._fen_editor: FenEditor = FenEditor(self._game.board)
 
         self._engine_analysis_label: QLabel = QLabel()
         self._engine_analysis_label.setObjectName("analysis")
