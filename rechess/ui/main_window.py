@@ -337,7 +337,7 @@ class MainWindow(QMainWindow):
         help_area.addAction(self.about_action)
 
     def create_statusbar(self) -> None:
-        """Create statusbar for displaying various info."""
+        """Create statusbar for showing various info."""
         self.statusBar().addWidget(self._openings_label)
 
     def switch_clock_timers(self) -> None:
