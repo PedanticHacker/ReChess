@@ -1,7 +1,7 @@
 from functools import partial
 from pathlib import Path
 
-from chess import Move
+from chess import Color, Move
 from chess.engine import Score
 from PySide6.QtCore import Qt, QThreadPool, Slot
 from PySide6.QtGui import QCloseEvent, QWheelEvent
@@ -392,8 +392,8 @@ class MainWindow(QMainWindow):
 
     def flip(self) -> None:
         """Flip board, clocks, player names, and evaluation bar."""
-        flipped_orientation: bool = not setting_value("board", "orientation")
-        set_setting_value("board", "orientation", flipped_orientation)
+        flipped_color: Color = not setting_value("board", "orientation")
+        set_setting_value("board", "orientation", flipped_color)
 
         self.flip_clocks()
         self.flip_player_names()
@@ -402,12 +402,10 @@ class MainWindow(QMainWindow):
     def play_move_now(self) -> None:
         """Force engine to play move on current turn."""
         set_setting_value("engine", "is_white", self._game.turn)
-
-        self.flip()
         self.invoke_engine()
 
     def show_settings_dialog(self) -> None:
-        """Show dialog to edit settings and apply them if saved."""
+        """Show dialog to edit settings."""
         settings_dialog: SettingsDialog = SettingsDialog()
         settings_dialog.set_groups_disabled(self._game.is_in_progress())
 
@@ -555,9 +553,6 @@ class MainWindow(QMainWindow):
 
     def start_new_game(self) -> None:
         """Start new game by resetting and clearing everything."""
-        if setting_value("engine", "is_white"):
-            self.flip()
-
         self._black_clock.reset()
         self._white_clock.reset()
 
