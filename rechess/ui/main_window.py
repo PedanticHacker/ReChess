@@ -78,7 +78,7 @@ class MainWindow(QMainWindow):
         self.create_toolbar()
         self.create_statusbar()
         self.switch_clock_timers()
-        self.adjust_engine_buttons()
+        self.adjust_toolbar_buttons()
         self.connect_signals_to_slots()
 
         if self._game.is_engine_on_turn():
@@ -90,7 +90,7 @@ class MainWindow(QMainWindow):
         self.showMaximized()
 
     def set_layout(self) -> None:
-        """Set layout for widgets with fixed positions in grid."""
+        """Set layout for fixed-position widgets."""
         self._grid_layout: QGridLayout = QGridLayout()
 
         self._grid_layout.addWidget(self._black_clock, 1, 1)
@@ -119,13 +119,13 @@ class MainWindow(QMainWindow):
             self.flip()
 
     def create_actions(self) -> None:
-        """Create actions for menubar and toolbar."""
+        """Create menu and toolbar actions."""
         self.about_action = create_action(
             handler=self.show_about,
             icon=svg_icon("about"),
             name="About ReChess",
             shortcut="F1",
-            status_tip="Shows info about ReChess, copyright, and license.",
+            status_tip="Shows the About dialog.",
         )
         self.dark_forest_style_action = create_action(
             handler=partial(self.apply_style, "dark-forest"),
@@ -160,7 +160,7 @@ class MainWindow(QMainWindow):
             icon=svg_icon("flip"),
             name="Flip",
             shortcut="Ctrl+F",
-            status_tip="Flips the chessboard and its related widgets.",
+            status_tip="Flips the board, clocks, player names, and evaluation bar.",
         )
         self.light_forest_style_action = create_action(
             handler=partial(self.apply_style, "light-forest"),
@@ -195,35 +195,35 @@ class MainWindow(QMainWindow):
             icon=svg_icon("load-engine"),
             name="Load engine...",
             shortcut="Ctrl+L",
-            status_tip="Shows the file manager to load a UCI chess engine.",
+            status_tip="Shows the file manager to load an engine.",
         )
         self.new_game_action = create_action(
             handler=self.offer_new_game,
             icon=svg_icon("new-game"),
             name="New game",
             shortcut="Ctrl+N",
-            status_tip="Shows a dialog offering to start a new chess game.",
+            status_tip="Shows a dialog offering to start a new game.",
         )
         self.play_move_now_action = create_action(
             handler=self.play_move_now,
             icon=svg_icon("play-move-now"),
             name="Play move now",
             shortcut="Ctrl+P",
-            status_tip="Forces the UCI chess engine to play on current turn.",
+            status_tip="Forces the engine to play on current turn.",
         )
         self.quit_action = create_action(
             handler=self.quit,
             icon=svg_icon("quit"),
             name="Quit...",
             shortcut="Ctrl+Q",
-            status_tip="Offers to quit ReChess.",
+            status_tip="Offers to quit the app.",
         )
         self.settings_action = create_action(
             handler=self.show_settings_dialog,
             icon=svg_icon("settings"),
             name="Settings...",
             shortcut="Ctrl+,",
-            status_tip="Shows the Settings dialog to edit app settings.",
+            status_tip="Shows a dialog to edit the settings.",
         )
         self.start_analysis_action = create_action(
             handler=self.start_analysis,
@@ -337,11 +337,11 @@ class MainWindow(QMainWindow):
         help_area.addAction(self.about_action)
 
     def create_statusbar(self) -> None:
-        """Create statusbar for showing various info."""
+        """Create statusbar for showing openings and tips."""
         self.statusBar().addWidget(self._openings_label)
 
     def switch_clock_timers(self) -> None:
-        """Activate clock timer for player on turn."""
+        """Switch Black's and White's clock timers based on turn."""
         if self._game.is_white_on_turn():
             self._black_clock.stop_timer()
             self._white_clock.start_timer()
@@ -353,8 +353,8 @@ class MainWindow(QMainWindow):
             if self._game.is_in_progress():
                 self._white_clock.add_increment()
 
-    def adjust_engine_buttons(self) -> None:
-        """Adjust state of UCI chess engine's toolbar buttons."""
+    def adjust_toolbar_buttons(self) -> None:
+        """Adjust state of toolbar buttons for engine."""
         self.play_move_now_action.setEnabled(True)
         self.start_analysis_action.setEnabled(True)
         self.stop_analysis_action.setDisabled(True)
@@ -377,12 +377,12 @@ class MainWindow(QMainWindow):
         self._white_clock.time_expired.connect(self.on_white_time_expired)
 
     def invoke_engine(self) -> None:
-        """Invoke UCI chess engine to play move."""
+        """Invoke engine to play move."""
         QThreadPool.globalInstance().start(self._engine.play_move)
         self._notifications_label.setText("Thinking...")
 
     def invoke_analysis(self) -> None:
-        """Invoke UCI chess engine to start analysis."""
+        """Invoke engine to start analysis."""
         QThreadPool.globalInstance().start(self._engine.start_analysis)
         self._notifications_label.setText("Analyzing...")
 
@@ -391,12 +391,12 @@ class MainWindow(QMainWindow):
         self.close()
 
     def flip(self) -> None:
-        """Flip board, clocks, name labels, and evaluation bar."""
+        """Flip board, clocks, player names, and evaluation bar."""
         flipped_orientation: bool = not setting_value("board", "orientation")
         set_setting_value("board", "orientation", flipped_orientation)
 
-        self.flip_clock_alignment()
-        self.flip_name_alignment()
+        self.flip_clocks()
+        self.flip_player_names()
         self._evaluation_bar.flip_appearance()
 
     def play_move_now(self) -> None:
@@ -442,7 +442,7 @@ class MainWindow(QMainWindow):
             self.start_new_engine(path_to_file)
 
     def start_new_engine(self, path_to_file: str) -> None:
-        """Start new UCI engine from file at `path_to_file`."""
+        """Start new engine from file at `path_to_file`."""
         self.stop_analysis()
 
         self._game.clear_arrows()
@@ -456,19 +456,19 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def show_about(self) -> None:
-        """Show info about ReChess, copyright, and license."""
+        """Show About dialog."""
         QMessageBox.about(
             self,
             "About",
             (
-                "App for playing chess against a UCI engine.\n\n"
+                "UI-based app for playing chess against an engine.\n\n"
                 "Copyright 2024 Boštjan Mejak\n"
                 "MIT License"
             ),
         )
 
-    def flip_clock_alignment(self) -> None:
-        """Flip alignment of Black's and White's clock."""
+    def flip_clocks(self) -> None:
+        """Flip positions of Black's and White's clock."""
         black_clock: QWidget = self._grid_layout.itemAtPosition(1, 1).widget()
         white_clock: QWidget = self._grid_layout.itemAtPosition(4, 1).widget()
 
@@ -478,16 +478,16 @@ class MainWindow(QMainWindow):
         self._grid_layout.addWidget(black_clock, 4, 1)
         self._grid_layout.addWidget(white_clock, 1, 1)
 
-    def flip_name_alignment(self) -> None:
-        """Flip alignment of engine's and human's name label."""
-        engine_label: QWidget = self._grid_layout.itemAtPosition(2, 1).widget()
-        human_label: QWidget = self._grid_layout.itemAtPosition(5, 1).widget()
+    def flip_player_names(self) -> None:
+        """Flip names of engine and human player."""
+        engine_name: QWidget = self._grid_layout.itemAtPosition(2, 1).widget()
+        human_name: QWidget = self._grid_layout.itemAtPosition(5, 1).widget()
 
-        self._grid_layout.removeWidget(engine_label)
-        self._grid_layout.removeWidget(human_label)
+        self._grid_layout.removeWidget(engine_name)
+        self._grid_layout.removeWidget(human_name)
 
-        self._grid_layout.addWidget(engine_label, 5, 1)
-        self._grid_layout.addWidget(human_label, 2, 1)
+        self._grid_layout.addWidget(engine_name, 5, 1)
+        self._grid_layout.addWidget(human_name, 2, 1)
 
     def start_analysis(self) -> None:
         """Start analyzing current position."""
@@ -502,11 +502,9 @@ class MainWindow(QMainWindow):
     def stop_analysis(self) -> None:
         """Stop analyzing current position."""
         self._engine.stop_analysis()
-        self._notifications_label.clear()
-        self._evaluation_bar.reset_appearance()
 
         self.switch_clock_timers()
-        self.adjust_engine_buttons()
+        self.adjust_toolbar_buttons()
 
     def show_fen(self) -> None:
         """Show FEN in editor."""
