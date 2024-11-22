@@ -403,7 +403,7 @@ class MainWindow(QMainWindow):
         """Return True if orientation should be flipped."""
         is_engine_white: bool = setting_value("engine", "is_white")
         is_white_on_bottom: bool = setting_value("board", "orientation")
-        return is_engine_white != is_white_on_bottom
+        return is_engine_white == is_white_on_bottom
 
     def play_move_now(self) -> None:
         """Force engine to play move, despite not being on turn."""
