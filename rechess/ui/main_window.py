@@ -403,7 +403,12 @@ class MainWindow(QMainWindow):
         """Return True if orientation should be flipped."""
         is_engine_white: bool = setting_value("engine", "is_white")
         is_white_on_bottom: bool = setting_value("board", "orientation")
-        return is_engine_white == is_white_on_bottom
+        return (
+            is_engine_white
+            and is_white_on_bottom
+            or not is_engine_white
+            and not is_white_on_bottom
+        )
 
     def play_move_now(self) -> None:
         """Force engine to play move, despite not being on turn."""
@@ -469,26 +474,33 @@ class MainWindow(QMainWindow):
         )
 
     def flip_clocks(self) -> None:
-        """Flip positions of Black's and White's clock."""
-        top_clock: QWidget = self._grid_layout.itemAtPosition(1, 1).widget()
-        bottom_clock: QWidget = self._grid_layout.itemAtPosition(4, 1).widget()
+        """Flip positions of Black's and White's clock to match piece positions."""
+        is_white_on_bottom: bool = setting_value("board", "orientation")
 
-        self._grid_layout.removeWidget(top_clock)
-        self._grid_layout.removeWidget(bottom_clock)
+        self._grid_layout.removeWidget(self._black_clock)
+        self._grid_layout.removeWidget(self._white_clock)
 
-        self._grid_layout.addWidget(top_clock, 4, 1)
-        self._grid_layout.addWidget(bottom_clock, 1, 1)
+        if is_white_on_bottom:
+            self._grid_layout.addWidget(self._black_clock, 1, 1)
+            self._grid_layout.addWidget(self._white_clock, 4, 1)
+        else:
+            self._grid_layout.addWidget(self._white_clock, 1, 1)
+            self._grid_layout.addWidget(self._black_clock, 4, 1)
 
     def flip_player_names(self) -> None:
-        """Flip positions of engine and human player name."""
-        top_name: QWidget = self._grid_layout.itemAtPosition(2, 1).widget()
-        bottom_name: QWidget = self._grid_layout.itemAtPosition(5, 1).widget()
+        """Flip positions of names to match the player."""
+        is_engine_white: bool = setting_value("engine", "is_white")
+        is_white_on_bottom: bool = setting_value("board", "orientation")
 
-        self._grid_layout.removeWidget(top_name)
-        self._grid_layout.removeWidget(bottom_name)
+        self._grid_layout.removeWidget(self._engine_name_label)
+        self._grid_layout.removeWidget(self._human_name_label)
 
-        self._grid_layout.addWidget(top_name, 5, 1)
-        self._grid_layout.addWidget(bottom_name, 2, 1)
+        if is_engine_white == is_white_on_bottom:
+            self._grid_layout.addWidget(self._engine_name_label, 5, 1)
+            self._grid_layout.addWidget(self._human_name_label, 2, 1)
+        else:
+            self._grid_layout.addWidget(self._engine_name_label, 2, 1)
+            self._grid_layout.addWidget(self._human_name_label, 5, 1)
 
     def start_analysis(self) -> None:
         """Start analyzing current position."""
