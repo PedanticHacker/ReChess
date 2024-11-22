@@ -64,7 +64,7 @@ class MainWindow(QMainWindow):
 
         self._human_name_label: QLabel = QLabel()
         self._human_name_label.setObjectName("human")
-        self._human_name_label.setText("Boštjan Mejak")
+        self._human_name_label.setText("Human")
 
         self._notifications_label: QLabel = QLabel()
         self._notifications_label.setObjectName("notifications")
@@ -81,7 +81,7 @@ class MainWindow(QMainWindow):
         self.adjust_toolbar_buttons()
         self.connect_signals_to_slots()
 
-        if self.should_flip():
+        if self.should_flip() and self._game.is_engine_on_turn():
             self.flip()
             self.invoke_engine()
 
@@ -401,7 +401,7 @@ class MainWindow(QMainWindow):
         """Return True if orientation should be flipped."""
         is_engine_white: bool = setting_value("engine", "is_white")
         is_white_on_bottom: bool = setting_value("board", "orientation")
-        return is_engine_white == is_white_on_bottom
+        return is_engine_white != is_white_on_bottom
 
     def play_move_now(self) -> None:
         """Force engine to play move, despite not being on turn."""
@@ -416,7 +416,7 @@ class MainWindow(QMainWindow):
 
     def apply_saved_settings(self) -> None:
         """Act on settings being saved."""
-        if self.should_flip():
+        if self.should_flip() and self._game.is_engine_on_turn():
             self.flip()
             self.invoke_engine()
 
@@ -567,7 +567,7 @@ class MainWindow(QMainWindow):
         self.show_fen()
         self.stop_analysis()
 
-        if self.should_flip():
+        if self.should_flip() and self._game.is_engine_on_turn():
             self.flip()
             self.invoke_engine()
 
