@@ -158,7 +158,7 @@ class MainWindow(QMainWindow):
             icon=svg_icon("flip"),
             name="Flip",
             shortcut="Ctrl+F",
-            status_tip="Flips the board and its related widgets.",
+            status_tip="Flips the orientation of board and its related widgets.",
         )
         self.light_forest_style_action = create_action(
             handler=partial(self.apply_style, "light-forest"),
@@ -389,7 +389,7 @@ class MainWindow(QMainWindow):
         self.close()
 
     def flip(self) -> None:
-        """Flip widgets based on board orientation."""
+        """Flip orientation of board and its related widgets."""
         current_orientation: bool = setting_value("board", "orientation")
         set_setting_value("board", "orientation", not current_orientation)
 
@@ -398,7 +398,7 @@ class MainWindow(QMainWindow):
         self._evaluation_bar.flip_appearance()
 
     def should_flip(self) -> bool:
-        """Return True if board should be flipped."""
+        """Return True if orientation should be flipped."""
         is_engine_on_turn: bool = self._game.is_engine_on_turn()
         is_engine_white: bool = setting_value("engine", "is_white")
         is_white_on_bottom: bool = setting_value("board", "orientation")
@@ -471,28 +471,25 @@ class MainWindow(QMainWindow):
 
     def flip_clocks(self) -> None:
         """Flip positions of Black's and White's clock."""
-        clock: QWidget = self._grid_layout.itemAtPosition(4, 1).widget()
+        top_clock: QWidget = self._grid_layout.itemAtPosition(1, 1).widget()
+        bottom_clock: QWidget = self._grid_layout.itemAtPosition(4, 1).widget()
 
-        self._grid_layout.removeWidget(self._black_clock)
-        self._grid_layout.removeWidget(self._white_clock)
+        self._grid_layout.removeWidget(top_clock)
+        self._grid_layout.removeWidget(bottom_clock)
 
-        if clock is self._black_clock:
-            self._grid_layout.addWidget(self._black_clock, 1, 1)
-            self._grid_layout.addWidget(self._white_clock, 4, 1)
-        else:
-            self._grid_layout.addWidget(self._white_clock, 1, 1)
-            self._grid_layout.addWidget(self._black_clock, 4, 1)
+        self._grid_layout.addWidget(top_clock, 4, 1)
+        self._grid_layout.addWidget(bottom_clock, 1, 1)
 
     def flip_player_names(self) -> None:
-        """Flip names of engine and human player."""
-        engine_name: QWidget = self._grid_layout.itemAtPosition(2, 1).widget()
-        human_name: QWidget = self._grid_layout.itemAtPosition(5, 1).widget()
+        """Flip positions of engine and human player name."""
+        top_name: QWidget = self._grid_layout.itemAtPosition(2, 1).widget()
+        bottom_name: QWidget = self._grid_layout.itemAtPosition(5, 1).widget()
 
-        self._grid_layout.removeWidget(engine_name)
-        self._grid_layout.removeWidget(human_name)
+        self._grid_layout.removeWidget(top_name)
+        self._grid_layout.removeWidget(bottom_name)
 
-        self._grid_layout.addWidget(engine_name, 5, 1)
-        self._grid_layout.addWidget(human_name, 2, 1)
+        self._grid_layout.addWidget(top_name, 5, 1)
+        self._grid_layout.addWidget(bottom_name, 2, 1)
 
     def start_analysis(self) -> None:
         """Start analyzing current position."""
