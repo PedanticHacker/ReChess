@@ -81,8 +81,10 @@ class MainWindow(QMainWindow):
         self.adjust_toolbar_buttons()
         self.connect_signals_to_slots()
 
-        if self.should_flip() and self._game.is_engine_on_turn():
+        if self.should_flip():
             self.flip()
+
+        if self._game.is_engine_on_turn():
             self.invoke_engine()
 
     def set_size(self) -> None:
@@ -416,8 +418,10 @@ class MainWindow(QMainWindow):
 
     def apply_saved_settings(self) -> None:
         """Act on settings being saved."""
-        if self.should_flip() and self._game.is_engine_on_turn():
+        if self.should_flip():
             self.flip()
+
+        if self._game.is_engine_on_turn():
             self.invoke_engine()
 
     def apply_style(self, filename: str) -> None:
@@ -567,8 +571,10 @@ class MainWindow(QMainWindow):
         self.show_fen()
         self.stop_analysis()
 
-        if self.should_flip() and self._game.is_engine_on_turn():
+        if self.should_flip():
             self.flip()
+
+        if self._game.is_engine_on_turn():
             self.invoke_engine()
 
     def closeEvent(self, event: QCloseEvent) -> None:
