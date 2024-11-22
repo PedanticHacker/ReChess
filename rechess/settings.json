@@ -1,13 +1,13 @@
 {
   "board": {
-    "orientation": false
+    "orientation": true
   },
   "clock": {
     "time": 60.0,
     "increment": 0.0
   },
   "engine": {
-    "is_white": true,
+    "is_white": false,
     "is_ponder_on": false
   },
   "ui": {
