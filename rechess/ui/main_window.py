@@ -64,7 +64,7 @@ class MainWindow(QMainWindow):
 
         self._human_name_label: QLabel = QLabel()
         self._human_name_label.setObjectName("human")
-        self._human_name_label.setText("Human")
+        self._human_name_label.setText("Boštjan Mejak")
 
         self._notifications_label: QLabel = QLabel()
         self._notifications_label.setObjectName("notifications")
@@ -391,24 +391,21 @@ class MainWindow(QMainWindow):
         self.close()
 
     def flip(self) -> None:
-        """Flip orientation of board and its related widgets."""
-        current_orientation: bool = setting_value("board", "orientation")
-        set_setting_value("board", "orientation", not current_orientation)
+        """Flip board orientation, adjust clocks and evaluation bar."""
+        set_setting_value(
+            "board",
+            "orientation",
+            not setting_value("board", "orientation"),
+        )
 
-        self.flip_clocks()
-        self.flip_player_names()
-        self._evaluation_bar.flip_appearance()
+        self.align_clocks_with_pieces()
+        self._evaluation_bar.invert_appearance()
 
     def should_flip(self) -> bool:
         """Return True if orientation should be flipped."""
         is_engine_white: bool = setting_value("engine", "is_white")
         is_white_on_bottom: bool = setting_value("board", "orientation")
-        return (
-            is_engine_white
-            and is_white_on_bottom
-            or not is_engine_white
-            and not is_white_on_bottom
-        )
+        return is_engine_white == is_white_on_bottom
 
     def play_move_now(self) -> None:
         """Force engine to play move, despite not being on turn."""
@@ -453,7 +450,7 @@ class MainWindow(QMainWindow):
 
         self._game.clear_arrows()
         self._engine_analysis_label.clear()
-        self._evaluation_bar.reset_appearance()
+        self._evaluation_bar.reset_evaluation()
 
         self._engine.load_from_file_at(path_to_file)
         self._engine_name_label.setText(self._engine.name)
@@ -473,8 +470,8 @@ class MainWindow(QMainWindow):
             ),
         )
 
-    def flip_clocks(self) -> None:
-        """Flip positions of Black's and White's clock to match piece positions."""
+    def align_clocks_with_pieces(self) -> None:
+        """Align clocks to match their corresponding piece color."""
         is_white_on_bottom: bool = setting_value("board", "orientation")
 
         self._grid_layout.removeWidget(self._black_clock)
@@ -484,23 +481,8 @@ class MainWindow(QMainWindow):
             self._grid_layout.addWidget(self._black_clock, 1, 1)
             self._grid_layout.addWidget(self._white_clock, 4, 1)
         else:
-            self._grid_layout.addWidget(self._white_clock, 1, 1)
             self._grid_layout.addWidget(self._black_clock, 4, 1)
-
-    def flip_player_names(self) -> None:
-        """Flip positions of names to match the player."""
-        is_engine_white: bool = setting_value("engine", "is_white")
-        is_white_on_bottom: bool = setting_value("board", "orientation")
-
-        self._grid_layout.removeWidget(self._engine_name_label)
-        self._grid_layout.removeWidget(self._human_name_label)
-
-        if is_engine_white == is_white_on_bottom:
-            self._grid_layout.addWidget(self._engine_name_label, 5, 1)
-            self._grid_layout.addWidget(self._human_name_label, 2, 1)
-        else:
-            self._grid_layout.addWidget(self._engine_name_label, 2, 1)
-            self._grid_layout.addWidget(self._human_name_label, 5, 1)
+            self._grid_layout.addWidget(self._white_clock, 1, 1)
 
     def start_analysis(self) -> None:
         """Start analyzing current position."""
@@ -540,7 +522,7 @@ class MainWindow(QMainWindow):
 
         self._notifications_label.clear()
         self._engine_analysis_label.clear()
-        self._evaluation_bar.reset_appearance()
+        self._evaluation_bar.reset_evaluation()
 
         self.show_fen()
         self.show_opening()
@@ -650,7 +632,7 @@ class MainWindow(QMainWindow):
         self._white_clock.stop_timer()
         self._notifications_label.clear()
         self._engine_analysis_label.clear()
-        self._evaluation_bar.reset_appearance()
+        self._evaluation_bar.reset_evaluation()
 
         if self._game.is_over():
             self._notifications_label.setText(self._game.result)
