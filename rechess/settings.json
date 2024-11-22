@@ -7,7 +7,7 @@
     "increment": 0.0
   },
   "engine": {
-    "is_white": false,
+    "is_white": true,
     "is_ponder_on": false
   },
   "ui": {

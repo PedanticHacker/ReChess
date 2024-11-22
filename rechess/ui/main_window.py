@@ -399,15 +399,13 @@ class MainWindow(QMainWindow):
 
     def should_flip(self) -> bool:
         """Return True if orientation should be flipped."""
-        is_engine_on_turn: bool = self._game.is_engine_on_turn()
         is_engine_white: bool = setting_value("engine", "is_white")
         is_white_on_bottom: bool = setting_value("board", "orientation")
-        return is_engine_on_turn and is_engine_white and is_white_on_bottom
+        return is_engine_white or (is_engine_white == is_white_on_bottom)
 
     def play_move_now(self) -> None:
         """Force engine to play move, despite not being on turn."""
-        if not self._game.is_engine_on_turn():
-            self.invoke_engine()
+        self.invoke_engine()
 
     def show_settings_dialog(self) -> None:
         """Show dialog to edit settings."""
@@ -417,12 +415,9 @@ class MainWindow(QMainWindow):
             self.apply_saved_settings()
 
     def apply_saved_settings(self) -> None:
-        """Act on settings being saved by applying them."""
-        if not self._game.is_in_progress():
-            self._black_clock.reset()
-            self._white_clock.reset()
-
-        if self._game.is_engine_on_turn() and not self._game.is_over():
+        """Act on settings being saved."""
+        if self.should_flip():
+            self.flip()
             self.invoke_engine()
 
     def apply_style(self, filename: str) -> None:
