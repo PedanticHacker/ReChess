@@ -81,7 +81,8 @@ class MainWindow(QMainWindow):
         self.adjust_toolbar_buttons()
         self.connect_signals_to_slots()
 
-        if self._game.is_engine_on_turn():
+        if self.should_flip():
+            self.flip()
             self.invoke_engine()
 
     def set_size(self) -> None:
@@ -114,9 +115,6 @@ class MainWindow(QMainWindow):
         self._central_widget: QWidget = QWidget()
         self._central_widget.setLayout(self._grid_layout)
         self.setCentralWidget(self._central_widget)
-
-        if setting_value("engine", "is_white"):
-            self.flip()
 
     def create_actions(self) -> None:
         """Create menu and toolbar actions."""
@@ -160,7 +158,7 @@ class MainWindow(QMainWindow):
             icon=svg_icon("flip"),
             name="Flip",
             shortcut="Ctrl+F",
-            status_tip="Flips the board, clocks, player names, and evaluation bar.",
+            status_tip="Flips the board and its related widgets.",
         )
         self.light_forest_style_action = create_action(
             handler=partial(self.apply_style, "light-forest"),
@@ -391,16 +389,20 @@ class MainWindow(QMainWindow):
         self.close()
 
     def flip(self) -> None:
-        """Flip board, clocks, player names, and evaluation bar."""
-        set_setting_value(
-            "board",
-            "orientation",
-            not setting_value("board", "orientation"),
-        )
+        """Flip widgets based on board orientation."""
+        current_orientation: bool = setting_value("board", "orientation")
+        set_setting_value("board", "orientation", not current_orientation)
 
         self.flip_clocks()
         self.flip_player_names()
         self._evaluation_bar.flip_appearance()
+
+    def should_flip(self) -> bool:
+        """Return True if board should be flipped."""
+        is_engine_on_turn: bool = self._game.is_engine_on_turn()
+        is_engine_white: bool = setting_value("engine", "is_white")
+        is_white_on_bottom: bool = setting_value("board", "orientation")
+        return is_engine_on_turn and is_engine_white and is_white_on_bottom
 
     def play_move_now(self) -> None:
         """Force engine to play move, despite not being on turn."""
@@ -469,14 +471,17 @@ class MainWindow(QMainWindow):
 
     def flip_clocks(self) -> None:
         """Flip positions of Black's and White's clock."""
-        black_clock: QWidget = self._grid_layout.itemAtPosition(1, 1).widget()
-        white_clock: QWidget = self._grid_layout.itemAtPosition(4, 1).widget()
+        clock: QWidget = self._grid_layout.itemAtPosition(4, 1).widget()
 
-        self._grid_layout.removeWidget(black_clock)
-        self._grid_layout.removeWidget(white_clock)
+        self._grid_layout.removeWidget(self._black_clock)
+        self._grid_layout.removeWidget(self._white_clock)
 
-        self._grid_layout.addWidget(black_clock, 4, 1)
-        self._grid_layout.addWidget(white_clock, 1, 1)
+        if clock is self._black_clock:
+            self._grid_layout.addWidget(self._black_clock, 1, 1)
+            self._grid_layout.addWidget(self._white_clock, 4, 1)
+        else:
+            self._grid_layout.addWidget(self._white_clock, 1, 1)
+            self._grid_layout.addWidget(self._black_clock, 4, 1)
 
     def flip_player_names(self) -> None:
         """Flip names of engine and human player."""
@@ -570,7 +575,8 @@ class MainWindow(QMainWindow):
         self.show_fen()
         self.stop_analysis()
 
-        if self._game.is_engine_on_turn():
+        if self.should_flip():
+            self.flip()
             self.invoke_engine()
 
     def closeEvent(self, event: QCloseEvent) -> None:
