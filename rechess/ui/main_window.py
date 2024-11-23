@@ -391,15 +391,15 @@ class MainWindow(QMainWindow):
         self.close()
 
     def flip(self) -> None:
-        """Flip board orientation, adjust clocks and evaluation bar."""
+        """Flip board orientation, clocks and evaluation bar."""
         set_setting_value(
             "board",
             "orientation",
             not setting_value("board", "orientation"),
         )
 
-        self.align_clocks_with_pieces()
-        self._evaluation_bar.invert_appearance()
+        self.flip_clocks()
+        self._evaluation_bar.flip_chunk()
 
     def should_flip(self) -> bool:
         """Return True if orientation should be flipped."""
@@ -408,7 +408,7 @@ class MainWindow(QMainWindow):
         return is_engine_white == is_white_on_bottom
 
     def play_move_now(self) -> None:
-        """Force engine to play move, despite not being on turn."""
+        """Force engine to play move on current turn."""
         self.invoke_engine()
 
     def show_settings_dialog(self) -> None:
@@ -470,8 +470,8 @@ class MainWindow(QMainWindow):
             ),
         )
 
-    def align_clocks_with_pieces(self) -> None:
-        """Align clocks to match their corresponding piece color."""
+    def flip_clocks(self) -> None:
+        """Flip clocks based on board orientation."""
         is_white_on_bottom: bool = setting_value("board", "orientation")
 
         self._grid_layout.removeWidget(self._black_clock)

@@ -23,8 +23,8 @@ class EvaluationBar(QProgressBar):
         """Set chunk to neutral evaluation."""
         self.reset()
 
-    def invert_appearance(self) -> None:
-        """Invert chunk's appearance based on board orientation."""
+    def flip_chunk(self) -> None:
+        """Flip chunk based on board orientation."""
         self.setInvertedAppearance(setting_value("board", "orientation"))
 
     def animate(self, evaluation: Score) -> None:
