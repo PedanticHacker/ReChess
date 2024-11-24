@@ -29,14 +29,16 @@ QLabel {
   font-weight: bold;
 }
 
-QLabel#analysis {
+QLabel#engineAnalysis {
   background-color: #3d2159;
   border: 1px solid #6b35b0;
   border-radius: 4px;
   min-height: 80px;
+  qproperty-alignment: "AlignTop";
+  qproperty-wordWrap: true;
 }
 
-QLabel#engine, QLabel#human, QLabel#notifications {
+QLabel#engineName, QLabel#humanName, QLabel#notifications {
   background-color: #3d2159;
   border: 1px solid #6b35b0;
   border-radius: 4px;
@@ -51,7 +53,8 @@ QLineEdit {
   color: #e2d4f5;
   font-size: 15px;
   font-weight: bold;
-  min-height: 20px;
+  min-width: 600px;
+  max-width: 600px;
   qproperty-alignment: "AlignCenter";
 }
 

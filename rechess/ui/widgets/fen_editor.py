@@ -15,9 +15,7 @@ class FenEditor(QLineEdit):
 
         self._game: Game = game
 
-        self.setMaxLength(80)
         self.setText(game.fen)
-        self.setFixedWidth(600)
         self.textEdited.connect(self.validate_fen)
 
     def show_warning(self) -> None:

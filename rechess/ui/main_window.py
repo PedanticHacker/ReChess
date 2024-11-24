@@ -54,16 +54,14 @@ class MainWindow(QMainWindow):
         self._evaluation_bar: EvaluationBar = EvaluationBar()
 
         self._engine_analysis_label: QLabel = QLabel()
-        self._engine_analysis_label.setObjectName("analysis")
-        self._engine_analysis_label.setAlignment(Qt.AlignmentFlag.AlignTop)
-        self._engine_analysis_label.setWordWrap(True)
+        self._engine_analysis_label.setObjectName("engineAnalysis")
 
         self._engine_name_label: QLabel = QLabel()
-        self._engine_name_label.setObjectName("engine")
+        self._engine_name_label.setObjectName("engineName")
         self._engine_name_label.setText(self._engine.name)
 
         self._human_name_label: QLabel = QLabel()
-        self._human_name_label.setObjectName("human")
+        self._human_name_label.setObjectName("humanName")
         self._human_name_label.setText("Boštjan Mejak")
 
         self._notifications_label: QLabel = QLabel()
