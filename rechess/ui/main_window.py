@@ -64,8 +64,8 @@ class MainWindow(QMainWindow):
         self._human_name_label.setObjectName("humanName")
         self._human_name_label.setText("Boštjan Mejak")
 
-        self._notifications_label: QLabel = QLabel()
-        self._notifications_label.setObjectName("notifications")
+        self._game_notifications: QLabel = QLabel()
+        self._game_notifications.setObjectName("gameNotifications")
 
         self._openings_label: QLabel = QLabel()
 
@@ -101,7 +101,7 @@ class MainWindow(QMainWindow):
         self._grid_layout.addWidget(self._board, 1, 2, 4, 1)
         self._grid_layout.addWidget(self._evaluation_bar, 1, 3, 4, 1)
         self._grid_layout.addWidget(self._table_view, 1, 4, 4, 1)
-        self._grid_layout.addWidget(self._notifications_label, 5, 4)
+        self._grid_layout.addWidget(self._game_notifications, 5, 4)
         self._grid_layout.addWidget(self._fen_editor, 5, 2)
         self._grid_layout.addWidget(self._engine_analysis_label, 6, 2)
 
@@ -377,12 +377,12 @@ class MainWindow(QMainWindow):
     def invoke_engine(self) -> None:
         """Invoke engine to play move."""
         QThreadPool.globalInstance().start(self._engine.play_move)
-        self._notifications_label.setText("Thinking...")
+        self._game_notifications.setText("Thinking...")
 
     def invoke_analysis(self) -> None:
         """Invoke engine to start analysis."""
         QThreadPool.globalInstance().start(self._engine.start_analysis)
-        self._notifications_label.setText("Analyzing...")
+        self._game_notifications.setText("Analyzing...")
 
     def quit(self) -> None:
         """Trigger main window's close event to quit."""
@@ -495,7 +495,7 @@ class MainWindow(QMainWindow):
     def stop_analysis(self) -> None:
         """Stop analyzing current position."""
         self._engine.stop_analysis()
-        self._notifications_label.clear()
+        self._game_notifications.clear()
 
         self.switch_clock_timers()
         self.adjust_toolbar_buttons()
@@ -519,7 +519,7 @@ class MainWindow(QMainWindow):
         self._table_model.refresh_view()
         self._table_view.select_last_item()
 
-        self._notifications_label.clear()
+        self._game_notifications.clear()
         self._evaluation_bar.reset_state()
         self._engine_analysis_label.clear()
 
@@ -530,7 +530,7 @@ class MainWindow(QMainWindow):
         if self._game.is_over():
             self._black_clock.stop_timer()
             self._white_clock.stop_timer()
-            self._notifications_label.setText(self._game.result)
+            self._game_notifications.setText(self._game.result)
             return
 
         if self._game.is_engine_on_turn() and not self._game.is_over():
@@ -558,7 +558,7 @@ class MainWindow(QMainWindow):
         self._evaluation_bar.reset_state()
 
         self._openings_label.clear()
-        self._notifications_label.clear()
+        self._game_notifications.clear()
         self._engine_analysis_label.clear()
 
         self.show_fen()
@@ -601,12 +601,12 @@ class MainWindow(QMainWindow):
     @Slot()
     def on_black_time_expired(self) -> None:
         """Notify that White won as Black's time has expired."""
-        self._notifications_label.setText("White won on time")
+        self._game_notifications.setText("White won on time")
 
     @Slot()
     def on_white_time_expired(self) -> None:
         """Notify that Black won as White's time has expired."""
-        self._notifications_label.setText("Black won on time")
+        self._game_notifications.setText("Black won on time")
 
     @Slot()
     def on_fen_validated(self) -> None:
@@ -629,12 +629,12 @@ class MainWindow(QMainWindow):
         self._game.reset_squares()
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
-        self._notifications_label.clear()
+        self._game_notifications.clear()
         self._evaluation_bar.reset_state()
         self._engine_analysis_label.clear()
 
         if self._game.is_over():
-            self._notifications_label.setText(self._game.result)
+            self._game_notifications.setText(self._game.result)
 
     @Slot(Move)
     def on_move_played(self, move: Move) -> None:

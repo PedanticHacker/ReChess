@@ -38,7 +38,7 @@ QLabel#engineAnalysis {
   qproperty-wordWrap: true;
 }
 
-QLabel#engineName, QLabel#humanName, QLabel#notifications {
+QLabel#engineName, QLabel#gameNotifications, QLabel#humanName {
   background-color: #344d69;
   border: 1px solid #385f80;
   border-radius: 4px;
