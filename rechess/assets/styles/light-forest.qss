@@ -42,7 +42,6 @@ QLabel#engineName, QLabel#gameNotifications, QLabel#humanName {
   background-color: #a5b69c;
   border: 1px solid #506f46;
   border-radius: 4px;
-  min-height: 20px;
   qproperty-alignment: "AlignCenter";
 }
 
