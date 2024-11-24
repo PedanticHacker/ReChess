@@ -23,6 +23,7 @@ from rechess.ui.table import TableModel, TableView
 from rechess.ui.widgets import Board, Clock, EvaluationBar, FenEditor
 from rechess.utils import (
     create_action,
+    engine_file_filter,
     find_opening,
     platform_name,
     set_setting_value,
@@ -438,7 +439,7 @@ class MainWindow(QMainWindow):
             self,
             "File Manager",
             Path.home().as_posix(),
-            "Chess engine (*.exe)",
+            engine_file_filter(),
         )
 
         if path_to_file:
@@ -449,8 +450,8 @@ class MainWindow(QMainWindow):
         self.stop_analysis()
 
         self._game.clear_arrows()
+        self._evaluation_bar.reset_state()
         self._engine_analysis_label.clear()
-        self._evaluation_bar.reset_evaluation()
 
         self._engine.load_from_file_at(path_to_file)
         self._engine_name_label.setText(self._engine.name)
@@ -497,6 +498,7 @@ class MainWindow(QMainWindow):
     def stop_analysis(self) -> None:
         """Stop analyzing current position."""
         self._engine.stop_analysis()
+        self._notifications_label.clear()
 
         self.switch_clock_timers()
         self.adjust_toolbar_buttons()
@@ -521,8 +523,8 @@ class MainWindow(QMainWindow):
         self._table_view.select_last_item()
 
         self._notifications_label.clear()
+        self._evaluation_bar.reset_state()
         self._engine_analysis_label.clear()
-        self._evaluation_bar.reset_evaluation()
 
         self.show_fen()
         self.show_opening()
@@ -556,7 +558,7 @@ class MainWindow(QMainWindow):
         self._white_clock.reset()
 
         self._table_model.reset()
-        self._evaluation_bar.reset()
+        self._evaluation_bar.reset_state()
 
         self._openings_label.clear()
         self._notifications_label.clear()
@@ -631,8 +633,8 @@ class MainWindow(QMainWindow):
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
         self._notifications_label.clear()
+        self._evaluation_bar.reset_state()
         self._engine_analysis_label.clear()
-        self._evaluation_bar.reset_evaluation()
 
         if self._game.is_over():
             self._notifications_label.setText(self._game.result)

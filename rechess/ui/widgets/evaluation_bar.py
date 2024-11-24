@@ -19,9 +19,12 @@ class EvaluationBar(QProgressBar):
         self.setFixedSize(50, 600)
         self.setOrientation(Qt.Orientation.Vertical)
 
-    def reset_evaluation(self) -> None:
-        """Set chunk to neutral evaluation."""
+        self.reset_state()
+
+    def reset_state(self) -> None:
+        """Set chunk to neutral evaluation and flip it if necessary."""
         self.reset()
+        self.flip_chunk()
 
     def flip_chunk(self) -> None:
         """Flip chunk based on board orientation."""
