@@ -23,7 +23,6 @@ from rechess.ui.table import TableModel, TableView
 from rechess.ui.widgets import Board, Clock, EvaluationBar, FenEditor
 from rechess.utils import (
     create_action,
-    engine_file_filter,
     find_opening,
     platform_name,
     set_setting_value,
@@ -439,7 +438,7 @@ class MainWindow(QMainWindow):
             self,
             "File Manager",
             Path.home().as_posix(),
-            engine_file_filter(),
+            "Chess engine (*.exe)",
         )
 
         if path_to_file:

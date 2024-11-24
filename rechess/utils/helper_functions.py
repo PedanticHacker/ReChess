@@ -49,11 +49,6 @@ def path_to_stockfish() -> str:
     )
 
 
-def engine_file_filter() -> str:
-    """Return platform-specific filter for engine file."""
-    return "Chess engine (*.exe)" if platform_name() == "windows" else ""
-
-
 def delete_quarantine_attribute(path_to_file: str) -> None:
     """Delete quarantine attribute for file at `path_to_file`."""
     if hasattr(os, "removexattr"):
