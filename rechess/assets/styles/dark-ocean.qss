@@ -27,6 +27,7 @@ QLabel {
   color: #c5d9e8;
   font-size: 15px;
   font-weight: bold;
+  qproperty-wordWrap: true;
 }
 
 QLabel#engineAnalysis {
@@ -35,7 +36,6 @@ QLabel#engineAnalysis {
   border-radius: 4px;
   min-height: 80px;
   qproperty-alignment: "AlignTop";
-  qproperty-wordWrap: true;
 }
 
 QLabel#engineName, QLabel#gameNotifications, QLabel#humanName {

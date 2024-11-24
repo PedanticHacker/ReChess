@@ -86,8 +86,8 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def set_size(self) -> None:
-        """Set minimum size to 1000 by 700 pixels, show maximized."""
-        self.setMinimumSize(1000, 700)
+        """Set minimum size to 1200 by 900 pixels, show maximized."""
+        self.setMinimumSize(1200, 900)
         self.showMaximized()
 
     def set_layout(self) -> None:
@@ -105,12 +105,12 @@ class MainWindow(QMainWindow):
         self._grid_layout.addWidget(self._fen_editor, 5, 2)
         self._grid_layout.addWidget(self._engine_analysis_label, 6, 2)
 
-        self._grid_layout.setRowStretch(0, 4)
-        self._grid_layout.setRowStretch(3, 4)
-        self._grid_layout.setRowStretch(5, 4)
-        self._grid_layout.setRowStretch(7, 4)
-        self._grid_layout.setColumnStretch(0, 4)
-        self._grid_layout.setColumnStretch(5, 4)
+        self._grid_layout.setRowStretch(0, 1)
+        self._grid_layout.setRowStretch(3, 1)
+        self._grid_layout.setRowStretch(5, 1)
+        self._grid_layout.setRowStretch(7, 1)
+        self._grid_layout.setColumnStretch(0, 1)
+        self._grid_layout.setColumnStretch(5, 1)
 
         self._central_widget: QWidget = QWidget()
         self._central_widget.setLayout(self._grid_layout)
