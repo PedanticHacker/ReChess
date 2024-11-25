@@ -11,6 +11,7 @@ from .helper_functions import (
     set_setting_value,
     setting_value,
     style_icon,
+    style_name,
     svg_icon,
 )
 
@@ -28,5 +29,6 @@ __all__: list[str] = [
     "set_setting_value",
     "setting_value",
     "style_icon",
+    "style_name",
     "svg_icon",
 ]

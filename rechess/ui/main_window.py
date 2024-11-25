@@ -28,6 +28,7 @@ from rechess.utils import (
     set_setting_value,
     setting_value,
     style_icon,
+    style_name,
     svg_icon,
 )
 
@@ -37,8 +38,6 @@ class MainWindow(QMainWindow):
 
     def __init__(self) -> None:
         super().__init__()
-
-        self.apply_style(setting_value("ui", "style"))
 
         self._game: Game = Game()
         self._engine: Engine = Engine(self._game)
@@ -60,14 +59,15 @@ class MainWindow(QMainWindow):
         self._engine_name_label.setObjectName("engineName")
         self._engine_name_label.setText(self._engine.name)
 
+        self._game_notifications: QLabel = QLabel()
+        self._game_notifications.setObjectName("gameNotifications")
+
         self._human_name_label: QLabel = QLabel()
         self._human_name_label.setObjectName("humanName")
         self._human_name_label.setText(setting_value("human", "name"))
 
-        self._game_notifications: QLabel = QLabel()
-        self._game_notifications.setObjectName("gameNotifications")
-
         self._openings_label: QLabel = QLabel()
+        self._style_name_label: QLabel = QLabel()
 
         self.set_size()
         self.set_layout()
@@ -78,6 +78,7 @@ class MainWindow(QMainWindow):
         self.switch_clock_timers()
         self.adjust_toolbar_buttons()
         self.connect_signals_to_slots()
+        self.apply_style(setting_value("ui", "style"))
 
         if self.should_flip():
             self.flip()
@@ -129,28 +130,28 @@ class MainWindow(QMainWindow):
             handler=partial(self.apply_style, "dark-forest"),
             icon=style_icon("#2d382d"),
             name="Dark forest",
-            shortcut="Alt+F1",
+            shortcut="Alt+1",
             status_tip="Applies the dark forest style.",
         )
         self.dark_mint_style_action = create_action(
             handler=partial(self.apply_style, "dark-mint"),
             icon=style_icon("#1a2e2e"),
             name="Dark mint",
-            shortcut="Alt+F2",
+            shortcut="Alt+2",
             status_tip="Applies the dark mint style.",
         )
         self.dark_nebula_style_action = create_action(
             handler=partial(self.apply_style, "dark-nebula"),
             icon=style_icon("#1a1025"),
             name="Dark nebula",
-            shortcut="Alt+F3",
+            shortcut="Alt+3",
             status_tip="Applies the dark nebula style.",
         )
         self.dark_ocean_style_action = create_action(
             handler=partial(self.apply_style, "dark-ocean"),
             icon=style_icon("#1a2838"),
             name="Dark ocean",
-            shortcut="Alt+F4",
+            shortcut="Alt+4",
             status_tip="Applies the dark ocean style.",
         )
         self.flip_action = create_action(
@@ -164,28 +165,28 @@ class MainWindow(QMainWindow):
             handler=partial(self.apply_style, "light-forest"),
             icon=style_icon("#e8efe6"),
             name="Light forest",
-            shortcut="Alt+F5",
+            shortcut="Alt+5",
             status_tip="Applies the light forest style.",
         )
         self.light_mint_style_action = create_action(
             handler=partial(self.apply_style, "light-mint"),
             icon=style_icon("#ebf5f3"),
             name="Light mint",
-            shortcut="Alt+F6",
+            shortcut="Alt+6",
             status_tip="Applies the light mint style.",
         )
         self.light_nebula_style_action = create_action(
             handler=partial(self.apply_style, "light-nebula"),
             icon=style_icon("#f4ebff"),
             name="Light nebula",
-            shortcut="Alt+F7",
+            shortcut="Alt+7",
             status_tip="Applies the light nebula style.",
         )
         self.light_ocean_style_action = create_action(
             handler=partial(self.apply_style, "light-ocean"),
             icon=style_icon("#ebf3f8"),
             name="Light ocean",
-            shortcut="Alt+F8",
+            shortcut="Alt+8",
             status_tip="Applies the light ocean style.",
         )
         self.load_engine_action = create_action(
@@ -337,6 +338,7 @@ class MainWindow(QMainWindow):
     def create_statusbar(self) -> None:
         """Create statusbar for showing openings and tips."""
         self.statusBar().addWidget(self._openings_label)
+        self.statusBar().addPermanentWidget(self._style_name_label)
 
     def switch_clock_timers(self) -> None:
         """Switch Black's and White's clock timers based on turn."""
@@ -427,10 +429,11 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def apply_style(self, filename: str) -> None:
-        """Apply style from QSS file at `filename` and set setting."""
+        """Apply style from QSS file at `filename` and set its name."""
         with open(f"rechess/assets/styles/{filename}.qss") as qss_file:
             self.setStyleSheet(qss_file.read())
         set_setting_value("ui", "style", filename)
+        self._style_name_label.setText(f"Style: {style_name(filename)}")
 
     def load_engine(self) -> None:
         """Show file manager to load engine."""

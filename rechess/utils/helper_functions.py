@@ -105,15 +105,25 @@ def setting_value(section: SettingSection, key: SettingKey) -> SettingValue:
 
 
 @overload
-def set_setting_value(section: BoardSection, key: BoardKey, value: bool) -> None: ...
+def set_setting_value(
+    section: BoardSection, key: BoardKey, value: bool
+) -> None: ...
 @overload
-def set_setting_value(section: ClockSection, key: ClockKey, value: float) -> None: ...
+def set_setting_value(
+    section: ClockSection, key: ClockKey, value: float
+) -> None: ...
 @overload
-def set_setting_value(section: EngineSection, key: EngineKey, value: bool) -> None: ...
+def set_setting_value(
+    section: EngineSection, key: EngineKey, value: bool
+) -> None: ...
 @overload
-def set_setting_value(section: HumanSection, key: HumanKey, value: str) -> None: ...
+def set_setting_value(
+    section: HumanSection, key: HumanKey, value: str
+) -> None: ...
 @overload
-def set_setting_value(section: UiSection, key: StyleKey, value: str) -> None: ...
+def set_setting_value(
+    section: UiSection, key: StyleKey, value: str
+) -> None: ...
 def set_setting_value(
     section: SettingSection,
     key: SettingKey,
@@ -138,6 +148,21 @@ def find_opening(fen: str) -> tuple[str, str] | None:
     with open("rechess/openings.json", encoding="utf-8") as json_file:
         openings = json.load(json_file)
     return openings.get(fen)
+
+
+def style_name(filename: str) -> str:
+    """Return human-readable style name based on `filename`."""
+    styles: dict[str, str] = {
+        "dark-forest": "Dark forest",
+        "dark-mint": "Dark mint",
+        "dark-nebula": "Dark nebula",
+        "dark-ocean": "Dark ocean",
+        "light-forest": "Light forest",
+        "light-mint": "Light mint",
+        "light-nebula": "Light nebula",
+        "light-ocean": "Light ocean",
+    }
+    return styles[filename]
 
 
 def initialize_app() -> QApplication:
