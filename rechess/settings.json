@@ -10,6 +10,9 @@
     "is_white": false,
     "is_ponder_on": false
   },
+  "human": {
+    "name": "Human Warrior"
+  },
   "ui": {
     "style": "light-ocean"
   }

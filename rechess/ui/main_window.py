@@ -62,7 +62,7 @@ class MainWindow(QMainWindow):
 
         self._human_name_label: QLabel = QLabel()
         self._human_name_label.setObjectName("humanName")
-        self._human_name_label.setText("Boštjan Mejak")
+        self._human_name_label.setText(setting_value("human", "name"))
 
         self._game_notifications: QLabel = QLabel()
         self._game_notifications.setObjectName("gameNotifications")

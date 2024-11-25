@@ -17,14 +17,18 @@ PATH_TO_SETTINGS_FILE: str = "rechess/settings.json"
 BoardSection: TypeAlias = Literal["board"]
 ClockSection: TypeAlias = Literal["clock"]
 EngineSection: TypeAlias = Literal["engine"]
+HumanSection: TypeAlias = Literal["human"]
 UiSection: TypeAlias = Literal["ui"]
-SettingSection: TypeAlias = BoardSection | ClockSection | EngineSection | UiSection
+SettingSection: TypeAlias = (
+    BoardSection | ClockSection | EngineSection | HumanSection | UiSection
+)
 
 BoardKey: TypeAlias = Literal["orientation"]
 ClockKey: TypeAlias = Literal["time", "increment"]
 EngineKey: TypeAlias = Literal["is_white", "is_ponder_on"]
+HumanKey: TypeAlias = Literal["name"]
 StyleKey: TypeAlias = Literal["style"]
-SettingKey: TypeAlias = BoardKey | ClockKey | EngineKey | StyleKey
+SettingKey: TypeAlias = BoardKey | ClockKey | EngineKey | HumanKey | StyleKey
 
 SettingValue: TypeAlias = bool | float | str
 SettingsDict: TypeAlias = dict[SettingSection, dict[SettingKey, SettingValue]]
@@ -91,6 +95,8 @@ def setting_value(section: ClockSection, key: ClockKey) -> float: ...
 @overload
 def setting_value(section: EngineSection, key: EngineKey) -> bool: ...
 @overload
+def setting_value(section: HumanSection, key: HumanKey) -> str: ...
+@overload
 def setting_value(section: UiSection, key: StyleKey) -> str: ...
 def setting_value(section: SettingSection, key: SettingKey) -> SettingValue:
     """Return value of `key` from `section`."""
@@ -104,6 +110,8 @@ def set_setting_value(section: BoardSection, key: BoardKey, value: bool) -> None
 def set_setting_value(section: ClockSection, key: ClockKey, value: float) -> None: ...
 @overload
 def set_setting_value(section: EngineSection, key: EngineKey, value: bool) -> None: ...
+@overload
+def set_setting_value(section: HumanSection, key: HumanKey, value: str) -> None: ...
 @overload
 def set_setting_value(section: UiSection, key: StyleKey, value: str) -> None: ...
 def set_setting_value(
