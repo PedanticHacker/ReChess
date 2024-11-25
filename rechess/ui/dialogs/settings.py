@@ -142,5 +142,5 @@ class SettingsDialog(QDialog):
         set_setting_value(
             section="human",
             key="name",
-            value=self._human_name_option.text(),
+            value=self._human_name_option.text().strip(),
         )
