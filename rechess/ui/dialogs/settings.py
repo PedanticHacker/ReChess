@@ -6,6 +6,7 @@ from PySide6.QtWidgets import (
     QDialogButtonBox,
     QGroupBox,
     QHBoxLayout,
+    QLineEdit,
     QRadioButton,
     QVBoxLayout,
 )
@@ -38,6 +39,7 @@ class SettingsDialog(QDialog):
     def create_groups(self) -> None:
         """Create groups for related settings to be put together."""
         self._engine_group: QGroupBox = QGroupBox("Engine")
+        self._human_group: QGroupBox = QGroupBox("Human")
         self._time_control_group: QGroupBox = QGroupBox("Time Control")
 
     def create_options(self) -> None:
@@ -82,8 +84,14 @@ class SettingsDialog(QDialog):
             self._clock_increment_option.findData(clock_increment)
         )
 
+        self._human_name_option: QLineEdit = QLineEdit(setting_value("human", "name"))
+
     def set_vertical_layout(self) -> None:
         """Set layout of dialog's widgets to be vertical."""
+        human_layout: QVBoxLayout = QVBoxLayout()
+        human_layout.addWidget(self._human_name_option)
+        self._human_group.setLayout(human_layout)
+
         engine_layout: QVBoxLayout = QVBoxLayout()
         engine_layout.addWidget(self._engine_black_option)
         engine_layout.addWidget(self._engine_white_option)
@@ -96,6 +104,7 @@ class SettingsDialog(QDialog):
         self._time_control_group.setLayout(time_control_layout)
 
         vertical_layout: QVBoxLayout = QVBoxLayout()
+        vertical_layout.addWidget(self._human_group)
         vertical_layout.addWidget(self._engine_group)
         vertical_layout.addWidget(self._time_control_group)
         vertical_layout.addWidget(self._button_box)
@@ -129,4 +138,9 @@ class SettingsDialog(QDialog):
             section="engine",
             key="is_ponder_on",
             value=self._engine_ponder_option.isChecked(),
+        )
+        set_setting_value(
+            section="human",
+            key="name",
+            value=self._human_name_option.text(),
         )

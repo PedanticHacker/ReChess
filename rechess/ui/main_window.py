@@ -418,6 +418,8 @@ class MainWindow(QMainWindow):
 
     def apply_saved_settings(self) -> None:
         """Act on settings being saved."""
+        self._human_name_label.setText(setting_value("human", "name"))
+
         if self.should_flip():
             self.flip()
 
