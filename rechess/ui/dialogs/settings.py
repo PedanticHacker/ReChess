@@ -84,7 +84,9 @@ class SettingsDialog(QDialog):
             self._clock_increment_option.findData(clock_increment)
         )
 
-        self._human_name_option: QLineEdit = QLineEdit(setting_value("human", "name"))
+        self._human_name_option: QLineEdit = QLineEdit(
+            setting_value("human", "name"),
+        )
 
     def set_vertical_layout(self) -> None:
         """Set layout of dialog's widgets to be vertical."""
@@ -142,5 +144,5 @@ class SettingsDialog(QDialog):
         set_setting_value(
             section="human",
             key="name",
-            value=self._human_name_option.text().strip(),
+            value=self._human_name_option.text().strip() or "Human Warrior",
         )
