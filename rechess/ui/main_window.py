@@ -392,7 +392,7 @@ class MainWindow(QMainWindow):
         """Flip board orientation and related components."""
         is_engine_white: bool = setting_value("engine", "is_white")
         is_white_on_bottom: bool = setting_value("board", "orientation")
-        new_orientation = (
+        new_orientation: bool = (
             not is_engine_white
             if is_engine_white == is_white_on_bottom
             else not is_white_on_bottom
