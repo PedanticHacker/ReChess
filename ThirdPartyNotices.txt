@@ -1,7 +1,7 @@
 THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
 Do Not Translate or Localize
 
-This software incorporates the following third-party software:
+This ReChess software incorporates the following third-party software:
 
 ############################################
 Stockfish, a UCI chess playing engine derived from Glaurung 2.1
