@@ -389,7 +389,7 @@ class MainWindow(QMainWindow):
         self.close()
 
     def flip(self) -> None:
-        """Flip board orientation and related components."""
+        """Flip orientation of board and its corresponding widgets."""
         is_engine_white: bool = setting_value("engine", "is_white")
         is_white_on_bottom: bool = setting_value("board", "orientation")
         new_orientation: bool = (

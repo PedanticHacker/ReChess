@@ -48,12 +48,12 @@ You get all the basic features for playing chess:
 There are also many functionalities you can utilize:
 
 - navigate through moves of the game by scrolling the mouse wheel
-- play against the latest version of the Stockfish chess engine
+- play against the latest version of the Stockfish engine
 - analyze a position
-- load a UCI chess engine
+- load an engine
 - flip the board
-- force the chess engine to make a move
-- paste a FEN from the clipboard by double-clicking the FEN viewer
+- force the engine to make a move
+- paste a FEN from the clipboard by double-clicking the FEN editor
 - select from one of the dark or light styles
 
 ## Which chess variants are supported?
@@ -76,7 +76,7 @@ No. Drag-and-drop functionality is not supported, just click-click.
 
 ## How does ReChess look?
 
-The following screenshots show how ReChess looks.
+The following screenshots show how ReChess looks in "Dark mint" style.
 
 ![ReChess on Windows 11](https://github.com/user-attachments/assets/bb1c558d-44aa-48da-9cb1-13999da84bf9 "ReChess on Windows 11")
 *Changing the settings.*
@@ -90,29 +90,29 @@ The following screenshots show how ReChess looks.
 ![ReChess on Windows 11](https://github.com/user-attachments/assets/d92bd7e4-1ffa-4d34-912a-2bbb4d35dc03 "ReChess on Windows 11")
 *Promoting a white pawn to a queen, a rook, a bishop, or a knight.*
 
-## What's the default chess engine in ReChess?
+## What's the default engine in ReChess?
 
-The latest public version of **Stockfish** is the default chess engine.
-It works on Windows, Linux, and macOS platforms.
+The latest official version of **Stockfish** is the default engine and
+works on Windows, Linux, and macOS platforms.
 
-### What if I want to play against some other chess engine?
+### What if I want to play against some other engine?
 
-You can load and then play against or analyze with any chess engine, but
-it has to be a UCI-compatible one.
+You can load and then play against or analyze with any engine, but it
+has to be a UCI-compatible one.
 
-### Why does it have to be a UCI-compatible chess engine?
+### Why does it have to be a UCI-compatible engine?
 
-Chess engines, compatible only with the chess engine communication
-protocol (CECP) and designed for either the WinBoard GUI (on Windows) or
-the XBoard GUI (on UNIX or UNIX-based platform like Linux), can't be
-loaded and hence can't be played against in ReChess because it doesn't
-support this type of protocol. However, if your chess engine is also
-compatible with universal chess interface (UCI), then you're in luck.
+Engines, compatible only with the Chess Engine Communication Protocol
+(CECP) and designed for either the WinBoard GUI (Windows platform) or
+the XBoard GUI (UNIX or UNIX-based platform like Linux), can't be loaded
+and hence can't be played against in ReChess because it doesn't support
+this type of protocol. However, if your engine is also compatible with
+Universal Chess Interface (UCI), then you're in luck.
 
 ### Can I analyze a position?
 
-Yes. You can analyze a position with the default Stockfish chess engine
-or a UCI-compatible chess engine you load yourself.
+Yes. You can analyze a position with the default Stockfish engine or a
+UCI-compatible engine you load yourself.
 
 ## Are there any requirements I must meet to launch ReChess?
 
@@ -120,12 +120,12 @@ Yes. You must have some things installed. If not installed already,
 install them in this order:
 
 1. For 64-bit Windows 10 or 11, install Python by clicking the link to
-its installer below. You need *pip* package manager, so make sure to
-select the *Install Now* option when Python installer launches.
+its installer below. You need the *pip* package manager, so make sure to
+select the *Install Now* option when installer launches.
 
     - [**Python 3.13.0 installer for Windows**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-amd64.exe)
 
-For macOS version 10.13 or later, use [**this installer**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-macos11.pkg).
+> :information_source: For macOS version 10.13 or later, use [**this installer**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-macos11.pkg).
 
 2. In your command-line interface, install these Python packages:
 
@@ -140,7 +140,14 @@ to achieve the same:
 pip install -r requirements.txt
 ```
 
-> :memo: On macOS, all *pip* commands start with `pip3`, not `pip`.
+> :information_source: On macOS, *pip* commands must be written as
+`pip3`, not `pip` as on Windows or Linux, so all the commands above
+would therefore start like this:
+
+```bash
+pip3 install
+```
+
 That's a minor quirk to be aware of.
 
 ## How can I launch ReChess?
@@ -199,8 +206,8 @@ permissions, limitations, and conditions of the license.
 
 ### Can I develop an app based on ReChess?
 
-Absolutely! For your app, you can use whichever license, but make sure
-to include my copyright notice above yours.
+Absolutely! For your app, you can use any license, but make sure to
+include my copyright notice above yours.
 
 Your copyright notice should look like this:
 
