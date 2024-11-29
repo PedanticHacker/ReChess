@@ -2,9 +2,10 @@ THIRD-PARTY NOTICES
 
 ReChess includes binary distributions of the following third-party software:
 
-Stockfish Chess Engine
+Stockfish Chess Engine (version 17)
 - Binary executables for Windows, Linux, and macOS
 - Source: https://stockfishchess.org
+- Download source code: https://github.com/official-stockfish/Stockfish/tree/sf_17
 - Copyright (C) 2004-2024 The Stockfish developers
 
 Stockfish is licensed under the GNU General Public License v3.0 (GPLv3).
