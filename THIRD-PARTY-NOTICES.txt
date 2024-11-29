@@ -1,9 +1,15 @@
-THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
-Do Not Translate or Localize
+THIRD-PARTY NOTICES
 
-ReChess integrates the following third-party software:
+ReChess includes binary distributions of the following third-party software:
 
-############################################
+Stockfish Chess Engine
+- Binary executables for Windows, Linux, and macOS
+- Source: https://stockfishchess.org
+- Copyright (C) 2004-2024 The Stockfish developers
+
+Stockfish is licensed under the GNU General Public License v3.0 (GPLv3).
+The complete license text follows:
+
 Stockfish, a UCI chess playing engine derived from Glaurung 2.1
 Copyright (C) 2004-2024 The Stockfish developers (see AUTHORS file)
 
@@ -20,14 +26,14 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-                    GNU GENERAL PUBLIC LICENSE
-                       Version 3, 29 June 2007
+                   GNU GENERAL PUBLIC LICENSE
+                      Version 3, 29 June 2007
 
- Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
- Everyone is permitted to copy and distribute verbatim copies
- of this license document, but changing it is not allowed.
+Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed.
 
-                            Preamble
+                           Preamble
 
   The GNU General Public License is a free, copyleft license for
 software and other kinds of works.
