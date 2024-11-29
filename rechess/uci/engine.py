@@ -15,7 +15,7 @@ from rechess.utils import (
 
 
 class Engine(QObject):
-    """Communication with UCI-compatible engine."""
+    """Communication with UCI-compliant engine."""
 
     best_move_analyzed: Signal = Signal(Move)
     move_played: Signal = Signal(Move)
@@ -61,7 +61,7 @@ class Engine(QObject):
                     break
 
                 if "pv" in info:
-                    pv: list[Move] = info["pv"][0:40]
+                    pv: list[Move] = info["pv"][0:38]
 
                     best_move: Move = pv[0]
                     variation: str = self._game.board.variation_san(pv)
