@@ -33,8 +33,8 @@ Yes. ReChess depends upon:
 
 ### Is there any 3rd-party software integrated?
 
-Yes. ReChess integrates **Stockfish**, a powerful UCI chess engine for
-playing and also analyzing a chess game.
+Yes. ReChess integrates **Stockfish**, a powerful engine for playing and
+also analyzing a game.
 
 ## What features does ReChess provide?
 
@@ -100,21 +100,21 @@ works on Windows, Linux, and macOS platforms.
 ### What if I want to play against some other engine?
 
 You can load and then play against or analyze with any engine, but it
-has to be a UCI-compatible one.
+has to be a UCI-compliant one.
 
-### Why does it have to be a UCI-compatible engine?
+### Why does it have to be a UCI-compliant engine?
 
-Engines, compatible only with the Chess Engine Communication Protocol
+Engines, compliant only with the Chess Engine Communication Protocol
 (CECP) and designed for either the WinBoard GUI (Windows platform) or
 the XBoard GUI (UNIX or UNIX-based platform like Linux), can't be loaded
 and hence can't be played against in ReChess because it doesn't support
-this type of protocol. However, if your engine is also compatible with
+this type of protocol. However, if your engine is also compliant with
 Universal Chess Interface (UCI), then you're in luck.
 
 ### Can I analyze a position?
 
 Yes. You can analyze a position with the default Stockfish engine or a
-UCI-compatible engine you load yourself.
+UCI-compliant engine you load yourself.
 
 ## Are there any requirements I must meet to launch ReChess?
 
