@@ -4,6 +4,34 @@
 
 This is ReChess, an app for playing chess against an engine.
 
+## How can I get started quickly?
+
+Here's what you need to do:
+
+1. Install Python 3.13 from the official website:
+
+    - Windows: [Python 3.13 installer](https://www.python.org/ftp/python/3.13.0/python-3.13.0-amd64.exe)
+    - Linux: Upgrade to Python 3.13 via package manager
+    - macOS: [Python 3.13 installer](https://www.python.org/ftp/python/3.13.0/python-3.13.0-macos11.pkg)
+
+2. Install required packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Launch ReChess:
+
+```bash
+python main.py
+```
+
+4. Start playing by:
+
+    - Click a piece to see its legal moves.
+    - Click a legal square to make your move.
+    - Use the Settings button to customize your experience.
+
 ## In what programming language is ReChess written?
 
 That would be **Python**.
@@ -34,7 +62,7 @@ Yes. ReChess depends upon:
 ### Is there any 3rd-party software integrated?
 
 Yes. ReChess integrates **Stockfish**, a powerful engine for playing and
-also analyzing a game.
+analyzing a game.
 
 ## What features does ReChess provide?
 
@@ -81,15 +109,19 @@ No. Drag-and-drop functionality is not supported, just click-click.
 The following screenshots show how ReChess looks in "Dark mint" style.
 
 ![ReChess on Windows 11](https://github.com/user-attachments/assets/bb1c558d-44aa-48da-9cb1-13999da84bf9 "ReChess on Windows 11")
+
 *Changing the settings.*
 
 ![ReChess on Windows 11](https://github.com/user-attachments/assets/6aff84c3-b4c1-44f9-a1e9-ac49f80e49b4 "ReChess on Windows 11")
+
 *Selecting a move from the chess notation table.*
 
 ![ReChess on Windows 11](https://github.com/user-attachments/assets/c61260a8-747f-44ad-893b-71cc509f427b "ReChess on Windows 11")
+
 *Analyzing a position with the default Stockfish 17 chess engine.*
 
 ![ReChess on Windows 11](https://github.com/user-attachments/assets/d92bd7e4-1ffa-4d34-912a-2bbb4d35dc03 "ReChess on Windows 11")
+
 *Promoting a white pawn to a queen, a rook, a bishop, or a knight.*
 
 ## What's the default engine in ReChess?
@@ -125,15 +157,15 @@ install them in this order:
 its installer below. You need the *pip* package manager, so make sure to
 select the *Install Now* option when installer launches.
 
-    - [**Python 3.13.0 installer for Windows**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-amd64.exe)
+    - [**Python 3.13 installer for Windows**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-amd64.exe)
 
 > :information_source: For macOS version 10.13 or later, use [**this installer**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-macos11.pkg).
 
 2. In your command-line interface, install these Python packages:
 
-    - **psutil**, by executing the command `pip install psutil`
-    - **PySide6**, by executing the command `pip install PySide6`
-    - **python-chess**, by executing the command `pip install chess`
+    - **psutil**: `pip install psutil`
+    - **PySide6**: `pip install PySide6`
+    - **python-chess**: `pip install chess`
 
 You can also execute this command within ReChess's top-level directory
 to achieve the same:
@@ -149,8 +181,6 @@ would therefore start like this:
 ```bash
 pip3 install
 ```
-
-That's a minor quirk to be aware of.
 
 ## How can I launch ReChess?
 
@@ -171,31 +201,31 @@ python main.py
 1. Thanks to all developers for their dedicated work on the Python
 programming language!
 
-    - [Source code](https://github.com/python/cpython)
-    - [Downloads page](https://www.python.org/downloads)
+    - [Source](https://github.com/python/cpython)
+    - [Downloads](https://www.python.org/downloads)
 
 2. Thanks to developer Giampaolo Rodola for his dedicated work on the
 psutil library!
 
-    - [Source code](https://github.com/giampaolo/psutil)
-    - [PyPI (Python Package Index) page](https://pypi.org/project/psutil)
+    - [Source](https://github.com/giampaolo/psutil)
+    - [PyPI](https://pypi.org/project/psutil)
 
 3. Thanks to all developers for their dedicated work on the PySide6 GUI
 framework!
 
-    - [PyPI (Python Package Index) page](https://pypi.org/project/PySide6)
+    - [PyPI](https://pypi.org/project/PySide6)
 
 4. Thanks to developer Niklas Fiekas for his dedicated work on the
 python-chess library!
 
-    - [Source code](https://github.com/niklasf/python-chess)
-    - [PyPI (Python Package Index) page](https://pypi.org/project/chess)
+    - [Source](https://github.com/niklasf/python-chess)
+    - [PyPI](https://pypi.org/project/chess)
 
 5. Last but not least, thanks to all developers for their dedicated work
 on the Stockfish engine!
 
-    - [Source code](https://github.com/official-stockfish/Stockfish)
-    - [Downloads page](https://stockfishchess.org/download)
+    - [Source](https://github.com/official-stockfish/Stockfish)
+    - [Downloads](https://stockfishchess.org/download)
 
 ## What license does ReChess use?
 
@@ -219,4 +249,11 @@ Copyright 2024 John Doe
 ```
 
 On the second line, provide the year in which you are releasing your app
-and provide your legal first and last name. That's it.
+and provide your legal first and last name.
+
+If you intend to also integrate Stockfish in your app like ReChess does,
+you must do this:
+
+1. Include Stockfish's copyright notice
+2. Include the GPLv3 License to comply with Stockfish's license
+3. License your app under GPLv3 or any of its compatible licenses
