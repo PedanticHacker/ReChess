@@ -76,7 +76,7 @@ class Engine(QObject):
         self._analyzing = False
 
     def quit(self) -> None:
-        """Quit engine's CPU task."""
+        """Terminate engine's process."""
         with suppress(AttributeError):
             self._engine.quit()
 

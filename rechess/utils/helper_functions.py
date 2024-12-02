@@ -170,8 +170,8 @@ def style_name(filename: str) -> str:
     return styles[filename]
 
 
-def initialize_app() -> QApplication:
-    """Initialize app with basic settings."""
+def app_object() -> QApplication:
+    """Initialize QApplication with basic settings."""
     app: QApplication = QApplication()
     app.setApplicationDisplayName("ReChess")
     app.setApplicationName("ReChess")

@@ -583,16 +583,20 @@ class MainWindow(QMainWindow):
             self.flip()
             self.invoke_engine()
 
+    def quit_engine(self) -> None:
+        """Terminate engine's process."""
+        self._engine.quit()
+
     def closeEvent(self, event: QCloseEvent) -> None:
-        """Ask whether to quit by closing main window."""
+        """Ask whether to quit ReChess by closing its main window."""
         answer: QMessageBox.StandardButton = QMessageBox.question(
             self,
             "Quit",
-            "Do you really want to quit?",
+            "Do you really want to quit ReChess?",
         )
 
         if answer == answer.Yes:
-            self._engine.quit()
+            self.quit_engine()
             event.accept()
         else:
             event.ignore()

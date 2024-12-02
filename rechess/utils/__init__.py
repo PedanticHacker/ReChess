@@ -1,11 +1,11 @@
 from .helper_functions import (
+    app_object,
     create_action,
     create_button,
     delete_quarantine_attribute,
     engine_configuration,
     engine_file_filter,
     find_opening,
-    initialize_app,
     make_executable,
     path_to_stockfish,
     platform_name,
@@ -18,13 +18,13 @@ from .helper_functions import (
 
 
 __all__: list[str] = [
+    "app_object",
     "create_action",
     "create_button",
     "delete_quarantine_attribute",
     "engine_configuration",
     "engine_file_filter",
     "find_opening",
-    "initialize_app",
     "make_executable",
     "path_to_stockfish",
     "platform_name",
