@@ -583,9 +583,10 @@ class MainWindow(QMainWindow):
             self.flip()
             self.invoke_engine()
 
-    def quit_engine(self) -> None:
-        """Terminate engine's process."""
+    def destruct(self) -> None:
+        """Terminate engine's process and destroy main window."""
         self._engine.quit()
+        self.destroy()
 
     def closeEvent(self, event: QCloseEvent) -> None:
         """Ask whether to quit ReChess by closing its main window."""
@@ -596,7 +597,7 @@ class MainWindow(QMainWindow):
         )
 
         if answer == answer.Yes:
-            self.quit_engine()
+            self._engine.quit()
             event.accept()
         else:
             event.ignore()

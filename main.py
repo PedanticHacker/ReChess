@@ -4,7 +4,7 @@
 import sys
 
 from PySide6.QtCore import QLockFile
-from PySide6.QtWidgets import QApplication, QMessageBox, QWidget
+from PySide6.QtWidgets import QApplication, QMessageBox
 
 from rechess.ui import MainWindow
 from rechess.utils import app_object
@@ -22,7 +22,7 @@ def main() -> None:
             "Warning",
             "ReChess is already running.",
         )
-        main_window.close()
+        main_window.destruct()
         sys.exit()
 
     app.exec()
