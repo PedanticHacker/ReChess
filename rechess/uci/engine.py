@@ -61,7 +61,7 @@ class Engine(QObject):
                     break
 
                 if "pv" in info:
-                    pv: list[Move] = info["pv"][0:38]
+                    pv: list[Move] = info["pv"][0:36]
 
                     best_move: Move = pv[0]
                     variation: str = self._game.board.variation_san(pv)
