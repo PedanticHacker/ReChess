@@ -17,11 +17,7 @@ def main() -> None:
     lock_file: QLockFile = QLockFile("ReChess.lock")
 
     if not lock_file.tryLock(1):
-        QMessageBox.warning(
-            main_window,
-            "Warning",
-            "ReChess is already running.",
-        )
+        QMessageBox.warning(main_window, "Warning", "ReChess is already running.")
         main_window.destruct()
         sys.exit()
 
