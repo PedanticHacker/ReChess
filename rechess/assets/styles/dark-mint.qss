@@ -34,7 +34,7 @@ QLabel#engineAnalysis {
   border: 1px solid #386b6b;
   border-radius: 4px;
   min-height: 70px;
-  qproperty-alignment: "AlignTop";
+  qproperty-alignment: AlignTop;
   qproperty-wordWrap: true;
 }
 
@@ -42,7 +42,7 @@ QLabel#engineName, QLabel#gameNotifications, QLabel#humanName {
   background-color: #223a3a;
   border: 1px solid #386b6b;
   border-radius: 4px;
-  qproperty-alignment: "AlignCenter";
+  qproperty-alignment: AlignCenter;
   qproperty-wordWrap: true;
 }
 
@@ -55,7 +55,7 @@ QLineEdit {
   font-weight: bold;
   min-width: 600px;
   max-width: 600px;
-  qproperty-alignment: "AlignCenter";
+  qproperty-alignment: AlignCenter;
 }
 
 QLineEdit:focus {
