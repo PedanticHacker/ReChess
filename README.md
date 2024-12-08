@@ -159,9 +159,7 @@ select the *Install Now* option when installer launches.
 
     - [**Python 3.13 installer for Windows**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-amd64.exe)
 
-| :information_source: |
-| -------------------- |
-| For macOS version 10.13 or later, use [**this installer**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-macos11.pkg). |
+:point_right: For macOS version 10.13 or later, use [**this installer**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-macos11.pkg).
 
 2. In your command-line interface, install these Python packages:
 
@@ -176,13 +174,7 @@ to achieve the same:
 pip install -r requirements.txt
 ```
 
-| :information_source: |
-|----------------------|
-| On macOS, *pip* commands are written as `pip3`. |
-
-```bash
-pip3 install package
-```
+:point_right: On macOS, *pip* commands are written as `pip3`.
 
 ## How can I launch ReChess?
 
@@ -198,7 +190,7 @@ ReChess's top-level directory:
 python main.py
 ```
 
-:finger: On macOS, *python* commands are written as `python3`.
+:point_right: On macOS, *python* commands are written as `python3`.
 
 ## Who should get thanks for ReChess?
 
