@@ -179,7 +179,7 @@ pip install -r requirements.txt
 would therefore start like this:
 
 ```bash
-pip3 install
+pip3 install package
 ```
 
 ## How can I launch ReChess?
