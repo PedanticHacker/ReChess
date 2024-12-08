@@ -176,7 +176,7 @@ pip install -r requirements.txt
 ```
 
 ------------------------------------------------------------------------
-:information_source
+:information_source:
 
 On macOS, *pip* commands must be written as
 `pip3`, not `pip` as on Windows or Linux, so all the commands above
