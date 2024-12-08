@@ -175,7 +175,6 @@ to achieve the same:
 pip install -r requirements.txt
 ```
 
-------------------------------------------------------------------------
 :information_source:
 > On macOS, *pip* commands are written as `pip3`, not as `pip`, like on
 > Windows or Linux, so the commands above would therefore start like this:
@@ -183,7 +182,6 @@ pip install -r requirements.txt
 > ```bash
 > pip3 install package
 > ```
-------------------------------------------------------------------------
 
 ## How can I launch ReChess?
 
