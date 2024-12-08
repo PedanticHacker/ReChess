@@ -198,7 +198,8 @@ ReChess's top-level directory:
 python main.py
 ```
 
-| :information_source: |
+| :point_up: |
+| ---------- |
 | On macOS, *python* commands are written as `python3`. |
 
 ## Who should get thanks for ReChess?
