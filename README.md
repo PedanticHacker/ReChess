@@ -174,7 +174,7 @@ to achieve the same:
 pip install -r requirements.txt
 ```
 
-> :information_source: On macOS, *pip* commands must be written as
+:information_source: On macOS, *pip* commands must be written as
 `pip3`, not `pip` as on Windows or Linux, so all the commands above
 would therefore start like this:
 
