@@ -126,7 +126,7 @@ The following screenshots show how ReChess looks in "Dark mint" style.
 
 ## What's the default engine in ReChess?
 
-The latest official version of **Stockfish** is the default engine and
+The latest public version of **Stockfish** is the default engine. It
 works on Windows, Linux, and macOS platforms.
 
 ### What if I want to play against some other engine?
@@ -159,7 +159,7 @@ select the *Install Now* option when installer launches.
 
     - [**Python 3.13 installer for Windows**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-amd64.exe)
 
-> :information_source:
+> [!NOTE]
 > For macOS version 10.13 or later, use [**this installer**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-macos11.pkg).
 
 2. In your command-line interface, install these Python packages:
@@ -175,7 +175,10 @@ to achieve the same:
 pip install -r requirements.txt
 ```
 
-> :information_source:
+|    :memo:    | Take note of this |
+|--------------|:------------------|
+
+> [!NOTE]
 > On macOS, *pip* commands are written as `pip3`, not as `pip`, like on
 > Windows or Linux, so the commands above would therefore start like this:
 >
