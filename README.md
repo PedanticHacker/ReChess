@@ -10,9 +10,9 @@ Here's what you need to do:
 
 1. Install Python 3.13 from the official website:
 
-    - Windows: [Python 3.13 installer](https://www.python.org/ftp/python/3.13.0/python-3.13.0-amd64.exe)
-    - Linux: Upgrade to Python 3.13 via package manager
-    - macOS: [Python 3.13 installer](https://www.python.org/ftp/python/3.13.0/python-3.13.0-macos11.pkg)
+    - Windows: [Download Python 3.13 installer](https://www.python.org/ftp/python/3.13.0/python-3.13.0-amd64.exe)
+    - Linux: Execute `sudo apt-get install python3.13` or a command applicable for your distro
+    - macOS: [Download Python 3.13 installer](https://www.python.org/ftp/python/3.13.0/python-3.13.0-macos11.pkg)
 
 2. Install required packages:
 
@@ -108,19 +108,19 @@ No. Drag-and-drop functionality is not supported, just click-click.
 
 The following screenshots show how ReChess looks in "Dark mint" style.
 
-![ReChess on Windows 11](https://github.com/user-attachments/assets/bb1c558d-44aa-48da-9cb1-13999da84bf9 "ReChess on Windows 11")
+![ReChess on Windows 11]( "ReChess on Windows 11")
 
 *Changing the settings.*
 
-![ReChess on Windows 11](https://github.com/user-attachments/assets/6aff84c3-b4c1-44f9-a1e9-ac49f80e49b4 "ReChess on Windows 11")
+![ReChess on Windows 11]( "ReChess on Windows 11")
 
 *Selecting a move from the chess notation table.*
 
-![ReChess on Windows 11](https://github.com/user-attachments/assets/c61260a8-747f-44ad-893b-71cc509f427b "ReChess on Windows 11")
+![ReChess on Windows 11]( "ReChess on Windows 11")
 
 *Analyzing a position with the default Stockfish 17 chess engine.*
 
-![ReChess on Windows 11](https://github.com/user-attachments/assets/d92bd7e4-1ffa-4d34-912a-2bbb4d35dc03 "ReChess on Windows 11")
+![ReChess on Windows 11]( "ReChess on Windows 11")
 
 *Promoting a white pawn to a queen, a rook, a bishop, or a knight.*
 
