@@ -10,9 +10,13 @@ Here's what you need to do:
 
 1. Install Python 3.13 from the official website:
 
-    - Windows: [Download Python 3.13 installer](https://www.python.org/ftp/python/3.13.0/python-3.13.0-amd64.exe)
-    - Linux: Execute `sudo apt-get install python3.13` or a command applicable for your distro
-    - macOS: [Download Python 3.13 installer](https://www.python.org/ftp/python/3.13.0/python-3.13.0-macos11.pkg)
+    - For Windows:
+        - [Download Python 3.13 installer](https://www.python.org/ftp/python/3.13.1/python-3.13.1-amd64.exe)
+    - For Linux:
+        - Execute `sudo apt-get install python3.13` in the terminal or a
+        command applicable for the package manager of your distro
+    - For macOS:
+        - [Download Python 3.13 installer](https://www.python.org/ftp/python/3.13.1/python-3.13.1-macos11.pkg)
 
 2. Install required packages:
 
@@ -147,34 +151,6 @@ Universal Chess Interface (UCI), then you're in luck.
 
 Yes. You can analyze a position with the default Stockfish engine or a
 UCI-compliant engine you load yourself.
-
-## Are there any requirements I must meet to launch ReChess?
-
-Yes. You must have some things installed. If not installed already,
-install them in this order:
-
-1. For 64-bit Windows 10 or 11, install Python by clicking the link to
-its installer below. You need the *pip* package manager, so make sure to
-select the *Install Now* option when installer launches.
-
-    - [**Python 3.13 installer for Windows**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-amd64.exe)
-
-:point_right: For macOS version 10.13 or later, use [**this installer**](https://www.python.org/ftp/python/3.13.0/python-3.13.0-macos11.pkg).
-
-2. In your command-line interface, install these Python packages:
-
-    - **psutil**: `pip install psutil`
-    - **PySide6**: `pip install PySide6`
-    - **python-chess**: `pip install chess`
-
-You can also execute this command within ReChess's top-level directory
-to achieve the same:
-
-```bash
-pip install -r requirements.txt
-```
-
-:point_right: On macOS, *pip* commands are written as `pip3`.
 
 ## How can I launch ReChess?
 
