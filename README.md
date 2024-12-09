@@ -8,23 +8,19 @@ This is ReChess, an app for playing chess against an engine.
 
 Here's what you need to do:
 
-1. Install Python 3.13 from the official website:
+1. Make sure you have Python 3.13 installed. If not, read below:
 
-    - For Windows:
-        - [Download Python 3.13 installer](https://www.python.org/ftp/python/3.13.1/python-3.13.1-amd64.exe)
-    - For Linux:
-        - Execute `sudo apt-get install python3.13` in the terminal or a
-        command applicable for the package manager of your distro
-    - For macOS:
-        - [Download Python 3.13 installer](https://www.python.org/ftp/python/3.13.1/python-3.13.1-macos11.pkg)
+    - For Windows, [click here to download Python 3.13 installer](https://www.python.org/ftp/python/3.13.1/python-3.13.1-amd64.exe)
+    - For Linux, execute `sudo apt-get install python3.13` in the terminal or execute a command applicable for the package manager of your distro
+    - For macOS, [click here to download Python 3.13 installer](https://www.python.org/ftp/python/3.13.1/python-3.13.1-macos11.pkg)
 
-2. Install required packages:
+2. Install required packages by executing this command in the terminal from within ReChess's top-level directory:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Launch ReChess:
+3. Launch ReChess by executing this command in the terminal from within ReChess's top-level directory:
 
 ```bash
 python main.py
