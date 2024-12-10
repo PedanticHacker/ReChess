@@ -23,7 +23,7 @@ Here's what you need to do:
 pip install -r requirements.txt
 ```
 
-:point_right: On macOS, *pip* commands are written as `pip3`.
+:point_right: On macOS, the `pip` command is written as `pip3`.
 
 3. Launch ReChess by executing this command in the terminal from within
    ReChess's top-level directory:
@@ -32,7 +32,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-:point_right: On macOS, *python* commands are written as `python3`.
+:point_right: On macOS, the `python` command is written as `python3`.
 
 4. Start playing by doing this:
 
@@ -56,8 +56,8 @@ Windows, Linux, and macOS.
 ### What about other Python versions?
 
 ReChess should work using a Python version older than 3.13, but surely
-won't work using a 2.x version. Feel free to modify the source code to
-adapt it to your specific Python version, if required.
+won't work using a 2.x version. If required, modify the source code to
+adapt it to your specific Python version.
 
 ## Are there any dependencies?
 
@@ -70,7 +70,7 @@ Yes. ReChess depends upon:
 ### Is there any 3rd-party software integrated?
 
 Yes. ReChess integrates **Stockfish**, a powerful engine for playing and
-analyzing a game.
+analyzing a chess game.
 
 ## What features does ReChess provide?
 
@@ -91,7 +91,7 @@ There are also many functionalities you can utilize:
 - select from one of the dark or light styles
 - flip the board if you want to play from the top
 - play against the latest version of the Stockfish engine
-- navigate through moves of the game by scrolling the mouse wheel
+- navigate through game moves by scrolling the mouse wheel
 - paste a FEN from the clipboard by double-clicking the FEN editor
 
 ## Which chess variants are supported?
@@ -134,8 +134,8 @@ The following screenshots show how ReChess looks in **Dark mint** style.
 
 ## What's the default engine in ReChess?
 
-The latest public version of **Stockfish** is the default engine. It
-works on Windows, Linux, and macOS platforms.
+The latest version of **Stockfish** is the default engine. It works on
+Windows, Linux, and macOS platforms.
 
 ### What if I want to play against some other engine?
 
@@ -144,12 +144,11 @@ has to be a UCI-compliant one.
 
 ### Why does it have to be a UCI-compliant engine?
 
-An engine, compliant only with the Chess Engine Communication Protocol
-(CECP) and designed for either the WinBoard GUI (Windows platform) or
-the XBoard GUI (UNIX or UNIX-based platform like Linux), can't be loaded
-and hence can't be played against in ReChess because it doesn't support
-this type of protocol. However, if your engine is also compliant with
-Universal Chess Interface (UCI), then you're in luck.
+An engine compliant only with Chess Engine Communication Protocol (CECP)
+and designed for either the WinBoard GUI (on the Windows platform) or
+the XBoard GUI (on a Linux-based platform) can't be loaded in ReChess
+because it doesn't support this type of protocol. If your engine is also
+compliant with Universal Chess Interface (UCI), then you're in luck.
 
 ### Can I analyze a position?
 
@@ -193,8 +192,8 @@ ReChess uses the **MIT License**.
 
 ### Where can I see the license?
 
-See the `LICENSE.txt` file in ReChess's top-level directory about the
-permissions, limitations, and conditions of the license.
+See the `LICENSE.txt` file in the top-level directory of ReChess about
+the permissions, limitations, and conditions of the license.
 
 ### Can I develop an app based on ReChess?
 
