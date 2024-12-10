@@ -11,22 +11,30 @@ Here's what you need to do:
 1. Make sure you have Python 3.13 installed. If not, read below:
 
     - For Windows, [click here to download Python 3.13 installer](https://www.python.org/ftp/python/3.13.1/python-3.13.1-amd64.exe)
-    - For Linux, execute `sudo apt-get install python3.13` in the terminal or execute a command applicable for the package manager of your distro
+    - For Linux, execute `sudo apt-get install python3.13` in the
+      terminal or execute a command applicable for the package manager
+      of your distro
     - For macOS, [click here to download Python 3.13 installer](https://www.python.org/ftp/python/3.13.1/python-3.13.1-macos11.pkg)
 
-2. Install required packages by executing this command in the terminal from within ReChess's top-level directory:
+2. Install required packages by executing this command in the terminal
+   from within ReChess's top-level directory:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Launch ReChess by executing this command in the terminal from within ReChess's top-level directory:
+:point_right: On macOS, *pip* commands are written as `pip3`.
+
+3. Launch ReChess by executing this command in the terminal from within
+   ReChess's top-level directory:
 
 ```bash
 python main.py
 ```
 
-4. Start playing by:
+:point_right: On macOS, *python* commands are written as `python3`.
+
+4. Start playing by doing this:
 
     - Click a piece to see its legal moves.
     - Click a legal square to make your move.
@@ -55,9 +63,9 @@ adapt it to your specific Python version, if required.
 
 Yes. ReChess depends upon:
 
+- **python-chess**: A library for developing chess apps
 - **psutil**: A library for getting operating system metrics
 - **PySide6**: A framework for developing cross-platform GUI apps
-- **python-chess**: A library for developing chess apps
 
 ### Is there any 3rd-party software integrated?
 
@@ -69,22 +77,22 @@ analyzing a game.
 You get all the basic features for playing chess:
 
 - board
-- chess clocks
-- FEN viewer and editor
-- table view for showing standard algebraic notation (SAN)
+- clocks
+- FEN editor
+- table view for showing Standard Algebraic Notation (SAN)
 
 ### Is that it?
 
 There are also many functionalities you can utilize:
 
-- navigate through moves of the game by scrolling the mouse wheel
-- play against the latest version of the Stockfish engine
-- analyze a position
-- load an engine
-- flip the board
+- analyze a position on the board
 - force the engine to make a move
-- paste a FEN from the clipboard by double-clicking the FEN editor
+- load a UCI-compliant engine of your choice
 - select from one of the dark or light styles
+- flip the board if you want to play from the top
+- play against the latest version of the Stockfish engine
+- navigate through moves of the game by scrolling the mouse wheel
+- paste a FEN from the clipboard by double-clicking the FEN editor
 
 ## Which chess variants are supported?
 
@@ -106,7 +114,7 @@ No. Drag-and-drop functionality is not supported, just click-click.
 
 ## How does ReChess look?
 
-The following screenshots show how ReChess looks in "Dark mint" style.
+The following screenshots show how ReChess looks in **Dark mint** style.
 
 ![ReChess on Windows 11]( "ReChess on Windows 11")
 
@@ -136,7 +144,7 @@ has to be a UCI-compliant one.
 
 ### Why does it have to be a UCI-compliant engine?
 
-Engines, compliant only with the Chess Engine Communication Protocol
+An engine, compliant only with the Chess Engine Communication Protocol
 (CECP) and designed for either the WinBoard GUI (Windows platform) or
 the XBoard GUI (UNIX or UNIX-based platform like Linux), can't be loaded
 and hence can't be played against in ReChess because it doesn't support
@@ -148,49 +156,33 @@ Universal Chess Interface (UCI), then you're in luck.
 Yes. You can analyze a position with the default Stockfish engine or a
 UCI-compliant engine you load yourself.
 
-## How can I launch ReChess?
-
-After installing ReChess's requirements, launch your favorite IDE (e.g.,
-PyCharm, VSCode, Wing, Spyder, etc.) or your favorite source-code editor
-(e.g., Sublime Text, Notepad++, UltraEdit, Atom, etc.), then run the
-`main.py` file found in ReChess's top-level directory.
-
-You can also execute this command in your command-line interface within
-ReChess's top-level directory:
-
-```bash
-python main.py
-```
-
-:point_right: On macOS, *python* commands are written as `python3`.
-
 ## Who should get thanks for ReChess?
 
 1. Thanks to all developers for their dedicated work on the Python
-programming language!
+   programming language!
 
     - [Source](https://github.com/python/cpython)
     - [Downloads](https://www.python.org/downloads)
 
 2. Thanks to developer Giampaolo Rodola for his dedicated work on the
-psutil library!
+   psutil library!
 
     - [Source](https://github.com/giampaolo/psutil)
     - [PyPI](https://pypi.org/project/psutil)
 
 3. Thanks to all developers for their dedicated work on the PySide6 GUI
-framework!
+   framework!
 
     - [PyPI](https://pypi.org/project/PySide6)
 
 4. Thanks to developer Niklas Fiekas for his dedicated work on the
-python-chess library!
+   python-chess library!
 
     - [Source](https://github.com/niklasf/python-chess)
     - [PyPI](https://pypi.org/project/chess)
 
 5. Last but not least, thanks to all developers for their dedicated work
-on the Stockfish engine!
+   on the Stockfish engine!
 
     - [Source](https://github.com/official-stockfish/Stockfish)
     - [Downloads](https://stockfishchess.org/download)
