@@ -117,19 +117,15 @@ No. Drag-and-drop functionality is not supported, just click-click.
 The following screenshots show how ReChess looks in **Dark mint** style.
 
 ![ReChess on Windows 11](https://github.com/user-attachments/assets/9068be9e-5072-4110-acce-b41aca94f410 "ReChess on Windows 11")
-
 *Changing the settings.*
 
 ![ReChess on Windows 11](https://github.com/user-attachments/assets/5f0ee0cd-3ece-42b8-86dd-54e293b8449b "ReChess on Windows 11")
-
 *Selecting a move from the chess notation table.*
 
 ![ReChess on Windows 11](https://github.com/user-attachments/assets/0a66f227-d200-4e5a-96ab-40065fd4b9b7 "ReChess on Windows 11")
-
 *Analyzing a position with the default Stockfish 17 chess engine.*
 
 ![ReChess on Windows 11](https://github.com/user-attachments/assets/d6490aee-9936-4c92-810b-72c39ccff316 "ReChess on Windows 11")
-
 *Promoting a white pawn to a queen, a rook, a bishop, or a knight.*
 
 ## What's the default engine in ReChess?
