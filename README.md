@@ -119,14 +119,11 @@ The following screenshots show how ReChess looks in **Dark mint** style.
 ![ReChess on Windows 11](https://github.com/user-attachments/assets/9068be9e-5072-4110-acce-b41aca94f410 "ReChess on Windows 11")
 *Changing the settings.*
 
-
 ![ReChess on Windows 11](https://github.com/user-attachments/assets/5f0ee0cd-3ece-42b8-86dd-54e293b8449b "ReChess on Windows 11")
 *Selecting a move from the table view.*
 
-
 ![ReChess on Windows 11](https://github.com/user-attachments/assets/0a66f227-d200-4e5a-96ab-40065fd4b9b7 "ReChess on Windows 11")
 *Analyzing a position with the default Stockfish 17 chess engine.*
-
 
 ![ReChess on Windows 11](https://github.com/user-attachments/assets/d6490aee-9936-4c92-810b-72c39ccff316 "ReChess on Windows 11")
 *Promoting a white pawn to a queen, a rook, a bishop, or a knight.*
@@ -145,7 +142,7 @@ has to be a UCI-compliant one.
 
 An engine compliant only with Chess Engine Communication Protocol (CECP)
 and designed for either the WinBoard GUI (on the Windows platform) or
-the XBoard GUI (on a Linux-based platform) can't be loaded in ReChess
+the XBoard GUI (on a Linux-based platform) can't be loaded in ReChess,
 because it doesn't support this type of protocol. If your engine is also
 compliant with Universal Chess Interface (UCI), then you're in luck.
 
@@ -209,9 +206,11 @@ Copyright 2024 John Doe
 On the second line, provide the year in which you are releasing your app
 and provide your legal first and last name.
 
-If you intend to also integrate Stockfish in your app like ReChess does,
-you must do this:
+#### What if I also want to integrate Stockfish?
+
+If you intend to integrate Stockfish in your app:
 
 1. Include Stockfish's copyright notice
 2. Include the GPLv3 License to comply with Stockfish's license
-3. License your app under GPLv3 or any of its compatible licenses
+
+See the `THIRD-PARTY-NOTICES.txt` file to understand how to do this.
