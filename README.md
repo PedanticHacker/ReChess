@@ -10,11 +10,11 @@ Here's what you need to do:
 
 1. Make sure you have Python 3.13 installed. If not, read below:
 
-    - For Windows, [click here to download Python 3.13 installer](https://www.python.org/ftp/python/3.13.1/python-3.13.1-amd64.exe)
+    - For Windows, :point_right: [click here to download Python 3.13 installer](https://www.python.org/ftp/python/3.13.1/python-3.13.1-amd64.exe) :point_left:
     - For Linux, execute `sudo apt-get install python3.13` in the
       terminal or execute a command applicable for the package manager
       of your distro
-    - For macOS, [click here to download Python 3.13 installer](https://www.python.org/ftp/python/3.13.1/python-3.13.1-macos11.pkg)
+    - For macOS, :point_right: [click here to download Python 3.13 installer](https://www.python.org/ftp/python/3.13.1/python-3.13.1-macos11.pkg) :point_left:
 
 2. Install required packages by executing this command in the terminal
    from within ReChess's top-level directory:
@@ -74,7 +74,7 @@ analyzing a chess game.
 
 ## What features does ReChess provide?
 
-You get all the basic features for playing chess:
+You get all the basic building blocks for playing chess:
 
 - board
 - clocks
@@ -83,15 +83,15 @@ You get all the basic features for playing chess:
 
 ### Is that it?
 
-There are also many functionalities you can utilize:
+There are also many features you can use:
 
-- analyze a position on the board
+- flip the board
+- analyze a position
+- load an engine of your choice
 - force the engine to make a move
-- load a UCI-compliant engine of your choice
+- navigate through moves of the game
 - select from one of the dark or light styles
-- flip the board if you want to play from the top
 - play against the latest version of the Stockfish engine
-- navigate through game moves by scrolling the mouse wheel
 - paste a FEN from the clipboard by double-clicking the FEN editor
 
 ## Which chess variants are supported?
@@ -119,11 +119,14 @@ The following screenshots show how ReChess looks in **Dark mint** style.
 ![ReChess on Windows 11](https://github.com/user-attachments/assets/9068be9e-5072-4110-acce-b41aca94f410 "ReChess on Windows 11")
 *Changing the settings.*
 
+
 ![ReChess on Windows 11](https://github.com/user-attachments/assets/5f0ee0cd-3ece-42b8-86dd-54e293b8449b "ReChess on Windows 11")
-*Selecting a move from the chess notation table.*
+*Selecting a move from the table view.*
+
 
 ![ReChess on Windows 11](https://github.com/user-attachments/assets/0a66f227-d200-4e5a-96ab-40065fd4b9b7 "ReChess on Windows 11")
 *Analyzing a position with the default Stockfish 17 chess engine.*
+
 
 ![ReChess on Windows 11](https://github.com/user-attachments/assets/d6490aee-9936-4c92-810b-72c39ccff316 "ReChess on Windows 11")
 *Promoting a white pawn to a queen, a rook, a bishop, or a knight.*
