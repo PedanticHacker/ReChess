@@ -70,7 +70,7 @@ Yes. ReChess depends upon:
 ### Is there any 3rd-party software integrated?
 
 Yes. ReChess integrates **Stockfish**, a powerful engine for playing and
-analyzing a chess game.
+analyzing a game.
 
 ## What features does ReChess provide?
 
