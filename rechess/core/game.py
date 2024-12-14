@@ -136,6 +136,8 @@ class Game(QObject):
 
         if testing_board.is_check():
             filename: str = "check.wav"
+        elif move.promotion:
+            filename = "promotion.wav"
         elif self._board.is_capture(move):
             filename = "capture.wav"
         elif self._board.is_castling(move):
