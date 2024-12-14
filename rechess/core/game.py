@@ -131,12 +131,18 @@ class Game(QObject):
 
     def play_sound_effect(self, move: Move) -> None:
         """Play sound effect for `move`."""
-        move_types: dict[bool, str] = {
-            self._board.is_check(): "check.wav",
-            self._board.is_capture(move): "capture.wav",
-            self._board.is_castling(move): "castling.wav",
-        }
-        filename: str = move_types.get(True, "move.wav")
+        testing_board: Board = self._board.copy()
+        testing_board.push(move)
+
+        if testing_board.is_check():
+            filename: str = "check.wav"
+        elif self._board.is_capture(move):
+            filename = "capture.wav"
+        elif self._board.is_castling(move):
+            filename = "castling.wav"
+        else:
+            filename = "move.wav"
+
         file_url: QUrl = QUrl.fromLocalFile(f"rechess/assets/audio/{filename}")
         self._sound_effect.setSource(file_url)
         self._sound_effect.play()
