@@ -20,6 +20,13 @@ from rechess.ui.dialogs import PromotionDialog
 from rechess.utils import setting_value
 
 
+CAPTURE_FILE_URL: QUrl = QUrl("file:rechess/assets/audio/capture.wav")
+CASTLING_FILE_URL: QUrl = QUrl("file:rechess/assets/audio/castling.wav")
+CHECK_FILE_URL: QUrl = QUrl("file:rechess/assets/audio/check.wav")
+MOVE_FILE_URL: QUrl = QUrl("file:rechess/assets/audio/move.wav")
+PROMOTION_FILE_URL: QUrl = QUrl("file:rechess/assets/audio/promotion.wav")
+
+
 class Game(QObject):
     """Chess game state, moves, and UI interaction management."""
 
@@ -33,7 +40,21 @@ class Game(QObject):
         self._arrows: list[Arrow] = []
         self._moves: list[str] = []
         self._positions: list[Board] = []
-        self._sound_effect: QSoundEffect = QSoundEffect()
+
+        self._capture_sound_effect: QSoundEffect = QSoundEffect()
+        self._capture_sound_effect.setSource(CAPTURE_FILE_URL)
+
+        self._castling_sound_effect: QSoundEffect = QSoundEffect()
+        self._castling_sound_effect.setSource(CASTLING_FILE_URL)
+
+        self._check_sound_effect: QSoundEffect = QSoundEffect()
+        self._check_sound_effect.setSource(CHECK_FILE_URL)
+
+        self._move_sound_effect: QSoundEffect = QSoundEffect()
+        self._move_sound_effect.setSource(MOVE_FILE_URL)
+
+        self._promotion_sound_effect: QSoundEffect = QSoundEffect()
+        self._promotion_sound_effect.setSource(PROMOTION_FILE_URL)
 
         self.prepare_new_game()
 
@@ -131,23 +152,16 @@ class Game(QObject):
 
     def play_sound_effect(self, move: Move) -> None:
         """Play sound effect for `move`."""
-        testing_board: Board = self._board.copy()
-        testing_board.push(move)
-
-        if testing_board.is_check():
-            filename: str = "check.wav"
-        elif move.promotion:
-            filename = "promotion.wav"
-        elif self._board.is_capture(move):
-            filename = "capture.wav"
-        elif self._board.is_castling(move):
-            filename = "castling.wav"
+        if self.is_check(move):
+            self._check_sound_effect.play()
+        elif self.is_promotion(move):
+            self._promotion_sound_effect.play()
+        elif self.is_capture(move):
+            self._capture_sound_effect.play()
+        elif self.is_castling(move):
+            self._castling_sound_effect.play()
         else:
-            filename = "move.wav"
-
-        file_url: QUrl = QUrl.fromLocalFile(f"rechess/assets/audio/{filename}")
-        self._sound_effect.setSource(file_url)
-        self._sound_effect.play()
+            self._move_sound_effect.play()
 
     def set_root_position(self) -> None:
         """Reset pieces on board to initial position."""
@@ -210,6 +224,20 @@ class Game(QObject):
             del self._moves[after_item_index]
             del self._positions[after_item_index]
 
+    def is_capture(self, move: Move) -> bool:
+        """Return True if `move` is capture."""
+        return self._board.is_capture(move)
+
+    def is_castling(self, move: Move) -> bool:
+        """Return True if `move` is castling."""
+        return self._board.is_castling(move)
+
+    def is_check(self, move: Move) -> bool:
+        """Return True if `move` is check."""
+        testing_board: Board = self._board.copy()
+        testing_board.push(move)
+        return testing_board.is_check()
+
     def is_engine_on_turn(self) -> bool:
         """Return True if engine is on turn."""
         return self._board.turn == setting_value("engine", "is_white")
@@ -225,6 +253,10 @@ class Game(QObject):
     def is_over(self) -> bool:
         """Return True if game is over."""
         return self._board.is_game_over(claim_draw=True)
+
+    def is_promotion(self, move: Move) -> bool:
+        """Return True if `move` is promotion."""
+        return bool(move.promotion)
 
     def is_valid(self) -> bool:
         """Return True if board setup is valid."""
