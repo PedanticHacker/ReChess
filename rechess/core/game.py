@@ -154,11 +154,11 @@ class Game(QObject):
         """Play sound effect for `move`."""
         if self.is_check(move):
             self._check_sound_effect.play()
-        elif self.is_promotion(move):
+        elif move.promotion:
             self._promotion_sound_effect.play()
-        elif self.is_capture(move):
+        elif self._board.is_capture(move):
             self._capture_sound_effect.play()
-        elif self.is_castling(move):
+        elif self._board.is_castling(move):
             self._castling_sound_effect.play()
         else:
             self._move_sound_effect.play()
@@ -224,19 +224,11 @@ class Game(QObject):
             del self._moves[after_item_index]
             del self._positions[after_item_index]
 
-    def is_capture(self, move: Move) -> bool:
-        """Return True if `move` is capture."""
-        return self._board.is_capture(move)
-
-    def is_castling(self, move: Move) -> bool:
-        """Return True if `move` is castling."""
-        return self._board.is_castling(move)
-
     def is_check(self, move: Move) -> bool:
         """Return True if `move` is check."""
-        testing_board: Board = self._board.copy()
-        testing_board.push(move)
-        return testing_board.is_check()
+        simulated_board: Board = Board(self.fen)
+        simulated_board.push(move)
+        return simulated_board.is_check()
 
     def is_engine_on_turn(self) -> bool:
         """Return True if engine is on turn."""
@@ -253,10 +245,6 @@ class Game(QObject):
     def is_over(self) -> bool:
         """Return True if game is over."""
         return self._board.is_game_over(claim_draw=True)
-
-    def is_promotion(self, move: Move) -> bool:
-        """Return True if `move` is promotion."""
-        return bool(move.promotion)
 
     def is_valid(self) -> bool:
         """Return True if board setup is valid."""
