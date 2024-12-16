@@ -23,6 +23,7 @@ from rechess.utils import setting_value
 CAPTURE_FILE_URL: QUrl = QUrl("file:rechess/assets/audio/capture.wav")
 CASTLING_FILE_URL: QUrl = QUrl("file:rechess/assets/audio/castling.wav")
 CHECK_FILE_URL: QUrl = QUrl("file:rechess/assets/audio/check.wav")
+GAME_OVER_FILE_URL: QUrl = QUrl("file:rechess/assets/audio/game-over.wav")
 MOVE_FILE_URL: QUrl = QUrl("file:rechess/assets/audio/move.wav")
 PROMOTION_FILE_URL: QUrl = QUrl("file:rechess/assets/audio/promotion.wav")
 
@@ -138,7 +139,9 @@ class Game(QObject):
 
     def play_sound_effect(self, move: Move) -> None:
         """Play sound effect for `move`."""
-        if self.is_check(move):
+        if self.is_over():
+            self._sound_effect.setSource(GAME_OVER_FILE_URL)
+        elif self.is_check(move):
             self._sound_effect.setSource(CHECK_FILE_URL)
         elif move.promotion:
             self._sound_effect.setSource(PROMOTION_FILE_URL)
