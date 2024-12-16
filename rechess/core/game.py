@@ -226,9 +226,9 @@ class Game(QObject):
 
     def is_check(self, move: Move) -> bool:
         """Return True if `move` is check."""
-        simulated_board: Board = Board(self.fen)
-        simulated_board.push(move)
-        return simulated_board.is_check()
+        board: Board = Board(self.fen)
+        board.push(move)
+        return board.is_check()
 
     def is_engine_on_turn(self) -> bool:
         """Return True if engine is on turn."""
