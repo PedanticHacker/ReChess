@@ -8,7 +8,7 @@ from rechess.core import Game
 from rechess.utils import setting_value
 
 
-svg.XX = "<circle id='xx' r='5' cx='22' cy='22' stroke='#303030' fill='#e5e5e5'/>"
+svg.XX = "<circle id='xx' r='4.5' cx='22.5' cy='22.5' stroke='#303030' fill='#e5e5e5'/>"
 
 
 class Board(QSvgWidget):
