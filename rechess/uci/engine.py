@@ -40,7 +40,7 @@ class Engine(QObject):
         self._engine.configure(engine_configuration())
 
     def play_move(self) -> None:
-        """Make engine to play move."""
+        """Invoke engine to play move."""
         play_result: PlayResult = self._engine.play(
             board=self._game.board,
             limit=Limit(depth=30),
