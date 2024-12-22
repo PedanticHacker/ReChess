@@ -41,7 +41,24 @@ class Game(QObject):
         self._arrows: list[Arrow] = []
         self._moves: list[str] = []
         self._positions: list[Board] = []
-        self._sound_effect: QSoundEffect = QSoundEffect()
+
+        self._capture_sound_effect: QSoundEffect = QSoundEffect()
+        self._capture_sound_effect.setSource(CAPTURE_FILE_URL)
+
+        self._castling_sound_effect: QSoundEffect = QSoundEffect()
+        self._castling_sound_effect.setSource(CASTLING_FILE_URL)
+
+        self._check_sound_effect: QSoundEffect = QSoundEffect()
+        self._check_sound_effect.setSource(CHECK_FILE_URL)
+
+        self._game_over_sound_effect: QSoundEffect = QSoundEffect()
+        self._game_over_sound_effect.setSource(GAME_OVER_FILE_URL)
+
+        self._move_sound_effect: QSoundEffect = QSoundEffect()
+        self._move_sound_effect.setSource(MOVE_FILE_URL)
+
+        self._promotion_sound_effect: QSoundEffect = QSoundEffect()
+        self._promotion_sound_effect.setSource(PROMOTION_FILE_URL)
 
         self.prepare_new_game()
 
@@ -140,19 +157,17 @@ class Game(QObject):
     def play_sound_effect(self, move: Move) -> None:
         """Play sound effect for `move`."""
         if self.is_over_after(move):
-            self._sound_effect.setSource(GAME_OVER_FILE_URL)
+            self._game_over_sound_effect.play()
         elif self.is_check(move):
-            self._sound_effect.setSource(CHECK_FILE_URL)
+            self._check_sound_effect.play()
         elif move.promotion:
-            self._sound_effect.setSource(PROMOTION_FILE_URL)
+            self._promotion_sound_effect.play()
         elif self._board.is_capture(move):
-            self._sound_effect.setSource(CAPTURE_FILE_URL)
+            self._capture_sound_effect.play()
         elif self._board.is_castling(move):
-            self._sound_effect.setSource(CASTLING_FILE_URL)
+            self._castling_sound_effect.play()
         else:
-            self._sound_effect.setSource(MOVE_FILE_URL)
-
-        self._sound_effect.play()
+            self._move_sound_effect.play()
 
     def set_root_position(self) -> None:
         """Reset pieces on board to initial position."""
