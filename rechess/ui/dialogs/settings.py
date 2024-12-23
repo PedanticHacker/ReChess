@@ -25,6 +25,15 @@ class SettingsDialog(QDialog):
         super().__init__()
 
         self._button_box: QDialogButtonBox = QDialogButtonBox(Save | Cancel)
+        self._button_box.button(Save).setDisabled(True)
+
+        self._initial_values: dict[str, bool | float | str] = {
+            "clock_increment": setting_value("clock", "increment"),
+            "clock_time": setting_value("clock", "time"),
+            "human_name": setting_value("human", "name"),
+            "is_engine_ponder_on": setting_value("engine", "is_ponder_on"),
+            "is_engine_white": setting_value("engine", "is_white"),
+        }
 
         self.set_title()
         self.create_groups()
@@ -118,6 +127,31 @@ class SettingsDialog(QDialog):
         self._button_box.accepted.connect(self.accept)
         self._button_box.rejected.connect(self.reject)
 
+        self._clock_increment_option.currentIndexChanged.connect(self.on_changed)
+        self._clock_time_option.currentIndexChanged.connect(self.on_changed)
+
+        self._engine_black_option.toggled.connect(self.on_changed)
+        self._engine_white_option.toggled.connect(self.on_changed)
+        self._engine_ponder_option.toggled.connect(self.on_changed)
+
+        self._human_name_option.textChanged.connect(self.on_changed)
+
+    def _check_for_changes(self) -> bool:
+        """Check if any settings were changed."""
+        current_values: dict[str, bool | float | str] = {
+            "clock_increment": self._clock_increment_option.currentData(),
+            "clock_time": self._clock_time_option.currentData(),
+            "human_name": self._human_name_option.text().strip() or "Human",
+            "is_engine_ponder_on": self._engine_ponder_option.isChecked(),
+            "is_engine_white": self._engine_white_option.isChecked(),
+        }
+        return current_values != self._initial_values
+
+    @Slot()
+    def on_changed(self) -> None:
+        """Enable or disable Save button if settings were changed."""
+        self._button_box.button(Save).setEnabled(self._check_for_changes())
+
     @Slot()
     def on_accepted(self) -> None:
         """Save settings on pressing dialog's Save button."""
@@ -144,5 +178,5 @@ class SettingsDialog(QDialog):
         set_setting_value(
             section="human",
             key="name",
-            value=self._human_name_option.text().strip() or "Human Warrior",
+            value=self._human_name_option.text().strip() or "Human",
         )
