@@ -27,14 +27,6 @@ class SettingsDialog(QDialog):
         self._button_box: QDialogButtonBox = QDialogButtonBox(Save | Cancel)
         self._button_box.button(Save).setDisabled(True)
 
-        self._initial_values: dict[str, bool | float | str] = {
-            "clock_increment": setting_value("clock", "increment"),
-            "clock_time": setting_value("clock", "time"),
-            "human_name": setting_value("human", "name"),
-            "is_engine_ponder_on": setting_value("engine", "is_ponder_on"),
-            "is_engine_white": setting_value("engine", "is_white"),
-        }
-
         self.set_title()
         self.create_groups()
         self.create_options()
@@ -53,23 +45,17 @@ class SettingsDialog(QDialog):
 
     def create_options(self) -> None:
         """Create options that represent settings."""
-        is_engine_white: bool = setting_value("engine", "is_white")
-        is_engine_ponder_on: bool = setting_value("engine", "is_ponder_on")
-
-        clock_time: float = setting_value("clock", "time")
-        clock_increment: float = setting_value("clock", "increment")
-
         self._engine_black_option: QRadioButton = QRadioButton()
         self._engine_black_option.setText("Black")
-        self._engine_black_option.setChecked(not is_engine_white)
+        self._engine_black_option.setChecked(not setting_value("engine", "is_white"))
 
         self._engine_white_option: QRadioButton = QRadioButton()
         self._engine_white_option.setText("White")
-        self._engine_white_option.setChecked(is_engine_white)
+        self._engine_white_option.setChecked(setting_value("engine", "is_white"))
 
         self._engine_ponder_option: QCheckBox = QCheckBox()
         self._engine_ponder_option.setText("Ponder")
-        self._engine_ponder_option.setChecked(is_engine_ponder_on)
+        self._engine_ponder_option.setChecked(setting_value("engine", "is_ponder_on"))
 
         self._clock_time_option: QComboBox = QComboBox()
         self._clock_time_option.addItem("1 minute", 60.0)
@@ -81,7 +67,7 @@ class SettingsDialog(QDialog):
         self._clock_time_option.addItem("1 hour", 3600.0)
         self._clock_time_option.addItem("2 hours", 7200.0)
         self._clock_time_option.setCurrentIndex(
-            self._clock_time_option.findData(clock_time)
+            self._clock_time_option.findData(setting_value("clock", "time"))
         )
 
         self._clock_increment_option: QComboBox = QComboBox()
@@ -90,7 +76,7 @@ class SettingsDialog(QDialog):
         self._clock_increment_option.addItem("12 seconds", 12.0)
         self._clock_increment_option.addItem("30 seconds", 30.0)
         self._clock_increment_option.setCurrentIndex(
-            self._clock_increment_option.findData(clock_increment)
+            self._clock_increment_option.findData(setting_value("clock", "increment"))
         )
 
         self._human_name_option: QLineEdit = QLineEdit()
@@ -129,28 +115,33 @@ class SettingsDialog(QDialog):
 
         self._clock_increment_option.currentIndexChanged.connect(self.on_changed)
         self._clock_time_option.currentIndexChanged.connect(self.on_changed)
-
         self._engine_black_option.toggled.connect(self.on_changed)
-        self._engine_white_option.toggled.connect(self.on_changed)
         self._engine_ponder_option.toggled.connect(self.on_changed)
-
+        self._engine_white_option.toggled.connect(self.on_changed)
         self._human_name_option.textChanged.connect(self.on_changed)
 
-    def _check_for_changes(self) -> bool:
-        """Check if any settings were changed."""
-        current_values: dict[str, bool | float | str] = {
+    def is_changed(self) -> bool:
+        """Return True if any settings were changed."""
+        current_settings: dict[str, bool | float | str] = {
             "clock_increment": self._clock_increment_option.currentData(),
             "clock_time": self._clock_time_option.currentData(),
             "human_name": self._human_name_option.text().strip() or "Human",
             "is_engine_ponder_on": self._engine_ponder_option.isChecked(),
             "is_engine_white": self._engine_white_option.isChecked(),
         }
-        return current_values != self._initial_values
+        initial_settings: dict[str, bool | float | str] = {
+            "clock_increment": setting_value("clock", "increment"),
+            "clock_time": setting_value("clock", "time"),
+            "human_name": setting_value("human", "name"),
+            "is_engine_ponder_on": setting_value("engine", "is_ponder_on"),
+            "is_engine_white": setting_value("engine", "is_white"),
+        }
+        return current_settings != initial_settings
 
     @Slot()
     def on_changed(self) -> None:
         """Enable or disable Save button if settings were changed."""
-        self._button_box.button(Save).setEnabled(self._check_for_changes())
+        self._button_box.button(Save).setEnabled(self.is_changed())
 
     @Slot()
     def on_accepted(self) -> None:

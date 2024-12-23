@@ -412,6 +412,9 @@ class MainWindow(QMainWindow):
         """Show dialog to edit settings."""
         settings_dialog: SettingsDialog = SettingsDialog()
 
+        if self._game.is_in_progress():
+            settings_dialog.setDisabled(True)
+
         if settings_dialog.exec() == QDialog.DialogCode.Accepted:
             self.apply_saved_settings()
 

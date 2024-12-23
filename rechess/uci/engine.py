@@ -41,7 +41,7 @@ class Engine(QObject):
         """Invoke engine to play move."""
         play_result: PlayResult = self._engine.play(
             board=self._game.board,
-            limit=Limit(depth=40),
+            limit=Limit(depth=30),
             ponder=setting_value("engine", "is_ponder_on"),
         )
         self.move_played.emit(play_result.move)
