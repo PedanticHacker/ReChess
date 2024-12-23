@@ -417,10 +417,12 @@ class MainWindow(QMainWindow):
 
     def apply_saved_settings(self) -> None:
         """Act on settings being saved."""
+        self._black_clock.reset()
+        self._white_clock.reset()
+
         self._human_name_label.setText(setting_value("human", "name"))
 
         if self._game.is_engine_on_turn():
-            self.flip()
             self.invoke_engine()
 
     def apply_style(self, filename: str) -> None:

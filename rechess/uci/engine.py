@@ -1,7 +1,5 @@
-from contextlib import suppress
-
 from chess import Move
-from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
+from chess.engine import Limit, PlayResult, Score, SimpleEngine
 from PySide6.QtCore import QObject, Signal
 
 from rechess.core import Game
@@ -43,7 +41,7 @@ class Engine(QObject):
         """Invoke engine to play move."""
         play_result: PlayResult = self._engine.play(
             board=self._game.board,
-            limit=Limit(depth=30),
+            limit=Limit(depth=40),
             ponder=setting_value("engine", "is_ponder_on"),
         )
         self.move_played.emit(play_result.move)
@@ -54,14 +52,14 @@ class Engine(QObject):
 
         with self._engine.analysis(
             board=self._game.board,
-            limit=Limit(depth=40),
+            limit=Limit(depth=30),
         ) as analysis:
             for info in analysis:
                 if not self._analyzing:
                     break
 
                 if "pv" in info:
-                    pv: list[Move] = info["pv"][0:36]
+                    pv: list[Move] = info["pv"][0:26]
 
                     best_move: Move = pv[0]
                     variation: str = self._game.board.variation_san(pv)
@@ -76,13 +74,13 @@ class Engine(QObject):
         self._analyzing = False
 
     def quit(self) -> None:
-        """Terminate engine's process."""
-        with suppress(AttributeError):
+        """Terminate engine's process if it exists."""
+        if hasattr(self, "_engine"):
             self._engine.quit()
 
     @property
     def name(self) -> str:
-        """Return engine's name."""
-        with suppress(AttributeError):
+        """Return engine's name if its process exists."""
+        if hasattr(self, "_engine"):
             return self._engine.id["name"]
         return ""
