@@ -40,7 +40,7 @@ class SettingsDialog(QDialog):
     def create_groups(self) -> None:
         """Create groups for related settings to be put together."""
         self._engine_group: QGroupBox = QGroupBox("Engine")
-        self._human_group: QGroupBox = QGroupBox("Human")
+        self._human_name_group: QGroupBox = QGroupBox("Human Name")
         self._time_control_group: QGroupBox = QGroupBox("Time Control")
 
     def create_options(self) -> None:
@@ -87,7 +87,7 @@ class SettingsDialog(QDialog):
         """Set layout of dialog's widgets to be vertical."""
         human_layout: QVBoxLayout = QVBoxLayout()
         human_layout.addWidget(self._human_name_option)
-        self._human_group.setLayout(human_layout)
+        self._human_name_group.setLayout(human_layout)
 
         engine_layout: QVBoxLayout = QVBoxLayout()
         engine_layout.addWidget(self._engine_black_option)
@@ -101,7 +101,7 @@ class SettingsDialog(QDialog):
         self._time_control_group.setLayout(time_control_layout)
 
         vertical_layout: QVBoxLayout = QVBoxLayout()
-        vertical_layout.addWidget(self._human_group)
+        vertical_layout.addWidget(self._human_name_group)
         vertical_layout.addWidget(self._engine_group)
         vertical_layout.addWidget(self._time_control_group)
         vertical_layout.addWidget(self._button_box)
@@ -119,6 +119,11 @@ class SettingsDialog(QDialog):
         self._engine_ponder_option.toggled.connect(self.on_changed)
         self._engine_white_option.toggled.connect(self.on_changed)
         self._human_name_option.textChanged.connect(self.on_changed)
+
+    def disable_groups(self) -> None:
+        """Disable human name and time control groups."""
+        self._human_name_group.setDisabled(True)
+        self._time_control_group.setDisabled(True)
 
     def is_changed(self) -> bool:
         """Return True if any settings were changed."""

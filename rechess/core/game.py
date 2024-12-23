@@ -42,22 +42,22 @@ class Game(QObject):
         self._moves: list[str] = []
         self._positions: list[Board] = []
 
-        self._capture_sound_effect: QSoundEffect = QSoundEffect()
+        self._capture_sound_effect: QSoundEffect = QSoundEffect(self)
         self._capture_sound_effect.setSource(CAPTURE_FILE_URL)
 
-        self._castling_sound_effect: QSoundEffect = QSoundEffect()
+        self._castling_sound_effect: QSoundEffect = QSoundEffect(self)
         self._castling_sound_effect.setSource(CASTLING_FILE_URL)
 
-        self._check_sound_effect: QSoundEffect = QSoundEffect()
+        self._check_sound_effect: QSoundEffect = QSoundEffect(self)
         self._check_sound_effect.setSource(CHECK_FILE_URL)
 
-        self._game_over_sound_effect: QSoundEffect = QSoundEffect()
+        self._game_over_sound_effect: QSoundEffect = QSoundEffect(self)
         self._game_over_sound_effect.setSource(GAME_OVER_FILE_URL)
 
-        self._move_sound_effect: QSoundEffect = QSoundEffect()
+        self._move_sound_effect: QSoundEffect = QSoundEffect(self)
         self._move_sound_effect.setSource(MOVE_FILE_URL)
 
-        self._promotion_sound_effect: QSoundEffect = QSoundEffect()
+        self._promotion_sound_effect: QSoundEffect = QSoundEffect(self)
         self._promotion_sound_effect.setSource(PROMOTION_FILE_URL)
 
         self.prepare_new_game()

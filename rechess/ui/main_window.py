@@ -413,7 +413,7 @@ class MainWindow(QMainWindow):
         settings_dialog: SettingsDialog = SettingsDialog()
 
         if self._game.is_in_progress():
-            settings_dialog.setDisabled(True)
+            settings_dialog.disable_groups()
 
         if settings_dialog.exec() == QDialog.DialogCode.Accepted:
             self.apply_saved_settings()
@@ -422,7 +422,7 @@ class MainWindow(QMainWindow):
         """Act on settings being saved."""
         self._human_name_label.setText(setting_value("human", "name"))
 
-        if not self._game.is_in_progress():
+        if self._game.is_in_progress():
             self._black_clock.reset()
             self._white_clock.reset()
 
