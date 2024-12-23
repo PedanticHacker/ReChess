@@ -185,6 +185,11 @@ QStatusBar {
   color: #dde5dd;
 }
 
+QStatusBar QLabel {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
 QTableView {
   background-color: #2d382d;
   border: 1px solid #3d4f3d;
