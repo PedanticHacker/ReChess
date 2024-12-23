@@ -232,7 +232,7 @@ class Game(QObject):
 
     def is_check(self, move: Move) -> bool:
         """Return True if `move` is check."""
-        board: Board = Board(self.fen)
+        board: Board = self._board.copy()
         board.push(move)
         return board.is_check()
 
@@ -254,7 +254,7 @@ class Game(QObject):
 
     def is_over_after(self, move: Move) -> bool:
         """Return True if `move` makes game be over."""
-        board: Board = Board(self.fen)
+        board: Board = self._board.copy()
         board.push(move)
         return board.is_game_over(claim_draw=True)
 
