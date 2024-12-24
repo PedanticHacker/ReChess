@@ -33,7 +33,6 @@ QLabel#engineAnalysis {
   background-color: #a5b69c;
   border: 1px solid #506f46;
   border-radius: 4px;
-  min-height: 50px;
   qproperty-alignment: AlignTop;
   qproperty-wordWrap: true;
 }
