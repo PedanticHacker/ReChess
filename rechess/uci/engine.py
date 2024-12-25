@@ -82,5 +82,6 @@ class Engine(QObject):
     def name(self) -> str:
         """Return engine's name if its process exists."""
         if hasattr(self, "_engine"):
-            return self._engine.id["name"]
-        return ""
+            name: str = self._engine.id["name"]
+            return f"{name[0:24]}..." if len(name) > 24 else name
+        return "Human"

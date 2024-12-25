@@ -110,25 +110,15 @@ def setting_value(section: SettingSection, key: SettingKey) -> SettingValue:
 
 
 @overload
-def set_setting_value(
-    section: BoardSection, key: BoardKey, value: bool
-) -> None: ...
+def set_setting_value(section: BoardSection, key: BoardKey, value: bool) -> None: ...
 @overload
-def set_setting_value(
-    section: ClockSection, key: ClockKey, value: float
-) -> None: ...
+def set_setting_value(section: ClockSection, key: ClockKey, value: float) -> None: ...
 @overload
-def set_setting_value(
-    section: EngineSection, key: EngineKey, value: bool
-) -> None: ...
+def set_setting_value(section: EngineSection, key: EngineKey, value: bool) -> None: ...
 @overload
-def set_setting_value(
-    section: HumanSection, key: HumanKey, value: str
-) -> None: ...
+def set_setting_value(section: HumanSection, key: HumanKey, value: str) -> None: ...
 @overload
-def set_setting_value(
-    section: UiSection, key: StyleKey, value: str
-) -> None: ...
+def set_setting_value(section: UiSection, key: StyleKey, value: str) -> None: ...
 def set_setting_value(
     section: SettingSection,
     key: SettingKey,
@@ -171,7 +161,7 @@ def style_name(filename: str) -> str:
 
 
 def app_object() -> QApplication:
-    """Initialize QApplication with basic settings."""
+    """Initialize QApplication with basic settings and return it."""
     app: QApplication = QApplication()
     app.setApplicationDisplayName("ReChess")
     app.setApplicationName("ReChess")

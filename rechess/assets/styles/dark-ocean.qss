@@ -29,12 +29,11 @@ QLabel {
   font-weight: bold;
 }
 
-QLabel#engineAnalysis, QLabel#engineName, QLabel#gameNotifications, QLabel#humanName {
+QLabel#engineAnalysis, #engineName, #gameNotifications, #humanName {
   background-color: #344d69;
   border: 1px solid #385f80;
   border-radius: 4px;
   qproperty-alignment: AlignCenter;
-  qproperty-wordWrap: true;
 }
 
 QLineEdit {

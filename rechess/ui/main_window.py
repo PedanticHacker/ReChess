@@ -506,6 +506,7 @@ class MainWindow(QMainWindow):
     def start_analysis(self) -> None:
         """Start analyzing current position."""
         self.invoke_analysis()
+        self._evaluation_bar.show()
 
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
@@ -541,8 +542,9 @@ class MainWindow(QMainWindow):
         self._table_view.select_last_item()
 
         self._game_notifications.clear()
-        self._evaluation_bar.reset_state()
         self._engine_analysis_label.clear()
+
+        self._evaluation_bar.reset_state()
 
         self.show_fen()
         self.show_opening()
