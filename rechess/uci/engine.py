@@ -50,10 +50,7 @@ class Engine(QObject):
         """Start analyzing current position."""
         self._analyzing = True
 
-        with self._engine.analysis(
-            board=self._game.board,
-            limit=Limit(depth=30),
-        ) as analysis:
+        with self._engine.analysis(self._game.board) as analysis:
             for info in analysis:
                 if not self._analyzing:
                     break
