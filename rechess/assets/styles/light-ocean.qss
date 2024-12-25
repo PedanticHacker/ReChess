@@ -29,15 +29,7 @@ QLabel {
   font-weight: bold;
 }
 
-QLabel#engineAnalysis {
-  background-color: #97b6d3;
-  border: 1px solid #4d85bd;
-  border-radius: 4px;
-  qproperty-alignment: AlignTop;
-  qproperty-wordWrap: true;
-}
-
-QLabel#engineName, QLabel#gameNotifications, QLabel#humanName {
+QLabel#engineAnalysis, QLabel#engineName, QLabel#gameNotifications, QLabel#humanName {
   background-color: #97b6d3;
   border: 1px solid #4d85bd;
   border-radius: 4px;
