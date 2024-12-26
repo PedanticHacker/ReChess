@@ -61,14 +61,18 @@ class MainWindow(QMainWindow):
         self._evaluation_bar: EvaluationBar = EvaluationBar()
 
         self._engine_analysis_label: QLabel = QLabel()
+        self._size_policy: QSizePolicy = self._engine_analysis_label.sizePolicy()
+        self._size_policy.setRetainSizeWhenHidden(True)
+        self._engine_analysis_label.setSizePolicy(self._size_policy)
         self._engine_analysis_label.setObjectName("engineAnalysis")
+        self._engine_analysis_label.hide()
 
         self._engine_name_label: QLabel = QLabel()
         self._engine_name_label.setObjectName("engineName")
         self._engine_name_label.setText(self._engine.name)
 
-        self._game_notifications: QLabel = QLabel()
-        self._game_notifications.setObjectName("gameNotifications")
+        self._game_notifications_label: QLabel = QLabel()
+        self._game_notifications_label.setObjectName("gameNotifications")
 
         self._human_name_label: QLabel = QLabel()
         self._human_name_label.setObjectName("humanName")
@@ -93,8 +97,8 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def set_size(self) -> None:
-        """Set minimum size to 1200 by 900 pixels, show maximized."""
-        self.setMinimumSize(1200, 900)
+        """Set minimum size to 1400 by 800 pixels, show maximized."""
+        self.setMinimumSize(1400, 800)
         self.showMaximized()
 
     def set_layout(self) -> None:
@@ -102,22 +106,22 @@ class MainWindow(QMainWindow):
         self._grid_layout: QGridLayout = QGridLayout()
 
         self._grid_layout.addWidget(self._black_clock, 1, 1)
+        self._grid_layout.addWidget(self._board, 1, 2, 4, 1)
+        self._grid_layout.addWidget(self._table_view, 1, 3, 4, 1)
+        self._grid_layout.addWidget(self._engine_analysis_label, 1, 4, 4, 1)
+        self._grid_layout.addWidget(self._evaluation_bar, 1, 5, 4, 1)
         self._grid_layout.addWidget(self._engine_name_label, 2, 1)
         self._grid_layout.addWidget(self._white_clock, 4, 1)
         self._grid_layout.addWidget(self._human_name_label, 5, 1)
-        self._grid_layout.addWidget(self._board, 1, 2, 4, 1)
-        self._grid_layout.addWidget(self._evaluation_bar, 1, 3, 4, 1)
-        self._grid_layout.addWidget(self._table_view, 1, 4, 4, 1)
-        self._grid_layout.addWidget(self._game_notifications, 5, 4)
         self._grid_layout.addWidget(self._fen_editor, 5, 2)
-        self._grid_layout.addWidget(self._engine_analysis_label, 6, 2)
+        self._grid_layout.addWidget(self._game_notifications_label, 5, 3)
 
         self._grid_layout.setRowStretch(0, 1)
         self._grid_layout.setRowStretch(3, 1)
-        self._grid_layout.setRowStretch(5, 1)
-        self._grid_layout.setRowStretch(7, 1)
+        self._grid_layout.setRowStretch(6, 1)
         self._grid_layout.setColumnStretch(0, 1)
-        self._grid_layout.setColumnStretch(5, 1)
+        self._grid_layout.setColumnStretch(3, 1)
+        self._grid_layout.setColumnStretch(6, 1)
 
         self._central_widget: QWidget = QWidget()
         self._central_widget.setLayout(self._grid_layout)
@@ -385,12 +389,12 @@ class MainWindow(QMainWindow):
     def invoke_engine(self) -> None:
         """Invoke engine to play move."""
         QThreadPool.globalInstance().start(self._engine.play_move)
-        self._game_notifications.setText("Thinking...")
+        self._game_notifications_label.setText("Thinking...")
 
     def invoke_analysis(self) -> None:
         """Invoke engine to start analysis."""
         QThreadPool.globalInstance().start(self._engine.start_analysis)
-        self._game_notifications.setText("Analyzing...")
+        self._game_notifications_label.setText("Analyzing...")
 
     def quit(self) -> None:
         """Trigger main window's close event to quit."""
@@ -413,6 +417,7 @@ class MainWindow(QMainWindow):
 
     def play_move_now(self) -> None:
         """Force engine to play move on current turn."""
+        self.stop_analysis()
         self.invoke_engine()
 
     def show_settings_dialog(self) -> None:
@@ -460,9 +465,6 @@ class MainWindow(QMainWindow):
         self.stop_analysis()
 
         self._game.clear_arrows()
-        self._evaluation_bar.reset_state()
-        self._engine_analysis_label.clear()
-
         self._engine.load_from_file_at(path_to_file)
         self._engine_name_label.setText(self._engine.name)
 
@@ -514,6 +516,7 @@ class MainWindow(QMainWindow):
         """Start analyzing current position."""
         self.invoke_analysis()
         self._evaluation_bar.show()
+        self._engine_analysis_label.show()
 
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
@@ -524,7 +527,9 @@ class MainWindow(QMainWindow):
     def stop_analysis(self) -> None:
         """Stop analyzing current position."""
         self._engine.stop_analysis()
-        self._game_notifications.clear()
+        self._engine_analysis_label.hide()
+        self._evaluation_bar.reset_state()
+        self._game_notifications_label.clear()
 
         self.switch_clock_timers()
         self.adjust_toolbar_buttons()
@@ -548,11 +553,6 @@ class MainWindow(QMainWindow):
         self._table_model.refresh_view()
         self._table_view.select_last_item()
 
-        self._game_notifications.clear()
-        self._engine_analysis_label.clear()
-
-        self._evaluation_bar.reset_state()
-
         self.show_fen()
         self.show_opening()
         self.stop_analysis()
@@ -560,7 +560,7 @@ class MainWindow(QMainWindow):
         if self._game.is_over():
             self._black_clock.stop_timer()
             self._white_clock.stop_timer()
-            self._game_notifications.setText(self._game.result)
+            self._game_notifications_label.setText(self._game.result)
             return
 
         if self._game.is_engine_on_turn() and not self._game.is_over():
@@ -585,11 +585,7 @@ class MainWindow(QMainWindow):
         self._white_clock.reset()
 
         self._table_model.reset()
-        self._evaluation_bar.reset_state()
-
         self._openings_label.clear()
-        self._game_notifications.clear()
-        self._engine_analysis_label.clear()
 
         self.show_fen()
         self.stop_analysis()
@@ -634,12 +630,12 @@ class MainWindow(QMainWindow):
     @Slot()
     def on_black_time_expired(self) -> None:
         """Notify that White won as Black's time has expired."""
-        self._game_notifications.setText("White won on time")
+        self._game_notifications_label.setText("White won on time")
 
     @Slot()
     def on_white_time_expired(self) -> None:
         """Notify that Black won as White's time has expired."""
-        self._game_notifications.setText("Black won on time")
+        self._game_notifications_label.setText("Black won on time")
 
     @Slot()
     def on_fen_validated(self) -> None:
@@ -659,15 +655,14 @@ class MainWindow(QMainWindow):
         self.show_fen()
         self.show_opening()
         self.stop_analysis()
+
         self._game.reset_squares()
+
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
-        self._game_notifications.clear()
-        self._evaluation_bar.reset_state()
-        self._engine_analysis_label.clear()
 
         if self._game.is_over():
-            self._game_notifications.setText(self._game.result)
+            self._game_notifications_label.setText(self._game.result)
 
     @Slot(Move)
     def on_move_played(self, move: Move) -> None:
