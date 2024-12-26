@@ -4,7 +4,6 @@ from chess import svg
 from PySide6.QtCore import Property
 from PySide6.QtGui import QColor, QMouseEvent, QPaintEvent
 from PySide6.QtSvgWidgets import QSvgWidget
-from PySide6.QtWidgets import QSizePolicy
 
 from rechess.utils import setting_value
 
