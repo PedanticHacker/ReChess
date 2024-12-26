@@ -43,8 +43,8 @@ QLineEdit {
   color: #e2d4f5;
   font-size: 15px;
   font-weight: bold;
-  min-width: 600px;
   max-width: 600px;
+  min-width: 600px;
   qproperty-alignment: AlignCenter;
 }
 
