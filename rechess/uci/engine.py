@@ -34,7 +34,7 @@ class Engine(QObject):
         # delete_quarantine_attribute(path_to_file)
         # make_executable(path_to_file)
 
-        # self.quit()
+        self.quit()
         self._engine = SimpleEngine.popen_uci(path_to_file)
         self._engine.configure(engine_configuration())
 
