@@ -1,3 +1,4 @@
+from enum import StrEnum
 from functools import partial
 from pathlib import Path
 
@@ -15,7 +16,6 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from rechess import ClockColor
 from rechess.core import Game
 from rechess.uci import Engine
 from rechess.ui.dialogs import SettingsDialog
@@ -32,6 +32,13 @@ from rechess.utils import (
     style_name,
     svg_icon,
 )
+
+
+class ClockColor(StrEnum):
+    """CSS color style enum for clocks of Black and White players."""
+
+    Black = "color: white; background-color: black;"
+    White = "color: black; background-color: white;"
 
 
 class MainWindow(QMainWindow):

@@ -1,4 +1,5 @@
 from contextlib import suppress
+from enum import EnumType
 from typing import Iterator
 
 from chess import (
@@ -12,13 +13,23 @@ from chess import (
     square,
 )
 from chess.svg import Arrow
-from PySide6.QtCore import QObject, Signal
+from PySide6.QtCore import QObject, QUrl, Signal
 from PySide6.QtMultimedia import QSoundEffect
 from PySide6.QtWidgets import QDialog
 
-from rechess import SoundEffectUrl
 from rechess.ui.dialogs import PromotionDialog
 from rechess.utils import setting_value
+
+
+class SoundEffectUrl(EnumType):
+    """File URL enum for sound effects of various move types."""
+
+    Capture = QUrl("file:rechess/assets/audio/capture.wav")
+    Castling = QUrl("file:rechess/assets/audio/castling.wav")
+    Check = QUrl("file:rechess/assets/audio/check.wav")
+    GameOver = QUrl("file:rechess/assets/audio/game-over.wav")
+    Move = QUrl("file:rechess/assets/audio/move.wav")
+    Promotion = QUrl("file:rechess/assets/audio/promotion.wav")
 
 
 class Game(QObject):
