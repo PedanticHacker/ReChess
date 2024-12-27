@@ -15,6 +15,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
+from rechess import ClockColor
 from rechess.core import Game
 from rechess.uci import Engine
 from rechess.ui.dialogs import SettingsDialog
@@ -45,8 +46,8 @@ class MainWindow(QMainWindow):
         self._table_model: TableModel = TableModel(self._game.moves)
         self._table_view: TableView = TableView(self._table_model)
 
-        self._black_clock: Clock = Clock("color: white; background-color: black;")
-        self._white_clock: Clock = Clock("color: black; background-color: white;")
+        self._black_clock: Clock = Clock(ClockColor.Black)
+        self._white_clock: Clock = Clock(ClockColor.White)
 
         self._board: Board = Board(self._game)
         self._fen_editor: FenEditor = FenEditor(self._game)

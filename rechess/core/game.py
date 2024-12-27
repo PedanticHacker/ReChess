@@ -12,20 +12,13 @@ from chess import (
     square,
 )
 from chess.svg import Arrow
-from PySide6.QtCore import QObject, QUrl, Signal
+from PySide6.QtCore import QObject, Signal
 from PySide6.QtMultimedia import QSoundEffect
 from PySide6.QtWidgets import QDialog
 
+from rechess import SoundEffectUrl
 from rechess.ui.dialogs import PromotionDialog
 from rechess.utils import setting_value
-
-
-CAPTURE_FILE_URL: QUrl = QUrl("file:rechess/assets/audio/capture.wav")
-CASTLING_FILE_URL: QUrl = QUrl("file:rechess/assets/audio/castling.wav")
-CHECK_FILE_URL: QUrl = QUrl("file:rechess/assets/audio/check.wav")
-GAME_OVER_FILE_URL: QUrl = QUrl("file:rechess/assets/audio/game-over.wav")
-MOVE_FILE_URL: QUrl = QUrl("file:rechess/assets/audio/move.wav")
-PROMOTION_FILE_URL: QUrl = QUrl("file:rechess/assets/audio/promotion.wav")
 
 
 class Game(QObject):
@@ -43,22 +36,22 @@ class Game(QObject):
         self._positions: list[Board] = []
 
         self._capture_sound_effect: QSoundEffect = QSoundEffect(self)
-        self._capture_sound_effect.setSource(CAPTURE_FILE_URL)
+        self._capture_sound_effect.setSource(SoundEffectUrl.Capture)
 
         self._castling_sound_effect: QSoundEffect = QSoundEffect(self)
-        self._castling_sound_effect.setSource(CASTLING_FILE_URL)
+        self._castling_sound_effect.setSource(SoundEffectUrl.Castling)
 
         self._check_sound_effect: QSoundEffect = QSoundEffect(self)
-        self._check_sound_effect.setSource(CHECK_FILE_URL)
+        self._check_sound_effect.setSource(SoundEffectUrl.Check)
 
         self._game_over_sound_effect: QSoundEffect = QSoundEffect(self)
-        self._game_over_sound_effect.setSource(GAME_OVER_FILE_URL)
+        self._game_over_sound_effect.setSource(SoundEffectUrl.GameOver)
 
         self._move_sound_effect: QSoundEffect = QSoundEffect(self)
-        self._move_sound_effect.setSource(MOVE_FILE_URL)
+        self._move_sound_effect.setSource(SoundEffectUrl.Move)
 
         self._promotion_sound_effect: QSoundEffect = QSoundEffect(self)
-        self._promotion_sound_effect.setSource(PROMOTION_FILE_URL)
+        self._promotion_sound_effect.setSource(SoundEffectUrl.Promotion)
 
         self.prepare_new_game()
 
