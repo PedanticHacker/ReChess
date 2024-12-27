@@ -1,4 +1,3 @@
-from enum import StrEnum
 from functools import partial
 from pathlib import Path
 
@@ -34,13 +33,6 @@ from rechess.utils import (
 )
 
 
-class ClockColor(StrEnum):
-    """CSS color style enum for clocks of Black and White players."""
-
-    Black = "color: white; background-color: black;"
-    White = "color: black; background-color: white;"
-
-
 class MainWindow(QMainWindow):
     """Main window containing all widgets."""
 
@@ -53,8 +45,8 @@ class MainWindow(QMainWindow):
         self._table_model: TableModel = TableModel(self._game.moves)
         self._table_view: TableView = TableView(self._table_model)
 
-        self._black_clock: Clock = Clock(ClockColor.Black)
-        self._white_clock: Clock = Clock(ClockColor.White)
+        self._black_clock: Clock = Clock("color: white; background-color: black;")
+        self._white_clock: Clock = Clock("color: black; background-color: white;")
 
         self._board: Board = Board(self._game)
         self._fen_editor: FenEditor = FenEditor(self._game)

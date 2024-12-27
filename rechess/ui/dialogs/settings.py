@@ -24,6 +24,14 @@ class SettingsDialog(QDialog):
     def __init__(self) -> None:
         super().__init__()
 
+        self._initial_settings: dict[str, bool | float | str] = {
+            "clock_increment": setting_value("clock", "increment"),
+            "clock_time": setting_value("clock", "time"),
+            "human_name": setting_value("human", "name"),
+            "is_engine_ponder_on": setting_value("engine", "is_ponder_on"),
+            "is_engine_white": setting_value("engine", "is_white"),
+        }
+
         self._button_box: QDialogButtonBox = QDialogButtonBox(Save | Cancel)
         self._button_box.button(Save).setDisabled(True)
 
@@ -81,13 +89,14 @@ class SettingsDialog(QDialog):
 
         self._human_name_option: QLineEdit = QLineEdit()
         self._human_name_option.setMaxLength(24)
+        self._human_name_option.setPlaceholderText("Human")
         self._human_name_option.setText(setting_value("human", "name"))
 
     def set_vertical_layout(self) -> None:
         """Set layout of dialog's widgets to be vertical."""
-        human_layout: QVBoxLayout = QVBoxLayout()
-        human_layout.addWidget(self._human_name_option)
-        self._human_name_group.setLayout(human_layout)
+        human_name_layout: QVBoxLayout = QVBoxLayout()
+        human_name_layout.addWidget(self._human_name_option)
+        self._human_name_group.setLayout(human_name_layout)
 
         engine_layout: QVBoxLayout = QVBoxLayout()
         engine_layout.addWidget(self._engine_black_option)
@@ -134,14 +143,7 @@ class SettingsDialog(QDialog):
             "is_engine_ponder_on": self._engine_ponder_option.isChecked(),
             "is_engine_white": self._engine_white_option.isChecked(),
         }
-        initial_settings: dict[str, bool | float | str] = {
-            "clock_increment": setting_value("clock", "increment"),
-            "clock_time": setting_value("clock", "time"),
-            "human_name": setting_value("human", "name"),
-            "is_engine_ponder_on": setting_value("engine", "is_ponder_on"),
-            "is_engine_white": setting_value("engine", "is_white"),
-        }
-        return current_settings != initial_settings
+        return current_settings != self._initial_settings
 
     @Slot()
     def on_changed(self) -> None:
