@@ -1,5 +1,5 @@
 from contextlib import suppress
-from enum import EnumType
+from enum import EnumDict
 from typing import Iterator
 
 from chess import (
@@ -21,7 +21,7 @@ from rechess.ui.dialogs import PromotionDialog
 from rechess.utils import setting_value
 
 
-class SoundEffectUrl(EnumType):
+class SoundEffectFileUrl(EnumDict):
     """File URL enum for sound effects of various move types."""
 
     Capture = QUrl("file:rechess/assets/audio/capture.wav")
@@ -47,22 +47,22 @@ class Game(QObject):
         self._positions: list[Board] = []
 
         self._capture_sound_effect: QSoundEffect = QSoundEffect(self)
-        self._capture_sound_effect.setSource(SoundEffectUrl.Capture)
+        self._capture_sound_effect.setSource(SoundEffectFileUrl.Capture)
 
         self._castling_sound_effect: QSoundEffect = QSoundEffect(self)
-        self._castling_sound_effect.setSource(SoundEffectUrl.Castling)
+        self._castling_sound_effect.setSource(SoundEffectFileUrl.Castling)
 
         self._check_sound_effect: QSoundEffect = QSoundEffect(self)
-        self._check_sound_effect.setSource(SoundEffectUrl.Check)
+        self._check_sound_effect.setSource(SoundEffectFileUrl.Check)
 
         self._game_over_sound_effect: QSoundEffect = QSoundEffect(self)
-        self._game_over_sound_effect.setSource(SoundEffectUrl.GameOver)
+        self._game_over_sound_effect.setSource(SoundEffectFileUrl.GameOver)
 
         self._move_sound_effect: QSoundEffect = QSoundEffect(self)
-        self._move_sound_effect.setSource(SoundEffectUrl.Move)
+        self._move_sound_effect.setSource(SoundEffectFileUrl.Move)
 
         self._promotion_sound_effect: QSoundEffect = QSoundEffect(self)
-        self._promotion_sound_effect.setSource(SoundEffectUrl.Promotion)
+        self._promotion_sound_effect.setSource(SoundEffectFileUrl.Promotion)
 
         self.prepare_new_game()
 
