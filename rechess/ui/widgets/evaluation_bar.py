@@ -1,6 +1,6 @@
 from chess.engine import Score
 from PySide6.QtCore import QEasingCurve, QPropertyAnimation, Qt
-from PySide6.QtWidgets import QProgressBar, QSizePolicy
+from PySide6.QtWidgets import QProgressBar
 
 from rechess.utils import setting_value
 
@@ -15,12 +15,8 @@ class EvaluationBar(QProgressBar):
         self._animation.setEasingCurve(QEasingCurve.Type.InOutSine)
         self._animation.valueChanged.connect(self.update)
 
-        self._size_policy: QSizePolicy = self.sizePolicy()
-        self._size_policy.setRetainSizeWhenHidden(True)
-
         self.setRange(0, 1000)
         self.setFixedSize(50, 600)
-        self.setSizePolicy(self._size_policy)
         self.setOrientation(Qt.Orientation.Vertical)
 
         self.reset_state()

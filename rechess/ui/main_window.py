@@ -61,9 +61,6 @@ class MainWindow(QMainWindow):
         self._evaluation_bar: EvaluationBar = EvaluationBar()
 
         self._engine_analysis_label: QLabel = QLabel()
-        self._size_policy: QSizePolicy = self._engine_analysis_label.sizePolicy()
-        self._size_policy.setRetainSizeWhenHidden(True)
-        self._engine_analysis_label.setSizePolicy(self._size_policy)
         self._engine_analysis_label.setObjectName("engineAnalysis")
         self._engine_analysis_label.hide()
 
@@ -90,6 +87,7 @@ class MainWindow(QMainWindow):
         self.switch_clock_timers()
         self.adjust_toolbar_buttons()
         self.connect_signals_to_slots()
+        self.retain_hidden_widget_size()
         self.apply_style(setting_value("ui", "style"))
 
         if self._game.is_engine_on_turn():
@@ -108,8 +106,8 @@ class MainWindow(QMainWindow):
         self._grid_layout.addWidget(self._black_clock, 1, 1)
         self._grid_layout.addWidget(self._board, 1, 2, 4, 1)
         self._grid_layout.addWidget(self._table_view, 1, 3, 4, 1)
-        self._grid_layout.addWidget(self._engine_analysis_label, 1, 4, 4, 1)
-        self._grid_layout.addWidget(self._evaluation_bar, 1, 5, 4, 1)
+        self._grid_layout.addWidget(self._evaluation_bar, 1, 4, 4, 1)
+        self._grid_layout.addWidget(self._engine_analysis_label, 1, 5, 4, 1)
         self._grid_layout.addWidget(self._engine_name_label, 2, 1)
         self._grid_layout.addWidget(self._white_clock, 4, 1)
         self._grid_layout.addWidget(self._human_name_label, 5, 1)
@@ -123,9 +121,9 @@ class MainWindow(QMainWindow):
         self._grid_layout.setColumnStretch(3, 1)
         self._grid_layout.setColumnStretch(6, 1)
 
-        self._central_widget: QWidget = QWidget()
-        self._central_widget.setLayout(self._grid_layout)
-        self.setCentralWidget(self._central_widget)
+        central_widget: QWidget = QWidget()
+        central_widget.setLayout(self._grid_layout)
+        self.setCentralWidget(central_widget)
 
     def create_actions(self) -> None:
         """Create menu and toolbar actions."""
@@ -346,7 +344,7 @@ class MainWindow(QMainWindow):
         help_area.addAction(self.about_action)
 
     def create_statusbar(self) -> None:
-        """Create statusbar for showing openings and tips."""
+        """Create statusbar to show openings, style name, and tips."""
         self.statusBar().addWidget(self._openings_label)
         self.statusBar().addPermanentWidget(self._style_name_label)
 
@@ -385,6 +383,13 @@ class MainWindow(QMainWindow):
         self._game.move_played.connect(self.on_move_played)
         self._table_view.item_selected.connect(self.on_item_selected)
         self._white_clock.time_expired.connect(self.on_white_time_expired)
+
+    def retain_hidden_widget_size(self) -> None:
+        """Retain size of hidden widgets."""
+        size_policy: QSizePolicy = self.sizePolicy()
+        size_policy.setRetainSizeWhenHidden(True)
+        self._engine_analysis_label.setSizePolicy(size_policy)
+        self._evaluation_bar.setSizePolicy(size_policy)
 
     def invoke_engine(self) -> None:
         """Invoke engine to play move."""
