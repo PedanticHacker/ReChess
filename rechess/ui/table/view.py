@@ -21,7 +21,7 @@ class TableView(QTableView):
         self.setModel(table_model)
 
         self.setShowGrid(False)
-        self.setFixedSize(300, 600)
+        self.setFixedSize(200, 600)
         self.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
         self.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
         self.verticalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Fixed)
