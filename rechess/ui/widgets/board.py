@@ -90,7 +90,7 @@ class Board(QSvgWidget):
 
     def paintEvent(self, event: QPaintEvent) -> None:
         """Paint current state of board."""
-        svg_board = svg.board(
+        board: str = svg.board(
             arrows=self._game.arrows,
             board=self._game.board,
             check=self._game.king_in_check,
@@ -98,6 +98,6 @@ class Board(QSvgWidget):
             orientation=setting_value("board", "orientation"),
             squares=self._game.legal_moves,
         )
-        self.load(svg_board.encode())
+        self.load(board.encode())
 
         super().paintEvent(event)
