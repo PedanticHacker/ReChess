@@ -30,8 +30,8 @@ QLabel {
 }
 
 QLabel#engineAnalysis {
-  background-color: #223a3a;
-  border: 1px solid #386b6b;
+  background-color: #97b6d3;
+  border: 1px solid #4d85bd;
   border-radius: 4px;
   max-width: 150px;
   min-width: 150px;
@@ -40,8 +40,8 @@ QLabel#engineAnalysis {
 }
 
 QLabel#engineName, #gameNotifications, #humanName {
-  background-color: #223a3a;
-  border: 1px solid #386b6b;
+  background-color: #97b6d3;
+  border: 1px solid #4d85bd;
   border-radius: 4px;
   qproperty-alignment: AlignCenter;
 }
