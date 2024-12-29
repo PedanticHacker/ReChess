@@ -6,13 +6,13 @@ Stockfish Chess Engine (version 17)
 - Binary executables for Windows, Linux, and macOS
 - Official website: https://stockfishchess.org
 - Source code download: https://github.com/official-stockfish/Stockfish/archive/refs/tags/sf_17.zip
-- Copyright (C) 2004-2024 The Stockfish developers
+- Copyright (C) 2004-2025 The Stockfish developers
 
 Stockfish is licensed under the GNU General Public License v3.0 (GPLv3).
 The complete license text follows:
 
 Stockfish, a UCI chess playing engine derived from Glaurung 2.1
-Copyright (C) 2004-2024 The Stockfish developers (see AUTHORS file)
+Copyright (C) 2004-2025 The Stockfish developers (see AUTHORS file)
 
 Stockfish is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

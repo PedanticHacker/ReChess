@@ -1,4 +1,4 @@
-Copyright 2024 Boštjan Mejak
+Copyright (C) 2025 Boštjan Mejak
 
 MIT License
 

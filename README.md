@@ -199,8 +199,8 @@ include my copyright notice above yours.
 Your copyright notice should look like this:
 
 ```
-Copyright 2024 Boštjan Mejak
-Copyright 2024 John Doe
+Copyright (C) 2025 Boštjan Mejak
+Copyright (C) 2025 John Doe
 ```
 
 On the second line, provide the year in which you are releasing your app
