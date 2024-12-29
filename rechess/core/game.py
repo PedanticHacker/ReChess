@@ -84,7 +84,6 @@ class Game(QObject):
     @fen.setter
     def fen(self, value) -> None:
         """Initialize state and set new position based on `value`."""
-        self.prepare_new_game()
         self._board.set_fen(value)
 
     @property
@@ -106,7 +105,7 @@ class Game(QObject):
 
     @property
     def moves(self) -> list[str]:
-        """Return moves in standard algebraic notation (SAN)."""
+        """Return moves in Standard Algebraic Notation (SAN)."""
         return self._moves
 
     @property
