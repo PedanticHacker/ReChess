@@ -78,12 +78,13 @@ class Game(QObject):
 
     @property
     def fen(self) -> str:
-        """Return current FEN."""
+        """Return position in FEN format."""
         return self._board.fen()
 
     @fen.setter
     def fen(self, value) -> None:
-        """Set new FEN based on `value`."""
+        """Initialize state and set new position based on `value`."""
+        self.prepare_new_game()
         self._board.set_fen(value)
 
     @property
@@ -125,7 +126,7 @@ class Game(QObject):
         return self._board.turn
 
     def prepare_new_game(self) -> None:
-        """Prepare new game by resetting state of current game."""
+        """Reset board for new game and initialize state."""
         self._board.reset()
 
         self._arrows.clear()
