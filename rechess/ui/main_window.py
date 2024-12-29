@@ -651,20 +651,19 @@ class MainWindow(QMainWindow):
 
     @Slot(int)
     def on_item_selected(self, item_index: int) -> None:
-        """Set move based on `item_index`."""
-        if item_index > -1:
-            self._game.set_move(item_index)
-        else:
+        """Show move based on `item_index`."""
+        if item_index < 0:
             self._game.clear_arrows()
             self._game.set_root_position()
             self._openings_label.clear()
+        else:
+            self._game.show_move(item_index)
 
         self.show_fen()
         self.show_opening()
         self.stop_analysis()
 
         self._game.reset_squares()
-
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
 

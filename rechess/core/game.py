@@ -78,13 +78,17 @@ class Game(QObject):
 
     @property
     def fen(self) -> str:
-        """Return position in FEN format."""
+        """Return current position in FEN format."""
         return self._board.fen()
 
     @fen.setter
     def fen(self, value) -> None:
-        """Initialize state and set new position based on `value`."""
+        """Set new position based on `value` and initialize state."""
         self._board.set_fen(value)
+        self._arrows.clear()
+        self._moves.clear()
+        self._positions.clear()
+        self.reset_squares()
 
     @property
     def king_in_check(self) -> Square | None:
@@ -218,12 +222,10 @@ class Game(QObject):
 
         return None
 
-    def set_move(self, item_index: int) -> None:
-        """Set move based on `item_index`."""
+    def show_move(self, item_index: int) -> None:
+        """Show move and arrow based on `item_index`."""
         self._board = self._positions[item_index].copy()
-
-        move: Move = self._board.move_stack[item_index]
-        self.show_arrow(move)
+        self.show_arrow(self._board.move_stack[item_index])
 
     def delete_data_after(self, item_index: int) -> None:
         """Delete moves and positions after `item_index`."""
