@@ -470,7 +470,7 @@ class MainWindow(QMainWindow):
         """Start new engine from file at `path_to_file`."""
         self.stop_analysis()
 
-        self._game.clear_arrows()
+        self._game.clear_arrow()
 
         self._engine.load_from_file_at(path_to_file)
         self._engine_name_label.setText(self._engine.name)
@@ -632,7 +632,7 @@ class MainWindow(QMainWindow):
     @Slot(Move)
     def on_best_move_analyzed(self, best_move: Move) -> None:
         """Show `best_move` as arrow marker based on engine analysis."""
-        self._game.show_arrow(best_move)
+        self._game.set_arrow(best_move)
 
     @Slot()
     def on_black_time_expired(self) -> None:
@@ -653,17 +653,18 @@ class MainWindow(QMainWindow):
     def on_item_selected(self, item_index: int) -> None:
         """Show move based on `item_index`."""
         if item_index < 0:
-            self._game.clear_arrows()
+            self._game.clear_arrow()
             self._game.set_root_position()
             self._openings_label.clear()
         else:
-            self._game.show_move(item_index)
+            self._game.set_move(item_index)
 
         self.show_fen()
         self.show_opening()
         self.stop_analysis()
 
         self._game.reset_squares()
+
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
 

@@ -12,7 +12,6 @@ from chess import (
     Square,
     square,
 )
-from chess.svg import Arrow
 from PySide6.QtCore import QObject, QUrl, Signal
 from PySide6.QtMultimedia import QSoundEffect
 from PySide6.QtWidgets import QDialog
@@ -42,7 +41,7 @@ class Game(QObject):
 
         self._board: Board = Board()
 
-        self._arrows: list[Arrow] = []
+        self._arrow: list[tuple[Square, Square]] = []
         self._moves: list[str] = []
         self._positions: list[Board] = []
 
@@ -64,12 +63,12 @@ class Game(QObject):
         self._promotion_sound_effect: QSoundEffect = QSoundEffect(self)
         self._promotion_sound_effect.setSource(SoundEffectFileUrl.Promotion)
 
-        self.prepare_new_game()
+        self.reset_squares()
 
     @property
-    def arrows(self) -> list[Arrow]:
-        """Return arrow markers shown on board."""
-        return self._arrows
+    def arrow(self) -> list[tuple[Square, Square]]:
+        """Return current arrow marker."""
+        return self._arrow
 
     @property
     def board(self) -> Board:
@@ -83,12 +82,9 @@ class Game(QObject):
 
     @fen.setter
     def fen(self, value) -> None:
-        """Set new position based on `value` and initialize state."""
+        """Initialize state and set new position based on `value`."""
+        self._initialize_state()
         self._board.set_fen(value)
-        self._arrows.clear()
-        self._moves.clear()
-        self._positions.clear()
-        self.reset_squares()
 
     @property
     def king_in_check(self) -> Square | None:
@@ -128,24 +124,26 @@ class Game(QObject):
         """Return True if White is on turn."""
         return self._board.turn
 
-    def prepare_new_game(self) -> None:
-        """Reset board for new game and initialize state."""
-        self._board.reset()
-
-        self._arrows.clear()
-        self._moves.clear()
-        self._positions.clear()
-
-        self.reset_squares()
-
     def reset_squares(self) -> None:
         """Reset origin and target squares of piece."""
         self.from_square: Square = -1
         self.to_square: Square = -1
 
+    def _initialize_state(self) -> None:
+        """Clear game history and set squares to initial value."""
+        self._arrow.clear()
+        self._moves.clear()
+        self._positions.clear()
+        self.reset_squares()
+
+    def prepare_new_game(self) -> None:
+        """Reset board for new game and initialize state."""
+        self._initialize_state()
+        self._board.reset()
+
     def push(self, move: Move) -> None:
         """Update game state by pushing `move`."""
-        self.show_arrow(move)
+        self.set_arrow(move)
         self.play_sound_effect(move)
 
         new_move: str = self._board.san_and_push(move)
@@ -154,13 +152,13 @@ class Game(QObject):
         position: Board = self._board.copy()
         self._positions.append(position)
 
-    def show_arrow(self, move: Move) -> None:
-        """Show arrow marker on board for `move`."""
-        self._arrows = [Arrow(move.from_square, move.to_square)]
+    def set_arrow(self, move: Move) -> None:
+        """Set arrow marker based on `move`."""
+        self._arrow = [(move.from_square, move.to_square)]
 
-    def clear_arrows(self) -> None:
-        """Clear all arrow markers from board."""
-        self._arrows.clear()
+    def clear_arrow(self) -> None:
+        """Clear arrow marker from board."""
+        self._arrow.clear()
 
     def play_sound_effect(self, move: Move) -> None:
         """Play sound effect for `move`."""
@@ -222,10 +220,10 @@ class Game(QObject):
 
         return None
 
-    def show_move(self, item_index: int) -> None:
-        """Show move and arrow based on `item_index`."""
+    def set_move(self, item_index: int) -> None:
+        """Set move and arrow based on `item_index`."""
         self._board = self._positions[item_index].copy()
-        self.show_arrow(self._board.move_stack[item_index])
+        self.set_arrow(self._board.move_stack[item_index])
 
     def delete_data_after(self, item_index: int) -> None:
         """Delete moves and positions after `item_index`."""
