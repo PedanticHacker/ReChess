@@ -228,7 +228,7 @@ class Game(QObject):
     def delete_data_after(self, item_index: int) -> None:
         """Delete moves and positions after `item_index`."""
         if item_index < 0:
-            self.prepare_new_game()
+            self._initialize_state()
         else:
             after_item_index: slice = slice(item_index + 1, len(self._moves))
             del self._moves[after_item_index]
