@@ -116,16 +116,16 @@ No. Drag-and-drop functionality is not supported, just click-click.
 
 The following screenshots show how ReChess looks in **Dark mint** style.
 
-![ReChess on Windows 11](https://github.com/user-attachments/assets/9068be9e-5072-4110-acce-b41aca94f410 "ReChess on Windows 11")
+![Settings dialog](https://github.com/user-attachments/assets/10b397b0-d855-47c7-b148-5a900c4feb29 "Settings dialog")
 *Changing the settings.*
 
-![ReChess on Windows 11](https://github.com/user-attachments/assets/5f0ee0cd-3ece-42b8-86dd-54e293b8449b "ReChess on Windows 11")
+![Move history](https://github.com/user-attachments/assets/3226951e-ce18-4638-9e9d-070833ab8454 "Move history")
 *Selecting a move from the table view.*
 
-![ReChess on Windows 11](https://github.com/user-attachments/assets/0a66f227-d200-4e5a-96ab-40065fd4b9b7 "ReChess on Windows 11")
-*Analyzing a position with the default Stockfish 17 chess engine.*
+![Position analysis](https://github.com/user-attachments/assets/a7d3137a-fe5c-404a-bc3d-f0dbe76259be "Position analysis")
+*Analyzing a position with the default Stockfish 17 engine.*
 
-![ReChess on Windows 11](https://github.com/user-attachments/assets/d6490aee-9936-4c92-810b-72c39ccff316 "ReChess on Windows 11")
+![Pawn promotion](https://github.com/user-attachments/assets/9c922ee8-2633-49ca-9f04-7ec2c1ebcb14 "Pawn promotion")
 *Promoting a white pawn to a queen, a rook, a bishop, or a knight.*
 
 ## What's the default engine in ReChess?
