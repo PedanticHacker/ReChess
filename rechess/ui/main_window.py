@@ -79,7 +79,6 @@ class MainWindow(QMainWindow):
         self._openings_label: QLabel = QLabel()
         self._style_name_label: QLabel = QLabel()
 
-        self.set_size()
         self.set_layout()
         self.create_actions()
         self.create_menubar()
@@ -94,11 +93,6 @@ class MainWindow(QMainWindow):
         if self._game.is_engine_on_turn():
             self.flip()
             self.invoke_engine()
-
-    def set_size(self) -> None:
-        """Set minimum size to 1400 by 800 pixels, show maximized."""
-        self.setMinimumSize(1400, 800)
-        self.showMaximized()
 
     def set_layout(self) -> None:
         """Set layout for fixed-position widgets."""

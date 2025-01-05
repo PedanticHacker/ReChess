@@ -23,6 +23,7 @@ def main() -> None:
         main_window.destruct()
         sys.exit()
 
+    main_window.show()
     app.exec()
 
 
