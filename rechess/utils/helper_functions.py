@@ -69,22 +69,21 @@ def make_executable(path_to_file: str) -> None:
     os.chmod(path_to_file, os.stat(path_to_file).st_mode | stat.S_IXUSR)
 
 
-def _optimal_hash_size() -> int:
-    """Return approximately 70% of available RAM."""
-    SEVENTY_PERCENT: int = 1497966
-    available_ram: int = virtual_memory().available
-    return available_ram // SEVENTY_PERCENT
+def _available_hash() -> int:
+    """Return all available RAM in megabytes to be used as hash."""
+    MEGABYTES_FACTOR: int = 1_048_576
+    return virtual_memory().available // MEGABYTES_FACTOR
 
 
-def _optimal_cpu_threads() -> int:
+def _available_threads() -> int:
     """Return all CPU threads, but reserve one for other CPU tasks."""
     cpu_threads: int | None = cpu_count()
     return 1 if not cpu_threads or cpu_threads == 1 else cpu_threads - 1
 
 
 def engine_configuration() -> dict[str, int]:
-    """Return optimal configuration for engine."""
-    return {"Hash": _optimal_hash_size(), "Threads": _optimal_cpu_threads()}
+    """Return configuration for engine based on available resources."""
+    return {"Hash": _available_hash(), "Threads": _available_threads()}
 
 
 def _settings() -> SettingsDict:
