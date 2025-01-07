@@ -23,7 +23,7 @@ def main() -> None:
         main_window.destruct()
         sys.exit()
 
-    main_window.show()
+    main_window.showMaximized()
     app.exec()
 
 
