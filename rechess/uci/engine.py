@@ -1,4 +1,5 @@
 from __future__ import annotations
+from contextlib import suppress
 
 from chess import Move
 from chess.engine import Limit, PlayResult, Score, SimpleEngine
@@ -31,12 +32,18 @@ class Engine(QObject):
 
     def load_from_file_at(self, path_to_file: str) -> None:
         """Load engine from file at `path_to_file`."""
-        # delete_quarantine_attribute(path_to_file)
-        # make_executable(path_to_file)
+        if hasattr(self, "_engine"):
+            self.quit()
 
-        self.quit()
-        self._engine = SimpleEngine.popen_uci(path_to_file)
-        self._engine.configure(engine_configuration())
+        delete_quarantine_attribute(path_to_file)
+        make_executable(path_to_file)
+
+        with suppress(Exception):
+            self._engine = SimpleEngine.popen_uci(path_to_file)
+            self._engine.configure(engine_configuration())
+            return
+
+        self.load_from_file_at(path_to_stockfish())
 
     def play_move(self) -> None:
         """Invoke engine to play move."""
@@ -72,14 +79,11 @@ class Engine(QObject):
         self._analyzing = False
 
     def quit(self) -> None:
-        """Terminate engine's process if it exists."""
-        if hasattr(self, "_engine"):
-            self._engine.quit()
+        """Terminate engine's process."""
+        self._engine.quit()
 
     @property
     def name(self) -> str:
-        """Return engine's name if its process exists."""
-        if hasattr(self, "_engine"):
-            name: str = self._engine.id["name"]
-            return f"{name[0:24]}..." if len(name) > 24 else name
-        return "Human"
+        """Return engine's name."""
+        name: str = self._engine.id["name"]
+        return f"{name[0:24]}..." if len(name) > 24 else name
