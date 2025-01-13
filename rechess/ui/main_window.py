@@ -532,8 +532,8 @@ class MainWindow(QMainWindow):
         self._evaluation_bar.reset_state()
         self._game_notifications_label.clear()
 
-        self.switch_clock_timers()
         self.adjust_toolbar_buttons()
+        self.switch_clock_timers()
 
     def show_fen(self) -> None:
         """Show FEN in editor."""
