@@ -1,19 +1,35 @@
-from __future__ import annotations
+from enum import IntEnum
 
-from chess import BISHOP, KNIGHT, QUEEN, ROOK, WHITE, PieceType
-from PySide6.QtWidgets import QDialog, QHBoxLayout
+from PySide6.QtWidgets import QDialog, QHBoxLayout, QPushButton
 
 from rechess.utils import create_button, svg_icon
+
+
+class PieceType(IntEnum):
+    """Either pawn, knight, bishop, rook, or queen as type of piece."""
+
+    Pawn = 1
+    Knight = 2
+    Bishop = 3
+    Rook = 4
+    Queen = 5
+
+
+class Turn(IntEnum):
+    """Either Black or White as player on turn."""
+
+    Black = 0
+    White = 1
 
 
 class PromotionDialog(QDialog):
     """Dialog with buttons for selecting pawn promotion piece type."""
 
-    def __init__(self, piece_color: Color) -> None:
+    def __init__(self, turn: Turn) -> None:
         super().__init__()
 
-        self._piece_color: Color = piece_color
-        self._piece_type: PieceType = PieceType()
+        self._turn: Turn = turn
+        self._piece_type: PieceType = PieceType.Pawn
 
         self.set_title()
         self.create_buttons()
@@ -26,11 +42,11 @@ class PromotionDialog(QDialog):
 
     def create_buttons(self) -> None:
         """Create buttons based on piece color showing piece type."""
-        if self._piece_color == WHITE:
-            self.queen_button = create_button(svg_icon("white-queen"))
-            self.rook_button = create_button(svg_icon("white-rook"))
-            self.bishop_button = create_button(svg_icon("white-bishop"))
-            self.knight_button = create_button(svg_icon("white-knight"))
+        if self._turn == Turn.White:
+            self.queen_button: QPushButton = create_button(svg_icon("white-queen"))
+            self.rook_button: QPushButton = create_button(svg_icon("white-rook"))
+            self.bishop_button: QPushButton = create_button(svg_icon("white-bishop"))
+            self.knight_button: QPushButton = create_button(svg_icon("white-knight"))
         else:
             self.queen_button = create_button(svg_icon("black-queen"))
             self.rook_button = create_button(svg_icon("black-rook"))
@@ -56,22 +72,22 @@ class PromotionDialog(QDialog):
 
     def on_queen_button_clicked(self) -> None:
         """Set piece type to queen."""
-        self._piece_type = QUEEN
+        self._piece_type = PieceType.Queen
         self.accept()
 
     def on_rook_button_clicked(self) -> None:
         """Set piece type to rook."""
-        self._piece_type = ROOK
+        self._piece_type = PieceType.Rook
         self.accept()
 
     def on_bishop_button_clicked(self) -> None:
         """Set piece type to bishop."""
-        self._piece_type = BISHOP
+        self._piece_type = PieceType.Bishop
         self.accept()
 
     def on_knight_button_clicked(self) -> None:
         """Set piece type to knight."""
-        self._piece_type = KNIGHT
+        self._piece_type = PieceType.Knight
         self.accept()
 
     @property
