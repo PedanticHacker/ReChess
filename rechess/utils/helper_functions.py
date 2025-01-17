@@ -14,24 +14,22 @@ from PySide6.QtWidgets import QApplication, QPushButton
 PATH_TO_SETTINGS_FILE: str = "rechess/settings.json"
 
 
-BoardSection: TypeAlias = Literal["board"]
-ClockSection: TypeAlias = Literal["clock"]
-EngineSection: TypeAlias = Literal["engine"]
-HumanSection: TypeAlias = Literal["human"]
-UiSection: TypeAlias = Literal["ui"]
-SettingSection: TypeAlias = (
-    BoardSection | ClockSection | EngineSection | HumanSection | UiSection
-)
+type BoardSection = Literal["board"]
+type ClockSection = Literal["clock"]
+type EngineSection = Literal["engine"]
+type HumanSection = Literal["human"]
+type UiSection = Literal["ui"]
+type SettingSection = BoardSection | ClockSection | EngineSection | HumanSection | UiSection
 
-BoardKey: TypeAlias = Literal["orientation"]
-ClockKey: TypeAlias = Literal["time", "increment"]
-EngineKey: TypeAlias = Literal["is_white", "is_ponder_on"]
-HumanKey: TypeAlias = Literal["name"]
-StyleKey: TypeAlias = Literal["style"]
-SettingKey: TypeAlias = BoardKey | ClockKey | EngineKey | HumanKey | StyleKey
+type BoardKey = Literal["orientation"]
+type ClockKey = Literal["time", "increment"]
+type EngineKey = Literal["is_white", "is_ponder_on"]
+type HumanKey = Literal["name"]
+type StyleKey = Literal["style"]
+type SettingKey = BoardKey | ClockKey | EngineKey | HumanKey | StyleKey
 
-SettingValue: TypeAlias = bool | float | str
-SettingsDict: TypeAlias = dict[SettingSection, dict[SettingKey, SettingValue]]
+type SettingValue = bool | float | str
+type SettingsDict = dict[SettingSection, dict[SettingKey, SettingValue]]
 
 
 def platform_name() -> str:
@@ -190,8 +188,8 @@ def create_button(icon: QIcon) -> QPushButton:
     return button
 
 
-def style_icon(color: str) -> QIcon:
-    """Return square icon filled with `color`."""
+def colorize_icon(color: str) -> QIcon:
+    """Return icon in 16 by 16 pixels filled with `color`."""
     pixmap: QPixmap = QPixmap(16, 16)
     pixmap.fill(QColor(color))
     return QIcon(pixmap)

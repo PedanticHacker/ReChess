@@ -1,5 +1,6 @@
 from .helper_functions import (
     app_object,
+    colorize_icon,
     create_action,
     create_button,
     delete_quarantine_attribute,
@@ -11,7 +12,6 @@ from .helper_functions import (
     platform_name,
     set_setting_value,
     setting_value,
-    style_icon,
     style_name,
     svg_icon,
 )
@@ -19,6 +19,7 @@ from .helper_functions import (
 
 __all__: list[str] = [
     "app_object",
+    "colorize_icon",
     "create_action",
     "create_button",
     "delete_quarantine_attribute",
@@ -30,7 +31,6 @@ __all__: list[str] = [
     "platform_name",
     "set_setting_value",
     "setting_value",
-    "style_icon",
     "style_name",
     "svg_icon",
 ]

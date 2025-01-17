@@ -23,13 +23,13 @@ from rechess.ui.dialogs import SettingsDialog
 from rechess.ui.table import TableModel, TableView
 from rechess.ui.widgets import Board, Clock, EvaluationBar, FenEditor
 from rechess.utils import (
+    colorize_icon,
     create_action,
     engine_file_filter,
     find_opening,
     platform_name,
     set_setting_value,
     setting_value,
-    style_icon,
     style_name,
     svg_icon,
 )
@@ -131,28 +131,28 @@ class MainWindow(QMainWindow):
         )
         self.dark_forest_style_action = create_action(
             handler=partial(self.apply_style, "dark-forest"),
-            icon=style_icon("#2d382d"),
+            icon=colorize_icon("#2d382d"),
             name="Dark forest",
             shortcut="Alt+1",
             status_tip="Applies the dark forest style.",
         )
         self.dark_mint_style_action = create_action(
             handler=partial(self.apply_style, "dark-mint"),
-            icon=style_icon("#1a2e2e"),
+            icon=colorize_icon("#1a2e2e"),
             name="Dark mint",
             shortcut="Alt+2",
             status_tip="Applies the dark mint style.",
         )
         self.dark_nebula_style_action = create_action(
             handler=partial(self.apply_style, "dark-nebula"),
-            icon=style_icon("#1a1025"),
+            icon=colorize_icon("#1a1025"),
             name="Dark nebula",
             shortcut="Alt+3",
             status_tip="Applies the dark nebula style.",
         )
         self.dark_ocean_style_action = create_action(
             handler=partial(self.apply_style, "dark-ocean"),
-            icon=style_icon("#1a2838"),
+            icon=colorize_icon("#1a2838"),
             name="Dark ocean",
             shortcut="Alt+4",
             status_tip="Applies the dark ocean style.",
@@ -166,28 +166,28 @@ class MainWindow(QMainWindow):
         )
         self.light_forest_style_action = create_action(
             handler=partial(self.apply_style, "light-forest"),
-            icon=style_icon("#e8efe6"),
+            icon=colorize_icon("#e8efe6"),
             name="Light forest",
             shortcut="Alt+5",
             status_tip="Applies the light forest style.",
         )
         self.light_mint_style_action = create_action(
             handler=partial(self.apply_style, "light-mint"),
-            icon=style_icon("#ebf5f3"),
+            icon=colorize_icon("#ebf5f3"),
             name="Light mint",
             shortcut="Alt+6",
             status_tip="Applies the light mint style.",
         )
         self.light_nebula_style_action = create_action(
             handler=partial(self.apply_style, "light-nebula"),
-            icon=style_icon("#f4ebff"),
+            icon=colorize_icon("#f4ebff"),
             name="Light nebula",
             shortcut="Alt+7",
             status_tip="Applies the light nebula style.",
         )
         self.light_ocean_style_action = create_action(
             handler=partial(self.apply_style, "light-ocean"),
-            icon=style_icon("#ebf3f8"),
+            icon=colorize_icon("#ebf3f8"),
             name="Light ocean",
             shortcut="Alt+8",
             status_tip="Applies the light ocean style.",
