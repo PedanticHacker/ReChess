@@ -84,10 +84,10 @@ class MainWindow(QMainWindow):
         self.create_menubar()
         self.create_toolbar()
         self.create_statusbar()
+        self.retain_layout_size()
         self.switch_clock_timers()
         self.adjust_toolbar_buttons()
         self.connect_signals_to_slots()
-        self.retain_hidden_widget_size()
         self.apply_style(setting_value("ui", "style"))
 
         if self._game.is_engine_on_turn():
@@ -343,6 +343,13 @@ class MainWindow(QMainWindow):
         self.statusBar().addWidget(self._openings_label)
         self.statusBar().addPermanentWidget(self._style_name_label)
 
+    def retain_layout_size(self) -> None:
+        """Retain layout size for hidden widgets."""
+        size_policy: QSizePolicy = self.sizePolicy()
+        size_policy.setRetainSizeWhenHidden(True)
+        self._engine_analysis_label.setSizePolicy(size_policy)
+        self._evaluation_bar.setSizePolicy(size_policy)
+
     def switch_clock_timers(self) -> None:
         """Switch Black's and White's clock timers based on turn."""
         if self._game.is_white_on_turn():
@@ -378,13 +385,6 @@ class MainWindow(QMainWindow):
         self._game.move_played.connect(self.on_move_played)
         self._table_view.item_selected.connect(self.on_item_selected)
         self._white_clock.time_expired.connect(self.on_white_time_expired)
-
-    def retain_hidden_widget_size(self) -> None:
-        """Retain size of hidden widgets."""
-        size_policy: QSizePolicy = self.sizePolicy()
-        size_policy.setRetainSizeWhenHidden(True)
-        self._engine_analysis_label.setSizePolicy(size_policy)
-        self._evaluation_bar.setSizePolicy(size_policy)
 
     def invoke_engine(self) -> None:
         """Invoke engine to play move."""
