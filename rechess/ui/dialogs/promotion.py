@@ -6,7 +6,7 @@ from rechess.utils import create_button, svg_icon
 
 
 class PieceType(IntEnum):
-    """Either pawn, knight, bishop, rook, or queen as type of piece."""
+    """Pawn, knight, bishop, rook, or queen as piece type."""
 
     Pawn = 1
     Knight = 2
@@ -16,7 +16,7 @@ class PieceType(IntEnum):
 
 
 class Turn(IntEnum):
-    """Either Black or White as player on turn."""
+    """Black or White as player on turn."""
 
     Black = 0
     White = 1
