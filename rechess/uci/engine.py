@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from chess import Move
-from chess.engine import EngineTerminatedError, Limit, PlayResult, Score, SimpleEngine
+from chess.engine import Limit, PlayResult, Score, SimpleEngine
 from PySide6.QtCore import QObject, Signal
 
 from rechess.utils import (
@@ -37,11 +37,8 @@ class Engine(QObject):
         if hasattr(self, "_engine"):
             self.quit()
 
-        try:
-            self._engine: SimpleEngine = SimpleEngine.popen_uci(path_to_file)
-            self._engine.configure(engine_configuration())
-        except EngineTerminatedError:
-            self.load_from_file_at(path_to_stockfish())
+        self._engine: SimpleEngine = SimpleEngine.popen_uci(path_to_file)
+        self._engine.configure(engine_configuration())
 
     def play_move(self) -> None:
         """Invoke engine to play move."""
