@@ -464,8 +464,6 @@ class MainWindow(QMainWindow):
         """Start new engine from file at `path_to_file`."""
         self.stop_analysis()
 
-        self._game.clear_arrow()
-
         self._engine.load_from_file_at(path_to_file)
         self._engine_name_label.setText(self._engine.name)
 
