@@ -31,7 +31,7 @@ class Engine(QObject):
         self.load_from_file_at(path_to_stockfish())
 
     def load_from_file_at(self, path_to_file: str) -> None:
-        """Load engine from file at `path_to_file` and return it."""
+        """Load engine from file at `path_to_file`."""
         delete_quarantine_attribute(path_to_file)
         make_executable(path_to_file)
 
