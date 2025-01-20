@@ -1,7 +1,8 @@
 from __future__ import annotations
+from contextlib import suppress
 
 from chess import Move
-from chess.engine import Limit, PlayResult, Score, SimpleEngine
+from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
 from PySide6.QtCore import QObject, Signal
 
 from rechess.utils import (
@@ -30,19 +31,16 @@ class Engine(QObject):
         self.load_from_file_at(path_to_stockfish())
 
     def load_from_file_at(self, path_to_file: str) -> None:
-        """Load engine from file at `path_to_file`."""
-        try:
-            delete_quarantine_attribute(path_to_file)
-            make_executable(path_to_file)
+        """Load engine from file at `path_to_file` and return it."""
+        delete_quarantine_attribute(path_to_file)
+        make_executable(path_to_file)
 
-            if hasattr(self, "_engine"):
-                self.quit()
+        with suppress(EngineError):
+            new_engine: SimpleEngine = SimpleEngine.popen_uci(path_to_file)
+            new_engine.configure(engine_configuration())
 
-            self._engine: SimpleEngine = SimpleEngine.popen_uci(path_to_file)
-            self._engine.configure(engine_configuration())
-
-        except Exception:
-            self.load_from_file_at(path_to_stockfish())
+            self.quit()
+            self._engine: SimpleEngine = new_engine
 
     def play_move(self) -> None:
         """Invoke engine to play move."""
@@ -79,7 +77,8 @@ class Engine(QObject):
 
     def quit(self) -> None:
         """Terminate engine's process."""
-        self._engine.quit()
+        if hasattr(self, "_engine"):
+            self._engine.quit()
 
     @property
     def name(self) -> str:
