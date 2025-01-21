@@ -82,21 +82,36 @@ def engine_configuration() -> dict[str, int]:
 
 
 def _settings() -> SettingsDict:
-    """Return all settings from settings file."""
+    """Return all settings from settings.json file."""
     with open("rechess/settings.json") as settings_file:
         return json.load(settings_file)
 
 
 @overload
-def setting_value(section: BoardSection, key: BoardKey) -> bool: ...
+def setting_value(section: BoardSection, key: BoardKey) -> bool:
+    ...
+
+
 @overload
-def setting_value(section: ClockSection, key: ClockKey) -> float: ...
+def setting_value(section: ClockSection, key: ClockKey) -> float:
+    ...
+
+
 @overload
-def setting_value(section: EngineSection, key: EngineKey) -> bool: ...
+def setting_value(section: EngineSection, key: EngineKey) -> bool:
+    ...
+
+
 @overload
-def setting_value(section: HumanSection, key: HumanKey) -> str: ...
+def setting_value(section: HumanSection, key: HumanKey) -> str:
+    ...
+
+
 @overload
-def setting_value(section: UiSection, key: StyleKey) -> str: ...
+def setting_value(section: UiSection, key: StyleKey) -> str:
+    ...
+
+
 def setting_value(section: SettingSection, key: SettingKey) -> SettingValue:
     """Return value of `key` from `section`."""
     settings_dict: SettingsDict = _settings()
@@ -104,19 +119,32 @@ def setting_value(section: SettingSection, key: SettingKey) -> SettingValue:
 
 
 @overload
-def set_setting_value(section: BoardSection, key: BoardKey, value: bool) -> None: ...
+def set_setting_value(section: BoardSection, key: BoardKey, value: bool) -> None:
+    ...
+
+
 @overload
-def set_setting_value(section: ClockSection, key: ClockKey, value: float) -> None: ...
+def set_setting_value(section: ClockSection, key: ClockKey, value: float) -> None:
+    ...
+
+
 @overload
-def set_setting_value(section: EngineSection, key: EngineKey, value: bool) -> None: ...
+def set_setting_value(section: EngineSection, key: EngineKey, value: bool) -> None:
+    ...
+
+
 @overload
-def set_setting_value(section: HumanSection, key: HumanKey, value: str) -> None: ...
+def set_setting_value(section: HumanSection, key: HumanKey, value: str) -> None:
+    ...
+
+
 @overload
-def set_setting_value(section: UiSection, key: StyleKey, value: str) -> None: ...
+def set_setting_value(section: UiSection, key: StyleKey, value: str) -> None:
+    ...
+
+
 def set_setting_value(
-    section: SettingSection,
-    key: SettingKey,
-    value: SettingValue,
+    section: SettingSection, key: SettingKey, value: SettingValue
 ) -> None:
     """Set `value` to `key` for `section`."""
     settings_dict: SettingsDict = _settings()
