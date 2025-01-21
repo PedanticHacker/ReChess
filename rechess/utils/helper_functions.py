@@ -3,7 +3,7 @@ import os
 import platform
 import stat
 import subprocess
-from typing import Callable, Literal, TypeAlias, overload
+from typing import Callable, Literal, overload
 
 from psutil import cpu_count, virtual_memory
 from PySide6.QtCore import QSize
@@ -11,23 +11,20 @@ from PySide6.QtGui import QAction, QColor, QIcon, QPixmap
 from PySide6.QtWidgets import QApplication, QPushButton
 
 
-PATH_TO_SETTINGS_FILE: str = "rechess/settings.json"
-
-
 type BoardSection = Literal["board"]
 type ClockSection = Literal["clock"]
 type EngineSection = Literal["engine"]
 type HumanSection = Literal["human"]
 type UiSection = Literal["ui"]
-type SettingSection = BoardSection | ClockSection | EngineSection | HumanSection | UiSection
 
 type BoardKey = Literal["orientation"]
 type ClockKey = Literal["time", "increment"]
 type EngineKey = Literal["is_white", "is_ponder_on"]
 type HumanKey = Literal["name"]
 type StyleKey = Literal["style"]
-type SettingKey = BoardKey | ClockKey | EngineKey | HumanKey | StyleKey
 
+type SettingSection = BoardSection | ClockSection | EngineSection | HumanSection | UiSection
+type SettingKey = BoardKey | ClockKey | EngineKey | HumanKey | StyleKey
 type SettingValue = bool | float | str
 type SettingsDict = dict[SettingSection, dict[SettingKey, SettingValue]]
 
@@ -86,7 +83,7 @@ def engine_configuration() -> dict[str, int]:
 
 def _settings() -> SettingsDict:
     """Return all settings from settings file."""
-    with open(PATH_TO_SETTINGS_FILE) as settings_file:
+    with open("rechess/settings.json") as settings_file:
         return json.load(settings_file)
 
 
@@ -125,19 +122,14 @@ def set_setting_value(
     settings_dict: SettingsDict = _settings()
     settings_dict[section][key] = value
 
-    with open(
-        PATH_TO_SETTINGS_FILE,
-        mode="w",
-        encoding="utf-8",
-        newline="\n",
-    ) as settings_file:
+    with open("rechess/settings.json", mode="w") as settings_file:
         json.dump(settings_dict, settings_file, indent=2)
         settings_file.write("\n")
 
 
 def find_opening(fen: str) -> tuple[str, str] | None:
     """Return ECO code and opening name based on `fen`."""
-    with open("rechess/openings.json", encoding="utf-8") as json_file:
+    with open("rechess/openings.json") as json_file:
         openings = json.load(json_file)
     return openings.get(fen)
 
