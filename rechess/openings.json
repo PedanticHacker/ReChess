@@ -35969,11 +35969,11 @@
   ],
   "rnbqkb1r/pp3ppp/2p1pn2/3p4/2PP4/4PN2/PP1N1PPP/R1BQKB1R b KQkq - 1 5": [
     "D30",
-    "Semi-Slav Defense: Quiet Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Quiet Variation"
   ],
   "r1bqkb1r/pp1n1ppp/2p1pn2/3p4/2PP4/4PN2/PP1N1PPP/R1BQKB1R w KQkq - 2 6": [
     "D30",
-    "Semi-Slav Defense: Quiet Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Quiet Variation"
   ],
   "rnbqk1nr/ppp2ppp/4p3/3p4/1bPP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 4": [
     "D31",
@@ -36029,7 +36029,7 @@
   ],
   "rnbqk1nr/ppp1bppp/4p3/8/2PPp3/2N2P2/PP4PP/R1BQKBNR b KQkq - 0 5": [
     "D31",
-    "Queen's Gambit Declined: Charousek Variation, Miladinovic Gambit"
+    "Queen's Gambit Declined: Charousek Variation, Miladinović Gambit"
   ],
   "rnbqkbnr/1pp2ppp/p3p3/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 4": [
     "D31",
@@ -36041,15 +36041,15 @@
   ],
   "rnbqk1nr/5ppp/2p1p3/pp6/PbpP4/2N1PN2/1P1B1PPP/R2QKB1R w KQkq - 0 8": [
     "D31",
-    "Queen's Gambit Declined: Semi-Slav, Abrahams Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Abrahams Variation"
   ],
   "rnb1k1nr/p4ppp/1qp1p3/1p6/PbpP4/2N1PN2/1P1B1PPP/R2QKB1R w KQkq - 2 8": [
     "D31",
-    "Queen's Gambit Declined: Semi-Slav, Junge Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Junge Variation"
   ],
   "rnb1k1nr/p3qppp/2p1p3/1p6/PbpP4/2N1PN2/1P1B1PPP/R2QKB1R w KQkq - 3 8": [
     "D31",
-    "Queen's Gambit Declined: Semi-Slav, Koomen Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Koomen Variation"
   ],
   "rnbq1rk1/ppp1bpp1/4pn1p/8/2pP3B/2N2N2/PP2PPPP/2RQKB1R w K - 0 8": [
     "D31",
@@ -36057,135 +36057,135 @@
   ],
   "rnbqkbnr/pp3ppp/2p1p3/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 4": [
     "D31",
-    "Semi-Slav Defense: Accelerated Move Order"
+    "Queen's Gambit Declined: Semi-Slav Defense, Accelerated Move Order"
   ],
   "rnbqkbnr/pp4pp/2p1p3/3p1p2/2PP2P1/2N1P3/PP3P1P/R1BQKBNR b KQkq - 0 5": [
     "D31",
-    "Semi-Slav Defense: Anti-Noteboom, Stonewall Variation, Portisch Gambit"
+    "Queen's Gambit Declined: Semi-Slav Defense, Anti-Noteboom Gambit, Stonewall Variation, Portisch Gambit"
   ],
   "rnbqkbnr/pp3ppp/2p1p3/8/2PPp3/2N2P2/PP4PP/R1BQKBNR b KQkq - 0 5": [
     "D31",
-    "Semi-Slav Defense: Gunderam Gambit"
+    "Queen's Gambit Declined: Semi-Slav Defense, Gunderam Gambit"
   ],
   "rnbqkbnr/pp3ppp/2p1p3/3p4/2PPP3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 4": [
     "D31",
-    "Semi-Slav Defense: Marshall Gambit"
+    "Queen's Gambit Declined: Semi-Slav Defense, Marshall Gambit"
   ],
   "rnbqk1nr/pp3ppp/2p1p3/8/1bPP4/2N5/PP3PPP/R1BQKBNR b KQkq - 2 6": [
     "D31",
-    "Semi-Slav Defense: Marshall Gambit, Forgotten Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Marshall Gambit, Forgotten Variation"
   ],
   "rnbqk1nr/pp3ppp/2p1p3/8/1bPPN3/8/PP1B1PPP/R2QKBNR b KQkq - 2 6": [
     "D31",
-    "Semi-Slav Defense: Marshall Gambit, Main Line"
+    "Queen's Gambit Declined: Semi-Slav Defense, Marshall Gambit, Main Line"
   ],
   "rnb1k1nr/pp3ppp/4p3/2B5/2P5/8/PP2BPqP/R2QK1NR w KQkq - 0 10": [
     "D31",
-    "Semi-Slav Defense: Marshall Gambit, Tolush Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Marshall Gambit, Tolush Variation"
   ],
   "rnbqkbnr/pp3ppp/2p1p3/8/2pP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 5": [
     "D31",
-    "Semi-Slav Defense: Noteboom Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Noteboom Variation"
   ],
   "rnbqk1nr/p4ppp/4p3/1p6/2pP4/2P1PN2/5PPP/R1BQKB1R w KQkq - 0 9": [
     "D31",
-    "Semi-Slav Defense: Noteboom Variation, Abrahams Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Noteboom Variation, Abrahams Variation"
   ],
   "rnbqkbnr/pp3ppp/2p1p3/8/2pP4/2N2NP1/PP2PP1P/R1BQKB1R b KQkq - 0 5": [
     "D31",
-    "Semi-Slav Defense: Noteboom Variation, Anti-Noteboom Gambit"
+    "Queen's Gambit Declined: Semi-Slav Defense, Noteboom Variation, Anti-Noteboom Gambit"
   ],
   "rnbqkbnr/pp3ppp/2p1p3/6B1/2pP4/2N2N2/PP2PPPP/R2QKB1R b KQkq - 1 5": [
     "D31",
-    "Semi-Slav Defense: Noteboom Variation, Anti-Noteboom Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Noteboom Variation, Anti-Noteboom Variation"
   ],
   "rnbqkbnr/pp4pp/2p1pp2/6B1/2pP4/2N2N2/PP2PPPP/R2QKB1R w KQkq - 0 6": [
     "D31",
-    "Semi-Slav Defense: Noteboom Variation, Anti-Noteboom Variation, Belyavsky Line"
+    "Queen's Gambit Declined: Semi-Slav Defense, Noteboom Variation, Anti-Noteboom Variation, Belyavsky Line"
   ],
   "rnbqkbnr/pp3ppp/2p1p3/3P4/3P4/2N5/PP2PPPP/R1BQKBNR b KQkq - 0 4": [
     "D31",
-    "Semi-Slav Defense: 4.cxd5"
+    "Queen's Gambit Declined: Semi-Slav Defense, 4.cxd5"
   ],
   "rnbqkbnr/pp3ppp/2p5/3p4/3P4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 5": [
     "D31",
-    "Semi-Slav Defense: 4.cxd5"
+    "Queen's Gambit Declined: Semi-Slav Defense, 4.cxd5"
   ],
   "rnbqkbnr/pp3ppp/2p5/3p4/3P1B2/2N5/PP2PPPP/R2QKBNR b KQkq - 1 5": [
     "D31",
-    "Semi-Slav Defense: 4.cxd5 exd5 5.Bf4"
+    "Queen's Gambit Declined: Semi-Slav Defense, 4.cxd5 exd5 5.Bf4"
   ],
   "rnbqkbnr/pp3ppp/2p5/3p4/3P4/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 1 5": [
     "D31",
-    "Semi-Slav Defense: 4.cxd5 exd5 5.Nf3"
+    "Queen's Gambit Declined: Semi-Slav Defense, 4.cxd5 exd5 5.Nf3"
   ],
   "rn1qkbnr/pp3ppp/2p5/3p1b2/3P4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 2 6": [
     "D31",
-    "Semi-Slav Defense: 4.cxd5 exd5 5.Nf3 Bf5"
+    "Queen's Gambit Declined: Semi-Slav Defense, 4.cxd5 exd5 5.Nf3 Bf5"
   ],
   "rnbqkbnr/pp3ppp/2p1p3/3p4/2PP4/2N1P3/PP3PPP/R1BQKBNR b KQkq - 0 4": [
     "D31",
-    "Semi-Slav Defense: 4.e3"
+    "Queen's Gambit Declined: Semi-Slav Defense, 4.e3"
   ],
   "rnbqkb1r/pp3ppp/2p1pn2/3p4/2PP4/2N1P3/PP3PPP/R1BQKBNR w KQkq - 1 5": [
     "D31",
-    "Semi-Slav Defense: 4.e3 Nf6"
+    "Queen's Gambit Declined: Semi-Slav Defense, 4.e3 Nf6"
   ],
   "rnbqkbnr/pp3ppp/2p1p3/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 1 4": [
     "D31",
-    "Semi-Slav Defense: 4.Nf3"
+    "Queen's Gambit Declined: Semi-Slav Defense, 4.Nf3"
   ],
   "rnbqk1nr/pp3ppp/2p1p3/3p4/1bPPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 1 5": [
     "D31",
-    "Semi-Slav Defense: Marshall Gambit, 4...Bb4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Marshall Gambit, 4...Bb4"
   ],
   "rnbqkbnr/pp3ppp/2p1p3/8/2PPp3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5": [
     "D31",
-    "Semi-Slav Defense: Marshall Gambit, 4...dxe4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Marshall Gambit, 4...dxe4"
   ],
   "rnbqkbnr/pp3ppp/2p1p3/8/2PPN3/8/PP3PPP/R1BQKBNR b KQkq - 0 5": [
     "D31",
-    "Semi-Slav Defense: Marshall Gambit, 5.Nxe4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Marshall Gambit, 5.Nxe4"
   ],
   "rnbqk1nr/pp3ppp/2p1p3/8/1bPPN3/8/PP3PPP/R1BQKBNR w KQkq - 1 6": [
     "D31",
-    "Semi-Slav Defense: Marshall Gambit, 5.Nxe4 Bb4+"
+    "Queen's Gambit Declined: Semi-Slav Defense, Marshall Gambit, 5.Nxe4 Bb4+"
   ],
   "rnbqkb1r/pp3ppp/2p1pn2/8/2PPN3/8/PP3PPP/R1BQKBNR w KQkq - 1 6": [
     "D31",
-    "Semi-Slav Defense: Marshall Gambit, 5.Nxe4 Nf6"
+    "Queen's Gambit Declined: Semi-Slav Defense, Marshall Gambit, 5.Nxe4 Nf6"
   ],
   "rnb1k1nr/pp3ppp/2p1p3/8/1BP1q3/8/PP2BPPP/R2QK1NR b KQkq - 1 8": [
     "D31",
-    "Semi-Slav Defense: Marshall Gambit, 8.Be2"
+    "Queen's Gambit Declined: Semi-Slav Defense, Marshall Gambit, 8.Be2"
   ],
   "r1b1k1nr/pp3ppp/n1p1p3/8/1BP1q3/8/PP2BPPP/R2QK1NR w KQkq - 2 9": [
     "D31",
-    "Semi-Slav Defense: Marshall Gambit, 8.Be2 Na6"
+    "Queen's Gambit Declined: Semi-Slav Defense, Marshall Gambit, 8.Be2 Na6"
   ],
   "rnb1k1nr/pp3ppp/2p1p3/8/1BP1q3/8/PP2NPPP/R2QKB1R b KQkq - 1 8": [
     "D31",
-    "Semi-Slav Defense: Marshall Gambit, 8.Ne2"
+    "Queen's Gambit Declined: Semi-Slav Defense, Marshall Gambit, 8.Ne2"
   ],
   "rnbqkbnr/pp3ppp/2p1p3/8/P1pP4/2N2N2/1P2PPPP/R1BQKB1R b KQkq - 0 5": [
     "D31",
-    "Semi-Slav Defense: Noteboom, 5.a4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Noteboom, 5.a4"
   ],
   "rnbqk1nr/p4ppp/2p1p3/1p6/PbpP4/2N1PN2/1P3PPP/R1BQKB1R w KQkq - 0 7": [
     "D31",
-    "Semi-Slav Defense: Noteboom, 5.a4 Bb4 6.e3 b5"
+    "Queen's Gambit Declined: Semi-Slav Defense, Noteboom, 5.a4 Bb4 6.e3 b5"
   ],
   "rn1qk1nr/1b3ppp/4p3/pp6/2pP4/1PB1PN2/5PPP/R2QKB1R w KQkq - 1 11": [
     "D31",
-    "Semi-Slav Defense: Noteboom, Abrahams, Main Line"
+    "Queen's Gambit Declined: Semi-Slav Defense, Noteboom, Abrahams, Main Line"
   ],
   "r2q1rk1/1b1n1ppp/4pn2/p7/1pPP4/3BPN2/1B3PPP/R2Q1RK1 w - - 6 15": [
     "D31",
-    "Semi-Slav Defense: Noteboom, Abrahams, Main Line, 14.O-O O-O"
+    "Queen's Gambit Declined: Semi-Slav Defense, Noteboom, Abrahams, Main Line, 14.O-O O-O"
   ],
   "rnb1k1nr/p3qppp/2p1p3/1p6/PbpP4/2N1PN2/1P1B1PPP/R2QKB1R w KQkq - 2 8": [
     "D31",
-    "Semi-Slav Defense: Noteboom, Koomen Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Noteboom, Koomen Variation"
   ],
   "rnbqkbnr/pp3ppp/4p3/2pP4/3P4/2N5/PP2PPPP/R1BQKBNR b KQkq - 0 4": [
     "D32",
@@ -37585,123 +37585,123 @@
   ],
   "rnbqkb1r/pp3pp1/2p1pn1p/3p4/2PP3B/2N2N2/PP2PPPP/R2QKB1R b KQkq - 1 6": [
     "D43",
-    "Semi-Slav Defense: Anti-Moscow Gambit"
+    "Queen's Gambit Declined: Semi-Slav Defense, Anti-Moscow Gambit"
   ],
   "rnbqkb1r/pp3ppp/2p1pn2/3p4/2PP4/2N2NP1/PP2PP1P/R1BQKB1R b KQkq - 0 5": [
     "D43",
-    "Semi-Slav Defense: 5.g3"
+    "Queen's Gambit Declined: Semi-Slav Defense, 5.g3"
   ],
   "rnbqkb1r/pp3ppp/2p1pn2/3p4/2PP4/1QN2N2/PP2PPPP/R1B1KB1R b KQkq - 1 5": [
     "D43",
-    "Semi-Slav Defense: 5.Qb3"
+    "Queen's Gambit Declined: Semi-Slav Defense, 5.Qb3"
   ],
   "rnbqkb1r/pp3ppp/2p1pn2/8/2QP4/2N2N2/PP2PPPP/R1B1KB1R b KQkq - 0 6": [
     "D43",
-    "Semi-Slav Defense: 5.Qb3 dxc4"
+    "Queen's Gambit Declined: Semi-Slav Defense, 5.Qb3 dxc4"
   ],
   "rnbqkb1r/pp3ppp/2p1pn2/3p4/2PP4/2NQ1N2/PP2PPPP/R1B1KB1R b KQkq - 1 5": [
     "D43",
-    "Semi-Slav Defense: 5.Qd3"
+    "Queen's Gambit Declined: Semi-Slav Defense, 5.Qd3"
   ],
   "rnbqkb1r/pp3ppp/2p1pn2/3p2B1/2PP4/2N2N2/PP2PPPP/R2QKB1R b KQkq - 1 5": [
     "D43",
-    "Semi-Slav Defense: Botvinnik (Anti-Meran)"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik (Anti-Meran)"
   ],
   "rnbqk2r/pp2bppp/2p1pn2/3p2B1/2PP4/2N2N2/PP2PPPP/R2QKB1R w KQkq - 2 6": [
     "D43",
-    "Semi-Slav Defense: Botvinnik, 5...Be7"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik, 5...Be7"
   ],
   "rnbqk2r/pp2bppp/2p1pn2/3p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R b KQkq - 0 6": [
     "D43",
-    "Semi-Slav Defense: Botvinnik, 5...Be7 6.e3"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik, 5...Be7 6.e3"
   ],
   "r1bqk2r/pp1nbppp/2p1pn2/3p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R w KQkq - 1 7": [
     "D43",
-    "Semi-Slav Defense: Botvinnik, 5...Be7 6.e3 Nbd7"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik, 5...Be7 6.e3 Nbd7"
   ],
   "r1bqk2r/pp1nbppp/2p1pn2/3p2B1/2PP4/2NBPN2/PP3PPP/R2QK2R b KQkq - 2 7": [
     "D43",
-    "Semi-Slav Defense: Botvinnik, 5...Be7 6.e3 Nbd7 7.Bd3"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik, 5...Be7 6.e3 Nbd7 7.Bd3"
   ],
   "rnbq1rk1/pp2bppp/2p1pn2/3p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R w KQ - 1 7": [
     "D43",
-    "Semi-Slav Defense: Botvinnik, 5...Be7 6.e3 O-O"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik, 5...Be7 6.e3 O-O"
   ],
   "rnbqkb1r/pp3pp1/2p1pn1p/3p2B1/2PP4/2N2N2/PP2PPPP/R2QKB1R w KQkq - 0 6": [
     "D43",
-    "Semi-Slav Defense: Moscow Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Moscow Variation"
   ],
   "rnbqk2r/pp2bpp1/2p1pn1p/3p4/2PP3B/2N2N2/PP2PPPP/R2QKB1R w KQkq - 2 7": [
     "D43",
-    "Semi-Slav Defense: Moscow, 6.Bh4 Be7"
+    "Queen's Gambit Declined: Semi-Slav Defense, Moscow, 6.Bh4 Be7"
   ],
   "rnbq1rk1/pp2bpp1/2p1pn1p/3p4/2PP3B/2N1PN2/PP3PPP/R2QKB1R w KQ - 1 8": [
     "D43",
-    "Semi-Slav Defense: Moscow, 6.Bh4 Be7 7.e3 O-O"
+    "Queen's Gambit Declined: Semi-Slav Defense, Moscow, 6.Bh4 Be7 7.e3 O-O"
   ],
   "rnbqkb1r/pp3pp1/2p1pn1p/8/2pP3B/2N2N2/PP2PPPP/R2QKB1R w KQkq - 0 7": [
     "D43",
-    "Semi-Slav Defense: Moscow, 6.Bh4 Gambit Accepted"
+    "Queen's Gambit Declined: Semi-Slav Defense, Moscow, 6.Bh4 Gambit Accepted"
   ],
   "rnbqkb1r/pp3pp1/2p1pn1p/8/2pPP2B/2N2N2/PP3PPP/R2QKB1R b KQkq - 0 7": [
     "D43",
-    "Semi-Slav Defense: Moscow, 6.Bh4 Gambit, 7.e4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Moscow, 6.Bh4 Gambit, 7.e4"
   ],
   "rnbqkb1r/p4p2/2p1pn1p/1p4p1/2pPP3/2N2NB1/PP2BPPP/R2QK2R b KQkq - 1 9": [
     "D43",
-    "Semi-Slav Defense: Moscow, 6.Bh4 Gambit, Main Line"
+    "Queen's Gambit Declined: Semi-Slav Defense, Moscow, 6.Bh4 Gambit, Main Line"
   ],
   "rn1qkb1r/pb3p2/2p1pn1p/1p4p1/2pPP3/2N2NB1/PP2BPPP/R2QK2R w KQkq - 2 10": [
     "D43",
-    "Semi-Slav Defense: Moscow, 6.Bh4 Gambit, Main Line, 9...Bb7"
+    "Queen's Gambit Declined: Semi-Slav Defense, Moscow, 6.Bh4 Gambit, Main Line, 9...Bb7"
   ],
   "rnbqkb1r/pp3pp1/2p1pB1p/3p4/2PP4/2N2N2/PP2PPPP/R2QKB1R b KQkq - 0 6": [
     "D43",
-    "Semi-Slav Defense: Moscow, 6.Bxf6"
+    "Queen's Gambit Declined: Semi-Slav Defense, Moscow, 6.Bxf6"
   ],
   "rnb1kb1r/pp3pp1/2p1pq1p/3p4/2PP4/2N1PN2/PP3PPP/R2QKB1R b KQkq - 0 7": [
     "D43",
-    "Semi-Slav Defense: Moscow, 7.e3"
+    "Queen's Gambit Declined: Semi-Slav Defense, Moscow, 7.e3"
   ],
   "r1b1kb1r/pp1n1pp1/2p1pq1p/3p4/2PP4/2N1PN2/PP3PPP/R2QKB1R w KQkq - 1 8": [
     "D43",
-    "Semi-Slav Defense: Moscow, 7.e3 Nd7"
+    "Queen's Gambit Declined: Semi-Slav Defense, Moscow, 7.e3 Nd7"
   ],
   "r1b1kb1r/pp1n1pp1/2p1pq1p/3p4/2PP4/2NBPN2/PP3PPP/R2QK2R b KQkq - 2 8": [
     "D43",
-    "Semi-Slav Defense: Moscow, 7.e3 Nd7 8.Bd3"
+    "Queen's Gambit Declined: Semi-Slav Defense, Moscow, 7.e3 Nd7 8.Bd3"
   ],
   "r1b1kb1r/pp1n1pp1/2p1pq1p/8/2pP4/2NBPN2/PP3PPP/R2QK2R w KQkq - 0 9": [
     "D43",
-    "Semi-Slav Defense: Moscow, 7.e3 Nd7 8.Bd3 dxc4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Moscow, 7.e3 Nd7 8.Bd3 dxc4"
   ],
   "rnb1kb1r/pp3pp1/2p1pq1p/3p4/2PP4/2N2NP1/PP2PP1P/R2QKB1R b KQkq - 0 7": [
     "D43",
-    "Semi-Slav Defense: Moscow, 7.g3"
+    "Queen's Gambit Declined: Semi-Slav Defense, Moscow, 7.g3"
   ],
   "rnb1kb1r/pp3pp1/2p1pq1p/3p4/2PP4/2N2N2/PPQ1PPPP/R3KB1R b KQkq - 1 7": [
     "D43",
-    "Semi-Slav Defense: Moscow, 7.Qc2"
+    "Queen's Gambit Declined: Semi-Slav Defense, Moscow, 7.Qc2"
   ],
   "r1b1kb1r/pp1n1p2/2p1pqpp/8/2BP4/2N1PN2/PP3PPP/R2QK2R w KQkq - 0 10": [
     "D43",
-    "Semi-Slav Defense: Moscow, Main Line"
+    "Queen's Gambit Declined: Semi-Slav Defense, Moscow, Main Line"
   ],
   "r1b1kb1r/pp1n1p2/2p1pqpp/8/2BP4/2N1PN2/PP3PPP/R2Q1RK1 b kq - 1 10": [
     "D43",
-    "Semi-Slav Defense: Moscow, Main Line"
+    "Queen's Gambit Declined: Semi-Slav Defense, Moscow, Main Line"
   ],
   "r1b1k2r/pp1n1pb1/2p1pqpp/8/2BP4/2N1PN2/PP3PPP/R2Q1RK1 w kq - 2 11": [
     "D43",
-    "Semi-Slav Defense: Moscow, Main Line"
+    "Queen's Gambit Declined: Semi-Slav Defense, Moscow, Main Line"
   ],
   "r1b1k2r/pp1n1pb1/2p1pqpp/8/1PBP4/2N1PN2/P4PPP/R2Q1RK1 b kq - 0 11": [
     "D43",
-    "Semi-Slav Defense: Moscow, Main Line, 11.b4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Moscow, Main Line, 11.b4"
   ],
   "r1b1k2r/pp1n1pb1/2p1pqpp/8/2BP4/2N1PN2/PP3PPP/2RQ1RK1 b kq - 3 11": [
     "D43",
-    "Semi-Slav Defense: Moscow, Main Line, 11.Rc1"
+    "Queen's Gambit Declined: Semi-Slav Defense, Moscow, Main Line, 11.Rc1"
   ],
   "rnbqkb1r/pp3ppp/2p1pn2/6B1/2pP4/2N2N2/PP2PPPP/R2QKB1R w KQkq - 0 6": [
     "D44",
@@ -37709,683 +37709,683 @@
   ],
   "rnbqkb1r/pp3ppp/2p1pn2/6B1/2pPP3/2N2N2/PP3PPP/R2QKB1R b KQkq - 0 6": [
     "D44",
-    "Semi-Slav Defense: Botvinnik Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik Variation"
   ],
   "rnbqkb1r/p4p2/2p1pn1p/1p2P1N1/2pP3B/2N5/PP3PPP/R2QKB1R b KQkq - 0 9": [
     "D44",
-    "Semi-Slav Defense: Botvinnik Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik Variation"
   ],
   "rnbqkb1r/p4p2/2p1p2p/1p1nP1N1/2pP3B/2N5/PP3PPP/R2QKB1R w KQkq - 1 10": [
     "D44",
-    "Semi-Slav Defense: Botvinnik Variation, Alatortsev System"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik Variation, Alatortsev System"
   ],
   "rnbqkb1r/p4p2/2p1pP1p/1p2N3/2pP3p/2N5/PP3PPP/R2QKB1R b KQkq - 1 10": [
     "D44",
-    "Semi-Slav Defense: Botvinnik Variation, Ekstrom Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik Variation, Ekstrom Variation"
   ],
   "r1bqkb1r/p2n1p2/2p1pn2/1p2P1B1/2pP4/2N3P1/PP3P1P/R2QKB1R b KQkq - 0 11": [
     "D44",
-    "Semi-Slav Defense: Botvinnik Variation, Lilienthal Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik Variation, Lilienthal Variation"
   ],
   "r1bqkb1r/p2n1p2/2p1pn2/1p2P1B1/2pP4/2N2Q2/PP3PPP/R3KB1R b KQkq - 2 11": [
     "D44",
-    "Semi-Slav Defense: Botvinnik Variation, Szabo Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik Variation, Szabo Variation"
   ],
   "rnbqkb1r/pp3ppp/2p1pn2/6B1/P1pP4/2N2N2/1P2PPPP/R2QKB1R b KQkq - 0 6": [
     "D44",
-    "Semi-Slav Defense: Botvinnik, 6.a4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik, 6.a4"
   ],
   "rnbqkb1r/p4ppp/2p1pn2/1p4B1/2pPP3/2N2N2/PP3PPP/R2QKB1R w KQkq - 0 7": [
     "D44",
-    "Semi-Slav Defense: Botvinnik, 6.e4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik, 6.e4"
   ],
   "rnbqkb1r/p4ppp/2p1pn2/1p4B1/P1pPP3/2N2N2/1P3PPP/R2QKB1R b KQkq - 0 7": [
     "D44",
-    "Semi-Slav Defense: Botvinnik, 7.a4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik, 7.a4"
   ],
   "rnbqkb1r/p4ppp/2p1pn2/1p2P1B1/2pP4/2N2N2/PP3PPP/R2QKB1R b KQkq - 0 7": [
     "D44",
-    "Semi-Slav Defense: Botvinnik, 7.e5"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik, 7.e5"
   ],
   "rnbqkb1r/p4p2/2p1pP1p/1p4p1/2pP3B/2N2N2/PP3PPP/R2QKB1R b KQkq - 0 9": [
     "D44",
-    "Semi-Slav Defense: Botvinnik, 9.exf6"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik, 9.exf6"
   ],
   "rnbqkb1r/p4p2/2p1pn2/1p2P1p1/2pP3B/2N5/PP3PPP/R2QKB1R w KQkq - 0 10": [
     "D44",
-    "Semi-Slav Defense: Botvinnik, 9.Nxg5"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik, 9.Nxg5"
   ],
   "r2qkb1r/pb1n1p2/2p1pn2/1p2P1B1/2pP4/2N3P1/PP3P1P/R2QKB1R w KQkq - 1 12": [
     "D44",
-    "Semi-Slav Defense: Botvinnik, Lilienthal, 11...Bb7"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik, Lilienthal, 11...Bb7"
   ],
   "r1b1kb1r/p2n1p2/2p1pn2/qp2P1B1/2pP4/2N3P1/PP3P1P/R2QKB1R w KQkq - 1 12": [
     "D44",
-    "Semi-Slav Defense: Botvinnik, Lilienthal, 11...Qa5"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik, Lilienthal, 11...Qa5"
   ],
   "r1bqkb1r/p2n1p2/2p1pP2/1p4B1/2pP4/2N5/PP3PPP/R2QKB1R b KQkq - 0 11": [
     "D44",
-    "Semi-Slav Defense: Botvinnik, Main Line"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik, Main Line"
   ],
   "r2qkb1r/pb1n1p2/2p1pP2/1p4B1/2pP4/2N3P1/PP3P1P/R2QKB1R b KQkq - 0 12": [
     "D44",
-    "Semi-Slav Defense: Botvinnik, Main Line, 12.g3"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik, Main Line, 12.g3"
   ],
   "r2qkb1r/pb1n1p2/4pP2/1pp3B1/2pP4/2N3P1/PP3P1P/R2QKB1R w KQkq - 0 13": [
     "D44",
-    "Semi-Slav Defense: Botvinnik, Main Line, 12.g3 c5"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik, Main Line, 12.g3 c5"
   ],
   "r3kb1r/pb1n1p2/1q2pP2/1ppP2B1/2p5/2N3P1/PP3P1P/R2QKB1R w KQkq - 1 14": [
     "D44",
-    "Semi-Slav Defense: Botvinnik, Main Line, 12.g3 c5 13.d5 Qb6"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik, Main Line, 12.g3 c5 13.d5 Qb6"
   ],
   "rnbqkb1r/1p3ppp/p1p1pn2/3p4/2PP4/2N1PN2/PP3PPP/R1BQKB1R w KQkq - 0 6": [
     "D45",
-    "Semi-Slav Defense: Accelerated Meran Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Accelerated Meran Variation"
   ],
   "rnbqkb1r/pp3ppp/2p1pn2/3p4/2PP4/2N1PN2/PP3PPP/R1BQKB1R b KQkq - 1 5": [
     "D45",
-    "Semi-Slav Defense: Main Line"
+    "Queen's Gambit Declined: Semi-Slav Defense, Main Line"
   ],
   "r1bqkb1r/pp1n1ppp/2p1pn2/3p4/2PP4/2N1PN2/PP3PPP/R1BQKB1R w KQkq - 2 6": [
     "D45",
-    "Semi-Slav Defense: Normal Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Normal Variation"
   ],
   "r1bqkb1r/pp1n1ppp/2p1pn2/3pN3/2PP4/2N1P3/PP3PPP/R1BQKB1R b KQkq - 2 6": [
     "D45",
-    "Semi-Slav Defense: Rubinstein System"
+    "Queen's Gambit Declined: Semi-Slav Defense, Rubinstein System"
   ],
   "r1bqkb1r/pp1n1ppp/2p1pn2/3p4/2PP4/2N1PN2/PPQ2PPP/R1B1KB1R b KQkq - 3 6": [
     "D45",
-    "Semi-Slav Defense: Stoltz Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Stoltz Variation"
   ],
   "r1bqk2r/pp1n1ppp/2pbpn2/3p4/2PPP3/2N2N2/PPQ2PPP/R1B1KB1R b KQkq - 0 7": [
     "D45",
-    "Semi-Slav Defense: Stoltz Variation, Center Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Stoltz Variation, Center Variation"
   ],
   "r1bqk2r/pp1n1ppp/2pb4/4P3/2P1Q3/5N2/PP3PPP/R1B1KB1R b KQkq - 0 10": [
     "D45",
-    "Semi-Slav Defense: Stoltz Variation, Center Variation, Mikhalchishin Line"
+    "Queen's Gambit Declined: Semi-Slav Defense, Stoltz Variation, Center Variation, Mikhalchishin Line"
   ],
   "r1bqk2r/pp1n1ppp/2pbpn2/3p4/2PP2P1/2N1PN2/PPQ2P1P/R1B1KB1R b KQkq - 0 7": [
     "D45",
-    "Semi-Slav Defense: Stoltz Variation, Shabalov Attack"
+    "Queen's Gambit Declined: Semi-Slav Defense, Stoltz Variation, Shabalov Attack"
   ],
   "rnbqkb1r/pp4pp/2p1p3/3p1p2/2PPn3/2NBPN2/PP3PPP/R1BQK2R w KQkq - 0 7": [
     "D45",
-    "Semi-Slav Defense: Stonewall Defense"
+    "Queen's Gambit Declined: Semi-Slav Defense, Stonewall Defense"
   ],
   "rnbqkb1r/pp3ppp/2p1pn2/3p4/2PP4/2N1PN2/PP3PPP/R1BQKB1R b KQkq - 0 5": [
     "D45",
-    "Semi-Slav Defense: 5.e3"
+    "Queen's Gambit Declined: Semi-Slav Defense, 5.e3"
   ],
   "rnbqk2r/pp3ppp/2pbpn2/3p4/2PP4/2N1PN2/PP3PPP/R1BQKB1R w KQkq - 1 6": [
     "D45",
-    "Semi-Slav Defense: 5.e3 Bd6"
+    "Queen's Gambit Declined: Semi-Slav Defense, 5.e3 Bd6"
   ],
   "rnbqk2r/pp2bppp/2p1pn2/3p4/2PP4/2N1PN2/PP3PPP/R1BQKB1R w KQkq - 1 6": [
     "D45",
-    "Semi-Slav Defense: 5.e3 Be7"
+    "Queen's Gambit Declined: Semi-Slav Defense, 5.e3 Be7"
   ],
   "r1bqkb1r/pp1n1ppp/2p1pn2/3p4/2PP4/2N1PN2/PP3PPP/R1BQKB1R w KQkq - 1 6": [
     "D45",
-    "Semi-Slav Defense: 5.e3 Nbd7"
+    "Queen's Gambit Declined: Semi-Slav Defense, 5.e3 Nbd7"
   ],
   "rnbqkb1r/pp3ppp/2p1p3/3p4/2PPn3/2N1PN2/PP3PPP/R1BQKB1R w KQkq - 1 6": [
     "D45",
-    "Semi-Slav Defense: 5.e3 Ne4"
+    "Queen's Gambit Declined: Semi-Slav Defense, 5.e3 Ne4"
   ],
   "r1bqkb1r/pp1n1ppp/2p1pn2/3p4/2PP4/P1N1PN2/1P3PPP/R1BQKB1R b KQkq - 0 6": [
     "D45",
-    "Semi-Slav Defense: 6.a3"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.a3"
   ],
   "r1bqkb1r/pp1n1ppp/2p1pn2/3p4/2PP4/2N1PN2/PPQ2PPP/R1B1KB1R b KQkq - 2 6": [
     "D45",
-    "Semi-Slav Defense: 6.Qc2"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Qc2"
   ],
   "r1bqkb1r/p2n1ppp/1pp1pn2/3p4/2PP4/2N1PN2/PPQ2PPP/R1B1KB1R w KQkq - 0 7": [
     "D45",
-    "Semi-Slav Defense: 6.Qc2 b6"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Qc2 b6"
   ],
   "r1bqk2r/pp1n1ppp/2pbpn2/3p4/2PP4/2N1PN2/PPQ2PPP/R1B1KB1R w KQkq - 3 7": [
     "D45",
-    "Semi-Slav Defense: 6.Qc2 Bd6"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Qc2 Bd6"
   ],
   "r1bqk2r/pp1n1ppp/2pbpn2/3p4/2PP4/1PN1PN2/P1Q2PPP/R1B1KB1R b KQkq - 0 7": [
     "D45",
-    "Semi-Slav Defense: 6.Qc2 Bd6 7.b3"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Qc2 Bd6 7.b3"
   ],
   "r1bq1rk1/pp1n1ppp/2pbpn2/3p4/2PP4/1PN1PN2/P1Q2PPP/R1B1KB1R w KQ - 1 8": [
     "D45",
-    "Semi-Slav Defense: 6.Qc2 Bd6 7.b3 O-O"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Qc2 Bd6 7.b3 O-O"
   ],
   "r1bq1rk1/pp1n1ppp/2pbpn2/3p4/2PP4/1PN1PN2/PBQ2PPP/R3KB1R b KQ - 2 8": [
     "D45",
-    "Semi-Slav Defense: 6.Qc2 Bd6 7.b3 O-O 8.Bb2"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Qc2 Bd6 7.b3 O-O 8.Bb2"
   ],
   "r1bq1rk1/pp1n1ppp/2pbpn2/3p4/2PP4/1PN1PN2/P1Q1BPPP/R1B1K2R b KQ - 2 8": [
     "D45",
-    "Semi-Slav Defense: 6.Qc2 Bd6 7.b3 O-O 8.Be2"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Qc2 Bd6 7.b3 O-O 8.Be2"
   ],
   "r1bq1rk1/p2n1ppp/1ppbpn2/3p4/2PP4/1PN1PN2/P1Q1BPPP/R1B1K2R w KQ - 0 9": [
     "D45",
-    "Semi-Slav Defense: 6.Qc2 Bd6 7.b3 O-O 8.Be2 b6"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Qc2 Bd6 7.b3 O-O 8.Be2 b6"
   ],
   "r1bqr1k1/pp1n1ppp/2pbpn2/3p4/2PP4/1PN1PN2/P1Q1BPPP/R1B1K2R w KQ - 3 9": [
     "D45",
-    "Semi-Slav Defense: 6.Qc2 Bd6 7.b3 O-O 8.Be2 Re8"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Qc2 Bd6 7.b3 O-O 8.Be2 Re8"
   ],
   "r1bqk2r/pp1n1ppp/2pbpn2/3p4/2PP4/2N1PN2/PPQB1PPP/R3KB1R b KQkq - 4 7": [
     "D45",
-    "Semi-Slav Defense: 6.Qc2 Bd6 7.Bd2"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Qc2 Bd6 7.Bd2"
   ],
   "r1bqk2r/pp1n1ppp/2pbpn2/3p4/2PP4/2N1PN2/PPQ1BPPP/R1B1K2R b KQkq - 4 7": [
     "D45",
-    "Semi-Slav Defense: 6.Qc2 Bd6 7.Be2"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Qc2 Bd6 7.Be2"
   ],
   "r1bq1rk1/pp1n1ppp/2pbpn2/3p4/2PP4/2N1PN2/PPQ1BPPP/R1B2RK1 b - - 6 8": [
     "D45",
-    "Semi-Slav Defense: 6.Qc2 Bd6 7.Be2 O-O 8.O-O"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Qc2 Bd6 7.Be2 O-O 8.O-O"
   ],
   "r1bq1rk1/pp1n1ppp/2pb1n2/3pp3/2PP4/2N1PN2/PPQ1BPPP/R1B2RK1 w - - 0 9": [
     "D45",
-    "Semi-Slav Defense: 6.Qc2 Bd6 7.Be2 O-O 8.O-O e5"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Qc2 Bd6 7.Be2 O-O 8.O-O e5"
   ],
   "r1b2rk1/pp1nqppp/2pbpn2/3p4/2PP4/2N1PN2/PPQ1BPPP/R1B2RK1 w - - 7 9": [
     "D45",
-    "Semi-Slav Defense: 6.Qc2 Bd6 7.Be2 O-O 8.O-O Qe7"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Qc2 Bd6 7.Be2 O-O 8.O-O Qe7"
   ],
   "r1bqr1k1/pp1n1ppp/2pbpn2/3p4/2PP4/2N1PN2/PPQ1BPPP/R1B2RK1 w - - 7 9": [
     "D45",
-    "Semi-Slav Defense: 6.Qc2 Bd6 7.Be2 O-O 8.O-O Re8"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Qc2 Bd6 7.Be2 O-O 8.O-O Re8"
   ],
   "r1bqk2r/pp1n1ppp/2p1pn2/3p4/1bPP2P1/2N1PN2/PPQ2P1P/R1B1KB1R w KQkq - 1 8": [
     "D45",
-    "Semi-Slav Defense: 6.Qc2 Bd6 7.g4 Bb4"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Qc2 Bd6 7.g4 Bb4"
   ],
   "r1bqk2r/pp1n1ppp/2pbpn2/8/2pP2P1/2N1PN2/PPQ2P1P/R1B1KB1R w KQkq - 0 8": [
     "D45",
-    "Semi-Slav Defense: 6.Qc2 Bd6 7.g4 dxc4"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Qc2 Bd6 7.g4 dxc4"
   ],
   "r1bqk2r/pp1n1pp1/2pbpn1p/3p4/2PP2P1/2N1PN2/PPQ2P1P/R1B1KB1R w KQkq - 0 8": [
     "D45",
-    "Semi-Slav Defense: 6.Qc2 Bd6 7.g4 h6"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Qc2 Bd6 7.g4 h6"
   ],
   "r1bqk2r/pp1n1ppp/2pbp3/3p4/2PP2n1/2N1PN2/PPQ2P1P/R1B1KB1R w KQkq - 0 8": [
     "D45",
-    "Semi-Slav Defense: 6.Qc2 Bd6 7.g4 Nxg4"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Qc2 Bd6 7.g4 Nxg4"
   ],
   "r1bqk2r/pp1nbppp/2p1pn2/3p4/2PP4/2N1PN2/PPQ2PPP/R1B1KB1R w KQkq - 3 7": [
     "D45",
-    "Semi-Slav Defense: 6.Qc2 Be7"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Qc2 Be7"
   ],
   "r1bqk2r/pp1nbppp/2p1pn2/3p4/2PP4/2NBPN2/PP3PPP/R1BQK2R w KQkq - 4 7": [
     "D46",
-    "Semi-Slav Defense: Bogoljubov Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Bogoljubov Variation"
   ],
   "r1bqk2r/pp1n1ppp/2pbpn2/3p4/2PP4/2NBPN2/PP3PPP/R1BQK2R w KQkq - 4 7": [
     "D46",
-    "Semi-Slav Defense: Chigorin Defense"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin Defense"
   ],
   "r1bqkb1r/pp1n1ppp/2p1pn2/3p4/2PP4/2NBPN2/PP3PPP/R1BQK2R b KQkq - 3 6": [
     "D46",
-    "Semi-Slav Defense: Main Line"
+    "Queen's Gambit Declined: Semi-Slav Defense, Main Line"
   ],
   "r1bqk2r/pp1n1ppp/2p1pn2/3p4/1bPP4/2NBPN2/PP3PPP/R1BQK2R w KQkq - 4 7": [
     "D46",
-    "Semi-Slav Defense: Romih Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Romih Variation"
   ],
   "r1bqkb1r/pp1n1ppp/2p1pn2/3p4/2PP4/2NBPN2/PP3PPP/R1BQK2R b KQkq - 2 6": [
     "D46",
-    "Semi-Slav Defense: 6.Bd3"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Bd3"
   ],
   "r1bqkb1r/1p1n1ppp/p1p1pn2/3p4/2PP4/2NBPN2/PP3PPP/R1BQK2R w KQkq - 0 7": [
     "D46",
-    "Semi-Slav Defense: 6.Bd3 a6"
+    "Queen's Gambit Declined: Semi-Slav Defense, 6.Bd3 a6"
   ],
   "r1bqk2r/pp1nbppp/2p1pn2/3p4/2PP4/2NBPN2/PP3PPP/R1BQK2R w KQkq - 3 7": [
     "D46",
-    "Semi-Slav Defense: Bogoljubow Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Bogoljubow Variation"
   ],
   "r1bqk2r/pp1nbppp/2p1pn2/3p4/2PP4/2NBPN2/PP3PPP/R1BQ1RK1 b kq - 4 7": [
     "D46",
-    "Semi-Slav Defense: Bogoljubow, 7.O-O"
+    "Queen's Gambit Declined: Semi-Slav Defense, Bogoljubow, 7.O-O"
   ],
   "r1bq1rk1/pp1nbppp/2p1pn2/3p4/2PP4/2NBPN2/PP3PPP/R1BQ1RK1 w - - 5 8": [
     "D46",
-    "Semi-Slav Defense: Bogoljubow, 7.O-O O-O"
+    "Queen's Gambit Declined: Semi-Slav Defense, Bogoljubow, 7.O-O O-O"
   ],
   "r1bq1rk1/pp1nbppp/2p1pn2/3p4/2PP4/1PNBPN2/P4PPP/R1BQ1RK1 b - - 0 8": [
     "D46",
-    "Semi-Slav Defense: Bogoljubow, 7.O-O O-O 8.b3"
+    "Queen's Gambit Declined: Semi-Slav Defense, Bogoljubow, 7.O-O O-O 8.b3"
   ],
   "r1bqk2r/pp1n1ppp/2pbpn2/3p4/2PP4/2NBPN2/PP3PPP/R1BQK2R w KQkq - 3 7": [
     "D46",
-    "Semi-Slav Defense: Chigorin Defense"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin Defense"
   ],
   "r1bqk2r/pp1n1ppp/2pbpn2/3p4/2PPP3/2NB1N2/PP3PPP/R1BQK2R b KQkq - 0 7": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.e4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.e4"
   ],
   "r1bqk2r/pp1n1ppp/2pbpn2/8/2PPN3/3B1N2/PP3PPP/R1BQK2R b KQkq - 0 8": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.e4 dxe4 8.Nxe4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.e4 dxe4 8.Nxe4"
   ],
   "r1bqk2r/pp1n1ppp/2pbpn2/3p4/2PP4/2NBPN2/PP3PPP/R1BQ1RK1 b kq - 4 7": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.O-O"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.O-O"
   ],
   "r1bq1rk1/pp1n1ppp/2pbpn2/3p4/2PP4/2NBPN2/PP3PPP/R1BQ1RK1 w - - 5 8": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.O-O O-O"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.O-O O-O"
   ],
   "r1bq1rk1/pp1n1ppp/2pbpn2/3p4/2PPP3/2NB1N2/PP3PPP/R1BQ1RK1 b - - 0 8": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.O-O O-O 8.e4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.O-O O-O 8.e4"
   ],
   "r1bq1rk1/pp1n1ppp/2pbpn2/8/2pPP3/2NB1N2/PP3PPP/R1BQ1RK1 w - - 0 9": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.O-O O-O 8.e4 dxc4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.O-O O-O 8.e4 dxc4"
   ],
   "r1bq1rk1/pp1n1ppp/2pbpn2/8/2BPP3/2N2N2/PP3PPP/R1BQ1RK1 b - - 0 9": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.O-O O-O 8.e4 dxc4 9.Bxc4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.O-O O-O 8.e4 dxc4 9.Bxc4"
   ],
   "r1bq1rk1/pp1n1ppp/2pb1n2/4p3/2BPP3/2N2N2/PP3PPP/R1BQ1RK1 w - - 0 10": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.O-O O-O 8.e4 dxc4 9.Bxc4 e5"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.O-O O-O 8.e4 dxc4 9.Bxc4 e5"
   ],
   "r1bqk2r/pp1n1ppp/2pbpn2/3p4/2PP4/2NBPN2/PPQ2PPP/R1B1K2R b KQkq - 4 7": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.Qc2"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.Qc2"
   ],
   "r1bqk2r/pp1n1ppp/2pbpn2/8/2pP4/2NBPN2/PPQ2PPP/R1B1K2R w KQkq - 0 8": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.Qc2 dxc4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.Qc2 dxc4"
   ],
   "r1bqk2r/pp1n1ppp/2pbpn2/8/2BP4/2N1PN2/PPQ2PPP/R1B1K2R b KQkq - 0 8": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.Qc2 dxc4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.Qc2 dxc4"
   ],
   "r1bq1rk1/pp1n1ppp/2pbpn2/8/2BP4/2N1PN2/PPQ2PPP/R1B2RK1 b - - 0 9": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.Qc2 Main Line"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.Qc2 Main Line"
   ],
   "r1bq1rk1/1p1n1ppp/p1pbpn2/8/2BP4/2N1PN2/PPQ2PPP/R1B2RK1 w - - 0 10": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.Qc2 Main Line, 9...a6"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.Qc2 Main Line, 9...a6"
   ],
   "r1bq1rk1/1p1n1ppp/p1pbpn2/8/2BP4/2N1PN2/PPQ2PPP/R1BR2K1 b - - 1 10": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.Qc2 Main Line, 9...a6 10.Rd1"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.Qc2 Main Line, 9...a6 10.Rd1"
   ],
   "r1bq1rk1/3n1ppp/p1pbpn2/1p6/2BP4/2N1PN2/PPQ2PPP/R1BR2K1 w - - 0 11": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.Qc2 Main Line, 9...a6 10.Rd1 b5"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.Qc2 Main Line, 9...a6 10.Rd1 b5"
   ],
   "r1bq1rk1/p2n1ppp/2pbpn2/1p6/2BP4/2N1PN2/PPQ2PPP/R1B2RK1 w - - 0 10": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.Qc2 Main Line, 9...b5"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.Qc2 Main Line, 9...b5"
   ],
   "r1bq1rk1/p2n1ppp/2pbpn2/1p6/3P4/2N1PN2/PPQ1BPPP/R1B2RK1 b - - 1 10": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.Qc2 Main Line, 9...b5 10.Be2"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.Qc2 Main Line, 9...b5 10.Be2"
   ],
   "r2q1rk1/pb1n1ppp/2pbpn2/1p6/3P4/2N1PN2/PPQ1BPPP/R1B2RK1 w - - 2 11": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.Qc2 Main Line, 9...b5 10.Be2 Bb7"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.Qc2 Main Line, 9...b5 10.Be2 Bb7"
   ],
   "r2q1rk1/pb1n1ppp/2pbpn2/1p6/3P4/2N1PN2/PPQ1BPPP/R1BR2K1 b - - 3 11": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.Qc2 Main Line, 9...b5 10.Be2 Bb7 11.Rd1"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.Qc2 Main Line, 9...b5 10.Be2 Bb7 11.Rd1"
   ],
   "r1bq1rk1/pp1n1ppp/2pb1n2/4p3/2BP4/2N1PN2/PPQ2PPP/R1B2RK1 w - - 0 10": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.Qc2 Main Line, 9...e5"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.Qc2 Main Line, 9...e5"
   ],
   "r1b2rk1/pp1nqppp/2pbpn2/8/2BP4/2N1PN2/PPQ2PPP/R1B2RK1 w - - 1 10": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.Qc2 Main Line, 9...Qe7"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.Qc2 Main Line, 9...Qe7"
   ],
   "r1b2rk1/pp1nqppp/2pbpn2/8/2BP4/P1N1PN2/1PQ2PPP/R1B2RK1 b - - 0 10": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.Qc2 Main Line, 9...Qe7 10.a3"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.Qc2 Main Line, 9...Qe7 10.a3"
   ],
   "r1b2rk1/pp1nqppp/2pbpn2/8/2BP4/2N1PN2/PPQB1PPP/R4RK1 b - - 2 10": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.Qc2 Main Line, 9...Qe7 10.Bd2"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.Qc2 Main Line, 9...Qe7 10.Bd2"
   ],
   "r1b2rk1/pp1nqppp/2pbpn2/8/2BP4/2N1PN1P/PPQ2PP1/R1B2RK1 b - - 0 10": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.Qc2 Main Line, 9...Qe7 10.h3"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.Qc2 Main Line, 9...Qe7 10.h3"
   ],
   "r1bq1rk1/pp1n1ppp/2pbpn2/3p4/2PP4/2NBPN2/PPQ2PPP/R1B1K2R w KQ - 5 8": [
     "D46",
-    "Semi-Slav Defense: Chigorin, 7.Qc2 O-O"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, 7.Qc2 O-O"
   ],
   "r1bq1rk1/pp1n1ppp/2pbpn2/8/2PPp3/2NB1N2/PP3PPP/R1BQ1RK1 w - - 0 9": [
     "D46",
-    "Semi-Slav Defense: Chigorin, Main Line"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, Main Line"
   ],
   "r1bq1rk1/pp1n1ppp/2pbpn2/8/2PPN3/3B1N2/PP3PPP/R1BQ1RK1 b - - 0 9": [
     "D46",
-    "Semi-Slav Defense: Chigorin, Main Line"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, Main Line"
   ],
   "r1bq1rk1/pp1n1ppp/2pbp3/8/2PPB3/5N2/PP3PPP/R1BQ1RK1 b - - 0 10": [
     "D46",
-    "Semi-Slav Defense: Chigorin, Main Line"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, Main Line"
   ],
   "r1bq1rk1/pp1n1pp1/2pbp2p/8/2PPB3/5N2/PP3PPP/R1BQ1RK1 w - - 0 11": [
     "D46",
-    "Semi-Slav Defense: Chigorin, Main Line, 10...h6"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, Main Line, 10...h6"
   ],
   "r1bq1rk1/pp1n1pp1/2pbp2p/8/2PP4/5N2/PPB2PPP/R1BQ1RK1 b - - 1 11": [
     "D46",
-    "Semi-Slav Defense: Chigorin, Main Line, 10...h6 11.Bc2"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, Main Line, 10...h6 11.Bc2"
   ],
   "r1bq1rk1/pp1n1pp1/2pb3p/4p3/2PP4/5N2/PPB2PPP/R1BQ1RK1 w - - 0 12": [
     "D46",
-    "Semi-Slav Defense: Chigorin, Main Line, 10...h6 11.Bc2 e5"
+    "Queen's Gambit Declined: Semi-Slav Defense, Chigorin, Main Line, 10...h6 11.Bc2 e5"
   ],
   "r1bqk2r/pp1n1ppp/2p1pn2/3p4/1bPP4/2NBPN2/PP3PPP/R1BQK2R w KQkq - 3 7": [
     "D46",
-    "Semi-Slav Defense: Romih Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Romih Variation"
   ],
   "r1bqk2r/pp1n1ppp/2p1pn2/3p4/1bPP4/2NBPN2/PP3PPP/R1BQ1RK1 b kq - 4 7": [
     "D46",
-    "Semi-Slav Defense: Romih, 7.O-O"
+    "Queen's Gambit Declined: Semi-Slav Defense, Romih, 7.O-O"
   ],
   "r1bq1rk1/pp1n1ppp/2p1pn2/3p4/1bPP4/2NBPN2/PP3PPP/R1BQ1RK1 w - - 5 8": [
     "D46",
-    "Semi-Slav Defense: Romih, 7.O-O O-O"
+    "Queen's Gambit Declined: Semi-Slav Defense, Romih, 7.O-O O-O"
   ],
   "r1bqkb1r/p2n1ppp/2p1pn2/1p6/2BP4/2N1PN2/PP3PPP/R1BQK2R w KQkq - 0 8": [
     "D47",
-    "Semi-Slav Defense: Meran Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran Variation"
   ],
   "r1bqkb1r/p2n1ppp/2p1pn2/8/1p1P4/2NBPN2/PP3PPP/R1BQK2R w KQkq - 0 9": [
     "D47",
-    "Semi-Slav Defense: Meran Variation, Lundin Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran Variation, Lundin Variation"
   ],
   "r2qkb1r/pb1n1ppp/2p1pn2/1p6/3P4/2NBPN2/PP3PPP/R1BQK2R w KQkq - 2 9": [
     "D47",
-    "Semi-Slav Defense: Meran Variation, Wade Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran Variation, Wade Variation"
   ],
   "r2qkb1r/pb1n1ppp/4p3/3nP3/Np1N4/3B4/PP3PPP/R1BQ1RK1 b kq - 0 13": [
     "D47",
-    "Semi-Slav Defense: Meran Variation, Wade Variation, Kaidanov Gambit"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran Variation, Wade Variation, Kaidanov Gambit"
   ],
   "r2qkb1r/pb1n1ppp/4p3/2pnP3/Np1P4/3B1N2/PP3PPP/R1BQK2R w KQkq - 1 12": [
     "D47",
-    "Semi-Slav Defense: Meran Variation, Wade Variation, Larsen Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran Variation, Wade Variation, Larsen Variation"
   ],
   "r1bqkb1r/pp1n1ppp/2p1pn2/8/2BP4/2N1PN2/PP3PPP/R1BQK2R b KQkq - 0 7": [
     "D47",
-    "Semi-Slav Defense: Semi-Meran Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Semi-Meran Variation"
   ],
   "r1bqkb1r/pp1n1ppp/2p1pn2/8/2pP4/2NBPN2/PP3PPP/R1BQK2R w KQkq - 0 7": [
     "D47",
-    "Semi-Slav Defense: Meran Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran Variation"
   ],
   "r1bqkb1r/p2n1ppp/2p1pn2/1p6/3P4/2NBPN2/PP3PPP/R1BQK2R b KQkq - 1 8": [
     "D47",
-    "Semi-Slav Defense: Meran, 8.Bd3"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, 8.Bd3"
   ],
   "r1bqk2r/p2n1ppp/2pbpn2/1p6/3P4/2NBPN2/PP3PPP/R1BQK2R w KQkq - 2 9": [
     "D47",
-    "Semi-Slav Defense: Meran, 8.Bd3 Bd6"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, 8.Bd3 Bd6"
   ],
   "r1bqkb1r/p2n1ppp/2p1pn2/1p6/3P4/2N1PN2/PP2BPPP/R1BQK2R b KQkq - 1 8": [
     "D47",
-    "Semi-Slav Defense: Meran, Capablanca Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Capablanca Variation"
   ],
   "r1bqkb1r/3n1ppp/p1p1pn2/1p6/3P4/2N1PN2/PP2BPPP/R1BQK2R w KQkq - 0 9": [
     "D47",
-    "Semi-Slav Defense: Meran, Capablanca, 8...a6"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Capablanca, 8...a6"
   ],
   "r1bqkb1r/p2n1ppp/2p1pn2/8/1p1P4/2N1PN2/PP2BPPP/R1BQK2R w KQkq - 0 9": [
     "D47",
-    "Semi-Slav Defense: Meran, Capablanca, 8...b4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Capablanca, 8...b4"
   ],
   "r2qkb1r/pb1n1ppp/2p1pn2/1p6/3P4/2N1PN2/PP2BPPP/R1BQK2R w KQkq - 2 9": [
     "D47",
-    "Semi-Slav Defense: Meran, Capablanca, 8...Bb7"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Capablanca, 8...Bb7"
   ],
   "r2qkb1r/pb1n1ppp/2p1pn2/1p6/3P4/2N1PN2/PP2BPPP/R1BQ1RK1 b kq - 3 9": [
     "D47",
-    "Semi-Slav Defense: Meran, Capablanca, 8...Bb7 9.O-O"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Capablanca, 8...Bb7 9.O-O"
   ],
   "r2qkb1r/1b1n1ppp/p1p1pn2/1p6/3P4/2N1PN2/PP2BPPP/R1BQ1RK1 w kq - 0 10": [
     "D47",
-    "Semi-Slav Defense: Meran, Capablanca, 8...Bb7 9.O-O a6"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Capablanca, 8...Bb7 9.O-O a6"
   ],
   "r1bqkb1r/p2n1ppp/2p1pn2/1p6/3P4/1BN1PN2/PP3PPP/R1BQK2R b KQkq - 1 8": [
     "D47",
-    "Semi-Slav Defense: Meran, Freymann Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Freymann Variation"
   ],
   "r1bqkb1r/p2n1ppp/2p1pn2/8/1p1P4/1BN1PN2/PP3PPP/R1BQK2R w KQkq - 0 9": [
     "D47",
-    "Semi-Slav Defense: Meran, Freymann, 8...b4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Freymann, 8...b4"
   ],
   "r1bqkb1r/p2n1ppp/2p1pn2/8/Np1P4/3BPN2/PP3PPP/R1BQK2R b KQkq - 1 9": [
     "D47",
-    "Semi-Slav Defense: Meran, Lundin, 9.Na4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Lundin, 9.Na4"
   ],
   "r1bqkb1r/p2n1ppp/2p1pn2/8/1p1PN3/3BPN2/PP3PPP/R1BQK2R b KQkq - 1 9": [
     "D47",
-    "Semi-Slav Defense: Meran, Lundin, 9.Ne4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Lundin, 9.Ne4"
   ],
   "r1bqk2r/p2nbppp/2p1pn2/8/1p1PN3/3BPN2/PP3PPP/R1BQK2R w KQkq - 2 10": [
     "D47",
-    "Semi-Slav Defense: Meran, Lundin, 9.Ne4 Be7"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Lundin, 9.Ne4 Be7"
   ],
   "r1bqk2r/p2nbppp/2p1pn2/8/1p1PN3/3BPN2/PP3PPP/R1BQ1RK1 b kq - 3 10": [
     "D47",
-    "Semi-Slav Defense: Meran, Lundin, 9.Ne4 Be7 10.O-O"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Lundin, 9.Ne4 Be7 10.O-O"
   ],
   "r1bqkb1r/p2n1ppp/2p1p3/8/1p1Pn3/3BPN2/PP3PPP/R1BQK2R w KQkq - 0 10": [
     "D47",
-    "Semi-Slav Defense: Meran, Lundin, 9.Ne4 Nxe4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Lundin, 9.Ne4 Nxe4"
   ],
   "r2qkb1r/pb1n1ppp/2p1pn2/1p6/3P4/P1NBPN2/1P3PPP/R1BQK2R b KQkq - 0 9": [
     "D47",
-    "Semi-Slav Defense: Meran, Wade, 9.a3"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Wade, 9.a3"
   ],
   "r2qkb1r/pb1n1ppp/2p1pn2/1p6/3PP3/2NB1N2/PP3PPP/R1BQK2R b KQkq - 0 9": [
     "D47",
-    "Semi-Slav Defense: Meran, Wade, 9.e4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Wade, 9.e4"
   ],
   "r2qkb1r/pb1n1ppp/2p1pn2/1p6/3P4/2NBPN2/PP3PPP/R1BQ1RK1 b kq - 3 9": [
     "D47",
-    "Semi-Slav Defense: Meran, Wade, 9.O-O"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Wade, 9.O-O"
   ],
   "r2qkb1r/pb1n1ppp/2p1pn2/8/1p1P4/2NBPN2/PP3PPP/R1BQ1RK1 w kq - 0 10": [
     "D47",
-    "Semi-Slav Defense: Meran, Wade, 9.O-O b4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Wade, 9.O-O b4"
   ],
   "r2qkb1r/pb1n1ppp/2p1pn2/8/1p1PN3/3BPN2/PP3PPP/R1BQ1RK1 b kq - 1 10": [
     "D47",
-    "Semi-Slav Defense: Meran, Wade, 9.O-O b4 10.Ne4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Wade, 9.O-O b4 10.Ne4"
   ],
   "r2qk2r/pb1nbppp/2p1pn2/8/1p1PN3/3BPN2/PP3PPP/R1BQ1RK1 w kq - 2 11": [
     "D47",
-    "Semi-Slav Defense: Meran, Wade, 9.O-O b4 10.Ne4 Be7"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Wade, 9.O-O b4 10.Ne4 Be7"
   ],
   "r2qk2r/pb1nbppp/2p1pN2/8/1p1P4/3BPN2/PP3PPP/R1BQ1RK1 b kq - 0 11": [
     "D47",
-    "Semi-Slav Defense: Meran, Wade, 9.O-O b4 10.Ne4 Be7 11.Nxf6+"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Wade, 9.O-O b4 10.Ne4 Be7 11.Nxf6+"
   ],
   "r2qk2r/pb2bppp/2p1pn2/8/1p1P4/3BPN2/PP3PPP/R1BQ1RK1 w kq - 0 12": [
     "D47",
-    "Semi-Slav Defense: Meran, Wade, 9.O-O b4 10.Ne4 Be7 11.Nxf6+ Nxf6"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Wade, 9.O-O b4 10.Ne4 Be7 11.Nxf6+ Nxf6"
   ],
   "r2qk2r/pb2bppp/2p1pn2/8/1p1PP3/3B1N2/PP3PPP/R1BQ1RK1 b kq - 0 12": [
     "D47",
-    "Semi-Slav Defense: Meran, Wade, 9.O-O b4 10.Ne4 Be7 11.Nxf6+ Nxf6 12.e4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Wade, 9.O-O b4 10.Ne4 Be7 11.Nxf6+ Nxf6 12.e4"
   ],
   "r2qkb1r/pb1n1ppp/4p3/2NnP3/1p1P4/3B1N2/PP3PPP/R1BQK2R b KQkq - 0 12": [
     "D47",
-    "Semi-Slav Defense: Meran, Wade, Main Line, 12.Nxc5"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Wade, Main Line, 12.Nxc5"
   ],
   "r2qkb1r/pb1n1ppp/4p3/2pnP3/Np1P4/3B1N2/PP3PPP/R1BQ1RK1 b kq - 2 12": [
     "D47",
-    "Semi-Slav Defense: Meran, Wade, Main Line, 12.O-O"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Wade, Main Line, 12.O-O"
   ],
   "r1bqkb1r/3n1ppp/p1p1pn2/1p6/3P4/2NBPN2/PP3PPP/R1BQK2R w KQkq - 0 9": [
     "D48",
-    "Semi-Slav Defense: Meran Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran Variation"
   ],
   "r1bqkb1r/3n1ppp/p3pn2/1pp5/3PP3/2NB1N2/PP3PPP/R1BQK2R w KQkq - 0 10": [
     "D48",
-    "Semi-Slav Defense: Meran Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran Variation"
   ],
   "r1bqkb1r/3n1ppp/p3pn2/1pp1P3/3P4/2NB1N2/PP3PPP/R1BQK2R b KQkq - 0 10": [
     "D48",
-    "Semi-Slav Defense: Meran Variation, Old Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran Variation, Old Variation"
   ],
   "r1bqkb1r/3n1ppp/p1p1pn2/8/1p1PP3/2NB1N2/PP3PPP/R1BQK2R w KQkq - 0 10": [
     "D48",
-    "Semi-Slav Defense: Meran Variation, Pirc Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran Variation, Pirc Variation"
   ],
   "r1bqkb1r/3n1ppp/p3pn2/1ppP4/4P3/2NB1N2/PP3PPP/R1BQK2R b KQkq - 0 10": [
     "D48",
-    "Semi-Slav Defense: Meran Variation, Reynolds' Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran Variation, Reynolds' Variation"
   ],
   "r1bqkb1r/3n1ppp/p1p1pn2/1p6/P2P4/2NBPN2/1P3PPP/R1BQK2R b KQkq - 0 9": [
     "D48",
-    "Semi-Slav Defense: Meran, 8...a6 9.a4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, 8...a6 9.a4"
   ],
   "r1bqkb1r/3n1ppp/p1p1pn2/1p6/3PP3/2NB1N2/PP3PPP/R1BQK2R b KQkq - 0 9": [
     "D48",
-    "Semi-Slav Defense: Meran, 8...a6 9.e4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, 8...a6 9.e4"
   ],
   "r2qkb1r/1b1n1ppp/p1p1pn2/1p6/3PP3/2NB1N2/PP3PPP/R1BQK2R w KQkq - 1 10": [
     "D48",
-    "Semi-Slav Defense: Meran, 8...a6 9.e4 Bb7"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, 8...a6 9.e4 Bb7"
   ],
   "r1bqkb1r/3n1ppp/p1p1pn2/1p6/3P4/2NBPN2/PP3PPP/R1BQ1RK1 b kq - 1 9": [
     "D48",
-    "Semi-Slav Defense: Meran, 8...a6 9.O-O"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, 8...a6 9.O-O"
   ],
   "r2qkb1r/1b1n1ppp/p1p1pn2/1p6/3P4/2NBPN2/PP3PPP/R1BQ1RK1 w kq - 2 10": [
     "D48",
-    "Semi-Slav Defense: Meran, 8...a6 9.O-O Bb7"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, 8...a6 9.O-O Bb7"
   ],
   "r2qkb1r/1b1n1ppp/p1p1pn2/1p6/3PP3/2NB1N2/PP3PPP/R1BQ1RK1 b kq - 0 10": [
     "D48",
-    "Semi-Slav Defense: Meran, 8...a6 9.O-O Bb7 10.e4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, 8...a6 9.O-O Bb7 10.e4"
   ],
   "r2qkb1r/1b1n1ppp/p3pn2/1ppP4/4P3/2NB1N2/PP3PPP/R1BQ1RK1 b kq - 0 11": [
     "D48",
-    "Semi-Slav Defense: Meran, 8...a6 9.O-O Bb7 10.e4 c5 11.d5"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, 8...a6 9.O-O Bb7 10.e4 c5 11.d5"
   ],
   "r3kb1r/1bqn1ppp/p3pn2/1ppP4/4P3/2NB1N2/PP3PPP/R1BQ1RK1 w kq - 1 12": [
     "D48",
-    "Semi-Slav Defense: Meran, 8...a6 9.O-O Bb7 10.e4 c5 11.d5 Qc7"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, 8...a6 9.O-O Bb7 10.e4 c5 11.d5 Qc7"
   ],
   "r3kb1r/1bqn1ppp/p3Pn2/1pp5/4P3/2NB1N2/PP3PPP/R1BQ1RK1 b kq - 0 12": [
     "D48",
-    "Semi-Slav Defense: Meran, 8...a6 9.O-O Bb7 10.e4 c5 11.d5 Qc7 12.dxe6"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, 8...a6 9.O-O Bb7 10.e4 c5 11.d5 Qc7 12.dxe6"
   ],
   "r3kb1r/1bqn2pp/p3pn2/1pp5/4P3/2NB1N2/PP3PPP/R1BQ1RK1 w kq - 0 13": [
     "D48",
-    "Semi-Slav Defense: Meran, 8...a6 9.O-O Bb7 10.e4 c5 11.d5 Qc7 12.dxe6 fxe6"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, 8...a6 9.O-O Bb7 10.e4 c5 11.d5 Qc7 12.dxe6 fxe6"
   ],
   "r1bqkb1r/3n1ppp/p3pn2/1pp5/3P4/2NBPN2/PP3PPP/R1BQ1RK1 w kq - 0 10": [
     "D48",
-    "Semi-Slav Defense: Meran, 8...a6 9.O-O c5"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, 8...a6 9.O-O c5"
   ],
   "r1bqkb1r/3n1ppp/p3pn2/1pp5/3P4/2NBPN2/PP2QPPP/R1B2RK1 b kq - 1 10": [
     "D48",
-    "Semi-Slav Defense: Meran, 8...a6 9.O-O c5 10.Qe2"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, 8...a6 9.O-O c5 10.Qe2"
   ],
   "r1bqkb1r/3n1ppp/p3pn2/1p2P3/3p4/2NB1N2/PP3PPP/R1BQK2R w KQkq - 0 11": [
     "D48",
-    "Semi-Slav Defense: Meran, Old Main Line, 10...cxd4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Old Main Line, 10...cxd4"
   ],
   "r1bqkb1r/3n1ppp/p3p3/1pp1P3/3P2n1/2NB1N2/PP3PPP/R1BQK2R w KQkq - 1 11": [
     "D48",
-    "Semi-Slav Defense: Meran, Rabinovich Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Rabinovich Variation"
   ],
   "r1bqkb1r/3n1ppp/p3pn2/1p1P4/2p1P3/2NB1N2/PP3PPP/R1BQK2R w KQkq - 0 11": [
     "D48",
-    "Semi-Slav Defense: Meran, Reynolds, 10...c4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Reynolds, 10...c4"
   ],
   "r1bqkb1r/3n2pp/p3pn2/1p6/2p1P3/2NB1N2/PP3PPP/R1BQK2R w KQkq - 0 12": [
     "D48",
-    "Semi-Slav Defense: Meran, Reynolds, 10...c4 11.dxe6 fxe6"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Reynolds, 10...c4 11.dxe6 fxe6"
   ],
   "r1bqkb1r/3n2pp/p3pn2/1p6/2p1P3/2N2N2/PPB2PPP/R1BQK2R b KQkq - 1 12": [
     "D48",
-    "Semi-Slav Defense: Meran, Reynolds, 10...c4 11.dxe6 fxe6 12.Bc2"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Reynolds, 10...c4 11.dxe6 fxe6 12.Bc2"
   ],
   "r1b1kb1r/2qn2pp/p3pn2/1p6/2p1P3/2N2N2/PPB2PPP/R1BQK2R w KQkq - 2 13": [
     "D48",
-    "Semi-Slav Defense: Meran, Reynolds, 10...c4 11.dxe6 fxe6 12.Bc2 Qc7"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Reynolds, 10...c4 11.dxe6 fxe6 12.Bc2 Qc7"
   ],
   "r1b1kb1r/2qn2pp/p3pn2/1p6/2p1P3/2N2N2/PPB2PPP/R1BQ1RK1 b kq - 3 13": [
     "D48",
-    "Semi-Slav Defense: Meran, Reynolds, 10...c4 11.dxe6 fxe6 12.Bc2 Qc7 13.O-O"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Reynolds, 10...c4 11.dxe6 fxe6 12.Bc2 Qc7 13.O-O"
   ],
   "r1bqkb1r/3n1ppp/p4n2/1ppPp3/4P3/2NB1N2/PP3PPP/R1BQK2R w KQkq - 0 11": [
     "D48",
-    "Semi-Slav Defense: Meran, Reynolds, 10...e5"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Reynolds, 10...e5"
   ],
   "r1b1kb1r/2qn1ppp/p3pn2/1ppP4/4P3/2NB1N2/PP3PPP/R1BQK2R w KQkq - 1 11": [
     "D48",
-    "Semi-Slav Defense: Meran, Reynolds, 10...Qc7"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Reynolds, 10...Qc7"
   ],
   "r1bqkb1r/3n1ppp/p3pn2/1N2P3/3p4/3B1N2/PP3PPP/R1BQK2R b KQkq - 0 11": [
     "D49",
-    "Semi-Slav Defense: Meran Variation, Blumenfeld Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran Variation, Blumenfeld Variation"
   ],
   "r1bqkb1r/3n1ppp/p3p3/1N2P3/3p2n1/3B1N2/PP3PPP/R1BQK2R w KQkq - 1 12": [
     "D49",
-    "Semi-Slav Defense: Meran Variation, Rabinovich Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran Variation, Rabinovich Variation"
   ],
   "r3kb1r/5ppp/b3pn2/1p1qN1B1/3p4/3B4/PP2QPPP/R4RK1 b kq - 5 15": [
     "D49",
-    "Semi-Slav Defense: Meran Variation, Rellstab Attack"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran Variation, Rellstab Attack"
   ],
   "r1bqkb1r/5ppp/p3pn2/1N2n3/3p4/3B1N2/PP3PPP/R1BQK2R w KQkq - 0 12": [
     "D49",
-    "Semi-Slav Defense: Meran Variation, Sozin Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran Variation, Sozin Variation"
   ],
   "r1bqkb1r/5ppp/4pn2/1p2N3/3p4/3B4/PP3PPP/R1BQ1RK1 b kq - 1 13": [
     "D49",
-    "Semi-Slav Defense: Meran Variation, Sozin Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran Variation, Sozin Variation"
   ],
   "r1bqkb1r/5ppp/4pn2/1p2N3/3p4/3B1Q2/PP3PPP/R1B1K2R b KQkq - 1 13": [
     "D49",
-    "Semi-Slav Defense: Meran Variation, Stahlberg Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran Variation, Stahlberg Variation"
   ],
   "r1bqkb1r/3n1ppp/4pn2/1p2P3/3p4/3B1N2/PP3PPP/R1BQK2R w KQkq - 0 12": [
     "D49",
-    "Semi-Slav Defense: Meran, Old Main Line, 11.Nxb5 axb5"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Old Main Line, 11.Nxb5 axb5"
   ],
   "r1bqkb1r/3n1p1p/4pp2/1p6/3p4/3B1N2/PP3PPP/R1BQK2R w KQkq - 0 13": [
     "D49",
-    "Semi-Slav Defense: Meran, Old Main Line, 11.Nxb5 axb5 12.exf6 gxf6"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Old Main Line, 11.Nxb5 axb5 12.exf6 gxf6"
   ],
   "r1b1kb1r/3n1ppp/1q2pP2/1p6/3p4/3B1N2/PP3PPP/R1BQK2R w KQkq - 1 13": [
     "D49",
-    "Semi-Slav Defense: Meran, Old Main Line, Botvinnik Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Old Main Line, Botvinnik Variation"
   ],
   "r1bqkb1r/3n1ppp/p3p3/1N2P3/Q2p2n1/3B1N2/PP3PPP/R1B1K2R b KQkq - 2 12": [
     "D49",
-    "Semi-Slav Defense: Meran, Old Main Line, Gligoric, 12.Qa4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Old Main Line, Gligoric, 12.Qa4"
   ],
   "r1bqkb1r/5ppp/4pn2/1B2N3/3p4/8/PP3PPP/R1BQK2R b KQkq - 0 13": [
     "D49",
-    "Semi-Slav Defense: Meran, Sozin, 13.Bxb5+"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Sozin, 13.Bxb5+"
   ],
   "r1bqk2r/5ppp/4pn2/1p2N3/1b1p4/3B1Q2/PP3PPP/R1B1K2R w KQkq - 2 14": [
     "D49",
-    "Semi-Slav Defense: Meran, Sozin, Stahlberg Attack, 13...Bb4"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Sozin, Stahlberg Attack, 13...Bb4"
   ],
   "r1bqkb1r/3n1ppp/p3p3/1N2n3/Q2p4/3B1N2/PP3PPP/R1B1K2R w KQkq - 0 13": [
     "D49",
-    "Semi-Slav Defense: Meran, Trifunovic Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Meran, Trifunovic Variation"
   ],
   "rnbqk2r/ppp2ppp/4pn2/3p2B1/1bPP4/2N5/PP2PPPP/R2QKBNR w KQkq - 4 5": [
     "D50",
