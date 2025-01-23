@@ -10305,7 +10305,7 @@
   ],
   "rnbqkbnr/pppp1ppp/8/4p3/8/5P2/PPPPP1PP/RNBQKBNR w KQkq - 0 2": [
     "A00",
-    "Barnes Opening, 1... e5"
+    "Barnes Opening, 1...e5"
   ],
   "rnbqkb1r/pppppppp/7n/8/8/7N/PPPPPPPP/RNBQKB1R w KQkq - 2 2": [
     "A00",
@@ -10529,7 +10529,7 @@
   ],
   "rnbqkb1r/ppp2ppp/4pn2/3p4/3P1B2/4P3/PPP2PPP/RN1QKBNR w KQkq - 0 4": [
     "A45",
-    "London System Main Line with 3. ...e6"
+    "London System Main Line with 3...e6"
   ],
   "r1bqkbnr/pp1ppp1p/2n3p1/2p5/2P5/5NP1/PP1PPP1P/RNBQKB1R w KQkq - 0 4": [
     "A30",
@@ -31129,31 +31129,31 @@
   ],
   "rnbqkbnr/ppp2ppp/3p4/4p3/2B1P3/8/PPPP1PPP/RNBQK1NR w KQkq - 0 3": [
     "C23",
-    "Bishop's Opening: 2... d6!?"
+    "Bishop's Opening: 2...d6!?"
   ],
   "rnbqkbnr/pp1p1ppp/8/2p1p3/2B1P3/8/PPPP1PPP/RNBQK1NR w KQkq - 0 3": [
     "C23",
-    "Bishop's Opening: 2... c5?!"
+    "Bishop's Opening: 2...c5?!"
   ],
   "rnb1kbnr/pppp1ppp/8/4p1q1/2B1P3/8/PPPP1PPP/RNBQK1NR w KQkq - 2 3": [
     "C23",
-    "Bishop's Opening: 2... Qg5?"
+    "Bishop's Opening: 2...Qg5?"
   ],
   "rnb1kbnr/ppppqppp/8/4p3/2B1P3/8/PPPP1PPP/RNBQK1NR w KQkq - 2 3": [
     "C23",
-    "Bishop's Opening: 2... Qe7?"
+    "Bishop's Opening: 2...Qe7?"
   ],
   "rnbqk1nr/ppppbppp/8/4p3/2B1P3/8/PPPP1PPP/RNBQK1NR w KQkq - 2 3": [
     "C23",
-    "Bishop's Opening: 2... Be7?"
+    "Bishop's Opening: 2...Be7?"
   ],
   "rnb1kbnr/pppp1ppp/8/4p3/2B1P2q/8/PPPP1PPP/RNBQK1NR w KQkq - 2 3": [
     "C23",
-    "Bishop's Opening: 2... Qh4?"
+    "Bishop's Opening: 2...Qh4?"
   ],
   "rnbqkb1r/ppppnppp/8/4p3/2B1P3/8/PPPP1PPP/RNBQK1NR w KQkq - 2 3": [
     "C23",
-    "Bishop's Opening: 2... Ne7"
+    "Bishop's Opening: 2...Ne7"
   ],
   "rnbqkbnr/1ppp1ppp/p7/4p3/2B1P3/8/PPPP1PPP/RNBQK1NR w KQkq - 0 3": [
     "C23",
@@ -31161,11 +31161,11 @@
   ],
   "rnbqkbnr/pppp1p1p/6p1/4p3/2B1P3/8/PPPP1PPP/RNBQK1NR w KQkq - 0 3": [
     "C23",
-    "Bishop's Opening: 2... g6?"
+    "Bishop's Opening: 2...g6?"
   ],
   "rnbqkbnr/p1pp1ppp/1p6/4p3/2B1P3/8/PPPP1PPP/RNBQK1NR w KQkq - 0 3": [
     "C23",
-    "Bishop's Opening: 2... b6?"
+    "Bishop's Opening: 2...b6?"
   ],
   "rnbqkb1r/pppp1ppp/5n2/4p3/2B1P3/5P2/PPPP2PP/RNBQK1NR b KQkq - 0 3": [
     "C24",
@@ -31221,11 +31221,11 @@
   ],
   "rnbqkb1r/pp1n1ppp/4p3/2ppP3/3P4/3B4/PPPN1PPP/R1BQK1NR w KQkq - 0 6": [
     "C05",
-    "French Defense: Tarrasch Variation / 3....Nf6"
+    "French Defense: Tarrasch Variation / 3...Nf6"
   ],
   "rnbqkb1r/pp1n1ppp/4p3/2ppP3/3P4/2PB4/PP1N1PPP/R1BQK1NR b KQkq - 0 6": [
     "C05",
-    "French Defense: Tarrasch Variation / 3....Nf6"
+    "French Defense: Tarrasch Variation / 3...Nf6"
   ],
   "rnbqkbnr/ppp2ppp/8/3p4/3P4/4B3/PPP2PPP/RN1QKBNR b KQkq - 1 4": [
     "C01",
@@ -39525,11 +39525,11 @@
   ],
   "rnbqkb1r/ppp1pp1p/5np1/3p4/2PP4/6P1/PP2PP1P/RNBQKBNR w KQkq - 0 4": [
     "D70",
-    "Neo-Grünfeld Defense, g3"
+    "Neo-Grünfeld Defense: with g3"
   ],
   "rnbqkb1r/ppp1pp1p/5np1/3p4/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
     "D70",
-    "Neo-Grünfeld Defense, Nf3"
+    "Neo-Grünfeld Defense: with Nf3"
   ],
   "rnbqk2r/ppp1ppbp/6p1/3n4/3PP3/6P1/PP3PBP/RNBQK1NR b KQkq - 0 6": [
     "D71",
@@ -39593,7 +39593,7 @@
   ],
   "rnbqk2r/ppp1ppbp/5np1/3p4/2PP4/5NP1/PP2PPBP/RNBQK2R b KQkq - 1 5": [
     "D73",
-    "Neo-Grünfeld Defense, with 5. Nf3"
+    "Neo-Grünfeld Defense: with 5.Nf3"
   ],
   "rnbqk2r/ppp1ppbp/5np1/3p4/2PP4/5NP1/PP2PPBP/RNBQK2R b KQkq - 3 5": [
     "D73",
@@ -41829,7 +41829,7 @@
   ],
   "r1bq1rk1/pppnbppp/4pn2/3p4/2PP4/5NP1/PPQ1PPBP/RNB2RK1 b - - 2 7": [
     "E08",
-    "Catalan Opening: Closed Variation, 6. d4 Nbd7 7. Qc2"
+    "Catalan Opening: Closed Variation, 6.d4 Nbd7 7.Qc2"
   ],
   "r2q1rk1/pb1nbppp/2p1pn2/1p1p4/2PP4/1PN2NP1/P1Q1PPBP/R1BR2K1 w - - 0 11": [
     "E08",
