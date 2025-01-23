@@ -189,11 +189,11 @@
   ],
   "rnbqkbnr/ppp1pppp/8/3p4/6P1/8/PPPPPP1P/RNBQKBNR w KQkq - 0 2": [
     "A00",
-    "Grob: 1...d5"
+    "Grob Opening: 1...d5"
   ],
   "rnbqkbnr/pppp1ppp/8/4p3/6P1/8/PPPPPP1P/RNBQKBNR w KQkq - 0 2": [
     "A00",
-    "Grob: 1...e5"
+    "Grob Opening: 1...e5"
   ],
   "rnbqkbnr/pppppppp/8/8/8/6P1/PPPPPP1P/RNBQKBNR b KQkq - 0 1": [
     "A00",
@@ -10233,7 +10233,7 @@
   ],
   "r1bqkbnr/pppppppp/n7/8/6P1/8/PPPPPP1P/RNBQKBNR w KQkq - 1 2": [
     "A00",
-    "Grob: 1...Na6?!"
+    "Grob Opening: 1...Na6?!"
   ],
   "rnbqkbnr/ppppp1pp/8/5p2/3P4/5N2/PPP1PPPP/RNBQKB1R b KQkq - 0 2": [
     "A04",
@@ -10253,11 +10253,11 @@
   ],
   "rnbqkbnr/ppp1pppp/3p4/8/6P1/8/PPPPPP1P/RNBQKBNR w KQkq - 0 2": [
     "A00",
-    "Grob: 1...d6"
+    "Grob Opening: 1...d6"
   ],
   "rnbqkb1r/pppppppp/5n2/8/6P1/8/PPPPPP1P/RNBQKBNR w KQkq - 1 2": [
     "A00",
-    "Grob: 1...Nf6"
+    "Grob Opening: 1...Nf6"
   ],
   "rnbqkbnr/pppp1ppp/8/4p3/P7/8/1PPPPPPP/RNBQKBNR w KQkq - 0 2": [
     "A00",
@@ -10345,7 +10345,7 @@
   ],
   "rnbqkbnr/ppppp2p/8/5pp1/5PP1/8/PPPPP2P/RNBQKBNR w KQkq - 0 3": [
     "A00",
-    "Double Grob: Pepsi Countergambit"
+    "Double Grob Opening: Pepsi Countergambit"
   ],
   "r1bqkbnr/pppp1ppp/2n5/4p3/3P4/1P6/PBP1PPPP/RN1QKBNR b KQkq - 0 3": [
     "A01",
@@ -10357,7 +10357,7 @@
   ],
   "rnbqkbnr/pppp1ppp/8/4p3/5PP1/8/PPPPP2P/RNBQKBNR b KQkq - 0 2": [
     "A00",
-    "Grob: 1...e5"
+    "Grob Opening: 1...e5"
   ],
   "rnbqkbnr/ppp1pppp/8/3p4/2P5/5N2/PP1PPPPP/RNBQKB1R b KQkq - 1 2": [
     "A10",
@@ -15665,15 +15665,15 @@
   ],
   "r1bqkbnr/pp1ppppp/2n5/2p5/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq - 0 3": [
     "B32",
-    "Sicilian Defense: Open"
+    "Sicilian Defense: Open Variation"
   ],
   "r1bqkbnr/pp1ppppp/2n5/8/3pP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4": [
     "B32",
-    "Sicilian Defense: Open"
+    "Sicilian Defense: Open Variation"
   ],
   "r1bqkbnr/pp1ppppp/2n5/8/3NP3/8/PPP2PPP/RNBQKB1R b KQkq - 0 4": [
     "B32",
-    "Sicilian Defense: Open"
+    "Sicilian Defense: Open Variation"
   ],
   "r1b1kbnr/ppqppppp/2n5/1N6/4P3/8/PPP2PPP/RNBQKB1R b KQkq - 2 5": [
     "B32",
@@ -15681,67 +15681,67 @@
   ],
   "r1bqkbnr/1p1p1ppp/p1n5/1N2p3/4P3/8/PPP2PPP/RNBQKB1R w KQkq - 0 6": [
     "B32",
-    "Sicilian Defense: Loewenthal, 5...a6"
+    "Sicilian Defense: Löwenthal, 5...a6"
   ],
   "r1b1k1nr/1p1p1ppp/p1n2q2/4p3/4P3/8/PPP2PPP/RNBQKB1R b KQkq - 2 8": [
     "B32",
-    "Sicilian Defense: Loewenthal, 5...a6, 8.Qd1"
+    "Sicilian Defense: Löwenthal, 5...a6, 8.Qd1"
   ],
   "r1b1k1nr/1p1p1ppp/p1n2Q2/4p3/4P3/8/PPP2PPP/RNB1KB1R b KQkq - 0 8": [
     "B32",
-    "Sicilian Defense: Loewenthal, 5...a6, Queenswap Variation"
+    "Sicilian Defense: Löwenthal, 5...a6, Queenswap Variation"
   ],
   "r1bqkbnr/pp1p1ppp/2n5/1N2p3/4P3/8/PPP2PPP/RNBQKB1R b KQkq - 1 5": [
     "B32",
-    "Sicilian Defense: Loewenthal, 5.Nb5"
+    "Sicilian Defense: Löwenthal, 5.Nb5"
   ],
   "r1bqkbnr/pp3ppp/2np4/1N2p3/P3P3/8/1PP2PPP/RNBQKB1R b KQkq - 0 6": [
     "B32",
-    "Sicilian Defense: Loewenthal, Kalashnikov, 6.a4"
+    "Sicilian Defense: Löwenthal, Kalashnikov, 6.a4"
   ],
   "r1bqkbnr/pp3ppp/2np4/1N2p3/2P1P3/8/PP3PPP/RNBQKB1R b KQkq - 0 6": [
     "B32",
-    "Sicilian Defense: Loewenthal, Kalashnikov, 6.c4"
+    "Sicilian Defense: Löwenthal, Kalashnikov, 6.c4"
   ],
   "r1bqk1nr/pp2bppp/2np4/1N2p3/2P1P3/8/PP3PPP/RNBQKB1R w KQkq - 1 7": [
     "B32",
-    "Sicilian Defense: Loewenthal, Kalashnikov, 6.c4 Be7"
+    "Sicilian Defense: Löwenthal, Kalashnikov, 6.c4 Be7"
   ],
   "r1bqk1nr/pp2bppp/2np4/1N2p3/2P1P3/8/PP2BPPP/RNBQK2R b KQkq - 2 7": [
     "B32",
-    "Sicilian Defense: Loewenthal, Kalashnikov, 6.c4 Be7 7.Be2"
+    "Sicilian Defense: Löwenthal, Kalashnikov, 6.c4 Be7 7.Be2"
   ],
   "r1bqk1nr/pp2bppp/2np4/1N2p3/2P1P3/2N5/PP3PPP/R1BQKB1R b KQkq - 2 7": [
     "B32",
-    "Sicilian Defense: Loewenthal, Kalashnikov, 6.c4 Be7 7.N1c3"
+    "Sicilian Defense: Löwenthal, Kalashnikov, 6.c4 Be7 7.N1c3"
   ],
   "r1bqkbnr/pp3ppp/2np4/1N2p3/4P3/2N5/PPP2PPP/R1BQKB1R b KQkq - 1 6": [
     "B32",
-    "Sicilian Defense: Loewenthal, Kalashnikov, 6.N1c3"
+    "Sicilian Defense: Löwenthal, Kalashnikov, 6.N1c3"
   ],
   "r1bqkbnr/5ppp/p1np4/1p2p3/4P3/N1N5/PPP2PPP/R1BQKB1R w KQkq - 0 8": [
     "B32",
-    "Sicilian Defense: Loewenthal, Kalashnikov, 6.N1c3 a6 7.Na3 b5"
+    "Sicilian Defense: Löwenthal, Kalashnikov, 6.N1c3 a6 7.Na3 b5"
   ],
   "r1bqkb1r/4nppp/p1np4/1p1Np3/4P3/N7/PPP2PPP/R1BQKB1R w KQkq - 2 9": [
     "B32",
-    "Sicilian Defense: Loewenthal, Kalashnikov, 6.N1c3 a6 7.Na3 b5 8.Nd5 Nge7"
+    "Sicilian Defense: Löwenthal, Kalashnikov, 6.N1c3 a6 7.Na3 b5 8.Nd5 Nge7"
   ],
   "r2qk1nr/1p2bppp/p1npb3/4p3/2P1P3/N1N5/PP3PPP/R1BQKB1R w KQkq - 2 9": [
     "B32",
-    "Sicilian Defense: Loewenthal, Kalashnikov, Main Line"
+    "Sicilian Defense: Löwenthal, Kalashnikov, Main Line"
   ],
   "r2qk1nr/1p2bppp/p1npb3/4p3/2P1P3/N1N5/PP2BPPP/R1BQK2R b KQkq - 3 9": [
     "B32",
-    "Sicilian Defense: Loewenthal, Kalashnikov, Main Line, 9.Be2"
+    "Sicilian Defense: Löwenthal, Kalashnikov, Main Line, 9.Be2"
   ],
   "r2qk1nr/1p2bppp/p1npb3/4p3/2P1P3/2N5/PPN2PPP/R1BQKB1R b KQkq - 3 9": [
     "B32",
-    "Sicilian Defense: Loewenthal, Kalashnikov, Main Line, 9.Nc2"
+    "Sicilian Defense: Löwenthal, Kalashnikov, Main Line, 9.Nc2"
   ],
   "r1bqkbnr/pp2pppp/2np4/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq - 0 5": [
     "B32",
-    "Sicilian Defense: Open, 2...Nc6, 4...d6"
+    "Sicilian Defense: Open Variation, 2...Nc6, 4...d6"
   ],
   "r1bqk2r/pp1p1ppp/2n1pn2/1Nb5/4P3/2N5/PPP2PPP/R1BQKB1R w KQkq - 2 7": [
     "B33",
@@ -15789,23 +15789,23 @@
   ],
   "r1bqkb1r/pp1ppppp/2n2n2/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq - 1 5": [
     "B33",
-    "Sicilian Defense: Open"
+    "Sicilian Defense: Open Variation"
   ],
   "r1b1kb1r/pp1ppppp/1qn2n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 3 6": [
     "B33",
-    "Sicilian Defense: Open, 2...Nc6, 5...Qb6"
+    "Sicilian Defense: Open Variation, 2...Nc6, 5...Qb6"
   ],
   "r1b1kb1r/pp1ppppp/1qn2n2/8/4P3/1NN5/PPP2PPP/R1BQKB1R b KQkq - 4 6": [
     "B33",
-    "Sicilian Defense: Open, 2...Nc6, 5...Qb6 6.Nb3"
+    "Sicilian Defense: Open Variation, 2...Nc6, 5...Qb6 6.Nb3"
   ],
   "r1b1kb1r/pp1p1ppp/1qn1pn2/8/4P3/1NN5/PPP2PPP/R1BQKB1R w KQkq - 0 7": [
     "B33",
-    "Sicilian Defense: Open, 2...Nc6, 5...Qb6 6.Nb3 e6"
+    "Sicilian Defense: Open Variation, 2...Nc6, 5...Qb6 6.Nb3 e6"
   ],
   "r1b1kb1r/pp1p1ppp/1qn1pn2/8/4P3/1NNB4/PPP2PPP/R1BQK2R b KQkq - 1 7": [
     "B33",
-    "Sicilian Defense: Open, 2...Nc6, 5...Qb6 6.Nb3 e6 7.Bd3"
+    "Sicilian Defense: Open Variation, 2...Nc6, 5...Qb6 6.Nb3 e6 7.Bd3"
   ],
   "r1bqkb1r/pp3ppp/2np1n2/1N2p3/P3P3/2N5/1PP2PPP/R1BQKB1R b KQkq - 0 7": [
     "B33",
@@ -16545,27 +16545,27 @@
   ],
   "rnbqkbnr/pp1p1ppp/4p3/8/3NP3/8/PPP2PPP/RNBQKB1R b KQkq - 0 4": [
     "B40",
-    "Sicilian Defense: Open, 2...e6, 4.Nxd4"
+    "Sicilian Defense: Open Variation, 2...e6, 4.Nxd4"
   ],
   "rnbqkbnr/pp3ppp/3pp3/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq - 0 5": [
     "B40",
-    "Sicilian Defense: Open, 2...e6, 4.Nxd4 d6"
+    "Sicilian Defense: Open Variation, 2...e6, 4.Nxd4 d6"
   ],
   "rnbqkb1r/pp1p1ppp/4pn2/8/3NP3/3B4/PPP2PPP/RNBQK2R b KQkq - 2 5": [
     "B40",
-    "Sicilian Defense: Open, 2...e6, 4.Nxd4 Nf6 5.Bd3"
+    "Sicilian Defense: Open Variation, 2...e6, 4.Nxd4 Nf6 5.Bd3"
   ],
   "r1bqkb1r/pp1p1ppp/2n1pn2/8/3NP3/3B4/PPP2PPP/RNBQK2R w KQkq - 3 6": [
     "B40",
-    "Sicilian Defense: Open, 2...e6, 4.Nxd4 Nf6 5.Bd3 Nc6"
+    "Sicilian Defense: Open Variation, 2...e6, 4.Nxd4 Nf6 5.Bd3 Nc6"
   ],
   "r1bqkb1r/pp1p1ppp/2N1pn2/8/4P3/3B4/PPP2PPP/RNBQK2R b KQkq - 0 6": [
     "B40",
-    "Sicilian Defense: Open, 2...e6, 4.Nxd4 Nf6 5.Bd3 Nc6 6.Nxc6"
+    "Sicilian Defense: Open Variation, 2...e6, 4.Nxd4 Nf6 5.Bd3 Nc6 6.Nxc6"
   ],
   "rnbqkb1r/pp1p1ppp/4pn2/8/3NP3/2N5/PPP2PPP/R1BQKB1R b KQkq - 2 5": [
     "B40",
-    "Sicilian Defense: Open, 2...e6, 4.Nxd4 Nf6 5.Nc3"
+    "Sicilian Defense: Open Variation, 2...e6, 4.Nxd4 Nf6 5.Nc3"
   ],
   "rnbqkbnr/1p1p1ppp/p3p3/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq - 0 5": [
     "B41",
@@ -17817,19 +17817,19 @@
   ],
   "rnbqkbnr/pp2pppp/3p4/8/3NP3/8/PPP2PPP/RNBQKB1R b KQkq - 0 4": [
     "B54",
-    "Sicilian Defense: Open, 2...d6"
+    "Sicilian Defense: Open Variation, 2...d6"
   ],
   "rnbqkbnr/1p2pppp/p2p4/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq - 0 5": [
     "B54",
-    "Sicilian Defense: Open, 2...d6, 4...a6"
+    "Sicilian Defense: Open Variation, 2...d6, 4...a6"
   ],
   "rnbqkbnr/pp3ppp/3p4/4p3/3NP3/8/PPP2PPP/RNBQKB1R w KQkq - 0 5": [
     "B54",
-    "Sicilian Defense: Open, 2...d6, 4...e5"
+    "Sicilian Defense: Open Variation, 2...d6, 4...e5"
   ],
   "rnbqkb1r/pp2pppp/3p1n2/8/3NP3/3B4/PPP2PPP/RNBQK2R b KQkq - 2 5": [
     "B54",
-    "Sicilian Defense: Open, 2...d6, 4...Nf6 5.Bd3"
+    "Sicilian Defense: Open Variation, 2...d6, 4...Nf6 5.Bd3"
   ],
   "rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/5P2/PPP3PP/RNBQKB1R w KQkq - 0 6": [
     "B54",
@@ -17913,63 +17913,63 @@
   ],
   "rnbqkb1r/pp2pppp/3p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R b KQkq - 2 5": [
     "B56",
-    "Sicilian Defense: Open, 2...d6, 5.Nc3"
+    "Sicilian Defense: Open Variation, 2...d6, 5.Nc3"
   ],
   "rn1qkb1r/pp1bpppp/3p1n2/6B1/3NP3/2N5/PPP2PPP/R2QKB1R b KQkq - 4 6": [
     "B56",
-    "Sicilian Defense: Open, 2...d6, 5.Nc3 Bd7 6.Bg5"
+    "Sicilian Defense: Open Variation, 2...d6, 5.Nc3 Bd7 6.Bg5"
   ],
   "rnbqkb1r/pp3ppp/3p1n2/4p3/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 6": [
     "B56",
-    "Sicilian Defense: Open, 2...d6, 5.Nc3 e5"
+    "Sicilian Defense: Open Variation, 2...d6, 5.Nc3 e5"
   ],
   "r1bqkb1r/pp1npppp/3p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 3 6": [
     "B56",
-    "Sicilian Defense: Open, 2...d6, 5.Nc3 Nbd7"
+    "Sicilian Defense: Open Variation, 2...d6, 5.Nc3 Nbd7"
   ],
   "r1bqkb1r/pp1npppp/3p1n2/8/2BNP3/2N5/PPP2PPP/R1BQK2R b KQkq - 4 6": [
     "B56",
-    "Sicilian Defense: Open, 2...d6, 5.Nc3 Nbd7 6.Bc4"
+    "Sicilian Defense: Open Variation, 2...d6, 5.Nc3 Nbd7 6.Bc4"
   ],
   "r1bqkb1r/pp2pppp/2np1n2/8/3NP3/2N1B3/PPP2PPP/R2QKB1R b KQkq - 4 6": [
     "B56",
-    "Sicilian Defense: Open, 2...d6, 5.Nc3 Nc6 6.Be3"
+    "Sicilian Defense: Open Variation, 2...d6, 5.Nc3 Nc6 6.Be3"
   ],
   "r1bqkb1r/pp3ppp/2np1n2/4p3/3NP3/2N1B3/PPP2PPP/R2QKB1R w KQkq - 0 7": [
     "B56",
-    "Sicilian Defense: Open, 2...d6, 5.Nc3 Nc6 6.Be3 e5"
+    "Sicilian Defense: Open Variation, 2...d6, 5.Nc3 Nc6 6.Be3 e5"
   ],
   "r1bqkb1r/pp2pppp/2np4/8/3NP1n1/2N1B3/PPP2PPP/R2QKB1R w KQkq - 5 7": [
     "B56",
-    "Sicilian Defense: Open, 2...d6, 5.Nc3 Nc6 6.Be3 Ng4"
+    "Sicilian Defense: Open Variation, 2...d6, 5.Nc3 Nc6 6.Be3 Ng4"
   ],
   "r1bqkb1r/pp2pppp/2np4/1B6/3NP1n1/2N1B3/PPP2PPP/R2QK2R b KQkq - 6 7": [
     "B56",
-    "Sicilian Defense: Open, 2...d6, 5.Nc3 Nc6 6.Be3 Ng4 7.Bb5"
+    "Sicilian Defense: Open Variation, 2...d6, 5.Nc3 Nc6 6.Be3 Ng4 7.Bb5"
   ],
   "r1bqkb1r/pp2pppp/2np1n2/8/3NP3/2N2P2/PPP3PP/R1BQKB1R b KQkq - 0 6": [
     "B56",
-    "Sicilian Defense: Open, 2...d6, 5.Nc3 Nc6 6.f3"
+    "Sicilian Defense: Open Variation, 2...d6, 5.Nc3 Nc6 6.f3"
   ],
   "r1bqkb1r/pp3ppp/2np1n2/4p3/3NP3/2N2P2/PPP3PP/R1BQKB1R w KQkq - 0 7": [
     "B56",
-    "Sicilian Defense: Open, 2...d6, 5.Nc3 Nc6 6.f3 e5"
+    "Sicilian Defense: Open Variation, 2...d6, 5.Nc3 Nc6 6.f3 e5"
   ],
   "r1bqkb1r/pp3ppp/2np1n2/4p3/4P3/1NN2P2/PPP3PP/R1BQKB1R b KQkq - 1 7": [
     "B56",
-    "Sicilian Defense: Open, 2...d6, 5.Nc3 Nc6 6.f3 e5 7.Nb3"
+    "Sicilian Defense: Open Variation, 2...d6, 5.Nc3 Nc6 6.f3 e5 7.Nb3"
   ],
   "r1bqk2r/pp2bppp/2np1n2/4p3/4P3/1NN2P2/PPP3PP/R1BQKB1R w KQkq - 2 8": [
     "B56",
-    "Sicilian Defense: Open, 2...d6, 5.Nc3 Nc6 6.f3 e5 7.Nb3 Be7"
+    "Sicilian Defense: Open Variation, 2...d6, 5.Nc3 Nc6 6.f3 e5 7.Nb3 Be7"
   ],
   "r1bqkb1r/pp2pppp/2np1n2/8/3NPP2/2N5/PPP3PP/R1BQKB1R b KQkq - 0 6": [
     "B56",
-    "Sicilian Defense: Open, 2...d6, 5.Nc3 Nc6 6.f4"
+    "Sicilian Defense: Open Variation, 2...d6, 5.Nc3 Nc6 6.f4"
   ],
   "r1bqkb1r/pp2pppp/2np1n2/8/3NP3/2N4P/PPP2PP1/R1BQKB1R b KQkq - 0 6": [
     "B56",
-    "Sicilian Defense: Open, 2...d6, 5.Nc3 Nc6 6.h3"
+    "Sicilian Defense: Open Variation, 2...d6, 5.Nc3 Nc6 6.h3"
   ],
   "r1b1kb1r/pp2pppp/1qnp1n2/8/2BNP3/2N5/PPP2PPP/R1BQK2R w KQkq - 2 7": [
     "B57",
