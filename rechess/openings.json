@@ -2397,11 +2397,11 @@
   ],
   "rnbqkb1r/ppp2ppp/4pn2/3p4/2P5/5NP1/PP1PPP1P/RNBQKB1R w KQkq - 0 4": [
     "A13",
-    "English Opening: Neo Catalan"
+    "English Opening: Neo-Catalan Defense"
   ],
   "rnbqk2r/ppp1bppp/4pn2/3p4/2P5/5NP1/PP1PPPBP/RNBQK2R w KQkq - 2 5": [
     "A13",
-    "English Opening: Neo Catalan Declined"
+    "English Opening: Neo-Catalan Defense Declined"
   ],
   "rnbqkb1r/2pp1ppp/p3pn2/1p6/2P5/5NP1/PP1PPPBP/RNBQK2R w KQkq - 0 5": [
     "A13",
@@ -2453,47 +2453,47 @@
   ],
   "rnbqkb1r/ppp2ppp/4pn2/3p4/2P5/5NP1/PP1PPP1P/RNBQKB1R w KQkq - 1 4": [
     "A13",
-    "English Opening: Neo Catalan"
+    "English Opening: Neo-Catalan Defense"
   ],
   "rnbqkb1r/ppp2ppp/4pn2/3p4/2P5/5NP1/PP1PPPBP/RNBQK2R b KQkq - 2 4": [
     "A13",
-    "English Opening: Neo Catalan"
+    "English Opening: Neo-Catalan Defense"
   ],
   "rnbqkb1r/ppp2ppp/4pn2/8/Q1p5/5NP1/PP1PPPBP/RNB1K2R b KQkq - 1 5": [
     "A13",
-    "English Opening: Neo Catalan Accepted, 5.Qa4+"
+    "English Opening: Neo-Catalan Defense Accepted, 5.Qa4+"
   ],
   "r1bqkb1r/pppn1ppp/4pn2/8/Q1p5/5NP1/PP1PPPBP/RNB1K2R w KQkq - 2 6": [
     "A13",
-    "English Opening: Neo Catalan Accepted, 5.Qa4+ Nbd7"
+    "English Opening: Neo-Catalan Defense Accepted, 5.Qa4+ Nbd7"
   ],
   "r1bqkb1r/pppn1ppp/4pn2/8/Q1p5/5NP1/PP1PPPBP/RNB2RK1 b kq - 3 6": [
     "A13",
-    "English Opening: Neo Catalan Accepted, 5.Qa4+ Nbd7 6.O-O"
+    "English Opening: Neo-Catalan Defense Accepted, 5.Qa4+ Nbd7 6.O-O"
   ],
   "r1bqkb1r/pppn1ppp/4pn2/8/2Q5/5NP1/PP1PPPBP/RNB1K2R b KQkq - 0 6": [
     "A13",
-    "English Opening: Neo Catalan Accepted, 5.Qa4+ Nbd7 6.Qxc4"
+    "English Opening: Neo-Catalan Defense Accepted, 5.Qa4+ Nbd7 6.Qxc4"
   ],
   "r1bqkb1r/1ppn1ppp/p3pn2/8/2Q5/5NP1/PP1PPPBP/RNB1K2R w KQkq - 0 7": [
     "A13",
-    "English Opening: Neo Catalan Accepted, 5.Qa4+ Nbd7 6.Qxc4 a6"
+    "English Opening: Neo-Catalan Defense Accepted, 5.Qa4+ Nbd7 6.Qxc4 a6"
   ],
   "r1bqkb1r/pp1n1ppp/4pn2/2p5/2Q5/5NP1/PP1PPPBP/RNB1K2R w KQkq - 0 7": [
     "A13",
-    "English Opening: Neo Catalan Accepted, 5.Qa4+ Nbd7 6.Qxc4 c5"
+    "English Opening: Neo-Catalan Defense Accepted, 5.Qa4+ Nbd7 6.Qxc4 c5"
   ],
   "rnbqkb1r/pp3ppp/4pn2/2pp4/2P5/5NP1/PP1PPPBP/RNBQK2R w KQkq - 0 5": [
     "A13",
-    "English Opening: Neo Catalan, 4...c5"
+    "English Opening: Neo-Catalan Defense, 4...c5"
   ],
   "rnbqkb1r/pp3ppp/4pn2/2pp4/2P5/5NP1/PP1PPPBP/RNBQ1RK1 b kq - 1 5": [
     "A13",
-    "English Opening: Neo Catalan, 4...c5 5.O-O"
+    "English Opening: Neo-Catalan Defense, 4...c5 5.O-O"
   ],
   "rnbqkb1r/pp3ppp/2p1pn2/3p4/2P5/1P3NP1/P2PPPBP/RNBQK2R b KQkq - 0 5": [
     "A13",
-    "English Opening: Neo Catalan, 4...c6 5.b3"
+    "English Opening: Neo-Catalan Defense, 4...c6 5.b3"
   ],
   "r1bqkb1r/pp3ppp/2n1pn2/2pp4/2P5/1P2PN2/PB1P1PPP/RN1QKB1R w KQkq - 1 6": [
     "A13",
@@ -2505,59 +2505,59 @@
   ],
   "rnbqk2r/ppp1bppp/4pn2/3p4/2P5/5NP1/PP1PPPBP/RNBQ1RK1 b kq - 3 5": [
     "A14",
-    "English Opening: Agincourt Defense, Neo Catalan Declined"
+    "English Opening: Agincourt Defense, Neo-Catalan Defense Declined"
   ],
   "rnbqk2r/ppp1bppp/4pn2/3p4/2P5/5NP1/PP1PPPBP/RNBQK2R w KQkq - 3 5": [
     "A14",
-    "English Opening: Neo Catalan Declined"
+    "English Opening: Neo-Catalan Defense Declined"
   ],
   "rnbqk2r/ppp1bppp/4pn2/3p4/2P5/5NP1/PP1PPPBP/RNBQ1RK1 b kq - 4 5": [
     "A14",
-    "English Opening: Neo Catalan Declined"
+    "English Opening: Neo-Catalan Defense Declined"
   ],
   "rnbqk2r/pp2bppp/4pn2/2pp4/2P5/5NP1/PP1PPPBP/RNBQ1RK1 w kq - 0 6": [
     "A14",
-    "English Opening: Neo Catalan Declined, 5...c5"
+    "English Opening: Neo-Catalan Defense Declined, 5...c5"
   ],
   "rnbqk2r/pp2bppp/2p1pn2/3p4/2P5/5NP1/PP1PPPBP/RNBQ1RK1 w kq - 0 6": [
     "A14",
-    "English Opening: Neo Catalan Declined, 5...c6"
+    "English Opening: Neo-Catalan Defense Declined, 5...c6"
   ],
   "rnbq1rk1/ppp1bppp/4pn2/3p4/2P5/5NP1/PP1PPPBP/RNBQ1RK1 w - - 5 6": [
     "A14",
-    "English Opening: Neo Catalan Declined, 5...O-O"
+    "English Opening: Neo-Catalan Defense Declined, 5...O-O"
   ],
   "rnbq1rk1/ppp1bppp/4pn2/3p4/2P5/1P3NP1/P2PPPBP/RNBQ1RK1 b - - 0 6": [
     "A14",
-    "English Opening: Neo Catalan Declined, 5...O-O 6.b3"
+    "English Opening: Neo-Catalan Defense Declined, 5...O-O 6.b3"
   ],
   "rnbq1rk1/p1p1bppp/1p2pn2/3p4/2P5/1P3NP1/P2PPPBP/RNBQ1RK1 w - - 0 7": [
     "A14",
-    "English Opening: Neo Catalan Declined, 5...O-O 6.b3 b6"
+    "English Opening: Neo-Catalan Defense Declined, 5...O-O 6.b3 b6"
   ],
   "rn1q1rk1/pbp1bppp/1p2pn2/3p4/2P5/1P3NP1/PB1PPPBP/RN1Q1RK1 w - - 2 8": [
     "A14",
-    "English Opening: Neo Catalan Declined, 5...O-O 6.b3 b6 7.Bb2 Bb7"
+    "English Opening: Neo-Catalan Defense Declined, 5...O-O 6.b3 b6 7.Bb2 Bb7"
   ],
   "rn1q1rk1/pbp1bppp/1p2pn2/3p4/2P5/1P2PNP1/PB1P1PBP/RN1Q1RK1 b - - 0 8": [
     "A14",
-    "English Opening: Neo Catalan Declined, 5...O-O 6.b3 b6 7.Bb2 Bb7 8.e3"
+    "English Opening: Neo-Catalan Defense Declined, 5...O-O 6.b3 b6 7.Bb2 Bb7 8.e3"
   ],
   "rnbq1rk1/pp2bppp/4pn2/2pp4/2P5/1P3NP1/P2PPPBP/RNBQ1RK1 w - - 0 7": [
     "A14",
-    "English Opening: Neo Catalan Declined, 5...O-O 6.b3 c5"
+    "English Opening: Neo-Catalan Defense Declined, 5...O-O 6.b3 c5"
   ],
   "rnbq1rk1/pp2bppp/4pn2/2pp4/2P5/1P3NP1/PB1PPPBP/RN1Q1RK1 b - - 1 7": [
     "A14",
-    "English Opening: Neo Catalan Declined, 5...O-O 6.b3 c5 7.Bb2"
+    "English Opening: Neo-Catalan Defense Declined, 5...O-O 6.b3 c5 7.Bb2"
   ],
   "r1bq1rk1/pp2bppp/2n1pn2/2pp4/2P5/1P3NP1/PB1PPPBP/RN1Q1RK1 w - - 2 8": [
     "A14",
-    "English Opening: Neo Catalan Declined, 5...O-O 6.b3 c5 7.Bb2 Nc6"
+    "English Opening: Neo-Catalan Defense Declined, 5...O-O 6.b3 c5 7.Bb2 Nc6"
   ],
   "r1bq1rk1/pp2bppp/2n1pn2/2pp4/2P5/1P2PNP1/PB1P1PBP/RN1Q1RK1 b - - 0 8": [
     "A14",
-    "English Opening: Neo Catalan Declined, 5...O-O 6.b3 c5 7.Bb2 Nc6 8.e3"
+    "English Opening: Neo-Catalan Defense Declined, 5...O-O 6.b3 c5 7.Bb2 Nc6 8.e3"
   ],
   "rnbq1rk1/pp2bppp/2p1pn2/3p4/2P5/1P3NP1/PB1PPPBP/RN1Q1RK1 b - - 1 7": [
     "A14",
@@ -2569,7 +2569,7 @@
   ],
   "rnbqk2r/ppppppbp/5np1/8/2P1P3/2N2N2/PP1P1PPP/R1BQKB1R b KQkq - 0 4": [
     "A15",
-    "English Opening: Anglo-Indian Defense, Anti Anti Grünfeld"
+    "English Opening: Anglo-Indian Defense, Anti-Anti-Grünfeld Variation"
   ],
   "rnbqkb1r/ppp1pp1p/5np1/3p4/2P5/5NP1/PP1PPP1P/RNBQKB1R w KQkq - 1 4": [
     "A15",
@@ -3957,7 +3957,7 @@
   ],
   "rnbqkb1r/pp1ppppp/5n2/2p5/2PP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 3": [
     "A31",
-    "English Opening: Symmetrical Variation, Anti Benoni Variation"
+    "English Opening: Symmetrical Variation, Anti-Benoni Variation"
   ],
   "rnbqkb1r/pp1ppppp/5n2/2p5/2PP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 0 3": [
     "A31",
@@ -4033,7 +4033,7 @@
   ],
   "rnbqkb1r/pp1p1ppp/4pn2/8/2PN4/8/PP2PPPP/RNBQKB1R w KQkq - 0 5": [
     "A32",
-    "English Opening: Symmetrical Variation, Anti Benoni Variation, Spielmann Defense"
+    "English Opening: Symmetrical Variation, Anti-Benoni Variation, Spielmann Defense"
   ],
   "rnbqkb1r/pp1p1ppp/4pn2/8/2PN4/4P3/PP3PPP/RNBQKB1R b KQkq - 0 5": [
     "A32",
@@ -4125,11 +4125,11 @@
   ],
   "r1b1kb1r/pp1p1ppp/1qn1pn2/8/2PN4/2N3P1/PP2PP1P/R1BQKB1R w KQkq - 1 7": [
     "A33",
-    "English Opening: Symmetrical Variation, Anti Benoni Variation, Geller Variation"
+    "English Opening: Symmetrical Variation, Anti-Benoni Variation, Geller Variation"
   ],
   "r1bqkb1r/pp1p1ppp/2n1pn2/8/2PN4/2N5/PP2PPPP/R1BQKB1R w KQkq - 0 6": [
     "A33",
-    "English Opening: Symmetrical Variation, Anti Benoni Variation, Spielmann Defense"
+    "English Opening: Symmetrical Variation, Anti-Benoni Variation, Spielmann Defense"
   ],
   "r1b1kb1r/pp1p1ppp/1qn1pn2/8/2P5/1NN3P1/PP2PP1P/R1BQKB1R b KQkq - 2 7": [
     "A33",
@@ -5169,175 +5169,175 @@
   ],
   "rnbqk1nr/pppp1pbp/6p1/4p3/2PPP3/8/PP3PPP/RNBQKBNR w KQkq - 0 4": [
     "A41",
-    "Modern Defense: Neo Modern Defense"
+    "Modern Defense: Neo-Modern Defense"
   ],
   "rnbqkbnr/ppp1pp1p/3p2p1/8/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3": [
     "A41",
-    "Neo Old Indian Defense: Modern Defense"
+    "Neo-Old Indian Defense: Modern Defense"
   ],
   "rnbqkbnr/ppp1pp1p/3p2p1/8/3P1B2/5N2/PPP1PPPP/RN1QKB1R b KQkq - 1 3": [
     "A41",
-    "Neo Old Indian Defense: Modern Defense, 3.Bf4"
+    "Neo-Old Indian Defense: Modern Defense, 3.Bf4"
   ],
   "rnbqk1nr/ppp1ppbp/3p2p1/8/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 2 4": [
     "A41",
-    "Neo Old Indian Defense: Modern Defense, 3.Bf4"
+    "Neo-Old Indian Defense: Modern Defense, 3.Bf4"
   ],
   "rnbqkbnr/ppp1pp1p/3p2p1/8/3P4/5NP1/PPP1PP1P/RNBQKB1R b KQkq - 0 3": [
     "A41",
-    "Neo Old Indian Defense: Modern Defense, 3.g3"
+    "Neo-Old Indian Defense: Modern Defense, 3.g3"
   ],
   "rnbqk1nr/ppp1ppbp/3p2p1/8/3P4/5NP1/PPP1PP1P/RNBQKB1R w KQkq - 1 4": [
     "A41",
-    "Neo Old Indian Defense: Modern Defense, 3.g3"
+    "Neo-Old Indian Defense: Modern Defense, 3.g3"
   ],
   "rnbqk1nr/ppp1ppbp/3p2p1/8/3P4/5NP1/PPP1PPBP/RNBQK2R b KQkq - 2 4": [
     "A41",
-    "Neo Old Indian Defense: Modern Defense, 3.g3"
+    "Neo-Old Indian Defense: Modern Defense, 3.g3"
   ],
   "rnbqkbnr/ppp1pppp/3p4/6B1/3P4/8/PPP1PPPP/RN1QKBNR b KQkq - 1 2": [
     "A41",
-    "Neo Old Indian Defense: 2.Bg5"
+    "Neo-Old Indian Defense: 2.Bg5"
   ],
   "rnbqkbnr/ppp2ppp/3p4/3Pp3/2P5/8/PP2PPPP/RNBQKBNR b KQkq - 0 3": [
     "A41",
-    "Neo Old Indian Defense: 2.c4 e5 3.d5"
+    "Neo-Old Indian Defense: 2.c4 e5 3.d5"
   ],
   "rnbqkbnr/ppp2ppp/3p4/4P3/2P5/8/PP2PPPP/RNBQKBNR b KQkq - 0 3": [
     "A41",
-    "Neo Old Indian Defense: 2.c4 e5 3.dxe5"
+    "Neo-Old Indian Defense: 2.c4 e5 3.dxe5"
   ],
   "rnbqkbnr/ppp2ppp/3p4/4p3/2PP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 3": [
     "A41",
-    "Neo Old Indian Defense: 2.c4 e5 3.Nf3"
+    "Neo-Old Indian Defense: 2.c4 e5 3.Nf3"
   ],
   "rnbqkbnr/ppp2ppp/3p4/8/2PPp3/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
     "A41",
-    "Neo Old Indian Defense: 2.c4 e5 3.Nf3 e4"
+    "Neo-Old Indian Defense: 2.c4 e5 3.Nf3 e4"
   ],
   "rnbqkbnr/ppp1pppp/3p4/8/3P4/6P1/PPP1PP1P/RNBQKBNR b KQkq - 0 2": [
     "A41",
-    "Neo Old Indian Defense: 2.g3"
+    "Neo-Old Indian Defense: 2.g3"
   ],
   "rnbqkbnr/ppp1pppp/3p4/8/3P4/5N2/PPP1PPPP/RNBQKB1R b KQkq - 1 2": [
     "A41",
-    "Neo Old Indian Defense: 2.Nf3"
+    "Neo-Old Indian Defense: 2.Nf3"
   ],
   "rnbqkbnr/ppp1pp1p/3p2p1/8/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3": [
     "A41",
-    "Neo Old Indian Defense: Modern Defense"
+    "Neo-Old Indian Defense: Modern Defense"
   ],
   "rnbqkbnr/ppp1pp1p/3p2p1/8/2PPP3/8/PP3PPP/RNBQKBNR b KQkq - 0 3": [
     "A41",
-    "Neo Old Indian Defense: Modern Defense, 3.e4"
+    "Neo-Old Indian Defense: Modern Defense, 3.e4"
   ],
   "rnbqk1nr/ppp1ppbp/3p2p1/8/2PPP3/8/PP3PPP/RNBQKBNR w KQkq - 1 4": [
     "A41",
-    "Neo Old Indian Defense: Modern Defense, 3.e4 Bg7"
+    "Neo-Old Indian Defense: Modern Defense, 3.e4 Bg7"
   ],
   "rnbqkbnr/ppp1pp1p/3p2p1/8/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 3": [
     "A41",
-    "Neo Old Indian Defense: Modern Defense, 3.Nc3"
+    "Neo-Old Indian Defense: Modern Defense, 3.Nc3"
   ],
   "rnbqk1nr/ppp1ppbp/3p2p1/8/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 4": [
     "A41",
-    "Neo Old Indian Defense: Modern Defense, 3.Nc3 Bg7"
+    "Neo-Old Indian Defense: Modern Defense, 3.Nc3 Bg7"
   ],
   "rnbqk1nr/ppp1ppbp/3p2p1/8/2PP4/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 3 4": [
     "A41",
-    "Neo Old Indian Defense: Modern Defense, 3.Nc3 Bg7 4.Nf3"
+    "Neo-Old Indian Defense: Modern Defense, 3.Nc3 Bg7 4.Nf3"
   ],
   "rn1qk1nr/ppp1ppbp/3p2p1/8/2PP2b1/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 4 5": [
     "A41",
-    "Neo Old Indian Defense: Modern Defense, 3.Nc3 Bg7 4.Nf3 Bf4"
+    "Neo-Old Indian Defense: Modern Defense, 3.Nc3 Bg7 4.Nf3 Bf4"
   ],
   "rn1qk1nr/ppp1ppbp/3p2p1/8/2PP2b1/2N1PN2/PP3PPP/R1BQKB1R b KQkq - 0 5": [
     "A41",
-    "Neo Old Indian Defense: Modern Defense, 3.Nc3 Bg7 4.Nf3 Bf4 5.e3"
+    "Neo-Old Indian Defense: Modern Defense, 3.Nc3 Bg7 4.Nf3 Bf4 5.e3"
   ],
   "r2qk1nr/ppp1ppbp/2np2p1/8/2PP2b1/2N1PN2/PP3PPP/R1BQKB1R w KQkq - 1 6": [
     "A41",
-    "Neo Old Indian Defense: Modern Defense, 3.Nc3 Bg7 4.Nf3 Bf4 5.e3 Nc6"
+    "Neo-Old Indian Defense: Modern Defense, 3.Nc3 Bg7 4.Nf3 Bf4 5.e3 Nc6"
   ],
   "rnbqkbnr/ppp1pp1p/3p2p1/8/2PP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 3": [
     "A41",
-    "Neo Old Indian Defense: Modern Defense, 3.Nf3"
+    "Neo-Old Indian Defense: Modern Defense, 3.Nf3"
   ],
   "rnbqk1nr/ppp1ppbp/3p2p1/8/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 4": [
     "A41",
-    "Neo Old Indian Defense: Modern Defense, 3.Nf3 Bg7"
+    "Neo-Old Indian Defense: Modern Defense, 3.Nf3 Bg7"
   ],
   "rnbqk1nr/ppp1ppbp/3p2p1/8/2PPP3/5N2/PP3PPP/RNBQKB1R b KQkq - 0 4": [
     "A41",
-    "Neo Old Indian Defense: Modern Defense, 3.Nf3 Bg7 4.e4"
+    "Neo-Old Indian Defense: Modern Defense, 3.Nf3 Bg7 4.e4"
   ],
   "rnbqk1nr/ppp1ppbp/3p2p1/8/2PP4/5NP1/PP2PP1P/RNBQKB1R b KQkq - 0 4": [
     "A41",
-    "Neo Old Indian Defense: Modern Defense, 3.Nf3 Bg7 4.g3"
+    "Neo-Old Indian Defense: Modern Defense, 3.Nf3 Bg7 4.g3"
   ],
   "rnbk1bnr/ppp2ppp/8/4p3/2P5/8/PP2PPPP/RNB1KBNR w KQ - 0 5": [
     "A41",
-    "Neo Old Indian Defense: Queenswap Variation"
+    "Neo-Old Indian Defense: Queenswap Variation"
   ],
   "rn1qkbnr/ppp1pppp/3p4/8/2PP2b1/5N2/PP2PPPP/RNBQKB1R b KQkq - 0 3": [
     "A41",
-    "Neo Old Indian Defense: Wade Defense, 3.c4"
+    "Neo-Old Indian Defense: Wade Defense, 3.c4"
   ],
   "rn1qkbnr/ppp1pppp/3p4/8/2PP4/5b2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
     "A41",
-    "Neo Old Indian Defense: Wade Defense, 3.c4 Bxf3"
+    "Neo-Old Indian Defense: Wade Defense, 3.c4 Bxf3"
   ],
   "rn1qkbnr/ppp2ppp/3p4/4p3/2PP2b1/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
     "A41",
-    "Neo Old Indian Defense: Wade Defense, 3.c4 e5"
+    "Neo-Old Indian Defense: Wade Defense, 3.c4 e5"
   ],
   "rn1qkbnr/ppp2ppp/3p4/4P3/2P3b1/5N2/PP2PPPP/RNBQKB1R b KQkq - 0 4": [
     "A41",
-    "Neo Old Indian Defense: Wade Defense, 3.c4 e5 4.dxe5"
+    "Neo-Old Indian Defense: Wade Defense, 3.c4 e5 4.dxe5"
   ],
   "r2qkbnr/ppp2ppp/2np4/4P3/2P3b1/5N2/PP2PPPP/RNBQKB1R w KQkq - 1 5": [
     "A41",
-    "Neo Old Indian Defense: Wade Defense, 3.c4 e5 4.dxe5 Nc6 Gambit"
+    "Neo-Old Indian Defense: Wade Defense, 3.c4 e5 4.dxe5 Nc6 Gambit"
   ],
   "rn1qkbnr/ppp2ppp/3p4/4p3/2PP2b1/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 1 4": [
     "A41",
-    "Neo Old Indian Defense: Wade Defense, 3.c4 e5 4.Nc3"
+    "Neo-Old Indian Defense: Wade Defense, 3.c4 e5 4.Nc3"
   ],
   "r2qkbnr/ppp2ppp/2np4/4p3/2PP2b1/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 2 5": [
     "A41",
-    "Neo Old Indian Defense: Wade Defense, 3.c4 e5 4.Nc3 Nc6"
+    "Neo-Old Indian Defense: Wade Defense, 3.c4 e5 4.Nc3 Nc6"
   ],
   "r2qkbnr/pppnpppp/3p4/8/2PP2b1/5N2/PP2PPPP/RNBQKB1R w KQkq - 1 4": [
     "A41",
-    "Neo Old Indian Defense: Wade Defense, 3.c4 Nd7"
+    "Neo-Old Indian Defense: Wade Defense, 3.c4 Nd7"
   ],
   "r2qkbnr/pppnpppp/3p4/8/2PP2b1/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 2 4": [
     "A41",
-    "Neo Old Indian Defense: Wade Defense, 3.c4 Nd7 4.Nc3"
+    "Neo-Old Indian Defense: Wade Defense, 3.c4 Nd7 4.Nc3"
   ],
   "r2qkbnr/pppn1ppp/3p4/4p3/2PP2b1/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 5": [
     "A41",
-    "Neo Old Indian Defense: Wade Defense, 3.c4 Nd7 4.Nc3 e5"
+    "Neo-Old Indian Defense: Wade Defense, 3.c4 Nd7 4.Nc3 e5"
   ],
   "rn1qkbnr/ppp1pppp/3p4/8/3P2b1/4PN2/PPP2PPP/RNBQKB1R b KQkq - 0 3": [
     "A41",
-    "Neo Old Indian Defense: Wade Defense, 3.e3"
+    "Neo-Old Indian Defense: Wade Defense, 3.e3"
   ],
   "r2qkbnr/pppnpppp/3p4/8/3P2b1/4PN2/PPP2PPP/RNBQKB1R w KQkq - 1 4": [
     "A41",
-    "Neo Old Indian Defense: Wade Defense, 3.e3 Nd7"
+    "Neo-Old Indian Defense: Wade Defense, 3.e3 Nd7"
   ],
   "rn1qkb1r/ppp1pppp/3p1n2/8/3P2b1/4PN2/PPP2PPP/RNBQKB1R w KQkq - 1 4": [
     "A41",
-    "Neo Old Indian Defense: Wade Defense, 3.e3 Nf6"
+    "Neo-Old Indian Defense: Wade Defense, 3.e3 Nf6"
   ],
   "rn1qkbnr/ppp1pppp/3p4/8/3PP1b1/5N2/PPP2PPP/RNBQKB1R b KQkq - 0 3": [
     "A41",
-    "Neo Old Indian Defense: Wade Defense, 3.e4"
+    "Neo-Old Indian Defense: Wade Defense, 3.e4"
   ],
   "rn1qkb1r/ppp1pppp/3p1n2/8/3PP1b1/5N2/PPP2PPP/RNBQKB1R w KQkq - 1 4": [
     "A41",
-    "Neo Old Indian Defense: Wade Defense, 3.e4 Nf6"
+    "Neo-Old Indian Defense: Wade Defense, 3.e4 Nf6"
   ],
   "rnbqkbnr/ppp1pppp/3p4/8/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2": [
     "A41",
@@ -5681,15 +5681,15 @@
   ],
   "rnbqkb1r/p2ppppp/5n2/1ppP2B1/8/5N2/PPP1PPPP/RN1QKB1R b KQkq - 1 4": [
     "A43",
-    "Old Benoni Defense: Neo Benko, 4.Bg5"
+    "Old Benoni Defense: Neo-Benko, 4.Bg5"
   ],
   "rnbqkb1r/p3pppp/3p1n2/1ppP2B1/8/5N2/PPP1PPPP/RN1QKB1R w KQkq - 0 5": [
     "A43",
-    "Old Benoni Defense: Neo Benko, 4.Bg5 d6"
+    "Old Benoni Defense: Neo-Benko, 4.Bg5 d6"
   ],
   "rnbqkb1r/p2ppppp/8/1ppP2B1/4n3/5N2/PPP1PPPP/RN1QKB1R w KQkq - 2 5": [
     "A43",
-    "Old Benoni Defense: Neo Benko, 4.Bg5 Ne4"
+    "Old Benoni Defense: Neo-Benko, 4.Bg5 Ne4"
   ],
   "rnbqkbnr/pp2pppp/3p4/2pP4/4P3/8/PPP2PPP/RNBQKBNR b KQkq - 0 3": [
     "A43",
@@ -6421,47 +6421,47 @@
   ],
   "rnbqkb1r/pp1ppppp/5n2/2P5/8/5N2/PPP1PPPP/RNBQKB1R b KQkq - 0 3": [
     "A46",
-    "Neo Benoni 3.dxc5"
+    "Neo-Benoni 3.dxc5"
   ],
   "rnbqkb1r/pp1ppppp/5n2/2p5/3P4/2P2N2/PP2PPPP/RNBQKB1R b KQkq - 0 3": [
     "A46",
-    "Neo Benoni Defense: 3.c3"
+    "Neo-Benoni Defense: 3.c3"
   ],
   "rnbqkb1r/p2ppppp/1p3n2/2p5/3P4/2P2N2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
     "A46",
-    "Neo Benoni Defense: 3.c3 b6"
+    "Neo-Benoni Defense: 3.c3 b6"
   ],
   "rnbqkb1r/pp1ppppp/5n2/8/3p4/2P2N2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
     "A46",
-    "Neo Benoni Defense: 3.c3 cxd4"
+    "Neo-Benoni Defense: 3.c3 cxd4"
   ],
   "rnbqkb1r/pp1p1ppp/4pn2/2p5/3P4/2P2N2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
     "A46",
-    "Neo Benoni Defense: 3.c3 e6"
+    "Neo-Benoni Defense: 3.c3 e6"
   ],
   "rnbqkb1r/pp1ppp1p/5np1/2p5/3P4/2P2N2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
     "A46",
-    "Neo Benoni Defense: 3.c3 g6"
+    "Neo-Benoni Defense: 3.c3 g6"
   ],
   "rnbqkb1r/pp1ppppp/5n2/2p5/3P4/4PN2/PPP2PPP/RNBQKB1R b KQkq - 0 3": [
     "A46",
-    "Neo Benoni Defense: 3.e3"
+    "Neo-Benoni Defense: 3.e3"
   ],
   "rnbqkb1r/pp1ppppp/5n2/8/3p4/4PN2/PPP2PPP/RNBQKB1R w KQkq - 0 4": [
     "A46",
-    "Neo Benoni Defense: 3.e3 cxd4"
+    "Neo-Benoni Defense: 3.e3 cxd4"
   ],
   "rnbqkb1r/pp1ppppp/5n2/2p5/3P4/5NP1/PPP1PP1P/RNBQKB1R b KQkq - 0 3": [
     "A46",
-    "Neo Benoni Defense: 3.g3"
+    "Neo-Benoni Defense: 3.g3"
   ],
   "rnbqkb1r/pp1ppppp/5n2/8/3p4/5NP1/PPP1PP1P/RNBQKB1R w KQkq - 0 4": [
     "A46",
-    "Neo Benoni Defense: 3.g3 cxd4"
+    "Neo-Benoni Defense: 3.g3 cxd4"
   ],
   "rnbqkb1r/pp1ppppp/5n2/8/3N4/6P1/PPP1PP1P/RNBQKB1R b KQkq - 0 4": [
     "A46",
-    "Neo Benoni Defense: 3.g3 cxd4 4.Nxd4"
+    "Neo-Benoni Defense: 3.g3 cxd4 4.Nxd4"
   ],
   "rnb1kb1r/pp3ppp/1q2pn2/2pp2B1/3P4/2P1PN2/PP3PPP/RN1QKB1R w KQkq - 1 6": [
     "A46",
@@ -6601,91 +6601,91 @@
   ],
   "rnbqkb1r/p1pppppp/1p3n2/8/3P1B2/5N2/PPP1PPPP/RN1QKB1R b KQkq - 1 3": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rnbqkb1r/p1pp1ppp/1p2pn2/8/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 0 4": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rnbqkb1r/p1pp1ppp/1p2pn2/8/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 4": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rnbqkb1r/p2p1ppp/1p2pn2/2p5/3P1B2/4PN2/PPP2PPP/RN1QKB1R w KQkq - 0 5": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rn1qkb1r/pbpppppp/1p3n2/8/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 2 4": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rn1qkb1r/pbpppppp/1p3n2/8/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 4": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rn1qkb1r/pbpp1ppp/1p2pn2/8/3P1B2/4PN2/PPP2PPP/RN1QKB1R w KQkq - 0 5": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rnbqkb1r/p1pppppp/1p3n2/6B1/3P4/5N2/PPP1PPPP/RN1QKB1R b KQkq - 1 3": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rn1qkb1r/pbpppppp/1p3n2/6B1/3P4/5N2/PPP1PPPP/RN1QKB1R w KQkq - 2 4": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rnbqkb1r/p1pppppp/1p3n2/8/3P4/4PN2/PPP2PPP/RNBQKB1R b KQkq - 0 3": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rnbqkb1r/p1pp1ppp/1p2pn2/8/3P4/4PN2/PPP2PPP/RNBQKB1R w KQkq - 0 4": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rnbqkb1r/p1pp1ppp/1p2pn2/8/3P4/3BPN2/PPP2PPP/RNBQK2R b KQkq - 1 4": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rnbqkb1r/p2p1ppp/1p2pn2/2p5/3P4/3BPN2/PPP2PPP/RNBQK2R w KQkq - 0 5": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rn1qkb1r/pbpppppp/1p3n2/8/3P4/4PN2/PPP2PPP/RNBQKB1R w KQkq - 1 4": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rn1qkb1r/pbpppppp/1p3n2/8/3P4/3BPN2/PPP2PPP/RNBQK2R b KQkq - 2 4": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rn1qkb1r/pbpp1ppp/1p2pn2/8/3P4/3BPN2/PPP2PPP/RNBQK2R w KQkq - 0 5": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rn1qkb1r/pbpp1ppp/1p2pn2/8/3P4/3BPN2/PPP2PPP/RNBQ1RK1 b kq - 1 5": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rn1qkb1r/pb1p1ppp/1p2pn2/2p5/3P4/3BPN2/PPP2PPP/RNBQ1RK1 w kq - 0 6": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rnbqkb1r/p1pppppp/1p3n2/8/3P4/5NP1/PPP1PP1P/RNBQKB1R b KQkq - 0 3": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rnbqkb1r/p1pp1ppp/1p2pn2/8/3P4/5NP1/PPP1PP1P/RNBQKB1R w KQkq - 0 4": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rn1qkb1r/pbpppppp/1p3n2/8/3P4/5NP1/PPP1PPBP/RNBQK2R b KQkq - 2 4": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rn1qkb1r/pbpp1ppp/1p2pn2/8/3P4/5NP1/PPP1PPBP/RNBQK2R w KQkq - 0 5": [
     "A47",
-    "Neo Queen's Indian"
+    "Neo-Queen's Indian"
   ],
   "rnbqkb1r/p1pppppp/1p3n2/8/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3": [
     "A47",
@@ -6709,119 +6709,119 @@
   ],
   "rnbqkb1r/pppppp1p/5np1/8/3P4/5N2/PPPNPPPP/R1BQKB1R b KQkq - 1 3": [
     "A48",
-    "Neo King's Indian"
+    "Neo-King's Indian"
   ],
   "rnbqkb1r/pppppp1p/5np1/8/3P4/2P2N2/PP2PPPP/RNBQKB1R b KQkq - 0 3": [
     "A48",
-    "Neo King's Indian"
+    "Neo-King's Indian"
   ],
   "rnbqk2r/ppppppbp/5np1/8/3P4/2P2N2/PP2PPPP/RNBQKB1R w KQkq - 1 4": [
     "A48",
-    "Neo King's Indian"
+    "Neo-King's Indian"
   ],
   "rnbqkb1r/pppppp1p/5np1/8/3P4/4PN2/PPP2PPP/RNBQKB1R b KQkq - 0 3": [
     "A48",
-    "Neo King's Indian"
+    "Neo-King's Indian"
   ],
   "rnbqk2r/ppppppbp/5np1/8/3P4/4PN2/PPP2PPP/RNBQKB1R w KQkq - 1 4": [
     "A48",
-    "Neo King's Indian"
+    "Neo-King's Indian"
   ],
   "rnbqkb1r/pp1ppp1p/5np1/2p5/3P4/4PN2/PPP2PPP/RNBQKB1R w KQkq - 0 4": [
     "A48",
-    "Neo King's Indian"
+    "Neo-King's Indian"
   ],
   "rnbqkb1r/pppppp1p/5np1/8/3P4/2N2N2/PPP1PPPP/R1BQKB1R b KQkq - 1 3": [
     "A48",
-    "Neo King's Indian"
+    "Neo-King's Indian"
   ],
   "rnbqk2r/ppppppbp/5np1/8/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 2 4": [
     "A48",
-    "Neo King's Indian Defense: London System"
+    "Neo-King's Indian Defense: London System"
   ],
   "rnbqk2r/ppppppbp/5np1/8/3P1B2/5N2/PPPNPPPP/R2QKB1R b KQkq - 3 4": [
     "A48",
-    "Neo King's Indian Defense: London System"
+    "Neo-King's Indian Defense: London System"
   ],
   "rnbqk2r/ppppppbp/5np1/8/3P1B2/2P2N2/PP2PPPP/RN1QKB1R b KQkq - 0 4": [
     "A48",
-    "Neo King's Indian Defense: London System"
+    "Neo-King's Indian Defense: London System"
   ],
   "rnbqk2r/ppppppbp/5np1/8/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 4": [
     "A48",
-    "Neo King's Indian Defense: London System"
+    "Neo-King's Indian Defense: London System"
   ],
   "rnbq1rk1/ppppppbp/5np1/8/3P1B2/4PN2/PPP2PPP/RN1QKB1R w KQ - 1 5": [
     "A48",
-    "Neo King's Indian Defense: London System"
+    "Neo-King's Indian Defense: London System"
   ],
   "rnbq1rk1/ppppppbp/5np1/8/3P1B2/4PN2/PPP1BPPP/RN1QK2R b KQ - 2 5": [
     "A48",
-    "Neo King's Indian Defense: London System"
+    "Neo-King's Indian Defense: London System"
   ],
   "rnbq1rk1/ppp1ppbp/3p1np1/8/3P1B2/4PN2/PPP1BPPP/RN1QK2R w KQ - 0 6": [
     "A48",
-    "Neo King's Indian Defense: London System"
+    "Neo-King's Indian Defense: London System"
   ],
   "rnbq1rk1/ppp1ppbp/3p1np1/8/3P1B2/4PN1P/PPP1BPP1/RN1QK2R b KQ - 0 6": [
     "A48",
-    "Neo King's Indian Defense: London System"
+    "Neo-King's Indian Defense: London System"
   ],
   "rnbqkb1r/pppppp1p/6p1/6B1/3Pn3/5N2/PPP1PPPP/RN1QKB1R w KQkq - 2 4": [
     "A48",
-    "Neo King's Indian Defense: Torre Attack"
+    "Neo-King's Indian Defense: Torre Attack"
   ],
   "rnbqk2r/ppppppbp/5np1/6B1/3P4/5N2/PPP1PPPP/RN1QKB1R w KQkq - 2 4": [
     "A48",
-    "Neo King's Indian Defense: Torre Attack"
+    "Neo-King's Indian Defense: Torre Attack"
   ],
   "rnbqk2r/ppppppbp/5np1/6B1/3P4/2P2N2/PP2PPPP/RN1QKB1R b KQkq - 0 4": [
     "A48",
-    "Neo King's Indian Defense: Torre Attack"
+    "Neo-King's Indian Defense: Torre Attack"
   ],
   "rnbqk2r/ppppppbp/5np1/6B1/3P4/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 4": [
     "A48",
-    "Neo King's Indian Defense: Torre Attack"
+    "Neo-King's Indian Defense: Torre Attack"
   ],
   "rnbqk2r/ppppppbp/5np1/6B1/3P4/2N2N2/PPP1PPPP/R2QKB1R b KQkq - 3 4": [
     "A48",
-    "Neo King's Indian Defense: Torre Attack"
+    "Neo-King's Indian Defense: Torre Attack"
   ],
   "rnbqk2r/ppppppbp/5np1/6B1/3P4/5N2/PPPNPPPP/R2QKB1R b KQkq - 3 4": [
     "A48",
-    "Neo King's Indian Defense: Torre Attack"
+    "Neo-King's Indian Defense: Torre Attack"
   ],
   "rnbq1rk1/ppppppbp/5np1/6B1/3P4/5N2/PPPNPPPP/R2QKB1R w KQ - 4 5": [
     "A48",
-    "Neo King's Indian Defense: Torre Attack"
+    "Neo-King's Indian Defense: Torre Attack"
   ],
   "rnbq1rk1/ppppppbp/5np1/6B1/3PP3/5N2/PPPN1PPP/R2QKB1R b KQ - 0 5": [
     "A48",
-    "Neo King's Indian Defense: Torre Attack"
+    "Neo-King's Indian Defense: Torre Attack"
   ],
   "rnbq1rk1/ppp1ppbp/3p1np1/6B1/3PP3/5N2/PPPN1PPP/R2QKB1R w KQ - 0 6": [
     "A48",
-    "Neo King's Indian Defense: Torre Attack"
+    "Neo-King's Indian Defense: Torre Attack"
   ],
   "rnbq1rk1/ppp1ppbp/5np1/3p2B1/3PP3/5N2/PPPN1PPP/R2QKB1R w KQ - 0 6": [
     "A48",
-    "Neo King's Indian Defense: Torre Attack"
+    "Neo-King's Indian Defense: Torre Attack"
   ],
   "rnbq1rk1/ppppppbp/5np1/6B1/3P4/2P2N2/PP1NPPPP/R2QKB1R b KQ - 0 5": [
     "A48",
-    "Neo King's Indian Defense: Torre Attack"
+    "Neo-King's Indian Defense: Torre Attack"
   ],
   "rnbq1rk1/ppp1ppbp/3p1np1/6B1/3P4/2P2N2/PP1NPPPP/R2QKB1R w KQ - 0 6": [
     "A48",
-    "Neo King's Indian Defense: Torre Attack"
+    "Neo-King's Indian Defense: Torre Attack"
   ],
   "rnbq1rk1/ppp1ppbp/3p1np1/6B1/3PP3/2P2N2/PP1N1PPP/R2QKB1R b KQ - 0 6": [
     "A48",
-    "Neo King's Indian Defense: Torre Attack"
+    "Neo-King's Indian Defense: Torre Attack"
   ],
   "rnbq1rk1/pp2ppbp/3p1np1/2p3B1/3PP3/2P2N2/PP1N1PPP/R2QKB1R w KQ - 0 7": [
     "A48",
-    "Neo King's Indian Defense: Torre Attack"
+    "Neo-King's Indian Defense: Torre Attack"
   ],
   "rnbq1rk1/ppp1ppbp/5np1/3p4/3P1B2/2N1PN2/PPP1BPPP/R2QK2R b KQ - 2 6": [
     "A48",
@@ -6845,27 +6845,27 @@
   ],
   "rnbq1rk1/ppp1ppbp/3p1np1/8/3P4/1P3NP1/PBP1PPBP/RN1QK2R b KQ - 1 6": [
     "A49",
-    "Neo King's Indian Defense: Double Fianchetto System"
+    "Neo-King's Indian Defense: Double Fianchetto System"
   ],
   "rnbqk2r/ppppppbp/5np1/8/3P4/5NP1/PPP1PP1P/RNBQKB1R w KQkq - 1 4": [
     "A49",
-    "Neo King's Indian Defense: Fianchetto System"
+    "Neo-King's Indian Defense: Fianchetto System"
   ],
   "rnbqk2r/ppppppbp/5np1/8/3P4/5NP1/PPP1PPBP/RNBQK2R b KQkq - 2 4": [
     "A49",
-    "Neo King's Indian Defense: Fianchetto System"
+    "Neo-King's Indian Defense: Fianchetto System"
   ],
   "rnbq1rk1/ppppppbp/5np1/8/3P4/5NP1/PPP1PPBP/RNBQK2R w KQ - 3 5": [
     "A49",
-    "Neo King's Indian Defense: Fianchetto System"
+    "Neo-King's Indian Defense: Fianchetto System"
   ],
   "rnbq1rk1/ppppppbp/5np1/8/3P4/5NP1/PPP1PPBP/RNBQ1RK1 b - - 4 5": [
     "A49",
-    "Neo King's Indian Defense: Fianchetto System"
+    "Neo-King's Indian Defense: Fianchetto System"
   ],
   "rnbq1rk1/ppp1ppbp/3p1np1/8/3P4/5NP1/PPP1PPBP/RNBQ1RK1 w - - 0 6": [
     "A49",
-    "Neo King's Indian Defense: Fianchetto System"
+    "Neo-King's Indian Defense: Fianchetto System"
   ],
   "rnbqkbnr/p2p2pp/4p3/1PpP1p2/4P3/8/PP3PPP/RNBQKBNR w KQkq - 0 6": [
     "A50",
@@ -8997,19 +8997,19 @@
   ],
   "rnbqkbnr/pppp2pp/4p3/5p2/3P2P1/3Q4/PPP1PP1P/RNB1KBNR b KQkq - 0 3": [
     "A80",
-    "Dutch Defense: Manhattan Gambit, Anti Classical Line"
+    "Dutch Defense: Manhattan Gambit, Anti-Classical Line"
   ],
   "rnbqkbnr/ppppp2p/6p1/5p2/3P2P1/3Q4/PPP1PP1P/RNB1KBNR b KQkq - 0 3": [
     "A80",
-    "Dutch Defense: Manhattan Gambit, Anti Leningrad"
+    "Dutch Defense: Manhattan Gambit, Anti-Leningrad"
   ],
   "rnbqkbnr/ppp1p1pp/3p4/5p2/3P2P1/3Q4/PPP1PP1P/RNB1KBNR b KQkq - 0 3": [
     "A80",
-    "Dutch Defense: Manhattan Gambit, Anti Modern"
+    "Dutch Defense: Manhattan Gambit, Anti-Modern"
   ],
   "rnbqkbnr/ppp1p1pp/8/3p1p2/3P2P1/3Q4/PPP1PP1P/RNB1KBNR b KQkq - 0 3": [
     "A80",
-    "Dutch Defense: Manhattan Gambit, Anti Stonewall"
+    "Dutch Defense: Manhattan Gambit, Anti-Stonewall"
   ],
   "rnbqkbnr/pppp2pp/8/4pp2/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3": [
     "A80",
@@ -10821,7 +10821,7 @@
   ],
   "r1bqkbnr/ppppp1pp/2n2p2/8/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
     "B00",
-    "Nimzowitsch Defense: Neo Mongoloid Defense"
+    "Nimzowitsch Defense: Neo-Mongoloid Defense"
   ],
   "r1bqkbnr/pppppp1p/2n3p1/8/4P3/2N5/PPPP1PPP/R1BQKBNR w KQkq - 0 3": [
     "B00",
@@ -12105,7 +12105,7 @@
   ],
   "rnbqk1nr/pp2ppbp/2pp2p1/8/2BPP3/2N5/PPP1QPPP/R1B1K1NR b KQkq - 1 5": [
     "B06",
-    "Modern Defense: Anti Modern"
+    "Modern Defense: Anti-Modern"
   ],
   "rnbqk1nr/ppppppbp/6p1/8/2BPP3/8/PPP2PPP/RNBQK1NR b KQkq - 2 3": [
     "B06",
@@ -12369,15 +12369,15 @@
   ],
   "r1bqkb1r/pppnpppp/3p1n2/8/3PPP2/2N5/PPP3PP/R1BQKBNR b KQkq - 0 4": [
     "B07",
-    "Lion Defense: Anti Philidor"
+    "Lion Defense: Anti-Philidor"
   ],
   "r1bqkb1r/pppn1ppp/3p1n2/4p3/3PPP2/2N5/PPP3PP/R1BQKBNR w KQkq - 0 5": [
     "B07",
-    "Lion Defense: Anti Philidor, Lion's Cave"
+    "Lion Defense: Anti-Philidor, Lion's Cave"
   ],
   "r1bqkb1r/pp1n1ppp/2p2n2/3p4/2BQPP2/2N2N2/PPP3PP/R1B1K2R w KQkq - 0 8": [
     "B07",
-    "Lion Defense: Anti Philidor, Lion's Cave, Lion Claw Gambit"
+    "Lion Defense: Anti-Philidor, Lion's Cave, Lion Claw Gambit"
   ],
   "r1bqkb1r/pppnpppp/3p1n2/8/3PP1P1/2N5/PPP2P1P/R1BQKBNR b KQkq - 0 4": [
     "B07",
@@ -15433,7 +15433,7 @@
   ],
   "r1bqk1nr/pp3ppp/2np4/2p1p1b1/2B1P3/2NP4/PPPN1PPP/R1BQK2R w KQkq - 2 7": [
     "B30",
-    "Sicilian Defense: Closed Variation, Anti Sveshnikov Variation, Kharlov-Kramnik Line"
+    "Sicilian Defense: Closed Variation, Anti-Sveshnikov Variation, Kharlov-Kramnik Line"
   ],
   "r1bqkbnr/pp1ppppp/2n5/1Bp5/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3": [
     "B30",
@@ -17433,11 +17433,11 @@
   ],
   "rnbqkb1r/pp2pppp/3p1n2/2p5/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 1 4": [
     "B50",
-    "Sicilian Defense: Modern Variations, Anti Qxd4 Move Order"
+    "Sicilian Defense: Modern Variations, Anti-Qxd4 Move Order"
   ],
   "rnbqkb1r/pp2pppp/3p4/2P5/4n3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 5": [
     "B50",
-    "Sicilian Defense: Modern Variations, Anti Qxd4 Move Order Accepted"
+    "Sicilian Defense: Modern Variations, Anti-Qxd4 Move Order Accepted"
   ],
   "rnbqkbnr/pp2pppp/3p4/8/3pP3/2P2N2/PP3PPP/RNBQKB1R b KQkq - 0 4": [
     "B50",
@@ -17973,7 +17973,7 @@
   ],
   "r1b1kb1r/pp2pppp/1qnp1n2/8/2BNP3/2N5/PPP2PPP/R1BQK2R w KQkq - 2 7": [
     "B57",
-    "Sicilian Defense: Classical Variation, Anti Sozin Variation"
+    "Sicilian Defense: Classical Variation, Anti-Sozin Variation"
   ],
   "r1bqkb1r/pp2pppp/2np1n2/8/2BNP3/2N5/PPP2PPP/R1BQK2R b KQkq - 4 6": [
     "B57",
@@ -18481,7 +18481,7 @@
   ],
   "r1bqkb1r/1p3ppp/p1nppn2/6B1/3NP3/2N5/PPPQ1PPP/R3KB1R w KQkq - 0 8": [
     "B66",
-    "Sicilian Defense: Richter-Rauzer Variation, Neo Modern Variation, Early Deviations"
+    "Sicilian Defense: Richter-Rauzer Variation, Neo-Modern Variation, Early Deviations"
   ],
   "r1bqkb1r/1p3ppp/p1nppn2/6B1/3NP3/2N5/PPPQBPPP/R3K2R b KQkq - 1 8": [
     "B66",
@@ -18561,7 +18561,7 @@
   ],
   "r2qkb1r/1p1b1ppp/p1nppn2/6B1/3NP3/2N5/PPPQ1PPP/2KR1B1R w kq - 2 9": [
     "B67",
-    "Sicilian Defense: Richter-Rauzer Variation, Neo Modern Variation"
+    "Sicilian Defense: Richter-Rauzer Variation, Neo-Modern Variation"
   ],
   "r2qkb1r/1p1b1ppp/p1nppn2/6B1/3NP3/2N5/PPPQBPPP/2KR3R b kq - 3 9": [
     "B67",
@@ -18641,7 +18641,7 @@
   ],
   "r2qk2r/1p1bbppp/p1nppn2/6B1/3NPP2/2N5/PPPQ2PP/2KR1B1R w kq - 1 10": [
     "B68",
-    "Sicilian Defense: Richter-Rauzer Variation, Neo Modern Variation"
+    "Sicilian Defense: Richter-Rauzer Variation, Neo-Modern Variation"
   ],
   "r2qk2r/1p1bbppp/p1nppn2/6B1/3NPP2/2N5/PPPQB1PP/2KR3R b kq - 2 10": [
     "B68",
@@ -18665,7 +18665,7 @@
   ],
   "r2qk2r/3bbppp/p1nppB2/1p6/4PP2/2N2N2/PPPQ2PP/2KR1B1R b kq - 0 11": [
     "B69",
-    "Sicilian Defense: Richter-Rauzer Variation, Neo Modern Variation, Nyezhmetdinov Attack"
+    "Sicilian Defense: Richter-Rauzer Variation, Neo-Modern Variation, Nyezhmetdinov Attack"
   ],
   "r2qk2r/3bbp1p/p1nppp2/1p6/4PP2/2N2N2/PPPQ2PP/2KR1B1R w kq - 0 12": [
     "B69",
@@ -19865,7 +19865,7 @@
   ],
   "rnbqkb1r/1p2pppp/p2p4/8/3NP1n1/2N1B3/PPP2PPP/R2QKB1R w KQkq - 2 7": [
     "B90",
-    "Sicilian Defense: Najdorf Variation, English Attack, Anti English"
+    "Sicilian Defense: Najdorf Variation, English Attack, Anti-English"
   ],
   "rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP2PPP/R1BQKBR1 b Qkq - 1 6": [
     "B90",
@@ -20309,7 +20309,7 @@
   ],
   "r1bqkb1r/1p3ppp/p1nppn2/6B1/3NPP2/2N5/PPP3PP/R2QKB1R w KQkq - 1 8": [
     "B96",
-    "Sicilian Defense: Najdorf Variation, Neo Classical Defense"
+    "Sicilian Defense: Najdorf Variation, Neo-Classical Defense"
   ],
   "rnbqkb1r/5ppp/p2ppn2/1p4B1/3NPP2/2N5/PPP3PP/R2QKB1R w KQkq - 0 8": [
     "B96",
@@ -20941,7 +20941,7 @@
   ],
   "rnbqkb1r/pp2pppp/3p1n2/2P5/4P3/5N2/PPP2PPP/RNBQKB1R b KQkq - 0 4": [
     "B50",
-    "Sicilian Defense: Modern Variations, Anti Qxd4 Move Order"
+    "Sicilian Defense: Modern Variations, Anti-Qxd4 Move Order"
   ],
   "r1bqkb1r/pp2pppp/2np1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 6": [
     "B33",
@@ -27217,7 +27217,7 @@
   ],
   "r1bqkbnr/pppp1pp1/2n4p/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4": [
     "C50",
-    "Italian Opening: Anti Fried Liver Defense"
+    "Italian Opening: Anti-Fried Liver Defense"
   ],
   "r1bqkbnr/pppp1ppp/8/4p3/2BnP3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4": [
     "C50",
@@ -29417,7 +29417,7 @@
   ],
   "r1bqk2r/1ppp1ppp/p1n2n2/2b1p3/B3P3/5N2/PPPP1PPP/RNBQ1RK1 w kq - 4 6": [
     "C78",
-    "Ruy López Opening: Morphy Defense, Neo Arkhangelsk Variation"
+    "Ruy López Opening: Morphy Defense, Neo-Arkhangelsk Variation"
   ],
   "r1bqk2r/2ppbppp/p1n2n2/1p2p3/P3P3/1B3N2/1PPP1PPP/RNBQ1RK1 b kq - 0 7": [
     "C78",
@@ -30209,7 +30209,7 @@
   ],
   "r1bq1rk1/2ppbppp/p1n2n2/1p2p3/P3P3/1B3N2/1PPP1PPP/RNBQR1K1 b - - 0 8": [
     "C88",
-    "Ruy López Opening: Closed, Anti Marshall"
+    "Ruy López Opening: Closed, Anti-Marshall"
   ],
   "r1b1k2r/2q1bppp/p2p1n2/npp1p3/P2PP3/2P2N2/1PB2PPP/RNBQR1K1 b kq - 0 11": [
     "C88",
@@ -30273,27 +30273,27 @@
   ],
   "r1bq1rk1/2ppbppp/p1n2n2/4p3/Pp2P3/1B3N2/1PPP1PPP/RNBQR1K1 w - - 0 9": [
     "C88",
-    "Ruy López Opening: Closed, Anti Marshall 8.a4 b4"
+    "Ruy López Opening: Closed, Anti-Marshall 8.a4 b4"
   ],
   "r2q1rk1/1bppbppp/p1n2n2/1p2p3/P3P3/1B3N2/1PPP1PPP/RNBQR1K1 w - - 1 9": [
     "C88",
-    "Ruy López Opening: Closed, Anti Marshall 8.a4 Bb7"
+    "Ruy López Opening: Closed, Anti-Marshall 8.a4 Bb7"
   ],
   "r2q1rk1/1bppbppp/p1n2n2/1p2p3/P3P3/1B1P1N2/1PP2PPP/RNBQR1K1 b - - 0 9": [
     "C88",
-    "Ruy López Opening: Closed, Anti Marshall 8.a4 Bb7 9.d3"
+    "Ruy López Opening: Closed, Anti-Marshall 8.a4 Bb7 9.d3"
   ],
   "r2q1rk1/1bp1bppp/p1np1n2/1p2p3/P3P3/1B1P1N2/1PP2PPP/RNBQR1K1 w - - 0 10": [
     "C88",
-    "Ruy López Opening: Closed, Anti Marshall 8.a4 Bb7 9.d3 d6"
+    "Ruy López Opening: Closed, Anti-Marshall 8.a4 Bb7 9.d3 d6"
   ],
   "r2q1rk1/1bp1bppp/p1np1n2/1p2p3/P3P3/1BPP1N2/1P3PPP/RNBQR1K1 b - - 0 10": [
     "C88",
-    "Ruy López Opening: Closed, Anti Marshall 8.a4 Bb7 9.d3 d6 10.c3"
+    "Ruy López Opening: Closed, Anti-Marshall 8.a4 Bb7 9.d3 d6 10.c3"
   ],
   "r2q1rk1/1bp1bppp/p1np1n2/1p2p3/P3P3/1BNP1N2/1PP2PPP/R1BQR1K1 b - - 1 10": [
     "C88",
-    "Ruy López Opening: Closed, Anti Marshall 8.a4 Bb7 9.d3 d6 10.Nc3"
+    "Ruy López Opening: Closed, Anti-Marshall 8.a4 Bb7 9.d3 d6 10.Nc3"
   ],
   "r1bq1rk1/2p1bppp/p1n2n2/1p1pp3/4P3/1BP2N2/PP1P1PPP/RNBQR1K1 w - - 0 9": [
     "C89",
@@ -32697,7 +32697,7 @@
   ],
   "rn1qkbnr/ppp1pppp/8/3p4/3P2b1/2N5/PPP1PPPP/R1BQKBNR w KQkq - 2 3": [
     "D00",
-    "Queen's Pawn Opening: Chigorin Variation, Anti Veresov"
+    "Queen's Pawn Opening: Chigorin Variation, Anti-Veresov"
   ],
   "rnbqk1nr/ppp1ppbp/6p1/3p4/3P4/2N2N2/PPP1PPPP/R1BQKB1R w KQkq - 0 4": [
     "D00",
@@ -32761,7 +32761,7 @@
   ],
   "rnbqkb1r/ppp1pp1p/5np1/3p4/3P1B2/2N2N2/PPP1PPPP/R2QKB1R b KQkq - 1 4": [
     "D00",
-    "Queen's Pawn Opening: Anti King's Indian"
+    "Queen's Pawn Opening: Anti-King's Indian"
   ],
   "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/2N5/PPP1PPPP/R1BQKBNR w KQkq - 2 3": [
     "D00",
@@ -32929,7 +32929,7 @@
   ],
   "rn1qkbnr/ppp1pppp/8/3p4/3P2b1/5N2/PPP1PPPP/RNBQKB1R w KQkq - 1 3": [
     "D02",
-    "Queen's Pawn Opening: Anti Torre"
+    "Queen's Pawn Opening: Anti-Torre"
   ],
   "rnbqkbnr/pp2pppp/8/3p4/3p4/5NP1/PPP1PPBP/RNBQK2R b KQkq - 1 4": [
     "D02",
@@ -33273,7 +33273,7 @@
   ],
   "rn1qkb1r/ppp1pppp/5n2/3p1b2/3P4/4PN2/PPP2PPP/RNBQKB1R w KQkq - 1 4": [
     "D04",
-    "Queen's Pawn Opening: Colle System, Anti Colle"
+    "Queen's Pawn Opening: Colle System, Anti-Colle"
   ],
   "rnbqk2r/ppp1ppbp/5np1/3p4/3P4/3BPN2/PPP2PPP/RNBQK2R w KQkq - 2 5": [
     "D04",
@@ -33737,1047 +33737,1047 @@
   ],
   "rnbqkbnr/pp2pppp/2p5/3p4/2PPP3/8/PP3PPP/RNBQKBNR b KQkq - 0 3": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Diemer Gambit"
+    "Queen's Gambit Declined: Slav Defense, Diemer Gambit"
   ],
   "rnbqkbnr/pp2pppp/2p5/3P4/3P4/8/PP2PPPP/RNBQKBNR b KQkq - 0 3": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Exchange Variation"
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation"
   ],
   "rnbqkb1r/pp2pppp/5n2/3p4/3P4/2N2P2/PP2P1PP/R1BQKBNR b KQkq - 0 5": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Exchange Variation, Boor Attack"
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, Boor Attack"
   ],
   "rnbqkbnr/pp2pppp/2p5/8/2pPP3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 4": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Slav Gambit, Alekhine Attack"
+    "Queen's Gambit Declined: Slav Defense, Slav Gambit, Alekhine Attack"
   ],
   "rnbqkbnr/pp3ppp/2p5/3pp3/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 4": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Winawer Countergambit"
+    "Queen's Gambit Declined: Slav Defense, Winawer Countergambit"
   ],
   "rnbqkbnr/pp3ppp/2p5/3pp3/2PPP3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 4": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Winawer Countergambit, Anti Winawer Gambit"
+    "Queen's Gambit Declined: Slav Defense, Winawer Countergambit, Anti-Winawer Gambit"
   ],
   "rnbqkbnr/pp2pppp/2p5/3p4/2PP1B2/8/PP2PPPP/RN1QKBNR b KQkq - 1 3": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, 3.Bf4"
+    "Queen's Gambit Declined: Slav Defense, 3.Bf4"
   ],
   "rnbqkbnr/pp2pppp/2p5/3p4/2PP4/4P3/PP3PPP/RNBQKBNR b KQkq - 0 3": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, 3.e3"
+    "Queen's Gambit Declined: Slav Defense, 3.e3"
   ],
   "rn1qkbnr/pp2pppp/2p5/3p1b2/2PP4/4P3/PP3PPP/RNBQKBNR w KQkq - 1 4": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, 3.e3 Bf5"
+    "Queen's Gambit Declined: Slav Defense, 3.e3 Bf5"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/3p4/2PP4/4P3/PP3PPP/RNBQKBNR w KQkq - 1 4": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, 3.e3 Nf6"
+    "Queen's Gambit Declined: Slav Defense, 3.e3 Nf6"
   ],
   "rnbqkbnr/pp2pppp/2p5/3p4/2PP4/6P1/PP2PP1P/RNBQKBNR b KQkq - 0 3": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, 3.g3"
+    "Queen's Gambit Declined: Slav Defense, 3.g3"
   ],
   "rnbqkbnr/pp2pppp/2p5/8/P1pP4/2N5/1P2PPPP/R1BQKBNR b KQkq - 0 4": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, 3.Nc3 dxc4 4.a4"
+    "Queen's Gambit Declined: Slav Defense, 3.Nc3 dxc4 4.a4"
   ],
   "rnbqkbnr/pp2pppp/2p5/8/2pP4/2N1P3/PP3PPP/R1BQKBNR b KQkq - 0 4": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, 3.Nc3 dxc4 4.e3"
+    "Queen's Gambit Declined: Slav Defense, 3.Nc3 dxc4 4.e3"
   ],
   "rnbqkbnr/p3pppp/2p5/1p6/2pPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, 3.Nc3 dxc4 4.e4 b5"
+    "Queen's Gambit Declined: Slav Defense, 3.Nc3 dxc4 4.e4 b5"
   ],
   "rnbqkbnr/p3pppp/2p5/1p6/P1pPP3/2N5/1P3PPP/R1BQKBNR b KQkq - 0 5": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, 3.Nc3 dxc4 4.e4 b5 5.a4"
+    "Queen's Gambit Declined: Slav Defense, 3.Nc3 dxc4 4.e4 b5 5.a4"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 4": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, 3.Nc3 Nf6"
+    "Queen's Gambit Declined: Slav Defense, 3.Nc3 Nf6"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/3p2B1/2PP4/2N5/PP2PPPP/R2QKBNR b KQkq - 3 4": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, 3.Nc3 Nf6 4.Bg5"
+    "Queen's Gambit Declined: Slav Defense, 3.Nc3 Nf6 4.Bg5"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/6B1/2pP4/2N5/PP2PPPP/R2QKBNR w KQkq - 0 5": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, 3.Nc3 Nf6 4.Bg5 dxc4"
+    "Queen's Gambit Declined: Slav Defense, 3.Nc3 Nf6 4.Bg5 dxc4"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/3p4/2PP4/2N1P3/PP3PPP/R1BQKBNR b KQkq - 0 4": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, 3.Nc3 Nf6 4.e3"
+    "Queen's Gambit Declined: Slav Defense, 3.Nc3 Nf6 4.e3"
   ],
   "rnbqkb1r/1p2pppp/p1p2n2/3p4/2PP4/2N1P3/PP3PPP/R1BQKBNR w KQkq - 0 5": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, 3.Nc3 Nf6 4.e3 a6"
+    "Queen's Gambit Declined: Slav Defense, 3.Nc3 Nf6 4.e3 a6"
   ],
   "rnbqkb1r/1p2pppp/p1p2n2/3p4/2PP4/2NBP3/PP3PPP/R1BQK1NR b KQkq - 1 5": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, 3.Nc3 Nf6 4.e3 a6 5.Bd3"
+    "Queen's Gambit Declined: Slav Defense, 3.Nc3 Nf6 4.e3 a6 5.Bd3"
   ],
   "rnbqkb1r/1p2pppp/p1p2n2/3p4/2PP4/2N1P3/PPQ2PPP/R1B1KBNR b KQkq - 1 5": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, 3.Nc3 Nf6 4.e3 a6 5.Qc2"
+    "Queen's Gambit Declined: Slav Defense, 3.Nc3 Nf6 4.e3 a6 5.Qc2"
   ],
   "rnbqkb1r/4pppp/p1p2n2/1p1p4/2PP4/2N1P3/PPQ2PPP/R1B1KBNR w KQkq - 0 6": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, 3.Nc3 Nf6 4.e3 a6 5.Qc2 b5"
+    "Queen's Gambit Declined: Slav Defense, 3.Nc3 Nf6 4.e3 a6 5.Qc2 b5"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/3p1b2/2PP4/2N1P3/PP3PPP/R1BQKBNR w KQkq - 1 5": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, 3.Nc3 Nf6 4.e3 Bf5"
+    "Queen's Gambit Declined: Slav Defense, 3.Nc3 Nf6 4.e3 Bf5"
   ],
   "rnbqkbnr/pp2pppp/8/3p4/3P4/8/PP2PPPP/RNBQKBNR w KQkq - 0 4": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Exchange"
+    "Queen's Gambit Declined: Slav Defense, Exchange"
   ],
   "rnbqkbnr/pp2pppp/8/3p4/3P1B2/8/PP2PPPP/RN1QKBNR b KQkq - 1 4": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 4.Bf4"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 4.Bf4"
   ],
   "rnbqkbnr/pp2pppp/8/3p4/3P4/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 4": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 4.Nc3"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 4.Nc3"
   ],
   "rnbqkb1r/pp2pppp/5n2/3p4/3P4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 5": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 4.Nc3 Nf6"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 4.Nc3 Nf6"
   ],
   "rnbqkb1r/pp2pppp/5n2/3p4/3P1B2/2N5/PP2PPPP/R2QKBNR b KQkq - 3 5": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 4.Nc3 Nf6 5.Bf4"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 4.Nc3 Nf6 5.Bf4"
   ],
   "r1bqkb1r/pp2pppp/2n2n2/3p4/3P1B2/2N5/PP2PPPP/R2QKBNR w KQkq - 4 6": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 4.Nc3 Nf6 5.Bf4 Nc6"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 4.Nc3 Nf6 5.Bf4 Nc6"
   ],
   "r1bqkb1r/pp2pppp/2n2n2/3p4/3P1B2/2N1P3/PP3PPP/R2QKBNR b KQkq - 0 6": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 4.Nc3 Nf6 5.Bf4 Nc6 6.e3"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 4.Nc3 Nf6 5.Bf4 Nc6 6.e3"
   ],
   "r1bqkb1r/1p2pppp/p1n2n2/3p4/3P1B2/2N1P3/PP3PPP/R2QKBNR w KQkq - 0 7": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 4.Nc3 Nf6 5.Bf4 Nc6 6.e3 a6"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 4.Nc3 Nf6 5.Bf4 Nc6 6.e3 a6"
   ],
   "rnbqkbnr/pp2pppp/8/3p4/3P4/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 4": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 4.Nf3"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 4.Nf3"
   ],
   "rnbqkbnr/pp3ppp/2p5/3pP3/2P5/2N5/PP2PPPP/R1BQKBNR b KQkq - 0 4": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Winawer Countergambit Accepted"
+    "Queen's Gambit Declined: Slav Defense, Winawer Countergambit Accepted"
   ],
   "rnb1kbnr/pp3ppp/2p5/q3P3/2PpN3/8/PP1BPPPP/R2QKBNR b KQkq - 3 6": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Winawer Countergambit Accepted, 6.Bd2"
+    "Queen's Gambit Declined: Slav Defense, Winawer Countergambit Accepted, 6.Bd2"
   ],
   "rnb1kbnr/pp3ppp/2p5/q3P3/2Pp4/8/PP1NPPPP/R1BQKBNR b KQkq - 3 6": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Winawer Countergambit Accepted, 6.Nd2"
+    "Queen's Gambit Declined: Slav Defense, Winawer Countergambit Accepted, 6.Nd2"
   ],
   "rnbqkbnr/pp3ppp/2p5/3Pp3/3P4/2N5/PP2PPPP/R1BQKBNR b KQkq - 0 4": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Winawer Countergambit, 4.cxd5"
+    "Queen's Gambit Declined: Slav Defense, Winawer Countergambit, 4.cxd5"
   ],
   "rnbqkbnr/pp3ppp/8/3pP3/8/2N5/PP2PPPP/R1BQKBNR b KQkq - 0 5": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Winawer Countergambit, 4.cxd5 cxd5 5.dxe5"
+    "Queen's Gambit Declined: Slav Defense, Winawer Countergambit, 4.cxd5 cxd5 5.dxe5"
   ],
   "rnbqkbnr/pp3ppp/8/3pp3/3P4/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 1 5": [
     "D10",
-    "Queen's Gambit Declined, Slav Defense, Winawer Countergambit, 4.cxd5 cxd5 5.Nf3"
+    "Queen's Gambit Declined: Slav Defense, Winawer Countergambit, 4.cxd5 cxd5 5.Nf3"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/3p2B1/2PP4/5N2/PP2PPPP/RN1QKB1R b KQkq - 3 4": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Bonet Gambit"
+    "Queen's Gambit Declined: Slav Defense, Bonet Gambit"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/3p4/2PP4/5N2/PP1NPPPP/R1BQKB1R b KQkq - 3 4": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Breyer Variation"
+    "Queen's Gambit Declined: Slav Defense, Breyer Variation"
   ],
   "rnbqkbnr/pp2pppp/2p5/3p4/2PP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 3": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Modern Line"
+    "Queen's Gambit Declined: Slav Defense, Modern Line"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/3p4/2PP4/4PN2/PP3PPP/RNBQKB1R b KQkq - 0 4": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Quiet Variation"
+    "Queen's Gambit Declined: Slav Defense, Quiet Variation"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/3p4/2PP2b1/4PN2/PP3PPP/RNBQKB1R w KQkq - 1 5": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Quiet Variation, Pin Defense"
+    "Queen's Gambit Declined: Slav Defense, Quiet Variation, Pin Defense"
   ],
   "rn1qkbnr/pp2pppp/2p5/3p1b2/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 4": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, 3.Nf3 Bf5"
+    "Queen's Gambit Declined: Slav Defense, 3.Nf3 Bf5"
   ],
   "rn1qkbnr/pp2pppp/2p5/3p1b2/2PP4/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 3 4": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, 3.Nf3 Bf5 4.Nc3"
+    "Queen's Gambit Declined: Slav Defense, 3.Nf3 Bf5 4.Nc3"
   ],
   "rn1qkbnr/pp3ppp/2p1p3/3p1b2/2PP4/1QN2N2/PP2PPPP/R1B1KB1R b KQkq - 1 5": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, 3.Nf3 Bf5 4.Nc3 e6 5.Qb3"
+    "Queen's Gambit Declined: Slav Defense, 3.Nf3 Bf5 4.Nc3 e6 5.Qb3"
   ],
   "rn1qkbnr/pp2pppp/2p5/3p4/2PP2b1/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 4": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, 3.Nf3 Bg4"
+    "Queen's Gambit Declined: Slav Defense, 3.Nf3 Bg4"
   ],
   "rnbqkbnr/pp2pppp/2p5/8/2pP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, 3.Nf3 dxc4"
+    "Queen's Gambit Declined: Slav Defense, 3.Nf3 dxc4"
   ],
   "rnbqkbnr/pp2pppp/2p5/8/2pP4/4PN2/PP3PPP/RNBQKB1R b KQkq - 0 4": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, 3.Nf3 dxc4 4.e3"
+    "Queen's Gambit Declined: Slav Defense, 3.Nf3 dxc4 4.e3"
   ],
   "rnbqkbnr/p3pppp/2p5/1p6/2pP4/4PN2/PP3PPP/RNBQKB1R w KQkq - 0 5": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, 3.Nf3 dxc4 4.e3 b5"
+    "Queen's Gambit Declined: Slav Defense, 3.Nf3 dxc4 4.e3 b5"
   ],
   "rnbqkbnr/p3pppp/2p5/1p6/P1pP4/4PN2/1P3PPP/RNBQKB1R b KQkq - 0 5": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, 3.Nf3 dxc4 4.e3 b5 5.a4"
+    "Queen's Gambit Declined: Slav Defense, 3.Nf3 dxc4 4.e3 b5 5.a4"
   ],
   "rnbqkbnr/p4ppp/2p1p3/1p6/P1pP4/4PN2/1P3PPP/RNBQKB1R w KQkq - 0 6": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, 3.Nf3 dxc4 4.e3 b5 5.a4 e6"
+    "Queen's Gambit Declined: Slav Defense, 3.Nf3 dxc4 4.e3 b5 5.a4 e6"
   ],
   "rn1qkbnr/pp2pppp/2p1b3/8/2pP4/4PN2/PP3PPP/RNBQKB1R w KQkq - 1 5": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, 3.Nf3 dxc4 4.e3 Be6"
+    "Queen's Gambit Declined: Slav Defense, 3.Nf3 dxc4 4.e3 Be6"
   ],
   "rnbqkbnr/pp2pppp/2p5/8/2pP4/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 1 4": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, 3.Nf3 dxc4 4.Nc3"
+    "Queen's Gambit Declined: Slav Defense, 3.Nf3 dxc4 4.Nc3"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/3p4/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 4": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, 3.Nf3 Nf6"
+    "Queen's Gambit Declined: Slav Defense, 3.Nf3 Nf6"
   ],
   "rnbqkb1r/1p2pppp/p1p2n2/3p4/2PP4/4PN2/PP3PPP/RNBQKB1R w KQkq - 0 5": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, 4.e3 a6"
+    "Queen's Gambit Declined: Slav Defense, 4.e3 a6"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/3p4/2PP2b1/2N1PN2/PP3PPP/R1BQKB1R b KQkq - 2 5": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, 4.e3 Bg4"
+    "Queen's Gambit Declined: Slav Defense, 4.e3 Bg4"
   ],
   "rnbqkb1r/pp2pp1p/2p2np1/3p4/2PP4/4PN2/PP3PPP/RNBQKB1R w KQkq - 0 5": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, 4.e3 g6"
+    "Queen's Gambit Declined: Slav Defense, 4.e3 g6"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/3p4/2PP4/1Q3N2/PP2PPPP/RNB1KB1R b KQkq - 3 4": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, 4.Qb3"
+    "Queen's Gambit Declined: Slav Defense, 4.Qb3"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/3p4/2PP4/5N2/PPQ1PPPP/RNB1KB1R b KQkq - 3 4": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, 4.Qc2"
+    "Queen's Gambit Declined: Slav Defense, 4.Qc2"
   ],
   "rnbqkb1r/pp2pp1p/2p2np1/3p4/2PP1B2/5N2/PPQ1PPPP/RN2KB1R b KQkq - 1 5": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, 4.Qc2 g6 5.Bf4"
+    "Queen's Gambit Declined: Slav Defense, 4.Qc2 g6 5.Bf4"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/3p4/2PP4/5NP1/PP2PP1P/RNBQKB1R b KQkq - 0 4": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti System"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti System"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/3p4/2PP2b1/5NP1/PP2PP1P/RNBQKB1R w KQkq - 1 5": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti System"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti System"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/3p4/2PP2b1/5NP1/PP2PPBP/RNBQK2R b KQkq - 2 5": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti System"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti System"
   ],
   "rn1qkb1r/pp3ppp/2p1pn2/3p4/2PP2b1/5NP1/PP2PPBP/RNBQK2R w KQkq - 0 6": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti System"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti System"
   ],
   "rn1qkb1r/pp3ppp/2p1pn2/3p4/2PP2b1/5NP1/PP2PPBP/RNBQ1RK1 b kq - 1 6": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti System"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti System"
   ],
   "r2qkb1r/pp1n1ppp/2p1pn2/3p4/2PP2b1/5NP1/PP2PPBP/RNBQ1RK1 w kq - 2 7": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti System"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti System"
   ],
   "r2qkb1r/pp1n1ppp/2p1pn2/3p4/2PP2b1/5NP1/PP1NPPBP/R1BQ1RK1 b kq - 3 7": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti System"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti System"
   ],
   "r2qk2r/pp1n1ppp/2pbpn2/3p4/2PP2b1/5NP1/PP1NPPBP/R1BQ1RK1 w kq - 4 8": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti System"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti System"
   ],
   "r2qk2r/pp1nbppp/2p1pn2/3p4/2PP2b1/5NP1/PP1NPPBP/R1BQ1RK1 w kq - 4 8": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti System"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti System"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/3p1b2/2PP4/5NP1/PP2PP1P/RNBQKB1R w KQkq - 1 5": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti System"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti System"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/3p1b2/2PP4/5NP1/PP2PPBP/RNBQK2R b KQkq - 2 5": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti System"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti System"
   ],
   "rn1qkb1r/pp3ppp/2p1pn2/3p1b2/2PP4/5NP1/PP2PPBP/RNBQK2R w KQkq - 0 6": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti System"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti System"
   ],
   "rn1qkb1r/pp3ppp/2p1pn2/3p1b2/2PP4/5NP1/PP2PPBP/RNBQ1RK1 b kq - 1 6": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti System"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti System"
   ],
   "r2qkb1r/pp1n1ppp/2p1pn2/3p1b2/2PP4/5NP1/PP2PPBP/RNBQ1RK1 w kq - 2 7": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti System"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti System"
   ],
   "rn1qk2r/pp2bppp/2p1pn2/3p1b2/2PP4/5NP1/PP2PPBP/RNBQ1RK1 w kq - 2 7": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti System"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti System"
   ],
   "rn1qkb1r/pp3pp1/2p1pn1p/3p1b2/2PP4/5NP1/PP2PPBP/RNBQ1RK1 w kq - 0 7": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti System"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti System"
   ],
   "rn1qkb1r/pp3pp1/2p1pn1p/3p1b2/2PP4/5NP1/PP1NPPBP/R1BQ1RK1 b kq - 1 7": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti System"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti System"
   ],
   "rn1qkb1r/pp3pp1/2p1pn1p/3p1b2/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 b kq - 1 7": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti System"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti System"
   ],
   "rn1qkb1r/pp3pp1/2p1pn1p/3p1b2/2PP4/1P3NP1/P3PPBP/RNBQ1RK1 b kq - 0 7": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti System"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti System"
   ],
   "r2qkb1r/pp1n1ppp/2p1pn2/3p4/2PP2b1/1P3NP1/P3PPBP/RNBQ1RK1 b kq - 0 7": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti with b3"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti with b3"
   ],
   "r2qk2r/pp1n1ppp/2pbpn2/3p4/2PP2b1/1P3NP1/P3PPBP/RNBQ1RK1 w kq - 1 8": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti with b3"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti with b3"
   ],
   "r2qk2r/pp1n1ppp/2pbpn2/3p4/2PP2b1/1P3NP1/PB2PPBP/RN1Q1RK1 b kq - 2 8": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti with b3"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti with b3"
   ],
   "r2q1rk1/pp1n1ppp/2pbpn2/3p4/2PP2b1/1P3NP1/PB1NPPBP/R2Q1RK1 b - - 4 9": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti with b3"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti with b3"
   ],
   "r2qk2r/pp1nbppp/2p1pn2/3p4/2PP2b1/1P3NP1/P3PPBP/RNBQ1RK1 w kq - 1 8": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti with b3"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti with b3"
   ],
   "r2qk2r/pp1nbppp/2p1pn2/3p4/2PP2b1/1P3NP1/PB2PPBP/RN1Q1RK1 b kq - 2 8": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti with b3"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti with b3"
   ],
   "r2q1rk1/pp1nbppp/2p1pn2/3p4/2PP2b1/1P3NP1/PB1NPPBP/R2Q1RK1 b - - 4 9": [
     "D11",
-    "Queen's Gambit Declined, Slav Defense, Slav-Réti with b3"
+    "Queen's Gambit Declined: Slav Defense, Slav-Réti with b3"
   ],
   "rn1qkb1r/pp1n1ppp/4p3/3pNb2/3P4/2N1P3/PP3PPP/R1BQKB1R w KQkq - 2 8": [
     "D12",
-    "Queen's Gambit Declined, Slav Defense, Quiet Variation, Amsterdam Variation"
+    "Queen's Gambit Declined: Slav Defense, Quiet Variation, Amsterdam Variation"
   ],
   "rnq1kb1r/pp3ppp/4pn2/3p1b2/3P4/NQ2PN2/PP1B1PPP/R3KB1R b KQkq - 1 8": [
     "D12",
-    "Queen's Gambit Declined, Slav Defense, Quiet Variation, Landau Variation"
+    "Queen's Gambit Declined: Slav Defense, Quiet Variation, Landau Variation"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/3p1b2/2PP4/4PN2/PP3PPP/RNBQKB1R w KQkq - 1 5": [
     "D12",
-    "Queen's Gambit Declined, Slav Defense, Quiet Variation, Schallopp Defense"
+    "Queen's Gambit Declined: Slav Defense, Quiet Variation, Schallopp Defense"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/3p1b2/2PP4/3BPN2/PP3PPP/RNBQK2R b KQkq - 2 5": [
     "D12",
-    "Queen's Gambit Declined, Slav Defense, 4.e3 Bf5 5.Bd3"
+    "Queen's Gambit Declined: Slav Defense, 4.e3 Bf5 5.Bd3"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/3p4/2PP4/3bPN2/PP3PPP/RNBQK2R w KQkq - 0 6": [
     "D12",
-    "Queen's Gambit Declined, Slav Defense, 4.e3 Bf5 5.Bd3 Bxd3"
+    "Queen's Gambit Declined: Slav Defense, 4.e3 Bf5 5.Bd3 Bxd3"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/3P1b2/3P4/4PN2/PP3PPP/RNBQKB1R b KQkq - 0 5": [
     "D12",
-    "Queen's Gambit Declined, Slav Defense, 4.e3 Bf5 5.cxd5"
+    "Queen's Gambit Declined: Slav Defense, 4.e3 Bf5 5.cxd5"
   ],
   "rn1qkb1r/pp2pppp/5n2/3p1b2/3P4/4PN2/PP3PPP/RNBQKB1R w KQkq - 0 6": [
     "D12",
-    "Queen's Gambit Declined, Slav Defense, 4.e3 Bf5 5.cxd5"
+    "Queen's Gambit Declined: Slav Defense, 4.e3 Bf5 5.cxd5"
   ],
   "rn1qkb1r/pp2pppp/5n2/3p1b2/3P4/1Q2PN2/PP3PPP/RNB1KB1R b KQkq - 1 6": [
     "D12",
-    "Queen's Gambit Declined, Slav Defense, 4.e3 Bf5 5.cxd5 cxd5 6.Qb3"
+    "Queen's Gambit Declined: Slav Defense, 4.e3 Bf5 5.cxd5 cxd5 6.Qb3"
   ],
   "rn2kb1r/ppq1pppp/5n2/3p1b2/3P4/1Q2PN2/PP3PPP/RNB1KB1R w KQkq - 2 7": [
     "D12",
-    "Queen's Gambit Declined, Slav Defense, 4.e3 Bf5 5.cxd5 cxd5 6.Qb3 Qc7"
+    "Queen's Gambit Declined: Slav Defense, 4.e3 Bf5 5.cxd5 cxd5 6.Qb3 Qc7"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/3p1b2/2PP4/2N1PN2/PP3PPP/R1BQKB1R b KQkq - 2 5": [
     "D12",
-    "Queen's Gambit Declined, Slav Defense, 4.e3 Bf5 5.Nc3"
+    "Queen's Gambit Declined: Slav Defense, 4.e3 Bf5 5.Nc3"
   ],
   "rn1qkb1r/pp3ppp/2p1pn2/3p1b2/2PP4/2N1PN2/PP3PPP/R1BQKB1R w KQkq - 0 6": [
     "D12",
-    "Queen's Gambit Declined, Slav Defense, 4.e3 Bf5 5.Nc3 e6"
+    "Queen's Gambit Declined: Slav Defense, 4.e3 Bf5 5.Nc3 e6"
   ],
   "rn1qkb1r/pp3ppp/2p1pn2/3p1b2/2PP4/2NBPN2/PP3PPP/R1BQK2R b KQkq - 1 6": [
     "D12",
-    "Queen's Gambit Declined, Slav Defense, 4.e3 Bf5 5.Nc3 e6 6.Bd3"
+    "Queen's Gambit Declined: Slav Defense, 4.e3 Bf5 5.Nc3 e6 6.Bd3"
   ],
   "rn1qkb1r/pp3ppp/2p1pn2/3p4/2PP4/2NbPN2/PP3PPP/R1BQK2R w KQkq - 0 7": [
     "D12",
-    "Queen's Gambit Declined, Slav Defense, 4.e3 Bf5 5.Nc3 e6 6.Bd3 Bxd3"
+    "Queen's Gambit Declined: Slav Defense, 4.e3 Bf5 5.Nc3 e6 6.Bd3 Bxd3"
   ],
   "rn1qkb1r/pp3ppp/2p1pn2/3p4/2PP4/2NQPN2/PP3PPP/R1B1K2R b KQkq - 0 7": [
     "D12",
-    "Queen's Gambit Declined, Slav Defense, 4.e3 Bf5 5.Nc3 e6 6.Bd3 Bxd3"
+    "Queen's Gambit Declined: Slav Defense, 4.e3 Bf5 5.Nc3 e6 6.Bd3 Bxd3"
   ],
   "r2qkb1r/pp1n1ppp/2p1pn2/3p4/2PP4/2NQPN2/PP3PPP/R1B1K2R w KQkq - 1 8": [
     "D12",
-    "Queen's Gambit Declined, Slav Defense, 4.e3 Bf5 5.Nc3 e6 6.Bd3 Bxd3 7.Qxd3 Nbd7"
+    "Queen's Gambit Declined: Slav Defense, 4.e3 Bf5 5.Nc3 e6 6.Bd3 Bxd3 7.Qxd3 Nbd7"
   ],
   "rn1qkb1r/pp3ppp/2p1pn2/3p1b2/2PP4/2N1PN2/PP2BPPP/R1BQK2R b KQkq - 1 6": [
     "D12",
-    "Queen's Gambit Declined, Slav Defense, 4.e3 Bf5 5.Nc3 e6 6.Be2"
+    "Queen's Gambit Declined: Slav Defense, 4.e3 Bf5 5.Nc3 e6 6.Be2"
   ],
   "rn1qkb1r/pp3ppp/2p1pn2/3p1b2/2PP3N/2N1P3/PP3PPP/R1BQKB1R b KQkq - 1 6": [
     "D12",
-    "Queen's Gambit Declined, Slav Defense, 4.e3 Bf5 5.Nc3 e6 6.Nh4"
+    "Queen's Gambit Declined: Slav Defense, 4.e3 Bf5 5.Nc3 e6 6.Nh4"
   ],
   "rn1qkb1r/pp3ppp/2p1pn2/3p4/2PPb2N/2N1P3/PP3PPP/R1BQKB1R w KQkq - 2 7": [
     "D12",
-    "Queen's Gambit Declined, Slav Defense, 4.e3 Bf5 5.Nc3 e6 6.Nh4 Be4"
+    "Queen's Gambit Declined: Slav Defense, 4.e3 Bf5 5.Nc3 e6 6.Nh4 Be4"
   ],
   "rn1qkb1r/pp3ppp/2p1pn2/3p4/2PP2bN/2N1P3/PP3PPP/R1BQKB1R w KQkq - 2 7": [
     "D12",
-    "Queen's Gambit Declined, Slav Defense, 4.e3 Bf5 5.Nc3 e6 6.Nh4 Bg4"
+    "Queen's Gambit Declined: Slav Defense, 4.e3 Bf5 5.Nc3 e6 6.Nh4 Bg4"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/3p1b2/2PP4/1Q2PN2/PP3PPP/RNB1KB1R b KQkq - 2 5": [
     "D12",
-    "Queen's Gambit Declined, Slav Defense, 4.e3 Bf5 5.Qb3"
+    "Queen's Gambit Declined: Slav Defense, 4.e3 Bf5 5.Qb3"
   ],
   "rnbqkb1r/pp2pppp/5n2/3p4/3P4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 5": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange Variation"
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation"
   ],
   "rn1qkb1r/pp2pppp/5n2/3p1b2/3P4/2N1PN2/PP3PPP/R1BQKB1R b KQkq - 1 6": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange Variation, Schallopp Variation"
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, Schallopp Variation"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/3P4/3P4/5N2/PP2PPPP/RNBQKB1R b KQkq - 0 4": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange"
+    "Queen's Gambit Declined: Slav Defense, Exchange"
   ],
   "rnbqkb1r/pp2pppp/5n2/3p4/3P4/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 1 5": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 5.Nc3"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 5.Nc3"
   ],
   "rnbqkb1r/1p2pppp/p4n2/3p4/3P4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 6": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 5.Nc3 a6"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 5.Nc3 a6"
   ],
   "rnbqkb1r/1p2pppp/p4n2/3p4/3P1B2/2N2N2/PP2PPPP/R2QKB1R b KQkq - 1 6": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 5.Nc3 a6 6.Bf4"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 5.Nc3 a6 6.Bf4"
   ],
   "rnbqkb1r/1p2pppp/p4n2/3pN3/3P4/2N5/PP2PPPP/R1BQKB1R b KQkq - 1 6": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 5.Nc3 a6 6.Ne5"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 5.Nc3 a6 6.Ne5"
   ],
   "rn1qkb1r/pp2pppp/5n2/3p1b2/3P4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 2 6": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 5.Nc3 Bf5"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 5.Nc3 Bf5"
   ],
   "rnbqkb1r/pp3ppp/4pn2/3p4/3P4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 6": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 5.Nc3 e6"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 5.Nc3 e6"
   ],
   "rnbqkb1r/pp3ppp/4pn2/3p4/3P1B2/2N2N2/PP2PPPP/R2QKB1R b KQkq - 1 6": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 5.Nc3 e6 6.Bf4"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 5.Nc3 e6 6.Bf4"
   ],
   "r1bqkb1r/pp2pppp/2n2n2/3p4/3P4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 2 6": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 5.Nc3 Nc6"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 5.Nc3 Nc6"
   ],
   "r1bqkb1r/pp2pppp/2n2n2/3p4/3P1B2/2N2N2/PP2PPPP/R2QKB1R b KQkq - 3 6": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 6.Bf4"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4"
   ],
   "r1bqkb1r/1p2pppp/p1n2n2/3p4/3P1B2/2N2N2/PP2PPPP/R2QKB1R w KQkq - 0 7": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 6.Bf4 a6"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 a6"
   ],
   "r1bqkb1r/1p2pppp/p1n2n2/3p4/3P1B2/2N1PN2/PP3PPP/R2QKB1R b KQkq - 0 7": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 6.Bf4 a6 7.e3"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 a6 7.e3"
   ],
   "r2qkb1r/1p2pppp/p1n2n2/3p4/3P1Bb1/2N1PN2/PP3PPP/R2QKB1R w KQkq - 1 8": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 6.Bf4 a6 7.e3 Bg4"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 a6 7.e3 Bg4"
   ],
   "r2qkb1r/1p2pppp/p1n2n2/3p4/3P1Bb1/2N1PN2/PP2BPPP/R2QK2R b KQkq - 2 8": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 6.Bf4 a6 7.e3 Bg4 8.Be2"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 a6 7.e3 Bg4 8.Be2"
   ],
   "r1bqkb1r/pp3ppp/2n1pn2/3p4/3P1B2/2N2N2/PP2PPPP/R2QKB1R w KQkq - 0 7": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 6.Bf4 e6"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 e6"
   ],
   "r1bqkb1r/pp3ppp/2n1pn2/3p4/3P1B2/2N1PN2/PP3PPP/R2QKB1R b KQkq - 0 7": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 6.Bf4 e6 7.e3"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 e6 7.e3"
   ],
   "r1bqk2r/pp3ppp/2nbpn2/3p4/3P1B2/2N1PN2/PP3PPP/R2QKB1R w KQkq - 1 8": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 6.Bf4 e6 7.e3 Bd6"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 e6 7.e3 Bd6"
   ],
   "r1b1k2r/pp3ppp/2nqpn2/3p4/3P4/2N1PN2/PP3PPP/R2QKB1R w KQkq - 0 9": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 6.Bf4 e6 7.e3 Bd6 8.Bxd6 Qxd6"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 e6 7.e3 Bd6 8.Bxd6 Qxd6"
   ],
   "r1bqk2r/pp2bppp/2n1pn2/3p4/3P1B2/2N1PN2/PP3PPP/R2QKB1R w KQkq - 1 8": [
     "D13",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 6.Bf4 e6 7.e3 Be7"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 e6 7.e3 Be7"
   ],
   "r2qkb1r/pp2pppp/2n2n2/3p1b2/3P1B2/2N2N2/PP2PPPP/R2QKB1R w KQkq - 6 7": [
     "D14",
-    "Queen's Gambit Declined, Slav Defense, Exchange Variation, Symmetrical Line"
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, Symmetrical Line"
   ],
   "r2qk2r/pp3ppp/2n1pn2/3p1b2/1b1P1B2/1QN1PN2/PP3PPP/R3KB1R w KQkq - 2 9": [
     "D14",
-    "Queen's Gambit Declined, Slav Defense, Exchange Variation, Trifunović Variation"
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, Trifunović Variation"
   ],
   "r2qkb1r/pp2pppp/2n2n2/3p1b2/3P1B2/2N2N2/PP2PPPP/R2QKB1R w KQkq - 4 7": [
     "D14",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 6.Bf4 Bf5"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 Bf5"
   ],
   "r2qkb1r/pp2pppp/2n2n2/3p1b2/3P1B2/2N1PN2/PP3PPP/R2QKB1R b KQkq - 0 7": [
     "D14",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 6.Bf4 Bf5 7.e3"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 Bf5 7.e3"
   ],
   "r2qkb1r/1p2pppp/p1n2n2/3p1b2/3P1B2/2N1PN2/PP3PPP/R2QKB1R w KQkq - 0 8": [
     "D14",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 6.Bf4 Bf5 7.e3 a6"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 Bf5 7.e3 a6"
   ],
   "r2qkb1r/pp3ppp/2n1pn2/3p1b2/3P1B2/2N1PN2/PP3PPP/R2QKB1R w KQkq - 0 8": [
     "D14",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 6.Bf4 Bf5 7.e3 e6"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 Bf5 7.e3 e6"
   ],
   "r2qkb1r/pp3ppp/2n1pn2/1B1p1b2/3P1B2/2N1PN2/PP3PPP/R2QK2R b KQkq - 1 8": [
     "D14",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 8.Bb5"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Bb5"
   ],
   "r2qkb1r/pp1n1ppp/2n1p3/1B1p1b2/3P1B2/2N1PN2/PP3PPP/R2QK2R w KQkq - 2 9": [
     "D14",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 8.Bb5 Nd7"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Bb5 Nd7"
   ],
   "r2qkb1r/pp1n1ppp/2n1p3/1B1p1b2/Q2P1B2/2N1PN2/PP3PPP/R3K2R b KQkq - 3 9": [
     "D14",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 8.Bb5 Nd7 9.Qa4"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Bb5 Nd7 9.Qa4"
   ],
   "r2qkb1r/pp3ppp/2n1pn2/3p1b2/3P1B2/2NBPN2/PP3PPP/R2QK2R b KQkq - 1 8": [
     "D14",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 8.Bd3"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Bd3"
   ],
   "r2qk2r/pp3ppp/2nbpn2/3p4/3P1B2/2NQPN2/PP3PPP/R3K2R w KQkq - 1 10": [
     "D14",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 8.Bd3 Bxd3 9.Qxd3 Bd6"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Bd3 Bxd3 9.Qxd3 Bd6"
   ],
   "r3k2r/pp3ppp/2nqpn2/3p4/3P4/2NQPN2/PP3PPP/R3K2R w KQkq - 0 11": [
     "D14",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 8.Bd3 Bxd3 9.Qxd3 Bd6 10.Bxd6 Qxd6"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Bd3 Bxd3 9.Qxd3 Bd6 10.Bxd6 Qxd6"
   ],
   "r4rk1/pp3ppp/2nqpn2/3p4/3P4/2NQPN2/PP3PPP/R4RK1 w - - 2 12": [
     "D14",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 8.Bd3 Main Line"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Bd3 Main Line"
   ],
   "r4rk1/pp3ppp/2nqpn2/3p4/3P4/2NQPN2/PP3PPP/2R2RK1 b - - 3 12": [
     "D14",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 8.Bd3 Main Line, 12.Rac1"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Bd3 Main Line, 12.Rac1"
   ],
   "r4rk1/pp3ppp/2nqpn2/3p4/3P4/2NQPN2/PP3PPP/R1R3K1 b - - 3 12": [
     "D14",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 8.Bd3 Main Line, 12.Rfc1"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Bd3 Main Line, 12.Rfc1"
   ],
   "r1r3k1/pp3ppp/2nqpn2/3p4/3P4/2NQPN2/PP3PPP/R1R3K1 w - - 4 13": [
     "D14",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 8.Bd3 Main Line, 12.Rfc1 Rfc8"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Bd3 Main Line, 12.Rfc1 Rfc8"
   ],
   "r2qkb1r/pp3ppp/2n1pn2/3pNb2/3P1B2/2N1P3/PP3PPP/R2QKB1R b KQkq - 1 8": [
     "D14",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 8.Ne5"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Ne5"
   ],
   "r2qkb1r/pp3ppp/2n1pn2/3p1b2/3P1B2/1QN1PN2/PP3PPP/R3KB1R b KQkq - 1 8": [
     "D14",
-    "Queen's Gambit Declined, Slav Defense, Exchange, 8.Qb3"
+    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Qb3"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/8/2pP4/2N1PN2/PP3PPP/R1BQKB1R b KQkq - 0 5": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Alekhine Variation"
+    "Queen's Gambit Declined: Slav Defense, Alekhine Variation"
   ],
   "rnbqkb1r/1p2pppp/p1p2n2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 5": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Chameleon Variation"
+    "Queen's Gambit Declined: Slav Defense, Chameleon Variation"
   ],
   "rnbqkb1r/1p2pppp/p1p2n2/2Pp4/3P4/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 0 5": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Chameleon Variation, Advance System"
+    "Queen's Gambit Declined: Slav Defense, Chameleon Variation, Advance System"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/8/2pPP3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 0 5": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Geller Gambit"
+    "Queen's Gambit Declined: Slav Defense, Geller Gambit"
   ],
   "rnbqkb1r/p3pppp/2p2n2/1p2P3/2pP4/2N2N2/PP3PPP/R1BQKB1R b KQkq - 0 6": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Geller Gambit"
+    "Queen's Gambit Declined: Slav Defense, Geller Gambit"
   ],
   "rnbqkb1r/pp2pp1p/2p2np1/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 5": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Schlechter Variation"
+    "Queen's Gambit Declined: Slav Defense, Schlechter Variation"
   ],
   "rnb1kb1r/pp2pppp/1qp2n2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 4 5": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Süchting Variation"
+    "Queen's Gambit Declined: Slav Defense, Süchting Variation"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 3 4": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Three Knights Variation"
+    "Queen's Gambit Declined: Slav Defense, Three Knights Variation"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/8/2pP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 5": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Two Knights Attack"
+    "Queen's Gambit Declined: Slav Defense, Two Knights Attack"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/3p1b2/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 4 5": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, 4.Nc3 Bf5"
+    "Queen's Gambit Declined: Slav Defense, 4.Nc3 Bf5"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/3p1b2/2PP4/1QN2N2/PP2PPPP/R1B1KB1R b KQkq - 5 5": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, 4.Nc3 Bf5 5.Qb3"
+    "Queen's Gambit Declined: Slav Defense, 4.Nc3 Bf5 5.Qb3"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/4N3/2pP4/2N5/PP2PPPP/R1BQKB1R b KQkq - 1 5": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Accepted, 5.Ne5"
+    "Queen's Gambit Declined: Slav Defense, Accepted, 5.Ne5"
   ],
   "rnbqkb1r/p3pppp/2p2n2/8/PppP4/2N1PN2/1P3PPP/R1BQKB1R w KQkq - 0 7": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Accepted, Alekhine: 5...b5 6.a4 b4"
+    "Queen's Gambit Declined: Slav Defense, Accepted, Alekhine: 5...b5 6.a4 b4"
   ],
   "rnbqkb1r/p3pppp/2p2n2/8/PppP4/4PN2/1P3PPP/RNBQKB1R b KQkq - 1 7": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Accepted, Alekhine: 5...b5 6.a4 b4 7.Nb1"
+    "Queen's Gambit Declined: Slav Defense, Accepted, Alekhine: 5...b5 6.a4 b4 7.Nb1"
   ],
   "rnbqkb1r/1p2pppp/p1p2n2/3p4/P1PP4/2N2N2/1P2PPPP/R1BQKB1R b KQkq - 0 5": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Chameleon, 5.a4"
+    "Queen's Gambit Declined: Slav Defense, Chameleon, 5.a4"
   ],
   "rnbqkb1r/1p3ppp/p1p1pn2/3p4/P1PP4/2N2N2/1P2PPPP/R1BQKB1R w KQkq - 0 6": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Chameleon, 5.a4 e6"
+    "Queen's Gambit Declined: Slav Defense, Chameleon, 5.a4 e6"
   ],
   "rnbqkb1r/1p3ppp/p1p1pn2/3p2B1/P1PP4/2N2N2/1P2PPPP/R2QKB1R b KQkq - 1 6": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Chameleon, 5.a4 e6 6.Bg5"
+    "Queen's Gambit Declined: Slav Defense, Chameleon, 5.a4 e6 6.Bg5"
   ],
   "rnbqkb1r/1p2pppp/p1p2n2/3p2B1/2PP4/2N2N2/PP2PPPP/R2QKB1R b KQkq - 1 5": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Chameleon, 5.Bg5"
+    "Queen's Gambit Declined: Slav Defense, Chameleon, 5.Bg5"
   ],
   "r1bqkb1r/1p1npppp/p1p2n2/2Pp4/3P4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 1 6": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Chameleon, 5.c5 Nbd7"
+    "Queen's Gambit Declined: Slav Defense, Chameleon, 5.c5 Nbd7"
   ],
   "rnbqkb1r/1p2pppp/p1p2n2/3p4/2PP4/2N1PN2/PP3PPP/R1BQKB1R b KQkq - 0 5": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Chameleon, 5.e3"
+    "Queen's Gambit Declined: Slav Defense, Chameleon, 5.e3"
   ],
   "rnbqkb1r/4pppp/p1p2n2/1p1p4/2PP4/2N1PN2/PP3PPP/R1BQKB1R w KQkq - 0 6": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Chameleon, 5.e3 b5"
+    "Queen's Gambit Declined: Slav Defense, Chameleon, 5.e3 b5"
   ],
   "rnbqkb1r/4pppp/p1p2n2/1p1p4/2PP4/1PN1PN2/P4PPP/R1BQKB1R b KQkq - 0 6": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Chameleon, 5.e3 b5 6.b3"
+    "Queen's Gambit Declined: Slav Defense, Chameleon, 5.e3 b5 6.b3"
   ],
   "rnbqkb1r/1p2pppp/p1p2n2/3pN3/2PP4/2N5/PP2PPPP/R1BQKB1R b KQkq - 1 5": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Chameleon, 5.Ne5"
+    "Queen's Gambit Declined: Slav Defense, Chameleon, 5.Ne5"
   ],
   "rnbqkb1r/p3pppp/2p2n2/1p6/2pPP3/2N2N2/PP3PPP/R1BQKB1R w KQkq - 0 6": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Geller Gambit"
+    "Queen's Gambit Declined: Slav Defense, Geller Gambit"
   ],
   "rnbqkb1r/p3pppp/2p5/1p1nP3/P1pP4/2N2N2/1P3PPP/R1BQKB1R b KQkq - 0 7": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Geller Gambit, 6.e5 Nd5 7.a4"
+    "Queen's Gambit Declined: Slav Defense, Geller Gambit, 6.e5 Nd5 7.a4"
   ],
   "rnbqkb1r/p4ppp/2p1p3/1p1nP3/P1pP4/2N2N2/1P3PPP/R1BQKB1R w KQkq - 0 8": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Geller Gambit, 6.e5 Nd5 7.a4 e6"
+    "Queen's Gambit Declined: Slav Defense, Geller Gambit, 6.e5 Nd5 7.a4 e6"
   ],
   "rnbqkb1r/p3pppp/2p5/1p1nP1N1/2pP4/2N5/PP3PPP/R1BQKB1R b KQkq - 2 7": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Geller Gambit, 6.e5 Nd5 7.Ng5"
+    "Queen's Gambit Declined: Slav Defense, Geller Gambit, 6.e5 Nd5 7.Ng5"
   ],
   "rnbqkb1r/p3pppp/2p2n2/1p6/2pPP3/2N2N2/PPQ2PPP/R1B1KB1R b KQkq - 1 6": [
     "D15",
-    "Queen's Gambit Declined, Slav Defense, Geller Gambit, Spassky Variation"
+    "Queen's Gambit Declined: Slav Defense, Geller Gambit, Spassky Variation"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/8/P1pP4/2N2N2/1P2PPPP/R1BQKB1R b KQkq - 0 5": [
     "D16",
-    "Queen's Gambit Declined, Slav Defense, Alapin Variation"
+    "Queen's Gambit Declined: Slav Defense, Alapin Variation"
   ],
   "r1bqkb1r/pp2pppp/n1p2n2/8/P1pP4/2N2N2/1P2PPPP/R1BQKB1R w KQkq - 1 6": [
     "D16",
-    "Queen's Gambit Declined, Slav Defense, Smyslov Variation"
+    "Queen's Gambit Declined: Slav Defense, Smyslov Variation"
   ],
   "rnbqkb1r/pp3ppp/2p1pn2/8/P1pP4/2N2N2/1P2PPPP/R1BQKB1R w KQkq - 0 6": [
     "D16",
-    "Queen's Gambit Declined, Slav Defense, Soultanbeieff Variation"
+    "Queen's Gambit Declined: Slav Defense, Soultanbeieff Variation"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/8/P1pP2b1/2N2N2/1P2PPPP/R1BQKB1R w KQkq - 1 6": [
     "D16",
-    "Queen's Gambit Declined, Slav Defense, Steiner Variation"
+    "Queen's Gambit Declined: Slav Defense, Steiner Variation"
   ],
   "rnbqkb1r/pp2pppp/2p5/3n4/P1pP4/2N2N2/1P2PPPP/R1BQKB1R w KQkq - 1 6": [
     "D16",
-    "Queen's Gambit Declined, Slav Defense, 5.a4 Nd5"
+    "Queen's Gambit Declined: Slav Defense, 5.a4 Nd5"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/4N3/P1pP2b1/2N5/1P2PPPP/R1BQKB1R b KQkq - 2 6": [
     "D16",
-    "Queen's Gambit Declined, Slav Defense, Bronstein, 6.Ne5"
+    "Queen's Gambit Declined: Slav Defense, Bronstein, 6.Ne5"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/4N2b/P1pP4/2N5/1P2PPPP/R1BQKB1R w KQkq - 3 7": [
     "D16",
-    "Queen's Gambit Declined, Slav Defense, Bronstein, 6.Ne5 Bh5"
+    "Queen's Gambit Declined: Slav Defense, Bronstein, 6.Ne5 Bh5"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/4N2b/P1pP4/2N2P2/1P2P1PP/R1BQKB1R b KQkq - 0 7": [
     "D16",
-    "Queen's Gambit Declined, Slav Defense, Bronstein, 6.Ne5 Bh5 7.f3"
+    "Queen's Gambit Declined: Slav Defense, Bronstein, 6.Ne5 Bh5 7.f3"
   ],
   "rn1qkb1r/pp1npppp/2p5/4N2b/P1pP4/2N2P2/1P2P1PP/R1BQKB1R w KQkq - 1 8": [
     "D16",
-    "Queen's Gambit Declined, Slav Defense, Bronstein, 6.Ne5 Bh5 7.f3 Nfd7"
+    "Queen's Gambit Declined: Slav Defense, Bronstein, 6.Ne5 Bh5 7.f3 Nfd7"
   ],
   "rn1qkb1r/pp1n1ppp/2p5/4p2b/P1NPN3/5P2/1P2P1PP/R1BQKB1R b KQkq - 1 9": [
     "D16",
-    "Queen's Gambit Declined, Slav Defense, Bronstein, 6.Ne5 Bh5 7.f3 Nfd7 8.Nxc4 e5 9.Ne4"
+    "Queen's Gambit Declined: Slav Defense, Bronstein, 6.Ne5 Bh5 7.f3 Nfd7 8.Nxc4 e5 9.Ne4"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/4N2b/P1pP4/2N3P1/1P2PP1P/R1BQKB1R b KQkq - 0 7": [
     "D16",
-    "Queen's Gambit Declined, Slav Defense, Bronstein, 6.Ne5 Bh5 7.g3"
+    "Queen's Gambit Declined: Slav Defense, Bronstein, 6.Ne5 Bh5 7.g3"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/4N2b/P1pP4/2N4P/1P2PPP1/R1BQKB1R b KQkq - 0 7": [
     "D16",
-    "Queen's Gambit Declined, Slav Defense, Bronstein, 6.Ne5 Bh5 7.h3"
+    "Queen's Gambit Declined: Slav Defense, Bronstein, 6.Ne5 Bh5 7.h3"
   ],
   "rnbqkb1r/1p2pppp/2p2n2/p7/P1pP4/2N2N2/1P2PPPP/R1BQKB1R w KQkq - 0 6": [
     "D16",
-    "Queen's Gambit Declined, Slav Defense, Murey Variation"
+    "Queen's Gambit Declined: Slav Defense, Murey Variation"
   ],
   "r1bqkb1r/pp2pppp/n1p2n2/8/P1pP4/2N1PN2/1P3PPP/R1BQKB1R b KQkq - 0 6": [
     "D16",
-    "Queen's Gambit Declined, Slav Defense, Smyslov, 6.e3"
+    "Queen's Gambit Declined: Slav Defense, Smyslov, 6.e3"
   ],
   "r2qkb1r/pp2pppp/n1p2n2/8/P1pP2b1/2N1PN2/1P3PPP/R1BQKB1R w KQkq - 1 7": [
     "D16",
-    "Queen's Gambit Declined, Slav Defense, Smyslov, 6.e3 Bg4"
+    "Queen's Gambit Declined: Slav Defense, Smyslov, 6.e3 Bg4"
   ],
   "r1bqkb1r/pp2pppp/n1p2n2/8/P1pPP3/2N2N2/1P3PPP/R1BQKB1R b KQkq - 0 6": [
     "D16",
-    "Queen's Gambit Declined, Slav Defense, Smyslov, 6.e4"
+    "Queen's Gambit Declined: Slav Defense, Smyslov, 6.e4"
   ],
   "r2qkb1r/pp2pppp/n1p2n2/8/P1pPP1b1/2N2N2/1P3PPP/R1BQKB1R w KQkq - 1 7": [
     "D16",
-    "Queen's Gambit Declined, Slav Defense, Smyslov, 6.e4 Bg4"
+    "Queen's Gambit Declined: Slav Defense, Smyslov, 6.e4 Bg4"
   ],
   "r2qkb1r/pp3ppp/n1p1pn2/8/P1BPP1b1/2N2N2/1P3PPP/R1BQK2R w KQkq - 0 8": [
     "D16",
-    "Queen's Gambit Declined, Slav Defense, Smyslov, 6.e4 Bg4 7.Bxc4 e6"
+    "Queen's Gambit Declined: Slav Defense, Smyslov, 6.e4 Bg4 7.Bxc4 e6"
   ],
   "r1bqkb1r/pp2pppp/n1p2n2/4N3/P1pP4/2N5/1P2PPPP/R1BQKB1R b KQkq - 2 6": [
     "D16",
-    "Queen's Gambit Declined, Slav Defense, Smyslov, 6.Ne5"
+    "Queen's Gambit Declined: Slav Defense, Smyslov, 6.Ne5"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/5b2/P1pP4/2N2N2/1P2PPPP/R1BQKB1R w KQkq - 1 6": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Czech Variation"
+    "Queen's Gambit Declined: Slav Defense, Czech Variation"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/5b2/P1pP3N/2N5/1P2PPPP/R1BQKB1R b KQkq - 2 6": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Czech Variation, Bled Attack"
+    "Queen's Gambit Declined: Slav Defense, Czech Variation, Bled Attack"
   ],
   "r3kb1r/ppqn1ppp/2p2n2/4pb2/P1NP4/2N3P1/1P2PP1P/R1BQKB1R w KQkq - 0 9": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Czech Variation, Carlsbad Variation"
+    "Queen's Gambit Declined: Slav Defense, Czech Variation, Carlsbad Variation"
   ],
   "r3kb1r/ppqn1p1p/2p5/4nbp1/P1N2B2/2N3P1/1P2PPBP/R2QK2R w KQkq - 0 12": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Czech Variation, Carlsbad Variation, Morozevich Variation"
+    "Queen's Gambit Declined: Slav Defense, Czech Variation, Carlsbad Variation, Morozevich Variation"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/4Nb2/P1pP4/2N5/1P2PPPP/R1BQKB1R b KQkq - 2 6": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Czech Variation, Krause Attack"
+    "Queen's Gambit Declined: Slav Defense, Czech Variation, Krause Attack"
   ],
   "r2qkb1r/pp2pppp/n1p2n2/4Nb2/P1pPP3/2N5/1P3PPP/R1BQKB1R b KQkq - 0 7": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Czech Variation, Krause Attack, Fazekas Gambit"
+    "Queen's Gambit Declined: Slav Defense, Czech Variation, Krause Attack, Fazekas Gambit"
   ],
   "rn1qkb1r/pp3ppp/2p1pn2/4Nb2/P1pP4/2N5/1P2PPPP/R1BQKB1R w KQkq - 0 7": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Czech Variation, Wiesbaden Variation"
+    "Queen's Gambit Declined: Slav Defense, Czech Variation, Wiesbaden Variation"
   ],
   "rn1qk2r/pp3ppp/2p1pn2/4Nb2/PbpPP3/2N2P2/1P4PP/R1BQKB1R b KQkq - 0 8": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Czech Variation, Wiesbaden Variation, Sharp Line"
+    "Queen's Gambit Declined: Slav Defense, Czech Variation, Wiesbaden Variation, Sharp Line"
   ],
   "rn1qkb1r/pp3ppp/2p1pn2/4Nb2/P1pP4/2N2P2/1P2P1PP/R1BQKB1R b KQkq - 0 7": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Central, 6.Ne5 e6 7.f3"
+    "Queen's Gambit Declined: Slav Defense, Central, 6.Ne5 e6 7.f3"
   ],
   "r2qkb1r/pp2pppp/n1p2n2/4Nb2/P1pP4/2N5/1P2PPPP/R1BQKB1R w KQkq - 3 7": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Central, 6.Ne5 Na6"
+    "Queen's Gambit Declined: Slav Defense, Central, 6.Ne5 Na6"
   ],
   "r2qkb1r/pp2pppp/n1p2n2/4Nb2/P1pP4/2N2P2/1P2P1PP/R1BQKB1R b KQkq - 0 7": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Central, 6.Ne5 Na6 7.f3"
+    "Queen's Gambit Declined: Slav Defense, Central, 6.Ne5 Na6 7.f3"
   ],
   "r2qkb1r/pp1npppp/2p2n2/4Nb2/P1pP4/2N5/1P2PPPP/R1BQKB1R w KQkq - 3 7": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Central, 6.Ne5 Nbd7"
+    "Queen's Gambit Declined: Slav Defense, Central, 6.Ne5 Nbd7"
   ],
   "rn1qk2r/pp3ppp/2p1pn2/4Nb2/PbpP4/2N2P2/1P2P1PP/R1BQKB1R w KQkq - 1 8": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Central, 7.f3 Bb4"
+    "Queen's Gambit Declined: Slav Defense, Central, 7.f3 Bb4"
   ],
   "rn1qk2r/pp3ppp/2p1pn2/4NbB1/PbpP4/2N2P2/1P2P1PP/R2QKB1R b KQkq - 2 8": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Central, 7.f3 Bb4 8.Bg5"
+    "Queen's Gambit Declined: Slav Defense, Central, 7.f3 Bb4 8.Bg5"
   ],
   "rn1qk2r/pp3ppp/2p1pn2/5b2/PbNP4/2N2P2/1P2P1PP/R1BQKB1R b KQkq - 0 8": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Central, 7.f3 Bb4 8.Nxc4"
+    "Queen's Gambit Declined: Slav Defense, Central, 7.f3 Bb4 8.Nxc4"
   ],
   "r3kb1r/ppqn2pp/2p2p2/4nb2/P1N2B2/2N3P1/1P2PPBP/R2QK2R w KQkq - 0 12": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Central, Carlsbad, Main Line"
+    "Queen's Gambit Declined: Slav Defense, Central, Carlsbad, Main Line"
   ],
   "rn1qkb1r/pp3ppp/4pn2/2p1Nb2/P1pP4/2N2P2/1P2P1PP/R1BQKB1R w KQkq - 0 8": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Central, Huebner (7...c5)"
+    "Queen's Gambit Declined: Slav Defense, Central, Huebner (7...c5)"
   ],
   "rn2k2r/pp3ppp/2p1p3/4N3/P1p1q3/8/1P1KQ1PP/R4B1R b kq - 0 13": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Central, Main Line"
+    "Queen's Gambit Declined: Slav Defense, Central, Main Line"
   ],
   "r3k2r/pp3ppp/n1p1p3/3q4/P1N5/8/1PK1Q1PP/R4B1R b kq - 0 15": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Central, Main Line, 15.Nxc4"
+    "Queen's Gambit Declined: Slav Defense, Central, Main Line, 15.Nxc4"
   ],
   "r4rk1/pp3ppp/n1p1p3/3q4/P1N5/8/1PK1Q1PP/R4B1R w - - 1 16": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Central, Main Line, 15.Nxc4 O-O"
+    "Queen's Gambit Declined: Slav Defense, Central, Main Line, 15.Nxc4 O-O"
   ],
   "2kr3r/pp3ppp/n1p1p3/3q4/P1N5/8/1PK1Q1PP/R4B1R w - - 1 16": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Central, Main Line, 15.Nxc4 O-O-O"
+    "Queen's Gambit Declined: Slav Defense, Central, Main Line, 15.Nxc4 O-O-O"
   ],
   "rn1qk2r/pp3ppp/2p1pn2/4N3/PbpPb3/2N2P2/1P4PP/R1BQKB1R w KQkq - 0 9": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Central, Piece-Sac Line"
+    "Queen's Gambit Declined: Slav Defense, Central, Piece-Sac Line"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/8/P1pP3N/2N5/1P2PPPP/R1BQKB1R w KQkq - 3 7": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Czech, 6.Nh4 Bc8"
+    "Queen's Gambit Declined: Slav Defense, Czech, 6.Nh4 Bc8"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/8/P1pP3N/2N1P3/1P3PPP/R1BQKB1R b KQkq - 0 7": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Czech, 6.Nh4 Bc8 7.e3"
+    "Queen's Gambit Declined: Slav Defense, Czech, 6.Nh4 Bc8 7.e3"
   ],
   "rn1qkb1r/pp3ppp/2p1pn2/5b2/P1pP3N/2N5/1P2PPPP/R1BQKB1R w KQkq - 0 7": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Czech, 6.Nh4 e6"
+    "Queen's Gambit Declined: Slav Defense, Czech, 6.Nh4 e6"
   ],
   "rn1qkb1r/pp3ppp/2p2n2/5p2/P1pP4/2N1P3/1P3PPP/R1BQKB1R b KQkq - 0 8": [
     "D17",
-    "Queen's Gambit Declined, Slav Defense, Czech, 6.Nh4 e6 7.Nxf5 exf5 8.e3"
+    "Queen's Gambit Declined: Slav Defense, Czech, 6.Nh4 e6 7.Nxf5 exf5 8.e3"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/5b2/P1pP4/2N1PN2/1P3PPP/R1BQKB1R b KQkq - 0 6": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Czech Variation, Classical System"
+    "Queen's Gambit Declined: Slav Defense, Czech Variation, Classical System"
   ],
   "r2qkb1r/pp2pppp/n1p2n2/5b2/P1pP4/2N1PN2/1P3PPP/R1BQKB1R w KQkq - 1 7": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Czech Variation, Lasker Variation"
+    "Queen's Gambit Declined: Slav Defense, Czech Variation, Lasker Variation"
   ],
   "rn1qkb1r/pp3ppp/2p1pn2/5b2/P1pP4/2N1PN2/1P3PPP/R1BQKB1R w KQkq - 0 7": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 6...e6"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 6...e6"
   ],
   "rn1qk2r/pp3ppp/2p1pn2/5b2/PbBP4/2N1PN2/1P3PPP/R1BQK2R w KQkq - 1 8": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 6...e6 7.Bxc4 Bb4"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 6...e6 7.Bxc4 Bb4"
   ],
   "r2qk2r/pp1n1ppp/2p1pn2/5b2/PbBP4/2N1PN2/1P3PPP/R1BQ1RK1 w kq - 3 9": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...Nbd7"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...Nbd7"
   ],
   "r2qk2r/pp1n1ppp/2p1pn2/5b2/PbBP3N/2N1P3/1P3PPP/R1BQ1RK1 b kq - 4 9": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...Nbd7 9.Nh4"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...Nbd7 9.Nh4"
   ],
   "r2qk2r/pp1n1ppp/2p1pnb1/8/PbBP3N/2N1P3/1P3PPP/R1BQ1RK1 w kq - 5 10": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...Nbd7 9.Nh4 Bg6"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...Nbd7 9.Nh4 Bg6"
   ],
   "r2qk2r/pp1n1ppp/2p1pn2/5b2/PbBP4/1QN1PN2/1P3PPP/R1B2RK1 b kq - 4 9": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...Nbd7 9.Qb3"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...Nbd7 9.Qb3"
   ],
   "r2qk2r/1p1n1ppp/2p1pn2/p4b2/PbBP4/1QN1PN2/1P3PPP/R1B2RK1 w kq - 0 10": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...Nbd7 9.Qb3 a5"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...Nbd7 9.Qb3 a5"
   ],
   "r2qk2r/pp1n1ppp/2p1pn2/5b2/PbBP4/2N1PN2/1P2QPPP/R1B2RK1 b kq - 4 9": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...Nbd7 9.Qe2"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...Nbd7 9.Qe2"
   ],
   "r2qk2r/pp1n1ppp/2p1pnb1/8/PbBP4/2N1PN2/1P2QPPP/R1B2RK1 w kq - 5 10": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...Nbd7 9.Qe2 Bg6"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...Nbd7 9.Qe2 Bg6"
   ],
   "r2qk2r/pp1n1ppp/2p1pnb1/8/PbBPP3/2N2N2/1P2QPPP/R1B2RK1 b kq - 0 10": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...Nbd7 9.Qe2 Bg6 10.e4"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...Nbd7 9.Qe2 Bg6 10.e4"
   ],
   "rn1q1rk1/pp3ppp/2p1pn2/5b2/PbBP4/2N1PN2/1P3PPP/R1BQ1RK1 w - - 3 9": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O"
   ],
   "rn1q1rk1/pp3ppp/2p1pn2/5b2/PbBP3N/2N1P3/1P3PPP/R1BQ1RK1 b - - 4 9": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Nh4"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Nh4"
   ],
   "rn1q1rk1/pp3ppp/2p1pn2/8/PbBP2bN/2N1P3/1P3PPP/R1BQ1RK1 w - - 5 10": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Nh4 Bg4"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Nh4 Bg4"
   ],
   "rn1q1rk1/pp3ppp/2p1pnb1/8/PbBP3N/2N1P3/1P3PPP/R1BQ1RK1 w - - 5 10": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Nh4 Bg6"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Nh4 Bg6"
   ],
   "r2q1rk1/pp1n1ppp/2p1pn2/5b2/PbBP3N/2N1P3/1P3PPP/R1BQ1RK1 w - - 5 10": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Nh4 Nbd7"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Nh4 Nbd7"
   ],
   "r2q1rk1/pp1n1ppp/2p1pn2/5N2/PbBP4/2N1P3/1P3PPP/R1BQ1RK1 b - - 0 10": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Nh4 Nbd7 10.Nxf5"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Nh4 Nbd7 10.Nxf5"
   ],
   "r2q1rk1/pp1n1ppp/2p2n2/5p2/PbBP4/2N1P3/1P3PPP/R1BQ1RK1 w - - 0 11": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Nh4 Nbd7 10.Nxf5 exf5"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Nh4 Nbd7 10.Nxf5 exf5"
   ],
   "r2q1rk1/pp1n1ppp/2p2n2/5p2/PbBP4/2N1P3/1PQ2PPP/R1B2RK1 b - - 1 11": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Nh4 Nbd7 10.Nxf5 exf5 11.Qc2"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Nh4 Nbd7 10.Nxf5 exf5 11.Qc2"
   ],
   "rn1q1rk1/pp3ppp/2p1pn2/5b2/PbBP4/1QN1PN2/1P3PPP/R1B2RK1 b - - 4 9": [
     "D18",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Qb3"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Qb3"
   ],
   "rn1q1rk1/pp3ppp/2p1pn2/5b2/PbBP4/2N1PN2/1P2QPPP/R1B2RK1 b - - 4 9": [
     "D19",
-    "Queen's Gambit Declined, Slav Defense, Czech Variation, Classical System, Main Line"
+    "Queen's Gambit Declined: Slav Defense, Czech Variation, Classical System, Main Line"
   ],
   "rn1qk2r/pp3ppp/2p1pn2/5b2/PbBP4/2N1PN2/1P3PPP/R1BQ1RK1 b kq - 2 8": [
     "D19",
-    "Queen's Gambit Declined, Slav Defense, Czech Variation, Dutch Variation"
+    "Queen's Gambit Declined: Slav Defense, Czech Variation, Dutch Variation"
   ],
   "rn1q1rk1/pp3ppp/2p1p3/5b2/PbBPn1P1/2N1PN2/1P2QP1P/R1B2RK1 b - - 0 10": [
     "D19",
-    "Queen's Gambit Declined, Slav Defense, Czech Variation, Dutch Variation, Sämisch Variation"
+    "Queen's Gambit Declined: Slav Defense, Czech Variation, Dutch Variation, Sämisch Variation"
   ],
   "rn1q1rk1/pp3ppp/2p1pn2/8/PbBP2b1/2N1PN2/1P2QPPP/R1B2RK1 w - - 5 10": [
     "D19",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Qe2 Bg4"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Qe2 Bg4"
   ],
   "rn1q1rk1/pp3ppp/2p1pnb1/8/PbBP4/2N1PN2/1P2QPPP/R1B2RK1 w - - 5 10": [
     "D19",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Qe2 Bg6"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Qe2 Bg6"
   ],
   "rn1q1rk1/pp3ppp/2p1pnb1/4N3/PbBP4/2N1P3/1P2QPPP/R1B2RK1 b - - 6 10": [
     "D19",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Qe2 Bg6 10.Ne5"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Qe2 Bg6 10.Ne5"
   ],
   "r2q1rk1/pp1n1ppp/2p1pnb1/4N3/PbBP4/2N1P3/1P2QPPP/R1B2RK1 w - - 7 11": [
     "D19",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Qe2 Bg6 10.Ne5 Nbd7, 12.Rd1"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Qe2 Bg6 10.Ne5 Nbd7, 12.Rd1"
   ],
   "r2q1rk1/pp1n1pp1/2p1pnp1/8/PbBP4/2N1P3/1P2QPPP/R1BR2K1 b - - 1 12": [
     "D19",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Qe2 Bg6 10.Ne5 Nbd7, 12.Rd1"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Qe2 Bg6 10.Ne5 Nbd7, 12.Rd1"
   ],
   "rn1q1rk1/pp3ppp/2p1pnb1/8/PbBP4/2N1PN2/1P2QPPP/R1BR2K1 b - - 6 10": [
     "D19",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Qe2 Bg6 10.Rd1"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Qe2 Bg6 10.Rd1"
   ],
   "r2q1rk1/pp1n1ppp/2p1pnb1/8/PbBP4/2N1PN2/1P2QPPP/R1BR2K1 w - - 7 11": [
     "D19",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Qe2 Bg6 10.Rd1 Nbd7"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Qe2 Bg6 10.Rd1 Nbd7"
   ],
   "r2q1rk1/pp1n1ppp/2p1pn2/5b2/PbBP4/2N1PN2/1P2QPPP/R1B2RK1 w - - 5 10": [
     "D19",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Qe2 Nbd7"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Qe2 Nbd7"
   ],
   "r2q1rk1/pp1n1ppp/2p1pn2/5b2/PbBPP3/2N2N2/1P2QPPP/R1B2RK1 b - - 0 10": [
     "D19",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Qe2 Nbd7 10.e4"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Qe2 Nbd7 10.e4"
   ],
   "r2q1rk1/pp1n1ppp/2p1pn2/8/PbBPP1b1/2N2N2/1P2QPPP/R1B2RK1 w - - 1 11": [
     "D19",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Qe2 Nbd7 10.e4 Bg4"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Qe2 Nbd7 10.e4 Bg4"
   ],
   "r2q1rk1/pp1n1ppp/2p1pnb1/8/PbBPP3/2N2N2/1P2QPPP/R1B2RK1 w - - 1 11": [
     "D19",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Qe2 Nbd7 10.e4 Bg6"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Qe2 Nbd7 10.e4 Bg6"
   ],
   "r2q1rk1/pp1n1ppp/2p1pnb1/8/Pb1PP3/2NB1N2/1P2QPPP/R1B2RK1 b - - 2 11": [
     "D19",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Qe2 Nbd7 10.e4 Bg6 11.Bd3"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Qe2 Nbd7 10.e4 Bg6 11.Bd3"
   ],
   "r2q1rk1/pp1n1ppp/2p1pn2/7b/Pb1PP3/2NB1N2/1P2QPPP/R1B2RK1 w - - 3 12": [
     "D19",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Qe2 Nbd7 10.e4 Bg6 11.Bd3 Bh5"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Qe2 Nbd7 10.e4 Bg6 11.Bd3 Bh5"
   ],
   "r2q1rk1/pp1n1ppp/2p1pn2/4P2b/Pb1P4/2NB1N2/1P2QPPP/R1B2RK1 b - - 0 12": [
     "D19",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Qe2 Nbd7 10.e4 Bg6 11.Bd3 Bh5 12.e5"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Qe2 Nbd7 10.e4 Bg6 11.Bd3 Bh5 12.e5"
   ],
   "r2q1rk1/pp1n1pp1/2p1pnbp/8/Pb1PP3/2NB1N2/1P2QPPP/R1B2RK1 w - - 0 12": [
     "D19",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Qe2 Nbd7 10.e4 Bg6 11.Bd3 h6"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Qe2 Nbd7 10.e4 Bg6 11.Bd3 h6"
   ],
   "r2qr1k1/pp1n1ppp/2p1pnb1/8/Pb1PP3/2NB1N2/1P2QPPP/R1B2RK1 w - - 3 12": [
     "D19",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Qe2 Nbd7 10.e4 Bg6 11.Bd3 Re8"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Qe2 Nbd7 10.e4 Bg6 11.Bd3 Re8"
   ],
   "rn1q1rk1/pp3ppp/2p1p3/5b2/PbBPn3/2N1PN2/1P2QPPP/R1B2RK1 w - - 5 10": [
     "D19",
-    "Queen's Gambit Declined, Slav Defense, Dutch, 8...O-O 9.Qe2 Ne4"
+    "Queen's Gambit Declined: Slav Defense, Dutch, 8...O-O 9.Qe2 Ne4"
   ],
   "rnbqkbnr/pp2pppp/8/2p5/2pP4/4P3/PP3PPP/RNBQKBNR w KQkq - 0 4": [
     "D20",
@@ -36061,7 +36061,7 @@
   ],
   "rnbqkbnr/pp4pp/2p1p3/3p1p2/2PP2P1/2N1P3/PP3P1P/R1BQKBNR b KQkq - 0 5": [
     "D31",
-    "Queen's Gambit Declined: Semi-Slav Defense, Anti Noteboom Variation, Stonewall Variation, Portisch Gambit"
+    "Queen's Gambit Declined: Semi-Slav Defense, Anti-Noteboom Variation, Stonewall Variation, Portisch Gambit"
   ],
   "rnbqkbnr/pp3ppp/2p1p3/8/2PPp3/2N2P2/PP4PP/R1BQKBNR b KQkq - 0 5": [
     "D31",
@@ -36093,15 +36093,15 @@
   ],
   "rnbqkbnr/pp3ppp/2p1p3/8/2pP4/2N2NP1/PP2PP1P/R1BQKB1R b KQkq - 0 5": [
     "D31",
-    "Queen's Gambit Declined: Semi-Slav Defense, Noteboom Variation, Anti Noteboom Gambit"
+    "Queen's Gambit Declined: Semi-Slav Defense, Noteboom Variation, Anti-Noteboom Gambit"
   ],
   "rnbqkbnr/pp3ppp/2p1p3/6B1/2pP4/2N2N2/PP2PPPP/R2QKB1R b KQkq - 1 5": [
     "D31",
-    "Queen's Gambit Declined: Semi-Slav Defense, Noteboom Variation, Anti Noteboom Variation"
+    "Queen's Gambit Declined: Semi-Slav Defense, Noteboom Variation, Anti-Noteboom Variation"
   ],
   "rnbqkbnr/pp4pp/2p1pp2/6B1/2pP4/2N2N2/PP2PPPP/R2QKB1R w KQkq - 0 6": [
     "D31",
-    "Queen's Gambit Declined: Semi-Slav Defense, Noteboom Variation, Anti Noteboom Variation, Belyavsky Line"
+    "Queen's Gambit Declined: Semi-Slav Defense, Noteboom Variation, Anti-Noteboom Variation, Belyavsky Line"
   ],
   "rnbqkbnr/pp3ppp/2p1p3/3P4/3P4/2N5/PP2PPPP/R1BQKBNR b KQkq - 0 4": [
     "D31",
@@ -37585,7 +37585,7 @@
   ],
   "rnbqkb1r/pp3pp1/2p1pn1p/3p4/2PP3B/2N2N2/PP2PPPP/R2QKB1R b KQkq - 1 6": [
     "D43",
-    "Queen's Gambit Declined: Semi-Slav Defense, Anti Moscow Gambit"
+    "Queen's Gambit Declined: Semi-Slav Defense, Anti-Moscow Gambit"
   ],
   "rnbqkb1r/pp3ppp/2p1pn2/3p4/2PP4/2N2NP1/PP2PP1P/R1BQKB1R b KQkq - 0 5": [
     "D43",
@@ -37605,7 +37605,7 @@
   ],
   "rnbqkb1r/pp3ppp/2p1pn2/3p2B1/2PP4/2N2N2/PP2PPPP/R2QKB1R b KQkq - 1 5": [
     "D43",
-    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik (Anti Meran)"
+    "Queen's Gambit Declined: Semi-Slav Defense, Botvinnik (Anti-Meran)"
   ],
   "rnbqk2r/pp2bppp/2p1pn2/3p2B1/2PP4/2N2N2/PP2PPPP/R2QKB1R w KQkq - 2 6": [
     "D43",
@@ -38469,7 +38469,7 @@
   ],
   "r1bqkb1r/pp1n1ppp/2p1pn2/3p2B1/2PP4/P1N1P3/1P3PPP/R2QKBNR b KQkq - 0 6": [
     "D51",
-    "Queen's Gambit Declined: Capablanca Variation, Anti Cambridge Springs Variation"
+    "Queen's Gambit Declined: Capablanca Variation, Anti-Cambridge Springs Variation"
   ],
   "r1bqk2r/pppn1ppp/4pn2/3p2B1/1bPP4/2N1P3/PP3PPP/R2QKBNR w KQkq - 1 6": [
     "D51",
@@ -38661,27 +38661,27 @@
   ],
   "rnbq1rk1/ppp1bpp1/4pn1p/3p4/2PP3B/2N1P3/PP3PPP/2RQKBNR b K - 1 7": [
     "D54",
-    "Queen's Gambit Declined: Anti Neo Orthodox Variation"
+    "Queen's Gambit Declined: Anti-Neo-Orthodox Variation"
   ],
   "rnbq1rk1/p1p1bpp1/1p2pn1p/3p4/2PP3B/2N1P3/PP3PPP/2RQKBNR w K - 0 8": [
     "D54",
-    "Queen's Gambit Declined: Anti Neo Orthodox, 7.Bh4 b6"
+    "Queen's Gambit Declined: Anti-Neo-Orthodox, 7.Bh4 b6"
   ],
   "rnbq1rk1/p1p1bpp1/1p2p2p/3N4/3P3B/4P3/PP3PPP/2RQKBNR b K - 0 9": [
     "D54",
-    "Queen's Gambit Declined: Anti Neo Orthodox, 8.cxd5 Nxd5 9.Nxd5"
+    "Queen's Gambit Declined: Anti-Neo-Orthodox, 8.cxd5 Nxd5 9.Nxd5"
   ],
   "rnb2rk1/p1p1qpp1/1p5p/3p4/3P4/4P3/PP3PPP/2RQKBNR w K - 0 11": [
     "D54",
-    "Queen's Gambit Declined: Anti Neo Orthodox, Main Line"
+    "Queen's Gambit Declined: Anti-Neo-Orthodox, Main Line"
   ],
   "rnb2rk1/p1p1qpp1/1p5p/3p4/3P4/4P3/PP2BPPP/2RQK1NR b K - 1 11": [
     "D54",
-    "Queen's Gambit Declined: Anti Neo Orthodox, Main Line, 11.Be2"
+    "Queen's Gambit Declined: Anti-Neo-Orthodox, Main Line, 11.Be2"
   ],
   "rnbq1rk1/ppp1bppp/4pn2/3p2B1/2PP4/2N1P3/PP3PPP/2RQKBNR b K - 2 6": [
     "D54",
-    "Queen's Gambit Declined: Neo Orthodox Variation"
+    "Queen's Gambit Declined: Neo-Orthodox Variation"
   ],
   "rnbq1rk1/ppp1bppp/4pn2/3p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R b KQ - 2 6": [
     "D55",
@@ -38709,19 +38709,19 @@
   ],
   "rnbq1rk1/ppp2pp1/4pb1p/3p4/2PP4/1QN1PN2/PP3PPP/R3KB1R b KQ - 1 8": [
     "D55",
-    "Queen's Gambit Declined: Neo Orthodox, 7.Bxf6 Bxf6 8.Qb3"
+    "Queen's Gambit Declined: Neo-Orthodox, 7.Bxf6 Bxf6 8.Qb3"
   ],
   "rnbq1rk1/ppp2pp1/4pb1p/3p4/2PP4/2N1PN2/PP3PPP/2RQKB1R b K - 1 8": [
     "D55",
-    "Queen's Gambit Declined: Neo Orthodox, Gligorić Variation"
+    "Queen's Gambit Declined: Neo-Orthodox, Gligorić Variation"
   ],
   "rnbq1rk1/ppp1bpp1/4pB1p/3p4/2PP4/2N1PN2/PP3PPP/R2QKB1R b KQ - 0 7": [
     "D55",
-    "Queen's Gambit Declined: Anti Tartakower Variation"
+    "Queen's Gambit Declined: Anti-Tartakower Variation"
   ],
   "r1bq1rk1/pp1n1pp1/2p1pb1p/8/2BP4/2N1PN2/PP3PPP/2RQ1RK1 b - - 0 11": [
     "D55",
-    "Queen's Gambit Declined: Anti Tartakower Variation, Petrosian Variation"
+    "Queen's Gambit Declined: Anti-Tartakower Variation, Petrosian Variation"
   ],
   "rnbq1rk1/ppp1bppp/4pn2/3p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R b KQ - 0 6": [
     "D55",
@@ -38729,11 +38729,11 @@
   ],
   "rnbq1rk1/ppp1bpp1/4pn1p/3p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R w KQ - 0 7": [
     "D55",
-    "Queen's Gambit Declined: Neo Orthodox Variation"
+    "Queen's Gambit Declined: Neo-Orthodox Variation"
   ],
   "rnbq1rk1/ppp1bpp1/4pn1p/3p4/2PP3B/2N1PN2/PP3PPP/R2QKB1R b KQ - 0 7": [
     "D55",
-    "Queen's Gambit Declined: Neo Orthodox Variation, Main Line"
+    "Queen's Gambit Declined: Neo-Orthodox Variation, Main Line"
   ],
   "rn1q1rk1/pbp1bppp/1p3n2/3pN1B1/3P4/2NBP3/PP3PPP/R2QK2R b KQ - 4 9": [
     "D55",
@@ -38769,7 +38769,7 @@
   ],
   "rnbq1rk1/ppp1bpp1/4pn1p/3p4/2PP3B/2N1PN2/PP3PPP/R2QKB1R b KQ - 1 7": [
     "D56",
-    "Queen's Gambit Declined: Neo Orthodox, 7.Bh4"
+    "Queen's Gambit Declined: Neo-Orthodox, 7.Bh4"
   ],
   "rnbq1rk1/ppp1bpp1/4p2p/3p4/2PPn2B/2N1PN2/PP3PPP/R2QKB1R w KQ - 1 8": [
     "D56",
@@ -40573,7 +40573,7 @@
   ],
   "r2q1rk1/pp2pBbp/6p1/n7/3PP1b1/4BP2/P3N1PP/R2Q1RK1 b - - 0 13": [
     "D88",
-    "Grünfeld Defense: Classical Variation, Exchange Variation, Main Line, Neo Seville"
+    "Grünfeld Defense: Classical Variation, Exchange Variation, Main Line, Neo-Seville"
   ],
   "r1bq1rk1/pp2ppbp/2n3p1/8/2BPP3/4B3/P3NPPP/R2Q1RK1 b - - 0 11": [
     "D88",
@@ -41201,7 +41201,7 @@
   ],
   "rnbqkbnr/ppp2ppp/4p3/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 0 3": [
     "D31",
-    "Queen's Gambit Declined, Queen's Knight Variation"
+    "Queen's Gambit Declined: Queen's Knight Variation"
   ],
   "r1bqkbnr/ppp1pppp/2n5/8/2BPp3/8/PPP2PPP/RNBQK1NR w KQkq - 2 4": [
     "D00",
@@ -41325,11 +41325,11 @@
   ],
   "rnbqkb1r/pppp1ppp/4pn2/8/2PP4/P7/1P2PPPP/RNBQKBNR b KQkq - 0 3": [
     "E00",
-    "Queen's Pawn Opening: Anti Nimzo-Indian Defense"
+    "Queen's Pawn Opening: Anti-Nimzo-Indian Defense"
   ],
   "rnbqkb1r/ppp2ppp/4pn2/3p4/2PP4/P7/1P2PPPP/RNBQKBNR w KQkq - 0 4": [
     "E00",
-    "Queen's Pawn Opening: Anti Nimzo-Indian Defense, 3...d5"
+    "Queen's Pawn Opening: Anti-Nimzo-Indian Defense, 3...d5"
   ],
   "rnbqkb1r/pppp1ppp/4pn2/8/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3": [
     "E00",
@@ -42033,7 +42033,7 @@
   ],
   "rnbqkb1r/pppp1ppp/4pn2/8/2PP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 3": [
     "E10",
-    "Indian Defense: Anti Nimzo-Indian"
+    "Indian Defense: Anti-Nimzo-Indian"
   ],
   "rnbqkb1r/pppp1ppp/4p3/8/2PPn3/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 4": [
     "E10",
@@ -43121,7 +43121,7 @@
   ],
   "rn1qk2r/pbppbppp/1p2pn2/8/2PP4/2N2NP1/PP2PPBP/R1BQK2R b KQkq - 4 6": [
     "E17",
-    "Queen's Indian Defense: Anti Queen's Indian System"
+    "Queen's Indian Defense: Anti-Queen's Indian System"
   ],
   "rn1qk2r/pbppbppp/1p2pn2/8/2PP4/5NP1/PP2PPBP/RNBQ1RK1 b kq - 4 6": [
     "E17",
@@ -45097,23 +45097,23 @@
   ],
   "rnbqkb1r/p1pppp1p/5np1/1p1P4/2P5/8/PP2PPPP/RNBQKBNR w KQkq - 0 4": [
     "E60",
-    "Indian Defense: Anti Grünfeld, Adorjan Gambit"
+    "Indian Defense: Anti-Grünfeld, Adorjan Gambit"
   ],
   "rnbqkb1r/pppppp1p/5np1/3P4/2P5/8/PP2PPPP/RNBQKBNR b KQkq - 0 3": [
     "E60",
-    "Indian Defense: Anti Grünfeld, Advance Variation"
+    "Indian Defense: Anti-Grünfeld, Advance Variation"
   ],
   "rnbqkb1r/pppppp1p/5np1/8/2PP4/5P2/PP2P1PP/RNBQKBNR b KQkq - 0 3": [
     "E60",
-    "Indian Defense: Anti Grünfeld, Alekhine Variation"
+    "Indian Defense: Anti-Grünfeld, Alekhine Variation"
   ],
   "rnbqkb1r/pppp1p1p/5np1/4p3/2PP4/5P2/PP2P1PP/RNBQKBNR w KQkq - 0 4": [
     "E60",
-    "Indian Defense: Anti Grünfeld, Alekhine Variation, Leko Gambit"
+    "Indian Defense: Anti-Grünfeld, Alekhine Variation, Leko Gambit"
   ],
   "rnbqkb1r/pppppp1p/5np1/8/2PP3P/8/PP2PPP1/RNBQKBNR b KQkq - 0 3": [
     "E60",
-    "Indian Defense: Anti Grünfeld, Basman-Williams Attack"
+    "Indian Defense: Anti-Grünfeld, Basman-Williams Attack"
   ],
   "rnbqk2r/ppppppbp/5np1/8/2PP4/6P1/PP2PPBP/RNBQK1NR b KQkq - 2 4": [
     "E60",
@@ -48053,7 +48053,7 @@
   ],
   "r1bq1rk1/pppnnpbp/3p2p1/3Pp3/2P1P3/2N1B3/PP2BPPP/R2QNRK1 b - - 4 10": [
     "E98",
-    "King's Indian Defense: Orthodox Variation, Classical System, Neo Classical Line"
+    "King's Indian Defense: Orthodox Variation, Classical System, Neo-Classical Line"
   ],
   "r1bq1rk1/pp2npbp/3p1np1/2pPp3/2P1P3/2N5/PP2BPPP/R1BQNRK1 w - c6 0 10": [
     "E98",
@@ -48189,7 +48189,7 @@
   ],
   "rnbqk2r/ppppppbp/5np1/8/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 1 4": [
     "E60",
-    "King's Indian Defense, Normal Variation, King's Knight Variation, 3...Bg7"
+    "King's Indian Defense: Normal Variation, King's Knight Variation, 3...Bg7"
   ],
   "rnbqk2r/ppppppbp/5np1/8/2PP4/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 2 4": [
     "E60",
