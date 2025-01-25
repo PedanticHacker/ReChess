@@ -24357,47 +24357,47 @@
   ],
   "rnb1kb1r/ppp2ppp/8/3NP2q/8/3P1Nn1/PPP4P/R1BQKB1R b KQkq - 0 8": [
     "C29",
-    "Vienna Opening: Vienna Gambit, Wurzburger Trap"
+    "Vienna Opening: Vienna Gambit, Würzburger Trap"
   ],
   "rnbqk1nr/pppp1ppp/8/2b1p3/2B1PP2/8/PPPP2PP/RNBQK1NR b KQkq - 2 3": [
     "C30",
-    "KGD: Classical, 3.Bc4"
+    "King's Gambit Declined: Classical Variation, 3.Bc4"
   ],
   "rnbqk1nr/pppp1ppp/8/2b1p3/4PP2/5N2/PPPP2PP/RNBQKB1R b KQkq - 2 3": [
     "C30",
-    "KGD: Classical, 3.Nf3"
+    "King's Gambit Declined: Classical Variation, 3.Nf3"
   ],
   "rnbqk1nr/ppp2ppp/3p4/2b1p3/4PP2/5N2/PPPP2PP/RNBQKB1R w KQkq - 0 4": [
     "C30",
-    "KGD: Classical, 3.Nf3 d6"
+    "King's Gambit Declined: Classical Variation, 3.Nf3 d6"
   ],
   "rnbqk1nr/ppp2ppp/3p4/2b1p3/4PP2/2N2N2/PPPP2PP/R1BQKB1R b KQkq - 1 4": [
     "C30",
-    "KGD: Classical, 3.Nf3 d6 4.Nc3"
+    "King's Gambit Declined: Classical Variation, 3.Nf3 d6 4.Nc3"
   ],
   "rnbqk2r/ppp2ppp/3p1n2/2b1p3/2B1PP2/2N2N2/PPPP2PP/R1BQK2R b KQkq - 3 5": [
     "C30",
-    "KGD: Classical, 3.Nf3 d6 4.Nc3 Nf6 5.Bc4"
+    "King's Gambit Declined: Classical Variation, 3.Nf3 d6 4.Nc3 Nf6 5.Bc4"
   ],
   "rnbqk1nr/ppp2ppp/1b1p4/4p3/4PP2/2P2N2/PP1P2PP/RNBQKB1R w KQkq - 1 5": [
     "C30",
-    "KGD: Classical, 4.c3 Bb6"
+    "King's Gambit Declined: Classical Variation, 4.c3 Bb6"
   ],
   "rnbqk2r/ppp2ppp/3p1n2/2b1p3/4PP2/2P2N2/PP1P2PP/RNBQKB1R w KQkq - 1 5": [
     "C30",
-    "KGD: Classical, 4.c3 Nf6"
+    "King's Gambit Declined: Classical Variation, 4.c3 Nf6"
   ],
   "rnbqk2r/ppp2ppp/3p1n2/2b1p3/3PPP2/2P2N2/PP4PP/RNBQKB1R b KQkq - 0 5": [
     "C30",
-    "KGD: Classical, 4.c3 Nf6 5.d4"
+    "King's Gambit Declined: Classical Variation, 4.c3 Nf6 5.d4"
   ],
   "rnbqk2r/ppp2ppp/1b1p1n2/4p3/3PPP2/2P2N2/PP4PP/RNBQKB1R w KQkq - 1 6": [
     "C30",
-    "KGD: Classical, 4.c3 Nf6 5.d4"
+    "King's Gambit Declined: Classical Variation, 4.c3 Nf6 5.d4"
   ],
   "rnbqk2r/ppp2ppp/1b1p1n2/8/3PPP2/5N2/PP4PP/RNBQKB1R w KQkq - 1 7": [
     "C30",
-    "KGD: Classical, 4.c3 Nf6 5.d4"
+    "King's Gambit Declined: Classical Variation, 4.c3 Nf6 5.d4"
   ],
   "rnbqkbnr/pppp1ppp/8/4p3/4PP2/8/PPPP2PP/RNBQKBNR b KQkq - 0 2": [
     "C30",
@@ -24425,19 +24425,19 @@
   ],
   "r1bqk1nr/pppn1ppp/3p4/2b1p3/4PP2/2N2N2/PPPP2PP/R1BQKB1R w KQkq - 2 5": [
     "C30",
-    "King's Gambit Declined: Classical, Hanham Variation"
+    "King's Gambit Declined: Classical Variation, Hanham Variation"
   ],
   "rnbqk1nr/ppp3pp/8/2b2p2/2BpP3/2P2N2/PP4PP/RNBQK2R b KQkq - 1 7": [
     "C30",
-    "King's Gambit Declined: Classical, Réti Variation"
+    "King's Gambit Declined: Classical Variation, Réti Variation"
   ],
   "rnbqk1nr/ppp2ppp/3p4/2b1P3/4P3/5N2/PPPP2PP/RNBQKB1R b KQkq - 0 4": [
     "C30",
-    "King's Gambit Declined: Classical, Soldatenkov Variation"
+    "King's Gambit Declined: Classical Variation, Soldatenkov Variation"
   ],
   "r2qk2r/ppp2ppp/2np1n2/2b5/2B1Pp2/2NP1Q1P/PPP3P1/R1B1K2R w KQkq - 0 9": [
     "C30",
-    "King's Gambit Declined: Classical, Svenonius Variation"
+    "King's Gambit Declined: Classical Variation, Svenonius Variation"
   ],
   "r1bqkbnr/pppp1p2/2n4p/4p1P1/4P3/5N2/PPPP2PP/RNBQKB1R w KQkq - 0 5": [
     "C30",
@@ -24501,7 +24501,7 @@
   ],
   "rnbqkb1r/pppp1ppp/5n2/4p3/4PP2/8/PPPP2PP/RNBQKBNR w KQkq - 1 3": [
     "C30",
-    "King's Gambit Declined: Petrov's Defense"
+    "King's Gambit Declined: Petrov Defense"
   ],
   "r1bqkbnr/pppp1ppp/2n5/4p3/4PP2/8/PPPP2PP/RNBQKBNR w KQkq - 1 3": [
     "C30",
@@ -24537,27 +24537,27 @@
   ],
   "r1bqkbnr/pppp2pp/2n5/4pP2/5P2/5N2/PPPP2PP/RNBQKB1R b KQkq - 0 4": [
     "C30",
-    "King's Gambit: Adelaide-Wahls, 4.exf5"
+    "King's Gambit: Adelaide Countergambit, 4.exf5"
   ],
   "r1bqkbnr/pppp2pp/2n5/5P2/4pP2/5N2/PPPP2PP/RNBQKB1R w KQkq - 0 5": [
     "C30",
-    "King's Gambit: Adelaide-Wahls, 4.exf5 e4"
+    "King's Gambit: Adelaide Countergambit, 4.exf5 e4"
   ],
   "r1bqkb1r/pppp2pp/2n2n2/4NP2/4pP2/8/PPPP2PP/RNBQKB1R w KQkq - 2 6": [
     "C30",
-    "King's Gambit: Adelaide-Wahls, 4.exf5 e4 5.Ne5 Nf6"
+    "King's Gambit: Adelaide Countergambit, 4.exf5 e4 5.Ne5 Nf6"
   ],
   "rnbqkbnr/pp3ppp/2P5/4p3/5P2/8/PPPP2PP/RNBQKBNR b KQkq - 0 4": [
     "C31",
-    "KGD: Falkbeer, Marshall/Nimzowitsch, 4.dxc6"
+    "King's Gambit Declined: Falkbeer Countergambit, Nimzowitsch-Marshall Countergambit, 4.dxc6"
   ],
   "rnbqkbnr/pp3ppp/2p5/3Pp3/5P2/2N5/PPPP2PP/R1BQKBNR b KQkq - 1 4": [
     "C31",
-    "KGD: Falkbeer, Marshall/Nimzowitsch, 4.Nc3"
+    "King's Gambit Declined: Falkbeer Countergambit, Nimzowitsch-Marshall Countergambit, 4.Nc3"
   ],
   "rnbqkbnr/pp3ppp/2p5/3Pp3/5P2/8/PPPPQ1PP/RNB1KBNR b KQkq - 1 4": [
     "C31",
-    "KGD: Falkbeer, Marshall/Nimzowitsch, 4.Qe2"
+    "King's Gambit Declined: Falkbeer Countergambit, Nimzowitsch-Marshall Countergambit, 4.Qe2"
   ],
   "rnbqkbnr/ppp2ppp/8/3pp3/4PP2/8/PPPP2PP/RNBQKBNR w KQkq - 0 3": [
     "C31",
@@ -24621,35 +24621,35 @@
   ],
   "rnbqkb1r/ppp2ppp/5n2/3P4/4pP2/3P4/PPP3PP/RNBQKBNR w KQkq - 1 5": [
     "C32",
-    "KGD: Falkbeer, 4.d3 Nf6"
+    "King's Gambit Declined: Falkbeer Countergambit, 4.d3 Nf6"
   ],
   "rnbqkb1r/ppp2ppp/5n2/3P4/4pP2/2NP4/PPP3PP/R1BQKBNR b KQkq - 2 5": [
     "C32",
-    "KGD: Falkbeer, 4.d3 Nf6 5.Nc3"
+    "King's Gambit Declined: Falkbeer Countergambit, 4.d3 Nf6 5.Nc3"
   ],
   "rnbqk2r/ppp2ppp/5n2/3P4/1b2pP2/2NP4/PPP3PP/R1BQKBNR w KQkq - 3 6": [
     "C32",
-    "KGD: Falkbeer, 4.d3 Nf6 5.Nc3 Bb4"
+    "King's Gambit Declined: Falkbeer Countergambit, 4.d3 Nf6 5.Nc3 Bb4"
   ],
   "rnbqkb1r/ppp2ppp/8/3P4/4nP2/4B3/PPP3PP/RN1QKBNR b KQkq - 1 6": [
     "C32",
-    "KGD: Falkbeer, 5.dxe4 Nxe4 6.Be3"
+    "King's Gambit Declined: Falkbeer Countergambit, 5.dxe4 Nxe4 6.Be3"
   ],
   "rnbqkb1r/ppp2ppp/8/3P4/4nP2/5N2/PPP3PP/RNBQKB1R b KQkq - 1 6": [
     "C32",
-    "KGD: Falkbeer, 5.dxe4 Nxe4 6.Nf3"
+    "King's Gambit Declined: Falkbeer Countergambit, 5.dxe4 Nxe4 6.Nf3"
   ],
   "rnbqk2r/ppp2ppp/8/2bP4/4nP2/5N2/PPP1Q1PP/RNB1KB1R b KQkq - 3 7": [
     "C32",
-    "KGD: Falkbeer, 5.dxe4 Nxe4 6.Nf3 Bc5 7.Qe2"
+    "King's Gambit Declined: Falkbeer Countergambit, 5.dxe4 Nxe4 6.Nf3 Bc5 7.Qe2"
   ],
   "rnbqkb1r/ppp2ppp/5n2/3P4/5P2/3p4/PPPN2PP/R1BQKBNR w KQkq - 0 6": [
     "C32",
-    "KGD: Falkbeer, Keres, 5...exd3"
+    "King's Gambit Declined: Falkbeer Countergambit, Keres, 5...exd3"
   ],
   "rn1qk2r/ppp2ppp/8/2bP1b2/4nP2/2N2N2/PPP1Q1PP/R1B1KB1R b KQkq - 5 8": [
     "C32",
-    "KGD: Falkbeer, Main Line, 7...Bf5 8.Nc3"
+    "King's Gambit Declined: Falkbeer Countergambit, Main Line, 7...Bf5 8.Nc3"
   ],
   "rnb1k2r/ppp2ppp/8/3q4/4nP2/8/PPPNQbPP/RNBK1B1R b kq - 1 9": [
     "C32",
@@ -24877,19 +24877,19 @@
   ],
   "rnbqkbnr/pppp1ppp/8/8/4Pp2/8/PPPP1KPP/RNBQ1BNR b kq - 1 3": [
     "C33",
-    "King's Gambit Accepted: Tumbleweed"
+    "King's Gambit Accepted: Tumbleweed Variation"
   ],
   "rnbqkbnr/ppp2ppp/3p4/8/2B1Pp2/5N2/PPPP2PP/RNBQK2R b KQkq - 1 4": [
     "C34",
-    "King's Gambit Accepted: Fischer, 4.Bc4"
+    "King's Gambit Accepted: Fischer Defense, 4.Bc4"
   ],
   "rnbqkbnr/ppp2ppp/3p4/8/3PPp2/5N2/PPP3PP/RNBQKB1R b KQkq - 0 4": [
     "C34",
-    "King's Gambit Accepted: Fischer, 4.d4"
+    "King's Gambit Accepted: Fischer Defense, 4.d4"
   ],
   "rnbqkbnr/ppp2p1p/3p4/8/3PPppP/8/PPP3P1/RNBQKBNR b KQkq - 1 6": [
     "C34",
-    "King's Gambit Accepted: Fischer, Main Line"
+    "King's Gambit Accepted: Fischer Defense, Main Line"
   ],
   "rnbqkbnr/pppp1pp1/7p/8/4Pp2/5N2/PPPP2PP/RNBQKB1R w KQkq - 0 4": [
     "C34",
@@ -24961,31 +24961,31 @@
   ],
   "rnbqk1nr/ppp2ppp/3b4/3P4/5p2/5N2/PPPP2PP/RNBQKB1R w KQkq - 1 5": [
     "C36",
-    "King's Gambit Accepted: Scandinavian, 4.exd5 Bd6"
+    "King's Gambit Accepted: Scandinavian Defense, 4.exd5 Bd6"
   ],
   "rnbqkb1r/ppp2ppp/5n2/1B1P4/5p2/5N2/PPPP2PP/RNBQK2R b KQkq - 2 5": [
     "C36",
-    "King's Gambit Accepted: Scandinavian, Modern, 5.Bb5+ "
+    "King's Gambit Accepted: Scandinavian Defense, Modern Variation, 5.Bb5+ "
   ],
   "rnbqkb1r/pp3ppp/2p2n2/1B1P4/5p2/5N2/PPPP2PP/RNBQK2R w KQkq - 0 6": [
     "C36",
-    "King's Gambit Accepted: Scandinavian, Modern, 5.Bb5+ c6"
+    "King's Gambit Accepted: Scandinavian Defense, Modern Variation, 5.Bb5+ c6"
   ],
   "rnbqkb1r/p4ppp/2p2n2/1B6/5p2/5N2/PPPP2PP/RNBQK2R w KQkq - 0 7": [
     "C36",
-    "King's Gambit Accepted: Scandinavian, Modern, 5.Bb5+ c6 6.dxc6 bxc6"
+    "King's Gambit Accepted: Scandinavian Defense, Modern Variation, 5.Bb5+ c6 6.dxc6 bxc6"
   ],
   "r1bqkb1r/pp3ppp/2n2n2/1B6/5p2/5N2/PPPP2PP/RNBQK2R w KQkq - 0 7": [
     "C36",
-    "King's Gambit Accepted: Scandinavian, Modern, 5.Bb5+ c6 6.dxc6 Nxc6"
+    "King's Gambit Accepted: Scandinavian Defense, Modern Variation, 5.Bb5+ c6 6.dxc6 Nxc6"
   ],
   "rnbqkb1r/ppp2ppp/5n2/3P4/2B2p2/5N2/PPPP2PP/RNBQK2R b KQkq - 2 5": [
     "C36",
-    "King's Gambit Accepted: Scandinavian, Modern, 5.Bc4"
+    "King's Gambit Accepted: Scandinavian Defense, Modern Variation, 5.Bc4"
   ],
   "rnbqkb1r/ppp2ppp/5n2/3P4/5p2/2N2N2/PPPP2PP/R1BQKB1R b KQkq - 2 5": [
     "C36",
-    "King's Gambit Accepted: Scandinavian, Modern, 5.Nc3"
+    "King's Gambit Accepted: Scandinavian Defense, Modern Variation, 5.Nc3"
   ],
   "rnbqkb1r/ppp2ppp/5n2/3P4/5p2/5N2/PPPP2PP/RNBQKB1R w KQkq - 1 5": [
     "C36",
@@ -31289,11 +31289,11 @@
   ],
   "rnbqkb1r/pppp1Bpp/8/4p3/4n3/5N2/PPPP1PPP/RNBQK2R b KQkq - 0 4": [
     "C42",
-    "Petrov's Defense, Italian Variation, Trébuchet Gambit"
+    "Petrov Defense, Italian Variation, Trébuchet Gambit"
   ],
   "rnbqkb1r/pppp1ppp/8/4N3/4n3/8/PPPPQPPP/RNB1KB1R b KQkq - 1 4": [
     "C42",
-    "Petrov's Defense, Damiano Variation"
+    "Petrov Defense, Damiano Variation"
   ],
   "r1bqkbnr/1pp2ppp/p1p5/8/3pP3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 6": [
     "C68",
@@ -31301,7 +31301,7 @@
   ],
   "r1bqkb1r/pppp1ppp/2N2n2/8/4P3/8/PPPP1PPP/RNBQKB1R b KQkq - 0 4": [
     "C42",
-    "Petrov's Defense: Stafford Gambit"
+    "Petrov Defense: Stafford Gambit"
   ],
   "r1bqkbnr/ppp2ppp/2np4/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 1 4": [
     "C41",
@@ -31605,7 +31605,7 @@
   ],
   "rnb1kb1r/ppppqppp/8/4N3/4Q3/8/PPPP1PPP/RNB1KB1R b KQkq - 0 5": [
     "C42",
-    "Petrov's Defense, Damiano Variation"
+    "Petrov Defense, Damiano Variation"
   ],
   "r1bqkb1r/ppp2ppp/2p2n2/8/4P3/3P4/PPP2PPP/RNBQKB1R b KQkq - 0 5": [
     "C42",
@@ -31741,7 +31741,7 @@
   ],
   "rnb1kb1r/ppp1qppp/3p4/4N3/4Q3/8/PPPP1PPP/RNB1KB1R w KQkq - 0 6": [
     "C42",
-    "Petrov's Defense, Damiano Variation"
+    "Petrov Defense, Damiano Variation"
   ],
   "rnbq1b1r/ppp2kpp/3p1n2/8/4P3/8/PPPP1PPP/RNBQKB1R w KQ - 0 5": [
     "C42",
@@ -31925,7 +31925,7 @@
   ],
   "rnbq1b1r/ppp2k1p/3p1np1/8/3PP3/8/PPP2PPP/RNBQKB1R w KQ - 0 6": [
     "C42",
-    "Petrov's Defense: Cochrane Gambit"
+    "Petrov Defense: Cochrane Gambit"
   ],
   "r1bqk2r/pppp1ppp/2n2n2/2b5/1PBpP3/2P2N2/P4PPP/RNBQK2R b KQkq - 0 6": [
     "C42",
