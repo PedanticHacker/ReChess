@@ -21545,123 +21545,123 @@
   ],
   "rnbqkbnr/ppp2ppp/8/3p4/3P4/8/PPP2PPP/RNBQKBNR w KQkq - 0 4": [
     "C01",
-    "French Defense: Exchange"
+    "French Defense: Exchange Variation"
   ],
   "rnbqk1nr/ppp2ppp/8/3p4/1b1P4/2N5/PPP2PPP/R1BQKBNR w KQkq - 2 5": [
     "C01",
-    "French Defense: Exchange Winawer"
+    "French Defense: Winawer Variation, Delayed Exchange Variation"
   ],
   "rnbqk1nr/ppp2ppp/8/3p4/1b1P4/2NB4/PPP2PPP/R1BQK1NR b KQkq - 3 5": [
     "C01",
-    "French Defense: Exchange Winawer, 5.Bd3"
+    "French Defense: Winawer Variation, Delayed Exchange Variation, 5.Bd3"
   ],
   "r1bqk1nr/ppp2ppp/2n5/3p4/1b1P4/2NB4/PPP2PPP/R1BQK1NR w KQkq - 4 6": [
     "C01",
-    "French Defense: Exchange Winawer, 5.Bd3 Nc6"
+    "French Defense: Winawer Variation, Delayed Exchange Variation, 5.Bd3 Nc6"
   ],
   "rnb1kbnr/ppp2ppp/4p3/3q4/3P4/8/PPP2PPP/RNBQKBNR w KQkq - 0 4": [
     "C01",
-    "French Defense: Exchange, 3...Qxd5"
+    "French Defense: Exchange Variation, 3...Qxd5"
   ],
   "rnbqkbnr/ppp2ppp/8/3p4/3P4/3B4/PPP2PPP/RNBQK1NR b KQkq - 1 4": [
     "C01",
-    "French Defense: Exchange, 4.Bd3"
+    "French Defense: Exchange Variation, 4.Bd3"
   ],
   "rnbqk1nr/ppp2ppp/3b4/3p4/3P4/3B4/PPP2PPP/RNBQK1NR w KQkq - 2 5": [
     "C01",
-    "French Defense: Exchange, 4.Bd3 Bd6"
+    "French Defense: Exchange Variation, 4.Bd3 Bd6"
   ],
   "r1bqkbnr/ppp2ppp/2n5/3p4/3P4/3B4/PPP2PPP/RNBQK1NR w KQkq - 2 5": [
     "C01",
-    "French Defense: Exchange, 4.Bd3 Nc6"
+    "French Defense: Exchange Variation, 4.Bd3 Nc6"
   ],
   "rnbqkbnr/ppp2ppp/8/3p4/3P1B2/8/PPP2PPP/RN1QKBNR b KQkq - 1 4": [
     "C01",
-    "French Defense: Exchange, 4.Bf4"
+    "French Defense: Exchange Variation, 4.Bf4"
   ],
   "rnbqkbnr/ppp2ppp/8/3p4/3P4/2N5/PPP2PPP/R1BQKBNR b KQkq - 1 4": [
     "C01",
-    "French Defense: Exchange, 4.Nc3"
+    "French Defense: Exchange Variation, 4.Nc3"
   ],
   "rnbqkb1r/ppp2ppp/5n2/3p4/3P4/2N5/PPP2PPP/R1BQKBNR w KQkq - 2 5": [
     "C01",
-    "French Defense: Exchange, 4.Nc3 Nf6"
+    "French Defense: Exchange Variation, 4.Nc3 Nf6"
   ],
   "rnbqkb1r/ppp2ppp/5n2/3p4/3P4/2N2N2/PPP2PPP/R1BQKB1R b KQkq - 3 5": [
     "C01",
-    "French Defense: Exchange, 4.Nc3 Nf6 5.Nf3"
+    "French Defense: Exchange Variation, 4.Nc3 Nf6 5.Nf3"
   ],
   "rnbqkbnr/ppp2ppp/8/3p4/3P4/5N2/PPP2PPP/RNBQKB1R b KQkq - 1 4": [
     "C01",
-    "French Defense: Exchange, 4.Nf3"
+    "French Defense: Exchange Variation, 4.Nf3"
   ],
   "rnbqk1nr/ppp2ppp/3b4/3p4/3P4/5N2/PPP2PPP/RNBQKB1R w KQkq - 2 5": [
     "C01",
-    "French Defense: Exchange, 4.Nf3 Bd6"
+    "French Defense: Exchange Variation, 4.Nf3 Bd6"
   ],
   "rnbqk1nr/ppp2ppp/3b4/3p4/3P4/3B1N2/PPP2PPP/RNBQK2R b KQkq - 3 5": [
     "C01",
-    "French Defense: Exchange, 4.Nf3 Bd6 5.Bd3"
+    "French Defense: Exchange Variation, 4.Nf3 Bd6 5.Bd3"
   ],
   "rnbqk2r/ppp2ppp/3b1n2/3p4/3P4/3B1N2/PPP2PPP/RNBQK2R w KQkq - 4 6": [
     "C01",
-    "French Defense: Exchange, 4.Nf3 Bd6 5.Bd3 Nf6"
+    "French Defense: Exchange Variation, 4.Nf3 Bd6 5.Bd3 Nf6"
   ],
   "rnbqk1nr/ppp2ppp/3b4/3p4/2PP4/5N2/PP3PPP/RNBQKB1R b KQkq - 0 5": [
     "C01",
-    "French Defense: Exchange, 4.Nf3 Bd6 5.c4"
+    "French Defense: Exchange Variation, 4.Nf3 Bd6 5.c4"
   ],
   "rnbqkb1r/ppp2ppp/5n2/3p4/3P4/5N2/PPP2PPP/RNBQKB1R w KQkq - 2 5": [
     "C01",
-    "French Defense: Exchange, 4.Nf3 Nf6"
+    "French Defense: Exchange Variation, 4.Nf3 Nf6"
   ],
   "rnbqkb1r/ppp2ppp/5n2/3p4/3P4/3B1N2/PPP2PPP/RNBQK2R b KQkq - 3 5": [
     "C01",
-    "French Defense: Exchange, 4.Nf3 Nf6 5.Bd3"
+    "French Defense: Exchange Variation, 4.Nf3 Nf6 5.Bd3"
   ],
   "rnbqkb1r/ppp2ppp/5n2/3p4/2PP4/8/PP3PPP/RNBQKBNR w KQkq - 1 5": [
     "C01",
-    "French Defense: Exchange, 4.c4 Nf6"
+    "French Defense: Exchange Variation, 4.c4 Nf6"
   ],
   "rnbqkb1r/ppp2ppp/5n2/3p4/2PP4/5N2/PP3PPP/RNBQKB1R b KQkq - 2 5": [
     "C01",
-    "French Defense: Exchange, 4.c4 Nf6"
+    "French Defense: Exchange Variation, 4.c4 Nf6"
   ],
   "rnbqkb1r/ppp2ppp/5n2/3p4/2PP4/2N5/PP3PPP/R1BQKBNR b KQkq - 2 5": [
     "C01",
-    "French Defense: Exchange, 4.c4 Nf6 5.Nc3"
+    "French Defense: Exchange Variation, 4.c4 Nf6 5.Nc3"
   ],
   "rnbqk2r/ppp2ppp/5n2/3p4/1bPP4/2N5/PP3PPP/R1BQKBNR w KQkq - 3 6": [
     "C01",
-    "French Defense: Exchange, 4.c4 Nf6 5.Nc3 Bb4"
+    "French Defense: Exchange Variation, 4.c4 Nf6 5.Nc3 Bb4"
   ],
   "rnbqk2r/ppp2ppp/5n2/3p4/1bPP4/2N2N2/PP3PPP/R1BQKB1R b KQkq - 4 6": [
     "C01",
-    "French Defense: Exchange, 4.c4 Nf6 5.Nc3 Bb4"
+    "French Defense: Exchange Variation, 4.c4 Nf6 5.Nc3 Bb4"
   ],
   "rnbqk2r/ppp1bppp/5n2/3p4/2PP4/2N5/PP3PPP/R1BQKBNR w KQkq - 3 6": [
     "C01",
-    "French Defense: Exchange, 4.c4 Nf6 5.Nc3 Be7"
+    "French Defense: Exchange Variation, 4.c4 Nf6 5.Nc3 Be7"
   ],
   "rnbqk2r/ppp1bppp/5n2/3p4/2PP4/2N2N2/PP3PPP/R1BQKB1R b KQkq - 4 6": [
     "C01",
-    "French Defense: Exchange, 4.c4 Nf6 5.Nc3 Be7"
+    "French Defense: Exchange Variation, 4.c4 Nf6 5.Nc3 Be7"
   ],
   "rnbqkb1r/pp3ppp/2p2n2/3p4/2PP4/2N5/PP3PPP/R1BQKBNR w KQkq - 0 6": [
     "C01",
-    "French Defense: Exchange, 4.c4 Nf6 5.Nc3 c6"
+    "French Defense: Exchange Variation, 4.c4 Nf6 5.Nc3 c6"
   ],
   "rnbqkbnr/pp3ppp/2p5/3p4/2PP4/8/PP3PPP/RNBQKBNR w KQkq - 0 5": [
     "C01",
-    "French Defense: Exchange, 4.c4 c6"
+    "French Defense: Exchange Variation, 4.c4 c6"
   ],
   "rnbqk2r/ppp1nppp/8/3p3Q/1b1P4/2NB4/PPP2PPP/R1B1K1NR b KQkq - 5 6": [
     "C01",
-    "French Defense: Exchange, Canal Attack"
+    "French Defense: Exchange Variation, Canal Attack"
   ],
   "rnbqkb1r/ppp2ppp/5n2/3p2B1/3P4/2N5/PPP2PPP/R2QKBNR b KQkq - 3 5": [
     "C01",
-    "French Defense: Exchange, Svenonius Variation"
+    "French Defense: Exchange Variation, Svenonius Variation"
   ],
   "rnbqkbnr/ppp2ppp/4p3/3pP3/3P4/8/PPP2PPP/RNBQKBNR b KQkq - 0 3": [
     "C02",
@@ -21745,63 +21745,63 @@
   ],
   "rnbqkb1r/ppp1nppp/4p3/3pP3/3P4/8/PPP2PPP/RNBQKBNR w KQkq - 1 4": [
     "C02",
-    "French Defense: Advance, 3...Ne7"
+    "French Defense: Advance Variation, 3...Ne7"
   ],
   "rnbqkbnr/p1p2ppp/1p2p3/3pP3/3P4/8/PPP2PPP/RNBQKBNR w KQkq - 0 4": [
     "C02",
-    "French Defense: Advance, 3...b6"
+    "French Defense: Advance Variation, 3...b6"
   ],
   "rnb1kbnr/p1pq1ppp/1p2p3/3pP3/3P4/2P5/PP3PPP/RNBQKBNR w KQkq - 1 5": [
     "C02",
-    "French Defense: Advance, 3...b6"
+    "French Defense: Advance Variation, 3...b6"
   ],
   "rnb1kbnr/pp3ppp/1q2p3/2ppP3/3P4/2P5/PP3PPP/RNBQKBNR w KQkq - 1 5": [
     "C02",
-    "French Defense: Advance, 4.c3 Qb6"
+    "French Defense: Advance Variation, 4.c3 Qb6"
   ],
   "r1bqkb1r/pp2nppp/2n1p3/2ppP3/3P4/2P2N2/PP3PPP/RNBQKB1R w KQkq - 3 6": [
     "C02",
-    "French Defense: Advance, 5.Nf3 Nge7"
+    "French Defense: Advance Variation, 5.Nf3 Nge7"
   ],
   "r1b1kbnr/pp3ppp/1qn1p3/2ppP3/3P4/2P2N2/PP3PPP/RNBQKB1R w KQkq - 3 6": [
     "C02",
-    "French Defense: Advance, 5.Nf3 Qb6"
+    "French Defense: Advance Variation, 5.Nf3 Qb6"
   ],
   "r1b1kbnr/pp3ppp/1qn1p3/2ppP3/3P4/2P2N2/PP2BPPP/RNBQK2R b KQkq - 4 6": [
     "C02",
-    "French Defense: Advance, 5.Nf3 Qb6 6.Be2"
+    "French Defense: Advance Variation, 5.Nf3 Qb6 6.Be2"
   ],
   "r1b1kbnr/pp3ppp/1qn1p3/3pP3/3P4/5N2/PP2BPPP/RNBQK2R b KQkq - 0 7": [
     "C02",
-    "French Defense: Advance, 5.Nf3 Qb6 6.Be2 cxd4 7.cxd4"
+    "French Defense: Advance Variation, 5.Nf3 Qb6 6.Be2 cxd4 7.cxd4"
   ],
   "r3kbnr/pp1b1ppp/1qn1p3/2ppP3/3P4/P1P2N2/1P3PPP/RNBQKB1R w KQkq - 1 7": [
     "C02",
-    "French Defense: Advance, 5.Nf3 Qb6 6.a3 Bd7"
+    "French Defense: Advance Variation, 5.Nf3 Qb6 6.a3 Bd7"
   ],
   "r1b1kbnr/pp3ppp/1qn1p3/3pP3/2pP4/P1P2N2/1P3PPP/RNBQKB1R w KQkq - 0 7": [
     "C02",
-    "French Defense: Advance, 5.Nf3 Qb6 6.a3 c4"
+    "French Defense: Advance Variation, 5.Nf3 Qb6 6.a3 c4"
   ],
   "r1b1kbnr/pp3ppp/1qn1p3/3pP3/2pP4/P1P2N2/1P1N1PPP/R1BQKB1R b KQkq - 1 7": [
     "C02",
-    "French Defense: Advance, 5.Nf3 Qb6 6.a3 c4 7.Nbd2"
+    "French Defense: Advance Variation, 5.Nf3 Qb6 6.a3 c4 7.Nbd2"
   ],
   "r2qkbnr/pp1b1ppp/2n1p3/2ppP3/3P4/2P2N2/PP2BPPP/RNBQK2R b KQkq - 4 6": [
     "C02",
-    "French Defense: Advance, Euwe, 6.Be2"
+    "French Defense: Advance Variation, Euwe Variation, 6.Be2"
   ],
   "r2qkb1r/pp1bnppp/2n1p3/2ppP3/3P4/2P2N2/PP2BPPP/RNBQK2R w KQkq - 5 7": [
     "C02",
-    "French Defense: Advance, Euwe, 6.Be2 Nge7"
+    "French Defense: Advance Variation, Euwe Variation, 6.Be2 Nge7"
   ],
   "r2qkbnr/pp1b1ppp/2n1p3/2ppP3/3P4/P1P2N2/1P3PPP/RNBQKB1R b KQkq - 0 6": [
     "C02",
-    "French Defense: Advance, Euwe, 6.a3"
+    "French Defense: Advance Variation, Euwe Variation, 6.a3"
   ],
   "rn2kbnr/pp1b1ppp/1q2p3/2ppP3/3P4/2P2N2/PP2BPPP/RNBQK2R b KQkq - 4 6": [
     "C02",
-    "French Defense: Advance, Wade, 6.Be2"
+    "French Defense: Advance Variation, Wade Variation, 6.Be2"
   ],
   "r1bqkbnr/ppp2ppp/2n5/4p3/3PN3/2P5/PP3PPP/R1BQKBNR w KQkq - 0 6": [
     "C03",
@@ -22885,7 +22885,7 @@
   ],
   "rnbqk2r/ppp1nppp/8/3p3Q/1b1P4/2NB4/PPP2PPP/R1B1K1NR b KQkq - 3 6": [
     "C15",
-    "French Defense: Winawer Variation, Exchange Variation, Canal Attack"
+    "French Defense: Winawer Variation, Delayed Exchange Variation, Canal Attack"
   ],
   "rnbqk1nr/ppp2ppp/4p3/3p4/1b1PP3/2N5/PPPB1PPP/R2QKBNR b KQkq - 3 4": [
     "C15",
