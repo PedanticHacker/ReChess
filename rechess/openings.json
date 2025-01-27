@@ -33779,6 +33779,18 @@
     "D09",
     "Queen's Gambit Declined: Albin, 5.g3 Nge7"
   ],
+  "rnbqkbnr/pp2pppp/2p5/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 3": [
+    "D10",
+    "Queen's Gambit Declined: Slav Defense"
+  ],
+  "rnbqkbnr/pp2pppp/2p5/3p4/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3": [
+    "D10",
+    "Queen's Gambit Declined: Slav Defense"
+  ],
+  "rnbqkbnr/pp2pppp/2p5/8/2pP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 4": [
+    "D10",
+    "Queen's Gambit Declined: Slav Defense"
+  ],
   "rnbqkbnr/pp2pppp/2p5/3p4/2PP1B2/8/PP2PPPP/RN1QKBNR b KQkq - 1 3": [
     "D10",
     "Queen's Gambit Declined: Slav Defense, 3.Bf4"
@@ -33863,41 +33875,41 @@
     "D10",
     "Queen's Gambit Declined: Slav Defense, Exchange Variation"
   ],
-  "rnbqkb1r/pp2pppp/5n2/3p4/3P4/2N2P2/PP2P1PP/R1BQKBNR b KQkq - 0 5": [
-    "D10",
-    "Queen's Gambit Declined: Slav Defense, Exchange Variation, Boor Attack"
-  ],
   "rnbqkbnr/pp2pppp/8/3p4/3P1B2/8/PP2PPPP/RN1QKBNR b KQkq - 1 4": [
     "D10",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 4.Bf4"
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 4.Bf4"
   ],
   "rnbqkbnr/pp2pppp/8/3p4/3P4/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 4": [
     "D10",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 4.Nc3"
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 4.Nc3"
   ],
   "rnbqkb1r/pp2pppp/5n2/3p4/3P4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 5": [
     "D10",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 4.Nc3 Nf6"
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 4.Nc3 Nf6"
   ],
   "rnbqkb1r/pp2pppp/5n2/3p4/3P1B2/2N5/PP2PPPP/R2QKBNR b KQkq - 3 5": [
     "D10",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 4.Nc3 Nf6 5.Bf4"
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 4.Nc3 Nf6 5.Bf4"
   ],
   "r1bqkb1r/pp2pppp/2n2n2/3p4/3P1B2/2N5/PP2PPPP/R2QKBNR w KQkq - 4 6": [
     "D10",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 4.Nc3 Nf6 5.Bf4 Nc6"
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 4.Nc3 Nf6 5.Bf4 Nc6"
   ],
   "r1bqkb1r/pp2pppp/2n2n2/3p4/3P1B2/2N1P3/PP3PPP/R2QKBNR b KQkq - 0 6": [
     "D10",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 4.Nc3 Nf6 5.Bf4 Nc6 6.e3"
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 4.Nc3 Nf6 5.Bf4 Nc6 6.e3"
   ],
   "r1bqkb1r/1p2pppp/p1n2n2/3p4/3P1B2/2N1P3/PP3PPP/R2QKBNR w KQkq - 0 7": [
     "D10",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 4.Nc3 Nf6 5.Bf4 Nc6 6.e3 a6"
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 4.Nc3 Nf6 5.Bf4 Nc6 6.e3 a6"
   ],
   "rnbqkbnr/pp2pppp/8/3p4/3P4/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 4": [
     "D10",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 4.Nf3"
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 4.Nf3"
+  ],
+  "rnbqkb1r/pp2pppp/5n2/3p4/3P4/2N2P2/PP2P1PP/R1BQKBNR b KQkq - 0 5": [
+    "D10",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, Boor Attack"
   ],
   "rnbqkbnr/pp2pppp/2p5/8/2pPP3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 4": [
     "D10",
@@ -33934,18 +33946,6 @@
   "rnbqkbnr/pp3ppp/2p5/3pp3/2PPP3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 4": [
     "D10",
     "Queen's Gambit Declined: Slav Defense, Winawer Countergambit, Anti-Winawer Gambit"
-  ],
-  "rnbqkbnr/pp2pppp/2p5/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 3": [
-    "D10",
-    "Slav Defense"
-  ],
-  "rnbqkbnr/pp2pppp/2p5/3p4/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3": [
-    "D10",
-    "Slav Defense"
-  ],
-  "rnbqkbnr/pp2pppp/2p5/8/2pP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 4": [
-    "D10",
-    "Slav Defense"
   ],
   "rn1qkbnr/pp2pppp/2p5/3p1b2/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 4": [
     "D11",
@@ -34225,87 +34225,151 @@
   ],
   "rnbqkb1r/pp2pppp/2p2n2/3P4/3P4/5N2/PP2PPPP/RNBQKB1R b KQkq - 0 4": [
     "D13",
-    "Queen's Gambit Declined: Slav Defense, Exchange"
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation"
   ],
   "rnbqkb1r/pp2pppp/5n2/3p4/3P4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 5": [
     "D13",
     "Queen's Gambit Declined: Slav Defense, Exchange Variation"
   ],
+  "rnbqkb1r/pp2pppp/5n2/3p4/3P4/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 1 5": [
+    "D13",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 5.Nc3"
+  ],
+  "rn1qkb1r/pp2pppp/5n2/3p1b2/3P4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 2 6": [
+    "D13",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 5.Nc3 Bf5"
+  ],
+  "r1bqkb1r/pp2pppp/2n2n2/3p4/3P4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 2 6": [
+    "D13",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 5.Nc3 Nc6"
+  ],
+  "rnbqkb1r/1p2pppp/p4n2/3p4/3P4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 6": [
+    "D13",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 5.Nc3 a6"
+  ],
+  "rnbqkb1r/1p2pppp/p4n2/3p4/3P1B2/2N2N2/PP2PPPP/R2QKB1R b KQkq - 1 6": [
+    "D13",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 5.Nc3 a6 6.Bf4"
+  ],
+  "rnbqkb1r/1p2pppp/p4n2/3pN3/3P4/2N5/PP2PPPP/R1BQKB1R b KQkq - 1 6": [
+    "D13",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 5.Nc3 a6 6.Ne5"
+  ],
+  "rnbqkb1r/pp3ppp/4pn2/3p4/3P4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 6": [
+    "D13",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 5.Nc3 e6"
+  ],
+  "rnbqkb1r/pp3ppp/4pn2/3p4/3P1B2/2N2N2/PP2PPPP/R2QKB1R b KQkq - 1 6": [
+    "D13",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 5.Nc3 e6 6.Bf4"
+  ],
+  "r1bqkb1r/pp2pppp/2n2n2/3p4/3P1B2/2N2N2/PP2PPPP/R2QKB1R b KQkq - 3 6": [
+    "D13",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 6.Bf4"
+  ],
+  "r1bqkb1r/1p2pppp/p1n2n2/3p4/3P1B2/2N2N2/PP2PPPP/R2QKB1R w KQkq - 0 7": [
+    "D13",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 6.Bf4 a6"
+  ],
+  "r1bqkb1r/1p2pppp/p1n2n2/3p4/3P1B2/2N1PN2/PP3PPP/R2QKB1R b KQkq - 0 7": [
+    "D13",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 6.Bf4 a6 7.e3"
+  ],
+  "r2qkb1r/1p2pppp/p1n2n2/3p4/3P1Bb1/2N1PN2/PP3PPP/R2QKB1R w KQkq - 1 8": [
+    "D13",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 6.Bf4 a6 7.e3 Bg4"
+  ],
+  "r2qkb1r/1p2pppp/p1n2n2/3p4/3P1Bb1/2N1PN2/PP2BPPP/R2QK2R b KQkq - 2 8": [
+    "D13",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 6.Bf4 a6 7.e3 Bg4 8.Be2"
+  ],
+  "r1bqkb1r/pp3ppp/2n1pn2/3p4/3P1B2/2N2N2/PP2PPPP/R2QKB1R w KQkq - 0 7": [
+    "D13",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 6.Bf4 e6"
+  ],
+  "r1bqkb1r/pp3ppp/2n1pn2/3p4/3P1B2/2N1PN2/PP3PPP/R2QKB1R b KQkq - 0 7": [
+    "D13",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 6.Bf4 e6 7.e3"
+  ],
+  "r1bqk2r/pp3ppp/2nbpn2/3p4/3P1B2/2N1PN2/PP3PPP/R2QKB1R w KQkq - 1 8": [
+    "D13",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 6.Bf4 e6 7.e3 Bd6"
+  ],
+  "r1b1k2r/pp3ppp/2nqpn2/3p4/3P4/2N1PN2/PP3PPP/R2QKB1R w KQkq - 0 9": [
+    "D13",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 6.Bf4 e6 7.e3 Bd6 8.Bxd6 Qxd6"
+  ],
+  "r1bqk2r/pp2bppp/2n1pn2/3p4/3P1B2/2N1PN2/PP3PPP/R2QKB1R w KQkq - 1 8": [
+    "D13",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 6.Bf4 e6 7.e3 Be7"
+  ],
   "rn1qkb1r/pp2pppp/5n2/3p1b2/3P4/2N1PN2/PP3PPP/R1BQKB1R b KQkq - 1 6": [
     "D13",
     "Queen's Gambit Declined: Slav Defense, Exchange Variation, Schallopp Variation"
   ],
-  "rnbqkb1r/pp2pppp/5n2/3p4/3P4/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 1 5": [
-    "D13",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 5.Nc3"
+  "r2qkb1r/pp2pppp/2n2n2/3p1b2/3P1B2/2N2N2/PP2PPPP/R2QKB1R w KQkq - 4 7": [
+    "D14",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 6.Bf4 Bf5"
   ],
-  "rn1qkb1r/pp2pppp/5n2/3p1b2/3P4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 2 6": [
-    "D13",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 5.Nc3 Bf5"
+  "r2qkb1r/pp2pppp/2n2n2/3p1b2/3P1B2/2N1PN2/PP3PPP/R2QKB1R b KQkq - 0 7": [
+    "D14",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 6.Bf4 Bf5 7.e3"
   ],
-  "r1bqkb1r/pp2pppp/2n2n2/3p4/3P4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 2 6": [
-    "D13",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 5.Nc3 Nc6"
+  "r2qkb1r/1p2pppp/p1n2n2/3p1b2/3P1B2/2N1PN2/PP3PPP/R2QKB1R w KQkq - 0 8": [
+    "D14",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 6.Bf4 Bf5 7.e3 a6"
   ],
-  "rnbqkb1r/1p2pppp/p4n2/3p4/3P4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 6": [
-    "D13",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 5.Nc3 a6"
+  "r2qkb1r/pp3ppp/2n1pn2/3p1b2/3P1B2/2N1PN2/PP3PPP/R2QKB1R w KQkq - 0 8": [
+    "D14",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 6.Bf4 Bf5 7.e3 e6"
   ],
-  "rnbqkb1r/1p2pppp/p4n2/3p4/3P1B2/2N2N2/PP2PPPP/R2QKB1R b KQkq - 1 6": [
-    "D13",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 5.Nc3 a6 6.Bf4"
+  "r2qkb1r/pp3ppp/2n1pn2/1B1p1b2/3P1B2/2N1PN2/PP3PPP/R2QK2R b KQkq - 1 8": [
+    "D14",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 8.Bb5"
   ],
-  "rnbqkb1r/1p2pppp/p4n2/3pN3/3P4/2N5/PP2PPPP/R1BQKB1R b KQkq - 1 6": [
-    "D13",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 5.Nc3 a6 6.Ne5"
+  "r2qkb1r/pp1n1ppp/2n1p3/1B1p1b2/3P1B2/2N1PN2/PP3PPP/R2QK2R w KQkq - 2 9": [
+    "D14",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 8.Bb5 Nd7"
   ],
-  "rnbqkb1r/pp3ppp/4pn2/3p4/3P4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 6": [
-    "D13",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 5.Nc3 e6"
+  "r2qkb1r/pp1n1ppp/2n1p3/1B1p1b2/Q2P1B2/2N1PN2/PP3PPP/R3K2R b KQkq - 3 9": [
+    "D14",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 8.Bb5 Nd7 9.Qa4"
   ],
-  "rnbqkb1r/pp3ppp/4pn2/3p4/3P1B2/2N2N2/PP2PPPP/R2QKB1R b KQkq - 1 6": [
-    "D13",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 5.Nc3 e6 6.Bf4"
+  "r2qkb1r/pp3ppp/2n1pn2/3p1b2/3P1B2/2NBPN2/PP3PPP/R2QK2R b KQkq - 1 8": [
+    "D14",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 8.Bd3"
   ],
-  "r1bqkb1r/pp2pppp/2n2n2/3p4/3P1B2/2N2N2/PP2PPPP/R2QKB1R b KQkq - 3 6": [
-    "D13",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4"
+  "r2qk2r/pp3ppp/2nbpn2/3p4/3P1B2/2NQPN2/PP3PPP/R3K2R w KQkq - 1 10": [
+    "D14",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 8.Bd3 Bxd3 9.Qxd3 Bd6"
   ],
-  "r1bqkb1r/1p2pppp/p1n2n2/3p4/3P1B2/2N2N2/PP2PPPP/R2QKB1R w KQkq - 0 7": [
-    "D13",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 a6"
+  "r3k2r/pp3ppp/2nqpn2/3p4/3P4/2NQPN2/PP3PPP/R3K2R w KQkq - 0 11": [
+    "D14",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 8.Bd3 Bxd3 9.Qxd3 Bd6 10.Bxd6 Qxd6"
   ],
-  "r1bqkb1r/1p2pppp/p1n2n2/3p4/3P1B2/2N1PN2/PP3PPP/R2QKB1R b KQkq - 0 7": [
-    "D13",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 a6 7.e3"
+  "r4rk1/pp3ppp/2nqpn2/3p4/3P4/2NQPN2/PP3PPP/R4RK1 w - - 2 12": [
+    "D14",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 8.Bd3 Main Line"
   ],
-  "r2qkb1r/1p2pppp/p1n2n2/3p4/3P1Bb1/2N1PN2/PP3PPP/R2QKB1R w KQkq - 1 8": [
-    "D13",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 a6 7.e3 Bg4"
+  "r4rk1/pp3ppp/2nqpn2/3p4/3P4/2NQPN2/PP3PPP/2R2RK1 b - - 3 12": [
+    "D14",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 8.Bd3 Main Line, 12.Rac1"
   ],
-  "r2qkb1r/1p2pppp/p1n2n2/3p4/3P1Bb1/2N1PN2/PP2BPPP/R2QK2R b KQkq - 2 8": [
-    "D13",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 a6 7.e3 Bg4 8.Be2"
+  "r4rk1/pp3ppp/2nqpn2/3p4/3P4/2NQPN2/PP3PPP/R1R3K1 b - - 3 12": [
+    "D14",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 8.Bd3 Main Line, 12.Rfc1"
   ],
-  "r1bqkb1r/pp3ppp/2n1pn2/3p4/3P1B2/2N2N2/PP2PPPP/R2QKB1R w KQkq - 0 7": [
-    "D13",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 e6"
+  "r1r3k1/pp3ppp/2nqpn2/3p4/3P4/2NQPN2/PP3PPP/R1R3K1 w - - 4 13": [
+    "D14",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 8.Bd3 Main Line, 12.Rfc1 Rfc8"
   ],
-  "r1bqkb1r/pp3ppp/2n1pn2/3p4/3P1B2/2N1PN2/PP3PPP/R2QKB1R b KQkq - 0 7": [
-    "D13",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 e6 7.e3"
+  "r2qkb1r/pp3ppp/2n1pn2/3pNb2/3P1B2/2N1P3/PP3PPP/R2QKB1R b KQkq - 1 8": [
+    "D14",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 8.Ne5"
   ],
-  "r1bqk2r/pp3ppp/2nbpn2/3p4/3P1B2/2N1PN2/PP3PPP/R2QKB1R w KQkq - 1 8": [
-    "D13",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 e6 7.e3 Bd6"
-  ],
-  "r1b1k2r/pp3ppp/2nqpn2/3p4/3P4/2N1PN2/PP3PPP/R2QKB1R w KQkq - 0 9": [
-    "D13",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 e6 7.e3 Bd6 8.Bxd6 Qxd6"
-  ],
-  "r1bqk2r/pp2bppp/2n1pn2/3p4/3P1B2/2N1PN2/PP3PPP/R2QKB1R w KQkq - 1 8": [
-    "D13",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 e6 7.e3 Be7"
+  "r2qkb1r/pp3ppp/2n1pn2/3p1b2/3P1B2/1QN1PN2/PP3PPP/R3KB1R b KQkq - 1 8": [
+    "D14",
+    "Queen's Gambit Declined: Slav Defense, Exchange Variation, 8.Qb3"
   ],
   "r2qkb1r/pp2pppp/2n2n2/3p1b2/3P1B2/2N2N2/PP2PPPP/R2QKB1R w KQkq - 6 7": [
     "D14",
@@ -34314,70 +34378,6 @@
   "r2qk2r/pp3ppp/2n1pn2/3p1b2/1b1P1B2/1QN1PN2/PP3PPP/R3KB1R w KQkq - 2 9": [
     "D14",
     "Queen's Gambit Declined: Slav Defense, Exchange Variation, Trifunović Variation"
-  ],
-  "r2qkb1r/pp2pppp/2n2n2/3p1b2/3P1B2/2N2N2/PP2PPPP/R2QKB1R w KQkq - 4 7": [
-    "D14",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 Bf5"
-  ],
-  "r2qkb1r/pp2pppp/2n2n2/3p1b2/3P1B2/2N1PN2/PP3PPP/R2QKB1R b KQkq - 0 7": [
-    "D14",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 Bf5 7.e3"
-  ],
-  "r2qkb1r/1p2pppp/p1n2n2/3p1b2/3P1B2/2N1PN2/PP3PPP/R2QKB1R w KQkq - 0 8": [
-    "D14",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 Bf5 7.e3 a6"
-  ],
-  "r2qkb1r/pp3ppp/2n1pn2/3p1b2/3P1B2/2N1PN2/PP3PPP/R2QKB1R w KQkq - 0 8": [
-    "D14",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 6.Bf4 Bf5 7.e3 e6"
-  ],
-  "r2qkb1r/pp3ppp/2n1pn2/1B1p1b2/3P1B2/2N1PN2/PP3PPP/R2QK2R b KQkq - 1 8": [
-    "D14",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Bb5"
-  ],
-  "r2qkb1r/pp1n1ppp/2n1p3/1B1p1b2/3P1B2/2N1PN2/PP3PPP/R2QK2R w KQkq - 2 9": [
-    "D14",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Bb5 Nd7"
-  ],
-  "r2qkb1r/pp1n1ppp/2n1p3/1B1p1b2/Q2P1B2/2N1PN2/PP3PPP/R3K2R b KQkq - 3 9": [
-    "D14",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Bb5 Nd7 9.Qa4"
-  ],
-  "r2qkb1r/pp3ppp/2n1pn2/3p1b2/3P1B2/2NBPN2/PP3PPP/R2QK2R b KQkq - 1 8": [
-    "D14",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Bd3"
-  ],
-  "r2qk2r/pp3ppp/2nbpn2/3p4/3P1B2/2NQPN2/PP3PPP/R3K2R w KQkq - 1 10": [
-    "D14",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Bd3 Bxd3 9.Qxd3 Bd6"
-  ],
-  "r3k2r/pp3ppp/2nqpn2/3p4/3P4/2NQPN2/PP3PPP/R3K2R w KQkq - 0 11": [
-    "D14",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Bd3 Bxd3 9.Qxd3 Bd6 10.Bxd6 Qxd6"
-  ],
-  "r4rk1/pp3ppp/2nqpn2/3p4/3P4/2NQPN2/PP3PPP/R4RK1 w - - 2 12": [
-    "D14",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Bd3 Main Line"
-  ],
-  "r4rk1/pp3ppp/2nqpn2/3p4/3P4/2NQPN2/PP3PPP/2R2RK1 b - - 3 12": [
-    "D14",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Bd3 Main Line, 12.Rac1"
-  ],
-  "r4rk1/pp3ppp/2nqpn2/3p4/3P4/2NQPN2/PP3PPP/R1R3K1 b - - 3 12": [
-    "D14",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Bd3 Main Line, 12.Rfc1"
-  ],
-  "r1r3k1/pp3ppp/2nqpn2/3p4/3P4/2NQPN2/PP3PPP/R1R3K1 w - - 4 13": [
-    "D14",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Bd3 Main Line, 12.Rfc1 Rfc8"
-  ],
-  "r2qkb1r/pp3ppp/2n1pn2/3pNb2/3P1B2/2N1P3/PP3PPP/R2QKB1R b KQkq - 1 8": [
-    "D14",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Ne5"
-  ],
-  "r2qkb1r/pp3ppp/2n1pn2/3p1b2/3P1B2/1QN1PN2/PP3PPP/R3KB1R b KQkq - 1 8": [
-    "D14",
-    "Queen's Gambit Declined: Slav Defense, Exchange, 8.Qb3"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/3p1b2/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 4 5": [
     "D15",
