@@ -35,9 +35,25 @@
     "A00",
     "Anderssen Opening"
   ],
+  "rnbqkbnr/pppppp1p/6p1/8/6P1/P7/1PPPPP1P/RNBQKBNR b KQkq - 0 2": [
+    "A00",
+    "Anderssen Opening: Andersspike Variation"
+  ],
+  "rnbqkbnr/ppp2ppp/8/3pp3/8/P6P/1PPPPPP1/RNBQKBNR w KQkq - 0 3": [
+    "A00",
+    "Anderssen Opening: Creepy Crawly Formation"
+  ],
+  "r1bq1rk1/ppp2ppp/2nb1n2/3pp3/8/PPPPPPP1/7P/RNBQKBNR b KQ - 0 7": [
+    "A00",
+    "Anderssen Opening: Hippopotamus Attack"
+  ],
   "rnbqkbnr/1ppppppp/8/p7/1P6/P7/2PPPPPP/RNBQKBNR b KQkq - 0 2": [
     "A00",
     "Anderssen Opening: Polish Gambit"
+  ],
+  "r1bq1rk1/ppp2ppp/2nb1n2/3pp3/8/P2PP1PP/1PPN1PB1/R1BQK1NR b KQ - 0 7": [
+    "A00",
+    "Anderssen Opening: Shy Attack"
   ],
   "rnbqkbnr/pppppppp/8/8/8/5P2/PPPPP1PP/RNBQKBNR b KQkq - 0 1": [
     "A00",
@@ -109,31 +125,11 @@
   ],
   "rnbqkbnr/ppppppp1/8/7p/6P1/7P/PPPPPP2/RNBQKBNR b KQkq - 0 2": [
     "A00",
-    "Clemenz Opening: Spike Lee Gambit"
-  ],
-  "rnbqkbnr/pppp1ppp/8/4p3/P6P/8/1PPPPPP1/RNBQKBNR b KQkq - 0 2": [
-    "A00",
-    "Crab Opening"
-  ],
-  "rnbqkbnr/ppp2ppp/8/3pp3/8/P6P/1PPPPPP1/RNBQKBNR w KQkq - 0 3": [
-    "A00",
-    "Creepy Crawly Formation: Classical Defense"
+    "Clemenz Opening: Spike Gambit"
   ],
   "rnbqkbnr/ppppp2p/8/5pp1/5PP1/8/PPPPP2P/RNBQKBNR w KQkq - 0 3": [
     "A00",
     "Double Grob Opening: Pepsi Countergambit"
-  ],
-  "r1bq1rk1/ppp2ppp/2nb1n2/3pp3/P7/1PP1P1P1/1B1P1P1P/RN1QKBNR b KQ - 0 7": [
-    "A00",
-    "Formation: Cabbage Attack"
-  ],
-  "r1bq1rk1/ppp2ppp/2nb1n2/3pp3/8/PPPPPPP1/7P/RNBQKBNR b KQ - 0 7": [
-    "A00",
-    "Formation: Hippopotamus Attack"
-  ],
-  "r1bq1rk1/ppp2ppp/2nb1n2/3pp3/8/P2PP1PP/1PPN1PB1/R1BQK1NR b KQ - 0 7": [
-    "A00",
-    "Formation: Shy Attack"
   ],
   "rnbqkbnr/pppp1ppp/8/4p3/8/P6P/1PPPPPP1/RNBQKBNR b KQkq - 0 2": [
     "A00",
@@ -343,18 +339,6 @@
     "A00",
     "Hungarian Opening: van Kuijk Gambit"
   ],
-  "rnbqkbnr/pppppp1p/6p1/8/6P1/P7/1PPPPP1P/RNBQKBNR b KQkq - 0 2": [
-    "A00",
-    "Irregular Openings: Anderssen Opening, Andersspike"
-  ],
-  "rnbqkbnr/1ppppppp/8/p7/7P/8/PPPPPPP1/RNBQKBNR w KQkq - 0 2": [
-    "A00",
-    "Irregular Openings: Koola-Koola Variation"
-  ],
-  "rnbqkbnr/pp1p1ppp/8/2p5/1P1p3P/2P5/P3PPP1/RNBQKBNR b KQkq - 0 4": [
-    "A00",
-    "Irregular Openings: Kádas Gambit with 3.c3"
-  ],
   "rnbqkbnr/ppp1pppp/8/3p4/8/5NP1/PPPPPP1P/RNBQKB1R b KQkq - 1 2": [
     "A00",
     "King's Indian Attack: 1.g3"
@@ -373,7 +357,7 @@
   ],
   "rnbqkbnr/ppp1pppp/8/3p4/7P/8/PPPPPPP1/RNBQKBNR w KQkq - 0 2": [
     "A00",
-    "Kádas Opening, 1...d5"
+    "Kádas Opening: 1...d5"
   ],
   "rnbqkbnr/ppp1pppp/8/3p4/7P/7R/PPPPPPP1/RNBQKBN1 b Qkq - 1 2": [
     "A00",
@@ -381,7 +365,11 @@
   ],
   "rnbqkbnr/ppp2ppp/7P/3pp3/8/8/PPPPPPP1/RNBQKBNR b KQkq - 0 3": [
     "A00",
-    "Kádas Opening: Croon's Gambit"
+    "Kádas Opening: Croon Gambit"
+  ],
+  "rnbqkbnr/1ppppppp/8/p7/7P/8/PPPPPPP1/RNBQKBNR w KQkq - 0 2": [
+    "A00",
+    "Kádas Opening: Koola-Koola Variation"
   ],
   "rnbqkbnr/pp1ppppp/8/2p5/1P5P/8/P1PPPPP1/RNBQKBNR b KQkq - 0 2": [
     "A00",
@@ -394,6 +382,10 @@
   "rnbqkbnr/pppp1ppp/8/8/3p3P/2P5/PP2PPP1/RNBQKBNR b KQkq - 0 3": [
     "A00",
     "Kádas Opening: Kádas Gambit"
+  ],
+  "rnbqkbnr/pp1p1ppp/8/2p5/1P1p3P/2P5/P3PPP1/RNBQKBNR b KQkq - 0 4": [
+    "A00",
+    "Kádas Opening: Kádas Gambit, 4.c3"
   ],
   "rnbqkbnr/pp2pppp/8/2pp4/3PP2P/8/PPP2PP1/RNBQKBNR b KQkq - 0 3": [
     "A00",
@@ -614,6 +606,10 @@
   "rnbqkbnr/pppppppp/8/8/8/2P5/PP1PPPPP/RNBQKBNR b KQkq - 0 1": [
     "A00",
     "Saragossa Opening"
+  ],
+  "r1bq1rk1/ppp2ppp/2nb1n2/3pp3/P7/1PP1P1P1/1B1P1P1P/RN1QKBNR b KQ - 0 7": [
+    "A00",
+    "Saragossa Opening: Cabbage Attack"
   ],
   "rnbqkbnr/pp1ppppp/8/2p5/4P3/2N5/PPPP1PPP/R1BQKBNR b KQkq - 0 2": [
     "A00",
@@ -878,6 +874,10 @@
   "r1bqkbnr/p1pnpppp/1p6/3p4/P2P4/2N5/1PP1PPPP/R1BQKBNR w KQkq - 2 4": [
     "A00",
     "Ware Opening: Cologne Gambit"
+  ],
+  "rnbqkbnr/pppp1ppp/8/4p3/P6P/8/1PPPPPP1/RNBQKBNR b KQkq - 0 2": [
+    "A00",
+    "Ware Opening: Crab Variation"
   ],
   "rnbqk1nr/pppp1ppp/8/4p3/P7/b7/1PPPPPPP/1NBQKBNR w Kkq - 0 3": [
     "A00",
