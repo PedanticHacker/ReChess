@@ -199,6 +199,14 @@
     "A00",
     "Grob Opening: Grob Gambit Declined"
   ],
+  "rnbqkbnr/pp2pppp/2p5/8/2p3P1/1P6/P2PPPBP/RNBQK1NR b KQkq - 0 4": [
+    "A00",
+    "Grob Opening: Grob Gambit Declined, Richter-Grob Gambit"
+  ],
+  "rnbqkbnr/pp2pppp/2p5/3p2P1/8/8/PPPPPPBP/RNBQK1NR b KQkq - 0 3": [
+    "A00",
+    "Grob Opening: Grob Gambit Declined, Spike Attack"
+  ],
   "rnbqkbnr/ppp1ppp1/8/3p3P/8/8/PPPPPPBP/RNBQK1NR b KQkq - 0 3": [
     "A00",
     "Grob Opening: Grob Gambit, Basman Gambit"
@@ -211,13 +219,17 @@
     "A00",
     "Grob Opening: Grob Gambit, Fritz Gambit, Romford Countergambit"
   ],
+  "rn1qkbnr/ppp1pppp/8/8/2Pp2b1/8/PP1PPPBP/RNBQK1NR w KQkq - 0 4": [
+    "A00",
+    "Grob Opening: Grob Gambit, Fritz Gambit, Romford Countergambit"
+  ],
+  "rnbqkbnr/ppp2ppp/8/3pp3/2P3P1/8/PP1PPPBP/RNBQK1NR b KQkq - 0 3": [
+    "A00",
+    "Grob Opening: Grob Gambit, Hurst Attack"
+  ],
   "rnbqkbnr/ppp2ppp/8/3p4/3p2P1/2P5/PP2PPBP/RNBQK1NR b KQkq - 0 4": [
     "A00",
     "Grob Opening: Grob Gambit, Keres Gambit"
-  ],
-  "rnbqkbnr/pp2pppp/2p5/8/2p3P1/1P6/P2PPPBP/RNBQK1NR b KQkq - 0 4": [
-    "A00",
-    "Grob Opening: Grob Gambit, Richter-Grob Gambit"
   ],
   "rnbqkbnr/pp3ppp/2p5/3pp3/6P1/7P/PPPPPPB1/RNBQK1NR w KQkq - 0 4": [
     "A00",
@@ -227,25 +239,9 @@
     "A00",
     "Grob Opening: Keene Defense, Main Line"
   ],
-  "rnbqkbnr/ppppppp1/8/7p/8/6P1/PPPPPP1P/RNBQKBNR w KQkq - 0 2": [
-    "A00",
-    "Grob Opening: Lasker Simul Special"
-  ],
   "r1bqkbnr/pppp1ppp/2n5/4p3/6P1/7P/PPPPPP2/RNBQKBNR w KQkq - 1 3": [
     "A00",
     "Grob Opening: London Defense"
-  ],
-  "rn1qkbnr/ppp1pppp/8/8/2Pp2b1/8/PP1PPPBP/RNBQK1NR w KQkq - 0 4": [
-    "A00",
-    "Grob Opening: Romford Countergambit"
-  ],
-  "rnbqkbnr/pp2pppp/2p5/3p2P1/8/8/PPPPPPBP/RNBQK1NR b KQkq - 0 3": [
-    "A00",
-    "Grob Opening: Spike Attack"
-  ],
-  "rnbqkbnr/ppp2ppp/8/3pp3/2P3P1/8/PP1PPPBP/RNBQK1NR b KQkq - 0 3": [
-    "A00",
-    "Grob Opening: Spike Variation, Hurst Attack"
   ],
   "rnbqkbnr/ppp1pppp/8/8/4p1P1/2N5/PPPP1P1P/R1BQKBNR b KQkq - 1 3": [
     "A00",
@@ -286,6 +282,10 @@
   "rnbqkb1r/pppppppp/5n2/8/8/6P1/PPPPPP1P/RNBQKBNR w KQkq - 1 2": [
     "A00",
     "Hungarian Opening: Indian Defense"
+  ],
+  "rnbqkbnr/ppppppp1/8/7p/8/6P1/PPPPPP1P/RNBQKBNR w KQkq - 0 2": [
+    "A00",
+    "Hungarian Opening: Lasker Simul Special Variation"
   ],
   "rnbqkbnr/pppp1ppp/8/4p3/8/6P1/PPPPPPBP/RNBQK1NR b KQkq - 1 2": [
     "A00",
