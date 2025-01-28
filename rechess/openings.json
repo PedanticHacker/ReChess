@@ -10419,6 +10419,42 @@
     "A96",
     "Dutch Defense: Classical Variation"
   ],
+  "rnbq1rk1/ppp1b1pp/3ppn2/5p2/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 b - - 1 7": [
+    "A96",
+    "Dutch Defense: Classical Variation, 7.Nc3"
+  ],
+  "rnbq1rk1/1pp1b1pp/3ppn2/p4p2/2PP4/2N2NP1/PPQ1PPBP/R1B2RK1 b - - 1 8": [
+    "A96",
+    "Dutch Defense: Classical Variation, 7.Nc3 a5 8.Qc2"
+  ],
+  "rnbq1rk1/1pp1b1pp/3ppn2/p4p2/2PP4/2N2NP1/PP2PPBP/R1BQR1K1 b - - 1 8": [
+    "A96",
+    "Dutch Defense: Classical Variation, 7.Nc3 a5 8.Re1"
+  ],
+  "rnbq1rk1/1pp1b1pp/3ppn2/p4p2/2PP4/1PN2NP1/P3PPBP/R1BQ1RK1 b - - 0 8": [
+    "A96",
+    "Dutch Defense: Classical Variation, 7.Nc3 a5 8.b3"
+  ],
+  "rnbq1rk1/ppp1b1pp/3ppn2/5p2/2PP4/1P3NP1/P3PPBP/RNBQ1RK1 b - - 0 7": [
+    "A96",
+    "Dutch Defense: Classical Variation, 7.b3"
+  ],
+  "rnb1qrk1/ppp1b1pp/3ppn2/5p2/2PP4/1P3NP1/P3PPBP/RNBQ1RK1 w - - 1 8": [
+    "A96",
+    "Dutch Defense: Classical Variation, 7.b3 Qe8"
+  ],
+  "rnb1qrk1/ppp1b1pp/3ppn2/5p2/2PP4/1P3NP1/PB2PPBP/RN1Q1RK1 b - - 2 8": [
+    "A96",
+    "Dutch Defense: Classical Variation, 7.b3 Qe8 8.Bb2"
+  ],
+  "rnbq1rk1/1pp1b1pp/3ppn2/p4p2/2PP4/1P3NP1/P3PPBP/RNBQ1RK1 w - - 0 8": [
+    "A96",
+    "Dutch Defense: Classical Variation, 7.b3 a5"
+  ],
+  "rnbq1rk1/1pp1b1pp/3ppn2/p4p2/2PP4/1P3NP1/PB2PPBP/RN1Q1RK1 b - - 1 8": [
+    "A96",
+    "Dutch Defense: Classical Variation, 7.b3 a5 8.Bb2"
+  ],
   "rnbq1rk1/1pp1b1pp/3ppn2/p4p2/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 0 8": [
     "A96",
     "Dutch Defense: Classical Variation, Buenos Aires Variation"
@@ -10426,42 +10462,6 @@
   "rnbq1rk1/ppp1b1pp/3pp3/5p2/2PPn3/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 2 8": [
     "A96",
     "Dutch Defense: Classical Variation, Huisl Variation"
-  ],
-  "rnbq1rk1/ppp1b1pp/3ppn2/5p2/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 b - - 1 7": [
-    "A96",
-    "Dutch Defense: Classical, 7.Nc3"
-  ],
-  "rnbq1rk1/1pp1b1pp/3ppn2/p4p2/2PP4/2N2NP1/PPQ1PPBP/R1B2RK1 b - - 1 8": [
-    "A96",
-    "Dutch Defense: Classical, 7.Nc3 a5 8.Qc2"
-  ],
-  "rnbq1rk1/1pp1b1pp/3ppn2/p4p2/2PP4/2N2NP1/PP2PPBP/R1BQR1K1 b - - 1 8": [
-    "A96",
-    "Dutch Defense: Classical, 7.Nc3 a5 8.Re1"
-  ],
-  "rnbq1rk1/1pp1b1pp/3ppn2/p4p2/2PP4/1PN2NP1/P3PPBP/R1BQ1RK1 b - - 0 8": [
-    "A96",
-    "Dutch Defense: Classical, 7.Nc3 a5 8.b3"
-  ],
-  "rnbq1rk1/ppp1b1pp/3ppn2/5p2/2PP4/1P3NP1/P3PPBP/RNBQ1RK1 b - - 0 7": [
-    "A96",
-    "Dutch Defense: Classical, 7.b3"
-  ],
-  "rnb1qrk1/ppp1b1pp/3ppn2/5p2/2PP4/1P3NP1/P3PPBP/RNBQ1RK1 w - - 1 8": [
-    "A96",
-    "Dutch Defense: Classical, 7.b3 Qe8"
-  ],
-  "rnb1qrk1/ppp1b1pp/3ppn2/5p2/2PP4/1P3NP1/PB2PPBP/RN1Q1RK1 b - - 2 8": [
-    "A96",
-    "Dutch Defense: Classical, 7.b3 Qe8 8.Bb2"
-  ],
-  "rnbq1rk1/1pp1b1pp/3ppn2/p4p2/2PP4/1P3NP1/P3PPBP/RNBQ1RK1 w - - 0 8": [
-    "A96",
-    "Dutch Defense: Classical, 7.b3 a5"
-  ],
-  "rnbq1rk1/1pp1b1pp/3ppn2/p4p2/2PP4/1P3NP1/PB2PPBP/RN1Q1RK1 b - - 1 8": [
-    "A96",
-    "Dutch Defense: Classical, 7.b3 a5 8.Bb2"
   ],
   "rnb1qrk1/ppp1b1pp/3ppn2/5p2/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 2 8": [
     "A97",
@@ -11695,6 +11695,14 @@
     "B02",
     "Alekhine Defense"
   ],
+  "rnbqkb1r/pppppppp/5n2/4P3/8/8/PPPP1PPP/RNBQKBNR b KQkq - 0 2": [
+    "B02",
+    "Alekhine Defense: 2.e5"
+  ],
+  "rnbqkb1r/pppppppp/8/3nP3/2B5/8/PPPP1PPP/RNBQK1NR b KQkq - 2 3": [
+    "B02",
+    "Alekhine Defense: 3.Bc4"
+  ],
   "rnbqkbnr/pppppppp/8/4P3/8/8/PPPP1PPP/RNBQKBNR w KQkq - 1 3": [
     "B02",
     "Alekhine Defense: Brooklyn Variation"
@@ -11708,6 +11716,10 @@
     "Alekhine Defense: Buckley Attack"
   ],
   "rnbqkb1r/ppp1pppp/1n1p4/4P3/2PP4/8/PP3PPP/RNBQKBNR w KQkq - 0 5": [
+    "B02",
+    "Alekhine Defense: Chase Variation"
+  ],
+  "rnbqkb1r/pppppppp/1n6/4P3/2P5/8/PP1P1PPP/RNBQKBNR w KQkq - 1 4": [
     "B02",
     "Alekhine Defense: Chase Variation"
   ],
@@ -11787,6 +11799,54 @@
     "B02",
     "Alekhine Defense: Scandinavian Variation"
   ],
+  "rnbqkb1r/pppppppp/5n2/8/4P3/2N5/PPPP1PPP/R1BQKBNR b KQkq - 2 2": [
+    "B02",
+    "Alekhine Defense: Scandinavian Variation"
+  ],
+  "rnbqkb1r/ppp1pppp/5n2/3pP3/8/2N5/PPPP1PPP/R1BQKBNR b KQkq - 0 3": [
+    "B02",
+    "Alekhine Defense: Scandinavian Variation, 3.e5"
+  ],
+  "rnbqkb1r/ppp1pppp/8/3pP3/4n3/2N5/PPPP1PPP/R1BQKBNR w KQkq - 1 4": [
+    "B02",
+    "Alekhine Defense: Scandinavian Variation, 3.e5 Ne4"
+  ],
+  "rnbqkb1r/pppnpppp/8/3pP3/8/2N5/PPPP1PPP/R1BQKBNR w KQkq - 1 4": [
+    "B02",
+    "Alekhine Defense: Scandinavian Variation, 3.e5 Nfd7"
+  ],
+  "rnbqkb1r/ppp1pppp/5n2/3P4/8/2N5/PPPP1PPP/R1BQKBNR b KQkq - 0 3": [
+    "B02",
+    "Alekhine Defense: Scandinavian Variation, Exchange Variation"
+  ],
+  "rnbqkb1r/ppp1pppp/8/3n4/8/2N5/PPPP1PPP/R1BQKBNR w KQkq - 0 4": [
+    "B02",
+    "Alekhine Defense: Scandinavian Variation, Exchange Variation"
+  ],
+  "rnbqkb1r/ppp1pppp/8/3n4/2B5/2N5/PPPP1PPP/R1BQK1NR b KQkq - 1 4": [
+    "B02",
+    "Alekhine Defense: Scandinavian Variation, Exchange Variation, 4.Bc4"
+  ],
+  "rnbqkb1r/ppp1pppp/1n6/8/2B5/2N5/PPPP1PPP/R1BQK1NR w KQkq - 2 5": [
+    "B02",
+    "Alekhine Defense: Scandinavian Variation, Exchange Variation, 4.Bc4 Nb6"
+  ],
+  "rnbqkb1r/ppp2ppp/4p3/3n4/2B5/2N5/PPPP1PPP/R1BQK1NR w KQkq - 0 5": [
+    "B02",
+    "Alekhine Defense: Scandinavian Variation, Exchange Variation, 4.Bc4 e6"
+  ],
+  "rnbqkb1r/ppp1pppp/8/3n4/8/2N2N2/PPPP1PPP/R1BQKB1R b KQkq - 1 4": [
+    "B02",
+    "Alekhine Defense: Scandinavian Variation, Exchange Variation, 4.Nf3"
+  ],
+  "rnb1kb1r/ppp1pppp/8/3q4/8/8/PPPP1PPP/R1BQKBNR w KQkq - 0 5": [
+    "B02",
+    "Alekhine Defense: Scandinavian Variation, Exchange Variation, 4.Nxd5"
+  ],
+  "rnbqkb1r/ppp1pppp/8/3N4/8/8/PPPP1PPP/R1BQKBNR b KQkq - 0 4": [
+    "B02",
+    "Alekhine Defense: Scandinavian Variation, Exchange Variation, 4.Nxd5"
+  ],
   "rnbqkb1r/pp2pppp/2p2n2/3P4/8/2N5/PPPP1PPP/R1BQKBNR w KQkq - 0 4": [
     "B02",
     "Alekhine Defense: Scandinavian Variation, Geschev Gambit"
@@ -11807,13 +11867,25 @@
     "B02",
     "Alekhine Defense: Sämisch Attack"
   ],
-  "rnbqkb1r/pppppppp/8/4P3/2P2n2/8/PP1P1PPP/RNBQKBNR w KQkq - 1 4": [
+  "rnbqkb1r/pppppppp/8/4P3/8/2n5/PPPP1PPP/R1BQKBNR w KQkq - 0 4": [
     "B02",
-    "Alekhine Defense: The Squirrel"
+    "Alekhine Defense: Sämisch Attack, 3...Nxc3"
+  ],
+  "rnbqkb1r/pppppppp/8/4P3/8/2P5/PPP2PPP/R1BQKBNR b KQkq - 0 4": [
+    "B02",
+    "Alekhine Defense: Sämisch Attack, 3...Nxc3 4.dxc3"
   ],
   "rnbqkb1r/pppppppp/8/3nP3/2P5/8/PP1P1PPP/RNBQKBNR b KQkq - 0 3": [
     "B02",
     "Alekhine Defense: Two Pawns Attack"
+  ],
+  "rnbqkb1r/pppppppp/8/2PnP3/2B5/8/PP1P1PPP/RNBQK1NR b KQkq - 2 5": [
+    "B02",
+    "Alekhine Defense: Two Pawns Attack, 5.Bc4"
+  ],
+  "rnbqkb1r/pppppppp/8/2PnP3/8/2N5/PP1P1PPP/R1BQKBNR b KQkq - 2 5": [
+    "B02",
+    "Alekhine Defense: Two Pawns Attack, 5.Nc3"
   ],
   "rnbqkb1r/pppppppp/1n6/2P1P3/8/8/PP1P1PPP/RNBQKBNR b KQkq - 0 4": [
     "B02",
@@ -11823,85 +11895,13 @@
     "B02",
     "Alekhine Defense: Two Pawns Attack, Mikenas Variation"
   ],
+  "rnbqkb1r/pppppppp/8/4P3/2P2n2/8/PP1P1PPP/RNBQKBNR w KQkq - 1 4": [
+    "B02",
+    "Alekhine Defense: Two Pawns Attack, Squirrel Variation"
+  ],
   "rnbqkb1r/pppppppp/8/3nP3/8/1P6/P1PP1PPP/RNBQKBNR b KQkq - 0 3": [
     "B02",
     "Alekhine Defense: Welling Variation"
-  ],
-  "rnbqkb1r/pppppppp/5n2/4P3/8/8/PPPP1PPP/RNBQKBNR b KQkq - 0 2": [
-    "B02",
-    "Alekhine: 2.e5"
-  ],
-  "rnbqkb1r/pppppppp/8/3nP3/2B5/8/PPPP1PPP/RNBQK1NR b KQkq - 2 3": [
-    "B02",
-    "Alekhine: 3.Bc4"
-  ],
-  "rnbqkb1r/pppppppp/1n6/4P3/2P5/8/PP1P1PPP/RNBQKBNR w KQkq - 1 4": [
-    "B02",
-    "Alekhine: Chase Variation"
-  ],
-  "rnbqkb1r/pppppppp/5n2/8/4P3/2N5/PPPP1PPP/R1BQKBNR b KQkq - 2 2": [
-    "B02",
-    "Alekhine: Scandinavian Variation"
-  ],
-  "rnbqkb1r/ppp1pppp/5n2/3pP3/8/2N5/PPPP1PPP/R1BQKBNR b KQkq - 0 3": [
-    "B02",
-    "Alekhine: Scandinavian, 3.e5"
-  ],
-  "rnbqkb1r/ppp1pppp/8/3pP3/4n3/2N5/PPPP1PPP/R1BQKBNR w KQkq - 1 4": [
-    "B02",
-    "Alekhine: Scandinavian, 3.e5 Ne4"
-  ],
-  "rnbqkb1r/pppnpppp/8/3pP3/8/2N5/PPPP1PPP/R1BQKBNR w KQkq - 1 4": [
-    "B02",
-    "Alekhine: Scandinavian, 3.e5 Nfd7"
-  ],
-  "rnbqkb1r/ppp1pppp/5n2/3P4/8/2N5/PPPP1PPP/R1BQKBNR b KQkq - 0 3": [
-    "B02",
-    "Alekhine: Scandinavian, Exchange"
-  ],
-  "rnbqkb1r/ppp1pppp/8/3n4/8/2N5/PPPP1PPP/R1BQKBNR w KQkq - 0 4": [
-    "B02",
-    "Alekhine: Scandinavian, Exchange"
-  ],
-  "rnbqkb1r/ppp1pppp/8/3n4/2B5/2N5/PPPP1PPP/R1BQK1NR b KQkq - 1 4": [
-    "B02",
-    "Alekhine: Scandinavian, Exchange, 4.Bc4"
-  ],
-  "rnbqkb1r/ppp1pppp/1n6/8/2B5/2N5/PPPP1PPP/R1BQK1NR w KQkq - 2 5": [
-    "B02",
-    "Alekhine: Scandinavian, Exchange, 4.Bc4 Nb6"
-  ],
-  "rnbqkb1r/ppp2ppp/4p3/3n4/2B5/2N5/PPPP1PPP/R1BQK1NR w KQkq - 0 5": [
-    "B02",
-    "Alekhine: Scandinavian, Exchange, 4.Bc4 e6"
-  ],
-  "rnbqkb1r/ppp1pppp/8/3n4/8/2N2N2/PPPP1PPP/R1BQKB1R b KQkq - 1 4": [
-    "B02",
-    "Alekhine: Scandinavian, Exchange, 4.Nf3"
-  ],
-  "rnb1kb1r/ppp1pppp/8/3q4/8/8/PPPP1PPP/R1BQKBNR w KQkq - 0 5": [
-    "B02",
-    "Alekhine: Scandinavian, Exchange, 4.Nxd5"
-  ],
-  "rnbqkb1r/ppp1pppp/8/3N4/8/8/PPPP1PPP/R1BQKBNR b KQkq - 0 4": [
-    "B02",
-    "Alekhine: Scandinavian, Exchange, 4.Nxd5"
-  ],
-  "rnbqkb1r/pppppppp/8/4P3/8/2n5/PPPP1PPP/R1BQKBNR w KQkq - 0 4": [
-    "B02",
-    "Alekhine: Sämisch Attack, 3...Nxc3"
-  ],
-  "rnbqkb1r/pppppppp/8/4P3/8/2P5/PPP2PPP/R1BQKBNR b KQkq - 0 4": [
-    "B02",
-    "Alekhine: Sämisch Attack, 3...Nxc3 4.dxc3"
-  ],
-  "rnbqkb1r/pppppppp/8/2PnP3/2B5/8/PP1P1PPP/RNBQK1NR b KQkq - 2 5": [
-    "B02",
-    "Alekhine: Two Pawns Attack, 5.Bc4"
-  ],
-  "rnbqkb1r/pppppppp/8/2PnP3/8/2N5/PP1P1PPP/R1BQKBNR b KQkq - 2 5": [
-    "B02",
-    "Alekhine: Two Pawns Attack, 5.Nc3"
   ],
   "rnbqkb1r/ppp1pppp/3p4/3nP3/2PP4/8/PP3PPP/RNBQKBNR b KQkq - 0 4": [
     "B03",
@@ -11914,6 +11914,18 @@
   "rnbqkb1r/pppppppp/8/3nP3/3P4/8/PPP2PPP/RNBQKBNR b KQkq - 0 3": [
     "B03",
     "Alekhine Defense"
+  ],
+  "rnbqkb1r/ppp1pppp/3P4/3n4/3P4/8/PPP2PPP/RNBQKBNR b KQkq - 0 4": [
+    "B03",
+    "Alekhine Defense: 3.d4 d6 4.exd6"
+  ],
+  "rnbqkb1r/ppp1pppp/1n1p4/4P3/2PP4/8/PP3PPP/RNBQKBNR w KQkq - 1 5": [
+    "B03",
+    "Alekhine Defense: 4.c4 Nb6"
+  ],
+  "rnbqkb1r/ppp1pppp/1n1p4/4P3/2PP4/5N2/PP3PPP/RNBQKB1R b KQkq - 2 5": [
+    "B03",
+    "Alekhine Defense: 4.c4 Nb6 5.Nf3"
   ],
   "rnbqkb1r/ppp1pppp/3p4/3nP3/2BP4/8/PPP2PPP/RNBQK1NR b KQkq - 1 4": [
     "B03",
@@ -11931,13 +11943,61 @@
     "B03",
     "Alekhine Defense: Exchange Variation, Voronezh Variation"
   ],
+  "rnbqkb1r/pp2pppp/1n1p4/8/2PP4/8/PP3PPP/RNBQKBNR w KQkq - 0 6": [
+    "B03",
+    "Alekhine Defense: Exchange, 5...cxd6"
+  ],
+  "rnbqkb1r/pp2pppp/1n1p4/8/2PP4/2N5/PP3PPP/R1BQKBNR b KQkq - 1 6": [
+    "B03",
+    "Alekhine Defense: Exchange, 5...cxd6 6.Nc3"
+  ],
+  "rnbqkb1r/pp2pp1p/1n1p2p1/8/2PP4/2N1B3/PP3PPP/R2QKBNR b KQkq - 1 7": [
+    "B03",
+    "Alekhine Defense: Exchange, 5...cxd6 6.Nc3 g6 7.Be3"
+  ],
+  "rnbqkb1r/ppp2ppp/1n1p4/8/2PP4/8/PP3PPP/RNBQKBNR w KQkq - 0 6": [
+    "B03",
+    "Alekhine Defense: Exchange, 5...exd6"
+  ],
+  "rnbqkb1r/ppp2ppp/1n1p4/8/2PP4/2N5/PP3PPP/R1BQKBNR b KQkq - 1 6": [
+    "B03",
+    "Alekhine Defense: Exchange, 5...exd6 6.Nc3"
+  ],
+  "rnbqk2r/ppp1bppp/1n1p4/8/2PP4/2N5/PP3PPP/R1BQKBNR w KQkq - 2 7": [
+    "B03",
+    "Alekhine Defense: Exchange, 5...exd6 6.Nc3 Be7"
+  ],
   "rnbqkb1r/ppp1pppp/1n1p4/4P3/2PP1P2/8/PP4PP/RNBQKBNR b KQkq - 0 5": [
     "B03",
     "Alekhine Defense: Four Pawns Attack"
   ],
+  "rnbqkb1r/ppp1pppp/1n6/4P3/2PP4/8/PP4PP/RNBQKBNR b KQkq - 0 6": [
+    "B03",
+    "Alekhine Defense: Four Pawns Attack, 5...dxe5"
+  ],
+  "rnbqkb1r/ppp1pppp/1n6/4p3/2PP1P2/8/PP4PP/RNBQKBNR w KQkq - 0 6": [
+    "B03",
+    "Alekhine Defense: Four Pawns Attack, 5...dxe5"
+  ],
+  "rn1qkb1r/ppp1pppp/1n6/4Pb2/2PP4/8/PP4PP/RNBQKBNR w KQkq - 1 7": [
+    "B03",
+    "Alekhine Defense: Four Pawns Attack, 6...Bf5"
+  ],
+  "r1bqkb1r/ppp1pppp/1nn5/4P3/2PP4/8/PP4PP/RNBQKBNR w KQkq - 1 7": [
+    "B03",
+    "Alekhine Defense: Four Pawns Attack, 6...Nc6"
+  ],
+  "rnbqkb1r/pp2pppp/1n6/2p1P3/2PP4/8/PP4PP/RNBQKBNR w KQkq - 0 7": [
+    "B03",
+    "Alekhine Defense: Four Pawns Attack, 6...c5"
+  ],
   "rnbqkb1r/ppp1pp1p/1n1p4/4P1p1/2PP1P2/8/PP4PP/RNBQKBNR w KQkq - 0 6": [
     "B03",
     "Alekhine Defense: Four Pawns Attack, Cambridge Gambit"
+  ],
+  "rn1qk2r/ppp2ppp/1n2p3/4Pb2/1bPP4/2NB1N2/PP4PP/R1BQK2R b KQkq - 3 9": [
+    "B03",
+    "Alekhine Defense: Four Pawns Attack, Fahrni Variation"
   ],
   "rnbqkb1r/ppp1pp1p/1n1p2p1/4P3/2PP1P2/8/PP4PP/RNBQKBNR w KQkq - 0 6": [
     "B03",
@@ -11975,66 +12035,6 @@
     "B03",
     "Alekhine Defense: O'Sullivan Gambit"
   ],
-  "rnbqkb1r/ppp1pppp/3P4/3n4/3P4/8/PPP2PPP/RNBQKBNR b KQkq - 0 4": [
-    "B03",
-    "Alekhine: 3.d4 d6 4.exd6"
-  ],
-  "rnbqkb1r/ppp1pppp/1n1p4/4P3/2PP4/8/PP3PPP/RNBQKBNR w KQkq - 1 5": [
-    "B03",
-    "Alekhine: 4.c4 Nb6"
-  ],
-  "rnbqkb1r/ppp1pppp/1n1p4/4P3/2PP4/5N2/PP3PPP/RNBQKB1R b KQkq - 2 5": [
-    "B03",
-    "Alekhine: 4.c4 Nb6 5.Nf3"
-  ],
-  "rnbqkb1r/pp2pppp/1n1p4/8/2PP4/8/PP3PPP/RNBQKBNR w KQkq - 0 6": [
-    "B03",
-    "Alekhine: Exchange, 5...cxd6"
-  ],
-  "rnbqkb1r/pp2pppp/1n1p4/8/2PP4/2N5/PP3PPP/R1BQKBNR b KQkq - 1 6": [
-    "B03",
-    "Alekhine: Exchange, 5...cxd6 6.Nc3"
-  ],
-  "rnbqkb1r/pp2pp1p/1n1p2p1/8/2PP4/2N1B3/PP3PPP/R2QKBNR b KQkq - 1 7": [
-    "B03",
-    "Alekhine: Exchange, 5...cxd6 6.Nc3 g6 7.Be3"
-  ],
-  "rnbqkb1r/ppp2ppp/1n1p4/8/2PP4/8/PP3PPP/RNBQKBNR w KQkq - 0 6": [
-    "B03",
-    "Alekhine: Exchange, 5...exd6"
-  ],
-  "rnbqkb1r/ppp2ppp/1n1p4/8/2PP4/2N5/PP3PPP/R1BQKBNR b KQkq - 1 6": [
-    "B03",
-    "Alekhine: Exchange, 5...exd6 6.Nc3"
-  ],
-  "rnbqk2r/ppp1bppp/1n1p4/8/2PP4/2N5/PP3PPP/R1BQKBNR w KQkq - 2 7": [
-    "B03",
-    "Alekhine: Exchange, 5...exd6 6.Nc3 Be7"
-  ],
-  "rnbqkb1r/ppp1pppp/1n6/4P3/2PP4/8/PP4PP/RNBQKBNR b KQkq - 0 6": [
-    "B03",
-    "Alekhine: Four Pawns Attack, 5...dxe5"
-  ],
-  "rnbqkb1r/ppp1pppp/1n6/4p3/2PP1P2/8/PP4PP/RNBQKBNR w KQkq - 0 6": [
-    "B03",
-    "Alekhine: Four Pawns Attack, 5...dxe5"
-  ],
-  "rn1qkb1r/ppp1pppp/1n6/4Pb2/2PP4/8/PP4PP/RNBQKBNR w KQkq - 1 7": [
-    "B03",
-    "Alekhine: Four Pawns Attack, 6...Bf5"
-  ],
-  "r1bqkb1r/ppp1pppp/1nn5/4P3/2PP4/8/PP4PP/RNBQKBNR w KQkq - 1 7": [
-    "B03",
-    "Alekhine: Four Pawns Attack, 6...Nc6"
-  ],
-  "rnbqkb1r/pp2pppp/1n6/2p1P3/2PP4/8/PP4PP/RNBQKBNR w KQkq - 0 7": [
-    "B03",
-    "Alekhine: Four Pawns Attack, 6...c5"
-  ],
-  "rn1qk2r/ppp2ppp/1n2p3/4Pb2/1bPP4/2NB1N2/PP4PP/R1BQK2R b KQkq - 3 9": [
-    "B03",
-    "Alekhine: Four Pawns Attack, Fahrni Variation"
-  ],
   "rnbqkb1r/ppp1pppp/3p4/3nP3/3P4/5N2/PPP2PPP/RNBQKB1R b KQkq - 1 4": [
     "B04",
     "Alekhine Defense: Modern Variation"
@@ -12061,39 +12061,39 @@
   ],
   "rnbqkb1r/pp2pppp/2pp4/3nP3/3P4/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 5": [
     "B04",
-    "Alekhine: Modern, 4...c6"
+    "Alekhine Defense: Modern, 4...c6"
   ],
   "rnbqkb1r/pp2pppp/2pp4/3nP3/2PP4/5N2/PP3PPP/RNBQKB1R b KQkq - 0 5": [
     "B04",
-    "Alekhine: Modern, 4...c6 5.c4"
+    "Alekhine Defense: Modern, 4...c6 5.c4"
   ],
   "rnbqkb1r/ppp1pp1p/3p2p1/3nP3/2BP4/5N2/PPP2PPP/RNBQK2R b KQkq - 1 5": [
     "B04",
-    "Alekhine: Modern, Fianchetto, 5.Bc4"
+    "Alekhine Defense: Modern, Fianchetto, 5.Bc4"
   ],
   "rnbqkb1r/ppp1pp1p/1n1p2p1/4P3/2BP4/5N2/PPP2PPP/RNBQK2R w KQkq - 2 6": [
     "B04",
-    "Alekhine: Modern, Fianchetto, 5.Bc4 Nb6"
+    "Alekhine Defense: Modern, Fianchetto, 5.Bc4 Nb6"
   ],
   "rnbqk2r/ppp1ppbp/1n1p2p1/4P3/3P4/1B3N2/PPP2PPP/RNBQK2R w KQkq - 4 7": [
     "B04",
-    "Alekhine: Modern, Fianchetto, 5.Bc4 Nb6 6.Bb3 Bg7"
+    "Alekhine Defense: Modern, Fianchetto, 5.Bc4 Nb6 6.Bb3 Bg7"
   ],
   "rnbqk2r/ppp1ppbp/1n1p2p1/4P1N1/3P4/1B6/PPP2PPP/RNBQK2R b KQkq - 5 7": [
     "B04",
-    "Alekhine: Modern, Fianchetto, 5.Bc4 Nb6 6.Bb3 Bg7 7.Ng5"
+    "Alekhine Defense: Modern, Fianchetto, 5.Bc4 Nb6 6.Bb3 Bg7 7.Ng5"
   ],
   "rnbqkb1r/ppp1pp1p/6p1/3nN3/3P4/8/PPP2PPP/RNBQKB1R w KQkq - 0 6": [
     "B04",
-    "Alekhine: Modern, Larsen, 5.Nxe5 g6"
+    "Alekhine Defense: Modern, Larsen, 5.Nxe5 g6"
   ],
   "rnbqkb1r/ppp1pp1p/6p1/3nN3/2BP4/8/PPP2PPP/RNBQK2R b KQkq - 1 6": [
     "B04",
-    "Alekhine: Modern, Larsen, 5.Nxe5 g6 6.Bc4"
+    "Alekhine Defense: Modern, Larsen, 5.Nxe5 g6 6.Bc4"
   ],
   "rnbqkb1r/pp2pp1p/2p3p1/3nN3/2BP4/8/PPP2PPP/RNBQ1RK1 b kq - 1 7": [
     "B04",
-    "Alekhine: Modern, Larsen, 5.Nxe5 g6 6.Bc4 c6 7.O-O"
+    "Alekhine Defense: Modern, Larsen, 5.Nxe5 g6 6.Bc4 c6 7.O-O"
   ],
   "rn1qkb1r/ppp1pppp/3p4/3nP3/2PP2b1/5N2/PP3PPP/RNBQKB1R b KQkq - 0 5": [
     "B05",
@@ -12117,91 +12117,91 @@
   ],
   "rn1qkb1r/ppp1pppp/3p4/3nP3/3P2b1/5N2/PPP1BPPP/RNBQK2R b KQkq - 3 5": [
     "B05",
-    "Alekhine: Modern, 5.Be2"
+    "Alekhine Defense: Modern, 5.Be2"
   ],
   "r2qkb1r/ppp1pppp/2np4/3nP3/3P2b1/5N2/PPP1BPPP/RNBQK2R w KQkq - 4 6": [
     "B05",
-    "Alekhine: Modern, 5.Be2 Nc6"
+    "Alekhine Defense: Modern, 5.Be2 Nc6"
   ],
   "rn1qkb1r/ppp2ppp/3pp3/3nP3/3P2b1/5N2/PPP1BPPP/RNBQK2R w KQkq - 0 6": [
     "B05",
-    "Alekhine: Modern, 5.Be2 e6"
+    "Alekhine Defense: Modern, 5.Be2 e6"
   ],
   "rn1qkb1r/ppp2ppp/3pp3/3nP3/3P2b1/5N2/PPP1BPPP/RNBQ1RK1 b kq - 1 6": [
     "B05",
-    "Alekhine: Modern, 5.Be2 e6 6.O-O"
+    "Alekhine Defense: Modern, 5.Be2 e6 6.O-O"
   ],
   "rn1qkb1r/ppp1pppp/1n1p4/4P3/2PP2b1/5N2/PP3PPP/RNBQKB1R w KQkq - 1 6": [
     "B05",
-    "Alekhine: Modern, Alekhine Variation"
+    "Alekhine Defense: Modern, Alekhine Variation"
   ],
   "rn1qkb1r/ppp1pppp/1n1P4/8/2PP2b1/5N2/PP3PPP/RNBQKB1R b KQkq - 0 6": [
     "B05",
-    "Alekhine: Modern, Alekhine Variation, 6.exd6"
+    "Alekhine Defense: Modern, Alekhine Variation, 6.exd6"
   ],
   "rn1qkb1r/pp2pppp/1n1p4/8/2PP2b1/5N2/PP3PPP/RNBQKB1R w KQkq - 0 7": [
     "B05",
-    "Alekhine: Modern, Alekhine Variation, 6.exd6 cxd6"
+    "Alekhine Defense: Modern, Alekhine Variation, 6.exd6 cxd6"
   ],
   "rn1qkb1r/ppp2ppp/1n1p4/8/2PP2b1/5N2/PP3PPP/RNBQKB1R w KQkq - 0 7": [
     "B05",
-    "Alekhine: Modern, Alekhine Variation, 6.exd6 exd6"
+    "Alekhine Defense: Modern, Alekhine Variation, 6.exd6 exd6"
   ],
   "rn1qkb1r/pp2pppp/2pp4/3nP3/3P2b1/5N2/PPP1BPPP/RNBQ1RK1 b kq - 1 6": [
     "B05",
-    "Alekhine: Modern, Flohr, 6.O-O"
+    "Alekhine Defense: Modern, Flohr, 6.O-O"
   ],
   "rn1qkb1r/pp2pppp/2pp4/3nP3/2PP2b1/5N2/PP2BPPP/RNBQK2R b KQkq - 0 6": [
     "B05",
-    "Alekhine: Modern, Flohr, 6.c4"
+    "Alekhine Defense: Modern, Flohr, 6.c4"
   ],
   "rn1qk2r/ppp1bppp/3pp3/3nP3/2PP2b1/5N2/PP2BPPP/RNBQ1RK1 b kq - 0 7": [
     "B05",
-    "Alekhine: Modern, Main Line"
+    "Alekhine Defense: Modern, Main Line"
   ],
   "rn1qk2r/ppp1bppp/1n1pp3/4P3/2PP2b1/2N2N2/PP2BPPP/R1BQ1RK1 b kq - 2 8": [
     "B05",
-    "Alekhine: Modern, Main Line, 8.Nc3"
+    "Alekhine Defense: Modern, Main Line, 8.Nc3"
   ],
   "rn1q1rk1/ppp1bppp/1n1pp3/4P3/2PP2b1/2N1BN2/PP2BPPP/R2Q1RK1 b - - 4 9": [
     "B05",
-    "Alekhine: Modern, Main Line, 8.Nc3 O-O 9.Be3"
+    "Alekhine Defense: Modern, Main Line, 8.Nc3 O-O 9.Be3"
   ],
   "r2q1rk1/ppp1bppp/1nnpp3/4P3/2PP2b1/2N1BN2/PP2BPPP/R2Q1RK1 w - - 5 10": [
     "B05",
-    "Alekhine: Modern, Main Line, 8.Nc3 O-O 9.Be3 Nc6"
+    "Alekhine Defense: Modern, Main Line, 8.Nc3 O-O 9.Be3 Nc6"
   ],
   "r2q1rk1/pp2bppp/1nnpp3/8/2PP2b1/2N1BN2/PP2BPPP/R2Q1RK1 w - - 0 11": [
     "B05",
-    "Alekhine: Modern, Main Line, 8.Nc3 O-O 9.Be3 Nc6 10.exd6 cxd6"
+    "Alekhine Defense: Modern, Main Line, 8.Nc3 O-O 9.Be3 Nc6 10.exd6 cxd6"
   ],
   "rn1qk2r/ppp1bppp/1n1Pp3/8/2PP2b1/5N2/PP2BPPP/RNBQ1RK1 b kq - 0 8": [
     "B05",
-    "Alekhine: Modern, Main Line, 8.exd6"
+    "Alekhine Defense: Modern, Main Line, 8.exd6"
   ],
   "rn1qk2r/ppp1bppp/1n1pp3/4P3/2PP2b1/5N1P/PP2BPP1/RNBQ1RK1 b kq - 0 8": [
     "B05",
-    "Alekhine: Modern, Main Line, 8.h3"
+    "Alekhine Defense: Modern, Main Line, 8.h3"
   ],
   "rn1qk2r/ppp1bppp/1n1pp3/4P2b/2PP4/5N1P/PP2BPP1/RNBQ1RK1 w kq - 1 9": [
     "B05",
-    "Alekhine: Modern, Main Line, 8.h3 Bh5"
+    "Alekhine Defense: Modern, Main Line, 8.h3 Bh5"
   ],
   "rn1qk2r/ppp1bppp/1n1pp3/4P2b/2PP4/2N2N1P/PP2BPP1/R1BQ1RK1 b kq - 2 9": [
     "B05",
-    "Alekhine: Modern, Main Line, 8.h3 Bh5 9.Nc3"
+    "Alekhine Defense: Modern, Main Line, 8.h3 Bh5 9.Nc3"
   ],
   "rn1q1rk1/ppp1bppp/1n1pp3/4P2b/2PP4/2N2N1P/PP2BPP1/R1BQ1RK1 w - - 3 10": [
     "B05",
-    "Alekhine: Modern, Main Line, 8.h3 Bh5 9.Nc3 O-O"
+    "Alekhine Defense: Modern, Main Line, 8.h3 Bh5 9.Nc3 O-O"
   ],
   "rn1q1rk1/ppp1bppp/1n1pp3/4P2b/2PP4/2N1BN1P/PP2BPP1/R2Q1RK1 b - - 4 10": [
     "B05",
-    "Alekhine: Modern, Main Line, 8.h3 Bh5 9.Nc3 O-O 10.Be3"
+    "Alekhine Defense: Modern, Main Line, 8.h3 Bh5 9.Nc3 O-O 10.Be3"
   ],
   "rn1q1rk1/ppp1bppp/1n2p3/3pP2b/2PP4/2N1BN1P/PP2BPP1/R2Q1RK1 w - - 0 11": [
     "B05",
-    "Alekhine: Modern, Main Line, 8.h3 Bh5 9.Nc3 O-O 10.Be3 d5"
+    "Alekhine Defense: Modern, Main Line, 8.h3 Bh5 9.Nc3 O-O 10.Be3 d5"
   ],
   "rnbqk1nr/ppp1ppbp/3p2p1/8/4PP2/2N5/PPPP2PP/R1BQKBNR w KQkq - 0 4": [
     "B06",
@@ -12321,7 +12321,7 @@
   ],
   "rnbqk1nr/pppp1p1p/4p1p1/8/2BbP3/5Q2/PPP2PPP/RNB1K1NR w KQkq - 0 5": [
     "B06",
-    "Modern Defense: Bishop Attack, Monkey's Bum"
+    "Modern Defense: Bishop Attack, Monkey's Bum Variation"
   ],
   "rnbqk1nr/pp2pp1p/2P3p1/8/2Pb4/8/PP3PPP/RNBQKBNR w KQkq - 0 6": [
     "B06",
@@ -14565,11 +14565,11 @@
   ],
   "rnbqkbnr/pp1ppppp/8/2p5/P3P3/8/1PPP1PPP/RNBQKBNR b KQkq - 0 2": [
     "B20",
-    "Sicilian Defense: Myers Attack, with a4"
+    "Sicilian Defense: Myers Attack, 2.a4"
   ],
   "rnbqkbnr/pp1ppppp/8/2p5/4P2P/8/PPPP1PP1/RNBQKBNR b KQkq - 0 2": [
     "B20",
-    "Sicilian Defense: Myers Attack, with h4"
+    "Sicilian Defense: Myers Attack, 2.h4"
   ],
   "rnbqkbnr/pp1ppppp/8/2p5/4P3/1P6/P1PP1PPP/RNBQKBNR b KQkq - 0 2": [
     "B20",
@@ -15701,15 +15701,15 @@
   ],
   "rnbqkbnr/1p1ppppp/p7/2p5/2P1P3/5N2/PP1P1PPP/RNBQKB1R b KQkq - 0 3": [
     "B28",
-    "Sicilian Defense: O'Kelly Variation, Maróczy Bind"
+    "Sicilian Defense: O'Kelly Variation, Maróczy Bind Formation"
   ],
   "rnbqkbnr/1p1p1ppp/p3p3/2p5/2P1P3/5N2/PP1P1PPP/RNBQKB1R w KQkq - 0 4": [
     "B28",
-    "Sicilian Defense: O'Kelly Variation, Maróczy Bind, Paulsen Line"
+    "Sicilian Defense: O'Kelly Variation, Maróczy Bind Formation, Paulsen Line"
   ],
   "rnbqkbnr/1p2pppp/p2p4/2p5/2P1P3/5N2/PP1P1PPP/RNBQKB1R w KQkq - 0 4": [
     "B28",
-    "Sicilian Defense: O'Kelly Variation, Maróczy Bind, Robatsch Line"
+    "Sicilian Defense: O'Kelly Variation, Maróczy Bind Formation, Robatsch Line"
   ],
   "rnbqkbnr/1p1ppppp/p7/2p5/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq - 0 3": [
     "B28",
@@ -16133,7 +16133,7 @@
   ],
   "r1bqkbnr/1p1p1ppp/p1n5/4p3/2PNP3/8/PP3PPP/RNBQKB1R w KQkq - 0 6": [
     "B32",
-    "Sicilian Defense: O'Kelly Variation, Maróczy Bind, Geller Line"
+    "Sicilian Defense: O'Kelly Variation, Maróczy Bind Formation, Geller Line"
   ],
   "r1bqkbnr/pp1ppppp/2n5/2p5/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq - 0 3": [
     "B32",
@@ -16529,339 +16529,339 @@
   ],
   "r1bqkbnr/pp1ppp1p/2n3p1/8/2PNP3/8/PP3PPP/RNBQKB1R b KQkq - 0 5": [
     "B36",
-    "Sicilian Defense: Accelerated Dragon Variation, Maróczy Bind"
-  ],
-  "r1bqkb1r/pp2pp1p/3p1np1/8/2PQP3/2N5/PP3PPP/R1B1KB1R w KQkq - 0 8": [
-    "B36",
-    "Sicilian Defense: Accelerated Dragon Variation, Maróczy Bind, Gurgenidze Variation"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation"
   ],
   "r1bqkb1r/pp1ppp1p/2n2np1/8/2PNP3/8/PP3PPP/RNBQKB1R w KQkq - 1 6": [
     "B36",
-    "Sicilian Defense: Maróczy Bind, 5...Nf6"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 5...Nf6"
   ],
   "r1bqkb1r/pp1ppp1p/2n2np1/8/2PNP3/2N5/PP3PPP/R1BQKB1R b KQkq - 2 6": [
     "B36",
-    "Sicilian Defense: Maróczy Bind, 5...Nf6 6.Nc3"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 5...Nf6 6.Nc3"
   ],
   "r1bqkb1r/pp1ppp1p/5np1/8/2PnP3/2N5/PP3PPP/R1BQKB1R w KQkq - 0 7": [
     "B36",
-    "Sicilian Defense: Maróczy Bind, 5...Nf6 6.Nc3 Nxd4"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 5...Nf6 6.Nc3 Nxd4"
   ],
   "r1bqkb1r/pp2pp1p/2np1np1/8/2PNP3/2N5/PP3PPP/R1BQKB1R w KQkq - 0 7": [
     "B36",
-    "Sicilian Defense: Maróczy Bind, 5...Nf6 6.Nc3 d6"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 5...Nf6 6.Nc3 d6"
   ],
   "r1bqkb1r/pp2pp1p/2np1np1/8/2PNP3/2N5/PP2BPPP/R1BQK2R b KQkq - 1 7": [
     "B36",
-    "Sicilian Defense: Maróczy Bind, 5...Nf6 6.Nc3 d6 7.Be2"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 5...Nf6 6.Nc3 d6 7.Be2"
   ],
   "r1bqkb1r/pp2pp1p/3p1np1/8/2PnP3/2N5/PP2BPPP/R1BQK2R w KQkq - 0 8": [
     "B36",
-    "Sicilian Defense: Maróczy Bind, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4"
   ],
   "r1bqk2r/pp2ppbp/3p1np1/8/2PQP3/2N5/PP2BPPP/R1B1K2R w KQkq - 1 9": [
     "B36",
-    "Sicilian Defense: Maróczy Bind, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4 8.Qxd4 Bg7"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4 8.Qxd4 Bg7"
   ],
   "r1bqk2r/pp2ppbp/3p1np1/8/2PQP3/2N1B3/PP2BPPP/R3K2R b KQkq - 2 9": [
     "B36",
-    "Sicilian Defense: Maróczy Bind, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4 8.Qxd4 Bg7 9.Be3"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4 8.Qxd4 Bg7 9.Be3"
   ],
   "r1bq1rk1/pp2ppbp/3p1np1/8/2PQP3/2N1B3/PP2BPPP/R3K2R w KQ - 3 10": [
     "B36",
-    "Sicilian Defense: Maróczy Bind, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4 8.Qxd4 Bg7 9.Be3 O-O"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4 8.Qxd4 Bg7 9.Be3 O-O"
   ],
   "r1bq1rk1/pp2ppbp/3p1np1/8/2P1P3/2N1B3/PP1QBPPP/R3K2R b KQ - 4 10": [
     "B36",
-    "Sicilian Defense: Maróczy Bind, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4 8.Qxd4 Bg7 9.Be3 O-O 10.Qd2"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4 8.Qxd4 Bg7 9.Be3 O-O 10.Qd2"
   ],
   "r2q1rk1/pp2ppbp/3pbnp1/8/2P1P3/2N1B3/PP1QBPPP/R3K2R w KQ - 5 11": [
     "B36",
-    "Sicilian Defense: Maróczy Bind, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4 8.Qxd4 Bg7 9.Be3 O-O 10.Qd2 Be6"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4 8.Qxd4 Bg7 9.Be3 O-O 10.Qd2 Be6"
   ],
   "r2q1rk1/pp2ppbp/3pbnp1/8/2P1P3/2N1B3/PP1QBPPP/R4RK1 b - - 6 11": [
     "B36",
-    "Sicilian Defense: Maróczy Bind, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4 8.Qxd4 Bg7 9.Be3 O-O 10.Qd2 Be6 11.O-O"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4 8.Qxd4 Bg7 9.Be3 O-O 10.Qd2 Be6 11.O-O"
   ],
   "r1bqk2r/pp2ppbp/3p1np1/6B1/2PQP3/2N5/PP2BPPP/R3K2R b KQkq - 2 9": [
     "B36",
-    "Sicilian Defense: Maróczy Bind, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4 8.Qxd4 Bg7 9.Bg5"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4 8.Qxd4 Bg7 9.Bg5"
   ],
   "r1bq1rk1/pp2ppbp/3p1np1/6B1/2PQP3/2N5/PP2BPPP/R3K2R w KQ - 3 10": [
     "B36",
-    "Sicilian Defense: Maróczy Bind, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4 8.Qxd4 Bg7 9.Bg5 O-O"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4 8.Qxd4 Bg7 9.Bg5 O-O"
   ],
   "r1bq1rk1/pp2ppbp/3p1np1/6B1/2P1P3/2N5/PP1QBPPP/R3K2R b KQ - 4 10": [
     "B36",
-    "Sicilian Defense: Maróczy Bind, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4 8.Qxd4 Bg7 9.Bg5 O-O 10.Qd2"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4 8.Qxd4 Bg7 9.Bg5 O-O 10.Qd2"
   ],
   "r1bqk2r/pp2ppbp/3p1np1/8/2PQP3/2N5/PP2BPPP/R1B2RK1 b kq - 2 9": [
     "B36",
-    "Sicilian Defense: Maróczy Bind, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4 8.Qxd4 Bg7 9.O-O"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 5...Nf6 6.Nc3 d6 7.Be2 Nxd4 8.Qxd4 Bg7 9.O-O"
   ],
   "r1bqkbnr/pp2pp1p/2np2p1/8/2PNP3/8/PP3PPP/RNBQKB1R w KQkq - 0 6": [
     "B36",
-    "Sicilian Defense: Maróczy Bind, 5...d6"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 5...d6"
   ],
   "r1bqkbnr/pp2pp1p/2np2p1/8/2PNP3/2N5/PP3PPP/R1BQKB1R b KQkq - 1 6": [
     "B36",
-    "Sicilian Defense: Maróczy Bind, 5...d6 6.Nc3"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 5...d6 6.Nc3"
   ],
   "r1bqk1nr/pp2ppbp/2np2p1/8/2PNP3/2N5/PP3PPP/R1BQKB1R w KQkq - 2 7": [
     "B36",
-    "Sicilian Defense: Maróczy Bind, 5...d6 6.Nc3 Bg7"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 5...d6 6.Nc3 Bg7"
   ],
-  "r1bqk1nr/pp1pppbp/2n3p1/8/2PNP3/8/PP3PPP/RNBQKB1R w KQkq - 1 6": [
-    "B37",
-    "Sicilian Defense: Accelerated Dragon Variation, Maróczy Bind"
+  "r1bqkb1r/pp2pp1p/3p1np1/8/2PQP3/2N5/PP3PPP/R1B1KB1R w KQkq - 0 8": [
+    "B36",
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, Gurgenidze Variation"
   ],
   "r1bqk2r/pp2ppbp/2np2pn/8/2P1P3/8/PPN1BPPP/RNBQK2R w KQkq - 2 8": [
     "B37",
     "Sicilian Defense: Accelerated Dragon Variation, Simagin Variation"
   ],
+  "r1bqk1nr/pp1pppbp/2n3p1/8/2PNP3/8/PP3PPP/RNBQKB1R w KQkq - 1 6": [
+    "B37",
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation"
+  ],
   "r1bqk1nr/pp1pppbp/2n3p1/8/2P1P3/1N6/PP3PPP/RNBQKB1R b KQkq - 2 6": [
     "B37",
-    "Sicilian Defense: Maróczy Bind, 6.Nb3"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Nb3"
   ],
   "r1bqk1nr/pp1pppbp/2n3p1/8/2P1P3/8/PPN2PPP/RNBQKB1R b KQkq - 2 6": [
     "B37",
-    "Sicilian Defense: Maróczy Bind, 6.Nc2"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Nc2"
   ],
   "r1bqk2r/pp1pppbp/2n2np1/8/2P1P3/8/PPN2PPP/RNBQKB1R w KQkq - 3 7": [
     "B37",
-    "Sicilian Defense: Maróczy Bind, 6.Nc2 Nf6"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Nc2 Nf6"
   ],
   "r1bqk2r/pp1pppbp/2n2np1/8/2P1P3/2N5/PPN2PPP/R1BQKB1R b KQkq - 4 7": [
     "B37",
-    "Sicilian Defense: Maróczy Bind, 6.Nc2 Nf6 7.Nc3"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Nc2 Nf6 7.Nc3"
   ],
   "r1bq1rk1/pp1pppbp/2n2np1/8/2P1P3/2N5/PPN2PPP/R1BQKB1R w KQ - 5 8": [
     "B37",
-    "Sicilian Defense: Maróczy Bind, 6.Nc2 Nf6 7.Nc3 O-O"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Nc2 Nf6 7.Nc3 O-O"
   ],
   "r1bqk2r/pp2ppbp/2np1np1/8/2P1P3/2N5/PPN2PPP/R1BQKB1R w KQkq - 0 8": [
     "B37",
-    "Sicilian Defense: Maróczy Bind, 6.Nc2 Nf6 7.Nc3 d6"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Nc2 Nf6 7.Nc3 d6"
   ],
   "r1bqk2r/pp2ppbp/2np1np1/8/2P1P3/2N5/PPN1BPPP/R1BQK2R b KQkq - 1 8": [
     "B37",
-    "Sicilian Defense: Maróczy Bind, 6.Nc2 Nf6 7.Nc3 d6 8.Be2"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Nc2 Nf6 7.Nc3 d6 8.Be2"
   ],
   "r1bqk2r/pp1nppbp/2np2p1/8/2P1P3/2N5/PPN1BPPP/R1BQK2R w KQkq - 2 9": [
     "B37",
-    "Sicilian Defense: Maróczy Bind, 6.Nc2 Nf6 7.Nc3 d6 8.Be2 Nd7"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Nc2 Nf6 7.Nc3 d6 8.Be2 Nd7"
   ],
   "r1bq1rk1/pp2ppbp/2np1np1/8/2P1P3/2N5/PPN1BPPP/R1BQK2R w KQ - 2 9": [
     "B37",
-    "Sicilian Defense: Maróczy Bind, 6.Nc2 Nf6 7.Nc3 d6 8.Be2 O-O"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Nc2 Nf6 7.Nc3 d6 8.Be2 O-O"
   ],
   "r1bq1rk1/pp2ppbp/2np1np1/8/2P1P3/2N5/PPN1BPPP/R1BQ1RK1 b - - 3 9": [
     "B37",
-    "Sicilian Defense: Maróczy Bind, 6.Nc2 Nf6 7.Nc3 d6 8.Be2 O-O 9.O-O"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Nc2 Nf6 7.Nc3 d6 8.Be2 O-O 9.O-O"
   ],
   "r2q1rk1/pp2ppbp/2npbnp1/8/2P1P3/2N5/PPN1BPPP/R1BQ1RK1 w - - 4 10": [
     "B37",
-    "Sicilian Defense: Maróczy Bind, 6.Nc2 Nf6 7.Nc3 d6 8.Be2 O-O 9.O-O Be6"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Nc2 Nf6 7.Nc3 d6 8.Be2 O-O 9.O-O Be6"
   ],
   "r1bq1rk1/pp1nppbp/2np2p1/8/2P1P3/2N5/PPN1BPPP/R1BQ1RK1 w - - 4 10": [
     "B37",
-    "Sicilian Defense: Maróczy Bind, 6.Nc2 Nf6 7.Nc3 d6 8.Be2 O-O 9.O-O Nd7"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Nc2 Nf6 7.Nc3 d6 8.Be2 O-O 9.O-O Nd7"
   ],
   "r1bq1rk1/pp1nppbp/2np2p1/8/2P1P3/2N5/PPNBBPPP/R2Q1RK1 b - - 5 10": [
     "B37",
-    "Sicilian Defense: Maróczy Bind, 6.Nc2 Nf6 7.Nc3 d6 8.Be2 O-O 9.O-O Nd7 10.Bd2"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Nc2 Nf6 7.Nc3 d6 8.Be2 O-O 9.O-O Nd7 10.Bd2"
   ],
   "r1bq1rk1/pp2ppbp/2np2p1/2n5/2P1P3/2N5/PPNBBPPP/R2Q1RK1 w - - 6 11": [
     "B37",
-    "Sicilian Defense: Maróczy Bind, 6.Nc2 Nf6 7.Nc3 d6 8.Be2 O-O 9.O-O Nd7 10.Bd2 Nc5"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Nc2 Nf6 7.Nc3 d6 8.Be2 O-O 9.O-O Nd7 10.Bd2 Nc5"
   ],
   "r1bq1rk1/pp2ppbp/2np2p1/2n5/1PP1P3/2N5/P1NBBPPP/R2Q1RK1 b - - 0 11": [
     "B37",
-    "Sicilian Defense: Maróczy Bind, 6.Nc2 Nf6 7.Nc3 d6 8.Be2 O-O 9.O-O Nd7 10.Bd2 Nc5 11.b4"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Nc2 Nf6 7.Nc3 d6 8.Be2 O-O 9.O-O Nd7 10.Bd2 Nc5 11.b4"
   ],
   "r1bq1rk1/1p1nppbp/2np2p1/p7/2P1P3/2N5/PPNBBPPP/R2Q1RK1 w - - 0 11": [
     "B37",
-    "Sicilian Defense: Maróczy Bind, 6.Nc2 Nf6 7.Nc3 d6 8.Be2 O-O 9.O-O Nd7 10.Bd2 a5"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Nc2 Nf6 7.Nc3 d6 8.Be2 O-O 9.O-O Nd7 10.Bd2 a5"
   ],
   "r1bqk1nr/pp2ppbp/2np2p1/8/2P1P3/8/PPN2PPP/RNBQKB1R w KQkq - 0 7": [
     "B37",
-    "Sicilian Defense: Maróczy Bind, 6.Nc2 d6"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Nc2 d6"
   ],
   "r1bqk1nr/pp2ppbp/2np2p1/8/2P1P3/8/PPN1BPPP/RNBQK2R b KQkq - 1 7": [
     "B37",
-    "Sicilian Defense: Maróczy Bind, 6.Nc2 d6 7.Be2"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Nc2 d6 7.Be2"
   ],
   "r1bqk1nr/pp1pppbp/2n3p1/8/2PNP3/4B3/PP3PPP/RN1QKB1R b KQkq - 2 6": [
     "B38",
-    "Sicilian Defense: Accelerated Dragon Variation, Maróczy Bind"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation"
   ],
   "r1bqk2r/pp1pppbp/2n2np1/8/2PNP3/4B3/PP3PPP/RN1QKB1R w KQkq - 3 7": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 6.Be3 Nf6"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Be3 Nf6"
   ],
   "r1bqk2r/pp1pppbp/2n2np1/8/2PNP3/2N1B3/PP3PPP/R2QKB1R b KQkq - 4 7": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 6.Be3 Nf6 7.Nc3"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Be3 Nf6 7.Nc3"
   ],
   "r1bqk2r/pp2ppbp/2np1np1/8/2PNP3/2N1B3/PP3PPP/R2QKB1R w KQkq - 0 8": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 6.Be3 Nf6 7.Nc3 d6"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Be3 Nf6 7.Nc3 d6"
   ],
   "r1bqk2r/pp2ppbp/2np1np1/8/2PNP3/2N1B3/PP2BPPP/R2QK2R b KQkq - 1 8": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 6.Be3 Nf6 7.Nc3 d6 8.Be2"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Be3 Nf6 7.Nc3 d6 8.Be2"
   ],
   "r1bqk2r/pp1pppbp/2n3pn/8/2PNP3/4B3/PP3PPP/RN1QKB1R w KQkq - 3 7": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 6.Be3 Nh6"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Be3 Nh6"
   ],
   "r1bqk1nr/pp2ppbp/2np2p1/8/2PNP3/4B3/PP3PPP/RN1QKB1R w KQkq - 0 7": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 6.Be3 d6"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Be3 d6"
   ],
   "r1bqk2r/pp2ppbp/2np2pn/8/2PNP3/2N1B3/PP3PPP/R2QKB1R w KQkq - 2 8": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 6.Be3 d6 7.Nc3 Nh6"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 6.Be3 d6 7.Nc3 Nh6"
   ],
   "r1bq1rk1/pp1pppbp/2n2np1/8/2PNP3/2N1B3/PP3PPP/R2QKB1R w KQ - 5 8": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O"
   ],
   "r1bq1rk1/pp1pppbp/2n2np1/8/2PNP3/2N1B3/PP2BPPP/R2QK2R b KQ - 6 8": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2"
   ],
   "r1bq1rk1/p2pppbp/1pn2np1/8/2PNP3/2N1B3/PP2BPPP/R2QK2R w KQ - 0 9": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 b6"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 b6"
   ],
   "r1bq1rk1/p2pppbp/1pn2np1/8/2PNP3/2N1B3/PP2BPPP/R2Q1RK1 b - - 1 9": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 b6 9.O-O"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 b6 9.O-O"
   ],
   "r2q1rk1/pb1pppbp/1pn2np1/8/2PNP3/2N1B3/PP2BPPP/R2Q1RK1 w - - 2 10": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 b6 9.O-O Bb7"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 b6 9.O-O Bb7"
   ],
   "r2q1rk1/pb1pppbp/1pn2np1/8/2PNP3/2N1BP2/PP2B1PP/R2Q1RK1 b - - 0 10": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 b6 9.O-O Bb7 10.f3"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 b6 9.O-O Bb7 10.f3"
   ],
   "rq3rk1/pb1pppbp/1pn2np1/8/2PNP3/2N1BP2/PP2B1PP/R2Q1RK1 w - - 1 11": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 b6 9.O-O Bb7 10.f3 Qb8"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 b6 9.O-O Bb7 10.f3 Qb8"
   ],
   "r1bq1rk1/pp2ppbp/2np1np1/8/2PNP3/2N1B3/PP2BPPP/R2QK2R w KQ - 0 9": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 d6"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 d6"
   ],
   "r1bq1rk1/pp2ppbp/2np1np1/8/2PNP3/2N1B3/PP2BPPP/R2Q1RK1 b - - 1 9": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 d6 9.O-O"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 d6 9.O-O"
   ],
   "r2q1rk1/pp1bppbp/2np1np1/8/2PNP3/2N1B3/PP2BPPP/R2Q1RK1 w - - 2 10": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 d6 9.O-O Bd7"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 d6 9.O-O Bd7"
   ],
   "r2q1rk1/pp1bppbp/2np1np1/8/2P1P3/2N1B3/PPN1BPPP/R2Q1RK1 b - - 3 10": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 d6 9.O-O Bd7 10.Nc2"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 d6 9.O-O Bd7 10.Nc2"
   ],
   "r2q1rk1/pp1bppbp/2np1np1/8/2PNP3/2N1B3/PP1QBPPP/R4RK1 b - - 3 10": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 d6 9.O-O Bd7 10.Qd2"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 d6 9.O-O Bd7 10.Qd2"
   ],
   "r2q1rk1/pp1bppbp/3p1np1/8/2PnP3/2N1B3/PP1QBPPP/R4RK1 w - - 0 11": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 d6 9.O-O Bd7 10.Qd2 Nxd4"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 d6 9.O-O Bd7 10.Qd2 Nxd4"
   ],
   "r2q1rk1/pp1bppbp/3p1np1/8/2PBP3/2N5/PP1QBPPP/R4RK1 b - - 0 11": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 d6 9.O-O Bd7 10.Qd2 Nxd4 11.Bxd4"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 d6 9.O-O Bd7 10.Qd2 Nxd4 11.Bxd4"
   ],
   "r2q1rk1/pp2ppbp/2bp1np1/8/2PBP3/2N2P2/PP1QB1PP/R4RK1 b - - 0 12": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 d6 9.O-O Bd7 10.Qd2 Nxd4, 12.f3"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 d6 9.O-O Bd7 10.Qd2 Nxd4, 12.f3"
   ],
   "r2q1rk1/1p2ppbp/2bp1np1/p7/2PBP3/2N2P2/PP1QB1PP/R4RK1 w - - 0 13": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 d6 9.O-O Bd7 10.Qd2 Nxd4, 12.f3 a5"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 d6 9.O-O Bd7 10.Qd2 Nxd4, 12.f3 a5"
   ],
   "r2q1rk1/1p2ppbp/2bp1np1/p7/2PBP3/1PN2P2/P2QB1PP/R4RK1 b - - 0 13": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 d6 9.O-O Bd7 10.Qd2 Nxd4, 12.f3 a5 13.b3"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 d6 9.O-O Bd7 10.Qd2 Nxd4, 12.f3 a5 13.b3"
   ],
   "r2q1rk1/pp1bppbp/2np1np1/8/2PNP3/2N1B3/PP2BPPP/2RQ1RK1 b - - 3 10": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 d6 9.O-O Bd7 10.Rc1"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 d6 9.O-O Bd7 10.Rc1"
   ],
   "r2q1rk1/pp1bppbp/2np1np1/8/2PNP3/2N1BP2/PP2B1PP/R2Q1RK1 b - - 0 10": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 d6 9.O-O Bd7 10.f3"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 d6 9.O-O Bd7 10.f3"
   ],
   "r1bq1rk1/pp1nppbp/2np2p1/8/2PNP3/2N1B3/PP2BPPP/R2Q1RK1 w - - 2 10": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 d6 9.O-O Nd7"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 d6 9.O-O Nd7"
   ],
   "r1bq1rk1/pp2ppbp/3p1np1/8/2PnP3/2N1B3/PP2BPPP/R2Q1RK1 w - - 0 10": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 d6 9.O-O Nxd4"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 d6 9.O-O Nxd4"
   ],
   "r1bq1rk1/1p2ppbp/p1np1np1/8/2PNP3/2N1B3/PP2BPPP/R2Q1RK1 w - - 0 10": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 d6 9.O-O a6"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 d6 9.O-O a6"
   ],
   "r1bq1rk1/pp2ppbp/2np1np1/8/2PNP3/2N1BP2/PP2B1PP/R2QK2R b KQ - 0 9": [
     "B38",
-    "Sicilian Defense: Maróczy Bind, 7.Nc3 O-O 8.Be2 d6 9.f3"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, 7.Nc3 O-O 8.Be2 d6 9.f3"
   ],
   "r1bqk2r/pp1pppbp/2n3p1/8/2PNP1n1/2N1B3/PP3PPP/R2QKB1R w KQkq - 5 8": [
     "B39",
-    "Sicilian Defense: Accelerated Dragon Variation, Maróczy Bind, Breyer Variation"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, Breyer Variation"
   ],
   "r1bqk2r/pp1pppbp/2n3p1/8/2PNP1Q1/2N1B3/PP3PPP/R3KB1R b KQkq - 0 8": [
     "B39",
-    "Sicilian Defense: Maróczy Bind, Breyer, 8.Qxg4"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, Breyer, 8.Qxg4"
   ],
   "r1bqk2r/pp1pppbp/6p1/8/2PnP1Q1/2N1B3/PP3PPP/R3KB1R w KQkq - 0 9": [
     "B39",
-    "Sicilian Defense: Maróczy Bind, Breyer, 8.Qxg4 Nxd4"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, Breyer, 8.Qxg4 Nxd4"
   ],
   "r1bqk2r/pp1pppbp/6p1/8/2PnP3/2N1B3/PP3PPP/R2QKB1R b KQkq - 1 9": [
     "B39",
-    "Sicilian Defense: Maróczy Bind, Breyer, 8.Qxg4 Nxd4 9.Qd1"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, Breyer, 8.Qxg4 Nxd4 9.Qd1"
   ],
   "r1bqk2r/pp1pppbp/4n1p1/8/2P1P3/2N1B3/PP3PPP/R2QKB1R w KQkq - 2 10": [
     "B39",
-    "Sicilian Defense: Maróczy Bind, Breyer, 8.Qxg4 Nxd4 9.Qd1 Ne6"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, Breyer, 8.Qxg4 Nxd4 9.Qd1 Ne6"
   ],
   "r1bqk2r/pp1pppbp/4n1p1/8/2P1P3/2N1B3/PP1Q1PPP/R3KB1R b KQkq - 3 10": [
     "B39",
-    "Sicilian Defense: Maróczy Bind, Breyer, 8.Qxg4 Nxd4 9.Qd1 Ne6 10.Qd2"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, Breyer, 8.Qxg4 Nxd4 9.Qd1 Ne6 10.Qd2"
   ],
   "r1bqk2r/pp1pppbp/4n1p1/8/2P1P3/2N1B3/PP3PPP/2RQKB1R b Kkq - 3 10": [
     "B39",
-    "Sicilian Defense: Maróczy Bind, Breyer, 8.Qxg4 Nxd4 9.Qd1 Ne6 10.Rc1"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, Breyer, 8.Qxg4 Nxd4 9.Qd1 Ne6 10.Rc1"
   ],
   "r1b1k2r/pp1pppbp/4n1p1/q7/2P1P3/2N1B3/PP3PPP/2RQKB1R w Kkq - 4 11": [
     "B39",
-    "Sicilian Defense: Maróczy Bind, Breyer, 8.Qxg4 Nxd4 9.Qd1 Ne6 10.Rc1 Qa5"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, Breyer, 8.Qxg4 Nxd4 9.Qd1 Ne6 10.Rc1 Qa5"
   ],
   "r1b1k2r/pp1pppbp/4n1p1/q7/2P1P3/2N1B3/PP1Q1PPP/2R1KB1R b Kkq - 5 11": [
     "B39",
-    "Sicilian Defense: Maróczy Bind, Breyer, 8.Qxg4 Nxd4 9.Qd1 Ne6 10.Rc1 Qa5 11.Qd2"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, Breyer, 8.Qxg4 Nxd4 9.Qd1 Ne6 10.Rc1 Qa5 11.Qd2"
   ],
   "r1bqk2r/pp1p1pbp/6p1/4p3/2PnP3/2N1B3/PP3PPP/R2QKB1R w KQkq - 0 10": [
     "B39",
-    "Sicilian Defense: Maróczy Bind, Breyer, 8.Qxg4 Nxd4 9.Qd1 e5"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, Breyer, 8.Qxg4 Nxd4 9.Qd1 e5"
   ],
   "r1bqk2r/pp1p1pbp/6p1/4p3/2PnP3/2NBB3/PP3PPP/R2QK2R b KQkq - 1 10": [
     "B39",
-    "Sicilian Defense: Maróczy Bind, Breyer, 8.Qxg4 Nxd4 9.Qd1 e5 10.Bd3"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, Breyer, 8.Qxg4 Nxd4 9.Qd1 e5 10.Bd3"
   ],
   "r1bqk2r/pp1p1pbp/6p1/1N2p3/2PnP3/4B3/PP3PPP/R2QKB1R b KQkq - 1 10": [
     "B39",
-    "Sicilian Defense: Maróczy Bind, Breyer, 8.Qxg4 Nxd4 9.Qd1 e5 10.Nb5"
+    "Sicilian Defense: Open Variation, Accelerated Dragon Variation, Maróczy Bind Formation, Breyer, 8.Qxg4 Nxd4 9.Qd1 e5 10.Nb5"
   ],
   "rnbqkbnr/pp1p1ppp/4p3/2p5/4P3/2N2N2/PPPP1PPP/R1BQKB1R b KQkq - 1 3": [
     "B40",
@@ -17005,19 +17005,19 @@
   ],
   "r1bqk2r/1p1p1ppp/p1n1pn2/8/1bPNP3/2N5/PPB2PPP/R1BQK2R b KQkq - 6 8": [
     "B41",
-    "Sicilian Defense: Kan Variation, Maróczy Bind, Bronstein Variation"
+    "Sicilian Defense: Kan Variation, Maróczy Bind Formation, Bronstein Variation"
   ],
   "r1bqk2r/1p1p1ppp/p1n1pn2/8/1bPNP3/2NB4/PP3PPP/R1BQK2R w KQkq - 5 8": [
     "B41",
-    "Sicilian Defense: Kan Variation, Maróczy Bind, Bronstein Variation"
+    "Sicilian Defense: Kan Variation, Maróczy Bind Formation, Bronstein Variation"
   ],
   "rnbqkbnr/1p1p1p1p/p3p1p1/8/2PNP3/8/PP3PPP/RNBQKB1R w KQkq - 0 6": [
     "B41",
-    "Sicilian Defense: Kan Variation, Maróczy Bind, Hedgehog Variation"
+    "Sicilian Defense: Kan Variation, Maróczy Bind Formation, Hedgehog Variation"
   ],
   "rnbqkbnr/1p1p1ppp/p3p3/8/2PNP3/8/PP3PPP/RNBQKB1R b KQkq - 0 5": [
     "B41",
-    "Sicilian Defense: Kan Variation, Maróczy Bind, Réti Variation"
+    "Sicilian Defense: Kan Variation, Maróczy Bind Formation, Réti Variation"
   ],
   "rnbqkbnr/1p1p1ppp/p3p3/8/3NP3/8/PPP1BPPP/RNBQK2R b KQkq - 1 5": [
     "B41",
