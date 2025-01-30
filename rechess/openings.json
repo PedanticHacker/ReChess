@@ -5059,10 +5059,6 @@
     "A40",
     "Basman Gambit Accepted, 2.Bxg5"
   ],
-  "rnbqk2r/pp2npbp/3p2p1/2pP4/4P3/2N2N2/PP3PPP/R1BQKB1R w KQkq - 3 8": [
-    "A40",
-    "Benoni Defense: Franco-Sicilian Hybrid"
-  ],
   "rnb1k1nr/pp1pppbp/6p1/q1p5/3P4/3BPN2/PPP2PPP/RNBQK2R w KQkq - 2 5": [
     "A40",
     "Colle System: Pterodactyl Variation"
@@ -5402,6 +5398,10 @@
   "rnbqkbnr/p1pppppp/8/1p6/3PP3/8/PPP2PPP/RNBQKBNR b KQkq - 0 2": [
     "A40",
     "Queen's Pawn Game: Polish Defense"
+  ],
+  "rnbqk2r/pp2npbp/3p2p1/2pP4/4P3/2N2N2/PP3PPP/R1BQKB1R w KQkq - 3 8": [
+    "A40",
+    "Queen's Pawn Opening: Benoni Defense, Franco-Sicilian Hybrid Variation"
   ],
   "rnbqkb1r/p2ppppp/2p2n2/1p6/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
     "A40",
@@ -5767,266 +5767,6 @@
     "A42",
     "Pterodactyl Defense: Central Bogolubovia Variation"
   ],
-  "rnbqkbnr/pp1ppppp/8/2P5/8/8/PPP1PPPP/RNBQKBNR b KQkq - 0 2": [
-    "A43",
-    "Benoni Defense: Benoni Gambit Accepted"
-  ],
-  "r1bqkbnr/pp1ppppp/n7/2P5/8/8/PPP1PPPP/RNBQKBNR w KQkq - 1 3": [
-    "A43",
-    "Benoni Defense: Benoni Gambit, Schlenker Defense"
-  ],
-  "rnbqkb1r/pp1ppppp/5n2/2pP4/8/8/PPP1PPPP/RNBQKBNR w KQkq - 1 3": [
-    "A43",
-    "Benoni Defense: Benoni-Indian Defense"
-  ],
-  "rnbqkb1r/pp1ppppp/5n2/2pP4/8/5N2/PPP1PPPP/RNBQKB1R b KQkq - 0 3": [
-    "A43",
-    "Benoni Defense: Benoni-Indian Defense, Kingside Move Order"
-  ],
-  "rnbqkbnr/pp1pp1pp/8/2pP1p2/4P3/8/PPP2PPP/RNBQKBNR b KQkq - 0 3": [
-    "A43",
-    "Benoni Defense: Benoni-Staunton Gambit"
-  ],
-  "rnbqkbnr/p2ppppp/1p6/2P5/8/8/PPP1PPPP/RNBQKBNR w KQkq - 0 3": [
-    "A43",
-    "Benoni Defense: Cormorant Gambit"
-  ],
-  "rnbqkbnr/pp1p1ppp/4p3/2pP4/4P3/8/PPP2PPP/RNBQKBNR b KQkq - 0 3": [
-    "A43",
-    "Benoni Defense: French Benoni"
-  ],
-  "rnbqkb1r/pp1ppppp/5n2/3P4/2p5/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 4": [
-    "A43",
-    "Benoni Defense: Hawk Variation"
-  ],
-  "rnbqkbnr/pp1ppppp/8/2p5/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense"
-  ],
-  "rnbqkbnr/pp1ppppp/8/2pP4/8/8/PPP1PPPP/RNBQKBNR b KQkq - 0 2": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense"
-  ],
-  "rnbqkbnr/pp2pppp/3p4/2pP4/8/8/PPP1PPPP/RNBQKBNR w KQkq - 0 3": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense"
-  ],
-  "rnbqkbnr/pp1ppppp/8/2p5/3P4/2P5/PP2PPPP/RNBQKBNR b KQkq - 0 2": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, 2.c3"
-  ],
-  "rnbqkb1r/pp1ppppp/5n2/2pP4/8/2N5/PPP1PPPP/R1BQKBNR b KQkq - 2 3": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, 2.d5 Nf6 3.Nc3"
-  ],
-  "rnbqkb1r/pp1ppppp/5n2/2pP4/8/5N2/PPP1PPPP/RNBQKB1R b KQkq - 2 3": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, 2.d5 Nf6 3.Nf3"
-  ],
-  "rnbqkb1r/pp1p1ppp/4pn2/2pP4/8/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 4": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, 2.d5 Nf6 3.Nf3 e6"
-  ],
-  "rnbqkb1r/pp1p1ppp/4pn2/2pP4/8/2N2N2/PPP1PPPP/R1BQKB1R b KQkq - 1 4": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, 2.d5 Nf6 3.Nf3 e6 4.Nc3"
-  ],
-  "rnbqkb1r/pp1ppp1p/5np1/2pP4/8/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 4": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, 2.d5 Nf6 3.Nf3 g6"
-  ],
-  "rnbqkb1r/pp1ppp1p/5np1/2pP4/8/2N2N2/PPP1PPPP/R1BQKB1R b KQkq - 1 4": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, 2.d5 Nf6 3.Nf3 g6 4.Nc3"
-  ],
-  "rnbqkbnr/p2ppppp/8/1ppP4/8/8/PPP1PPPP/RNBQKBNR w KQkq - 0 3": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, 2.d5 b5"
-  ],
-  "rnbqkbnr/pp1p1ppp/4p3/2pP4/8/8/PPP1PPPP/RNBQKBNR w KQkq - 0 3": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, 2.d5 e6"
-  ],
-  "rnbqk1nr/pp3pbp/3p2p1/2pP4/4P3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 2 7": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, 2.d5 e6 3.c4"
-  ],
-  "rnbqk1nr/pp3pbp/3p2p1/2pP4/4P3/2N5/PP3PPP/R1BQKBNR w KQkq - 1 7": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, 2.d5 e6 3.c4"
-  ],
-  "rnbqkbnr/pp1p1ppp/4p3/2pP4/2P5/8/PP2PPPP/RNBQKBNR b KQkq - 0 3": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, 2.d5 e6 3.c4"
-  ],
-  "rnbqkbnr/pp1p1ppp/8/2pP4/8/8/PP2PPPP/RNBQKBNR b KQkq - 0 4": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, 2.d5 e6 3.c4"
-  ],
-  "rnbqkbnr/pp3ppp/3p4/2pP4/4P3/8/PP3PPP/RNBQKBNR b KQkq - 0 5": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, 2.d5 e6 3.c4"
-  ],
-  "rnbqkbnr/pp3ppp/3p4/2pP4/8/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 5": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, 2.d5 e6 3.c4"
-  ],
-  "rnbqkbnr/pp3ppp/3p4/2pP4/8/8/PP2PPPP/RNBQKBNR w KQkq - 0 5": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, 2.d5 e6 3.c4"
-  ],
-  "rnbqkbnr/pp1ppppp/8/2p5/3P4/4P3/PPP2PPP/RNBQKBNR b KQkq - 0 2": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, 2.e3"
-  ],
-  "rnbqkbnr/pp1pp1pp/8/2pP1p2/8/2N5/PPP1PPPP/R1BQKBNR b KQkq - 1 3": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Clarendon Court Variation, 3.Nc3"
-  ],
-  "rnbqkbnr/pp1pp1pp/8/2pP1p2/2P5/8/PP2PPPP/RNBQKBNR b KQkq - 0 3": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Clarendon Court Variation, 3.c4"
-  ],
-  "rnbqkbnr/pp1pp1pp/8/2pP1p2/8/6P1/PPP1PP1P/RNBQKBNR b KQkq - 0 3": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Clarendon Court Variation, 3.g3"
-  ],
-  "rnbqkb1r/pp1ppppp/5n2/3P4/2p1P3/5N2/PPP2PPP/RNBQKB1R b KQkq - 0 4": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Hawk Variation, 4.e4"
-  ],
-  "rnbqkbnr/pp1pp1pp/8/2pP1p2/8/8/PPP1PPPP/RNBQKBNR w KQkq - 0 3": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Mujannah Formation"
-  ],
-  "rnbqkb1r/p2ppppp/5n2/1ppP2B1/8/5N2/PPP1PPPP/RN1QKB1R b KQkq - 1 4": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, New Benko Variation, 4.Bg5"
-  ],
-  "rnbqkb1r/p2ppppp/8/1ppP2B1/4n3/5N2/PPP1PPPP/RN1QKB1R w KQkq - 2 5": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, New Benko Variation, 4.Bg5 Ne4"
-  ],
-  "rnbqkb1r/p3pppp/3p1n2/1ppP2B1/8/5N2/PPP1PPPP/RN1QKB1R w KQkq - 0 5": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, New Benko Variation, 4.Bg5 d6"
-  ],
-  "rnbqkbnr/pp2pp1p/3p2p1/2pP4/8/2N5/PPP1PPPP/R1BQKBNR w KQkq - 0 4": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmid Variation"
-  ],
-  "rnbqkbnr/pp2pppp/3p4/2pP4/8/2N5/PPP1PPPP/R1BQKBNR b KQkq - 1 3": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 3.Nc3"
-  ],
-  "rnbqkb1r/pp2pppp/3p1n2/2pP4/8/2N5/PPP1PPPP/R1BQKBNR w KQkq - 2 4": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 3.Nc3 Nf6"
-  ],
-  "rnbqkbnr/pp2pppp/3p4/2pP4/8/5N2/PPP1PPPP/RNBQKB1R b KQkq - 1 3": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 3.Nf3"
-  ],
-  "rnbqkb1r/pp2pppp/3p1n2/2pP4/8/5N2/PPP1PPPP/RNBQKB1R w KQkq - 2 4": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 3.Nf3 Nf6"
-  ],
-  "rnbqkbnr/pp2pppp/3p4/2pP4/4P3/8/PPP2PPP/RNBQKBNR b KQkq - 0 3": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 3.e4"
-  ],
-  "rnbqk2r/pp2ppbp/3p1np1/2pP4/4P3/2N2N2/PPP2PPP/R1BQKB1R w KQkq - 2 6": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 3.e4 Nf6"
-  ],
-  "rnbqkb1r/pp2pp1p/3p1np1/2pP4/4P3/2N2N2/PPP2PPP/R1BQKB1R b KQkq - 1 5": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 3.e4 Nf6"
-  ],
-  "rnbqkb1r/pp2pp1p/3p1np1/2pP4/4P3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 5": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 3.e4 Nf6"
-  ],
-  "rnbqkb1r/pp2pppp/3p1n2/2pP4/4P3/2N5/PPP2PPP/R1BQKBNR b KQkq - 2 4": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 3.e4 Nf6"
-  ],
-  "rnbqkb1r/pp2pppp/3p1n2/2pP4/4P3/8/PPP2PPP/RNBQKBNR w KQkq - 1 4": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 3.e4 Nf6"
-  ],
-  "rnbqk1nr/pp2ppbp/3p2p1/2pP4/4P3/2N5/PPP2PPP/R1BQKBNR w KQkq - 2 5": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 3.e4 g6"
-  ],
-  "rnbqk1nr/pp2ppbp/3p2p1/2pP4/4P3/5N2/PPP1BPPP/RNBQK2R b KQkq - 3 5": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 3.e4 g6"
-  ],
-  "rnbqk1nr/pp2ppbp/3p2p1/2pP4/4P3/5N2/PPP2PPP/RNBQKB1R w KQkq - 2 5": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 3.e4 g6"
-  ],
-  "rnbqkbnr/pp2pp1p/3p2p1/2pP4/4P3/8/PPP2PPP/RNBQKBNR w KQkq - 0 4": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 3.e4 g6"
-  ],
-  "rnbqk2r/pp2ppbp/3p1np1/1BpP4/4P3/2N2N2/PPP2PPP/R1BQK2R b KQkq - 3 6": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 6.Bb5+"
-  ],
-  "rnbqk2r/pp2ppbp/3p1np1/2pP4/4P3/2N2N2/PPP1BPPP/R1BQK2R b KQkq - 3 6": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 6.Be2"
-  ],
-  "rnbq1rk1/pp2ppbp/3p1np1/2pP4/4P3/2N2N2/PPP1BPPP/R1BQK2R w KQ - 4 7": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 6.Be2 O-O"
-  ],
-  "rnbq1rk1/pp2ppbp/3p1np1/2pP4/4P3/2N2N2/PPP1BPPP/R1BQ1RK1 b - - 5 7": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 6.Be2 O-O 7.O-O"
-  ],
-  "r1bq1rk1/pp2ppbp/n2p1np1/2pP4/4P3/2N2N2/PPP1BPPP/R1BQ1RK1 w - - 6 8": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 6.Be2 O-O 7.O-O Na6"
-  ],
-  "r1bq1rk1/pp2ppbp/n2p1np1/2pP4/4P3/2N2N1P/PPP1BPP1/R1BQ1RK1 b - - 0 8": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 6.Be2 O-O 7.O-O Na6 8.h3"
-  ],
-  "rnbq1rk1/pp3pbp/3ppnp1/2pP4/4P3/2N2N2/PPP1BPPP/R1BQ1RK1 w - - 0 8": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 6.Be2 O-O 7.O-O e6"
-  ],
-  "rnbq1rk1/pp2ppbp/3p1np1/2pP4/4P3/2N2N1P/PPP2PP1/R1BQKB1R w KQ - 1 7": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 6.h3"
-  ],
-  "rnbqk2r/pp2ppbp/3p1np1/2pP4/4P3/2N2N1P/PPP2PP1/R1BQKB1R b KQkq - 0 6": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Schmidt Variation, 6.h3"
-  ],
-  "r1bqkbnr/pp1ppppp/n7/2pP4/8/8/PPP1PPPP/RNBQKBNR w KQkq - 1 3": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Snail Variation"
-  ],
-  "rnb1kb1r/pp1ppppp/5n2/q1pP4/8/2N5/PPP1PPPP/R1BQKBNR w KQkq - 3 4": [
-    "A43",
-    "Benoni Defense: Old Benoni Defense, Woozle Variation"
-  ],
-  "rnbqkbnr/pp1ppppp/8/2p5/1P1P4/8/P1P1PPPP/RNBQKBNR b KQkq - 0 2": [
-    "A43",
-    "Benoni Defense: Zilbermints-Benoni Gambit"
-  ],
-  "rnbqkbnr/pp1ppppp/8/8/1P1p4/5N2/P1P1PPPP/RNBQKB1R b KQkq - 0 3": [
-    "A43",
-    "Benoni Defense: Zilbermints-Benoni Gambit"
-  ],
-  "rnbqkbnr/pp1p1ppp/8/4p3/1P1p4/5N2/P1P1PPPP/RNBQKB1R w KQkq - 0 4": [
-    "A43",
-    "Benoni Defense: Zilbermints-Benoni Gambit, Tamarkin Countergambit"
-  ],
   "rnbqkb1r/p2ppppp/5n2/1ppP4/8/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 4": [
     "A43",
     "King's Indian Defense: Pseudo-Benko Variation"
@@ -6035,109 +5775,369 @@
     "A43",
     "Queen's Pawn Game: Liedmann Gambit"
   ],
+  "rnbqkbnr/pp1ppppp/8/2P5/8/8/PPP1PPPP/RNBQKBNR b KQkq - 0 2": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Benoni Gambit Accepted"
+  ],
+  "r1bqkbnr/pp1ppppp/n7/2P5/8/8/PPP1PPPP/RNBQKBNR w KQkq - 1 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Benoni Gambit, Schlenker Defense"
+  ],
+  "rnbqkb1r/pp1ppppp/5n2/2pP4/8/8/PPP1PPPP/RNBQKBNR w KQkq - 1 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Benoni-Indian Defense"
+  ],
+  "rnbqkb1r/pp1ppppp/5n2/2pP4/8/5N2/PPP1PPPP/RNBQKB1R b KQkq - 0 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Benoni-Indian Defense, Kingside Move Order"
+  ],
+  "rnbqkbnr/pp1pp1pp/8/2pP1p2/4P3/8/PPP2PPP/RNBQKBNR b KQkq - 0 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Benoni-Staunton Gambit"
+  ],
+  "rnbqkbnr/p2ppppp/1p6/2P5/8/8/PPP1PPPP/RNBQKBNR w KQkq - 0 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Cormorant Gambit"
+  ],
+  "rnbqkbnr/pp1p1ppp/4p3/2pP4/4P3/8/PPP2PPP/RNBQKBNR b KQkq - 0 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, French Benoni"
+  ],
+  "rnbqkb1r/pp1ppppp/5n2/3P4/2p5/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 4": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Hawk Variation"
+  ],
+  "rnbqkbnr/pp1ppppp/8/2p5/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense"
+  ],
+  "rnbqkbnr/pp1ppppp/8/2pP4/8/8/PPP1PPPP/RNBQKBNR b KQkq - 0 2": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense"
+  ],
+  "rnbqkbnr/pp2pppp/3p4/2pP4/8/8/PPP1PPPP/RNBQKBNR w KQkq - 0 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense"
+  ],
+  "rnbqkbnr/pp1ppppp/8/2p5/3P4/2P5/PP2PPPP/RNBQKBNR b KQkq - 0 2": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, 2.c3"
+  ],
+  "rnbqkb1r/pp1ppppp/5n2/2pP4/8/2N5/PPP1PPPP/R1BQKBNR b KQkq - 2 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, 2.d5 Nf6 3.Nc3"
+  ],
+  "rnbqkb1r/pp1ppppp/5n2/2pP4/8/5N2/PPP1PPPP/RNBQKB1R b KQkq - 2 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, 2.d5 Nf6 3.Nf3"
+  ],
+  "rnbqkb1r/pp1p1ppp/4pn2/2pP4/8/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 4": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, 2.d5 Nf6 3.Nf3 e6"
+  ],
+  "rnbqkb1r/pp1p1ppp/4pn2/2pP4/8/2N2N2/PPP1PPPP/R1BQKB1R b KQkq - 1 4": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, 2.d5 Nf6 3.Nf3 e6 4.Nc3"
+  ],
+  "rnbqkb1r/pp1ppp1p/5np1/2pP4/8/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 4": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, 2.d5 Nf6 3.Nf3 g6"
+  ],
+  "rnbqkb1r/pp1ppp1p/5np1/2pP4/8/2N2N2/PPP1PPPP/R1BQKB1R b KQkq - 1 4": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, 2.d5 Nf6 3.Nf3 g6 4.Nc3"
+  ],
+  "rnbqkbnr/p2ppppp/8/1ppP4/8/8/PPP1PPPP/RNBQKBNR w KQkq - 0 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, 2.d5 b5"
+  ],
+  "rnbqkbnr/pp1p1ppp/4p3/2pP4/8/8/PPP1PPPP/RNBQKBNR w KQkq - 0 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, 2.d5 e6"
+  ],
+  "rnbqk1nr/pp3pbp/3p2p1/2pP4/4P3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 2 7": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, 2.d5 e6 3.c4"
+  ],
+  "rnbqk1nr/pp3pbp/3p2p1/2pP4/4P3/2N5/PP3PPP/R1BQKBNR w KQkq - 1 7": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, 2.d5 e6 3.c4"
+  ],
+  "rnbqkbnr/pp1p1ppp/4p3/2pP4/2P5/8/PP2PPPP/RNBQKBNR b KQkq - 0 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, 2.d5 e6 3.c4"
+  ],
+  "rnbqkbnr/pp1p1ppp/8/2pP4/8/8/PP2PPPP/RNBQKBNR b KQkq - 0 4": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, 2.d5 e6 3.c4"
+  ],
+  "rnbqkbnr/pp3ppp/3p4/2pP4/4P3/8/PP3PPP/RNBQKBNR b KQkq - 0 5": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, 2.d5 e6 3.c4"
+  ],
+  "rnbqkbnr/pp3ppp/3p4/2pP4/8/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 5": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, 2.d5 e6 3.c4"
+  ],
+  "rnbqkbnr/pp3ppp/3p4/2pP4/8/8/PP2PPPP/RNBQKBNR w KQkq - 0 5": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, 2.d5 e6 3.c4"
+  ],
+  "rnbqkbnr/pp1ppppp/8/2p5/3P4/4P3/PPP2PPP/RNBQKBNR b KQkq - 0 2": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, 2.e3"
+  ],
+  "rnbqkbnr/pp1pp1pp/8/2pP1p2/8/2N5/PPP1PPPP/R1BQKBNR b KQkq - 1 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Clarendon Court Variation, 3.Nc3"
+  ],
+  "rnbqkbnr/pp1pp1pp/8/2pP1p2/2P5/8/PP2PPPP/RNBQKBNR b KQkq - 0 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Clarendon Court Variation, 3.c4"
+  ],
+  "rnbqkbnr/pp1pp1pp/8/2pP1p2/8/6P1/PPP1PP1P/RNBQKBNR b KQkq - 0 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Clarendon Court Variation, 3.g3"
+  ],
+  "rnbqkb1r/pp1ppppp/5n2/3P4/2p1P3/5N2/PPP2PPP/RNBQKB1R b KQkq - 0 4": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Hawk Variation, 4.e4"
+  ],
+  "rnbqkbnr/pp1pp1pp/8/2pP1p2/8/8/PPP1PPPP/RNBQKBNR w KQkq - 0 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Mujannah Formation"
+  ],
+  "rnbqkb1r/p2ppppp/5n2/1ppP2B1/8/5N2/PPP1PPPP/RN1QKB1R b KQkq - 1 4": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, New Benko Variation, 4.Bg5"
+  ],
+  "rnbqkb1r/p2ppppp/8/1ppP2B1/4n3/5N2/PPP1PPPP/RN1QKB1R w KQkq - 2 5": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, New Benko Variation, 4.Bg5 Ne4"
+  ],
+  "rnbqkb1r/p3pppp/3p1n2/1ppP2B1/8/5N2/PPP1PPPP/RN1QKB1R w KQkq - 0 5": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, New Benko Variation, 4.Bg5 d6"
+  ],
+  "rnbqkbnr/pp2pp1p/3p2p1/2pP4/8/2N5/PPP1PPPP/R1BQKBNR w KQkq - 0 4": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmid Variation"
+  ],
+  "rnbqkbnr/pp2pppp/3p4/2pP4/8/2N5/PPP1PPPP/R1BQKBNR b KQkq - 1 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 3.Nc3"
+  ],
+  "rnbqkb1r/pp2pppp/3p1n2/2pP4/8/2N5/PPP1PPPP/R1BQKBNR w KQkq - 2 4": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 3.Nc3 Nf6"
+  ],
+  "rnbqkbnr/pp2pppp/3p4/2pP4/8/5N2/PPP1PPPP/RNBQKB1R b KQkq - 1 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 3.Nf3"
+  ],
+  "rnbqkb1r/pp2pppp/3p1n2/2pP4/8/5N2/PPP1PPPP/RNBQKB1R w KQkq - 2 4": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 3.Nf3 Nf6"
+  ],
+  "rnbqkbnr/pp2pppp/3p4/2pP4/4P3/8/PPP2PPP/RNBQKBNR b KQkq - 0 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 3.e4"
+  ],
+  "rnbqk2r/pp2ppbp/3p1np1/2pP4/4P3/2N2N2/PPP2PPP/R1BQKB1R w KQkq - 2 6": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 3.e4 Nf6"
+  ],
+  "rnbqkb1r/pp2pp1p/3p1np1/2pP4/4P3/2N2N2/PPP2PPP/R1BQKB1R b KQkq - 1 5": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 3.e4 Nf6"
+  ],
+  "rnbqkb1r/pp2pp1p/3p1np1/2pP4/4P3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 5": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 3.e4 Nf6"
+  ],
+  "rnbqkb1r/pp2pppp/3p1n2/2pP4/4P3/2N5/PPP2PPP/R1BQKBNR b KQkq - 2 4": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 3.e4 Nf6"
+  ],
+  "rnbqkb1r/pp2pppp/3p1n2/2pP4/4P3/8/PPP2PPP/RNBQKBNR w KQkq - 1 4": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 3.e4 Nf6"
+  ],
+  "rnbqk1nr/pp2ppbp/3p2p1/2pP4/4P3/2N5/PPP2PPP/R1BQKBNR w KQkq - 2 5": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 3.e4 g6"
+  ],
+  "rnbqk1nr/pp2ppbp/3p2p1/2pP4/4P3/5N2/PPP1BPPP/RNBQK2R b KQkq - 3 5": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 3.e4 g6"
+  ],
+  "rnbqk1nr/pp2ppbp/3p2p1/2pP4/4P3/5N2/PPP2PPP/RNBQKB1R w KQkq - 2 5": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 3.e4 g6"
+  ],
+  "rnbqkbnr/pp2pp1p/3p2p1/2pP4/4P3/8/PPP2PPP/RNBQKBNR w KQkq - 0 4": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 3.e4 g6"
+  ],
+  "rnbqk2r/pp2ppbp/3p1np1/1BpP4/4P3/2N2N2/PPP2PPP/R1BQK2R b KQkq - 3 6": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 6.Bb5+"
+  ],
+  "rnbqk2r/pp2ppbp/3p1np1/2pP4/4P3/2N2N2/PPP1BPPP/R1BQK2R b KQkq - 3 6": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 6.Be2"
+  ],
+  "rnbq1rk1/pp2ppbp/3p1np1/2pP4/4P3/2N2N2/PPP1BPPP/R1BQK2R w KQ - 4 7": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 6.Be2 O-O"
+  ],
+  "rnbq1rk1/pp2ppbp/3p1np1/2pP4/4P3/2N2N2/PPP1BPPP/R1BQ1RK1 b - - 5 7": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 6.Be2 O-O 7.O-O"
+  ],
+  "r1bq1rk1/pp2ppbp/n2p1np1/2pP4/4P3/2N2N2/PPP1BPPP/R1BQ1RK1 w - - 6 8": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 6.Be2 O-O 7.O-O Na6"
+  ],
+  "r1bq1rk1/pp2ppbp/n2p1np1/2pP4/4P3/2N2N1P/PPP1BPP1/R1BQ1RK1 b - - 0 8": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 6.Be2 O-O 7.O-O Na6 8.h3"
+  ],
+  "rnbq1rk1/pp3pbp/3ppnp1/2pP4/4P3/2N2N2/PPP1BPPP/R1BQ1RK1 w - - 0 8": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 6.Be2 O-O 7.O-O e6"
+  ],
+  "rnbq1rk1/pp2ppbp/3p1np1/2pP4/4P3/2N2N1P/PPP2PP1/R1BQKB1R w KQ - 1 7": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 6.h3"
+  ],
+  "rnbqk2r/pp2ppbp/3p1np1/2pP4/4P3/2N2N1P/PPP2PP1/R1BQKB1R b KQkq - 0 6": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Schmidt Variation, 6.h3"
+  ],
+  "r1bqkbnr/pp1ppppp/n7/2pP4/8/8/PPP1PPPP/RNBQKBNR w KQkq - 1 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Snail Variation"
+  ],
+  "rnb1kb1r/pp1ppppp/5n2/q1pP4/8/2N5/PPP1PPPP/R1BQKBNR w KQkq - 3 4": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Woozle Variation"
+  ],
+  "rnbqkbnr/pp1ppppp/8/2p5/1P1P4/8/P1P1PPPP/RNBQKBNR b KQkq - 0 2": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Zilbermints-Benoni Gambit"
+  ],
+  "rnbqkbnr/pp1ppppp/8/8/1P1p4/5N2/P1P1PPPP/RNBQKB1R b KQkq - 0 3": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Zilbermints-Benoni Gambit"
+  ],
+  "rnbqkbnr/pp1p1ppp/8/4p3/1P1p4/5N2/P1P1PPPP/RNBQKB1R w KQkq - 0 4": [
+    "A43",
+    "Queen's Pawn Opening: Benoni Defense, Zilbermints-Benoni Gambit, Tamarkin Countergambit"
+  ],
   "rnbqkbnr/pp1p1ppp/8/2pPp3/8/8/PPP1PPPP/RNBQKBNR w KQkq e6 0 3": [
     "A44",
-    "Benoni Defense: Old Benoni Defense"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense"
   ],
   "rnbqkbnr/pp1p1ppp/8/2pPp3/2P5/8/PP2PPPP/RNBQKBNR b KQkq - 0 3": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.c4"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.c4"
   ],
   "rnbqkbnr/pp3ppp/3p4/2pPp3/2P5/8/PP2PPPP/RNBQKBNR w KQkq - 0 4": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.c4 d6"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.c4 d6"
   ],
   "rnbqkbnr/pp3ppp/3p4/2pPp3/2P1P3/8/PP3PPP/RNBQKBNR b KQkq - 0 4": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.c4 d6 4.e4"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.c4 d6 4.e4"
   ],
   "rnbqk1nr/pp2bppp/3p4/2pPp3/2P1P3/8/PP3PPP/RNBQKBNR w KQkq - 1 5": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.c4 d6 4.e4 Be7"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.c4 d6 4.e4 Be7"
   ],
   "rnbqk1nr/pp2bppp/3p4/2pPp3/2P1P3/2N5/PP3PPP/R1BQKBNR b KQkq - 2 5": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.c4 d6 4.e4 Be7 5.Nc3"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.c4 d6 4.e4 Be7 5.Nc3"
   ],
   "rnbqkbnr/pp3p1p/3p2p1/2pPp3/2P1P3/8/PP3PPP/RNBQKBNR w KQkq - 0 5": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.c4 d6 4.e4 g6"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.c4 d6 4.e4 g6"
   ],
   "rnbqkbnr/pp3p1p/3p2p1/2pPp3/2P1P3/2N5/PP3PPP/R1BQKBNR b KQkq - 1 5": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.c4 d6 4.e4 g6 5.Nc3"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.c4 d6 4.e4 g6 5.Nc3"
   ],
   "rnbqk1nr/pp3pbp/3p2p1/2pPp3/2P1P3/2N5/PP3PPP/R1BQKBNR w KQkq - 2 6": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.c4 d6 4.e4 g6 5.Nc3 Bg7"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.c4 d6 4.e4 g6 5.Nc3 Bg7"
   ],
   "rnbqk1nr/pp3pbp/3p2p1/2pPp3/2P1P3/2NB4/PP3PPP/R1BQK1NR b KQkq - 3 6": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.c4 d6 4.e4 g6 5.Nc3 Bg7 6.Bd3"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.c4 d6 4.e4 g6 5.Nc3 Bg7 6.Bd3"
   ],
   "rnbqk1nr/pp3pbp/3p2p1/2pPp3/2P1P3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 3 6": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.c4 d6 4.e4 g6 5.Nc3 Bg7 6.Nf3"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.c4 d6 4.e4 g6 5.Nc3 Bg7 6.Nf3"
   ],
   "rnbqkbnr/pp1p1ppp/4P3/2p5/8/8/PPP1PPPP/RNBQKBNR b KQkq - 0 3": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.dxe6"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.dxe6"
   ],
   "rnbqkbnr/pp1p1ppp/8/2pPp3/4P3/8/PPP2PPP/RNBQKBNR b KQkq - 0 3": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.e4"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.e4"
   ],
   "rnbqkbnr/pp3ppp/3p4/1BpPp3/4P3/8/PPP2PPP/RNBQK1NR b KQkq - 1 4": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.e4 d6 4.Bb5+"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.e4 d6 4.Bb5+"
   ],
   "rnbqkbnr/pp3ppp/3p4/2pPp3/4P3/3B4/PPP2PPP/RNBQK1NR b KQkq - 1 4": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.e4 d6 4.Bd3"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.e4 d6 4.Bd3"
   ],
   "rnbqkbnr/pp3ppp/3p4/2pPp3/4P3/2N5/PPP2PPP/R1BQKBNR b KQkq - 1 4": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.e4 d6 4.Nc3"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.e4 d6 4.Nc3"
   ],
   "rnbqk1nr/pp2bppp/3p4/2pPp3/4P3/2N5/PPP2PPP/R1BQKBNR w KQkq - 2 5": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.e4 d6 4.Nc3 Be7"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.e4 d6 4.Nc3 Be7"
   ],
   "rnbqk1nr/pp2bppp/3p4/1BpPp3/4P3/2N5/PPP2PPP/R1BQK1NR b KQkq - 3 5": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.e4 d6 4.Nc3 Be7 5.Bb5+"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.e4 d6 4.Nc3 Be7 5.Bb5+"
   ],
   "rnbqk1nr/pp2bppp/3p4/2pPp3/4P3/2N2N2/PPP2PPP/R1BQKB1R b KQkq - 3 5": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.e4 d6 4.Nc3 Be7 5.Nf3"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.e4 d6 4.Nc3 Be7 5.Nf3"
   ],
   "rn1qk1nr/pp2bppp/3p4/2pPp3/4P1b1/2N2N2/PPP2PPP/R1BQKB1R w KQkq - 4 6": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.e4 d6 4.Nc3 Be7 5.Nf3 Bg4"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.e4 d6 4.Nc3 Be7 5.Nf3 Bg4"
   ],
   "rnbqkb1r/pp3ppp/3p1n2/2pPp3/4P3/2N5/PPP2PPP/R1BQKBNR w KQkq - 2 5": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.e4 d6 4.Nc3 Nf6"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.e4 d6 4.Nc3 Nf6"
   ],
   "rnbqkbnr/1p3ppp/p2p4/2pPp3/4P3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 5": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.e4 d6 4.Nc3 a6"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.e4 d6 4.Nc3 a6"
   ],
   "rnbqk1nr/1p2bppp/p2p4/2pPp3/P3P3/2N5/1PP2PPP/R1BQKBNR w KQkq - 1 6": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.e4 d6 4.Nc3 a6 5.a4 Be7"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.e4 d6 4.Nc3 a6 5.a4 Be7"
   ],
   "rnbqkbnr/pp3p1p/3p2p1/2pPp3/4P3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 5": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.e4 d6 4.Nc3 g6"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.e4 d6 4.Nc3 g6"
   ],
   "rnbqkbnr/pp3ppp/3p4/2pPp3/4P3/5N2/PPP2PPP/RNBQKB1R b KQkq - 1 4": [
     "A44",
-    "Benoni Defense: Old Benoni Defense, Czech Variation, 3.e4 d6 4.Nf3"
+    "Queen's Pawn Opening: Benoni Defense, Old Benoni Defense, Czech Variation, 3.e4 d6 4.Nf3"
   ],
   "rnbqkbnr/pp3ppp/3p4/2pPp3/4P3/8/PPP2PPP/RNBQKBNR w KQkq - 0 4": [
     "A44",
-    "Benoni Defense: Semi-Benoni Defense"
+    "Queen's Pawn Opening: Benoni Defense, Semi-Benoni Defense"
   ],
   "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/2NQ4/PPP1PPPP/R1B1KBNR b KQkq - 1 3": [
     "A45",
@@ -7759,1813 +7759,1813 @@
     "A55",
     "Old Indian Defense: Normal Variation"
   ],
+  "r1bq1rk1/pp2ppbp/2n2np1/3p4/2PP4/2N2N2/PP2BPPP/R1BQ1RK1 w - - 2 9": [
+    "A56",
+    "Grünfeld Defense: Three Knights Variation, Burille Variation, Reversed Tarrasch Defense"
+  ],
   "rnbqkb1r/pp1ppppp/5n2/2p5/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3": [
     "A56",
-    "Benoni Defense"
+    "Queen's Pawn Opening: Benoni Defense"
   ],
   "rnbqkb1r/pp1ppppp/5n2/2p5/2PP4/4P3/PP3PPP/RNBQKBNR b KQkq - 0 3": [
     "A56",
-    "Benoni Defense: 2...c5 3.e3"
+    "Queen's Pawn Opening: Benoni Defense, 2...c5 3.e3"
   ],
   "rnbqkb1r/pp1p1ppp/4pn2/2p5/2PP4/4P3/PP3PPP/RNBQKBNR w KQkq - 0 4": [
     "A56",
-    "Benoni Defense: 2...c5 3.e3 e6"
+    "Queen's Pawn Opening: Benoni Defense, 2...c5 3.e3 e6"
   ],
   "rnbqkb1r/pp1ppp1p/5np1/2p5/2PP4/4P3/PP3PPP/RNBQKBNR w KQkq - 0 4": [
     "A56",
-    "Benoni Defense: 2...c5 3.e3 g6"
+    "Queen's Pawn Opening: Benoni Defense, 2...c5 3.e3 g6"
   ],
   "rnbqkb1r/pp1ppp1p/5np1/2p5/2PP4/2N1P3/PP3PPP/R1BQKBNR b KQkq - 1 4": [
     "A56",
-    "Benoni Defense: 2...c5 3.e3 g6 4.Nc3"
+    "Queen's Pawn Opening: Benoni Defense, 2...c5 3.e3 g6 4.Nc3"
   ],
   "rnbqkb1r/pp1ppppp/5n2/2pP4/2P5/8/PP2PPPP/RNBQKBNR b KQkq - 0 3": [
     "A56",
-    "Benoni Defense: 3.d5"
+    "Queen's Pawn Opening: Benoni Defense, 3.d5"
   ],
   "rnbqkb1r/1p1ppppp/p4n2/2pP4/2P5/8/PP2PPPP/RNBQKBNR w KQkq - 0 4": [
     "A56",
-    "Benoni Defense: 3.d5 a6"
+    "Queen's Pawn Opening: Benoni Defense, 3.d5 a6"
   ],
   "rnbqkb1r/pp2pp1p/3p1np1/2pP4/2P5/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 5": [
     "A56",
-    "Benoni Defense: 3.d5 d6 4.Nc3 g6"
+    "Queen's Pawn Opening: Benoni Defense, 3.d5 d6 4.Nc3 g6"
   ],
   "rnbqk2r/pp2ppbp/3p1np1/2pP4/2P1P3/2N5/PP3PPP/R1BQKBNR w KQkq - 1 6": [
     "A56",
-    "Benoni Defense: 3.d5 d6 4.Nc3 g6 5.e4 Bg7"
+    "Queen's Pawn Opening: Benoni Defense, 3.d5 d6 4.Nc3 g6 5.e4 Bg7"
   ],
   "rnbqk2r/pp2ppbp/3p1np1/2pP4/2P1P3/2NB4/PP3PPP/R1BQK1NR b KQkq - 2 6": [
     "A56",
-    "Benoni Defense: 3.d5 d6 4.Nc3 g6 5.e4 Bg7 6.Bd3"
+    "Queen's Pawn Opening: Benoni Defense, 3.d5 d6 4.Nc3 g6 5.e4 Bg7 6.Bd3"
   ],
   "rnbqk2r/pp2ppbp/3p1np1/2pP4/2P1P3/2N2P2/PP4PP/R1BQKBNR b KQkq - 0 6": [
     "A56",
-    "Benoni Defense: 3.d5 d6 4.Nc3 g6 5.e4 Bg7 6.f3"
+    "Queen's Pawn Opening: Benoni Defense, 3.d5 d6 4.Nc3 g6 5.e4 Bg7 6.f3"
   ],
   "rnbqkb1r/pp1ppp1p/5np1/2pP4/2P5/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 4": [
     "A56",
-    "Benoni Defense: 3.d5 g6"
+    "Queen's Pawn Opening: Benoni Defense, 3.d5 g6"
   ],
   "rnbqkb1r/pp1ppp1p/5np1/2pP4/2P5/8/PP2PPPP/RNBQKBNR w KQkq - 0 4": [
     "A56",
-    "Benoni Defense: 3.d5 g6"
+    "Queen's Pawn Opening: Benoni Defense, 3.d5 g6"
   ],
   "rnbqkb1r/pp1ppppp/5n2/2P5/2P5/8/PP2PPPP/RNBQKBNR b KQkq - 0 3": [
     "A56",
-    "Benoni Defense: 3.dxc5"
+    "Queen's Pawn Opening: Benoni Defense, 3.dxc5"
   ],
   "rnbqkb1r/p3pp1p/3p1np1/1ppP4/2P1P3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 6": [
     "A56",
-    "Benoni Defense: Bronstein Gambit"
+    "Queen's Pawn Opening: Benoni Defense, Bronstein Gambit"
   ],
   "rnbqkb1r/pp1p1ppp/5n2/2pPp3/2P5/8/PP2PPPP/RNBQKBNR w KQkq e6 0 4": [
     "A56",
-    "Benoni Defense: Czech Benoni Defense"
+    "Queen's Pawn Opening: Benoni Defense, Czech Benoni Defense"
   ],
   "rnbqkb1r/pp3ppp/3p1n2/2pPp3/2P5/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 5": [
     "A56",
-    "Benoni Defense: Czech Variation, 4.Nc3 d6"
+    "Queen's Pawn Opening: Benoni Defense, Czech Variation, 4.Nc3 d6"
   ],
   "rnbqk2r/pp2bppp/3p1n2/2pPp3/2P1P3/2N5/PP3PPP/R1BQKBNR w KQkq - 1 6": [
     "A56",
-    "Benoni Defense: Czech Variation, 5.e4 Be7"
+    "Queen's Pawn Opening: Benoni Defense, Czech Variation, 5.e4 Be7"
   ],
   "rnbqk2r/pp2bppp/3p1n2/2pPp3/2P1P3/2NB4/PP3PPP/R1BQK1NR b KQkq - 2 6": [
     "A56",
-    "Benoni Defense: Czech Variation, 5.e4 Be7 6.Bd3"
+    "Queen's Pawn Opening: Benoni Defense, Czech Variation, 5.e4 Be7 6.Bd3"
   ],
   "rnbqk2r/pp2bppp/3p1n2/2pPp3/2P1P3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 2 6": [
     "A56",
-    "Benoni Defense: Czech Variation, 5.e4 Be7 6.Nf3"
+    "Queen's Pawn Opening: Benoni Defense, Czech Variation, 5.e4 Be7 6.Nf3"
   ],
   "rnbq1rk1/pp2bppp/3p1n2/2pPp3/2P1P3/2N2N2/PP3PPP/R1BQKB1R w KQ - 3 7": [
     "A56",
-    "Benoni Defense: Czech Variation, 5.e4 Be7 6.Nf3 O-O"
+    "Queen's Pawn Opening: Benoni Defense, Czech Variation, 5.e4 Be7 6.Nf3 O-O"
   ],
   "rnbq1rk1/pp2bppp/3p1n2/2pPp3/2P1P3/2N2N2/PP2BPPP/R1BQK2R b KQ - 4 7": [
     "A56",
-    "Benoni Defense: Czech Variation, 5.e4 Be7 6.Nf3 O-O 7.Be2"
+    "Queen's Pawn Opening: Benoni Defense, Czech Variation, 5.e4 Be7 6.Nf3 O-O 7.Be2"
   ],
   "rnbq1rk1/pp2bppp/3p1n2/2pPp3/2P1P3/2N2N1P/PP3PP1/R1BQKB1R b KQ - 0 7": [
     "A56",
-    "Benoni Defense: Czech Variation, 5.e4 Be7 6.Nf3 O-O 7.h3"
+    "Queen's Pawn Opening: Benoni Defense, Czech Variation, 5.e4 Be7 6.Nf3 O-O 7.h3"
   ],
   "rnbqk2r/pp2bppp/3p1n2/2pPp3/2P1P3/2N3P1/PP3P1P/R1BQKBNR b KQkq - 0 6": [
     "A56",
-    "Benoni Defense: Czech Variation, 5.e4 Be7 6.g3"
+    "Queen's Pawn Opening: Benoni Defense, Czech Variation, 5.e4 Be7 6.g3"
   ],
   "rnbq1rk1/pp2bppp/3p1n2/2pPp3/2P1P3/2N3P1/PP3P1P/R1BQKBNR w KQ - 1 7": [
     "A56",
-    "Benoni Defense: Czech Variation, 5.e4 Be7 6.g3 O-O"
+    "Queen's Pawn Opening: Benoni Defense, Czech Variation, 5.e4 Be7 6.g3 O-O"
   ],
   "rnbq1rk1/pp2bppp/3p1n2/2pPp3/2P1P3/2N3P1/PP3PBP/R1BQK1NR b KQ - 2 7": [
     "A56",
-    "Benoni Defense: Czech Variation, 5.e4 Be7 6.g3 O-O 7.Bg2"
+    "Queen's Pawn Opening: Benoni Defense, Czech Variation, 5.e4 Be7 6.g3 O-O 7.Bg2"
   ],
   "rnbqnrk1/pp2bppp/3p4/2pPp3/2P1P3/2N3P1/PP3PBP/R1BQK1NR w KQ - 3 8": [
     "A56",
-    "Benoni Defense: Czech Variation, 5.e4 Be7 6.g3 O-O 7.Bg2 Ne8"
+    "Queen's Pawn Opening: Benoni Defense, Czech Variation, 5.e4 Be7 6.g3 O-O 7.Bg2 Ne8"
   ],
   "rnbqkb1r/pp2pppp/3p1n2/2pP4/2P5/8/PP2PPPP/RNBQKBNR w KQkq - 0 4": [
     "A56",
-    "Benoni Defense: Hromádka System"
+    "Queen's Pawn Opening: Benoni Defense, Hromádka System"
   ],
   "rnbqkb1r/pp3p1p/3p1np1/2pPp3/2P1P3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 6": [
     "A56",
-    "Benoni Defense: King's Indian System"
-  ],
-  "rnbqkb1r/pp1p1ppp/4pn2/2P5/2P5/8/PP2PPPP/RNBQKBNR w KQkq - 0 4": [
-    "A56",
-    "Benoni Defense: Weenink Variation"
-  ],
-  "r1bq1rk1/pp2ppbp/2n2np1/3p4/2PP4/2N2N2/PP2BPPP/R1BQ1RK1 w - - 2 9": [
-    "A56",
-    "Grünfeld Defense: Three Knights Variation, Burille Variation, Reversed Tarrasch"
+    "Queen's Pawn Opening: Benoni Defense, King's Indian System"
   ],
   "rnbqkb1r/pp1ppppp/8/2pP4/2P1n3/8/PP2PPPP/RNBQKBNR w KQkq - 1 4": [
     "A56",
-    "Vulture Defense"
+    "Queen's Pawn Opening: Benoni Defense, Vulture Defense"
+  ],
+  "rnbqkb1r/pp1p1ppp/4pn2/2P5/2P5/8/PP2PPPP/RNBQKBNR w KQkq - 0 4": [
+    "A56",
+    "Queen's Pawn Opening: Benoni Defense, Weenink Variation"
   ],
   "rnbqkb1r/p2ppppp/5n2/1ppP4/2P5/8/PP2PPPP/RNBQKBNR w KQkq - 0 4": [
     "A57",
-    "Benko Gambit"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit"
   ],
   "rnbqkb1r/3ppppp/p4n2/1PpP4/8/8/PP2PPPP/RNBQKBNR w KQkq - 0 5": [
     "A57",
-    "Benko Gambit Accepted"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted"
   ],
   "rnbqkb1r/3ppppp/p4n2/1PpP4/8/5P2/PP2P1PP/RNBQKBNR b KQkq - 0 5": [
     "A57",
-    "Benko Gambit Accepted: Dlugy Variation"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, Dlugy Variation"
   ],
   "rnbqkb1r/3ppppp/p4n2/1PpP4/8/4P3/PP3PPP/RNBQKBNR b KQkq - 0 5": [
     "A57",
-    "Benko Gambit Accepted: Modern Variation"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, Modern Variation"
   ],
   "rnbqkb1r/3ppppp/pP3n2/2pP4/8/8/PP2PPPP/RNBQKBNR b KQkq - 0 5": [
     "A57",
-    "Benko Gambit Accepted: Pawn Return Variation"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, Pawn Return Variation"
   ],
   "rnbqkb1r/p2ppppp/5n2/1ppP2B1/2P5/8/PP2PPPP/RN1QKBNR b KQkq - 1 4": [
     "A57",
-    "Benko Gambit Declined: Bishop Attack"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Declined, Bishop Attack"
   ],
   "rnbqkb1r/p2ppppp/5n2/1ppP4/2P1P3/8/PP3PPP/RNBQKBNR b KQkq - 0 4": [
     "A57",
-    "Benko Gambit Declined: Hjørring Countergambit"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Declined, Hjørring Countergambit"
   ],
   "rnbqkb1r/p2ppppp/5n2/1ppP4/2P5/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 4": [
     "A57",
-    "Benko Gambit Declined: Main Line"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Declined, Main Line"
   ],
   "rnbqkb1r/p2ppppp/5n2/1ppP4/2P5/5P2/PP2P1PP/RNBQKBNR b KQkq - 0 4": [
     "A57",
-    "Benko Gambit Declined: Pseudo-Sämisch"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Declined, Pseudo-Sämisch Variation"
   ],
   "rnbqkb1r/p2ppppp/5n2/1ppP4/2P5/8/PP1NPPPP/R1BQKBNR b KQkq - 1 4": [
     "A57",
-    "Benko Gambit Declined: Quiet Line"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Declined, Quiet Line"
   ],
   "rnbqkb1r/p2ppppp/5n2/1ppP4/P1P5/8/1P2PPPP/RNBQKBNR b KQkq - 0 4": [
     "A57",
-    "Benko Gambit Declined: Sosonko Variation"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Declined, Sosonko Variation"
   ],
   "rn1qkb1r/pb1ppppp/5n2/1ppP4/2P5/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 5": [
     "A57",
-    "Benko Gambit: 4.Nf3 Bb7"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 4.Nf3 Bb7"
   ],
   "rn1qkb1r/pb1ppppp/5n2/1ppP4/P1P5/5N2/1P2PPPP/RNBQKB1R b KQkq - 0 5": [
     "A57",
-    "Benko Gambit: 4.Nf3 Bb7 5.a4"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 4.Nf3 Bb7 5.a4"
   ],
   "rnbqkb1r/p2ppppp/5n2/2pP4/2p5/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 5": [
     "A57",
-    "Benko Gambit: 4.Nf3 bxc4"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 4.Nf3 bxc4"
   ],
   "rnbqkb1r/p2ppp1p/5np1/1ppP4/2P5/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 5": [
     "A57",
-    "Benko Gambit: 4.Nf3 g6"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 4.Nf3 g6"
   ],
   "rnbqkb1r/p2ppp1p/5np1/1PpP4/8/5N2/PP2PPPP/RNBQKB1R b KQkq - 0 5": [
     "A57",
-    "Benko Gambit: 4.Nf3 g6 5.cxb5"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 4.Nf3 g6 5.cxb5"
   ],
   "rnbqkb1r/3ppp1p/p4np1/1PpP4/8/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 6": [
     "A57",
-    "Benko Gambit: 4.Nf3 g6 5.cxb5 a6"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 4.Nf3 g6 5.cxb5 a6"
   ],
   "rnbqkb1r/p2ppppp/5n2/1PpP4/8/8/PP2PPPP/RNBQKBNR b KQkq - 0 4": [
     "A57",
-    "Benko Gambit: 4.cxb5"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 4.cxb5"
   ],
   "rnb1kb1r/3ppppp/pq3n2/2pP4/8/8/PP2PPPP/RNBQKBNR w KQkq - 0 6": [
     "A57",
-    "Benko Gambit: 4.cxb5 a6 5.b6 Qxb6"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 4.cxb5 a6 5.b6 Qxb6"
   ],
   "rnbqkb1r/4pppp/pP1p1n2/2pP4/8/8/PP2PPPP/RNBQKBNR w KQkq - 0 6": [
     "A57",
-    "Benko Gambit: 4.cxb5 a6 5.b6 d6"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 4.cxb5 a6 5.b6 d6"
   ],
   "rnbqkb1r/3p1ppp/pP2pn2/2pP4/8/8/PP2PPPP/RNBQKBNR w KQkq - 0 6": [
     "A57",
-    "Benko Gambit: 4.cxb5 a6 5.b6 e6"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 4.cxb5 a6 5.b6 e6"
   ],
   "rnbqkb1r/3ppp1p/p4np1/1PpP4/8/4P3/PP3PPP/RNBQKBNR w KQkq - 0 6": [
     "A57",
-    "Benko Gambit: 4.cxb5 a6 5.e3 g6"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 4.cxb5 a6 5.e3 g6"
   ],
   "rnbqk2r/3pppbp/p4np1/1PpP4/8/2N1P3/PP3PPP/R1BQKBNR w KQkq - 2 7": [
     "A57",
-    "Benko Gambit: 4.cxb5 a6 5.e3 g6 6.Nc3 Bg7"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 4.cxb5 a6 5.e3 g6 6.Nc3 Bg7"
   ],
   "rnbqkb1r/4pp1p/p2p1np1/1PpP4/8/2N1P3/PP3PPP/R1BQKBNR w KQkq - 0 7": [
     "A57",
-    "Benko Gambit: 4.cxb5 a6 5.e3 g6 6.Nc3 d6"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 4.cxb5 a6 5.e3 g6 6.Nc3 d6"
   ],
   "rnbqkb1r/3ppppp/5n2/1ppP4/8/5P2/PP2P1PP/RNBQKBNR w KQkq - 0 6": [
     "A57",
-    "Benko Gambit: 4.cxb5 a6 5.f3 axb5"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 4.cxb5 a6 5.f3 axb5"
   ],
   "rnbqkb1r/3p1ppp/p3pn2/1PpP4/8/5P2/PP2P1PP/RNBQKBNR w KQkq - 0 6": [
     "A57",
-    "Benko Gambit: 4.cxb5 a6 5.f3 e6"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 4.cxb5 a6 5.f3 e6"
   ],
   "rnbqkb1r/p2ppppp/5n2/1ppP4/2P3P1/8/PP2PP1P/RNBQKBNR b KQkq - 0 4": [
     "A57",
-    "Benko Gambit: Mutkin Countergambit"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Mutkin Countergambit"
   ],
   "rnbqkb1r/4pppp/3p1n2/1NpP4/1pB1P3/8/PP3PPP/R1BQK1NR b KQkq - 1 8": [
     "A57",
-    "Benko Gambit: Nescafe Frappe Attack"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Nescafé Frappe Attack"
   ],
   "rnbqkb1r/3ppppp/p4n2/1PpP4/8/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 5": [
     "A57",
-    "Benko Gambit: Zaitsev System"
-  ],
-  "rnbqkb1r/3ppppp/5n2/1NpP4/1p2P3/8/PP3PPP/R1BQKBNR b KQkq - 1 7": [
-    "A57",
-    "Benko Gambit: Zaitsev Variation, Nescafe Frappe Attack"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Zaitsev System"
   ],
   "rnb1kb1r/3ppppp/p4n2/qPpP4/8/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 6": [
     "A57",
-    "Benko Gambit: Zaitsev, 5...Qa5"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Zaitsev Variation, 5...Qa5"
   ],
   "rnbqkb1r/3ppppp/5n2/1ppP4/8/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 6": [
     "A57",
-    "Benko Gambit: Zaitsev, 5...axb5"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Zaitsev Variation, 5...axb5"
   ],
   "rnbqkb1r/3ppppp/5n2/2pP4/1p2P3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 7": [
     "A57",
-    "Benko Gambit: Zaitsev, 5...axb5 6.e4 b4"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Zaitsev Variation, 5...axb5 6.e4 b4"
   ],
   "rnbqkb1r/4pppp/3p1n2/1NpP4/1p2PB2/8/PP3PPP/R2QKBNR b KQkq - 1 8": [
     "A57",
-    "Benko Gambit: Zaitsev, 8.Bf4"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Zaitsev Variation, 8.Bf4"
   ],
   "rnbqkb1r/4pp1p/3p1n2/1NpP2p1/1p2PB2/8/PP3PPP/R2QKBNR w KQkq - 0 9": [
     "A57",
-    "Benko Gambit: Zaitsev, 8.Bf4 g5"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Zaitsev Variation, 8.Bf4 g5"
   ],
   "rnbqkb1r/4pppp/3p1n2/1NpP4/1p2P3/5N2/PP3PPP/R1BQKB1R b KQkq - 1 8": [
     "A57",
-    "Benko Gambit: Zaitsev, 8.Nf3"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Zaitsev Variation, 8.Nf3"
   ],
-  "rn1qkb1r/3ppp1p/b4np1/2pP4/5P2/2N5/PP2P1PP/R1BQKBNR b KQkq - 0 7": [
-    "A58",
-    "Benko Gambit Accepted: Central Storming Variation"
-  ],
-  "rn1qk2r/4ppbp/b2p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQK2R b KQkq - 3 9": [
-    "A58",
-    "Benko Gambit Accepted: Fianchetto Variation"
-  ],
-  "rnbqkb1r/3ppppp/P4n2/2pP4/8/8/PP2PPPP/RNBQKBNR b KQkq - 0 5": [
-    "A58",
-    "Benko Gambit Accepted: Fully Accepted Variation"
-  ],
-  "rn1qkb1r/3ppppp/b4n2/2pP4/8/8/PP2PPPP/RNBQKBNR w KQkq - 0 6": [
-    "A58",
-    "Benko Gambit: 5.bxa6 Bxa6"
-  ],
-  "rnbqkb1r/3ppp1p/P4np1/2pP4/8/8/PP2PPPP/RNBQKBNR w KQkq - 0 6": [
-    "A58",
-    "Benko Gambit: 5.bxa6 g6"
+  "rnbqkb1r/3ppppp/5n2/1NpP4/1p2P3/8/PP3PPP/R1BQKBNR b KQkq - 1 7": [
+    "A57",
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Zaitsev Variation, Nescafé Frappe Attack"
   ],
   "rn1qkb1r/3ppppp/b4n2/2pP4/8/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 6": [
     "A58",
-    "Benko Gambit: Accepted, 6.Nc3"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, 6.Nc3"
   ],
   "rn1qkb1r/4pppp/b2p1n2/2pP4/8/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 7": [
     "A58",
-    "Benko Gambit: Accepted, 6.Nc3 d6"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, 6.Nc3 d6"
   ],
   "rn1qkb1r/3ppp1p/b4np1/2pP4/8/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 7": [
     "A58",
-    "Benko Gambit: Accepted, 6.Nc3 g6"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, 6.Nc3 g6"
   ],
   "rn1qkb1r/3ppppp/b4n2/2pP4/8/6P1/PP2PP1P/RNBQKBNR b KQkq - 0 6": [
     "A58",
-    "Benko Gambit: Accepted, 6.g3"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, 6.g3"
   ],
   "rn1qkb1r/4pp1p/b2p1np1/2pP4/8/6P1/PP2PPBP/RNBQK1NR w KQkq - 0 8": [
     "A58",
-    "Benko Gambit: Accepted, 6.g3 d6 7.Bg2 g6"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, 6.g3 d6 7.Bg2 g6"
   ],
   "rn1qkb1r/4pp1p/b2p1np1/2pP4/8/1P4P1/P3PPBP/RNBQK1NR b KQkq - 0 8": [
     "A58",
-    "Benko Gambit: Accepted, 6.g3 d6 7.Bg2 g6 8.b3"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, 6.g3 d6 7.Bg2 g6 8.b3"
   ],
   "rn1qkb1r/4pppp/b2p1n2/2pP4/8/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 1 7": [
     "A58",
-    "Benko Gambit: Accepted, 7.Nf3"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, 7.Nf3"
   ],
   "rn1qkb1r/4pp1p/b2p1np1/2pP4/8/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 8": [
     "A58",
-    "Benko Gambit: Accepted, 7.Nf3 g6"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, 7.Nf3 g6"
   ],
   "rn1qk2r/4ppbp/b2p1np1/2pP4/8/2N5/PP1NPPPP/R1BQKB1R w KQkq - 2 9": [
     "A58",
-    "Benko Gambit: Accepted, 7.Nf3 g6 8.Nd2 Bg7"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, 7.Nf3 g6 8.Nd2 Bg7"
   ],
   "rn2kb1r/4pp1p/b2p1np1/q1pP4/8/2N5/PP1NPPPP/R1BQKB1R w KQkq - 2 9": [
     "A58",
-    "Benko Gambit: Accepted, 7.Nf3 g6 8.Nd2 Qa5"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, 7.Nf3 g6 8.Nd2 Qa5"
   ],
   "rn1qkb1r/4pp1p/b2p1np1/2pP4/5P2/2N5/PP2P1PP/R1BQKBNR w KQkq - 0 8": [
     "A58",
-    "Benko Gambit: Accepted, 7.f4"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, 7.f4"
   ],
   "rn1qkb1r/4pppp/b2p1n2/2pP4/5P2/2N5/PP2P1PP/R1BQKBNR b KQkq - 0 7": [
     "A58",
-    "Benko Gambit: Accepted, 7.f4"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, 7.f4"
   ],
   "rn1qkb1r/4pp1p/b2p1np1/2pP4/8/2N3P1/PP2PP1P/R1BQKBNR w KQkq - 0 8": [
     "A58",
-    "Benko Gambit: Accepted, 7.g3"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, 7.g3"
   ],
   "rn1qkb1r/4pppp/b2p1n2/2pP4/8/2N3P1/PP2PP1P/R1BQKBNR b KQkq - 0 7": [
     "A58",
-    "Benko Gambit: Accepted, 7.g3"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, 7.g3"
+  ],
+  "rn1qkb1r/3ppp1p/b4np1/2pP4/5P2/2N5/PP2P1PP/R1BQKBNR b KQkq - 0 7": [
+    "A58",
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, Central Storming Variation"
+  ],
+  "rn1qk2r/4ppbp/b2p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQK2R b KQkq - 3 9": [
+    "A58",
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, Fianchetto Variation"
+  ],
+  "rnbqkb1r/3ppppp/P4n2/2pP4/8/8/PP2PPPP/RNBQKBNR b KQkq - 0 5": [
+    "A58",
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, Fully Accepted Variation"
+  ],
+  "rn1qkb1r/3ppppp/b4n2/2pP4/8/8/PP2PPPP/RNBQKBNR w KQkq - 0 6": [
+    "A58",
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 5.bxa6 Bxa6"
+  ],
+  "rnbqkb1r/3ppp1p/P4np1/2pP4/8/8/PP2PPPP/RNBQKBNR w KQkq - 0 6": [
+    "A58",
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 5.bxa6 g6"
   ],
   "rn1qk2r/4ppbp/b2p1np1/2pP4/8/2N2NP1/PP2PP1P/R1BQKB1R w KQkq - 1 9": [
     "A58",
-    "Benko Gambit: Fianchetto Variation"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Fianchetto Variation"
   ],
   "rn1qkb1r/4pp1p/b2p1np1/2pP4/8/2N2NP1/PP2PP1P/R1BQKB1R b KQkq - 0 8": [
     "A58",
-    "Benko Gambit: Fianchetto Variation"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Fianchetto Variation"
   ],
   "r2qk2r/3nppbp/b2p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQK2R w KQkq - 3 10": [
     "A58",
-    "Benko Gambit: Fianchetto, 9...Nbd7"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Fianchetto Variation, 9...Nbd7"
   ],
   "r2qk2r/4ppbp/bn1p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQ1RK1 w kq - 5 11": [
     "A58",
-    "Benko Gambit: Fianchetto, 9...Nbd7 10.O-O Nb6"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Fianchetto Variation, 9...Nbd7 10.O-O Nb6"
   ],
   "rn1q1rk1/4ppbp/b2p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQK2R w KQ - 3 10": [
     "A58",
-    "Benko Gambit: Fianchetto, 9...O-O"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Fianchetto Variation, 9...O-O"
   ],
   "rn1qk2r/4ppbp/b2p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQK2R b KQkq - 2 9": [
     "A58",
-    "Benko Gambit: Fianchetto, 9.Bg2"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Fianchetto Variation, 9.Bg2"
   ],
   "rn1qk2r/4ppbp/b2p1np1/2pP4/8/2N2NPB/PP2PP1P/R1BQK2R b KQkq - 2 9": [
     "A58",
-    "Benko Gambit: Fianchetto, 9.Bh3"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Fianchetto Variation, 9.Bh3"
   ],
   "r2q1rk1/3nppbp/b2p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 5 11": [
     "A58",
-    "Benko Gambit: Fianchetto, Main Line"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Fianchetto Variation, Main Line"
   ],
   "r2q1rk1/3nppbp/b2p1np1/2pP4/8/2N2NP1/PPQ1PPBP/R1B2RK1 b - - 6 11": [
     "A58",
-    "Benko Gambit: Fianchetto, Main Line, 11.Qc2"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Fianchetto Variation, Main Line, 11.Qc2"
   ],
   "r4rk1/3nppbp/bq1p1np1/2pP4/8/2N2NP1/PPQ1PPBP/R1B2RK1 w - - 7 12": [
     "A58",
-    "Benko Gambit: Fianchetto, Main Line, 11.Qc2 Qb6"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Fianchetto Variation, Main Line, 11.Qc2 Qb6"
   ],
   "r2q1rk1/3nppbp/b2p1np1/2pP4/8/2N2NP1/PP2PPBP/1RBQ1RK1 b - - 6 11": [
     "A58",
-    "Benko Gambit: Fianchetto, Main Line, 11.Rb1"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Fianchetto Variation, Main Line, 11.Rb1"
   ],
   "r2q1rk1/3nppbp/b2p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQR1K1 b - - 6 11": [
     "A58",
-    "Benko Gambit: Fianchetto, Main Line, 11.Re1"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Fianchetto Variation, Main Line, 11.Re1"
   ],
   "rn1qkb1r/4pp1p/b2p1np1/2pP4/8/2N5/PP1NPPPP/R1BQKB1R b KQkq - 1 8": [
     "A58",
-    "Benko Gambit: Nd2 Variation"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, Nd2 Variation"
   ],
   "rn1qkb1r/4pp1p/3p1np1/2pP4/4P3/2N3P1/PP3P1P/R1BQ1KNR b kq - 0 9": [
     "A59",
-    "Benko Gambit"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit"
   ],
   "rn1q1rk1/4ppbp/3p1np1/2pP4/4P3/2N2NP1/PP3PKP/R1BQ3R b - - 2 11": [
     "A59",
-    "Benko Gambit Accepted: King Walk Variation"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, King Walk Variation"
   ],
   "rn1qkb1r/4pp1p/3p1np1/2pP4/4P3/2N5/PP2NPPP/R1BQ1K1R b kq - 1 9": [
     "A59",
-    "Benko Gambit Accepted: Yugoslav"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, Yugoslav Variation"
   ],
   "rn1qkb1r/4pppp/b2p1n2/2pP4/4P3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 7": [
     "A59",
-    "Benko Gambit Accepted: Yugoslav"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit Accepted, Yugoslav Variation"
   ],
   "rn1qkb1r/4pp1p/3p1np1/2pP4/4P3/2N5/PP3PPP/R1BQ1KNR w kq - 0 9": [
     "A59",
-    "Benko Gambit: 7.e4 Bxf1 8.Kxf1 g6"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 7.e4 Bxf1 8.Kxf1 g6"
   ],
   "rn1qkb1r/4pp1p/3p1np1/2pP4/4P3/2N2N2/PP3PPP/R1BQ1K1R b kq - 1 9": [
     "A59",
-    "Benko Gambit: 7.e4 Line, 9.Nf3"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 7.e4 Line, 9.Nf3"
   ],
   "rn1qk2r/4ppbp/3p1np1/2pP4/4P3/2N2N1P/PP3PP1/R1BQ1K1R b kq - 0 10": [
     "A59",
-    "Benko Gambit: 7.e4 Line, 9.Nf3 Bg7 10.h3"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 7.e4 Line, 9.Nf3 Bg7 10.h3"
   ],
   "r2qk2r/3nppbp/3p1np1/2pP4/4P3/2N2N1P/PP3PP1/R1BQ1K1R w kq - 1 11": [
     "A59",
-    "Benko Gambit: 7.e4 Line, 9.Nf3 Bg7 10.h3 Nbd7"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 7.e4 Line, 9.Nf3 Bg7 10.h3 Nbd7"
   ],
   "rn1qkb1r/4pp1p/3p1np1/2pP4/4P1P1/2N5/PP3P1P/R1BQ1KNR b kq - 0 9": [
     "A59",
-    "Benko Gambit: 7.e4 Line, 9.g4"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 7.e4 Line, 9.g4"
   ],
   "rn1q1rk1/4ppbp/3p1np1/2pP4/4P3/2N2NP1/PP3PKP/R1BQ3R b - - 4 11": [
     "A59",
-    "Benko Gambit: 7.e4, Main Line"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 7.e4, Main Line"
   ],
   "r2q1rk1/3nppbp/3p1np1/2pP4/4P3/2N2NP1/PP3PKP/R1BQ3R w - - 5 12": [
     "A59",
-    "Benko Gambit: 7.e4, Main Line, 11...Nbd7"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 7.e4, Main Line, 11...Nbd7"
   ],
   "r2q1rk1/3nppbp/3p1np1/2pP4/4P3/2N2NP1/PP3PKP/R1BQR3 b - - 6 12": [
     "A59",
-    "Benko Gambit: 7.e4, Main Line, 11...Nbd7 12.Re1"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 7.e4, Main Line, 11...Nbd7 12.Re1"
   ],
   "r2q1rk1/3nppbp/3p2p1/2pP4/4P1n1/2N2NP1/PP3PKP/R1BQR3 w - - 7 13": [
     "A59",
-    "Benko Gambit: 7.e4, Main Line, 11...Nbd7 12.Re1 Ng4"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 7.e4, Main Line, 11...Nbd7 12.Re1 Ng4"
   ],
   "r4rk1/3nppbp/3p1np1/q1pP4/4P3/2N2NP1/PP3PKP/R1BQR3 w - - 7 13": [
     "A59",
-    "Benko Gambit: 7.e4, Main Line, 11...Nbd7 12.Re1 Qa5"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 7.e4, Main Line, 11...Nbd7 12.Re1 Qa5"
   ],
   "r2q1rk1/3nppbp/3p1np1/2pP4/4P3/2N2NPP/PP3PK1/R1BQ3R b - - 0 12": [
     "A59",
-    "Benko Gambit: 7.e4, Main Line, 11...Nbd7 12.h3"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 7.e4, Main Line, 11...Nbd7 12.h3"
   ],
   "r4rk1/3nppbp/3p1np1/q1pP4/4P3/2N2NPP/PP3PK1/R1BQ3R w - - 1 13": [
     "A59",
-    "Benko Gambit: 7.e4, Main Line, 11...Nbd7 12.h3 Qa5"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 7.e4, Main Line, 11...Nbd7 12.h3 Qa5"
   ],
   "r4rk1/3nppbp/3p1np1/q1pP4/4P3/2N2NPP/PP3PK1/R1BQR3 b - - 2 13": [
     "A59",
-    "Benko Gambit: 7.e4, Main Line, 11...Nbd7 12.h3 Qa5 13.Re1"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 7.e4, Main Line, 11...Nbd7 12.h3 Qa5 13.Re1"
   ],
   "r4rk1/3nppbp/1q1p1np1/2pP4/4P3/2N2NPP/PP3PK1/R1BQ3R w - - 1 13": [
     "A59",
-    "Benko Gambit: 7.e4, Main Line, 11...Nbd7 12.h3 Qb6"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 7.e4, Main Line, 11...Nbd7 12.h3 Qb6"
   ],
   "r4rk1/3nppbp/1q1p1np1/2pP4/4P3/2N2NPP/PP3PK1/R1BQR3 b - - 2 13": [
     "A59",
-    "Benko Gambit: 7.e4, Main Line, 11...Nbd7 12.h3 Qb6 13.Re1"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 7.e4, Main Line, 11...Nbd7 12.h3 Qb6 13.Re1"
   ],
   "3q1rk1/3nppbp/r2p1np1/2pP4/4P3/2N2NPP/PP3PK1/R1BQ3R w - - 1 13": [
     "A59",
-    "Benko Gambit: 7.e4, Main Line, 11...Nbd7 12.h3 Ra6"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 7.e4, Main Line, 11...Nbd7 12.h3 Ra6"
   ],
   "3q1rk1/3nppbp/r2p1np1/2pP4/4P3/2N2NPP/PP3PK1/R1BQR3 b - - 2 13": [
     "A59",
-    "Benko Gambit: 7.e4, Main Line, 11...Nbd7 12.h3 Ra6 13.Re1"
+    "Queen's Pawn Opening: Benoni Defense, Benko Gambit, 7.e4, Main Line, 11...Nbd7 12.h3 Ra6 13.Re1"
   ],
   "rnbqkb1r/pp1p1ppp/4pn2/2pP4/2P5/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 4": [
     "A60",
-    "Benoni Defense: 4.Nc3"
+    "Queen's Pawn Opening: Benoni Defense, 4.Nc3"
   ],
   "rnbqkb1r/pp1p1ppp/5n2/2pN4/2P5/8/PP2PPPP/R1BQKBNR b KQkq - 0 5": [
     "A60",
-    "Benoni Defense: 4.Nc3 exd5 5.Nxd5"
+    "Queen's Pawn Opening: Benoni Defense, 4.Nc3 exd5 5.Nxd5"
   ],
   "rnbqkb1r/pp1p1ppp/5n2/2pP4/8/2N5/PP2PPPP/R1BQKBNR b KQkq - 0 5": [
     "A60",
-    "Benoni Defense: 4.Nc3 exd5 5.cxd5"
+    "Queen's Pawn Opening: Benoni Defense, 4.Nc3 exd5 5.cxd5"
   ],
   "rnbqkb1r/pp3ppp/3p1n2/2pP4/8/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 6": [
     "A60",
-    "Benoni Defense: 4.Nc3 exd5 5.cxd5 d6"
+    "Queen's Pawn Opening: Benoni Defense, 4.Nc3 exd5 5.cxd5 d6"
   ],
   "rnbqkb1r/pp3ppp/3p1n2/2pP4/8/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 1 6": [
     "A60",
-    "Benoni Defense: 4.Nc3 exd5 5.cxd5 d6 6.Nf3"
+    "Queen's Pawn Opening: Benoni Defense, 4.Nc3 exd5 5.cxd5 d6 6.Nf3"
   ],
   "rnbqkb1r/pp1p1p1p/5np1/2pP4/8/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 6": [
     "A60",
-    "Benoni Defense: 4.Nc3 exd5 5.cxd5 g6"
+    "Queen's Pawn Opening: Benoni Defense, 4.Nc3 exd5 5.cxd5 g6"
   ],
   "rnbqkb1r/pp1p1ppp/4pn2/2pP4/2P5/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 4": [
     "A60",
-    "Benoni Defense: 4.Nf3"
+    "Queen's Pawn Opening: Benoni Defense, 4.Nf3"
   ],
   "rnbqkb1r/pp1p1ppp/5n2/2pP4/8/5N2/PP2PPPP/RNBQKB1R b KQkq - 0 5": [
     "A60",
-    "Benoni Defense: 4.Nf3 exd5 5.cxd5"
+    "Queen's Pawn Opening: Benoni Defense, 4.Nf3 exd5 5.cxd5"
   ],
   "rnbqkb1r/pp1p1ppp/4pn2/2pP4/2P5/6P1/PP2PP1P/RNBQKBNR b KQkq - 0 4": [
     "A60",
-    "Benoni Defense: 4.g3"
+    "Queen's Pawn Opening: Benoni Defense, 4.g3"
   ],
   "rnbqkb1r/p2p1ppp/5n2/1ppP4/8/6P1/PP2PP1P/RNBQKBNR w KQkq - 0 6": [
     "A60",
-    "Benoni Defense: 4.g3 exd5 5.cxd5 b5"
+    "Queen's Pawn Opening: Benoni Defense, 4.g3 exd5 5.cxd5 b5"
   ],
   "rnbqkb1r/pp1p1ppp/4pn2/2pP4/2P5/8/PP2PPPP/RNBQKBNR w KQkq - 0 4": [
     "A60",
-    "Benoni Defense: Modern Variation"
+    "Queen's Pawn Opening: Benoni Defense, Modern Variation"
   ],
   "rnbqk2r/pp1p1ppp/3b1n2/2pP4/8/2N5/PP2PPPP/R1BQKBNR w KQkq - 1 6": [
     "A60",
-    "Benoni Defense: Modern Variation, Snake Variation"
+    "Queen's Pawn Opening: Benoni Defense, Modern Variation, Snake Variation"
   ],
   "rnbqk2r/pp1p1ppp/3b1n2/2pP4/8/5N2/PP2PPPP/RNBQKB1R w KQkq - 1 6": [
     "A60",
-    "Benoni Defense: Snake Variation vs. 4.Nf3"
+    "Queen's Pawn Opening: Benoni Defense, Snake Variation vs. 4.Nf3"
   ],
   "rnbqk2r/pp1p1ppp/3b1n2/2pP4/8/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 2 6": [
     "A60",
-    "Benoni Defense: Snake, 6.Nf3"
+    "Queen's Pawn Opening: Benoni Defense, Snake, 6.Nf3"
   ],
   "rnbqk2r/ppbp1ppp/5n2/2pP4/8/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 3 7": [
     "A60",
-    "Benoni Defense: Snake, 6.Nf3 Bc7"
+    "Queen's Pawn Opening: Benoni Defense, Snake, 6.Nf3 Bc7"
   ],
   "rnbqk2r/pp1p1ppp/3b1n2/2pP4/4P3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 6": [
     "A60",
-    "Benoni Defense: Snake, 6.e4"
+    "Queen's Pawn Opening: Benoni Defense, Snake, 6.e4"
   ],
   "rnbq1rk1/pp1p1ppp/3b1n2/2pP4/4P3/2N2N2/PP3PPP/R1BQKB1R b KQ - 2 7": [
     "A60",
-    "Benoni Defense: Snake, 6.e4 O-O 7.Nf3"
+    "Queen's Pawn Opening: Benoni Defense, Snake, 6.e4 O-O 7.Nf3"
   ],
   "rnbqkb1r/pp3p1p/3p1np1/2pP4/8/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 7": [
     "A61",
-    "Benoni Defense"
+    "Queen's Pawn Opening: Benoni Defense"
   ],
   "rnbqkb1r/pp3p1p/3p1np1/2pP4/5B2/2N2N2/PP2PPPP/R2QKB1R b KQkq - 1 7": [
     "A61",
-    "Benoni Defense: 6.Nf3 g6 7.Bf4"
+    "Queen's Pawn Opening: Benoni Defense, 6.Nf3 g6 7.Bf4"
   ],
   "rnbqk2r/pp3pbp/3p1np1/2pP4/5B2/2N2N2/PP2PPPP/R2QKB1R w KQkq - 2 8": [
     "A61",
-    "Benoni Defense: 6.Nf3 g6 7.Bf4 Bg7"
+    "Queen's Pawn Opening: Benoni Defense, 6.Nf3 g6 7.Bf4 Bg7"
   ],
   "rnbqk2r/pp3pbp/3p1np1/2pP4/5B2/2N5/PP1NPPPP/R2QKB1R b KQkq - 3 8": [
     "A61",
-    "Benoni Defense: 6.Nf3 g6 7.Bf4 Bg7 8.Nd2"
+    "Queen's Pawn Opening: Benoni Defense, 6.Nf3 g6 7.Bf4 Bg7 8.Nd2"
   ],
   "rnbqk2r/pp3pbp/3p1np1/2pP4/Q4B2/2N2N2/PP2PPPP/R3KB1R b KQkq - 3 8": [
     "A61",
-    "Benoni Defense: 6.Nf3 g6 7.Bf4 Bg7 8.Qa4+"
+    "Queen's Pawn Opening: Benoni Defense, 6.Nf3 g6 7.Bf4 Bg7 8.Qa4+"
   ],
   "rnbqkb1r/1p3p1p/p2p1np1/2pP4/5B2/2N2N2/PP2PPPP/R2QKB1R w KQkq - 0 8": [
     "A61",
-    "Benoni Defense: 6.Nf3 g6 7.Bf4 a6"
+    "Queen's Pawn Opening: Benoni Defense, 6.Nf3 g6 7.Bf4 a6"
   ],
   "rnbqkb1r/pp3p1p/3p1np1/2pP4/8/2N2N1P/PP2PPP1/R1BQKB1R b KQkq - 0 7": [
     "A61",
-    "Benoni Defense: 6.Nf3 g6 7.h3"
+    "Queen's Pawn Opening: Benoni Defense, 6.Nf3 g6 7.h3"
   ],
   "rnbqkb1r/pp3p1p/3p1np1/2pP4/8/2N2NP1/PP2PP1P/R1BQKB1R b KQkq - 0 7": [
     "A61",
-    "Benoni Defense: Fianchetto Variation"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation"
   ],
   "rnbqkb1r/pp3p1p/3p1np1/2pP4/8/2N5/PP1NPPPP/R1BQKB1R b KQkq - 1 7": [
     "A61",
-    "Benoni Defense: Knight's Tour Variation"
+    "Queen's Pawn Opening: Benoni Defense, Knight's Tour Variation"
   ],
   "rnbqk2r/pp3pbp/3p1np1/2pP4/8/2N5/PP1NPPPP/R1BQKB1R w KQkq - 2 8": [
     "A61",
-    "Benoni Defense: Nimzowitsch, 7...Bg7"
+    "Queen's Pawn Opening: Benoni Defense, Nimzowitsch, 7...Bg7"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP4/2N2B2/2N5/PP2PPPP/R2QKB1R b KQ - 5 9": [
     "A61",
-    "Benoni Defense: Nimzowitsch, 7...Bg7 8.Nc4 O-O 9.Bf4"
+    "Queen's Pawn Opening: Benoni Defense, Nimzowitsch, 7...Bg7 8.Nc4 O-O 9.Bf4"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP2B1/2N5/2N5/PP2PPPP/R2QKB1R b KQ - 5 9": [
     "A61",
-    "Benoni Defense: Nimzowitsch, 7...Bg7 8.Nc4 O-O 9.Bg5"
+    "Queen's Pawn Opening: Benoni Defense, Nimzowitsch, 7...Bg7 8.Nc4 O-O 9.Bg5"
   ],
   "r1bqkb1r/pp1n1p1p/3p1np1/2pP4/8/2N5/PP1NPPPP/R1BQKB1R w KQkq - 2 8": [
     "A61",
-    "Benoni Defense: Nimzowitsch, 7...Nbd7"
+    "Queen's Pawn Opening: Benoni Defense, Nimzowitsch, 7...Nbd7"
   ],
   "rnbqkb1r/pp3p1p/3p1np1/2pP2B1/8/2N2N2/PP2PPPP/R2QKB1R b KQkq - 1 7": [
     "A61",
-    "Benoni Defense: Uhlmann Variation"
+    "Queen's Pawn Opening: Benoni Defense, Uhlmann Variation"
   ],
   "rnbqk2r/pp3pbp/3p1np1/2pP2B1/8/2N2N2/PP2PPPP/R2QKB1R w KQkq - 2 8": [
     "A61",
-    "Benoni Defense: Uhlmann, 7...Bg7"
+    "Queen's Pawn Opening: Benoni Defense, Uhlmann, 7...Bg7"
   ],
   "rnbqkb1r/pp3p2/3p1npp/2pP2B1/8/2N2N2/PP2PPPP/R2QKB1R w KQkq - 0 8": [
     "A61",
-    "Benoni Defense: Uhlmann, 7...h6"
+    "Queen's Pawn Opening: Benoni Defense, Uhlmann, 7...h6"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQK2R w KQ - 4 9": [
     "A62",
-    "Benoni Defense: Fianchetto Variation"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQK2R w KQ - 3 9": [
     "A62",
-    "Benoni Defense: Fianchetto, 8.Bg2 O-O"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 8.Bg2 O-O"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQ1RK1 b - - 4 9": [
     "A62",
-    "Benoni Defense: Fianchetto, 9.O-O"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9.O-O"
   ],
   "r1bq1rk1/pp3pbp/n2p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 5 10": [
     "A62",
-    "Benoni Defense: Fianchetto, 9.O-O Na6"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9.O-O Na6"
   ],
   "r1bq1rk1/ppn2pbp/3p1np1/2pP4/8/2N3P1/PP1NPPBP/R1BQ1RK1 w - - 7 11": [
     "A62",
-    "Benoni Defense: Fianchetto, 9.O-O Na6 10.Nd2 Nc7"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9.O-O Na6 10.Nd2 Nc7"
   ],
   "rnbqr1k1/pp3pbp/3p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 5 10": [
     "A62",
-    "Benoni Defense: Fianchetto, 9.O-O Re8"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9.O-O Re8"
   ],
   "rnbq1rk1/1p3pbp/p2p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 0 10": [
     "A62",
-    "Benoni Defense: Fianchetto, 9.O-O a6"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9.O-O a6"
   ],
   "r1bq1rk1/pp1n1pbp/3p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 6 10": [
     "A63",
-    "Benoni Defense: Fianchetto Variation, Hastings Defense"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, Hastings Defense"
   ],
   "r1bq1rk1/pp1n1pbp/3p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 5 10": [
     "A63",
-    "Benoni Defense: Fianchetto, 9...Nbd7"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9...Nbd7"
   ],
   "r1bq1rk1/pp1n1pbp/3p1np1/2pP4/8/2N3P1/PP1NPPBP/R1BQ1RK1 b - - 6 10": [
     "A63",
-    "Benoni Defense: Fianchetto, 9...Nbd7 10.Nd2"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9...Nbd7 10.Nd2"
   ],
   "r1bqr1k1/pp1n1pbp/3p1np1/2pP4/8/2N3P1/PP1NPPBP/R1BQ1RK1 w - - 7 11": [
     "A63",
-    "Benoni Defense: Fianchetto, 9...Nbd7 10.Nd2 Re8"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9...Nbd7 10.Nd2 Re8"
   ],
   "r1bq1rk1/1p1n1pbp/p2p1np1/2pP4/8/2N3P1/PP1NPPBP/R1BQ1RK1 w - - 0 11": [
     "A63",
-    "Benoni Defense: Fianchetto, 9...Nbd7 10.Nd2 a6"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9...Nbd7 10.Nd2 a6"
   ],
   "r1bq1rk1/1p1n1pbp/p2p1np1/2pP4/P7/2N3P1/1P1NPPBP/R1BQ1RK1 b - - 0 11": [
     "A63",
-    "Benoni Defense: Fianchetto, 9...Nbd7 10.Nd2 a6 11.a4"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9...Nbd7 10.Nd2 a6 11.a4"
   ],
   "r1bq1rk1/1p1n1pbp/p2p1np1/2pP4/P7/2N2NP1/1P2PPBP/R1BQ1RK1 w - - 1 11": [
     "A63",
-    "Benoni Defense: Fianchetto, 9...a6 10.a4 Nbd7"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9...a6 10.a4 Nbd7"
   ],
   "r1bqr1k1/1p1n1pbp/p2p1np1/2pP4/P7/2N3P1/1P1NPPBP/R1BQ1RK1 w - - 3 12": [
     "A64",
-    "Benoni Defense: Fianchetto Variation, Hastings Defense, Main Line"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, Hastings Defense, Main Line"
   ],
   "r1bqr1k1/1p1n1pbp/p2p1np1/2pP4/P7/2N3P1/1P1NPPBP/R1BQ1RK1 w - - 1 12": [
     "A64",
-    "Benoni Defense: Fianchetto, 11...Re8"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 11...Re8"
   ],
   "r1bqr1k1/1p1n1pbp/p2p1np1/2pP4/P1N5/2N3P1/1P2PPBP/R1BQ1RK1 b - - 2 12": [
     "A64",
-    "Benoni Defense: Fianchetto, 11...Re8 12.Nc4"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 11...Re8 12.Nc4"
   ],
   "r1bqr1k1/1p3pbp/p2p1np1/2pPn3/P1N5/2N3P1/1P2PPBP/R1BQ1RK1 w - - 3 13": [
     "A64",
-    "Benoni Defense: Fianchetto, 11...Re8 12.Nc4 Ne5"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 11...Re8 12.Nc4 Ne5"
   ],
   "r1bqr1k1/1p1n1pbp/p2p1np1/P1pP4/8/2N3P1/1P1NPPBP/R1BQ1RK1 b - - 0 12": [
     "A64",
-    "Benoni Defense: Fianchetto, 11...Re8 12.a5"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 11...Re8 12.a5"
   ],
   "r1bqr1k1/1p1n1pbp/p2p1np1/2pP4/P7/2N3PP/1P1NPPB1/R1BQ1RK1 b - - 0 12": [
     "A64",
-    "Benoni Defense: Fianchetto, 11...Re8 12.h3"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 11...Re8 12.h3"
   ],
   "1rbqr1k1/1p1n1pbp/p2p1np1/2pP4/P7/2N3PP/1P1NPPB1/R1BQ1RK1 w - - 1 13": [
     "A64",
-    "Benoni Defense: Fianchetto, 11...Re8 12.h3 Rb8"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 11...Re8 12.h3 Rb8"
   ],
   "1rbqr1k1/1p1n1pbp/p2p1np1/2pP4/P1N5/2N3PP/1P2PPB1/R1BQ1RK1 b - - 2 13": [
     "A64",
-    "Benoni Defense: Fianchetto, 11...Re8 12.h3 Rb8 13.Nc4"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 11...Re8 12.h3 Rb8 13.Nc4"
   ],
   "1rbqr1k1/1p3pbp/pn1p1np1/2pP4/P1N5/2N3PP/1P2PPB1/R1BQ1RK1 w - - 3 14": [
     "A64",
-    "Benoni Defense: Fianchetto, 11...Re8 12.h3 Rb8 13.Nc4 Nb6"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 11...Re8 12.h3 Rb8 13.Nc4 Nb6"
   ],
   "1rbqr1k1/1p3pbp/p2p1np1/2pPn3/P1N5/2N3PP/1P2PPB1/R1BQ1RK1 w - - 3 14": [
     "A64",
-    "Benoni Defense: Fianchetto, 11...Re8 12.h3 Rb8 13.Nc4 Ne5"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 11...Re8 12.h3 Rb8 13.Nc4 Ne5"
   ],
   "rnbqk2r/pp2bppp/3p1n2/2pP4/4P3/2N5/PP3PPP/R1BQKBNR w KQkq - 1 7": [
     "A65",
-    "Benoni Defense: 6.e4 Be7"
+    "Queen's Pawn Opening: Benoni Defense, 6.e4 Be7"
   ],
   "rnbqkb1r/pp3p1p/3p1np1/2pP4/4P3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 7": [
     "A65",
-    "Benoni Defense: 6.e4 g6"
+    "Queen's Pawn Opening: Benoni Defense, 6.e4 g6"
   ],
   "rnbqkb1r/pp3p1p/3p1np1/2pP4/4P3/2NB4/PP3PPP/R1BQK1NR b KQkq - 1 7": [
     "A65",
-    "Benoni Defense: 6.e4 g6 7.Bd3"
+    "Queen's Pawn Opening: Benoni Defense, 6.e4 g6 7.Bd3"
   ],
   "rnbqk2r/pp3pbp/3p1np1/2pP4/4P3/2NB4/PP2NPPP/R1BQK2R b KQkq - 3 8": [
     "A65",
-    "Benoni Defense: 6.e4 g6 7.Bd3 Bg7 8.Nge2"
+    "Queen's Pawn Opening: Benoni Defense, 6.e4 g6 7.Bd3 Bg7 8.Nge2"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP4/4P3/2NB4/PP2NPPP/R1BQK2R w KQ - 4 9": [
     "A65",
-    "Benoni Defense: 6.e4 g6 7.Bd3 Bg7 8.Nge2 O-O"
+    "Queen's Pawn Opening: Benoni Defense, 6.e4 g6 7.Bd3 Bg7 8.Nge2 O-O"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP4/4P3/2NB4/PP2NPPP/R1BQ1RK1 b - - 5 9": [
     "A65",
-    "Benoni Defense: 6.e4 g6 7.Bd3 Bg7 8.Nge2 O-O 9.O-O"
+    "Queen's Pawn Opening: Benoni Defense, 6.e4 g6 7.Bd3 Bg7 8.Nge2 O-O 9.O-O"
   ],
   "r1bq1rk1/pp3pbp/n2p1np1/2pP4/4P3/2NB4/PP2NPPP/R1BQ1RK1 w - - 6 10": [
     "A65",
-    "Benoni Defense: 6.e4 g6 7.Bd3 Bg7 8.Nge2 O-O 9.O-O Na6"
+    "Queen's Pawn Opening: Benoni Defense, 6.e4 g6 7.Bd3 Bg7 8.Nge2 O-O 9.O-O Na6"
   ],
   "rnbq1rk1/1p3pbp/p2p1np1/2pP4/4P3/2NB4/PP2NPPP/R1BQ1RK1 w - - 0 10": [
     "A65",
-    "Benoni Defense: 6.e4 g6 7.Bd3 Bg7 8.Nge2 O-O 9.O-O a6"
+    "Queen's Pawn Opening: Benoni Defense, 6.e4 g6 7.Bd3 Bg7 8.Nge2 O-O 9.O-O a6"
   ],
   "rnbq1rk1/p4pbp/1p1p1np1/2pP4/4P3/2NB4/PP2NPPP/R1BQ1RK1 w - - 0 10": [
     "A65",
-    "Benoni Defense: 6.e4 g6 7.Bd3 Bg7 8.Nge2 O-O 9.O-O b6"
+    "Queen's Pawn Opening: Benoni Defense, 6.e4 g6 7.Bd3 Bg7 8.Nge2 O-O 9.O-O b6"
   ],
   "rnbqk2r/pp3pbp/3p1np1/2pP4/4P3/2NB3P/PP3PP1/R1BQK1NR b KQkq - 0 8": [
     "A65",
-    "Benoni Defense: 6.e4 g6 7.Bd3 Bg7 8.h3"
+    "Queen's Pawn Opening: Benoni Defense, 6.e4 g6 7.Bd3 Bg7 8.h3"
   ],
   "rnbqkb1r/pp3p1p/3p1np1/2pP4/4PB2/2N5/PP3PPP/R2QKBNR b KQkq - 1 7": [
     "A65",
-    "Benoni Defense: 6.e4 g6 7.Bf4"
+    "Queen's Pawn Opening: Benoni Defense, 6.e4 g6 7.Bf4"
   ],
   "rnbqkb1r/1p3p1p/p2p1np1/2pP4/4PB2/2N5/PP3PPP/R2QKBNR w KQkq - 0 8": [
     "A65",
-    "Benoni Defense: 6.e4 g6 7.Bf4 a6"
+    "Queen's Pawn Opening: Benoni Defense, 6.e4 g6 7.Bf4 a6"
   ],
   "rnbqkb1r/5p1p/p2p1np1/1ppP4/4PB2/2N2N2/PP3PPP/R2QKB1R w KQkq - 0 9": [
     "A65",
-    "Benoni Defense: 6.e4 g6 7.Bf4 a6 8.Nf3 b5"
+    "Queen's Pawn Opening: Benoni Defense, 6.e4 g6 7.Bf4 a6 8.Nf3 b5"
   ],
   "rnbqkb1r/5p1p/p2p1np1/1ppP4/4PB2/2N2N2/PP2QPPP/R3KB1R b KQkq - 1 9": [
     "A65",
-    "Benoni Defense: 6.e4 g6 7.Bf4 a6 8.Nf3 b5 9.Qe2"
+    "Queen's Pawn Opening: Benoni Defense, 6.e4 g6 7.Bf4 a6 8.Nf3 b5 9.Qe2"
   ],
   "rnbqkb1r/pp3p1p/3p1np1/2pP4/4P3/2N4P/PP3PP1/R1BQKBNR b KQkq - 0 7": [
     "A65",
-    "Benoni Defense: 6.e4 g6 7.h3"
+    "Queen's Pawn Opening: Benoni Defense, 6.e4 g6 7.h3"
   ],
   "rnbqkb1r/pp3ppp/3p1n2/2pP4/4P3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 6": [
     "A65",
-    "Benoni Defense: King's Pawn Line"
+    "Queen's Pawn Opening: Benoni Defense, King's Pawn Line"
   ],
   "rnbqkb1r/pp3p1p/3p1np1/2pP4/4P3/2N2P2/PP4PP/R1BQKBNR b KQkq - 0 7": [
     "A65",
-    "Benoni Defense: Sämisch (6.e4 g6 7.f3)"
+    "Queen's Pawn Opening: Benoni Defense, Sämisch (6.e4 g6 7.f3)"
   ],
   "rnbqk2r/pp3pbp/3p1np1/2pP4/4P3/2N2P2/PP4PP/R1BQKBNR w KQkq - 1 8": [
     "A65",
-    "Benoni Defense: Sämisch, 7...Bg7"
+    "Queen's Pawn Opening: Benoni Defense, Sämisch, 7...Bg7"
   ],
   "rnbqk2r/pp3pbp/3p1np1/2pP4/4P3/2N1BP2/PP4PP/R2QKBNR b KQkq - 2 8": [
     "A65",
-    "Benoni Defense: Sämisch, 8.Be3"
+    "Queen's Pawn Opening: Benoni Defense, Sämisch, 8.Be3"
   ],
   "rnbqk2r/pp3pbp/3p1np1/2pP2B1/4P3/2N2P2/PP4PP/R2QKBNR b KQkq - 2 8": [
     "A65",
-    "Benoni Defense: Sämisch, 8.Bg5"
+    "Queen's Pawn Opening: Benoni Defense, Sämisch, 8.Bg5"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP2B1/4P3/2N2P2/PP4PP/R2QKBNR w KQ - 3 9": [
     "A65",
-    "Benoni Defense: Sämisch, 8.Bg5 O-O"
+    "Queen's Pawn Opening: Benoni Defense, Sämisch, 8.Bg5 O-O"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP2B1/4P3/2N2P2/PP2N1PP/R2QKB1R b KQ - 4 9": [
     "A65",
-    "Benoni Defense: Sämisch, 8.Bg5 O-O 9.Nge2"
+    "Queen's Pawn Opening: Benoni Defense, Sämisch, 8.Bg5 O-O 9.Nge2"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP2B1/4P3/2N2P2/PP1Q2PP/R3KBNR b KQ - 4 9": [
     "A65",
-    "Benoni Defense: Sämisch, 8.Bg5 O-O 9.Qd2"
+    "Queen's Pawn Opening: Benoni Defense, Sämisch, 8.Bg5 O-O 9.Qd2"
   ],
   "rnbq1rk1/1p3pbp/p2p1np1/2pP2B1/4P3/2N2P2/PP1Q2PP/R3KBNR w KQ - 0 10": [
     "A65",
-    "Benoni Defense: Sämisch, 8.Bg5 O-O 9.Qd2 a6"
+    "Queen's Pawn Opening: Benoni Defense, Sämisch, 8.Bg5 O-O 9.Qd2 a6"
   ],
   "rnbqk2r/pp3pb1/3p1npp/2pP2B1/4P3/2N2P2/PP4PP/R2QKBNR w KQkq - 0 9": [
     "A65",
-    "Benoni Defense: Sämisch, 8.Bg5 h6"
+    "Queen's Pawn Opening: Benoni Defense, Sämisch, 8.Bg5 h6"
   ],
   "rnbq1rk1/pp3pb1/3p1npp/2pP4/4P3/2N1BP2/PP4PP/R2QKBNR w KQ - 2 10": [
     "A65",
-    "Benoni Defense: Sämisch, 8.Bg5 h6 9.Be3 O-O"
+    "Queen's Pawn Opening: Benoni Defense, Sämisch, 8.Bg5 h6 9.Be3 O-O"
   ],
   "rnbq1rk1/pp3pb1/3p1npp/2pP4/4P3/2N1BP2/PP2N1PP/R2QKB1R b KQ - 3 10": [
     "A65",
-    "Benoni Defense: Sämisch, 8.Bg5 h6 9.Be3 O-O 10.Nge2"
+    "Queen's Pawn Opening: Benoni Defense, Sämisch, 8.Bg5 h6 9.Be3 O-O 10.Nge2"
   ],
   "rnbq1rk1/pp3pb1/3p1npp/2pP4/4P3/2N1BP2/PP1Q2PP/R3KBNR b KQ - 3 10": [
     "A65",
-    "Benoni Defense: Sämisch, 8.Bg5 h6 9.Be3 O-O 10.Qd2"
+    "Queen's Pawn Opening: Benoni Defense, Sämisch, 8.Bg5 h6 9.Be3 O-O 10.Qd2"
   ],
   "rnbqr1k1/pp3pb1/3p1npp/2pP4/4P3/2N1BP2/PP1Q2PP/R3KBNR w KQ - 4 11": [
     "A65",
-    "Benoni Defense: Sämisch, 8.Bg5 h6 9.Be3 O-O 10.Qd2 Re8"
+    "Queen's Pawn Opening: Benoni Defense, Sämisch, 8.Bg5 h6 9.Be3 O-O 10.Qd2 Re8"
   ],
   "rnbq1rk1/1p3pb1/p2p1npp/2pP4/4P3/2N1BP2/PP1Q2PP/R3KBNR w KQ - 0 11": [
     "A65",
-    "Benoni Defense: Sämisch, 8.Bg5 h6 9.Be3 O-O 10.Qd2 a6"
+    "Queen's Pawn Opening: Benoni Defense, Sämisch, 8.Bg5 h6 9.Be3 O-O 10.Qd2 a6"
   ],
   "rnbq1rk1/1p3pb1/p2p1npp/2pP4/P3P3/2N1BP2/1P1Q2PP/R3KBNR b KQ - 0 11": [
     "A65",
-    "Benoni Defense: Sämisch, 8.Bg5 h6 9.Be3 O-O 10.Qd2 a6 11.a4"
+    "Queen's Pawn Opening: Benoni Defense, Sämisch, 8.Bg5 h6 9.Be3 O-O 10.Qd2 a6 11.a4"
   ],
   "r1bq1rk1/1p1n1pb1/p2p1npp/2pP4/P3P3/2N1BP2/1P1Q2PP/R3KBNR w KQ - 1 12": [
     "A65",
-    "Benoni Defense: Sämisch, 8.Bg5 h6 9.Be3 O-O 10.Qd2 a6 11.a4 Nbd7"
+    "Queen's Pawn Opening: Benoni Defense, Sämisch, 8.Bg5 h6 9.Be3 O-O 10.Qd2 a6 11.a4 Nbd7"
   ],
   "rnbqr1k1/1p3pb1/p2p1npp/2pP4/P3P3/2N1BP2/1P1Q2PP/R3KBNR w KQ - 1 12": [
     "A65",
-    "Benoni Defense: Sämisch, 8.Bg5 h6 9.Be3 O-O 10.Qd2 a6 11.a4 Re8"
+    "Queen's Pawn Opening: Benoni Defense, Sämisch, 8.Bg5 h6 9.Be3 O-O 10.Qd2 a6 11.a4 Re8"
   ],
   "r1bqr1k1/1p1n1pb1/p2p1npp/2pP4/P3P3/2N1BP2/1P1QN1PP/R3KB1R w KQ - 3 13": [
     "A65",
-    "Benoni Defense: Sämisch, 8.Bg5 h6 9.Be3 O-O 10.Qd2 a6 11.a4 Re8 12.Nge2 Nbd7"
+    "Queen's Pawn Opening: Benoni Defense, Sämisch, 8.Bg5 h6 9.Be3 O-O 10.Qd2 a6 11.a4 Re8 12.Nge2 Nbd7"
   ],
   "rnbq1rk1/1p3pb1/p2p1np1/2pP3p/P3P3/2N1BP2/1P1Q2PP/R3KBNR w KQ - 0 12": [
     "A65",
-    "Benoni Defense: Sämisch, 8.Bg5 h6 9.Be3 O-O 10.Qd2 a6 11.a4 h5"
+    "Queen's Pawn Opening: Benoni Defense, Sämisch, 8.Bg5 h6 9.Be3 O-O 10.Qd2 a6 11.a4 h5"
   ],
   "rnbqk2r/pp3pbp/3p1np1/2pP4/4P3/2N2P2/PP2N1PP/R1BQKB1R b KQkq - 2 8": [
     "A65",
-    "Benoni Defense: Sämisch, 8.Nge2"
+    "Queen's Pawn Opening: Benoni Defense, Sämisch, 8.Nge2"
   ],
   "rnbqk2r/pp3pbp/3p1np1/2pP4/4PP2/2N5/PP4PP/R1BQKBNR w KQkq - 1 8": [
     "A66",
-    "Benoni Defense: Four Pawns Attack"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns Attack"
   ],
   "rnbqk2r/pp1n1pbp/3p2p1/2pPP3/5P2/2N5/PP4PP/R1BQKBNR w KQkq - 1 9": [
     "A66",
-    "Benoni Defense: Mikenas Attack, 8...Nfd7"
+    "Queen's Pawn Opening: Benoni Defense, Mikenas Attack, 8...Nfd7"
   ],
   "rnbqk2r/pp1n1pbp/3p2p1/1NpPP3/5P2/8/PP4PP/R1BQKBNR b KQkq - 2 9": [
     "A66",
-    "Benoni Defense: Mikenas Attack, 8...Nfd7 9.Nb5"
+    "Queen's Pawn Opening: Benoni Defense, Mikenas Attack, 8...Nfd7 9.Nb5"
   ],
   "rnbqk2r/pp1n1pbp/3p2p1/2pPP3/5P2/2N2N2/PP4PP/R1BQKB1R b KQkq - 2 9": [
     "A66",
-    "Benoni Defense: Mikenas Attack, 8...Nfd7 9.Nf3"
+    "Queen's Pawn Opening: Benoni Defense, Mikenas Attack, 8...Nfd7 9.Nf3"
   ],
   "rnbqk2r/pp1n1pbp/3pP1p1/2pP4/5P2/2N5/PP4PP/R1BQKBNR b KQkq - 0 9": [
     "A66",
-    "Benoni Defense: Mikenas Attack, 8...Nfd7 9.e6"
+    "Queen's Pawn Opening: Benoni Defense, Mikenas Attack, 8...Nfd7 9.e6"
   ],
   "rnbqk2r/pp3pbp/5np1/2pPp3/5P2/2N5/PP4PP/R1BQKBNR w KQkq - 0 9": [
     "A66",
-    "Benoni Defense: Mikenas Attack, 8...dxe5"
+    "Queen's Pawn Opening: Benoni Defense, Mikenas Attack, 8...dxe5"
   ],
   "rnbqk2r/pp1n1pbp/3N2p1/2pPp3/5P2/8/PP4PP/R1BQKBNR b KQkq - 1 10": [
     "A66",
-    "Benoni Defense: Mikenas Attack, 9.Nb5 dxe5 10.Nd6+"
+    "Queen's Pawn Opening: Benoni Defense, Mikenas Attack, 9.Nb5 dxe5 10.Nd6+"
   ],
   "rnNq3r/pp1nkpbp/6p1/2pPp3/5P2/8/PP4PP/R1BQKBNR b KQ - 0 11": [
     "A66",
-    "Benoni Defense: Mikenas Attack, 9.Nb5 dxe5 10.Nd6+ Ke7 11.Nxc8+"
+    "Queen's Pawn Opening: Benoni Defense, Mikenas Attack, 9.Nb5 dxe5 10.Nd6+ Ke7 11.Nxc8+"
   ],
   "rnq4r/pp1nkpbp/6p1/2pPp3/5P2/5N2/PP4PP/R1BQKB1R b KQ - 1 12": [
     "A66",
-    "Benoni Defense: Mikenas Attack, 9.Nb5 dxe5 10.Nd6+ Ke7 11.Nxc8+ Qxc8 12.Nf3"
+    "Queen's Pawn Opening: Benoni Defense, Mikenas Attack, 9.Nb5 dxe5 10.Nd6+ Ke7 11.Nxc8+ Qxc8 12.Nf3"
   ],
   "rnbqk2r/pp3pbp/3p1np1/2pPP3/5P2/2N5/PP4PP/R1BQKBNR b KQkq - 0 8": [
     "A66",
-    "Benoni Defense: Mikenas Variation"
+    "Queen's Pawn Opening: Benoni Defense, Mikenas Variation"
   ],
   "rnbqkb1r/pp3p1p/3p1np1/2pP4/4PP2/2N5/PP4PP/R1BQKBNR b KQkq - 0 7": [
     "A66",
-    "Benoni Defense: Pawn Storm Variation"
+    "Queen's Pawn Opening: Benoni Defense, Pawn Storm Variation"
   ],
   "r1bqk2r/pp1n1pbp/3p1np1/1BpP4/4PP2/2N5/PP4PP/R1BQK1NR w KQkq - 3 9": [
     "A67",
-    "Benoni Defense: Four Pawns, Taimanov, 8...Nbd7"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Taimanov, 8...Nbd7"
   ],
   "r1bqk2r/pp1n1pbp/4P1p1/1BpP3n/8/2N5/PP4PP/R1BQK1NR b KQkq - 0 11": [
     "A67",
-    "Benoni Defense: Four Pawns, Taimanov, 8...Nbd7 9.e5 dxe5 10.fxe5 Nh5 11.e6"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Taimanov, 8...Nbd7 9.e5 dxe5 10.fxe5 Nh5 11.e6"
   ],
   "rnbqk2r/pp1n1pbp/3p2p1/1BpP4/4PP2/2N5/PP4PP/R1BQK1NR w KQkq - 3 9": [
     "A67",
-    "Benoni Defense: Four Pawns, Taimanov, 8...Nfd7"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Taimanov, 8...Nfd7"
   ],
   "rnbqk2r/pp1n1pbp/3p2p1/2pP4/4PP2/2NB4/PP4PP/R1BQK1NR b KQkq - 4 9": [
     "A67",
-    "Benoni Defense: Four Pawns, Taimanov, 9.Bd3"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Taimanov, 9.Bd3"
   ],
   "rnbq1rk1/pp1n1pbp/3p2p1/2pP4/4PP2/2NB4/PP4PP/R1BQK1NR w KQ - 5 10": [
     "A67",
-    "Benoni Defense: Four Pawns, Taimanov, 9.Bd3 O-O"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Taimanov, 9.Bd3 O-O"
   ],
   "rnbq1rk1/pp1n1pbp/3p2p1/2pP4/4PP2/2NB1N2/PP4PP/R1BQK2R b KQ - 6 10": [
     "A67",
-    "Benoni Defense: Four Pawns, Taimanov, 9.Bd3 O-O 10.Nf3"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Taimanov, 9.Bd3 O-O 10.Nf3"
   ],
   "r1bq1rk1/pp1n1pbp/n2p2p1/2pP4/4PP2/2NB1N2/PP4PP/R1BQK2R w KQ - 7 11": [
     "A67",
-    "Benoni Defense: Four Pawns, Taimanov, 9.Bd3 O-O 10.Nf3 Na6"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Taimanov, 9.Bd3 O-O 10.Nf3 Na6"
   ],
   "rnbq1rk1/1p1n1pbp/p2p2p1/2pP4/4PP2/2NB1N2/PP4PP/R1BQK2R w KQ - 0 11": [
     "A67",
-    "Benoni Defense: Four Pawns, Taimanov, 9.Bd3 O-O 10.Nf3 a6"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Taimanov, 9.Bd3 O-O 10.Nf3 a6"
   ],
   "rnbq1rk1/1p1n1pbp/p2p2p1/2pP4/P3PP2/2NB1N2/1P4PP/R1BQK2R b KQ - 0 11": [
     "A67",
-    "Benoni Defense: Four Pawns, Taimanov, 9.Bd3 O-O 10.Nf3 a6"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Taimanov, 9.Bd3 O-O 10.Nf3 a6"
   ],
   "rnbqk2r/pp1n1pbp/3p2p1/1BpP4/P3PP2/2N5/1P4PP/R1BQK1NR b KQkq - 0 9": [
     "A67",
-    "Benoni Defense: Four Pawns, Taimanov, 9.a4 (Zaitsev)"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Taimanov, 9.a4 (Zaitsev)"
   ],
   "rnbq1rk1/pp1n1pbp/3p2p1/1BpP4/P3PP2/2N5/1P4PP/R1BQK1NR w KQ - 1 10": [
     "A67",
-    "Benoni Defense: Four Pawns, Taimanov, 9.a4 O-O"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Taimanov, 9.a4 O-O"
   ],
   "rnbq1rk1/pp1n1pbp/3p2p1/1BpP4/P3PP2/2N2N2/1P4PP/R1BQK2R b KQ - 2 10": [
     "A67",
-    "Benoni Defense: Four Pawns, Taimanov, 9.a4 O-O 10.Nf3"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Taimanov, 9.a4 O-O 10.Nf3"
   ],
   "r1bq1rk1/pp1n1pbp/n2p2p1/1BpP4/P3PP2/2N2N2/1P4PP/R1BQK2R w KQ - 3 11": [
     "A67",
-    "Benoni Defense: Four Pawns, Taimanov, 9.a4 O-O 10.Nf3 Na6"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Taimanov, 9.a4 O-O 10.Nf3 Na6"
   ],
   "r1bq1rk1/ppnn1pbp/3p2p1/1BpP4/P3PP2/2N2N2/1P4PP/R1BQ1RK1 w - - 5 12": [
     "A67",
-    "Benoni Defense: Four Pawns, Taimanov, 9.a4 O-O 10.Nf3 Na6 11.O-O Nc7"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Taimanov, 9.a4 O-O 10.Nf3 Na6 11.O-O Nc7"
   ],
   "rnb1k2r/pp1n1pbp/3p2p1/1BpP4/P3PP1q/2N5/1P4PP/R1BQK1NR w KQkq - 1 10": [
     "A67",
-    "Benoni Defense: Four Pawns, Taimanov, 9.a4 Qh4+"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Taimanov, 9.a4 Qh4+"
   ],
   "rnbqk2r/1p1n1pbp/p2p2p1/1BpP4/P3PP2/2N5/1P4PP/R1BQK1NR w KQkq - 0 10": [
     "A67",
-    "Benoni Defense: Four Pawns, Taimanov, 9.a4 a6"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Taimanov, 9.a4 a6"
   ],
   "rnbqk2r/1p1n1pbp/p2p2p1/2pP4/P3PP2/2NB4/1P4PP/R1BQK1NR b KQkq - 1 10": [
     "A67",
-    "Benoni Defense: Four Pawns, Taimanov, 9.a4 a6 10.Bd3"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Taimanov, 9.a4 a6 10.Bd3"
   ],
   "rnbqk2r/1p1n1pbp/p2p2p1/2pP4/P3PP2/2N5/1P2B1PP/R1BQK1NR b KQkq - 1 10": [
     "A67",
-    "Benoni Defense: Four Pawns, Taimanov, 9.a4 a6 10.Be2"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Taimanov, 9.a4 a6 10.Be2"
   ],
   "rnbqk2r/pp3pbp/3p1np1/1BpP4/4PP2/2N5/PP4PP/R1BQK1NR b KQkq - 2 8": [
     "A67",
-    "Benoni Defense: Taimanov Variation"
+    "Queen's Pawn Opening: Benoni Defense, Taimanov Variation"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP4/4PP2/2N2N2/PP4PP/R1BQKB1R w KQ - 3 9": [
     "A68",
-    "Benoni Defense: Four Pawns Attack"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns Attack"
   ],
   "rnbqk2r/pp3pbp/3p1np1/2pP4/4PP2/2N2N2/PP4PP/R1BQKB1R b KQkq - 2 8": [
     "A68",
-    "Benoni Defense: Four Pawns, 8.Nf3"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, 8.Nf3"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP4/4PP2/2NB1N2/PP4PP/R1BQK2R b KQ - 4 9": [
     "A68",
-    "Benoni Defense: Four Pawns, 9.Bd3"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, 9.Bd3"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP4/4PP2/2N2N2/PP2B1PP/R1BQK2R b KQ - 4 9": [
     "A68",
-    "Benoni Defense: Four Pawns, 9.Be2"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, 9.Be2"
   ],
   "rn1q1rk1/pp3pbp/3p1np1/2pP4/4PPb1/2N2N2/PP2B1PP/R1BQK2R w KQ - 5 10": [
     "A68",
-    "Benoni Defense: Four Pawns, 9.Be2 Bg4"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, 9.Be2 Bg4"
   ],
   "rn1q1rk1/pp3pbp/3p1np1/2pP4/4PPb1/2N2N2/PP2B1PP/R1BQ1RK1 b - - 6 10": [
     "A68",
-    "Benoni Defense: Four Pawns, 9.Be2 Bg4 10.O-O"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, 9.Be2 Bg4 10.O-O"
   ],
   "r2q1rk1/pp1n1pbp/3p1np1/2pP4/4PPb1/2N2N2/PP2B1PP/R1BQ1RK1 w - - 7 11": [
     "A68",
-    "Benoni Defense: Four Pawns, 9.Be2 Bg4 10.O-O Nbd7"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, 9.Be2 Bg4 10.O-O Nbd7"
   ],
   "r2q1rk1/pp1n1pbp/3p1np1/2pP4/4PPb1/2N2N1P/PP2B1P1/R1BQ1RK1 b - - 0 11": [
     "A68",
-    "Benoni Defense: Four Pawns, 9.Be2 Bg4 10.O-O Nbd7 11.h3"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, 9.Be2 Bg4 10.O-O Nbd7 11.h3"
   ],
   "r2qr1k1/pp1n1pbp/3p1np1/2pP4/4PP2/2N2B1P/PP4P1/R1BQ1RK1 w - - 1 13": [
     "A68",
-    "Benoni Defense: Four Pawns, 9.Be2 Bg4 10.O-O Nbd7 11.h3 Bxf3 12.Bxf3 Re8"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, 9.Be2 Bg4 10.O-O Nbd7 11.h3 Bxf3 12.Bxf3 Re8"
   ],
   "r2qr1k1/pp1n1pbp/3p1np1/2pP4/4PP2/2N2B1P/PP4P1/R1BQR1K1 b - - 2 13": [
     "A68",
-    "Benoni Defense: Four Pawns, 9.Be2 Bg4 10.O-O Nbd7 11.h3 Bxf3 12.Bxf3 Re8 13.Re1"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, 9.Be2 Bg4 10.O-O Nbd7 11.h3 Bxf3 12.Bxf3 Re8 13.Re1"
   ],
   "rn1q1rk1/pp3pbp/3p1np1/2pPP3/5Pb1/2N2N2/PP2B1PP/R1BQK2R b KQ - 0 10": [
     "A68",
-    "Benoni Defense: Four Pawns, 9.Be2 Bg4 10.e5"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, 9.Be2 Bg4 10.e5"
   ],
   "rnbq1rk1/p4pbp/3p1np1/1ppP4/4PP2/2N2N2/PP2B1PP/R1BQK2R w KQ - 0 10": [
     "A68",
-    "Benoni Defense: Four Pawns, 9.Be2 b5"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, 9.Be2 b5"
   ],
   "rnbq1rk1/p4pbp/3p1np1/1ppPP3/5P2/2N2N2/PP2B1PP/R1BQK2R b KQ - 0 10": [
     "A68",
-    "Benoni Defense: Four Pawns, 9.Be2 b5 10.e5"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, 9.Be2 b5 10.e5"
   ],
   "rnbq1rk1/p4pbp/5np1/1ppPp3/5P2/2N2N2/PP2B1PP/R1BQK2R w KQ - 0 11": [
     "A68",
-    "Benoni Defense: Four Pawns, 9.Be2 b5 10.e5 dxe5"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, 9.Be2 b5 10.e5 dxe5"
   ],
   "rnbq1rk1/p4pbp/6p1/1ppPP1B1/6n1/2N2N2/PP2B1PP/R2QK2R b KQ - 2 12": [
     "A68",
-    "Benoni Defense: Four Pawns, 9.Be2 b5 10.e5 dxe5 11.fxe5 Ng4 12.Bg5"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, 9.Be2 b5 10.e5 dxe5 11.fxe5 Ng4 12.Bg5"
   ],
   "rnbqr1k1/pp3pbp/3p1np1/2pP4/4PP2/2N2N2/PP2B1PP/R1BQK2R w KQ - 1 10": [
     "A69",
-    "Benoni Defense: Four Pawns Attack, Main Line"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns Attack, Main Line"
   ],
   "rnbqr1k1/pp3pbp/3p1np1/2pP4/4PP2/2N2N2/PP2B1PP/R1BQK2R w KQ - 5 10": [
     "A69",
-    "Benoni Defense: Four Pawns, Main Line"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Main Line"
   ],
   "rnbqr1k1/pp3pbp/3p1np1/2pP4/4PP2/2N5/PP1NB1PP/R1BQK2R b KQ - 6 10": [
     "A69",
-    "Benoni Defense: Four Pawns, Main Line, 10.Nd2"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Main Line, 10.Nd2"
   ],
   "r1bqr1k1/pp1n1pbp/3p1np1/2pP4/4PP2/2N5/PP1NB1PP/R1BQK2R w KQ - 7 11": [
     "A69",
-    "Benoni Defense: Four Pawns, Main Line, 10.Nd2 Nbd7"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Main Line, 10.Nd2 Nbd7"
   ],
   "rnbqr1k1/1p3pbp/p2p1np1/2pP4/4PP2/2N5/PP1NB1PP/R1BQK2R w KQ - 0 11": [
     "A69",
-    "Benoni Defense: Four Pawns, Main Line, 10.Nd2 a6"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Main Line, 10.Nd2 a6"
   ],
   "rnbqr1k1/pp3pbp/3p1np1/2pP4/4PP2/2N2N2/PP2B1PP/R1BQ1RK1 b - - 6 10": [
     "A69",
-    "Benoni Defense: Four Pawns, Main Line, 10.O-O"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Main Line, 10.O-O"
   ],
   "rnbqr1k1/pp3pbp/3p1np1/2pPP3/5P2/2N2N2/PP2B1PP/R1BQK2R b KQ - 0 10": [
     "A69",
-    "Benoni Defense: Four Pawns, Main Line, 10.e5"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Main Line, 10.e5"
   ],
   "rnbqr1k1/pp3pbp/6p1/2pPP1B1/6n1/2N2N2/PP2B1PP/R2QK2R b KQ - 2 12": [
     "A69",
-    "Benoni Defense: Four Pawns, Main Line, 10.e5: 12.Bg5"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Main Line, 10.e5: 12.Bg5"
   ],
   "rnb1r1k1/pp3pbp/1q4p1/2pPP1B1/6n1/2N2N2/PP2B1PP/R2QK2R w KQ - 3 13": [
     "A69",
-    "Benoni Defense: Four Pawns, Main Line, 10.e5: 12.Bg5 Qb6"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Main Line, 10.e5: 12.Bg5 Qb6"
   ],
   "rnb1r1k1/pp3pbp/1q4p1/2pPN1B1/8/2N5/PP2B1PP/R2Q1RK1 b - - 0 14": [
     "A69",
-    "Benoni Defense: Four Pawns, Main Line, 10.e5: 12.Bg5 Qb6 13.O-O Nxe5 14.Nxe5"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Main Line, 10.e5: 12.Bg5 Qb6 13.O-O Nxe5 14.Nxe5"
   ],
   "rnb1r1k1/pp3pbp/1q1P2p1/2p1n1B1/8/2N2N2/PP2B1PP/R2Q1RK1 b - - 0 14": [
     "A69",
-    "Benoni Defense: Four Pawns, Main Line, 10.e5: 12.Bg5 Qb6 13.O-O Nxe5 14.d6"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Main Line, 10.e5: 12.Bg5 Qb6 13.O-O Nxe5 14.d6"
   ],
   "rnbqr1k1/pp4bp/5pp1/2pPP1B1/6n1/2N2N2/PP2B1PP/R2QK2R w KQ - 0 13": [
     "A69",
-    "Benoni Defense: Four Pawns, Main Line, 10.e5: 12.Bg5 f6"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Main Line, 10.e5: 12.Bg5 f6"
   ],
   "rnbqr1k1/pp3pbp/6p1/2pPP3/6n1/2N2N2/PP2B1PP/R1BQ1RK1 b - - 2 12": [
     "A69",
-    "Benoni Defense: Four Pawns, Main Line, 10.e5: 12.O-O"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Main Line, 10.e5: 12.O-O"
   ],
   "rnbqr1k1/pp3pbp/4P1p1/2pP4/6n1/2N2N2/PP2B1PP/R1BQK2R b KQ - 0 12": [
     "A69",
-    "Benoni Defense: Four Pawns, Main Line, 10.e5: 12.e6"
+    "Queen's Pawn Opening: Benoni Defense, Four Pawns, Main Line, 10.e5: 12.e6"
   ],
   "rnbqkb1r/pp3p1p/3p1np1/2pP4/4P3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 1 7": [
     "A70",
-    "Benoni Defense: Classical"
+    "Queen's Pawn Opening: Benoni Defense, Classical"
   ],
   "rnbqkb1r/pp3p1p/3p1np1/2pP4/4P3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 0 7": [
     "A70",
-    "Benoni Defense: Classical Variation"
-  ],
-  "rnbqk2r/pp3pbp/3p1np1/2pP4/4P3/2N2N1P/PP3PP1/R1BQKB1R b KQkq - 0 8": [
-    "A70",
-    "Benoni Defense: Classical Variation, New York Variation"
-  ],
-  "rnbqk2r/pp3pbp/3p1np1/2pP4/4P3/2N2N2/PP2BPPP/R1BQK2R b KQkq - 2 8": [
-    "A70",
-    "Benoni Defense: Classical Variation, Traditional Variation"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation"
   ],
   "rnbqk2r/pp3pbp/3p1np1/2pP4/4P3/2N2N2/PP3PPP/R1BQKB1R w KQkq - 2 8": [
     "A70",
-    "Benoni Defense: Classical, 7...Bg7"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 7...Bg7"
   ],
   "rnbqkb1r/1p3p1p/p2p1np1/2pP4/4P3/2N2N2/PP3PPP/R1BQKB1R w KQkq - 0 8": [
     "A70",
-    "Benoni Defense: Classical, 7...a6"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 7...a6"
   ],
   "rnbqkb1r/1p3p1p/p2p1np1/2pP4/P3P3/2N2N2/1P3PPP/R1BQKB1R b KQkq - 0 8": [
     "A70",
-    "Benoni Defense: Classical, 7...a6 8.a4"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 7...a6 8.a4"
   ],
   "rn1qkb1r/1p3p1p/p2p1np1/2pP4/P3P1b1/2N2N2/1P3PPP/R1BQKB1R w KQkq - 1 9": [
     "A70",
-    "Benoni Defense: Classical, 7...a6 8.a4 Bg4"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 7...a6 8.a4 Bg4"
   ],
   "rn1qkb1r/1p3p1p/p2p1np1/2pP4/P3P1b1/2N2N2/1P2BPPP/R1BQK2R b KQkq - 2 9": [
     "A70",
-    "Benoni Defense: Classical, 7...a6 8.a4 Bg4 9.Be2"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 7...a6 8.a4 Bg4 9.Be2"
   ],
   "rnbqk2r/pp3pbp/3p1np1/2pP4/4P3/2NB1N2/PP3PPP/R1BQK2R b KQkq - 3 8": [
     "A70",
-    "Benoni Defense: Classical, 8.Bd3"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.Bd3"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP4/4P3/2NB1N2/PP3PPP/R1BQ1RK1 b - - 5 9": [
     "A70",
-    "Benoni Defense: Classical, 8.Bd3 O-O 9.O-O"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.Bd3 O-O 9.O-O"
   ],
   "rnbqk2r/pp3pbp/3p1np1/2pP4/4P3/2N2N2/PP2BPPP/R1BQK2R b KQkq - 3 8": [
     "A70",
-    "Benoni Defense: Classical, 8.Be2"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.Be2"
   ],
   "rnbqk2r/1p3pbp/p2p1np1/2pP4/4P3/2N2N2/PP2BPPP/R1BQK2R w KQkq - 0 9": [
     "A70",
-    "Benoni Defense: Classical, 8.Be2 a6"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.Be2 a6"
   ],
   "rnbqk2r/pp3pbp/3p1np1/2pP4/4PB2/2N2N2/PP3PPP/R2QKB1R b KQkq - 3 8": [
     "A70",
-    "Benoni Defense: Classical, 8.Bf4"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.Bf4"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP4/4PB2/2N5/PP1N1PPP/R2QKB1R b KQ - 5 9": [
     "A70",
-    "Benoni Defense: Classical, 8.Bf4 O-O 9.Nd2"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.Bf4 O-O 9.Nd2"
   ],
   "rnbqk2r/pp3pbp/3p1np1/2pP4/Q3P3/2N2N2/PP3PPP/R1B1KB1R b KQkq - 3 8": [
     "A70",
-    "Benoni Defense: Classical, 8.Qa4+"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.Qa4+"
   ],
   "rn2k2r/ppqb1pbp/3p1np1/2pP4/4P3/1QN2N2/PP3PPP/R1B1KB1R w KQkq - 6 10": [
     "A70",
-    "Benoni Defense: Classical, 8.Qa4+ Bd7 9.Qb3 Qc7"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.Qa4+ Bd7 9.Qb3 Qc7"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP4/4P3/2NB1N1P/PP3PP1/R1BQK2R b KQ - 2 9": [
     "A70",
-    "Benoni Defense: Classical, 8.h3 O-O 9.Bd3"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.h3 O-O 9.Bd3"
   ],
   "rn1q1rk1/pp1b1pbp/3p1np1/2pP4/4P3/2NB1N1P/PP3PP1/R1BQK2R w KQ - 3 10": [
     "A70",
-    "Benoni Defense: Classical, 8.h3 O-O 9.Bd3 Bd7"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.h3 O-O 9.Bd3 Bd7"
   ],
   "r1bq1rk1/pp3pbp/n2p1np1/2pP4/4P3/2NB1N1P/PP3PP1/R1BQK2R w KQ - 3 10": [
     "A70",
-    "Benoni Defense: Classical, 8.h3 O-O 9.Bd3 Na6"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.h3 O-O 9.Bd3 Na6"
   ],
   "rnbqr1k1/pp3pbp/3p1np1/2pP4/4P3/2NB1N1P/PP3PP1/R1BQK2R w KQ - 3 10": [
     "A70",
-    "Benoni Defense: Classical, 8.h3 O-O 9.Bd3 Re8"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.h3 O-O 9.Bd3 Re8"
   ],
   "rnbqr1k1/pp3pbp/3p1np1/3P4/2p1P3/2NB1N1P/PP3PP1/R1BQ1RK1 w - - 0 11": [
     "A70",
-    "Benoni Defense: Classical, 8.h3 O-O 9.Bd3 Re8 10.O-O c4"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.h3 O-O 9.Bd3 Re8 10.O-O c4"
   ],
   "rnbq1rk1/1p3pbp/p2p1np1/2pP4/4P3/2NB1N1P/PP3PP1/R1BQK2R w KQ - 0 10": [
     "A70",
-    "Benoni Defense: Classical, 8.h3 O-O 9.Bd3 a6"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.h3 O-O 9.Bd3 a6"
   ],
   "rnbq1rk1/5pbp/p2p1np1/1ppP4/4P3/2NB1N1P/PP3PP1/R1BQ1RK1 w - - 0 11": [
     "A70",
-    "Benoni Defense: Classical, 8.h3 O-O 9.Bd3 a6 10.O-O b5"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.h3 O-O 9.Bd3 a6 10.O-O b5"
   ],
   "rnbq1rk1/1p3pbp/p2p1np1/2pP4/P3P3/2NB1N1P/1P3PP1/R1BQK2R b KQ - 0 10": [
     "A70",
-    "Benoni Defense: Classical, 8.h3 O-O 9.Bd3 a6 10.a4"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.h3 O-O 9.Bd3 a6 10.a4"
   ],
   "r1bq1rk1/1p1n1pbp/p2p1np1/2pP4/P3P3/2NB1N1P/1P3PP1/R1BQK2R w KQ - 1 11": [
     "A70",
-    "Benoni Defense: Classical, 8.h3 O-O 9.Bd3 a6 10.a4 Nbd7"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.h3 O-O 9.Bd3 a6 10.a4 Nbd7"
   ],
   "r1bqr1k1/1p1n1pbp/p2p1np1/2pP4/P3P3/2NB1N1P/1P3PP1/R1BQ1RK1 w - - 3 12": [
     "A70",
-    "Benoni Defense: Classical, 8.h3 O-O 9.Bd3 a6 10.a4 Nbd7 11.O-O Re8"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.h3 O-O 9.Bd3 a6 10.a4 Nbd7 11.O-O Re8"
   ],
   "rnbq1rk1/p4pbp/3p1np1/1ppP4/4P3/2NB1N1P/PP3PP1/R1BQK2R w KQ - 0 10": [
     "A70",
-    "Benoni Defense: Classical, 8.h3 O-O 9.Bd3 b5"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.h3 O-O 9.Bd3 b5"
   ],
   "rnbq1rk1/p4pbp/3p1np1/1BpP4/4P3/2N2N1P/PP3PP1/R1BQK2R b KQ - 0 10": [
     "A70",
-    "Benoni Defense: Classical, 8.h3 O-O 9.Bd3 b5 10.Bxb5"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.h3 O-O 9.Bd3 b5 10.Bxb5"
   ],
   "rnbq1rk1/p4pbp/3p1np1/1NpP4/4P3/3B1N1P/PP3PP1/R1BQK2R b KQ - 0 10": [
     "A70",
-    "Benoni Defense: Classical, 8.h3 O-O 9.Bd3 b5 10.Nxb5"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.h3 O-O 9.Bd3 b5 10.Nxb5"
   ],
   "rnbq1rk1/p4pbp/3p2p1/1NpP4/4n3/3B1N1P/PP3PP1/R1BQK2R w KQ - 0 11": [
     "A70",
-    "Benoni Defense: Classical, 8.h3 O-O 9.Bd3 b5 10.Nxb5 Nxe4"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.h3 O-O 9.Bd3 b5 10.Nxb5 Nxe4"
   ],
   "rnbqr1k1/p4pbp/3p1np1/1NpP4/4P3/3B1N1P/PP3PP1/R1BQK2R w KQ - 1 11": [
     "A70",
-    "Benoni Defense: Classical, 8.h3 O-O 9.Bd3 b5 10.Nxb5 Re8"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.h3 O-O 9.Bd3 b5 10.Nxb5 Re8"
   ],
   "rnbqr1k1/p4pbp/3p2p1/1NpP4/4n3/3B1N1P/PP3PP1/R1BQ1RK1 w - - 0 12": [
     "A70",
-    "Benoni Defense: Classical, 8.h3 O-O 9.Bd3 b5 10.Nxb5 Re8 11.O-O Nxe4"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.h3 O-O 9.Bd3 b5 10.Nxb5 Re8 11.O-O Nxe4"
   ],
-  "rnbqk2r/pp3pbp/3p1np1/2pP2B1/4P3/2N2N2/PP3PPP/R2QKB1R b KQkq - 2 8": [
-    "A71",
-    "Benoni Defense: Classical Variation, Averbakh-Grivas Attack"
+  "rnbqk2r/pp3pbp/3p1np1/2pP4/4P3/2N2N1P/PP3PP1/R1BQKB1R b KQkq - 0 8": [
+    "A70",
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, New York Variation"
+  ],
+  "rnbqk2r/pp3pbp/3p1np1/2pP4/4P3/2N2N2/PP2BPPP/R1BQK2R b KQkq - 2 8": [
+    "A70",
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Traditional Variation"
   ],
   "rnbqk2r/pp3pbp/3p1np1/2pP2B1/4P3/2N2N2/PP3PPP/R2QKB1R b KQkq - 3 8": [
     "A71",
-    "Benoni Defense: Classical, 8.Bg5"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.Bg5"
   ],
   "rnbqk2r/1p3pb1/p2p1npp/2pP4/4P2B/2N2N2/PP3PPP/R2QKB1R w KQkq - 0 10": [
     "A71",
-    "Benoni Defense: Classical, 8.Bg5 h6 9.Bh4 a6"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.Bg5 h6 9.Bh4 a6"
   ],
   "rnbqk2r/1p3pb1/p2p1npp/2pP4/4P2B/2N5/PP1N1PPP/R2QKB1R b KQkq - 1 10": [
     "A71",
-    "Benoni Defense: Classical, 8.Bg5 h6 9.Bh4 a6 10.Nd2"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.Bg5 h6 9.Bh4 a6 10.Nd2"
   ],
   "rnbqk2r/5pb1/p2p1npp/1ppP4/4P2B/2N5/PP1NBPPP/R2QK2R b KQkq - 1 11": [
     "A71",
-    "Benoni Defense: Classical, 8.Bg5 h6 9.Bh4 a6 10.Nd2 b5 11.Be2"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.Bg5 h6 9.Bh4 a6 10.Nd2 b5 11.Be2"
   ],
   "rnbqk2r/pp3pb1/3p1n1p/2pP2p1/4P2B/2N2N2/PP3PPP/R2QKB1R w KQkq - 0 10": [
     "A71",
-    "Benoni Defense: Classical, 8.Bg5 h6 9.Bh4 g5"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.Bg5 h6 9.Bh4 g5"
+  ],
+  "rnbqk2r/pp3pbp/3p1np1/2pP2B1/4P3/2N2N2/PP3PPP/R2QKB1R b KQkq - 2 8": [
+    "A71",
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Averbakh-Grivas Attack"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP4/4P3/2N2N2/PP2BPPP/R1BQK2R w KQ - 4 9": [
     "A72",
-    "Benoni Defense: Classical"
+    "Queen's Pawn Opening: Benoni Defense, Classical"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP4/4PB2/2N2N2/PP2BPPP/R2QK2R b KQ - 5 9": [
     "A72",
-    "Benoni Defense: Classical, 8.Be2 O-O 9.Bf4"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.Be2 O-O 9.Bf4"
   ],
   "rnbq1rk1/1p3pbp/p2p1np1/2pP4/4PB2/2N2N2/PP2BPPP/R2QK2R w KQ - 0 10": [
     "A72",
-    "Benoni Defense: Classical, 8.Be2 O-O 9.Bf4 a6"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.Be2 O-O 9.Bf4 a6"
   ],
   "rnbq1rk1/p4pbp/3p1np1/1ppP4/4PB2/2N2N2/PP2BPPP/R2QK2R w KQ - 0 10": [
     "A72",
-    "Benoni Defense: Classical, 8.Be2 O-O 9.Bf4 b5"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.Be2 O-O 9.Bf4 b5"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP2B1/4P3/2N2N2/PP2BPPP/R2QK2R b KQ - 5 9": [
     "A72",
-    "Benoni Defense: Classical, 8.Be2 O-O 9.Bg5"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.Be2 O-O 9.Bg5"
   ],
   "rnbq1rk1/pp3pb1/3p3p/2pP2pn/4P3/2N3B1/PP1NBPPP/R2QK2R b KQ - 3 12": [
     "A72",
-    "Benoni Defense: Classical, 8.Be2 O-O 9.Bg5 h6 10.Bh4 g5 11.Bg3 Nh5 12.Nd2"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.Be2 O-O 9.Bg5 h6 10.Bh4 g5 11.Bg3 Nh5 12.Nd2"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP4/4P3/2N5/PP1NBPPP/R1BQK2R b KQ - 5 9": [
     "A72",
-    "Benoni Defense: Classical, 8.Be2 O-O 9.Nd2"
-  ],
-  "rnbq1rk1/pp3pbp/3p1np1/2pP4/4P3/2N2N2/PP2BPPP/R1BQ1RK1 b - - 5 9": [
-    "A73",
-    "Benoni Defense: Classical Variation, Main Line"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 8.Be2 O-O 9.Nd2"
   ],
   "rn1q1rk1/pp3pbp/3p1np1/2pP4/4P1b1/2N2N2/PP2BPPP/R1BQ1RK1 w - - 6 10": [
     "A73",
-    "Benoni Defense: Classical, 9.O-O Bg4"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O Bg4"
   ],
   "rn1q1rk1/pp3pbp/3p1np1/2pP4/4PBb1/2N2N2/PP2BPPP/R2Q1RK1 b - - 7 10": [
     "A73",
-    "Benoni Defense: Classical, 9.O-O Bg4 10.Bf4"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O Bg4 10.Bf4"
   ],
   "rn1q1rk1/pp3pbp/3p1np1/2pP2B1/4P1b1/2N2N2/PP2BPPP/R2Q1RK1 b - - 7 10": [
     "A73",
-    "Benoni Defense: Classical, 9.O-O Bg4 10.Bg5"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O Bg4 10.Bg5"
   ],
   "rn1q1rk1/pp3pbp/3p1np1/2pP4/4P1b1/2N2N1P/PP2BPP1/R1BQ1RK1 b - - 0 10": [
     "A73",
-    "Benoni Defense: Classical, 9.O-O Bg4 10.h3"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O Bg4 10.h3"
   ],
   "r1bq1rk1/pp3pbp/n2p1np1/2pP4/4P3/2N2N2/PP2BPPP/R1BQ1RK1 w - - 6 10": [
     "A73",
-    "Benoni Defense: Classical, 9.O-O Na6"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O Na6"
   ],
   "r1bq1rk1/pp3pbp/n2p1np1/2pP4/4P3/2N5/PP1NBPPP/R1BQ1RK1 b - - 7 10": [
     "A73",
-    "Benoni Defense: Classical, 9.O-O Na6 10.Nd2"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O Na6 10.Nd2"
   ],
   "r1bq1rk1/ppn2pbp/3p1np1/2pP4/4P3/2N5/PP1NBPPP/R1BQ1RK1 w - - 8 11": [
     "A73",
-    "Benoni Defense: Classical, 9.O-O Na6 10.Nd2 Nc7"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O Na6 10.Nd2 Nc7"
   ],
   "r1bq1rk1/pp1n1pbp/3p1np1/2pP4/4P3/2N2N2/PP2BPPP/R1BQ1RK1 w - - 6 10": [
     "A73",
-    "Benoni Defense: Classical, 9.O-O Nbd7"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O Nbd7"
   ],
   "rnbq1rk1/1p3pbp/p2p1np1/2pP4/4P3/2N2N2/PP2BPPP/R1BQ1RK1 w - - 0 10": [
     "A73",
-    "Benoni Defense: Classical, 9.O-O a6"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O a6"
   ],
-  "rnbq1rk1/1p3pbp/p2p1np1/2pP4/P3P3/2N2N2/1P2BPPP/R1BQ1RK1 b - - 0 10": [
-    "A74",
-    "Benoni Defense: Classical Variation, Full Line"
+  "rnbq1rk1/pp3pbp/3p1np1/2pP4/4P3/2N2N2/PP2BPPP/R1BQ1RK1 b - - 5 9": [
+    "A73",
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line"
   ],
   "r1bq1rk1/1p1n1pbp/p2p1np1/2pP4/P3P3/2N2N2/1P2BPPP/R1BQ1RK1 w - - 1 11": [
     "A74",
-    "Benoni Defense: Classical, 9.O-O a6 10.a4 Nbd7"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O a6 10.a4 Nbd7"
   ],
   "r1bq1rk1/1p1n1pbp/p2p1np1/2pP4/P3PB2/2N2N2/1P2BPPP/R2Q1RK1 b - - 2 11": [
     "A74",
-    "Benoni Defense: Classical, 9.O-O a6 10.a4 Nbd7 11.Bf4"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O a6 10.a4 Nbd7 11.Bf4"
   ],
   "r1b2rk1/1p1nqpbp/p2p1np1/2pP4/P3PB2/2N2N2/1P2BPPP/R2Q1RK1 w - - 3 12": [
     "A74",
-    "Benoni Defense: Classical, 9.O-O a6 10.a4 Nbd7 11.Bf4 Qe7"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O a6 10.a4 Nbd7 11.Bf4 Qe7"
   ],
   "r1bq1rk1/1p1n1pbp/p2p1np1/2pP2B1/P3P3/2N2N2/1P2BPPP/R2Q1RK1 b - - 2 11": [
     "A74",
-    "Benoni Defense: Classical, 9.O-O a6 10.a4 Nbd7 11.Bg5"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O a6 10.a4 Nbd7 11.Bg5"
   ],
   "r1bq1rk1/1p1n1pbp/p2p1np1/2pP4/P3P3/2N5/1P1NBPPP/R1BQ1RK1 b - - 2 11": [
     "A74",
-    "Benoni Defense: Classical, 9.O-O a6 10.a4 Nbd7 11.Nd2"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O a6 10.a4 Nbd7 11.Nd2"
   ],
-  "rn1q1rk1/1p3pbp/p2p1np1/2pP4/P3P1b1/2N2N2/1P2BPPP/R1BQ1RK1 w - - 1 11": [
-    "A75",
-    "Benoni Defense: Classical Variation, Argentine Counterattack"
+  "rnbq1rk1/1p3pbp/p2p1np1/2pP4/P3P3/2N2N2/1P2BPPP/R1BQ1RK1 b - - 0 10": [
+    "A74",
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Full Line"
   ],
   "rn1q1rk1/1p3pbp/p2p1np1/2pP4/P3PBb1/2N2N2/1P2BPPP/R2Q1RK1 b - - 2 11": [
     "A75",
-    "Benoni Defense: Classical, 9.O-O a6 10.a4 Bg4 11.Bf4"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O a6 10.a4 Bg4 11.Bf4"
   ],
   "rn1q1rk1/1p3pbp/p2p1np1/2pP4/P3PB2/2N2b2/1P2BPPP/R2Q1RK1 w - - 0 12": [
     "A75",
-    "Benoni Defense: Classical, 9.O-O a6 10.a4 Bg4 11.Bf4 Bxf3"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O a6 10.a4 Bg4 11.Bf4 Bxf3"
   ],
   "rn3rk1/1p2qpbp/p2p1np1/2pP4/P3PB2/2N2B2/1P3PPP/R2Q1RK1 w - - 1 13": [
     "A75",
-    "Benoni Defense: Classical, 9.O-O a6 10.a4 Bg4 11.Bf4 Bxf3 12.Bxf3 Qe7"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O a6 10.a4 Bg4 11.Bf4 Bxf3 12.Bxf3 Qe7"
   ],
   "rn3rk1/1p2qpbp/p2p1np1/2pP4/P3PB2/2N2B2/1P3PPP/R2QR1K1 b - - 2 13": [
     "A75",
-    "Benoni Defense: Classical, 9.O-O a6 10.a4 Bg4 11.Bf4 Bxf3 12.Bxf3 Qe7 13.Re1"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O a6 10.a4 Bg4 11.Bf4 Bxf3 12.Bxf3 Qe7 13.Re1"
   ],
   "r4rk1/1p1nqpbp/p2p1np1/P1pP4/4PB2/2N2B2/1P3PPP/R2QR1K1 b - - 0 14": [
     "A75",
-    "Benoni Defense: Classical, 9.O-O a6 10.a4 Bg4 11.Bf4 Bxf3 12.Bxf3 Qe7 with 14.a5"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O a6 10.a4 Bg4 11.Bf4 Bxf3 12.Bxf3 Qe7 with 14.a5"
   ],
   "rn3rk1/1p2qpbp/p2p1np1/2pP4/P3PBb1/2N2N2/1P2BPPP/R2Q1RK1 w - - 3 12": [
     "A75",
-    "Benoni Defense: Classical, 9.O-O a6 10.a4 Bg4 11.Bf4 Qe7"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O a6 10.a4 Bg4 11.Bf4 Qe7"
   ],
   "rn1qr1k1/1p3pbp/p2p1np1/2pP4/P3PBb1/2N2N2/1P2BPPP/R2Q1RK1 w - - 3 12": [
     "A75",
-    "Benoni Defense: Classical, 9.O-O a6 10.a4 Bg4 11.Bf4 Re8"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O a6 10.a4 Bg4 11.Bf4 Re8"
   ],
   "rn1qr1k1/1p3pbp/p2p2p1/2pP3n/P3PB2/2N5/1P1NQPPP/R4RK1 w - - 1 14": [
     "A75",
-    "Benoni Defense: Classical, 9.O-O a6 10.a4 Bg4 11.Bf4 Re8 12.Nd2 Bxe2 13.Qxe2 Nh5"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O a6 10.a4 Bg4 11.Bf4 Re8 12.Nd2 Bxe2 13.Qxe2 Nh5"
   ],
   "rn1q1rk1/1p3pbp/p2p1np1/2pP2B1/P3P1b1/2N2N2/1P2BPPP/R2Q1RK1 b - - 2 11": [
     "A75",
-    "Benoni Defense: Classical, 9.O-O a6 10.a4 Bg4 11.Bg5"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O a6 10.a4 Bg4 11.Bg5"
   ],
   "rn1q1rk1/1p3pb1/p2p1npp/2pP2B1/P3P1b1/2N2N2/1P2BPPP/R2Q1RK1 w - - 0 12": [
     "A75",
-    "Benoni Defense: Classical, 9.O-O a6 10.a4 Bg4 11.Bg5 h6"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O a6 10.a4 Bg4 11.Bg5 h6"
   ],
   "rn1q1rk1/1p3pbp/p2p1np1/2pP4/P3P1b1/2N5/1P1NBPPP/R1BQ1RK1 b - - 2 11": [
     "A75",
-    "Benoni Defense: Classical, 9.O-O a6 10.a4 Bg4 11.Nd2"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O a6 10.a4 Bg4 11.Nd2"
   ],
   "rn1q1rk1/1p3pbp/p2p1np1/2pP4/P3P1b1/2N2N1P/1P2BPP1/R1BQ1RK1 b - - 0 11": [
     "A75",
-    "Benoni Defense: Classical, 9.O-O a6 10.a4 Bg4 11.h3"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, 9.O-O a6 10.a4 Bg4 11.h3"
+  ],
+  "rn1q1rk1/1p3pbp/p2p1np1/2pP4/P3P1b1/2N2N2/1P2BPPP/R1BQ1RK1 w - - 1 11": [
+    "A75",
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Argentine Counterattack"
   ],
   "rnbqr1k1/pp3pbp/3p1np1/2pP4/4P3/2N2N2/PP2BPPP/R1BQ1RK1 w - - 6 10": [
     "A76",
-    "Benoni Defense: Classical Variation, Czerniak Defense"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Czerniak Defense"
   ],
   "rnbqr1k1/pp3pbp/3p1np1/2pP4/4P3/2N2N2/PPQ1BPPP/R1B2RK1 b - - 7 10": [
     "A76",
-    "Benoni Defense: Classical, Main Line, 10.Qc2"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Qc2"
   ],
   "rn1qr1k1/pp3pbp/3p1np1/2pP4/4P1b1/2N2N2/PPQ1BPPP/R1B2RK1 w - - 8 11": [
     "A76",
-    "Benoni Defense: Classical, Main Line, 10.Qc2 Bg4"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Qc2 Bg4"
   ],
   "r1bqr1k1/pp3pbp/n2p1np1/2pP4/4P3/2N2N2/PPQ1BPPP/R1B2RK1 w - - 8 11": [
     "A76",
-    "Benoni Defense: Classical, Main Line, 10.Qc2 Na6"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Qc2 Na6"
   ],
   "r1bqr1k1/pp3pbp/n2p1np1/2pP4/4PB2/2N2N2/PPQ1BPPP/R4RK1 b - - 9 11": [
     "A76",
-    "Benoni Defense: Classical, Main Line, 10.Qc2 Na6 11.Bf4"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Qc2 Na6 11.Bf4"
   ],
   "r1bqr1k1/pp3pbp/n2p1np1/2pP4/4P3/2N2N2/PPQ1BPPP/R1B1R1K1 b - - 9 11": [
     "A76",
-    "Benoni Defense: Classical, Main Line, 10.Qc2 Na6 11.Re1"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Qc2 Na6 11.Re1"
   ],
   "r2qr1k1/pp3pbp/n2p1np1/2pP4/4P1b1/2N2N2/PPQ1BPPP/R1B1R1K1 w - - 10 12": [
     "A76",
-    "Benoni Defense: Classical, Main Line, 10.Qc2 Na6 11.Re1 Bg4"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Qc2 Na6 11.Re1 Bg4"
   ],
   "rnbqr1k1/pp3pbp/3p1np1/2pP4/4P3/2N5/PP1NBPPP/R1BQ1RK1 b - - 7 10": [
     "A77",
-    "Benoni Defense: Classical Variation, Czerniak Defense, Tal Line"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Czerniak Defense, Tal Line"
   ],
   "r1bqr1k1/pp1n1pbp/3p1np1/2pP4/4P3/2N5/PP1NBPPP/R1BQ1RK1 w - - 8 11": [
     "A77",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Nbd7"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Nbd7"
   ],
   "r1bqr1k1/pp1n1pbp/3p1np1/2pP4/P3P3/2N5/1P1NBPPP/R1BQ1RK1 b - - 0 11": [
     "A77",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Nbd7 11.a4"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Nbd7 11.a4"
   ],
   "r1bqr1k1/pp3pbp/3p1np1/2pPn3/P3P3/2N5/1P1NBPPP/R1BQ1RK1 w - - 1 12": [
     "A77",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Nbd7 11.a4 Ne5"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Nbd7 11.a4 Ne5"
   ],
   "r1bqr1k1/pp3pbp/3p1np1/2pPn3/P3P3/2N5/1P2BPPP/RNBQ1RK1 b - - 2 12": [
     "A77",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Nbd7 11.a4 Ne5 12.Ndb1"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Nbd7 11.a4 Ne5 12.Ndb1"
   ],
   "r1bqr1k1/pp3pbp/3p1np1/2pPn3/P3P3/2N5/1PQNBPPP/R1B2RK1 b - - 2 12": [
     "A77",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Nbd7 11.a4 Ne5 12.Qc2"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Nbd7 11.a4 Ne5 12.Qc2"
   ],
   "r1bqr1k1/pp3pbp/3p1np1/2pPn3/P3P3/R1N5/1P1NBPPP/2BQ1RK1 b - - 2 12": [
     "A77",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Nbd7 11.a4 Ne5 12.Ra3"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Nbd7 11.a4 Ne5 12.Ra3"
   ],
   "r1bqr1k1/pp3pbp/3p1np1/2pPn3/P3P3/2N5/1P1NBPPP/R1BQR1K1 b - - 2 12": [
     "A77",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Nbd7 11.a4 Ne5 12.Re1"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Nbd7 11.a4 Ne5 12.Re1"
   ],
   "r1bqr1k1/1p1n1pbp/p2p1np1/2pP4/P3P3/2N5/1P1NBPPP/R1BQ1RK1 w - - 0 12": [
     "A77",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Nbd7 11.a4 a6"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Nbd7 11.a4 a6"
   ],
   "r1bqr1k1/1p1n1pbp/p2p1np1/2pP4/P3P3/2N5/1PQNBPPP/R1B2RK1 b - - 1 12": [
     "A77",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Nbd7 11.a4 a6 12.Qc2"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Nbd7 11.a4 a6 12.Qc2"
   ],
   "r1bqr1k1/1p1n1pbp/p2p1np1/2pP4/P3P3/R1N5/1P1NBPPP/2BQ1RK1 b - - 1 12": [
     "A77",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Nbd7 11.a4 a6 12.Ra3"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Nbd7 11.a4 a6 12.Ra3"
   ],
   "r1bqr1k1/1p1n1pbp/p2p1np1/2pP4/P3P3/2N4P/1P1NBPP1/R1BQ1RK1 b - - 0 12": [
     "A77",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Nbd7 11.a4 a6 12.h3"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Nbd7 11.a4 a6 12.h3"
   ],
   "rnbqr1k1/1p3pbp/p2p1np1/2pP4/4P3/2N5/PP1NBPPP/R1BQ1RK1 w - - 0 11": [
     "A77",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 a6"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 a6"
   ],
   "r1bqr1k1/pp3pbp/n2p1np1/2pP4/4P3/2N5/PP1NBPPP/R1BQ1RK1 w - - 7 11": [
     "A78",
-    "Benoni Defense: Classical Variation, Czerniak Defense"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Czerniak Defense"
   ],
   "r1bqr1k1/pp3pbp/n2p1np1/2pP4/4P3/2N5/PP1NBPPP/R1BQ1RK1 w - - 8 11": [
     "A78",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Na6"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Na6"
   ],
   "r1bqr1k1/pp3pbp/n2p1np1/2pP4/4P3/2N5/PP1NBPPP/R1BQ1R1K b - - 9 11": [
     "A78",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Na6 11.Kh1"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Na6 11.Kh1"
   ],
   "r1bqr1k1/pp3pbp/n2p1np1/2pP4/4P3/2N5/PP1NBPPP/1RBQ1RK1 b - - 9 11": [
     "A78",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Na6 11.Rb1"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Na6 11.Rb1"
   ],
   "r1bqr1k1/pp3pbp/n2p1np1/2pP4/4P3/2N5/PP1NBPPP/R1BQR1K1 b - - 9 11": [
     "A78",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Na6 11.Re1"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Na6 11.Re1"
   ],
   "r1bqr1k1/pp3pbp/n2p1np1/2pP4/4PP2/2N5/PP1NB1PP/R1BQ1RK1 b - - 0 11": [
     "A78",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Na6 11.f4"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Na6 11.f4"
   ],
   "r1bqr1k1/ppn2pbp/3p1np1/2pP4/4PP2/2N5/PP1NB1PP/R1BQ1RK1 w - - 1 12": [
     "A78",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Na6 11.f4 Nc7"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Na6 11.f4 Nc7"
   ],
   "r1bqr1k1/pp3pbp/n2p1np1/2pP4/4P3/2N2P2/PP1NB1PP/R1BQ1RK1 b - - 0 11": [
     "A79",
-    "Benoni Defense: Classical Variation, Czerniak Defense"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Czerniak Defense"
   ],
   "r1bqr1k1/ppn2pbp/3p1np1/2pP4/4P3/2N2P2/PP1NB1PP/R1BQ1RK1 w - - 1 12": [
     "A79",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Na6 11.f3 Nc7"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Na6 11.f3 Nc7"
   ],
   "r1bqr1k1/ppn2pbp/3p1np1/2pP4/P3P3/2N2P2/1P1NB1PP/R1BQ1RK1 b - - 0 12": [
     "A79",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Na6 11.f3 Nc7 12.a4"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Na6 11.f3 Nc7 12.a4"
   ],
   "r1bqr1k1/ppnn1pbp/3p2p1/2pP4/P3P3/2N2P2/1P1NB1PP/R1BQ1RK1 w - - 1 13": [
     "A79",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Na6 11.f3 Nc7 12.a4 Nd7"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Na6 11.f3 Nc7 12.a4 Nd7"
   ],
   "r1bqr1k1/p1n2pbp/1p1p1np1/2pP4/P3P3/2N2P2/1P1NB1PP/R1BQ1RK1 w - - 0 13": [
     "A79",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Na6 11.f3 Nc7 12.a4 b6"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Na6 11.f3 Nc7 12.a4 b6"
   ],
   "r1bqr1k1/p1n2pbp/1p1p1np1/2pP4/P3P3/2N2P2/1P1NB1PP/R1BQ1R1K b - - 1 13": [
     "A79",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Na6 11.f3 Nc7 12.a4 b6 13.Kh1"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Na6 11.f3 Nc7 12.a4 b6 13.Kh1"
   ],
   "r1bqr1k1/p1n2pbp/1p1p1np1/2pP4/P1N1P3/2N2P2/1P2B1PP/R1BQ1RK1 b - - 1 13": [
     "A79",
-    "Benoni Defense: Classical, Main Line, 10.Nd2 Na6 11.f3 Nc7 12.a4 b6 13.Nc4"
-  ],
-  "rnbqkbnr/ppppp1pp/8/5p2/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2": [
-    "A80",
-    "Dutch Defense"
-  ],
-  "rnbqkbnr/ppppp1p1/7p/5p2/3P3B/8/PPP1PPPP/RN1QKBNR b KQkq - 1 3": [
-    "A80",
-    "Dutch Defense: 2.Bg5"
-  ],
-  "rnbqkb1r/ppppp1pp/5n2/5pB1/3P4/8/PPP1PPPP/RN1QKBNR w KQkq - 2 3": [
-    "A80",
-    "Dutch Defense: 2.Bg5 Nf6"
-  ],
-  "rnbqkbnr/pp1pp1pp/2p5/5pB1/3P4/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3": [
-    "A80",
-    "Dutch Defense: 2.Bg5 c6"
-  ],
-  "rnbqkbnr/ppp1p1pp/8/3p1pB1/3P4/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3": [
-    "A80",
-    "Dutch Defense: 2.Bg5 d5"
-  ],
-  "rnbqkbnr/ppppp2p/6p1/5pB1/3P4/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3": [
-    "A80",
-    "Dutch Defense: 2.Bg5 g6"
-  ],
-  "rnbqkbnr/ppppp2p/6p1/5pB1/3P4/2N5/PPP1PPPP/R2QKBNR b KQkq - 1 3": [
-    "A80",
-    "Dutch Defense: 2.Bg5 g6 3.Nc3"
-  ],
-  "rnbqkbnr/ppppp1p1/7p/5pB1/3P4/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3": [
-    "A80",
-    "Dutch Defense: 2.Bg5 h6"
-  ],
-  "rnbqkb1r/ppppp1pp/5n2/5p2/3P4/2N5/PPP1PPPP/R1BQKBNR w KQkq - 2 3": [
-    "A80",
-    "Dutch Defense: 2.Nc3 Nf6"
-  ],
-  "rnbqkb1r/ppppp1pp/5n2/5pB1/3P4/2N5/PPP1PPPP/R2QKBNR b KQkq - 3 3": [
-    "A80",
-    "Dutch Defense: 2.Nc3 Nf6 3.Bg5"
-  ],
-  "rnbqkb1r/ppp1p1pp/5n2/3p1pB1/3P4/2N5/PPP1PPPP/R2QKBNR w KQkq - 0 4": [
-    "A80",
-    "Dutch Defense: 2.Nc3 Nf6 3.Bg5 d5"
-  ],
-  "rnbqkb1r/ppp3pp/5p2/3p1p2/3P4/2N5/PPP1PPPP/R2QKBNR w KQkq - 0 5": [
-    "A80",
-    "Dutch Defense: 2.Nc3 Nf6 3.Bg5 d5 4.Bxf6 exf6"
-  ],
-  "rnbqkb1r/ppp3pp/5p2/3p1p2/3P4/2N1P3/PPP2PPP/R2QKBNR b KQkq - 0 5": [
-    "A80",
-    "Dutch Defense: 2.Nc3 Nf6 3.Bg5 d5 4.Bxf6 exf6 5.e3"
-  ],
-  "rnbqkb1r/pp4pp/2p2p2/3p1p2/3P4/2N1P3/PPP2PPP/R2QKBNR w KQkq - 0 6": [
-    "A80",
-    "Dutch Defense: 2.Nc3 Nf6 3.Bg5 d5 4.Bxf6 exf6 5.e3 c6"
-  ],
-  "rnbqkb1r/pppp2pp/4pn2/5pB1/3P4/2N5/PPP1PPPP/R2QKBNR w KQkq - 0 4": [
-    "A80",
-    "Dutch Defense: 2.Nc3 Nf6 3.Bg5 e6"
-  ],
-  "rnbqkbnr/ppp1p1pp/8/3p1pB1/3P4/2N5/PPP1PPPP/R2QKBNR b KQkq - 1 3": [
-    "A80",
-    "Dutch Defense: 2.Nc3 d5 3.Bg5"
-  ],
-  "rnbqkbnr/ppppp1pp/8/5p2/3P4/5N2/PPP1PPPP/RNBQKB1R b KQkq - 1 2": [
-    "A80",
-    "Dutch Defense: 2.Nf3"
-  ],
-  "rnbqkb1r/ppppp1pp/5n2/5p2/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 2 3": [
-    "A80",
-    "Dutch Defense: 2.Nf3 Nf6"
-  ],
-  "rnbqkb1r/ppppp1pp/5n2/5pB1/3P4/5N2/PPP1PPPP/RN1QKB1R b KQkq - 3 3": [
-    "A80",
-    "Dutch Defense: 2.Nf3 Nf6 3.Bg5"
-  ],
-  "rnbqkbnr/pppp2pp/4p3/5p2/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3": [
-    "A80",
-    "Dutch Defense: 2.Nf3 e6"
-  ],
-  "rnbqkbnr/pppp2pp/4p3/3P1p2/8/5N2/PPP1PPPP/RNBQKB1R b KQkq - 0 3": [
-    "A80",
-    "Dutch Defense: 2.Nf3 e6 3.d5"
-  ],
-  "rnbqkbnr/ppppp1pp/8/5p2/3P4/3Q4/PPP1PPPP/RNB1KBNR b KQkq - 1 2": [
-    "A80",
-    "Dutch Defense: Alapin Variation"
-  ],
-  "rnbqkb1r/ppppp1pp/5n2/5p2/3P4/2P2N2/PP2PPPP/RNBQKB1R b KQkq - 0 3": [
-    "A80",
-    "Dutch Defense: Barcza System"
-  ],
-  "rnbqkbnr/pppp2pp/8/4pp2/3P2P1/8/PPP1PP1P/RNBQKBNR w KQkq - 0 3": [
-    "A80",
-    "Dutch Defense: Hevendehl Gambit"
-  ],
-  "rnbqkbnr/ppppp1pp/8/5pB1/3P4/8/PPP1PPPP/RN1QKBNR b KQkq - 1 2": [
-    "A80",
-    "Dutch Defense: Hopton Attack"
-  ],
-  "rnbqkb1r/ppppp1pp/5n2/5p2/3P2P1/7P/PPP1PP2/RNBQKBNR b KQkq - 0 3": [
-    "A80",
-    "Dutch Defense: Janzen-Korchnoi Gambit"
-  ],
-  "rnbqkbnr/ppp1p1pp/8/3p1p2/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq - 0 3": [
-    "A80",
-    "Dutch Defense: Kingfisher Gambit"
-  ],
-  "rnbqkbnr/ppppp1pp/8/5p2/3P4/7P/PPP1PPP1/RNBQKBNR b KQkq - 0 2": [
-    "A80",
-    "Dutch Defense: Korchnoi Attack"
-  ],
-  "rnbqkbnr/ppppp1pp/8/5p2/3P2P1/8/PPP1PP1P/RNBQKBNR b KQkq - 0 2": [
-    "A80",
-    "Dutch Defense: Krejčík Gambit"
-  ],
-  "rnbqkbnr/ppppp1pp/8/8/3P2p1/8/PPP1PP1P/RNBQKBNR w KQkq - 0 3": [
-    "A80",
-    "Dutch Defense: Krejčík Gambit Accepted"
-  ],
-  "rnbqkbnr/ppp1p1pp/8/3p4/3PP1p1/2N5/PPP2P1P/R1BQKBNR b KQkq - 1 4": [
-    "A80",
-    "Dutch Defense: Krejčík Gambit, Tate Gambit"
-  ],
-  "rnbqkbnr/pppp2pp/4p3/5p2/3P2P1/3Q4/PPP1PP1P/RNB1KBNR b KQkq - 0 3": [
-    "A80",
-    "Dutch Defense: Manhattan Gambit, Anti-Classical Line"
-  ],
-  "rnbqkbnr/ppppp2p/6p1/5p2/3P2P1/3Q4/PPP1PP1P/RNB1KBNR b KQkq - 0 3": [
-    "A80",
-    "Dutch Defense: Manhattan Gambit, Anti-Leningrad"
-  ],
-  "rnbqkbnr/ppp1p1pp/3p4/5p2/3P2P1/3Q4/PPP1PP1P/RNB1KBNR b KQkq - 0 3": [
-    "A80",
-    "Dutch Defense: Manhattan Gambit, Anti-Modern"
-  ],
-  "rnbqkbnr/ppp1p1pp/8/3p1p2/3P2P1/3Q4/PPP1PP1P/RNB1KBNR b KQkq - 0 3": [
-    "A80",
-    "Dutch Defense: Manhattan Gambit, Anti-Stonewall"
-  ],
-  "rnbqkbnr/pppp2pp/8/4pp2/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3": [
-    "A80",
-    "Dutch Defense: Omega-Isis Gambit"
-  ],
-  "rnbqkbnr/ppppp1pp/8/5p2/3P4/2N5/PPP1PPPP/R1BQKBNR b KQkq - 1 2": [
-    "A80",
-    "Dutch Defense: Raphael Variation"
-  ],
-  "rnbqkbnr/pppp2pp/4p3/5p2/3P1BP1/8/PPP1PP1P/RN1QKBNR b KQkq - 0 3": [
-    "A80",
-    "Dutch Defense: Senechaud Gambit"
-  ],
-  "rnbqkb1r/ppppp1pp/5n2/5p2/3P2P1/2N5/PPP1PP1P/R1BQKBNR b KQkq - 0 3": [
-    "A80",
-    "Dutch Defense: Spielmann Gambit"
+    "Queen's Pawn Opening: Benoni Defense, Classical Variation, Main Line, 10.Nd2 Na6 11.f3 Nc7 12.a4 b6 13.Nc4"
   ],
   "rnbqkbnr/ppp1p1pp/8/3p1p2/3P4/2N5/PPP1PPPP/R1BQKBNR w KQkq - 0 3": [
     "A80",
     "Queen's Pawn Game: Veresov Attack, Dutch System"
   ],
-  "rnbqkb1r/ppppp1pp/5n2/5p2/3P4/6P1/PPP1PP1P/RNBQKBNR w KQkq - 1 3": [
-    "A81",
-    "Dutch Defense: 2.g3 Nf6"
+  "rnbqkbnr/ppppp1pp/8/5p2/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense"
   ],
-  "rnbqkb1r/ppppp1pp/5n2/5p2/3P4/6P1/PPP1PPBP/RNBQK1NR b KQkq - 2 3": [
-    "A81",
-    "Dutch Defense: 2.g3 Nf6 3.Bg2"
+  "rnbqkbnr/ppppp1p1/7p/5p2/3P3B/8/PPP1PPPP/RN1QKBNR b KQkq - 1 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, 2.Bg5"
   ],
-  "rnbqkb1r/pppp2pp/4pn2/5p2/3P4/6P1/PPP1PPBP/RNBQK1NR w KQkq - 0 4": [
-    "A81",
-    "Dutch Defense: 2.g3 Nf6 3.Bg2 e6"
+  "rnbqkb1r/ppppp1pp/5n2/5pB1/3P4/8/PPP1PPPP/RN1QKBNR w KQkq - 2 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, 2.Bg5 Nf6"
   ],
-  "rnbqkb1r/ppppp2p/5np1/5p2/3P4/5NP1/PPP1PPBP/RNBQK2R b KQkq - 1 4": [
-    "A81",
-    "Dutch Defense: 2.g3 Nf6 3.Bg2 g6 4.Nf3"
+  "rnbqkbnr/pp1pp1pp/2p5/5pB1/3P4/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, 2.Bg5 c6"
   ],
-  "rnbqkb1r/ppppp1pp/5n2/5p2/3P4/5NP1/PPP1PP1P/RNBQKB1R b KQkq - 2 3": [
-    "A81",
-    "Dutch Defense: 2.g3 Nf6 3.Nf3"
+  "rnbqkbnr/ppp1p1pp/8/3p1pB1/3P4/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, 2.Bg5 d5"
   ],
-  "rnbqkbnr/pppp2pp/4p3/5p2/3P4/6P1/PPP1PP1P/RNBQKBNR w KQkq - 0 3": [
-    "A81",
-    "Dutch Defense: 2.g3 e6"
+  "rnbqkbnr/ppppp2p/6p1/5pB1/3P4/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, 2.Bg5 g6"
   ],
-  "rnbqkbnr/pppp2pp/4p3/5p2/3P4/5NP1/PPP1PP1P/RNBQKB1R b KQkq - 1 3": [
-    "A81",
-    "Dutch Defense: 2.g3 e6 3.Nf3"
+  "rnbqkbnr/ppppp2p/6p1/5pB1/3P4/2N5/PPP1PPPP/R2QKBNR b KQkq - 1 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, 2.Bg5 g6 3.Nc3"
   ],
-  "rnbqkb1r/pppp2pp/4pn2/5p2/3P4/5NP1/PPP1PP1P/RNBQKB1R w KQkq - 2 4": [
-    "A81",
-    "Dutch Defense: 2.g3 e6 3.Nf3 Nf6"
+  "rnbqkbnr/ppppp1p1/7p/5pB1/3P4/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, 2.Bg5 h6"
   ],
-  "rnbqkb1r/pppp2pp/4pn2/5p2/3P4/6PN/PPP1PPBP/RNBQK2R b KQkq - 1 4": [
-    "A81",
-    "Dutch Defense: Blackburne Variation"
+  "rnbqkb1r/ppppp1pp/5n2/5p2/3P4/2N5/PPP1PPPP/R1BQKBNR w KQkq - 2 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, 2.Nc3 Nf6"
   ],
-  "rnbqkbnr/ppppp1pp/8/5p2/3P4/6P1/PPP1PP1P/RNBQKBNR b KQkq - 0 2": [
-    "A81",
-    "Dutch Defense: Fianchetto Attack"
+  "rnbqkb1r/ppppp1pp/5n2/5pB1/3P4/2N5/PPP1PPPP/R2QKBNR b KQkq - 3 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, 2.Nc3 Nf6 3.Bg5"
   ],
-  "rnbqk2r/pp1pp1bp/2p3pn/5p2/3P4/5NP1/PPP1PPBP/RNBQ1RK1 w kq - 4 6": [
-    "A81",
-    "Dutch Defense: Leningrad Variation, Basman System"
+  "rnbqkb1r/ppp1p1pp/5n2/3p1pB1/3P4/2N5/PPP1PPPP/R2QKBNR w KQkq - 0 4": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, 2.Nc3 Nf6 3.Bg5 d5"
   ],
-  "rnbqk2r/pp1pp1bp/2p3pn/5p2/3P4/5NP1/PPP1PPBP/RNBQ1RK1 w kq - 2 6": [
-    "A81",
-    "Dutch Defense: Leningrad Variation, Basman Variation"
+  "rnbqkb1r/ppp3pp/5p2/3p1p2/3P4/2N5/PPP1PPPP/R2QKBNR w KQkq - 0 5": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, 2.Nc3 Nf6 3.Bg5 d5 4.Bxf6 exf6"
   ],
-  "rnbqk1nr/ppppp1bp/6p1/5p2/3P4/6PN/PPP1PPBP/RNBQK2R b KQkq - 3 4": [
-    "A81",
-    "Dutch Defense: Leningrad Variation, Karlsbad Variation"
+  "rnbqkb1r/ppp3pp/5p2/3p1p2/3P4/2N1P3/PPP2PPP/R2QKBNR b KQkq - 0 5": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, 2.Nc3 Nf6 3.Bg5 d5 4.Bxf6 exf6 5.e3"
   ],
-  "rnbqkb1r/ppppp2p/5np1/5p2/3P4/6P1/PPP1PPBP/RNBQK1NR w KQkq - 0 4": [
-    "A81",
-    "Dutch Defense: Semi-Leningrad Variation"
+  "rnbqkb1r/pp4pp/2p2p2/3p1p2/3P4/2N1P3/PPP2PPP/R2QKBNR w KQkq - 0 6": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, 2.Nc3 Nf6 3.Bg5 d5 4.Bxf6 exf6 5.e3 c6"
+  ],
+  "rnbqkb1r/pppp2pp/4pn2/5pB1/3P4/2N5/PPP1PPPP/R2QKBNR w KQkq - 0 4": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, 2.Nc3 Nf6 3.Bg5 e6"
+  ],
+  "rnbqkbnr/ppp1p1pp/8/3p1pB1/3P4/2N5/PPP1PPPP/R2QKBNR b KQkq - 1 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, 2.Nc3 d5 3.Bg5"
+  ],
+  "rnbqkbnr/ppppp1pp/8/5p2/3P4/5N2/PPP1PPPP/RNBQKB1R b KQkq - 1 2": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, 2.Nf3"
+  ],
+  "rnbqkb1r/ppppp1pp/5n2/5p2/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 2 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, 2.Nf3 Nf6"
+  ],
+  "rnbqkb1r/ppppp1pp/5n2/5pB1/3P4/5N2/PPP1PPPP/RN1QKB1R b KQkq - 3 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, 2.Nf3 Nf6 3.Bg5"
+  ],
+  "rnbqkbnr/pppp2pp/4p3/5p2/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, 2.Nf3 e6"
+  ],
+  "rnbqkbnr/pppp2pp/4p3/3P1p2/8/5N2/PPP1PPPP/RNBQKB1R b KQkq - 0 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, 2.Nf3 e6 3.d5"
+  ],
+  "rnbqkbnr/ppppp1pp/8/5p2/3P4/3Q4/PPP1PPPP/RNB1KBNR b KQkq - 1 2": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, Alapin Variation"
+  ],
+  "rnbqkb1r/ppppp1pp/5n2/5p2/3P4/2P2N2/PP2PPPP/RNBQKB1R b KQkq - 0 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, Barcza System"
+  ],
+  "rnbqkbnr/pppp2pp/8/4pp2/3P2P1/8/PPP1PP1P/RNBQKBNR w KQkq - 0 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, Hevendehl Gambit"
+  ],
+  "rnbqkbnr/ppppp1pp/8/5pB1/3P4/8/PPP1PPPP/RN1QKBNR b KQkq - 1 2": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, Hopton Attack"
+  ],
+  "rnbqkb1r/ppppp1pp/5n2/5p2/3P2P1/7P/PPP1PP2/RNBQKBNR b KQkq - 0 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, Janzen-Korchnoi Gambit"
+  ],
+  "rnbqkbnr/ppp1p1pp/8/3p1p2/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq - 0 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, Kingfisher Gambit"
+  ],
+  "rnbqkbnr/ppppp1pp/8/5p2/3P4/7P/PPP1PPP1/RNBQKBNR b KQkq - 0 2": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, Korchnoi Attack"
+  ],
+  "rnbqkbnr/ppppp1pp/8/5p2/3P2P1/8/PPP1PP1P/RNBQKBNR b KQkq - 0 2": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, Krejčík Gambit"
+  ],
+  "rnbqkbnr/ppppp1pp/8/8/3P2p1/8/PPP1PP1P/RNBQKBNR w KQkq - 0 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, Krejčík Gambit Accepted"
+  ],
+  "rnbqkbnr/ppp1p1pp/8/3p4/3PP1p1/2N5/PPP2P1P/R1BQKBNR b KQkq - 1 4": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, Krejčík Gambit, Tate Gambit"
+  ],
+  "rnbqkbnr/pppp2pp/4p3/5p2/3P2P1/3Q4/PPP1PP1P/RNB1KBNR b KQkq - 0 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, Manhattan Gambit, Anti-Classical Line"
+  ],
+  "rnbqkbnr/ppppp2p/6p1/5p2/3P2P1/3Q4/PPP1PP1P/RNB1KBNR b KQkq - 0 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, Manhattan Gambit, Anti-Leningrad"
+  ],
+  "rnbqkbnr/ppp1p1pp/3p4/5p2/3P2P1/3Q4/PPP1PP1P/RNB1KBNR b KQkq - 0 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, Manhattan Gambit, Anti-Modern"
+  ],
+  "rnbqkbnr/ppp1p1pp/8/3p1p2/3P2P1/3Q4/PPP1PP1P/RNB1KBNR b KQkq - 0 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, Manhattan Gambit, Anti-Stonewall"
+  ],
+  "rnbqkbnr/pppp2pp/8/4pp2/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, Omega-Isis Gambit"
+  ],
+  "rnbqkbnr/ppppp1pp/8/5p2/3P4/2N5/PPP1PPPP/R1BQKBNR b KQkq - 1 2": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, Raphael Variation"
+  ],
+  "rnbqkbnr/pppp2pp/4p3/5p2/3P1BP1/8/PPP1PP1P/RN1QKBNR b KQkq - 0 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, Senechaud Gambit"
+  ],
+  "rnbqkb1r/ppppp1pp/5n2/5p2/3P2P1/2N5/PPP1PP1P/R1BQKBNR b KQkq - 0 3": [
+    "A80",
+    "Queen's Pawn Opening: Dutch Defense, Spielmann Gambit"
   ],
   "rnbqkbnr/ppppp2p/6p1/5p2/3P4/6P1/PPP1PP1P/RNBQKBNR w KQkq - 0 3": [
     "A81",
     "Dutch Leningrad"
   ],
+  "rnbqkb1r/ppppp1pp/5n2/5p2/3P4/6P1/PPP1PP1P/RNBQKBNR w KQkq - 1 3": [
+    "A81",
+    "Queen's Pawn Opening: Dutch Defense, 2.g3 Nf6"
+  ],
+  "rnbqkb1r/ppppp1pp/5n2/5p2/3P4/6P1/PPP1PPBP/RNBQK1NR b KQkq - 2 3": [
+    "A81",
+    "Queen's Pawn Opening: Dutch Defense, 2.g3 Nf6 3.Bg2"
+  ],
+  "rnbqkb1r/pppp2pp/4pn2/5p2/3P4/6P1/PPP1PPBP/RNBQK1NR w KQkq - 0 4": [
+    "A81",
+    "Queen's Pawn Opening: Dutch Defense, 2.g3 Nf6 3.Bg2 e6"
+  ],
+  "rnbqkb1r/ppppp2p/5np1/5p2/3P4/5NP1/PPP1PPBP/RNBQK2R b KQkq - 1 4": [
+    "A81",
+    "Queen's Pawn Opening: Dutch Defense, 2.g3 Nf6 3.Bg2 g6 4.Nf3"
+  ],
+  "rnbqkb1r/ppppp1pp/5n2/5p2/3P4/5NP1/PPP1PP1P/RNBQKB1R b KQkq - 2 3": [
+    "A81",
+    "Queen's Pawn Opening: Dutch Defense, 2.g3 Nf6 3.Nf3"
+  ],
+  "rnbqkbnr/pppp2pp/4p3/5p2/3P4/6P1/PPP1PP1P/RNBQKBNR w KQkq - 0 3": [
+    "A81",
+    "Queen's Pawn Opening: Dutch Defense, 2.g3 e6"
+  ],
+  "rnbqkbnr/pppp2pp/4p3/5p2/3P4/5NP1/PPP1PP1P/RNBQKB1R b KQkq - 1 3": [
+    "A81",
+    "Queen's Pawn Opening: Dutch Defense, 2.g3 e6 3.Nf3"
+  ],
+  "rnbqkb1r/pppp2pp/4pn2/5p2/3P4/5NP1/PPP1PP1P/RNBQKB1R w KQkq - 2 4": [
+    "A81",
+    "Queen's Pawn Opening: Dutch Defense, 2.g3 e6 3.Nf3 Nf6"
+  ],
+  "rnbqkb1r/pppp2pp/4pn2/5p2/3P4/6PN/PPP1PPBP/RNBQK2R b KQkq - 1 4": [
+    "A81",
+    "Queen's Pawn Opening: Dutch Defense, Blackburne Variation"
+  ],
+  "rnbqkbnr/ppppp1pp/8/5p2/3P4/6P1/PPP1PP1P/RNBQKBNR b KQkq - 0 2": [
+    "A81",
+    "Queen's Pawn Opening: Dutch Defense, Fianchetto Attack"
+  ],
+  "rnbqk2r/pp1pp1bp/2p3pn/5p2/3P4/5NP1/PPP1PPBP/RNBQ1RK1 w kq - 4 6": [
+    "A81",
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Basman System"
+  ],
+  "rnbqk2r/pp1pp1bp/2p3pn/5p2/3P4/5NP1/PPP1PPBP/RNBQ1RK1 w kq - 2 6": [
+    "A81",
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Basman Variation"
+  ],
+  "rnbqk1nr/ppppp1bp/6p1/5p2/3P4/6PN/PPP1PPBP/RNBQK2R b KQkq - 3 4": [
+    "A81",
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Karlsbad Variation"
+  ],
+  "rnbqkb1r/ppppp2p/5np1/5p2/3P4/6P1/PPP1PPBP/RNBQK1NR w KQkq - 0 4": [
+    "A81",
+    "Queen's Pawn Opening: Dutch Defense, Semi-Leningrad Variation"
+  ],
   "rnbqkb1r/ppppp1pp/5n2/8/3Pp3/2N2P2/PPP3PP/R1BQKBNR b KQkq - 0 4": [
     "A82",
-    "Dutch Defense: Blackmar's Second Gambit"
+    "Queen's Pawn Opening: Dutch Defense, Blackmar's Second Gambit"
   ],
   "rnbqkbnr/ppppp1pp/8/5p2/3PP3/8/PPP2PPP/RNBQKBNR b KQkq - 0 2": [
     "A82",
-    "Dutch Defense: Staunton Gambit"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit"
   ],
   "rnbqkbnr/ppppp1pp/8/8/3Pp3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
     "A82",
-    "Dutch Defense: Staunton Gambit Accepted"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit Accepted"
   ],
   "rnbqkbnr/ppppp1pp/8/8/3Pp3/2N5/PPP2PPP/R1BQKBNR b KQkq - 1 3": [
     "A82",
-    "Dutch Defense: Staunton Gambit, 3.Nc3"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, 3.Nc3"
   ],
   "rnbqkb1r/ppppp1pp/5n2/8/3Pp3/2N5/PPP2PPP/R1BQKBNR w KQkq - 2 4": [
     "A82",
-    "Dutch Defense: Staunton Gambit, 3.Nc3 Nf6"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, 3.Nc3 Nf6"
   ],
   "rnbqkbnr/pppp2pp/4p3/8/3Pp3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4": [
     "A82",
-    "Dutch Defense: Staunton Gambit, 3.Nc3 e6"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, 3.Nc3 e6"
   ],
   "rnbqkbnr/ppppp2p/6p1/8/3Pp3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4": [
     "A82",
-    "Dutch Defense: Staunton Gambit, 3.Nc3 g6"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, 3.Nc3 g6"
   ],
   "r1bqkb1r/ppppp1pp/2n2n2/8/3Pp3/2N2P2/PPP3PP/R1BQKBNR w KQkq - 1 5": [
     "A82",
-    "Dutch Defense: Staunton Gambit, 4.f3 Nc6"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, 4.f3 Nc6"
   ],
   "rnbqkb1r/ppp1p1pp/5n2/3p4/3Pp3/2N2P2/PPP3PP/R1BQKBNR w KQkq - 0 5": [
     "A82",
-    "Dutch Defense: Staunton Gambit, 4.f3 d5"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, 4.f3 d5"
   ],
   "rnbqkb1r/ppp1p1pp/5n2/3p4/3PP3/2N5/PPP3PP/R1BQKBNR b KQkq - 0 5": [
     "A82",
-    "Dutch Defense: Staunton Gambit, 4.f3 d5 5.fxe4"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, 4.f3 d5 5.fxe4"
   ],
   "rnbqkb1r/pppp2pp/4pn2/8/3Pp3/2N2P2/PPP3PP/R1BQKBNR w KQkq - 0 5": [
     "A82",
-    "Dutch Defense: Staunton Gambit, 4.f3 e6"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, 4.f3 e6"
   ],
   "rnbqkb1r/ppppp1pp/5n2/8/3P4/2N2p2/PPP3PP/R1BQKBNR w KQkq - 0 5": [
     "A82",
-    "Dutch Defense: Staunton Gambit, 4.f3 exf3"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, 4.f3 exf3"
   ],
   "rnbqkb1r/ppppp1pp/5n2/8/3P4/2N2N2/PPP3PP/R1BQKB1R b KQkq - 0 5": [
     "A82",
-    "Dutch Defense: Staunton Gambit, 4.f3 exf3 5.Nxf3"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, 4.f3 exf3 5.Nxf3"
   ],
   "rnbqkbnr/ppppp1pp/8/8/3Pp3/8/PPPN1PPP/R1BQKBNR b KQkq - 1 3": [
     "A82",
-    "Dutch Defense: Staunton Gambit, American Attack"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, American Attack"
   ],
   "rnbqkb1r/ppppp1pp/5n2/8/3Pp1P1/2N5/PPP2P1P/R1BQKBNR b KQkq - 0 4": [
     "A82",
-    "Dutch Defense: Staunton Gambit, Tartakower Variation"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, Tartakower Variation"
   ],
   "rnbqkbnr/ppp1p1pp/3p4/5p2/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
     "A82",
@@ -9573,55 +9573,55 @@
   ],
   "rnbqkb1r/ppppp1pp/5n2/6B1/3Pp3/2N5/PPP2PPP/R2QKBNR b KQkq - 3 4": [
     "A83",
-    "Dutch Defense: Staunton Gambit"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit"
   ],
   "r1bqkb1r/ppppp1pp/2n2n2/6B1/3Pp3/2N5/PPP2PPP/R2QKBNR w KQkq - 4 5": [
     "A83",
-    "Dutch Defense: Staunton Gambit, 4.Bg5 Nc6"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, 4.Bg5 Nc6"
   ],
   "r1bqkb1r/ppppp1pp/2n2n2/3P2B1/4p3/2N5/PPP2PPP/R2QKBNR b KQkq - 0 5": [
     "A83",
-    "Dutch Defense: Staunton Gambit, 4.Bg5 Nc6 5.d5"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, 4.Bg5 Nc6 5.d5"
   ],
   "r1bqkb1r/ppppp1pp/5n2/3Pn1B1/3Qp3/2N5/PPP2PPP/R3KBNR b KQkq - 2 6": [
     "A83",
-    "Dutch Defense: Staunton Gambit, 4.Bg5 Nc6 5.d5 Ne5 6.Qd4"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, 4.Bg5 Nc6 5.d5 Ne5 6.Qd4"
   ],
   "r1bqkb1r/ppppp1pp/2n2n2/6B1/3Pp3/2N2P2/PPP3PP/R2QKBNR b KQkq - 0 5": [
     "A83",
-    "Dutch Defense: Staunton Gambit, 4.Bg5 Nc6 5.f3"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, 4.Bg5 Nc6 5.f3"
   ],
   "rnbqkb1r/pppp2pp/4pn2/6B1/3Pp3/2N5/PPP2PPP/R2QKBNR w KQkq - 0 5": [
     "A83",
-    "Dutch Defense: Staunton Gambit, 4.Bg5 e6"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, 4.Bg5 e6"
   ],
   "rnbqk2r/pppp2pp/4pb2/8/3PN3/5N2/PPP2PPP/R2QKB1R b KQkq - 1 7": [
     "A83",
-    "Dutch Defense: Staunton Gambit, 4.Bg5 e6 5.Nxe4"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, 4.Bg5 e6 5.Nxe4"
   ],
   "rnbqkb1r/pppp2pp/4pn2/6B1/3PN3/8/PPP2PPP/R2QKBNR b KQkq - 0 5": [
     "A83",
-    "Dutch Defense: Staunton Gambit, 4.Bg5 e6 5.Nxe4"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, 4.Bg5 e6 5.Nxe4"
   ],
   "rnbqkb1r/ppppp2p/5np1/6B1/3Pp3/2N5/PPP2PPP/R2QKBNR w KQkq - 0 5": [
     "A83",
-    "Dutch Defense: Staunton Gambit, 4.Bg5 g6"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, 4.Bg5 g6"
   ],
   "rnbqkb1r/ppppp2p/5np1/6B1/3Pp2P/2N5/PPP2PP1/R2QKBNR b KQkq - 0 5": [
     "A83",
-    "Dutch Defense: Staunton Gambit, Alekhine Variation"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, Alekhine Variation"
   ],
   "rnbqkb1r/pp1pp1pp/2p2n2/6B1/3Pp3/2N5/PPP2PPP/R2QKBNR w KQkq - 0 5": [
     "A83",
-    "Dutch Defense: Staunton Gambit, Chigorin Variation"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, Chigorin Variation"
   ],
   "rnbqkb1r/ppppp2p/5np1/6B1/3Pp3/2N2P2/PPP3PP/R2QKBNR b KQkq - 0 5": [
     "A83",
-    "Dutch Defense: Staunton Gambit, Lasker Variation"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, Lasker Variation"
   ],
   "rnbqkb1r/p1ppp1pp/1p3n2/6B1/3Pp3/2N5/PPP2PPP/R2QKBNR w KQkq - 0 5": [
     "A83",
-    "Dutch Defense: Staunton Gambit, Nimzowitsch Variation"
+    "Queen's Pawn Opening: Dutch Defense, Staunton Gambit, Nimzowitsch Variation"
   ],
   "r1bqk2r/p3p1bp/2p3pn/2Np4/3P4/5N2/PP3PPP/R1BQK2R b KQkq - 1 11": [
     "A84",
@@ -9629,939 +9629,939 @@
   ],
   "rnbqkbnr/ppppp1pp/8/5p2/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2": [
     "A84",
-    "Dutch Defense"
+    "Queen's Pawn Opening: Dutch Defense"
   ],
   "rnbqkb1r/ppppp1pp/5n2/5p2/2PP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 2 3": [
     "A84",
-    "Dutch Defense: 2.c4 Nf6"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6"
   ],
   "rnbqkbnr/ppp1p1pp/3p4/5p2/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3": [
     "A84",
-    "Dutch Defense: 2.c4 d6"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 d6"
   ],
   "rnbqkbnr/pppp2pp/4p3/5p2/2PP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 3": [
     "A84",
-    "Dutch Defense: 2.c4 e6 3.Nf3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 e6 3.Nf3"
   ],
   "rnbqkb1r/pppp2pp/4pn2/5p2/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 4": [
     "A84",
-    "Dutch Defense: 2.c4 e6 3.Nf3 Nf6"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 e6 3.Nf3 Nf6"
   ],
   "rnbqkbnr/ppppp2p/6p1/5p2/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3": [
     "A84",
-    "Dutch Defense: 2.c4 g6"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 g6"
   ],
   "rnbqkbnr/pppp2pp/4p3/5p2/2PPP3/8/PP3PPP/RNBQKBNR b KQkq - 0 3": [
     "A84",
-    "Dutch Defense: Bellon Gambit"
+    "Queen's Pawn Opening: Dutch Defense, Bellon Gambit"
   ],
   "rnbqk2r/ppppp1bp/6pn/8/2PPN3/5N2/PP3PPP/R1BQKB1R b KQkq - 2 6": [
     "A84",
-    "Dutch Defense: Bladel Modern Variations, 2.c4 g6, 3.Nc3 Nh6, 4.e4 fxe4, 5.Nxe4 Bg7, 6.Nf3"
+    "Queen's Pawn Opening: Dutch Defense, Bladel Modern Variations, 2.c4 g6, 3.Nc3 Nh6, 4.e4 fxe4, 5.Nxe4 Bg7, 6.Nf3"
   ],
   "rnbqkb1r/ppppp2p/6pn/5p2/2PPP3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 4": [
     "A84",
-    "Dutch Defense: Bladel Open Variation, 2.c4 g6, 3.Nc3 Nh6, 4.e4"
+    "Queen's Pawn Opening: Dutch Defense, Bladel Open Variation, 2.c4 g6, 3.Nc3 Nh6, 4.e4"
   ],
   "rnbqkb1r/ppppp2p/6pn/5p2/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 4": [
     "A84",
-    "Dutch Defense: Bladel Variation"
+    "Queen's Pawn Opening: Dutch Defense, Bladel Variation"
   ],
   "rnbqkbnr/pppp2pp/4p3/5p2/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3": [
     "A84",
-    "Dutch Defense: Classical Variation"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation"
   ],
   "r1bqkb1r/ppp1p1pp/2np1n2/5p2/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 5": [
     "A84",
-    "Dutch Defense: Krause Variation"
+    "Queen's Pawn Opening: Dutch Defense, Krause Variation"
   ],
   "r1bqkb1r/ppp1p1pp/2np1n2/5p2/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 2 5": [
     "A84",
-    "Dutch Defense: Krause Variation"
+    "Queen's Pawn Opening: Dutch Defense, Krause Variation"
   ],
   "rnbqkb1r/ppppp1pp/5n2/5p2/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 1 3": [
     "A84",
-    "Dutch Defense: Normal Variation"
+    "Queen's Pawn Opening: Dutch Defense, Normal Variation"
   ],
   "rnbqkbnr/pppp2pp/4p3/5p2/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 3": [
     "A84",
-    "Dutch Defense: Rubinstein Variation"
+    "Queen's Pawn Opening: Dutch Defense, Rubinstein Variation"
   ],
   "rnbqkbnr/ppp3pp/4p3/3p1p2/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 4": [
     "A84",
-    "Dutch Defense: Rubinstein, 3...d5"
+    "Queen's Pawn Opening: Dutch Defense, Rubinstein, 3...d5"
   ],
   "rnbqkbnr/pp4pp/2p1p3/3p1p2/2PP4/2N1P3/PP3PPP/R1BQKBNR w KQkq - 0 5": [
     "A84",
-    "Dutch Defense: Rubinstein, 3...d5 4.e3 c6"
+    "Queen's Pawn Opening: Dutch Defense, Rubinstein, 3...d5 4.e3 c6"
   ],
   "rnbqkb1r/ppp1p1pp/3p1n2/5p2/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 4": [
     "A85",
-    "Dutch Defense: 2.c4 Nf6 3.Nc3 d6"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.Nc3 d6"
   ],
   "rnbqkb1r/pppp2pp/4pn2/5p2/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 4": [
     "A85",
-    "Dutch Defense: 2.c4 Nf6 3.Nc3 e6"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.Nc3 e6"
   ],
   "rnbqkb1r/pppp2pp/4pn2/5pB1/2PP4/2N5/PP2PPPP/R2QKBNR b KQkq - 1 4": [
     "A85",
-    "Dutch Defense: 2.c4 Nf6 3.Nc3 e6 4.Bg5"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.Nc3 e6 4.Bg5"
   ],
   "rnbqkb1r/pppp2pp/4pn2/5p2/2PP4/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 1 4": [
     "A85",
-    "Dutch Defense: 2.c4 Nf6 3.Nc3 e6 4.Nf3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.Nc3 e6 4.Nf3"
   ],
   "rnbqkb1r/pppp2pp/4pn2/5p2/2PP4/2N5/PPQ1PPPP/R1B1KBNR b KQkq - 1 4": [
     "A85",
-    "Dutch Defense: 2.c4 Nf6 3.Nc3 e6 4.Qc2"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.Nc3 e6 4.Qc2"
   ],
   "rnbqkb1r/pppp2pp/4pn2/5p2/2PP4/P1N5/1P2PPPP/R1BQKBNR b KQkq - 0 4": [
     "A85",
-    "Dutch Defense: 2.c4 Nf6 3.Nc3 e6 4.a3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.Nc3 e6 4.a3"
   ],
   "rnbqkb1r/pppp2pp/4pn2/5p2/2PP4/2N1P3/PP3PPP/R1BQKBNR b KQkq - 0 4": [
     "A85",
-    "Dutch Defense: 2.c4 Nf6 3.Nc3 e6 4.e3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.Nc3 e6 4.e3"
   ],
   "rnbqk2r/pppp2pp/4pn2/5p2/1bPP4/2N1P3/PP3PPP/R1BQKBNR w KQkq - 1 5": [
     "A85",
-    "Dutch Defense: 2.c4 Nf6 3.Nc3 e6 4.e3 Bb4"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.Nc3 e6 4.e3 Bb4"
   ],
   "rnbqkb1r/ppp3pp/4pn2/3p1p2/2PP4/2N1P3/PP3PPP/R1BQKBNR w KQkq - 0 5": [
     "A85",
-    "Dutch Defense: 2.c4 Nf6 3.Nc3 e6 4.e3 d5"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.Nc3 e6 4.e3 d5"
   ],
   "rnbqkb1r/ppppp2p/5np1/5p2/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 4": [
     "A85",
-    "Dutch Defense: 2.c4 Nf6 3.Nc3 g6"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.Nc3 g6"
   ],
   "rnbqkb1r/ppppp2p/5np1/5pB1/2PP4/2N5/PP2PPPP/R2QKBNR b KQkq - 1 4": [
     "A85",
-    "Dutch Defense: 2.c4 Nf6 3.Nc3 g6 4.Bg5"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.Nc3 g6 4.Bg5"
   ],
   "rnbqkb1r/ppppp2p/5np1/5p2/2PP4/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 1 4": [
     "A85",
-    "Dutch Defense: 2.c4 Nf6 3.Nc3 g6 4.Nf3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.Nc3 g6 4.Nf3"
   ],
   "rnbqk2r/ppppp1bp/5np1/5p2/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 2 5": [
     "A85",
-    "Dutch Defense: 2.c4 Nf6 3.Nc3 g6 4.Nf3 Bg7"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.Nc3 g6 4.Nf3 Bg7"
   ],
   "rnbqk2r/ppppp1bp/5np1/5p2/2PP1B2/2N2N2/PP2PPPP/R2QKB1R b KQkq - 3 5": [
     "A85",
-    "Dutch Defense: 2.c4 Nf6 3.Nc3 g6 4.Nf3 Bg7 5.Bf4"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.Nc3 g6 4.Nf3 Bg7 5.Bf4"
   ],
   "rnbqk2r/ppppp1bp/5np1/5pB1/2PP4/2N2N2/PP2PPPP/R2QKB1R b KQkq - 3 5": [
     "A85",
-    "Dutch Defense: 2.c4 Nf6 3.Nc3 g6 4.Nf3 Bg7 5.Bg5"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.Nc3 g6 4.Nf3 Bg7 5.Bg5"
   ],
   "rnbqk2r/ppppp1bp/5np1/5p2/2PP4/2N1PN2/PP3PPP/R1BQKB1R b KQkq - 0 5": [
     "A85",
-    "Dutch Defense: 2.c4 Nf6 3.Nc3 g6 4.Nf3 Bg7 5.e3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.Nc3 g6 4.Nf3 Bg7 5.e3"
   ],
   "rnbqkb1r/ppppp2p/5np1/5p2/2PP4/2N2P2/PP2P1PP/R1BQKBNR b KQkq - 0 4": [
     "A85",
-    "Dutch Defense: 2.c4 Nf6 3.Nc3 g6 4.f3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.Nc3 g6 4.f3"
   ],
   "rnbqkb1r/ppppp1pp/5n2/5p2/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 2 3": [
     "A85",
-    "Dutch Defense: Queen's Knight Variation"
+    "Queen's Pawn Opening: Dutch Defense, Queen's Knight Variation"
   ],
   "rnbqkb1r/ppp1p1pp/3p1n2/5p2/2PP4/6P1/PP2PP1P/RNBQKBNR w KQkq - 0 4": [
     "A86",
-    "Dutch Defense: 2.c4 Nf6 3.g3 d6"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 d6"
   ],
   "rnbqkb1r/ppppp1pp/5n2/5p2/2PP4/6P1/PP2PP1P/RNBQKBNR b KQkq - 0 3": [
     "A86",
-    "Dutch Defense: Fianchetto Variation"
+    "Queen's Pawn Opening: Dutch Defense, Fianchetto Variation"
   ],
   "rnb1kb1r/ppq1p1pp/2pp1n2/5p2/2PP4/2N3P1/PP2PPBP/R1BQK1NR w KQkq - 1 6": [
     "A86",
-    "Dutch Defense: Hort-Antoshin System"
+    "Queen's Pawn Opening: Dutch Defense, Hort-Antoshin System"
   ],
   "rnb1kb1r/ppq1p1pp/2pp1n2/5p2/2PP4/2N3P1/PP2PPBP/R1BQK1NR w KQkq - 2 6": [
     "A86",
-    "Dutch Defense: Hort-Antoshin System"
+    "Queen's Pawn Opening: Dutch Defense, Hort-Antoshin System"
   ],
   "rnbqkb1r/ppppp2p/5np1/5p2/2PP4/6P1/PP2PP1P/RNBQKBNR w KQkq - 0 4": [
     "A86",
-    "Dutch Defense: Leningrad Variation"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation"
   ],
   "rnbqkb1r/ppppp2p/5np1/5p2/2PP4/6P1/PP2PPBP/RNBQK1NR b KQkq - 1 4": [
     "A86",
-    "Dutch Defense: Leningrad Variation, 4.Bg2"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, 4.Bg2"
   ],
   "rnbqk2r/ppppp1bp/5np1/5p2/2PP4/6P1/PP2PPBP/RNBQK1NR w KQkq - 2 5": [
     "A86",
-    "Dutch Defense: Leningrad Variation, 4.Bg2 Bg7"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, 4.Bg2 Bg7"
   ],
   "rnbqk2r/ppppp1bp/5np1/5p2/2PP4/2N3P1/PP2PPBP/R1BQK1NR b KQkq - 3 5": [
     "A86",
-    "Dutch Defense: Leningrad Variation, 4.Bg2 Bg7 5.Nc3"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, 4.Bg2 Bg7 5.Nc3"
   ],
   "rnbq1rk1/ppppp1bp/5np1/5p2/2PP4/2N3P1/PP2PPBP/R1BQK1NR w KQ - 4 6": [
     "A86",
-    "Dutch Defense: Leningrad Variation, 4.Bg2 Bg7 5.Nc3 O-O"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, 4.Bg2 Bg7 5.Nc3 O-O"
   ],
   "rnbq1rk1/ppppp1bp/5np1/5p2/2PP4/2N3PN/PP2PPBP/R1BQK2R b KQ - 5 6": [
     "A86",
-    "Dutch Defense: Leningrad Variation, 4.Bg2 Bg7 5.Nc3 O-O 6.Nh3"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, 4.Bg2 Bg7 5.Nc3 O-O 6.Nh3"
   ],
   "rnbqk2r/ppp1p1bp/3p1np1/5p2/2PP4/2N3P1/PP2PPBP/R1BQK1NR w KQkq - 0 6": [
     "A86",
-    "Dutch Defense: Leningrad Variation, 4.Bg2 Bg7 5.Nc3 d6"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, 4.Bg2 Bg7 5.Nc3 d6"
   ],
   "rnbqk2r/ppp1p1bp/3p1np1/5p2/2PP4/2N3PN/PP2PPBP/R1BQK2R b KQkq - 1 6": [
     "A86",
-    "Dutch Defense: Leningrad Variation, 4.Bg2 Bg7 5.Nc3 d6 6.Nh3"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, 4.Bg2 Bg7 5.Nc3 d6 6.Nh3"
   ],
   "rnbqk2r/ppp1p1bp/3p1np1/3P1p2/2P5/2N3P1/PP2PPBP/R1BQK1NR b KQkq - 0 6": [
     "A86",
-    "Dutch Defense: Leningrad Variation, 4.Bg2 Bg7 5.Nc3 d6 6.d5"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, 4.Bg2 Bg7 5.Nc3 d6 6.d5"
   ],
   "rnbqk2r/ppppp1bp/5np1/5p2/2PP4/6PN/PP2PPBP/RNBQK2R b KQkq - 3 5": [
     "A86",
-    "Dutch Defense: Leningrad Variation, 4.Bg2 Bg7 5.Nh3"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, 4.Bg2 Bg7 5.Nh3"
   ],
   "rnbqkb1r/ppp1p2p/3p1np1/5p2/2PP4/6P1/PP2PPBP/RNBQK1NR w KQkq - 0 5": [
     "A86",
-    "Dutch Defense: Leningrad Variation, 4.Bg2 d6"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, 4.Bg2 d6"
   ],
   "rnbqkb1r/ppppp2p/5np1/5p2/2PP4/2N3P1/PP2PP1P/R1BQKBNR b KQkq - 1 4": [
     "A86",
-    "Dutch Defense: Leningrad Variation, 4.Nc3"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, 4.Nc3"
   ],
   "rnbqk2r/ppppp1bp/5np1/5p2/2PP4/2N3P1/PP2PP1P/R1BQKBNR w KQkq - 2 5": [
     "A86",
-    "Dutch Defense: Leningrad Variation, 4.Nc3 Bg7"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, 4.Nc3 Bg7"
   ],
   "rnbqkb1r/ppppp2p/5np1/5p2/2PP4/5NP1/PP2PP1P/RNBQKB1R b KQkq - 1 4": [
     "A86",
-    "Dutch Defense: Leningrad Variation, 4.Nf3"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, 4.Nf3"
   ],
   "rnbqk2r/ppppp1bp/5np1/5p2/2PP4/5NP1/PP2PP1P/RNBQKB1R w KQkq - 2 5": [
     "A86",
-    "Dutch Defense: Leningrad Variation, 4.Nf3 Bg7"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, 4.Nf3 Bg7"
   ],
   "rnbqk2r/ppppp1bp/5np1/5p2/2PP4/2N2NP1/PP2PP1P/R1BQKB1R b KQkq - 3 5": [
     "A86",
-    "Dutch Defense: Leningrad Variation, 4.Nf3 Bg7 5.Nc3"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, 4.Nf3 Bg7 5.Nc3"
   ],
   "rnbqk2r/ppppp1bp/5np1/5p2/2PP4/5NP1/PP2PPBP/RNBQK2R b KQkq - 3 5": [
     "A87",
-    "Dutch Defense: Leningrad Variation"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation"
   ],
   "rnbq1rk1/ppppp1bp/5np1/5p2/2PP4/5NP1/PP2PPBP/RNBQK2R w KQ - 4 6": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 5...O-O"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 5...O-O"
   ],
   "rnbqk2r/ppp1p1bp/3p1np1/5p2/2PP4/5NP1/PP2PPBP/RNBQK2R w KQkq - 0 6": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 5...d6"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 5...d6"
   ],
   "rnbqk2r/ppp1p1bp/3p1np1/5p2/2PP4/2N2NP1/PP2PPBP/R1BQK2R b KQkq - 1 6": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 5...d6 6.Nc3"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 5...d6 6.Nc3"
   ],
   "rnbq1rk1/pp1pp1bp/2p2np1/5p2/2PP4/5NP1/PP2PPBP/RNBQ1RK1 w - - 0 7": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 6...c6"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 6...c6"
   ],
   "rnbq1rk1/ppp1p1bp/3p1np1/5p2/2PP4/5NP1/PP2PPBP/RNBQ1RK1 w - - 0 7": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 6...d6"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 6...d6"
   ],
   "rnbq1rk1/ppppp1bp/5np1/5p2/2PP4/2N2NP1/PP2PPBP/R1BQK2R b KQ - 5 6": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 6.Nc3"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 6.Nc3"
   ],
   "rnbq1rk1/ppp1p1bp/3p1np1/5p2/2PP4/2N2NP1/PP2PPBP/R1BQK2R w KQ - 0 7": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 6.Nc3 d6"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 6.Nc3 d6"
   ],
   "rnbq1rk1/ppppp1bp/5np1/5p2/2PP4/5NP1/PP2PPBP/RNBQ1RK1 b - - 5 6": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 6.O-O"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 6.O-O"
   ],
   "rnbq1rk1/ppp1p1bp/3p1np1/5p2/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 b - - 1 7": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3"
   ],
   "r1bq1rk1/ppp1p1bp/n2p1np1/5p2/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 2 8": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 Na6"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 Na6"
   ],
   "rnb1qrk1/ppp1p1bp/3p1np1/5p2/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 2 8": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 Qe8"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 Qe8"
   ],
   "rnb1qrk1/ppp1p1bp/3p1np1/3N1p2/2PP4/5NP1/PP2PPBP/R1BQ1RK1 b - - 3 8": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 Qe8 8.Nd5"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 Qe8 8.Nd5"
   ],
   "rnb1qrk1/ppp1p1bp/3p1np1/5p2/2PP4/2N2NP1/PP2PPBP/R1BQR1K1 b - - 3 8": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 Qe8 8.Re1"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 Qe8 8.Re1"
   ],
   "rnb1qrk1/ppp1p1bp/3p1np1/5p2/2PP4/1PN2NP1/P3PPBP/R1BQ1RK1 b - - 0 8": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 Qe8 8.b3"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 Qe8 8.b3"
   ],
   "rnb1qrk1/ppp1p1bp/3p1np1/3P1p2/2P5/2N2NP1/PP2PPBP/R1BQ1RK1 b - - 0 8": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 Qe8 8.d5"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 Qe8 8.d5"
   ],
   "r1b1qrk1/ppp1p1bp/n2p1np1/3P1p2/2P5/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 1 9": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 Qe8 8.d5 Na6"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 Qe8 8.d5 Na6"
   ],
   "r1b1qrk1/ppp1p1bp/n2p1np1/3P1p2/2P5/2N2NP1/PP2PPBP/1RBQ1RK1 b - - 2 9": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 Qe8 8.d5 Na6 9.Rb1"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 Qe8 8.d5 Na6 9.Rb1"
   ],
   "rnb1qrk1/1pp1p1bp/3p1np1/p2P1p2/2P5/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 0 9": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 Qe8 8.d5 a5"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 Qe8 8.d5 a5"
   ],
   "rnbq1rk1/ppp3bp/3ppnp1/5p2/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 0 8": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 e6"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 e6"
   ],
   "rnbq1rk1/ppp1p1bp/3p1np1/5p2/2PP4/1P3NP1/P3PPBP/RNBQ1RK1 b - - 0 7": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.b3"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.b3"
   ],
   "rnbq1rk1/pp2p1bp/2pp1np1/5p2/2PP4/1P3NP1/P3PPBP/RNBQ1RK1 w - - 0 8": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.b3 c6"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.b3 c6"
   ],
   "rnbq1rk1/ppp1p1bp/3p1np1/3P1p2/2P5/5NP1/PP2PPBP/RNBQ1RK1 b - - 0 7": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.d5"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.d5"
   ],
   "rnbq1rk1/pp2p1bp/3p1np1/2pP1p2/2P5/5NP1/PP2PPBP/RNBQ1RK1 w - c6 0 8": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.d5 c5"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.d5 c5"
   ],
   "rnbq1rk1/pp2p1bp/2pp1np1/3P1p2/2P5/5NP1/PP2PPBP/RNBQ1RK1 w - - 0 8": [
     "A87",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.d5 c6"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.d5 c6"
   ],
   "rnbq1rk1/pp2p1bp/2pp1np1/5p2/2PP4/2N2NP1/PPQ1PPBP/R1B2RK1 b - - 1 8": [
     "A88",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 c6 8.Qc2"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 c6 8.Qc2"
   ],
   "rnbq1rk1/pp2p1bp/2pp1np1/5p2/2PP4/2N2NP1/PP2PPBP/R1BQR1K1 b - - 1 8": [
     "A88",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 c6 8.Re1"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 c6 8.Re1"
   ],
   "rnbq1rk1/pp2p1bp/2pp1np1/5p2/2PP4/1PN2NP1/P3PPBP/R1BQ1RK1 b - - 0 8": [
     "A88",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 c6 8.b3"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 c6 8.b3"
   ],
   "r1bq1rk1/pp2p1bp/n1pp1np1/5p2/2PP4/1PN2NP1/P3PPBP/R1BQ1RK1 w - - 1 9": [
     "A88",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 c6 8.b3 Na6"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 c6 8.b3 Na6"
   ],
   "rnb2rk1/pp2p1bp/2pp1np1/q4p2/2PP4/1PN2NP1/P3PPBP/R1BQ1RK1 w - - 1 9": [
     "A88",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 c6 8.b3 Qa5"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 c6 8.b3 Qa5"
   ],
   "rnb1qrk1/pp2p1bp/2pp1np1/5p2/2PP4/1PN2NP1/P3PPBP/R1BQ1RK1 w - - 1 9": [
     "A88",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 c6 8.b3 Qe8"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 c6 8.b3 Qe8"
   ],
   "rnbq1rk1/pp2p1bp/2pp1np1/3P1p2/2P5/2N2NP1/PP2PPBP/R1BQ1RK1 b - - 0 8": [
     "A88",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 c6 8.d5"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 c6 8.d5"
   ],
   "rn1q1rk1/pp1bp1bp/2pp1np1/3P1p2/2P5/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 1 9": [
     "A88",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 c6 8.d5 Bd7"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 c6 8.d5 Bd7"
   ],
   "rnb2rk1/pp2p1bp/2pp1np1/q2P1p2/2P5/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 1 9": [
     "A88",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 c6 8.d5 Qa5"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 c6 8.d5 Qa5"
   ],
   "rnb1qrk1/pp2p1bp/2pp1np1/3P1p2/2P5/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 1 9": [
     "A88",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 c6 8.d5 Qe8"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 c6 8.d5 Qe8"
   ],
   "rnbq1rk1/pp2p1bp/3p1np1/3p1p2/2P5/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 0 9": [
     "A88",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 c6 8.d5 cxd5"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 c6 8.d5 cxd5"
   ],
   "rnbq1rk1/pp4bp/2pp1np1/3Ppp2/2P5/2N2NP1/PP2PPBP/R1BQ1RK1 w - e6 0 9": [
     "A88",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 c6 8.d5 e5"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 c6 8.d5 e5"
   ],
   "rn1q1rk1/pp4bp/2ppbnp1/5p2/2P5/2NQ1NP1/PP2PPBP/R1B2RK1 b - - 1 10": [
     "A88",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 c6 8.d5 e5 9.dxe6 Bxe6 10.Qd3"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 c6 8.d5 e5 9.dxe6 Bxe6 10.Qd3"
   ],
   "rn1q1rk1/pp4bp/2ppbnp1/5p2/2P5/1PN2NP1/P3PPBP/R1BQ1RK1 b - - 0 10": [
     "A88",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 c6 8.d5 e5 9.dxe6 Bxe6 10.b3"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 c6 8.d5 e5 9.dxe6 Bxe6 10.b3"
   ],
   "rnbq1rk1/pp2p1bp/2pp1np1/5p2/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 0 8": [
     "A88",
-    "Dutch Defense: Leningrad Variation, Warsaw Variation"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Warsaw Variation"
   ],
   "r1bq1rk1/ppp1p1bp/2np1np1/5p2/2PP4/1PN2NP1/P3PPBP/R1BQ1RK1 b - - 0 8": [
     "A89",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 Nc6 8.b3"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 Nc6 8.b3"
   ],
   "r1bq1rk1/ppp1p1bp/2np1np1/3P1p2/2P5/2N2NP1/PP2PPBP/R1BQ1RK1 b - - 0 8": [
     "A89",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 Nc6 8.d5"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 Nc6 8.d5"
   ],
   "r1bq1rk1/ppp1p1bp/3p1np1/n2P1p2/2P5/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 1 9": [
     "A89",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 Nc6 8.d5 Na5"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 Nc6 8.d5 Na5"
   ],
   "r1bq1rk1/ppp1p1bp/3p1np1/n2P1p2/2P5/2N3P1/PP1NPPBP/R1BQ1RK1 b - - 2 9": [
     "A89",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 Nc6 8.d5 Na5 9.Nd2"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 Nc6 8.d5 Na5 9.Nd2"
   ],
   "r1bq1rk1/ppp1p1bp/3p1np1/n2P1p2/2P5/2NQ1NP1/PP2PPBP/R1B2RK1 b - - 2 9": [
     "A89",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 Nc6 8.d5 Na5 9.Qd3"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 Nc6 8.d5 Na5 9.Qd3"
   ],
   "r1bq1rk1/ppp1p1bp/3p1np1/3Pnp2/2P5/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 1 9": [
     "A89",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 Nc6 8.d5 Ne5"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 Nc6 8.d5 Ne5"
   ],
   "r1bq1rk1/ppp1p1bp/3p1np1/3PNp2/2P5/2N3P1/PP2PPBP/R1BQ1RK1 b - - 0 9": [
     "A89",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 Nc6 8.d5 Ne5 9.Nxe5"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 Nc6 8.d5 Ne5 9.Nxe5"
   ],
   "r1bq1rk1/ppp1p1bp/5np1/3Ppp2/2P5/1QN3P1/PP2PPBP/R1B2RK1 b - - 1 10": [
     "A89",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 Nc6 8.d5 Ne5 9.Nxe5 dxe5 10.Qb3"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 Nc6 8.d5 Ne5 9.Nxe5 dxe5 10.Qb3"
   ],
   "r1bq1rk1/ppp1p1bp/5np1/3Ppp2/2P1P3/2N3P1/PP3PBP/R1BQ1RK1 b - - 0 10": [
     "A89",
-    "Dutch Defense: Leningrad Variation, Main Line, 7.Nc3 Nc6 8.d5 Ne5 9.Nxe5 dxe5 10.e4"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Main Line, 7.Nc3 Nc6 8.d5 Ne5 9.Nxe5 dxe5 10.e4"
   ],
   "r1bq1rk1/ppp1p1bp/2np1np1/5p2/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 2 8": [
     "A89",
-    "Dutch Defense: Leningrad Variation, Matulović Variation"
+    "Queen's Pawn Opening: Dutch Defense, Leningrad Variation, Matulović Variation"
   ],
   "rnbqkb1r/pppp2pp/4pn2/5p2/2PP4/6P1/PP2PP1P/RNBQKBNR w KQkq - 0 4": [
     "A90",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6"
   ],
   "rnbqkb1r/pp1p2pp/2p1pn2/5p2/2PP4/6P1/PP2PPBP/RNBQK1NR w KQkq - 0 5": [
     "A90",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 c6"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 c6"
   ],
   "rnbqkb1r/pp1p2pp/2p1pn2/5p2/2PP4/5NP1/PP2PPBP/RNBQK2R b KQkq - 1 5": [
     "A90",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 c6 5.Nf3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 c6 5.Nf3"
   ],
   "rnbqkb1r/pp4pp/2p1pn2/3p1p2/2PP4/5NP1/PP2PPBP/RNBQK2R w KQkq - 0 6": [
     "A90",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 c6 5.Nf3 d5"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 c6 5.Nf3 d5"
   ],
   "rnbqkb1r/pp1p2pp/2p1pn2/5p2/2PP4/6PN/PP2PPBP/RNBQK2R b KQkq - 1 5": [
     "A90",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 c6 5.Nh3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 c6 5.Nh3"
   ],
   "rnbqkb1r/ppp3pp/4pn2/3p1p2/2PP4/6P1/PP2PPBP/RNBQK1NR w KQkq - 0 5": [
     "A90",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 d5"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 d5"
   ],
   "rnbqkb1r/ppp3pp/4pn2/3p1p2/2PP4/5NP1/PP2PPBP/RNBQK2R b KQkq - 1 5": [
     "A90",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 d5 5.Nf3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 d5 5.Nf3"
   ],
   "rnbqkb1r/ppp3pp/4pn2/3p1p2/2PP4/6PN/PP2PPBP/RNBQK2R b KQkq - 1 5": [
     "A90",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 d5 5.Nh3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 d5 5.Nh3"
   ],
   "rnbqkb1r/pppp2pp/4pn2/5p2/2PP4/2N3P1/PP2PP1P/R1BQKBNR b KQkq - 1 4": [
     "A90",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Nc3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Nc3"
   ],
   "rnbqkb1r/ppp3pp/4pn2/3p1p2/2PP4/2N3P1/PP2PP1P/R1BQKBNR w KQkq - 0 5": [
     "A90",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Nc3 d5"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Nc3 d5"
   ],
   "rnbqkb1r/pppp2pp/4pn2/5p2/2PP4/5NP1/PP2PP1P/RNBQKB1R b KQkq - 1 4": [
     "A90",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Nf3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Nf3"
   ],
   "rnbqkb1r/ppp3pp/4pn2/3p1p2/2PP4/5NP1/PP2PP1P/RNBQKB1R w KQkq - 0 5": [
     "A90",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Nf3 d5"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Nf3 d5"
   ],
   "rnbqkb1r/pp4pp/2p1pn2/3p1p2/2PP4/2N2NP1/PP2PPBP/R1BQK2R b KQkq - 1 6": [
     "A90",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 5.Nf3 d5 6.Nc3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 5.Nf3 d5 6.Nc3"
   ],
   "rnbqkb1r/pp4pp/2p1pn2/3p1p2/2PP4/5NP1/PP2PPBP/RNBQ1RK1 b kq - 1 6": [
     "A90",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 5.Nf3 d5 6.O-O"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 5.Nf3 d5 6.O-O"
   ],
   "rnbqk2r/pp4pp/2pbpn2/3p1p2/2PP4/1P3NP1/P3PPBP/RNBQ1RK1 b kq - 0 7": [
     "A90",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 5.Nf3 d5 6.O-O Bd6 7.b3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 5.Nf3 d5 6.O-O Bd6 7.b3"
   ],
   "rnbqkb1r/pp4pp/2p1pn2/3p1p2/2PP4/5NP1/PPQ1PPBP/RNB1K2R b KQkq - 1 6": [
     "A90",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 5.Nf3 d5 6.Qc2"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 5.Nf3 d5 6.Qc2"
   ],
   "rnbqk2r/pp4pp/2pbpn2/3p1p2/2PP4/5NP1/PPQ1PPBP/RNB1K2R w KQkq - 2 7": [
     "A90",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 5.Nf3 d5 6.Qc2 Bd6"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 5.Nf3 d5 6.Qc2 Bd6"
   ],
   "rnbqkb1r/pppp2pp/4pn2/5p2/2PP4/6P1/PP2PPBP/RNBQK1NR b KQkq - 1 4": [
     "A90",
-    "Dutch Defense: Classical Variation"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation"
   ],
   "rnbqkb1r/pppp2pp/4pn2/5p2/2PP4/6P1/PP2PPBP/RNBQK1NR b KQkq - 2 4": [
     "A90",
-    "Dutch Defense: Classical Variation, 3.g3 Nf6 4.Bg2"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation, 3.g3 Nf6 4.Bg2"
   ],
   "rnbqk2r/pppp2pp/4pn2/5p2/1bPP4/6P1/PP1BPPBP/RN1QK1NR b KQkq - 3 5": [
     "A90",
-    "Dutch Defense: Dutch-Indian Variation, 5.Bd2"
+    "Queen's Pawn Opening: Dutch Defense, Dutch-Indian Variation, 5.Bd2"
   ],
   "rnbqk2r/pppp2pp/4pn2/5p2/1bPP4/2N3P1/PP2PPBP/R1BQK1NR b KQkq - 3 5": [
     "A90",
-    "Dutch Defense: Dutch-Indian Variation, 5.Nc3"
+    "Queen's Pawn Opening: Dutch Defense, Dutch-Indian Variation, 5.Nc3"
   ],
   "rnbqk2r/pppp2pp/4pn2/5p2/1bPP4/6P1/PP1NPPBP/R1BQK1NR b KQkq - 3 5": [
     "A90",
-    "Dutch Defense: Dutch-Indian Variation, 5.Nd2"
+    "Queen's Pawn Opening: Dutch Defense, Dutch-Indian Variation, 5.Nd2"
   ],
   "rnbqk2r/pppp2pp/4pn2/5p2/1bPP4/6P1/PP2PPBP/RNBQK1NR w KQkq - 2 5": [
     "A90",
-    "Dutch Defense: Nimzo-Dutch Variation"
+    "Queen's Pawn Opening: Dutch Defense, Nimzo-Dutch Variation"
   ],
   "rnbqk2r/pppp2pp/4pn2/5p2/1bPP4/6P1/PP2PPBP/RNBQK1NR w KQkq - 3 5": [
     "A90",
-    "Dutch Defense: Nimzo-Dutch Variation"
+    "Queen's Pawn Opening: Dutch Defense, Nimzo-Dutch Variation"
   ],
   "rnbqk2r/ppppb1pp/4pn2/5p2/2PP4/6P1/PP1BPPBP/RN1QK1NR w KQkq - 4 6": [
     "A90",
-    "Dutch Defense: Nimzo-Dutch Variation, Alekhine Variation"
+    "Queen's Pawn Opening: Dutch Defense, Nimzo-Dutch Variation, Alekhine Variation"
   ],
   "rnbqk2r/ppppb1pp/4pn2/5p2/2PP4/6P1/PP1BPPBP/RN1QK1NR w KQkq - 5 6": [
     "A90",
-    "Dutch Defense: Nimzo-Dutch Variation, Alekhine Variation"
+    "Queen's Pawn Opening: Dutch Defense, Nimzo-Dutch Variation, Alekhine Variation"
   ],
   "rnbqk2r/pp4pp/2pbpn2/3p1p2/2PP4/5NP1/PP2PPBP/RNBQ1RK1 w kq - 0 7": [
     "A90",
-    "Dutch Defense: Stonewall Variation, Modern Variation"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, Modern Variation"
   ],
   "rnbqk2r/pp4pp/2pbpn2/3p1p2/2PP4/5NP1/PP2PPBP/RNBQ1RK1 w kq - 2 7": [
     "A90",
-    "Dutch Defense: Stonewall Variation, Modern Variation"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, Modern Variation"
   ],
   "rnbqk2r/ppppb1pp/4pn2/5p2/2PP4/2N3P1/PP2PPBP/R1BQK1NR b KQkq - 3 5": [
     "A91",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nc3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nc3"
   ],
   "rnbq1rk1/ppppb1pp/4pn2/5p2/2PP4/2N3P1/PP2PPBP/R1BQK1NR w KQ - 4 6": [
     "A91",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nc3 O-O"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nc3 O-O"
   ],
   "rnbqk2r/ppp1b1pp/4pn2/3p1p2/2PP4/2N3P1/PP2PPBP/R1BQK1NR w KQkq - 0 6": [
     "A91",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nc3 d5"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nc3 d5"
   ],
   "rnbqk2r/ppppb1pp/4pn2/5p2/2PP4/5NP1/PP2PPBP/RNBQK2R b KQkq - 3 5": [
     "A91",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3"
   ],
   "rnbqk2r/ppp1b1pp/4pn2/3p1p2/2PP4/5NP1/PP2PPBP/RNBQK2R w KQkq - 0 6": [
     "A91",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 d5"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 d5"
   ],
   "rnbqk2r/ppp1b1pp/4pn2/3p1p2/2PP4/5NP1/PP2PPBP/RNBQ1RK1 b kq - 1 6": [
     "A91",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 d5 6.O-O"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 d5 6.O-O"
   ],
   "rnbqk2r/pp2b1pp/2p1pn2/3p1p2/2PP4/5NP1/PP2PPBP/RNBQ1RK1 w kq - 0 7": [
     "A91",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 d5 6.O-O c6"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 d5 6.O-O c6"
   ],
   "rnbqk2r/ppp1b1pp/3ppn2/5p2/2PP4/5NP1/PP2PPBP/RNBQK2R w KQkq - 0 6": [
     "A91",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 d6"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 d6"
   ],
   "rnbqk2r/ppp1b1pp/3ppn2/5p2/2PP4/2N2NP1/PP2PPBP/R1BQK2R b KQkq - 1 6": [
     "A91",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 d6 6.Nc3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 d6 6.Nc3"
   ],
   "rnbq1rk1/ppppb1pp/4pn2/5p2/2PP4/6PN/PP2PPBP/RNBQ1RK1 b - - 5 6": [
     "A91",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nh3 O-O 6.O-O"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nh3 O-O 6.O-O"
   ],
   "rnbq1rk1/ppp1b1pp/3ppn2/5p2/2PP4/6PN/PP2PPBP/RNBQ1RK1 w - - 0 7": [
     "A91",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nh3 O-O 6.O-O d6"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nh3 O-O 6.O-O d6"
   ],
   "rnbq1rk1/ppp1b1pp/3ppn2/5p2/2PP4/2N3PN/PP2PPBP/R1BQ1RK1 b - - 1 7": [
     "A91",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nh3 O-O 6.O-O d6 7.Nc3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nh3 O-O 6.O-O d6 7.Nc3"
   ],
   "rnb1qrk1/ppp1b1pp/3ppn2/5p2/2PP4/2N3PN/PP2PPBP/R1BQ1RK1 w - - 2 8": [
     "A91",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nh3 O-O 6.O-O d6 7.Nc3 Qe8"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nh3 O-O 6.O-O d6 7.Nc3 Qe8"
   ],
   "rnbq1rk1/pp2b1pp/2pppn2/5p2/2PP4/2N3PN/PP2PPBP/R1BQ1RK1 w - - 0 8": [
     "A91",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nh3 O-O 6.O-O d6 7.Nc3 c6"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nh3 O-O 6.O-O d6 7.Nc3 c6"
   ],
   "rnbq1rk1/ppppb1pp/4pn2/5p2/2PP4/2N1P1P1/PP3PBP/R1BQK1NR b KQ - 0 6": [
     "A91",
-    "Dutch Defense: Botvinnik-Bronstein Variation"
+    "Queen's Pawn Opening: Dutch Defense, Botvinnik-Bronstein Variation"
   ],
   "rnbqk2r/ppppb1pp/4pn2/5p2/2PP4/6P1/PP2PPBP/RNBQK1NR w KQkq - 2 5": [
     "A91",
-    "Dutch Defense: Classical Variation"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation"
   ],
   "rnbqk2r/ppppb1pp/4pn2/5p2/2PP4/6P1/PP2PPBP/RNBQK1NR w KQkq - 3 5": [
     "A91",
-    "Dutch Defense: Classical Variation, 3.g3 Nf6 4.Bg2 Be7"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation, 3.g3 Nf6 4.Bg2 Be7"
   ],
   "rnbqk2r/ppppb1pp/4pn2/5p2/2PP4/6PN/PP2PPBP/RNBQK2R b KQkq - 3 5": [
     "A91",
-    "Dutch Defense: Classical Variation, Blackburne Attack"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation, Blackburne Attack"
   ],
   "rnbqk2r/ppppb1pp/4pn2/5p2/2PP4/6PN/PP2PPBP/RNBQK2R b KQkq - 4 5": [
     "A91",
-    "Dutch Defense: Classical Variation, Blackburne Attack"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation, Blackburne Attack"
   ],
   "rnbq1rk1/ppppb1pp/4pn2/5p2/2PP4/2N2NP1/PP2PPBP/R1BQK2R b KQ - 5 6": [
     "A92",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 O-O 6.Nc3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 O-O 6.Nc3"
   ],
   "rnbq1rk1/ppp1b1pp/3ppn2/5p2/2PP4/2N2NP1/PP2PPBP/R1BQK2R w KQ - 0 7": [
     "A92",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 O-O 6.Nc3 d6"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 O-O 6.Nc3 d6"
   ],
   "rnbq1rk1/ppppb1pp/4pn2/5p2/2PP4/5NP1/PP2PPBP/RNBQ1RK1 b - - 5 6": [
     "A92",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 O-O 6.O-O"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 O-O 6.O-O"
   ],
   "rnbq1rk1/pp1pb1pp/2p1pn2/5p2/2PP4/5NP1/PP2PPBP/RNBQ1RK1 w - - 0 7": [
     "A92",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 O-O 6.O-O c6"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 O-O 6.O-O c6"
   ],
   "rnbq1rk1/pp1pb1pp/2p1pn2/5p2/2PP4/1P3NP1/P3PPBP/RNBQ1RK1 b - - 0 7": [
     "A92",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 O-O 6.O-O c6 7.b3"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 O-O 6.O-O c6 7.b3"
   ],
   "rnbq1rk1/1p1pb1pp/2p1pn2/p4p2/2PP4/1P3NP1/P3PPBP/RNBQ1RK1 w - - 0 8": [
     "A92",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 O-O 6.O-O c6 7.b3 a5"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 O-O 6.O-O c6 7.b3 a5"
   ],
   "rnbq1rk1/ppppb1pp/4pn2/3P1p2/2P5/5NP1/PP2PPBP/RNBQK2R b KQ - 0 6": [
     "A92",
-    "Dutch Defense: 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 O-O 6.d5"
+    "Queen's Pawn Opening: Dutch Defense, 2.c4 Nf6 3.g3 e6 4.Bg2 Be7 5.Nf3 O-O 6.d5"
   ],
   "rnbq1rk1/ppppb1pp/4p3/5p2/2PPn3/5NP1/PP2PPBP/RNBQ1RK1 w - - 6 7": [
     "A92",
-    "Dutch Defense: Alekhine Variation"
+    "Queen's Pawn Opening: Dutch Defense, Alekhine Variation"
   ],
   "rnbq1rk1/ppppb1pp/4p3/5p2/2PPn3/5NP1/PP2PPBP/RNBQ1RK1 w - - 7 7": [
     "A92",
-    "Dutch Defense: Alekhine Variation"
+    "Queen's Pawn Opening: Dutch Defense, Alekhine Variation"
   ],
   "rnbq1rk1/ppppb1pp/4p3/5p2/2PPn3/5NP1/PP1NPPBP/R1BQ1RK1 b - - 7 7": [
     "A92",
-    "Dutch Defense: Alekhine Variation, 7.Nbd2"
+    "Queen's Pawn Opening: Dutch Defense, Alekhine Variation, 7.Nbd2"
   ],
   "rnbq1rk1/ppppb1pp/4p3/3P1p2/2P1n3/5NP1/PP2PPBP/RNBQ1RK1 b - - 0 7": [
     "A92",
-    "Dutch Defense: Alekhine Variation, 7.d5"
+    "Queen's Pawn Opening: Dutch Defense, Alekhine Variation, 7.d5"
   ],
   "rnbq1rk1/ppppb1pp/4pn2/5p2/2PP4/5NP1/PP2PPBP/RNBQK2R w KQ - 4 6": [
     "A92",
-    "Dutch Defense: Classical Variation"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation"
   ],
   "rnbq1rk1/ppppb1pp/4pn2/5p2/2PP4/5NP1/PP2PPBP/RNBQK2R w KQ - 5 6": [
     "A92",
-    "Dutch Defense: Classical Variation, 4.Bg2 Be7 5.Nf3 O-O"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation, 4.Bg2 Be7 5.Nf3 O-O"
   ],
   "rnbq1rk1/ppp1b1pp/4pn2/3p1p2/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 b - - 1 7": [
     "A92",
-    "Dutch Defense: Stonewall Variation"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation"
   ],
   "rnbq1rk1/ppp1b1pp/4pn2/3p1p2/2PP4/5NP1/PP2PPBP/RNBQ1RK1 w - - 0 7": [
     "A92",
-    "Dutch Defense: Stonewall Variation"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation"
   ],
   "rnbq1rk1/ppp1b1pp/4pn2/3p1p2/2PP4/5NP1/PP2PPBP/RNBQ1RK1 w - - 2 7": [
     "A92",
-    "Dutch Defense: Stonewall Variation"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation"
   ],
   "rnbq1rk1/ppp1b1pp/4pn2/3p1p2/2PP4/5NP1/PP1NPPBP/R1BQ1RK1 b - - 1 7": [
     "A92",
-    "Dutch Defense: Stonewall Variation, 7.Nbd2"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, 7.Nbd2"
   ],
   "rnbq1rk1/pp2b1pp/2p1pn2/3p1p2/2PP4/5NP1/PP1NPPBP/R1BQ1RK1 w - - 0 8": [
     "A92",
-    "Dutch Defense: Stonewall Variation, 7.Nbd2 c6"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, 7.Nbd2 c6"
   ],
   "rnbq1rk1/ppp1b1pp/4pn2/3p1p2/2PP4/5NP1/PPQ1PPBP/RNB2RK1 b - - 1 7": [
     "A92",
-    "Dutch Defense: Stonewall Variation, 7.Qc2"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, 7.Qc2"
   ],
   "rnbq1rk1/pp2b1pp/2p1pn2/3p1p2/2PP4/5NP1/PPQ1PPBP/RNB2RK1 w - - 0 8": [
     "A92",
-    "Dutch Defense: Stonewall Variation, 7.Qc2 c6"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, 7.Qc2 c6"
   ],
   "rnbq1rk1/pp2b1pp/2p1pn2/3p1p2/2PP4/5NP1/PPQNPPBP/R1B2RK1 b - - 1 8": [
     "A92",
-    "Dutch Defense: Stonewall Variation, 7.Qc2 c6 8.Nbd2"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, 7.Qc2 c6 8.Nbd2"
   ],
   "rnbq1rk1/ppp1b1pp/4pn2/3p1p2/2PP4/1P3NP1/P3PPBP/RNBQ1RK1 b - - 0 7": [
     "A93",
-    "Dutch Defense: Stonewall Variation, Botvinnik Variation"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, Botvinnik Variation"
   ],
   "r1bq1rk1/ppp1b1pp/2n1pn2/3p1p2/2PP4/1P3NP1/P3PPBP/RNBQ1RK1 w - - 1 8": [
     "A93",
-    "Dutch Defense: Stonewall Variation, Botvinnik Variation, 7...Nc6"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, Botvinnik Variation, 7...Nc6"
   ],
   "rnbq1rk1/p1p1b1pp/1p2pn2/3p1p2/2PP4/1P3NP1/P3PPBP/RNBQ1RK1 w - - 0 8": [
     "A93",
-    "Dutch Defense: Stonewall Variation, Botvinnik Variation, 7...b6"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, Botvinnik Variation, 7...b6"
   ],
   "rnbq1rk1/pp2b1pp/2p1pn2/3p1p2/2PP4/1P3NP1/P3PPBP/RNBQ1RK1 w - - 0 8": [
     "A93",
-    "Dutch Defense: Stonewall Variation, Botvinnik Variation, 7...c6"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, Botvinnik Variation, 7...c6"
   ],
   "rnbq1rk1/pp2b1pp/2p1pn2/3p1p2/2PP4/1P3NP1/PB2PPBP/RN1Q1RK1 b - - 1 8": [
     "A93",
-    "Dutch Defense: Stonewall Variation, Botvinnik Variation, 8.Bb2"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, Botvinnik Variation, 8.Bb2"
   ],
   "rnbq1rk1/pp2b1pp/2p1pn2/3p1p2/2PP4/1P3NP1/P1Q1PPBP/RNB2RK1 b - - 1 8": [
     "A93",
-    "Dutch Defense: Stonewall Variation, Botvinnik Variation, 8.Qc2"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, Botvinnik Variation, 8.Qc2"
   ],
   "rnbq1rk1/pp2b1pp/2p1p3/3p1p2/2PPn3/1P3NP1/P1Q1PPBP/RNB2RK1 w - - 2 9": [
     "A93",
-    "Dutch Defense: Stonewall Variation, Botvinnik Variation, 8.Qc2 Ne4"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, Botvinnik Variation, 8.Qc2 Ne4"
   ],
   "rnbq1rk1/pp2b1pp/2p1pn2/3p1p2/2PP4/BP3NP1/P3PPBP/RN1Q1RK1 b - - 1 8": [
     "A94",
-    "Dutch Defense: Stonewall Variation"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation"
   ],
   "rn1q1rk1/pp1bb1pp/2p1pn2/3p1p2/2PP4/BP3NP1/P3PPBP/RN1Q1RK1 w - - 2 9": [
     "A94",
-    "Dutch Defense: Stonewall Variation, Botvinnik Variation, 8.Ba3 Bd7"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, Botvinnik Variation, 8.Ba3 Bd7"
   ],
   "rnbq1rk1/pp4pp/2p1pn2/3p1p2/2PP4/bP3NP1/P3PPBP/RN1Q1RK1 w - - 0 9": [
     "A94",
-    "Dutch Defense: Stonewall Variation, Botvinnik Variation, 8.Ba3 Bxa3"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, Botvinnik Variation, 8.Ba3 Bxa3"
   ],
   "rnbq1rk1/pp4pp/2p1pn2/3p1p2/2PP4/NP3NP1/P3PPBP/R2Q1RK1 b - - 0 9": [
     "A94",
-    "Dutch Defense: Stonewall Variation, Botvinnik Variation, 8.Ba3 Bxa3 9.Nxa3"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, Botvinnik Variation, 8.Ba3 Bxa3 9.Nxa3"
   ],
   "r1bq1rk1/pp1n2pp/2p1pn2/3p1p2/2PP4/NP3NP1/P3PPBP/R2Q1RK1 w - - 1 10": [
     "A94",
-    "Dutch Defense: Stonewall Variation, Botvinnik Variation, 8.Ba3 Bxa3 9.Nxa3 Nbd7"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, Botvinnik Variation, 8.Ba3 Bxa3 9.Nxa3 Nbd7"
   ],
   "rnb2rk1/pp2q1pp/2p1pn2/3p1p2/2PP4/NP3NP1/P3PPBP/R2Q1RK1 w - - 1 10": [
     "A94",
-    "Dutch Defense: Stonewall Variation, Botvinnik Variation, 8.Ba3 Bxa3 9.Nxa3 Qe7"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, Botvinnik Variation, 8.Ba3 Bxa3 9.Nxa3 Qe7"
   ],
   "rnb2rk1/pp2q1pp/2p1pn2/3p1p2/2PP4/NP3NP1/P3PPBP/R1Q2RK1 b - - 2 10": [
     "A94",
-    "Dutch Defense: Stonewall Variation, Botvinnik Variation, 8.Ba3 Bxa3 9.Nxa3 Qe7 10.Qc1"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, Botvinnik Variation, 8.Ba3 Bxa3 9.Nxa3 Qe7 10.Qc1"
   ],
   "r1bq1rk1/pp1nb1pp/2p1pn2/3p1p2/2PP4/BP3NP1/P3PPBP/RN1Q1RK1 w - - 2 9": [
     "A94",
-    "Dutch Defense: Stonewall Variation, Botvinnik Variation, 8.Ba3 Nbd7"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, Botvinnik Variation, 8.Ba3 Nbd7"
   ],
   "r1bq1rk1/pp1nB1pp/2p1pn2/3p1p2/2PP4/1P3NP1/P3PPBP/RN1Q1RK1 b - - 0 9": [
     "A94",
-    "Dutch Defense: Stonewall Variation, Botvinnik Variation, 8.Ba3 Nbd7 9.Bxe7"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, Botvinnik Variation, 8.Ba3 Nbd7 9.Bxe7"
   ],
   "rnbq1rk1/pp2b1pp/2p1pn2/3p1p2/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 0 8": [
     "A95",
-    "Dutch Defense: Stonewall Variation"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation"
   ],
   "rnbq1rk1/pp2b1pp/2p1pn2/3p1p2/2PP1B2/2N2NP1/PP2PPBP/R2Q1RK1 b - - 1 8": [
     "A95",
-    "Dutch Defense: Stonewall Variation, 7.Nc3 c6 8.Bf4"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, 7.Nc3 c6 8.Bf4"
   ],
   "rnbq1rk1/pp2b1pp/2p1pn2/3p1pB1/2PP4/2N2NP1/PP2PPBP/R2Q1RK1 b - - 1 8": [
     "A95",
-    "Dutch Defense: Stonewall Variation, 7.Nc3 c6 8.Bg5"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, 7.Nc3 c6 8.Bg5"
   ],
   "rnbq1rk1/pp2b1pp/2p1pn2/3pNp2/2PP4/2N3P1/PP2PPBP/R1BQ1RK1 b - - 1 8": [
     "A95",
-    "Dutch Defense: Stonewall Variation, 7.Nc3 c6 8.Ne5"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, 7.Nc3 c6 8.Ne5"
   ],
   "rnbq1rk1/pp2b1pp/2p1pn2/3p1p2/2PP4/2N2NP1/PPQ1PPBP/R1B2RK1 b - - 1 8": [
     "A95",
-    "Dutch Defense: Stonewall Variation, 7.Nc3 c6 8.Qc2"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, 7.Nc3 c6 8.Qc2"
   ],
   "rnbq1rk1/pp2b1pp/2p1pn2/3p1p2/2PP4/1PN2NP1/P3PPBP/R1BQ1RK1 b - - 0 8": [
     "A95",
-    "Dutch Defense: Stonewall Variation, 7.Nc3 c6 8.b3"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, 7.Nc3 c6 8.b3"
   ],
   "rnb1qrk1/pp2b1pp/2p1pn2/3p1p2/2PP4/1PN2NP1/P3PPBP/R1BQ1RK1 w - - 1 9": [
     "A95",
-    "Dutch Defense: Stonewall Variation, 7.Nc3 c6 8.b3 Qe8"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, 7.Nc3 c6 8.b3 Qe8"
   ],
   "rnb1qrk1/pp2b1pp/2p1pn2/3p1pB1/2PP4/2N2NP1/PPQ1PPBP/R4RK1 b - - 3 9": [
     "A95",
-    "Dutch Defense: Stonewall Variation, Chekhover Variation"
+    "Queen's Pawn Opening: Dutch Defense, Stonewall Variation, Chekhover Variation"
   ],
   "rnbq1rk1/ppp1b1pp/3ppn2/5p2/2PP4/5NP1/PP2PPBP/RNBQ1RK1 w - - 0 7": [
     "A96",
-    "Dutch Defense: Classical Variation"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation"
   ],
   "rnbq1rk1/ppp1b1pp/3ppn2/5p2/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 b - - 1 7": [
     "A96",
-    "Dutch Defense: Classical Variation, 7.Nc3"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation, 7.Nc3"
   ],
   "rnbq1rk1/1pp1b1pp/3ppn2/p4p2/2PP4/2N2NP1/PPQ1PPBP/R1B2RK1 b - - 1 8": [
     "A96",
-    "Dutch Defense: Classical Variation, 7.Nc3 a5 8.Qc2"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation, 7.Nc3 a5 8.Qc2"
   ],
   "rnbq1rk1/1pp1b1pp/3ppn2/p4p2/2PP4/2N2NP1/PP2PPBP/R1BQR1K1 b - - 1 8": [
     "A96",
-    "Dutch Defense: Classical Variation, 7.Nc3 a5 8.Re1"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation, 7.Nc3 a5 8.Re1"
   ],
   "rnbq1rk1/1pp1b1pp/3ppn2/p4p2/2PP4/1PN2NP1/P3PPBP/R1BQ1RK1 b - - 0 8": [
     "A96",
-    "Dutch Defense: Classical Variation, 7.Nc3 a5 8.b3"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation, 7.Nc3 a5 8.b3"
   ],
   "rnbq1rk1/ppp1b1pp/3ppn2/5p2/2PP4/1P3NP1/P3PPBP/RNBQ1RK1 b - - 0 7": [
     "A96",
-    "Dutch Defense: Classical Variation, 7.b3"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation, 7.b3"
   ],
   "rnb1qrk1/ppp1b1pp/3ppn2/5p2/2PP4/1P3NP1/P3PPBP/RNBQ1RK1 w - - 1 8": [
     "A96",
-    "Dutch Defense: Classical Variation, 7.b3 Qe8"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation, 7.b3 Qe8"
   ],
   "rnb1qrk1/ppp1b1pp/3ppn2/5p2/2PP4/1P3NP1/PB2PPBP/RN1Q1RK1 b - - 2 8": [
     "A96",
-    "Dutch Defense: Classical Variation, 7.b3 Qe8 8.Bb2"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation, 7.b3 Qe8 8.Bb2"
   ],
   "rnbq1rk1/1pp1b1pp/3ppn2/p4p2/2PP4/1P3NP1/P3PPBP/RNBQ1RK1 w - - 0 8": [
     "A96",
-    "Dutch Defense: Classical Variation, 7.b3 a5"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation, 7.b3 a5"
   ],
   "rnbq1rk1/1pp1b1pp/3ppn2/p4p2/2PP4/1P3NP1/PB2PPBP/RN1Q1RK1 b - - 1 8": [
     "A96",
-    "Dutch Defense: Classical Variation, 7.b3 a5 8.Bb2"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation, 7.b3 a5 8.Bb2"
   ],
   "rnbq1rk1/1pp1b1pp/3ppn2/p4p2/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 0 8": [
     "A96",
-    "Dutch Defense: Classical Variation, Buenos Aires Variation"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation, Buenos Aires Variation"
   ],
   "rnbq1rk1/ppp1b1pp/3pp3/5p2/2PPn3/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 2 8": [
     "A96",
-    "Dutch Defense: Classical Variation, Huisl Variation"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation, Huisl Variation"
   ],
   "rnb1qrk1/ppp1b1pp/3ppn2/5p2/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 2 8": [
     "A97",
-    "Dutch Defense: Classical Variation, Ilyin-Zhenevsky Variation"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation, Ilyin-Zhenevsky Variation"
   ],
   "rnb1qrk1/ppp1b1pp/3ppn2/5p2/2PP4/2N2NP1/PP2PPBP/R1BQR1K1 b - - 3 8": [
     "A97",
-    "Dutch Defense: Classical Variation, Ilyin-Zhenevsky Variation, Winter Variation"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation, Ilyin-Zhenevsky Variation, Winter Variation"
   ],
   "rnb1qrk1/ppp1b1pp/3ppn2/5p2/1PPP4/2N2NP1/P3PPBP/R1BQ1RK1 b - - 0 8": [
     "A97",
-    "Dutch Defense: Ilyin-Zhenevsky, 8.b4"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, 8.b4"
   ],
   "rnb1qrk1/ppp1b1pp/3pp3/5p2/2PPn3/2N2NP1/PP2PPBP/R1BQR1K1 w - - 4 9": [
     "A97",
-    "Dutch Defense: Ilyin-Zhenevsky, Winter, 8...Ne4"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, Winter Variation, 8...Ne4"
   ],
   "rnb2rk1/ppp1b1pp/3ppnq1/5p2/2PP4/2N2NP1/PP2PPBP/R1BQR1K1 w - - 4 9": [
     "A97",
-    "Dutch Defense: Ilyin-Zhenevsky, Winter, 8...Qg6"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, Winter Variation, 8...Qg6"
   ],
   "rnb2rk1/ppp1b1pp/3ppnq1/5p2/2PPP3/2N2NP1/PP3PBP/R1BQR1K1 b - - 0 9": [
     "A97",
-    "Dutch Defense: Ilyin-Zhenevsky, Winter, 8...Qg6 9.e4"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, Winter Variation, 8...Qg6 9.e4"
   ],
   "rnb2rk1/ppp1b1pp/3ppnq1/8/2PPp3/2N2NP1/PP3PBP/R1BQR1K1 w - - 0 10": [
     "A97",
-    "Dutch Defense: Ilyin-Zhenevsky, Winter, 8...Qg6 9.e4 fxe4"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, Winter Variation, 8...Qg6 9.e4 fxe4"
   ],
   "rnb2rk1/ppp1b1pp/3ppn2/5p1q/2PP4/2N2NP1/PP2PPBP/R1BQR1K1 w - - 4 9": [
     "A97",
-    "Dutch Defense: Ilyin-Zhenevsky, Winter, 8...Qh5"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, Winter Variation, 8...Qh5"
   ],
   "rnb1qrk1/ppp1b1pp/3ppn2/5p2/2PP4/2N2NP1/PPQ1PPBP/R1B2RK1 b - - 3 8": [
     "A98",
-    "Dutch Defense: Classical Variation, Ilyin-Zhenevsky Variation, Alatortsev-Lisitsyn Line"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation, Ilyin-Zhenevsky Variation, Alatortsev-Lisitsyn Line"
   ],
   "r1b1qrk1/ppp1b1pp/2nppn2/5p2/2PP4/2N2NP1/PPQ1PPBP/R1B2RK1 w - - 4 9": [
     "A98",
-    "Dutch Defense: Ilyin-Zhenevsky, 8.Qc2 Nc6"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, 8.Qc2 Nc6"
   ],
   "rnb2rk1/ppp1b1pp/3ppn2/5p1q/2PP4/2N2NP1/PPQ1PPBP/R1B2RK1 w - - 4 9": [
     "A98",
-    "Dutch Defense: Ilyin-Zhenevsky, 8.Qc2 Qh5"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, 8.Qc2 Qh5"
   ],
   "rnb1qrk1/ppp1b1pp/3ppn2/5p2/2PP4/1PN2NP1/P3PPBP/R1BQ1RK1 b - - 0 8": [
     "A99",
-    "Dutch Defense: Classical Variation, Ilyin-Zhenevsky Variation, Modern Main Line"
+    "Queen's Pawn Opening: Dutch Defense, Classical Variation, Ilyin-Zhenevsky Variation, Modern Main Line"
   ],
   "r1b1qrk1/pppnb1pp/3ppn2/5p2/2PP4/1PN2NP1/P3PPBP/R1BQ1RK1 w - - 1 9": [
     "A99",
-    "Dutch Defense: Ilyin-Zhenevsky, 8.b3 Nbd7"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, 8.b3 Nbd7"
   ],
   "r1b1qrk1/ppp1b1pp/2nppn2/5p2/2PP4/1PN2NP1/P3PPBP/R1BQ1RK1 w - - 1 9": [
     "A99",
-    "Dutch Defense: Ilyin-Zhenevsky, 8.b3 Nc6"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, 8.b3 Nc6"
   ],
   "rnb2rk1/ppp1b1pp/3ppn2/5p1q/2PP4/1PN2NP1/P3PPBP/R1BQ1RK1 w - - 1 9": [
     "A99",
-    "Dutch Defense: Ilyin-Zhenevsky, 8.b3 Qh5"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, 8.b3 Qh5"
   ],
   "rnb2rk1/ppp1b1pp/3ppn2/5p1q/2PP4/1PN2NP1/PB2PPBP/R2Q1RK1 b - - 2 9": [
     "A99",
-    "Dutch Defense: Ilyin-Zhenevsky, 8.b3 Qh5 9.Bb2"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, 8.b3 Qh5 9.Bb2"
   ],
   "rnb1qrk1/1pp1b1pp/3ppn2/p4p2/2PP4/1PN2NP1/P3PPBP/R1BQ1RK1 w - - 0 9": [
     "A99",
-    "Dutch Defense: Ilyin-Zhenevsky, 8.b3 a5"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, 8.b3 a5"
   ],
   "rnb1qrk1/1pp1b1pp/3ppn2/p4p2/2PP4/BPN2NP1/P3PPBP/R2Q1RK1 b - - 1 9": [
     "A99",
-    "Dutch Defense: Ilyin-Zhenevsky, 8.b3 a5 9.Ba3"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, 8.b3 a5 9.Ba3"
   ],
   "rnb1qrk1/1pp1b1pp/3ppn2/p4p2/2PP4/1PN2NP1/PB2PPBP/R2Q1RK1 b - - 1 9": [
     "A99",
-    "Dutch Defense: Ilyin-Zhenevsky, 8.b3 a5 9.Bb2"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, 8.b3 a5 9.Bb2"
   ],
   "r1b1qrk1/1pp1b1pp/n2ppn2/p4p2/2PP4/1PN2NP1/PB2PPBP/R2Q1RK1 w - - 2 10": [
     "A99",
-    "Dutch Defense: Ilyin-Zhenevsky, 8.b3 a5 9.Bb2 Na6"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, 8.b3 a5 9.Bb2 Na6"
   ],
   "rnb2rk1/1pp1b1pp/3ppn2/p4p1q/2PP4/1PN2NP1/PB2PPBP/R2Q1RK1 w - - 2 10": [
     "A99",
-    "Dutch Defense: Ilyin-Zhenevsky, 8.b3 a5 9.Bb2 Qh5"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, 8.b3 a5 9.Bb2 Qh5"
   ],
   "rnb2rk1/1pp1b1pp/3ppn2/p4p1q/2PP4/1PN1PNP1/PB3PBP/R2Q1RK1 b - - 0 10": [
     "A99",
-    "Dutch Defense: Ilyin-Zhenevsky, 8.b3 a5 9.Bb2 Qh5 10.e3"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, 8.b3 a5 9.Bb2 Qh5 10.e3"
   ],
   "rnb1qrk1/1p2b1pp/2pppn2/p4p2/2PP4/1PN2NP1/PB2PPBP/R2Q1RK1 w - - 0 10": [
     "A99",
-    "Dutch Defense: Ilyin-Zhenevsky, 8.b3 a5 9.Bb2 c6"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, 8.b3 a5 9.Bb2 c6"
   ],
   "rnb1qrk1/1pp1b1pp/3ppn2/p4p2/2PP4/1PN2NP1/P1Q1PPBP/R1B2RK1 b - - 1 9": [
     "A99",
-    "Dutch Defense: Ilyin-Zhenevsky, 8.b3 a5 9.Qc2"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, 8.b3 a5 9.Qc2"
   ],
   "rnb1qrk1/pp2b1pp/2pppn2/5p2/2PP4/1PN2NP1/P3PPBP/R1BQ1RK1 w - - 0 9": [
     "A99",
-    "Dutch Defense: Ilyin-Zhenevsky, 8.b3 c6"
+    "Queen's Pawn Opening: Dutch Defense, Ilyin-Zhenevsky Variation, 8.b3 c6"
   ],
   "rnbqkbnr/ppppp1pp/5p2/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2": [
     "B00",
@@ -35967,61 +35967,61 @@
     "D30",
     "Queen's Gambit Declined: Stonewall Variation"
   ],
-  "rnbqkbnr/pp3ppp/4p3/2pp4/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
+  "rnbqkbnr/pp3ppp/4p3/2pP4/3P4/5N2/PP2PPPP/RNBQKB1R b KQkq - 0 4": [
     "D30",
-    "Queen's Gambit Declined: Tarrasch Defense, Pseudo-Tarrasch"
+    "Queen's Gambit Declined: Tarrasch Defense without Nc3"
+  ],
+  "rnbqkbnr/pp3ppp/8/2pp4/3P4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 5": [
+    "D30",
+    "Queen's Gambit Declined: Tarrasch Defense without Nc3"
+  ],
+  "rnbqkbnr/pp3ppp/4p3/2pp4/2PP4/4PN2/PP3PPP/RNBQKB1R b KQkq - 0 4": [
+    "D30",
+    "Queen's Gambit Declined: Tarrasch Defense without Nc3: 4.e3"
+  ],
+  "rnbqkb1r/pp3ppp/4pn2/2pp4/2PP4/4PN2/PP3PPP/RNBQKB1R w KQkq - 1 5": [
+    "D30",
+    "Queen's Gambit Declined: Tarrasch Defense without Nc3: 4.e3 Nf6"
+  ],
+  "rnbqkb1r/pp3ppp/5n2/2pp4/3P4/5NP1/PP2PP1P/RNBQKB1R w KQkq - 1 6": [
+    "D30",
+    "Queen's Gambit Declined: Tarrasch Defense without Nc3: 5.g3"
+  ],
+  "rnbqkb1r/pp3ppp/5n2/2pp4/3P4/5NP1/PP2PPBP/RNBQK2R b KQkq - 2 6": [
+    "D30",
+    "Queen's Gambit Declined: Tarrasch Defense without Nc3: 5.g3"
+  ],
+  "rnbqkbnr/pp3ppp/8/2pp4/3P4/5NP1/PP2PP1P/RNBQKB1R b KQkq - 0 5": [
+    "D30",
+    "Queen's Gambit Declined: Tarrasch Defense without Nc3: 5.g3"
+  ],
+  "r1bqkbnr/pp3ppp/2n5/2pp4/3P4/5NP1/PP2PP1P/RNBQKB1R w KQkq - 1 6": [
+    "D30",
+    "Queen's Gambit Declined: Tarrasch Defense without Nc3: 5.g3 Nc6"
+  ],
+  "r1bqkbnr/pp3ppp/2n5/2pp4/3P4/5NP1/PP2PPBP/RNBQK2R b KQkq - 2 6": [
+    "D30",
+    "Queen's Gambit Declined: Tarrasch Defense without Nc3: 5.g3 Nc6 6.Bg2"
+  ],
+  "r1bqkb1r/pp3ppp/2n2n2/2pp4/3P4/5NP1/PP2PPBP/RNBQK2R w KQkq - 3 7": [
+    "D30",
+    "Queen's Gambit Declined: Tarrasch Defense without Nc3: 5.g3 Nc6 6.Bg2 Nf6"
+  ],
+  "r1bqkb1r/pp3ppp/2n2n2/2pp4/3P4/5NP1/PP2PPBP/RNBQ1RK1 b kq - 4 7": [
+    "D30",
+    "Queen's Gambit Declined: Tarrasch Defense without Nc3: 5.g3 Nc6 6.Bg2 Nf6 7.O-O"
+  ],
+  "r1bqk2r/pp2bppp/2n2n2/2pp4/3P4/5NP1/PP2PPBP/RNBQ1RK1 w kq - 5 8": [
+    "D30",
+    "Queen's Gambit Declined: Tarrasch Defense without Nc3: Main Line"
   ],
   "rnbqkbnr/pp3ppp/8/2pp2B1/3P4/5N2/PP2PPPP/RN1QKB1R b KQkq - 1 5": [
     "D30",
     "Queen's Gambit Declined: Tarrasch Defense, Pseudo-Tarrasch Bishop Attack"
   ],
-  "rnbqkbnr/pp3ppp/4p3/2pP4/3P4/5N2/PP2PPPP/RNBQKB1R b KQkq - 0 4": [
+  "rnbqkbnr/pp3ppp/4p3/2pp4/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
     "D30",
-    "Queen's Gambit Declined: Tarrasch without Nc3"
-  ],
-  "rnbqkbnr/pp3ppp/8/2pp4/3P4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 5": [
-    "D30",
-    "Queen's Gambit Declined: Tarrasch without Nc3"
-  ],
-  "rnbqkbnr/pp3ppp/4p3/2pp4/2PP4/4PN2/PP3PPP/RNBQKB1R b KQkq - 0 4": [
-    "D30",
-    "Queen's Gambit Declined: Tarrasch without Nc3: 4.e3"
-  ],
-  "rnbqkb1r/pp3ppp/4pn2/2pp4/2PP4/4PN2/PP3PPP/RNBQKB1R w KQkq - 1 5": [
-    "D30",
-    "Queen's Gambit Declined: Tarrasch without Nc3: 4.e3 Nf6"
-  ],
-  "rnbqkb1r/pp3ppp/5n2/2pp4/3P4/5NP1/PP2PP1P/RNBQKB1R w KQkq - 1 6": [
-    "D30",
-    "Queen's Gambit Declined: Tarrasch without Nc3: 5.g3"
-  ],
-  "rnbqkb1r/pp3ppp/5n2/2pp4/3P4/5NP1/PP2PPBP/RNBQK2R b KQkq - 2 6": [
-    "D30",
-    "Queen's Gambit Declined: Tarrasch without Nc3: 5.g3"
-  ],
-  "rnbqkbnr/pp3ppp/8/2pp4/3P4/5NP1/PP2PP1P/RNBQKB1R b KQkq - 0 5": [
-    "D30",
-    "Queen's Gambit Declined: Tarrasch without Nc3: 5.g3"
-  ],
-  "r1bqkbnr/pp3ppp/2n5/2pp4/3P4/5NP1/PP2PP1P/RNBQKB1R w KQkq - 1 6": [
-    "D30",
-    "Queen's Gambit Declined: Tarrasch without Nc3: 5.g3 Nc6"
-  ],
-  "r1bqkbnr/pp3ppp/2n5/2pp4/3P4/5NP1/PP2PPBP/RNBQK2R b KQkq - 2 6": [
-    "D30",
-    "Queen's Gambit Declined: Tarrasch without Nc3: 5.g3 Nc6 6.Bg2"
-  ],
-  "r1bqkb1r/pp3ppp/2n2n2/2pp4/3P4/5NP1/PP2PPBP/RNBQK2R w KQkq - 3 7": [
-    "D30",
-    "Queen's Gambit Declined: Tarrasch without Nc3: 5.g3 Nc6 6.Bg2 Nf6"
-  ],
-  "r1bqkb1r/pp3ppp/2n2n2/2pp4/3P4/5NP1/PP2PPBP/RNBQ1RK1 b kq - 4 7": [
-    "D30",
-    "Queen's Gambit Declined: Tarrasch without Nc3: 5.g3 Nc6 6.Bg2 Nf6 7.O-O"
-  ],
-  "r1bqk2r/pp2bppp/2n2n2/2pp4/3P4/5NP1/PP2PPBP/RNBQ1RK1 w kq - 5 8": [
-    "D30",
-    "Queen's Gambit Declined: Tarrasch without Nc3: Main Line"
+    "Queen's Gambit Declined: Tarrasch Defense, Pseudo-Tarrasch Defense"
   ],
   "rnbqkb1r/ppp2ppp/4pn2/3p2B1/2PP4/5N2/PP2PPPP/RN1QKB1R b KQkq - 1 4": [
     "D30",
