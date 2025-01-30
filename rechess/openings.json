@@ -23815,6 +23815,26 @@
     "C23",
     "Bishop's Opening: Boi Variation, 3.Nf3"
   ],
+  "rnbqk1nr/pppp1ppp/8/2b1p3/2B1P3/8/PPPPQPPP/RNB1K1NR b KQkq - 3 3": [
+    "C23",
+    "Bishop's Opening: Boi Variation, López Variation"
+  ],
+  "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1PP2/2P5/PP1PQ1PP/RNB1K1NR b KQkq - 0 5": [
+    "C23",
+    "Bishop's Opening: Boi Variation, López Variation, López Gambit"
+  ],
+  "rnbqk2r/pppp1ppp/5n2/2b1p3/2B1PP2/8/PPPPQ1PP/RNB1K1NR b KQkq - 0 4": [
+    "C23",
+    "Bishop's Opening: Boi Variation, López Variation, López Gambit"
+  ],
+  "rnbqk1nr/pppp1ppp/8/2b1p3/2B1P3/2P5/PP1P1PPP/RNBQK1NR b KQkq - 0 3": [
+    "C23",
+    "Bishop's Opening: Boi Variation, Philidor Variation"
+  ],
+  "rnbq1rk1/ppp2ppp/5P2/2b4Q/2pp4/2P5/PP3PPP/RNB1K1NR w KQ - 2 8": [
+    "C23",
+    "Bishop's Opening: Boi Variation, Philidor Variation, Pratt Variation"
+  ],
   "rnb1k1nr/pppp1ppp/8/2b1p1q1/2B1P3/2P5/PP1P1PPP/RNBQK1NR w KQkq - 1 4": [
     "C23",
     "Bishop's Opening: Boi Variation, Philidor Variation, del Rio Variation"
@@ -23822,6 +23842,10 @@
   "rnbqk1nr/pppp1ppp/8/2b1p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 3 3": [
     "C23",
     "Bishop's Opening: Boi Variation, Scholar's Mate"
+  ],
+  "rnbqk1nr/pppp1ppp/8/2b1p3/2B1PP2/8/PPPP2PP/RNBQK1NR b KQkq - 0 3": [
+    "C23",
+    "Bishop's Opening: Boi Variation, Stein Gambit"
   ],
   "rnbqkbnr/pppp2pp/8/4pp2/2B1P3/8/PPPP1PPP/RNBQK1NR w KQkq - 0 3": [
     "C23",
@@ -23859,22 +23883,6 @@
     "C23",
     "Bishop's Opening: Lewis Gambit"
   ],
-  "r2qkbnr/pp3ppp/8/3pn3/8/8/PPP1NPPP/RNBQK2R b KQkq - 1 8": [
-    "C23",
-    "Bishop's Opening: Lisitsyn Variation"
-  ],
-  "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1PP2/2P5/PP1PQ1PP/RNB1K1NR b KQkq - 0 5": [
-    "C23",
-    "Bishop's Opening: López Gambit"
-  ],
-  "rnbqk1nr/pppp1ppp/8/2b1p3/2B1P3/8/PPPPQPPP/RNB1K1NR b KQkq - 3 3": [
-    "C23",
-    "Bishop's Opening: López Variation"
-  ],
-  "rnbqk2r/pppp1ppp/5n2/2b1p3/2B1PP2/8/PPPPQ1PP/RNB1K1NR b KQkq - 0 4": [
-    "C23",
-    "Bishop's Opening: López Variation, López Gambit"
-  ],
   "rnbqk1nr/pppp1ppp/8/2b1p3/1PB1P3/8/P1PP1PPP/RNBQK1NR b KQkq - 0 3": [
     "C23",
     "Bishop's Opening: McDonnell Gambit"
@@ -23891,17 +23899,9 @@
     "C23",
     "Bishop's Opening: Philidor Counterattack"
   ],
-  "rnbqk1nr/pppp1ppp/8/2b1p3/2B1P3/2P5/PP1P1PPP/RNBQK1NR b KQkq - 0 3": [
+  "r2qkbnr/pp3ppp/8/3pn3/8/8/PPP1NPPP/RNBQK2R b KQkq - 1 8": [
     "C23",
-    "Bishop's Opening: Philidor Variation"
-  ],
-  "rnbq1rk1/ppp2ppp/5P2/2b4Q/2pp4/2P5/PP3PPP/RNB1K1NR w KQ - 2 8": [
-    "C23",
-    "Bishop's Opening: Pratt Variation"
-  ],
-  "rnbqk1nr/pppp1ppp/8/2b1p3/2B1PP2/8/PPPP2PP/RNBQK1NR b KQkq - 0 3": [
-    "C23",
-    "Bishop's Opening: Stein Gambit"
+    "Bishop's Opening: Philidor Counterattack, Lisitsyn Variation"
   ],
   "rnbqkbnr/p1pp2pp/8/1B2pp2/4P3/8/PPPP1PPP/RNBQK1NR w KQkq - 0 4": [
     "C23",
@@ -23923,21 +23923,25 @@
     "C24",
     "Bishop's Opening: Berlin Defense, Greco Gambit"
   ],
-  "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/2NP4/PPP2PPP/R1BQK1NR b KQkq - 2 4": [
-    "C24",
-    "Bishop's Opening: Berlin Defense, Vienna Hybrid Variation"
-  ],
   "rnbq1rk1/ppppbppp/5n2/4p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQ - 3 5": [
     "C24",
-    "Bishop's Opening: Kitchener's Folly"
+    "Bishop's Opening: Berlin Defense, Kitchener's Folly"
   ],
   "r1bqk2r/pppp1ppp/2n2n2/2b1p3/1PB1P3/5P2/P1PPN1PP/RNBQK2R b KQkq - 0 5": [
     "C24",
-    "Bishop's Opening: Krejčík Gambit"
+    "Bishop's Opening: Berlin Defense, Krejčík Gambit"
   ],
   "rnbqkb1r/pppp1ppp/8/4p3/2B1n3/2N5/PPPP1PPP/RNBQK2R b KQkq - 1 4": [
     "C24",
-    "Bishop's Opening: Pachman Gambit"
+    "Bishop's Opening: Berlin Defense, Pachman Gambit"
+  ],
+  "rnbqkb1r/pppp1ppp/5n2/4p3/2BPP3/8/PPP2PPP/RNBQK1NR b KQkq - 0 3": [
+    "C24",
+    "Bishop's Opening: Berlin Defense, Ponziani Gambit"
+  ],
+  "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/2NP4/PPP2PPP/R1BQK1NR b KQkq - 2 4": [
+    "C24",
+    "Bishop's Opening: Berlin Defense, Vienna Hybrid Variation"
   ],
   "rnbqkb1r/pp1p1ppp/2p2n2/4p3/2B1P3/3P4/PPP2PPP/RNBQK1NR w KQkq - 0 4": [
     "C24",
@@ -23947,25 +23951,21 @@
     "C24",
     "Bishop's Opening: Paulsen Defense, 4.Nf3"
   ],
-  "rnbqkb1r/pppp1ppp/5n2/4p3/2BPP3/8/PPP2PPP/RNBQK1NR b KQkq - 0 3": [
-    "C24",
-    "Bishop's Opening: Ponziani Gambit"
-  ],
   "rnbqkb1r/pppp1ppp/5n2/8/2BpP3/8/PPP2PPP/RNBQK1NR w KQkq - 0 4": [
     "C24",
-    "Bishop's Opening: Ponziani-Urusov Gambit"
+    "Bishop's Opening: Urusov Gambit"
   ],
   "r1bqkb1r/pppp1ppp/2n2n2/6B1/2BQ4/5N2/PPP2PPP/RN2K2R w KQkq - 3 7": [
     "C24",
-    "Bishop's Opening: Urusov Gambit, 6.Bg5 Nc6 Defense"
+    "Bishop's Opening: Urusov Gambit, 6.Bg5 Nc6"
   ],
   "r1bqk2r/ppppbppp/2n2n2/6B1/2BQ4/2N2N2/PPP2PPP/R3K2R w KQkq - 5 8": [
     "C24",
-    "Bishop's Opening: Urusov Gambit, 7...Nc6 Defense"
+    "Bishop's Opening: Urusov Gambit, 7...Nc6"
   ],
   "rnbqk2r/pp1pbppp/2p2n2/6B1/2BQ4/2N2N2/PPP2PPP/R3K2R w KQkq - 0 8": [
     "C24",
-    "Bishop's Opening: Urusov Gambit, 7...c6 Defense"
+    "Bishop's Opening: Urusov Gambit, 7...c6"
   ],
   "r1bqk2r/ppp1bppp/2n2n2/3p2B1/2B4Q/2N2N2/PPP2PPP/R3K2R w KQkq - 0 9": [
     "C24",
@@ -23973,7 +23973,7 @@
   ],
   "r2qk1nr/pp2bppp/2p1b3/2np2B1/3N3Q/2NB4/PPP2PPP/2KRR3 w kq - 8 13": [
     "C24",
-    "Bishop's Opening: Urusov Gambit, Forintos/Haag Variation"
+    "Bishop's Opening: Urusov Gambit, Forintos-Haag Variation"
   ],
   "r2qk2r/pp1nbppp/4bn2/2pp2B1/7Q/2NB1N2/PPP2PPP/2KRR3 w kq - 0 12": [
     "C24",
