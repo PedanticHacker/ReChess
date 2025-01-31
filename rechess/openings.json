@@ -11,6 +11,10 @@
     "A00",
     "Amar Opening, 1...e5"
   ],
+  "rnbqkb1r/pppppppp/7n/8/8/7N/PPPPPPPP/RNBQKB1R w KQkq - 2 2": [
+    "A00",
+    "Amar Opening: 1...Nh6"
+  ],
   "rnbqkbnr/ppp1pppp/8/3p4/8/7N/PPPPPPPP/RNBQKB1R w KQkq - 0 2": [
     "A00",
     "Amar Opening: 1...d5"
@@ -22,10 +26,6 @@
   "rnbqkbnr/ppp2ppp/8/3pp3/5P2/6PN/PPPPP2P/RNBQKB1R b KQkq - 0 3": [
     "A00",
     "Amar Opening: Paris Gambit"
-  ],
-  "rnbqkb1r/pppppppp/7n/8/8/7N/PPPPPPPP/RNBQKB1R w KQkq - 2 2": [
-    "A00",
-    "Ammonia Opening"
   ],
   "r1bqkb1r/ppp2ppp/2np1n2/4p3/2P5/1PN1P3/P2P1PPP/R1BQKBNR w KQkq - 1 5": [
     "A00",
@@ -130,6 +130,22 @@
   "rnbqkbnr/ppppppp1/8/7p/6P1/7P/PPPPPP2/RNBQKBNR b KQkq - 0 2": [
     "A00",
     "Clemenz Opening: Spike Lee Gambit, 1.h3 h5 2.g4"
+  ],
+  "rnbqkbnr/pppppppp/8/8/8/N7/PPPPPPPP/R1BQKBNR b KQkq - 1 1": [
+    "A00",
+    "Durkin Opening"
+  ],
+  "rnbqk1nr/pp3ppp/8/2ppp3/8/P2PP3/P1P2PPP/1RBQKBNR b Kkq - 1 5": [
+    "A00",
+    "Durkin Opening: Celadon Variation"
+  ],
+  "rnbqkbnr/pppppp1p/6p1/8/6P1/N7/PPPPPP1P/R1BQKBNR b KQkq - 0 2": [
+    "A00",
+    "Durkin Opening: Chenoboskion Variation"
+  ],
+  "r1bqkbnr/pppp2pp/2n5/4pp2/2N1P3/8/PPPP1PPP/R1BQKBNR w KQkq - 0 4": [
+    "A00",
+    "Durkin Opening: Durkin Gambit"
   ],
   "rnbqkbnr/pppp1ppp/8/4p3/6P1/3P4/PPP1PP1P/RNBQKBNR b KQkq - 0 2": [
     "A00",
@@ -611,26 +627,6 @@
     "A00",
     "Saragossa Opening: Cabbage Attack"
   ],
-  "rnbqkbnr/pp1ppppp/8/2p5/4P3/2N5/PPPP1PPP/R1BQKBNR b KQkq - 0 2": [
-    "A00",
-    "Sicilian Defense: Closed Variation"
-  ],
-  "rnbqkbnr/pppppppp/8/8/8/N7/PPPPPPPP/R1BQKBNR b KQkq - 1 1": [
-    "A00",
-    "Sodium Attack"
-  ],
-  "rnbqk1nr/pp3ppp/8/2ppp3/8/P2PP3/P1P2PPP/1RBQKBNR b Kkq - 1 5": [
-    "A00",
-    "Sodium Attack: Celadon Variation"
-  ],
-  "rnbqkbnr/pppppp1p/6p1/8/6P1/N7/PPPPPP1P/R1BQKBNR b KQkq - 0 2": [
-    "A00",
-    "Sodium Attack: Chenoboskion Variation"
-  ],
-  "r1bqkbnr/pppp2pp/2n5/4pp2/2N1P3/8/PPPP1PPP/R1BQKBNR w KQkq - 0 4": [
-    "A00",
-    "Sodium Attack: Durkin Gambit"
-  ],
   "rnbqkbnr/pppp1ppp/8/4p3/8/3P4/PPPNPPPP/R1BQKBNR b KQkq - 1 2": [
     "A00",
     "Valencia Opening"
@@ -797,11 +793,7 @@
   ],
   "r1bqkbnr/pppp1ppp/2n5/8/Q7/2N5/PPP1PPPP/R1B1KBNR b KQkq - 2 4": [
     "A00",
-    "Van Geet Opening: Reversed Scandinavian"
-  ],
-  "r1bqkbnr/pp1ppppp/2n5/8/3N4/2N5/PPP1PPPP/R1BQKB1R b KQkq - 0 4": [
-    "A00",
-    "Van Geet Opening: Sicilian Two Knights Variation"
+    "Van Geet Opening: Reversed Nimzowitsch Variation, Reversed Scandinavian Variation"
   ],
   "rnbqkbnr/pp1ppppp/8/2p5/8/2N5/PPPPPPPP/R1BQKBNR w KQkq - 0 2": [
     "A00",
@@ -814,6 +806,10 @@
   "r1bqkbnr/pp1ppppp/2n5/2p5/8/2N2N2/PPPPPPPP/R1BQKB1R w KQkq - 2 3": [
     "A00",
     "Van Geet Opening: Sicilian Variation, 2.Nf3 Nc6"
+  ],
+  "r1bqkbnr/pp1ppppp/2n5/8/3N4/2N5/PPP1PPPP/R1BQKB1R b KQkq - 0 4": [
+    "A00",
+    "Van Geet Opening: Sicilian Variation, Two Knights Variation"
   ],
   "rnbqk1nr/ppp2ppp/8/3pp3/1b1P4/2N1P3/PPP2PPP/R1BQKBNR w KQkq - 1 4": [
     "A00",
@@ -2147,13 +2143,13 @@
     "A10",
     "English Opening"
   ],
-  "rnbqkbnr/1ppppppp/p7/8/2P5/8/PP1PPPPP/RNBQKBNR w KQkq - 0 2": [
-    "A10",
-    "English Opening, 1...a6"
-  ],
   "r1bqkbnr/pppppppp/2n5/8/2P5/2N5/PP1PPPPP/R1BQKBNR b KQkq - 2 2": [
     "A10",
     "English Opening: 1...Nc6 2.Nc3"
+  ],
+  "rnbqkbnr/1ppppppp/p7/8/2P5/8/PP1PPPPP/RNBQKBNR w KQkq - 0 2": [
+    "A10",
+    "English Opening: 1...a6"
   ],
   "rnbqkbnr/p1pppppp/1p6/8/2P5/8/PP1PPPPP/RNBQKBNR w KQkq - 0 2": [
     "A10",
@@ -15192,6 +15188,10 @@
     "Sicilian Defense: Closed Variation"
   ],
   "rnbqkbnr/pp1ppp1p/6p1/2p5/4P3/2N5/PPPP1PPP/R1BQKBNR w KQkq - 0 3": [
+    "B23",
+    "Sicilian Defense: Closed Variation"
+  ],
+  "rnbqkbnr/pp1ppppp/8/2p5/4P3/2N5/PPPP1PPP/R1BQKBNR b KQkq - 0 2": [
     "B23",
     "Sicilian Defense: Closed Variation"
   ],
