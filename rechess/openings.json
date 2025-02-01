@@ -1439,6 +1439,18 @@
     "A04",
     "Réti Opening: Basman Defense"
   ],
+  "rnbqkbnr/ppppp2p/5p2/6B1/3P4/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3": [
+    "A04",
+    "Réti Opening: Basman Defense, Basman Gambit"
+  ],
+  "rnbqkbnr/pppppp1p/8/6p1/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2": [
+    "A04",
+    "Réti Opening: Basman Defense, Basman Gambit"
+  ],
+  "rnbqkbnr/pppppp1p/8/6B1/3P4/8/PPP1PPPP/RN1QKBNR b KQkq - 0 2": [
+    "A04",
+    "Réti Opening: Basman Gambit Accepted, 2.Bxg5"
+  ],
   "r1bqkbnr/pppppppp/2n5/8/8/5N2/PPPPPPPP/RNBQKB1R w KQkq - 2 2": [
     "A04",
     "Réti Opening: Black Mustang Defense"
@@ -4197,75 +4209,75 @@
   ],
   "rnbqkb1r/pp1ppppp/5n2/2p5/2PP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 0 3": [
     "A31",
-    "English Opening: Symmetrical Variation, Two Knights Defense"
+    "English Opening: Symmetrical Variation, Two Knights Variation"
   ],
   "rnbqkb1r/pp1ppppp/5n2/8/2PN4/8/PP2PPPP/RNBQKB1R b KQkq - 0 4": [
     "A31",
-    "English Opening: Symmetrical Variation, Two Knights Defense"
+    "English Opening: Symmetrical Variation, Two Knights Variation"
   ],
   "rnbqkb1r/pp1ppppp/5n2/8/2Pp4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
     "A31",
-    "English Opening: Symmetrical Variation, Two Knights Defense"
+    "English Opening: Symmetrical Variation, Two Knights Variation"
   ],
   "rnbqkb1r/1p1ppppp/p4n2/2p5/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
     "A31",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 3...a6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 3...a6"
   ],
   "rnbqkb1r/pp1ppp1p/5np1/2p5/2PP4/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 1 4": [
     "A31",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 3...g6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 3...g6"
   ],
   "rnbqkb1r/pp1ppp1p/5np1/2p5/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
     "A31",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 3...g6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 3...g6"
   ],
   "rnbqkb1r/pp1ppp1p/5np1/2pP4/2P5/5N2/PP2PPPP/RNBQKB1R b KQkq - 0 4": [
     "A31",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 3...g6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 3...g6"
   ],
   "r1bqkb1r/pp1ppp1p/2n2np1/8/2PN4/2N5/PP2PPPP/R1BQKB1R w KQkq - 0 6": [
     "A31",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 4...Nc6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 4...Nc6"
   ],
   "r1bqkb1r/pp1ppppp/2n2n2/8/2PN4/2N5/PP2PPPP/R1BQKB1R b KQkq - 2 5": [
     "A31",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 4...Nc6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 4...Nc6"
   ],
   "r1bqkb1r/pp1ppppp/2n2n2/8/2PN4/8/PP2PPPP/RNBQKB1R w KQkq - 1 5": [
     "A31",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 4...Nc6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 4...Nc6"
   ],
   "rn1qkb1r/pb1ppppp/1p3n2/8/2PN4/2N5/PP2PPPP/R1BQKB1R w KQkq - 2 6": [
     "A31",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 4...b6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 4...b6"
   ],
   "rnbqkb1r/p2ppppp/1p3n2/8/2PN4/8/PP2PPPP/RNBQKB1R w KQkq - 0 5": [
     "A31",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 4...b6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 4...b6"
   ],
   "rnbqkb1r/pp1p1ppp/5n2/4p3/2PN4/8/PP2PPPP/RNBQKB1R w KQkq - 0 5": [
     "A31",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 4...e5"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 4...e5"
   ],
   "rnbqkb1r/pp1p1ppp/5n2/1N2p3/2P5/8/PP2PPPP/RNBQKB1R b KQkq - 1 5": [
     "A31",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 4...e5 5.Nb5"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 4...e5 5.Nb5"
   ],
   "rnbqk2r/pp1pppbp/5np1/8/2PN4/2N5/PP2PPPP/R1BQKB1R w KQkq - 2 6": [
     "A31",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 4...g6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 4...g6"
   ],
   "rnbqk2r/pp1pppbp/5np1/8/2PNP3/2N5/PP3PPP/R1BQKB1R b KQkq - 0 6": [
     "A31",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 4...g6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 4...g6"
   ],
   "rnbqkb1r/pp1ppp1p/5np1/8/2PN4/2N5/PP2PPPP/R1BQKB1R b KQkq - 1 5": [
     "A31",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 4...g6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 4...g6"
   ],
   "rnbqkb1r/pp1ppp1p/5np1/8/2PN4/8/PP2PPPP/RNBQKB1R w KQkq - 0 5": [
     "A31",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 4...g6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 4...g6"
   ],
   "rnbqkb1r/pp1p1ppp/4pn2/8/2PN4/8/PP2PPPP/RNBQKB1R w KQkq - 0 5": [
     "A32",
@@ -4273,163 +4285,163 @@
   ],
   "rnbqkb1r/pp1p1ppp/4pn2/8/2PN4/2N5/PP2PPPP/R1BQKB1R b KQkq - 1 5": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3"
   ],
   "rnbqk2r/pp1p1ppp/4pn2/8/1bPN4/2N5/PP2PPPP/R1BQKB1R w KQkq - 2 6": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 Bb4"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 Bb4"
   ],
   "rnbqk2r/pp1p1ppp/4pn2/8/1bPN4/2N5/PP1BPPPP/R2QKB1R b KQkq - 3 6": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 Bb4 6.Bd2"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 Bb4 6.Bd2"
   ],
   "r1bqk2r/pp1p1ppp/2n1pn2/8/1bPN4/2N5/PP1BPPPP/R2QKB1R w KQkq - 4 7": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 Bb4 6.Bd2 Nc6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 Bb4 6.Bd2 Nc6"
   ],
   "rnbqk2r/pp1p1ppp/4pn2/1N6/1bP5/2N5/PP2PPPP/R1BQKB1R b KQkq - 3 6": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 Bb4 6.Nb5"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 Bb4 6.Nb5"
   ],
   "rnbqk2r/pp1p1ppp/4pn2/8/1bPN4/1QN5/PP2PPPP/R1B1KB1R b KQkq - 3 6": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 Bb4 6.Qb3"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 Bb4 6.Qb3"
   ],
   "rnbqkb1r/1p1p1ppp/p3pn2/8/2PN4/2N5/PP2PPPP/R1BQKB1R w KQkq - 0 6": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 a6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 a6"
   ],
   "rnbqkb1r/1p1p1ppp/p3pn2/8/2PN4/2N3P1/PP2PP1P/R1BQKB1R b KQkq - 0 6": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 a6 6.g3"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 a6 6.g3"
   ],
   "rnbqkb1r/pp3ppp/4pn2/3p4/2PN4/2N5/PP2PPPP/R1BQKB1R w KQkq - 0 6": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 d5"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 d5"
   ],
   "rnbqkb1r/pp1p1ppp/4pn2/8/2PN4/4P3/PP3PPP/RNBQKB1R b KQkq - 0 5": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.e3"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.e3"
   ],
   "rnbqkb1r/pp1p1ppp/4pn2/8/2PN4/6P1/PP2PP1P/RNBQKB1R b KQkq - 0 5": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.g3"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.g3"
   ],
   "rnbqk2r/pp1p1ppp/4pn2/8/1bPN4/6P1/PP2PP1P/RNBQKB1R w KQkq - 1 6": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.g3 Bb4+"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.g3 Bb4+"
   ],
   "r1bqkb1r/pp1p1ppp/2n1pn2/8/2PN4/6P1/PP2PP1P/RNBQKB1R w KQkq - 1 6": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.g3 Nc6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.g3 Nc6"
   ],
   "r1bqkb1r/pp1p1ppp/2n1pn2/8/2PN4/6P1/PP2PPBP/RNBQK2R b KQkq - 2 6": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.g3 Nc6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.g3 Nc6"
   ],
   "rnb1kb1r/pp1p1ppp/1q2pn2/8/2PN4/6P1/PP2PP1P/RNBQKB1R w KQkq - 1 6": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.g3 Qb6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.g3 Qb6"
   ],
   "rnb1kb1r/pp1p1ppp/1q2pn2/8/2PN4/6P1/PP2PPBP/RNBQK2R b KQkq - 2 6": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.g3 Qb6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.g3 Qb6"
   ],
   "rnb1kb1r/ppqp1ppp/4pn2/8/2PN4/6P1/PP2PP1P/RNBQKB1R w KQkq - 1 6": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.g3 Qc7"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.g3 Qc7"
   ],
   "rnbqkb1r/1p1p1ppp/p3pn2/8/2PN4/6P1/PP2PP1P/RNBQKB1R w KQkq - 0 6": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.g3 a6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.g3 a6"
   ],
   "rnbqkb1r/1p1p1ppp/p3pn2/8/2PN4/6P1/PP2PPBP/RNBQK2R b KQkq - 1 6": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.g3 a6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.g3 a6"
   ],
   "rnbqkb1r/pp3ppp/4pn2/3p4/2PN4/6P1/PP2PP1P/RNBQKB1R w KQkq - 0 6": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.g3 d5"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.g3 d5"
   ],
   "rnbqkb1r/pp3ppp/4pn2/3p4/2PN4/6P1/PP2PPBP/RNBQK2R b KQkq - 1 6": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.g3 d5 6.Bg2"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.g3 d5 6.Bg2"
   ],
   "rnbqkb1r/pp3ppp/5n2/3pp3/2P5/5NP1/PP2PPBP/RNBQK2R b KQkq - 1 7": [
     "A32",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.g3 d5 6.Bg2 e5 7.Nf3"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.g3 d5 6.Bg2 e5 7.Nf3"
   ],
   "r1b1kb1r/pp1p1ppp/1qn1pn2/8/2PN4/2N3P1/PP2PP1P/R1BQKB1R w KQkq - 1 7": [
     "A33",
     "English Opening: Symmetrical Variation, Anti-Benoni Variation, Geller Variation"
   ],
+  "r1b1kb1r/pp1p1ppp/1qn1pn2/8/2P5/1NN3P1/PP2PP1P/R1BQKB1R b KQkq - 2 7": [
+    "A33",
+    "English Opening: Symmetrical Variation, Anti-Benoni Variation, Geller Variation, 7.Nb3"
+  ],
+  "r1b1kb1r/pp1p1ppp/1q2pn2/4n3/2P5/1NN3P1/PP2PP1P/R1BQKB1R w KQkq - 3 8": [
+    "A33",
+    "English Opening: Symmetrical Variation, Anti-Benoni Variation, Geller Variation, 7.Nb3 Ne5"
+  ],
   "r1bqkb1r/pp1p1ppp/2n1pn2/8/2PN4/2N5/PP2PPPP/R1BQKB1R w KQkq - 0 6": [
     "A33",
     "English Opening: Symmetrical Variation, Anti-Benoni Variation, Spielmann Defense"
   ],
-  "r1b1kb1r/pp1p1ppp/1qn1pn2/8/2P5/1NN3P1/PP2PP1P/R1BQKB1R b KQkq - 2 7": [
-    "A33",
-    "English Opening: Symmetrical Variation, Geller Variation, 7.Nb3"
-  ],
-  "r1b1kb1r/pp1p1ppp/1q2pn2/4n3/2P5/1NN3P1/PP2PP1P/R1BQKB1R w KQkq - 3 8": [
-    "A33",
-    "English Opening: Symmetrical Variation, Geller Variation, 7.Nb3 Ne5"
-  ],
   "r1bqkb1r/pp1p1ppp/2n1pn2/8/2PN4/2N5/PP2PPPP/R1BQKB1R w KQkq - 2 6": [
     "A33",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 Nc6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 Nc6"
   ],
   "r1bqkb1r/pp1p1ppp/2n1pn2/8/2PN1B2/2N5/PP2PPPP/R2QKB1R b KQkq - 3 6": [
     "A33",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 Nc6 6.Bf4"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 Nc6 6.Bf4"
   ],
   "r1bqkb1r/pp1p1ppp/2n1pn2/6B1/2PN4/2N5/PP2PPPP/R2QKB1R b KQkq - 3 6": [
     "A33",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 Nc6 6.Bg5"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 Nc6 6.Bg5"
   ],
   "r1bqkb1r/pp1p1ppp/2n1pn2/1N6/2P5/2N5/PP2PPPP/R1BQKB1R b KQkq - 3 6": [
     "A33",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 Nc6 6.Ndb5"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 Nc6 6.Ndb5"
   ],
   "r1bqk2r/pp1p1ppp/2n1pn2/1N6/1bP5/2N5/PP2PPPP/R1BQKB1R w KQkq - 4 7": [
     "A33",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 Nc6 6.Ndb5 Bb4"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 Nc6 6.Ndb5 Bb4"
   ],
   "r1bqkb1r/pp3ppp/2n1pn2/1N1p4/2P5/2N5/PP2PPPP/R1BQKB1R w KQkq - 0 7": [
     "A33",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 Nc6 6.Ndb5 d5"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 Nc6 6.Ndb5 d5"
   ],
   "r1bk1b1r/p4ppp/2p2n2/1N6/5p2/2N5/PP2PPPP/R3KB1R w KQ - 0 11": [
     "A33",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 Nc6 6.Ndb5 d5, Queenswap Variation"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 Nc6 6.Ndb5 d5, Queenswap Variation"
   ],
   "r1bqkb1r/pp1p1ppp/2n1pn2/8/2PN4/P1N5/1P2PPPP/R1BQKB1R b KQkq - 0 6": [
     "A33",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 Nc6 6.a3"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 Nc6 6.a3"
   ],
   "r1bqk2r/pp1p1ppp/2n1pn2/2b5/2PN4/P1N5/1P2PPPP/R1BQKB1R w KQkq - 1 7": [
     "A33",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 Nc6 6.a3 Bc5"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 Nc6 6.a3 Bc5"
   ],
   "r1bqkb1r/pp1p1ppp/2n1pn2/8/2PN4/2N1P3/PP3PPP/R1BQKB1R b KQkq - 0 6": [
     "A33",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 Nc6 6.e3"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 Nc6 6.e3"
   ],
   "r1bqkb1r/pp1p1ppp/2n1pn2/8/2PN4/2N3P1/PP2PP1P/R1BQKB1R b KQkq - 0 6": [
     "A33",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 Nc6 6.g3"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 Nc6 6.g3"
   ],
   "r1bqk2r/pp1p1ppp/2n1pn2/8/1bPN4/2N3P1/PP2PP1P/R1BQKB1R w KQkq - 1 7": [
     "A33",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 Nc6 6.g3 Bb4"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 Nc6 6.g3 Bb4"
   ],
   "r1bqk2r/pp1p1ppp/2n1pn2/2b5/2PN4/2N3P1/PP2PP1P/R1BQKB1R w KQkq - 1 7": [
     "A33",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 Nc6 6.g3 Bc5"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 Nc6 6.g3 Bc5"
   ],
   "r1bqkb1r/1p1p1ppp/p1n1pn2/8/2PN4/2N3P1/PP2PP1P/R1BQKB1R w KQkq - 0 7": [
     "A33",
-    "English Opening: Symmetrical Variation, Two Knights Defense, 5.Nc3 Nc6 6.g3 a6"
+    "English Opening: Symmetrical Variation, Two Knights Variation, 5.Nc3 Nc6 6.g3 a6"
   ],
   "rnbqkb1r/pp1ppppp/5n2/2p5/2P5/2N5/PP1PPPPP/R1BQKBNR w KQkq - 2 3": [
     "A34",
@@ -4545,7 +4557,7 @@
   ],
   "rnbqkb1r/pp2pppp/8/2pn4/8/2N2N2/PP1PPPPP/R1BQKB1R w KQkq - 0 5": [
     "A34",
-    "English Opening: Symmetrical Variation, Three Knights System, Exchange"
+    "English Opening: Symmetrical Variation, Three Knights System, Exchange Variation"
   ],
   "rnb1kb1r/pp2pppp/8/2p5/4P3/2P2N2/PP3PPP/R1BK1B1R b kq - 0 7": [
     "A34",
@@ -4571,10 +4583,6 @@
     "A35",
     "English Opening: Symmetrical Variation, 2.Nc3 Nc6 3.e3"
   ],
-  "r1bqkb1r/pp1ppppp/2n2n2/2p5/2P5/2N2N2/PP1PPPPP/R1BQKB1R w KQkq - 4 4": [
-    "A35",
-    "English Opening: Symmetrical Variation, Four Knights"
-  ],
   "r1bqkb1r/pp1ppppp/2n2n2/2p5/2P5/2N1PN2/PP1P1PPP/R1BQKB1R b KQkq - 2 4": [
     "A35",
     "English Opening: Symmetrical Variation, Four Knights Variation"
@@ -4583,33 +4591,41 @@
     "A35",
     "English Opening: Symmetrical Variation, Four Knights Variation"
   ],
+  "r1bqkb1r/pp1ppppp/2n2n2/2p5/2P5/2N2N2/PP1PPPPP/R1BQKB1R w KQkq - 4 4": [
+    "A35",
+    "English Opening: Symmetrical Variation, Four Knights Variation"
+  ],
   "r1bqkb1r/pp1ppppp/2n2n2/2p5/2PP4/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 0 4": [
     "A35",
-    "English Opening: Symmetrical Variation, Four Knights, 4.d4"
+    "English Opening: Symmetrical Variation, Four Knights Variation, 4.d4"
   ],
   "r1bqkb1r/pp1ppppp/2n2n2/2p5/2P5/2N1PN2/PP1P1PPP/R1BQKB1R b KQkq - 0 4": [
     "A35",
-    "English Opening: Symmetrical Variation, Four Knights, 4.e3"
+    "English Opening: Symmetrical Variation, Four Knights Variation, 4.e3"
   ],
   "r1bqkb1r/pp1p1ppp/2n2n2/2p1p3/2P5/2N1PN2/PP1P1PPP/R1BQKB1R w KQkq - 0 5": [
     "A35",
-    "English Opening: Symmetrical Variation, Four Knights, 4.e3 e5"
+    "English Opening: Symmetrical Variation, Four Knights Variation, 4.e3 e5"
   ],
   "r1bqkb1r/pp1ppppp/2n2n2/2p5/2P5/2N2NP1/PP1PPP1P/R1BQKB1R b KQkq - 0 4": [
     "A35",
-    "English Opening: Symmetrical Variation, Four Knights, 4.g3"
+    "English Opening: Symmetrical Variation, Four Knights Variation, 4.g3"
   ],
   "r1bqkb1r/pp2pppp/2n2n2/2pp4/2P5/2N2NP1/PP1PPP1P/R1BQKB1R w KQkq - 0 5": [
     "A35",
-    "English Opening: Symmetrical Variation, Four Knights, 4.g3 d5"
+    "English Opening: Symmetrical Variation, Four Knights Variation, 4.g3 d5"
   ],
   "r1bqkb1r/pp2pppp/2n2n2/2pP4/8/2N2NP1/PP1PPP1P/R1BQKB1R b KQkq - 0 5": [
     "A35",
-    "English Opening: Symmetrical Variation, Four Knights, 4.g3 d5 5.cxd5"
+    "English Opening: Symmetrical Variation, Four Knights Variation, 4.g3 d5 5.cxd5"
   ],
   "r1bqkbnr/pp1ppppp/2n5/2p5/2P5/2N5/PP1PPPPP/R1BQKBNR w KQkq - 2 3": [
     "A35",
     "English Opening: Symmetrical Variation, Two Knights Variation"
+  ],
+  "r1bqk1nr/pp1pppbp/2n3p1/2p5/2P5/2N3P1/PP1PPPBP/R1BQK1NR w KQkq - 4 5": [
+    "A36",
+    "English Opening: Symmetrical Variation"
   ],
   "r1bqkb1r/pp1ppppp/2n2n2/2p5/2P5/2N3P1/PP1PPP1P/R1BQKBNR w KQkq - 1 4": [
     "A36",
@@ -4739,21 +4755,17 @@
     "A36",
     "English Opening: Symmetrical Variation, Botvinnik Variation, 5...e6, 8.d3 d6"
   ],
-  "r1bqkb1r/pp1p1ppp/2n1pn2/2p5/2P5/2N2NP1/PP1PPP1P/R1BQKB1R w KQkq - 2 5": [
-    "A36",
-    "English Opening: Symmetrical Variation, Keres-Parma System"
-  ],
   "r1bqk2r/pp2bppp/2n1p3/2pn4/8/2N2NP1/PP1PPPBP/R1BQ1RK1 w kq - 0 8": [
     "A36",
-    "English Opening: Symmetrical Variation, Keres-Parma, Main Line Exchange"
+    "English Opening: Symmetrical Variation, Three Knights Variation, Keres-Parma System"
   ],
-  "r1bqk1nr/pp1pppbp/2n3p1/2p5/2P5/2N3P1/PP1PPPBP/R1BQK1NR w KQkq - 4 5": [
+  "r1bqkb1r/pp1p1ppp/2n1pn2/2p5/2P5/2N2NP1/PP1PPP1P/R1BQKB1R w KQkq - 2 5": [
     "A36",
-    "English Opening: Symmetrical Variation, Symmetrical Variation"
+    "English Opening: Symmetrical Variation, Three Knights Variation, Keres-Parma System"
   ],
   "r1bqkbnr/pp1ppppp/2n5/2p5/2P5/2N3P1/PP1PPP1P/R1BQKBNR b KQkq - 0 3": [
     "A36",
-    "English Opening: Symmetrical Variation, Two Knights, Fianchetto Variation"
+    "English Opening: Symmetrical Variation, Two Knights Variation, Fianchetto Variation"
   ],
   "r1bqk2r/pp1pppbp/2n3pn/2p5/2P5/2N2NP1/PP1PPPBP/R1BQK2R w KQkq - 4 6": [
     "A37",
@@ -4869,15 +4881,15 @@
   ],
   "r1bqk1nr/pp1p1pbp/2n3p1/2p1p3/2P5/2N2NP1/PP1PPPBP/R1BQK2R w KQkq - 2 6": [
     "A37",
-    "English Opening: Symmetrical Variation, Botvinnik System Reversed, 4.g3 g6 5.Bg2 Bg7"
+    "English Opening: Symmetrical Variation, Reversed Botvinnik System, 4.g3 g6 5.Bg2 Bg7"
   ],
   "r1bqk1nr/pp1p1pbp/2n3p1/2p1p3/2P5/2N2NP1/PP1PPPBP/R1BQK2R w KQkq - 0 6": [
     "A37",
-    "English Opening: Symmetrical Variation, Botvinnik System Reversed, with Nf3"
+    "English Opening: Symmetrical Variation, Reversed Botvinnik System, with Nf3"
   ],
   "r1bqk1nr/pp1pppbp/2n3p1/2p5/2P5/2N2NP1/PP1PPPBP/R1BQK2R b KQkq - 3 5": [
     "A37",
-    "English Opening: Symmetrical Variation, Three Knights, Fianchetto Variation"
+    "English Opening: Symmetrical Variation, Three Knights System, Fianchetto Variation"
   ],
   "r1bq1rk1/pp1pppbp/2n2np1/2p5/2P5/1PN2NP1/P2PPPBP/R1BQ1RK1 b - - 0 7": [
     "A38",
@@ -5043,18 +5055,6 @@
     "A40",
     "Australian Defense"
   ],
-  "rnbqkbnr/pppppp1p/8/6p1/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2": [
-    "A40",
-    "Basman Defense: Basman Gambit"
-  ],
-  "rnbqkbnr/ppppp2p/5p2/6B1/3P4/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3": [
-    "A40",
-    "Basman Gambit"
-  ],
-  "rnbqkbnr/pppppp1p/8/6B1/3P4/8/PPP1PPPP/RN1QKBNR b KQkq - 0 2": [
-    "A40",
-    "Basman Gambit Accepted, 2.Bxg5"
-  ],
   "rnb1k1nr/pp1pppbp/6p1/q1p5/3P4/3BPN2/PPP2PPP/RNBQK2R w KQkq - 2 5": [
     "A40",
     "Colle System: Pterodactyl Variation"
@@ -5062,34 +5062,6 @@
   "rnb1k1nr/pp1pppbp/6p1/q7/3N4/3BP3/PPP2PPP/RNBQK2R w KQkq - 1 6": [
     "A40",
     "Colle System: Siroccopteryx Variation"
-  ],
-  "rnbqkbnr/p1pp1ppp/1p2p3/8/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3": [
-    "A40",
-    "English Defense"
-  ],
-  "rnbqkbnr/p1pppppp/1p6/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2": [
-    "A40",
-    "English Defense"
-  ],
-  "rn1qkbnr/pbpp1ppp/1p6/4p3/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 4": [
-    "A40",
-    "English Defense: Eastbourne Gambit"
-  ],
-  "rn1qkb1r/pbpp2pp/1p2pn2/5P2/2PP4/2N5/PP3PPP/R1BQKBNR w KQkq - 1 6": [
-    "A40",
-    "English Defense: Hartlaub Gambit Accepted"
-  ],
-  "rn1qkbnr/pbpp2pp/1p2p3/3P1p2/2P1P3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 5": [
-    "A40",
-    "English Defense: Hartlaub Gambit Declined"
-  ],
-  "r2qkbnr/pbpp1ppp/1pn1p3/8/2PPP3/3B4/PP3PPP/RNBQK1NR w KQkq - 3 5": [
-    "A40",
-    "English Defense: Perrin Variation"
-  ],
-  "rn1qkb1r/pbpp2pp/1p2p2n/5P2/2PP4/5P2/PP4PP/RNBQKBNR w KQkq - 1 6": [
-    "A40",
-    "English Defense: Poli Gambit"
   ],
   "rnbqkbnr/pppp1ppp/8/4p3/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2": [
     "A40",
@@ -5398,6 +5370,34 @@
   "rnbqk2r/pp2npbp/3p2p1/2pP4/4P3/2N2N2/PP3PPP/R1BQKB1R w KQkq - 3 8": [
     "A40",
     "Queen's Pawn Opening: Benoni Defense, Franco-Sicilian Hybrid Variation"
+  ],
+  "rnbqkbnr/p1pp1ppp/1p2p3/8/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3": [
+    "A40",
+    "Queen's Pawn Opening: English Defense"
+  ],
+  "rnbqkbnr/p1pppppp/1p6/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2": [
+    "A40",
+    "Queen's Pawn Opening: English Defense"
+  ],
+  "rn1qkbnr/pbpp1ppp/1p6/4p3/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 4": [
+    "A40",
+    "Queen's Pawn Opening: English Defense, Eastbourne Gambit"
+  ],
+  "rn1qkb1r/pbpp2pp/1p2pn2/5P2/2PP4/2N5/PP3PPP/R1BQKBNR w KQkq - 1 6": [
+    "A40",
+    "Queen's Pawn Opening: English Defense, Hartlaub Gambit Accepted"
+  ],
+  "rn1qkbnr/pbpp2pp/1p2p3/3P1p2/2P1P3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 5": [
+    "A40",
+    "Queen's Pawn Opening: English Defense, Hartlaub Gambit Declined"
+  ],
+  "r2qkbnr/pbpp1ppp/1pn1p3/8/2PPP3/3B4/PP3PPP/RNBQK1NR w KQkq - 3 5": [
+    "A40",
+    "Queen's Pawn Opening: English Defense, Perrin Variation"
+  ],
+  "rn1qkb1r/pbpp2pp/1p2p2n/5P2/2PP4/5P2/PP4PP/RNBQKBNR w KQkq - 1 6": [
+    "A40",
+    "Queen's Pawn Opening: English Defense, Poli Gambit"
   ],
   "rnbqkb1r/p2ppppp/2p2n2/1p6/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
     "A40",
@@ -7163,10 +7163,6 @@
     "A50",
     "Accelerated Queen's Indian Defense"
   ],
-  "rnbqkbnr/p2p2pp/4p3/1PpP1p2/4P3/8/PP3PPP/RNBQKBNR w KQkq - 0 6": [
-    "A50",
-    "English Defense: Blumenfeld-Hiva Gambit"
-  ],
   "r1bqkb1r/pppp1ppp/2n1pn2/8/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 4": [
     "A50",
     "Indian Game: Black Knights' Tango"
@@ -7234,6 +7230,10 @@
   "r1bqkb1r/pppppppp/5n2/3Pn3/2P2P2/8/PP2P1PP/RNBQKBNR b KQkq - 0 4": [
     "A50",
     "Mexican Defense: Horsefly Gambit"
+  ],
+  "rnbqkbnr/p2p2pp/4p3/1PpP1p2/4P3/8/PP3PPP/RNBQKBNR w KQkq - 0 6": [
+    "A50",
+    "Queen's Pawn Opening: English Defense, Blumenfeld-Hiva Gambit"
   ],
   "rnbqkb1r/pp1ppppp/2p2n2/8/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3": [
     "A50",
@@ -10567,26 +10567,6 @@
     "B00",
     "Basman Defense"
   ],
-  "rnbqk1nr/ppppppbp/8/6p1/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 1 3": [
-    "B00",
-    "Basman Defense: Basman Gambit"
-  ],
-  "rnbqkbnr/1pppppp1/p6p/8/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
-    "B00",
-    "Basman Defense: Creepy-Crawly System"
-  ],
-  "rnbqkbnr/p2p1p1p/1p2p3/2P3p1/4P3/2P5/PP3PPP/RNBQKBNR w KQkq - 0 5": [
-    "B00",
-    "Basman Defense: Langhorst Gambit"
-  ],
-  "rnbqkbnr/pppppp2/7p/8/3PP1pP/8/PPP2PP1/RNBQKBNR w KQkq - 0 4": [
-    "B00",
-    "Basman Defense: Troon Gambit"
-  ],
-  "rnbqkbnr/pppp1p1p/8/4p1p1/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
-    "B00",
-    "Basman Defense: Zilbermints Gambit"
-  ],
   "rnbqkbnr/ppppppp1/7p/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2": [
     "B00",
     "Carr Defense"
@@ -11134,6 +11114,26 @@
   "rnbqkbnr/ppp1pppp/3p4/8/4P1P1/8/PPPP1P1P/RNBQKBNR b KQkq - 0 2": [
     "B00",
     "Rat Defense: Spike Attack"
+  ],
+  "rnbqk1nr/ppppppbp/8/6p1/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 1 3": [
+    "B00",
+    "Réti Opening: Basman Defense, Basman Gambit"
+  ],
+  "rnbqkbnr/1pppppp1/p6p/8/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
+    "B00",
+    "Réti Opening: Basman Defense, Creepy-Crawly System"
+  ],
+  "rnbqkbnr/p2p1p1p/1p2p3/2P3p1/4P3/2P5/PP3PPP/RNBQKBNR w KQkq - 0 5": [
+    "B00",
+    "Réti Opening: Basman Defense, Langhorst Gambit"
+  ],
+  "rnbqkbnr/pppppp2/7p/8/3PP1pP/8/PPP2PP1/RNBQKBNR w KQkq - 0 4": [
+    "B00",
+    "Réti Opening: Basman Defense, Troon Gambit"
+  ],
+  "rnbqkbnr/pppp1p1p/8/4p1p1/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
+    "B00",
+    "Réti Opening: Basman Defense, Zilbermints Gambit"
   ],
   "r1bqkbnr/ppp1pppp/2n5/3P4/4p3/2N5/PPP2PPP/R1BQKBNR b KQkq - 0 4": [
     "B00",
