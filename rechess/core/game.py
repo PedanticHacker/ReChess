@@ -83,8 +83,8 @@ class Game(QObject):
     @fen.setter
     def fen(self, value) -> None:
         """Initialize state and set new position based on `value`."""
-        self._initialize_state()
         self._board.set_fen(value)
+        self._initialize_state()
 
     @property
     def king_in_check(self) -> Square | None:

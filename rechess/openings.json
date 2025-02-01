@@ -1329,15 +1329,15 @@
   ],
   "rnb1k1nr/pp1pppbp/1q4p1/2p5/2PPP3/5N2/PP3PPP/RNBQKB1R w KQkq - 1 5": [
     "A04",
-    "Modern Defense: Semi-Averbakh Variation, Polish Variation"
+    "King's Pawn Opening: Modern Defense, Semi-Averbakh Variation, Polish Variation"
   ],
   "rnb1k1nr/pp1pppbp/6p1/q1p5/2PPP3/5N2/PP3PPP/RNBQKB1R w KQkq - 1 5": [
     "A04",
-    "Modern Defense: Semi-Averbakh Variation, Pterodactyl Variation"
+    "King's Pawn Opening: Modern Defense, Semi-Averbakh Variation, Pterodactyl Variation"
   ],
   "rnb1k1nr/pp2ppbp/3p2p1/q1P5/2P1P3/5N2/PP3PPP/RNBQKB1R w KQkq - 1 6": [
     "A04",
-    "Modern Defense: Semi-Averbakh Variation, Pterodactyl Variation Accepted"
+    "King's Pawn Opening: Modern Defense, Semi-Averbakh Variation, Pterodactyl Variation Accepted"
   ],
   "r1bqk1nr/pp1p1pbp/2n1p1p1/2p5/4P3/3P1NP1/PPP2PBP/RNBQ1RK1 b kq - 0 6": [
     "A04",
@@ -5159,6 +5159,38 @@
     "A40",
     "Kangaroo Defense: Keres Defense, Transpositional Variation"
   ],
+  "rnbqk1nr/pp1pp2p/6p1/2pP1p2/2P5/2P5/P3PPPP/R1BQKBNR w KQkq - 0 6": [
+    "A40",
+    "King's Pawn Opening: Modern Defense, Beefeater Variation"
+  ],
+  "rnbqkb1r/pppppp1p/5np1/7P/3P4/8/PPP1PPP1/RNBQKBNR b KQkq - 0 3": [
+    "A40",
+    "King's Pawn Opening: Modern Defense, Lizard Defense, Pirc-Diemer Gambit"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1pP4/2P1P3/8/PP3PPP/RNBQKBNR w KQkq - 1 5": [
+    "A40",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Central Benoni Variation"
+  ],
+  "rnb1k1nr/pp2pp1p/3p2p1/q1pP4/2P1P3/2P5/P4PPP/R1BQKBNR w KQkq - 1 7": [
+    "A40",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Central, Benoni Beefeater Pterodactyl"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1pP4/2P5/2N5/PP2PPPP/R1BQKBNR w KQkq - 1 5": [
+    "A40",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Fianchetto Variation, Queen Benoni Variation"
+  ],
+  "rnb1k1nr/pp1ppp1p/6p1/q1pP4/2P5/2P5/P3PPPP/R1BQKBNR w KQkq - 1 6": [
+    "A40",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Fianchetto Variation, Queen Pteranodon Variation"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1p5/3P4/5NP1/PPP1PPBP/RNBQK2R w KQkq - 2 5": [
+    "A40",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Fianchetto Variation, Queen Pterodactyl Variation"
+  ],
+  "rnbqk1nr/pp1pppbp/6p1/2p5/2PP4/2N1P3/PP3PPP/R1BQKBNR b KQkq - 0 4": [
+    "A40",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Queen Pterodactyl Variation, Quiet Line"
+  ],
   "r1bqkbnr/pppppppp/2n5/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 1 2": [
     "A40",
     "Mikenas Defense"
@@ -5175,14 +5207,6 @@
     "A40",
     "Mikenas Defense: Pozarek Gambit"
   ],
-  "rnbqk1nr/pp1pp2p/6p1/2pP1p2/2P5/2P5/P3PPPP/R1BQKBNR w KQkq - 0 6": [
-    "A40",
-    "Modern Defense: Beefeater Variation"
-  ],
-  "rnbqkb1r/pppppp1p/5np1/7P/3P4/8/PPP1PPP1/RNBQKBNR b KQkq - 0 3": [
-    "A40",
-    "Modern Defense: Lizard Defense, Pirc-Diemer Gambit"
-  ],
   "rnbqkbnr/pppppppp/8/3P4/8/8/PPP1PPPP/RNBQKBNR w KQkq - 1 3": [
     "A40",
     "Montevideo Defense"
@@ -5194,34 +5218,6 @@
   "rn1qkbnr/pbpppppp/8/1B6/3PP3/8/PPP2PPP/RNBQK1NR b KQkq - 0 3": [
     "A40",
     "Polish Defense: Spassky Gambit Accepted"
-  ],
-  "rnb1k1nr/pp2pp1p/3p2p1/q1pP4/2P1P3/2P5/P4PPP/R1BQKBNR w KQkq - 1 7": [
-    "A40",
-    "Pterodactyl Defense: Central, Benoni Beefeater Pterodactyl"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1pP4/2P1P3/8/PP3PPP/RNBQKBNR w KQkq - 1 5": [
-    "A40",
-    "Pterodactyl Defense: Central, Benoni Pterodactyl"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1pP4/2P5/2N5/PP2PPPP/R1BQKBNR w KQkq - 1 5": [
-    "A40",
-    "Pterodactyl Defense: Fianchetto, Queen Benoni Pterodactyl"
-  ],
-  "rnb1k1nr/pp1ppp1p/6p1/q1pP4/2P5/2P5/P3PPPP/R1BQKBNR w KQkq - 1 6": [
-    "A40",
-    "Pterodactyl Defense: Fianchetto, Queen Pteranodon"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1p5/3P4/5NP1/PPP1PPBP/RNBQK2R w KQkq - 2 5": [
-    "A40",
-    "Pterodactyl Defense: Fianchetto, Queen Pterodactyl"
-  ],
-  "rnbqk1nr/pp1pppbp/6p1/2p5/2PP4/2N1P3/PP3PPP/R1BQKBNR b KQkq - 0 4": [
-    "A40",
-    "Pterodactyl Defense: Queen Pterodactyl, Quiet Line"
-  ],
-  "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1": [
-    "A40",
-    "Queen's Pawn Game"
   ],
   "rnbqkbnr/pp1ppppp/2p5/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2": [
     "A40",
@@ -5367,6 +5363,10 @@
     "A40",
     "Queen's Pawn Game: Polish Defense"
   ],
+  "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1": [
+    "A40",
+    "Queen's Pawn Opening"
+  ],
   "rnbqk2r/pp2npbp/3p2p1/2pP4/4P3/2N2N2/PP3PPP/R1BQKB1R w KQkq - 3 8": [
     "A40",
     "Queen's Pawn Opening: Benoni Defense, Franco-Sicilian Hybrid Variation"
@@ -5407,6 +5407,10 @@
     "A40",
     "Zaire Defense"
   ],
+  "rnbqk1nr/pppp1pbp/6p1/4p3/2PPP3/8/PP3PPP/RNBQKBNR w KQkq - 0 4": [
+    "A41",
+    "King's Pawn Opening: Modern Defense, Standard Line"
+  ],
   "rn1qk1nr/ppp1ppbp/3p2p1/8/2PPP1b1/5N2/PP3PPP/RNBQKB1R w KQkq - 1 5": [
     "A41",
     "Modern Defense"
@@ -5414,10 +5418,6 @@
   "rnbqk1nr/ppp1ppbp/3p2p1/8/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 4": [
     "A41",
     "Modern Defense"
-  ],
-  "rnbqk1nr/pppp1pbp/6p1/4p3/2PPP3/8/PP3PPP/RNBQKBNR w KQkq - 0 4": [
-    "A41",
-    "Modern Defense: Standard Line"
   ],
   "rnbqkbnr/ppp1pppp/3p4/6B1/3P4/8/PPP1PPPP/RN1QKBNR b KQkq - 1 2": [
     "A41",
@@ -5617,151 +5617,151 @@
   ],
   "rnbqk1nr/ppp1ppbp/3p2p1/8/2PPP3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 4": [
     "A42",
-    "Modern Defense: Averbakh System"
+    "King's Pawn Opening: Modern Defense, Averbakh System"
   ],
   "r1bqk1nr/pppnppbp/3p2p1/8/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 1 5": [
     "A42",
-    "Modern Defense: Averbakh Variation, 4...Nd7"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, 4...Nd7"
   ],
   "r1bqk1nr/pppnppbp/3p2p1/8/2PPP3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 2 5": [
     "A42",
-    "Modern Defense: Averbakh Variation, 4...Nd7 5.Nf3"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, 4...Nd7 5.Nf3"
   ],
   "rnbqk1nr/pp2ppbp/2pp2p1/8/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5": [
     "A42",
-    "Modern Defense: Averbakh Variation, 4...c6"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, 4...c6"
   ],
   "rnbqk1nr/pp2ppbp/2pp2p1/8/2PPP3/2N1B3/PP3PPP/R2QKBNR b KQkq - 1 5": [
     "A42",
-    "Modern Defense: Averbakh Variation, 4...c6 5.Be3"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, 4...c6 5.Be3"
   ],
   "rnbqk1nr/pp2ppbp/2pp2p1/8/2PPP3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 1 5": [
     "A42",
-    "Modern Defense: Averbakh Variation, 4...c6 5.Nf3"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, 4...c6 5.Nf3"
   ],
   "rnbqk1nr/ppp2pbp/3p2p1/4p3/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5": [
     "A42",
-    "Modern Defense: Averbakh Variation, 4...e5"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, 4...e5"
   ],
   "rnbqk1nr/ppp2pbp/3p2p1/4p3/2PPP3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 1 5": [
     "A42",
-    "Modern Defense: Averbakh Variation, 4...e5 5.Nf3"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, 4...e5 5.Nf3"
   ],
   "r1bqk1nr/pppn1pbp/3p2p1/4p3/2PPP3/2N2N2/PP3PPP/R1BQKB1R w KQkq - 2 6": [
     "A42",
-    "Modern Defense: Averbakh Variation, 4...e5 5.Nf3 Nd7"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, 4...e5 5.Nf3 Nd7"
   ],
   "r1bqk1nr/pppn1pbp/3p2p1/4p3/2PPP3/2N2N2/PP2BPPP/R1BQK2R b KQkq - 3 6": [
     "A42",
-    "Modern Defense: Averbakh Variation, 4...e5 5.Nf3 Nd7 6.Be2"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, 4...e5 5.Nf3 Nd7 6.Be2"
   ],
   "r1bqk2r/pppnnpbp/3p2p1/4p3/2PPP3/2N2N2/PP2BPPP/R1BQK2R w KQkq - 4 7": [
     "A42",
-    "Modern Defense: Averbakh Variation, 4...e5 5.Nf3 Nd7 6.Be2 Ne7"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, 4...e5 5.Nf3 Nd7 6.Be2 Ne7"
   ],
   "rnbqk1nr/ppp2pbp/3p2p1/4p3/2PPP3/2N5/PP2NPPP/R1BQKB1R b KQkq - 1 5": [
     "A42",
-    "Modern Defense: Averbakh Variation, 4...e5 5.Nge2"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, 4...e5 5.Nge2"
   ],
   "rnbqk1nr/ppp2pbp/3p2p1/3Pp3/2P1P3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 5": [
     "A42",
-    "Modern Defense: Averbakh Variation, 4...e5 5.d5"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, 4...e5 5.d5"
   ],
   "r1bqk1nr/pppn1pbp/3p2p1/3Pp3/2P1P3/2N5/PP3PPP/R1BQKBNR w KQkq - 1 6": [
     "A42",
-    "Modern Defense: Averbakh Variation, 4...e5 5.d5 Nd7"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, 4...e5 5.d5 Nd7"
   ],
   "rnbqk1nr/ppp2pbp/3p2p1/4P3/2P1P3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 5": [
     "A42",
-    "Modern Defense: Averbakh Variation, 4...e5 5.dxe5"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, 4...e5 5.dxe5"
   ],
   "rnbqk1nr/ppp2pbp/6p1/4p3/2P1P3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 6": [
     "A42",
-    "Modern Defense: Averbakh Variation, 4...e5 5.dxe5 dxe5"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, 4...e5 5.dxe5 dxe5"
   ],
   "r1bqk1nr/ppp1ppbp/2np2p1/8/2PPP3/2N1B3/PP3PPP/R2QKBNR b KQkq - 2 5": [
     "A42",
-    "Modern Defense: Averbakh Variation, Kotov Variation, 5.Be3"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, Kotov Variation, 5.Be3"
   ],
   "r1bqk1nr/ppp2pbp/2np2p1/4p3/2PPP3/2N1B3/PP3PPP/R2QKBNR w KQkq - 0 6": [
     "A42",
-    "Modern Defense: Averbakh Variation, Kotov Variation, 5.Be3 e5"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, Kotov Variation, 5.Be3 e5"
   ],
   "r1bqk1nr/ppp2pbp/2np2p1/4p3/2PPP3/2N1B3/PP2NPPP/R2QKB1R b KQkq - 1 6": [
     "A42",
-    "Modern Defense: Averbakh Variation, Kotov Variation, 5.Be3 e5 6.Nge2"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, Kotov Variation, 5.Be3 e5 6.Nge2"
   ],
   "r1bqk1nr/ppp2pbp/2np2p1/3Pp3/2P1P3/2N1B3/PP3PPP/R2QKBNR b KQkq - 0 6": [
     "A42",
-    "Modern Defense: Averbakh Variation, Kotov Variation, 5.Be3 e5 6.d5"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, Kotov Variation, 5.Be3 e5 6.d5"
   ],
   "r1bqk1nr/ppp1npbp/3p2p1/3Pp3/2P1P3/2N1B3/PP3PPP/R2QKBNR w KQkq - 1 7": [
     "A42",
-    "Modern Defense: Averbakh Variation, Kotov Variation, 5.Be3 e5 6.d5 Nce7"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, Kotov Variation, 5.Be3 e5 6.d5 Nce7"
   ],
   "r1bqk1nr/ppp1npbp/3p2p1/2PPp3/4P3/2N1B3/PP3PPP/R2QKBNR b KQkq - 0 7": [
     "A42",
-    "Modern Defense: Averbakh Variation, Kotov Variation, 5.Be3 e5 6.d5 Nce7 7.c5"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, Kotov Variation, 5.Be3 e5 6.d5 Nce7 7.c5"
   ],
   "r1bqk1nr/ppp1npbp/3p2p1/3Pp3/2P1P1P1/2N1B3/PP3P1P/R2QKBNR b KQkq - 0 7": [
     "A42",
-    "Modern Defense: Averbakh Variation, Kotov Variation, 5.Be3 e5 6.d5 Nce7 7.g4"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, Kotov Variation, 5.Be3 e5 6.d5 Nce7 7.g4"
   ],
   "r1bqk1nr/ppp1ppbp/2np2p1/8/2PPP3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 2 5": [
     "A42",
-    "Modern Defense: Averbakh Variation, Kotov Variation, 5.Nf3"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, Kotov Variation, 5.Nf3"
   ],
   "r1bqk1nr/ppp1ppbp/2np2p1/8/2PPP3/2N5/PP2NPPP/R1BQKB1R b KQkq - 2 5": [
     "A42",
-    "Modern Defense: Averbakh Variation, Kotov Variation, 5.Nge2"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, Kotov Variation, 5.Nge2"
   ],
   "r1bqk1nr/ppp1ppbp/2np2p1/3P4/2P1P3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 5": [
     "A42",
-    "Modern Defense: Averbakh Variation, Kotov Variation, 5.d5"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, Kotov Variation, 5.d5"
   ],
   "rnbqk2r/ppp1ppbp/3p1np1/8/2PPP3/4BP2/PP4PP/RN1QKBNR b KQkq - 0 5": [
     "A42",
-    "Modern Defense: Averbakh Variation, Pseudo-Sämisch Variation"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, Pseudo-Sämisch Variation"
   ],
   "rnbk2nr/ppp2pbp/6p1/4p3/2P1P3/2N5/PP3PPP/R1B1KBNR w KQ - 0 7": [
     "A42",
-    "Modern Defense: Averbakh Variation, Queenswap Variation"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, Queenswap Variation"
   ],
   "rnbk2nr/ppp2pbp/6p1/4p3/2P1PP2/2N5/PP4PP/R1B1KBNR b KQ - 0 7": [
     "A42",
-    "Modern Defense: Averbakh Variation, Queenswap Variation, 7.f4"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, Queenswap Variation, 7.f4"
   ],
   "rnbqk1nr/ppp1p1bp/3p2p1/5p2/2PPP3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 1 5": [
     "A42",
-    "Modern Defense: Averbakh Variation, Randspringer Variation, 5.Nf3"
+    "King's Pawn Opening: Modern Defense, Averbakh Variation, Randspringer Variation, 5.Nf3"
   ],
   "r1bqk1nr/ppp1ppbp/2np2p1/8/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 1 5": [
     "A42",
-    "Modern Defense: Kotov Variation"
-  ],
-  "rnb1k1nr/pp2ppbp/3p2p1/q1p5/2PPP3/2N2N2/PP3PPP/R1BQKB1R w KQkq - 2 6": [
-    "A42",
-    "Modern Defense: Pterodactyl Defense with c4"
-  ],
-  "rnbqk1nr/pp2ppbp/3p2p1/2p5/2PPP3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 1 5": [
-    "A42",
-    "Modern Defense: Pterodactyl Defense with c4"
-  ],
-  "rnbqk1nr/pp2ppbp/3p2p1/2p5/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5": [
-    "A42",
-    "Modern Defense: Pterodactyl Defense with c4"
-  ],
-  "rnbqk1nr/ppp1p1bp/3p2p1/5p2/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5": [
-    "A42",
-    "Modern Defense: Randspringer Variation"
+    "King's Pawn Opening: Modern Defense, Kotov Variation"
   ],
   "rnb1k1nr/pp2ppbp/3p2p1/q1p5/2PPP3/2N2N2/PP3PPP/R1BQKB1R w KQkq - 0 6": [
     "A42",
-    "Pterodactyl Defense"
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense"
+  ],
+  "rnb1k1nr/pp2ppbp/3p2p1/q1p5/2PPP3/2N2N2/PP3PPP/R1BQKB1R w KQkq - 2 6": [
+    "A42",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense with c4"
+  ],
+  "rnbqk1nr/pp2ppbp/3p2p1/2p5/2PPP3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 1 5": [
+    "A42",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense with c4"
+  ],
+  "rnbqk1nr/pp2ppbp/3p2p1/2p5/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5": [
+    "A42",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense with c4"
   ],
   "rnb1k1nr/pp2ppbp/3p2p1/q1p5/2PPP3/2N5/PP2NPPP/R1BQKB1R w KQkq - 2 6": [
     "A42",
-    "Pterodactyl Defense: Central Bogolubovia Variation"
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Central Bogolubovia Variation"
+  ],
+  "rnbqk1nr/ppp1p1bp/3p2p1/5p2/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5": [
+    "A42",
+    "King's Pawn Opening: Modern Defense, Randspringer Variation"
   ],
   "rnbqkb1r/p2ppppp/5n2/1ppP4/8/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 4": [
     "A43",
@@ -8377,95 +8377,95 @@
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQK2R w KQ - 3 9": [
     "A62",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 8.Bg2 O-O"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 8.Bg2 O-O"
   ],
   "rnbq1rk1/pp3pbp/3p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQ1RK1 b - - 4 9": [
     "A62",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9.O-O"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 9.O-O"
   ],
   "r1bq1rk1/pp3pbp/n2p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 5 10": [
     "A62",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9.O-O Na6"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 9.O-O Na6"
   ],
   "r1bq1rk1/ppn2pbp/3p1np1/2pP4/8/2N3P1/PP1NPPBP/R1BQ1RK1 w - - 7 11": [
     "A62",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9.O-O Na6 10.Nd2 Nc7"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 9.O-O Na6 10.Nd2 Nc7"
   ],
   "rnbqr1k1/pp3pbp/3p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 5 10": [
     "A62",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9.O-O Re8"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 9.O-O Re8"
   ],
   "rnbq1rk1/1p3pbp/p2p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 0 10": [
     "A62",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9.O-O a6"
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 9.O-O a6"
+  ],
+  "r1bq1rk1/pp1n1pbp/3p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 5 10": [
+    "A63",
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 9...Nbd7"
+  ],
+  "r1bq1rk1/pp1n1pbp/3p1np1/2pP4/8/2N3P1/PP1NPPBP/R1BQ1RK1 b - - 6 10": [
+    "A63",
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 9...Nbd7 10.Nd2"
+  ],
+  "r1bqr1k1/pp1n1pbp/3p1np1/2pP4/8/2N3P1/PP1NPPBP/R1BQ1RK1 w - - 7 11": [
+    "A63",
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 9...Nbd7 10.Nd2 Re8"
+  ],
+  "r1bq1rk1/1p1n1pbp/p2p1np1/2pP4/8/2N3P1/PP1NPPBP/R1BQ1RK1 w - - 0 11": [
+    "A63",
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 9...Nbd7 10.Nd2 a6"
+  ],
+  "r1bq1rk1/1p1n1pbp/p2p1np1/2pP4/P7/2N3P1/1P1NPPBP/R1BQ1RK1 b - - 0 11": [
+    "A63",
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 9...Nbd7 10.Nd2 a6 11.a4"
+  ],
+  "r1bq1rk1/1p1n1pbp/p2p1np1/2pP4/P7/2N2NP1/1P2PPBP/R1BQ1RK1 w - - 1 11": [
+    "A63",
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 9...a6 10.a4 Nbd7"
   ],
   "r1bq1rk1/pp1n1pbp/3p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 6 10": [
     "A63",
     "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, Hastings Defense"
   ],
-  "r1bq1rk1/pp1n1pbp/3p1np1/2pP4/8/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 5 10": [
-    "A63",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9...Nbd7"
+  "r1bqr1k1/1p1n1pbp/p2p1np1/2pP4/P7/2N3P1/1P1NPPBP/R1BQ1RK1 w - - 1 12": [
+    "A64",
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 11...Re8"
   ],
-  "r1bq1rk1/pp1n1pbp/3p1np1/2pP4/8/2N3P1/PP1NPPBP/R1BQ1RK1 b - - 6 10": [
-    "A63",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9...Nbd7 10.Nd2"
+  "r1bqr1k1/1p1n1pbp/p2p1np1/2pP4/P1N5/2N3P1/1P2PPBP/R1BQ1RK1 b - - 2 12": [
+    "A64",
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 11...Re8 12.Nc4"
   ],
-  "r1bqr1k1/pp1n1pbp/3p1np1/2pP4/8/2N3P1/PP1NPPBP/R1BQ1RK1 w - - 7 11": [
-    "A63",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9...Nbd7 10.Nd2 Re8"
+  "r1bqr1k1/1p3pbp/p2p1np1/2pPn3/P1N5/2N3P1/1P2PPBP/R1BQ1RK1 w - - 3 13": [
+    "A64",
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 11...Re8 12.Nc4 Ne5"
   ],
-  "r1bq1rk1/1p1n1pbp/p2p1np1/2pP4/8/2N3P1/PP1NPPBP/R1BQ1RK1 w - - 0 11": [
-    "A63",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9...Nbd7 10.Nd2 a6"
+  "r1bqr1k1/1p1n1pbp/p2p1np1/P1pP4/8/2N3P1/1P1NPPBP/R1BQ1RK1 b - - 0 12": [
+    "A64",
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 11...Re8 12.a5"
   ],
-  "r1bq1rk1/1p1n1pbp/p2p1np1/2pP4/P7/2N3P1/1P1NPPBP/R1BQ1RK1 b - - 0 11": [
-    "A63",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9...Nbd7 10.Nd2 a6 11.a4"
+  "r1bqr1k1/1p1n1pbp/p2p1np1/2pP4/P7/2N3PP/1P1NPPB1/R1BQ1RK1 b - - 0 12": [
+    "A64",
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 11...Re8 12.h3"
   ],
-  "r1bq1rk1/1p1n1pbp/p2p1np1/2pP4/P7/2N2NP1/1P2PPBP/R1BQ1RK1 w - - 1 11": [
-    "A63",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 9...a6 10.a4 Nbd7"
+  "1rbqr1k1/1p1n1pbp/p2p1np1/2pP4/P7/2N3PP/1P1NPPB1/R1BQ1RK1 w - - 1 13": [
+    "A64",
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 11...Re8 12.h3 Rb8"
+  ],
+  "1rbqr1k1/1p1n1pbp/p2p1np1/2pP4/P1N5/2N3PP/1P2PPB1/R1BQ1RK1 b - - 2 13": [
+    "A64",
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 11...Re8 12.h3 Rb8 13.Nc4"
+  ],
+  "1rbqr1k1/1p3pbp/pn1p1np1/2pP4/P1N5/2N3PP/1P2PPB1/R1BQ1RK1 w - - 3 14": [
+    "A64",
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 11...Re8 12.h3 Rb8 13.Nc4 Nb6"
+  ],
+  "1rbqr1k1/1p3pbp/p2p1np1/2pPn3/P1N5/2N3PP/1P2PPB1/R1BQ1RK1 w - - 3 14": [
+    "A64",
+    "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, 11...Re8 12.h3 Rb8 13.Nc4 Ne5"
   ],
   "r1bqr1k1/1p1n1pbp/p2p1np1/2pP4/P7/2N3P1/1P1NPPBP/R1BQ1RK1 w - - 3 12": [
     "A64",
     "Queen's Pawn Opening: Benoni Defense, Fianchetto Variation, Hastings Defense, Main Line"
-  ],
-  "r1bqr1k1/1p1n1pbp/p2p1np1/2pP4/P7/2N3P1/1P1NPPBP/R1BQ1RK1 w - - 1 12": [
-    "A64",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 11...Re8"
-  ],
-  "r1bqr1k1/1p1n1pbp/p2p1np1/2pP4/P1N5/2N3P1/1P2PPBP/R1BQ1RK1 b - - 2 12": [
-    "A64",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 11...Re8 12.Nc4"
-  ],
-  "r1bqr1k1/1p3pbp/p2p1np1/2pPn3/P1N5/2N3P1/1P2PPBP/R1BQ1RK1 w - - 3 13": [
-    "A64",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 11...Re8 12.Nc4 Ne5"
-  ],
-  "r1bqr1k1/1p1n1pbp/p2p1np1/P1pP4/8/2N3P1/1P1NPPBP/R1BQ1RK1 b - - 0 12": [
-    "A64",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 11...Re8 12.a5"
-  ],
-  "r1bqr1k1/1p1n1pbp/p2p1np1/2pP4/P7/2N3PP/1P1NPPB1/R1BQ1RK1 b - - 0 12": [
-    "A64",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 11...Re8 12.h3"
-  ],
-  "1rbqr1k1/1p1n1pbp/p2p1np1/2pP4/P7/2N3PP/1P1NPPB1/R1BQ1RK1 w - - 1 13": [
-    "A64",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 11...Re8 12.h3 Rb8"
-  ],
-  "1rbqr1k1/1p1n1pbp/p2p1np1/2pP4/P1N5/2N3PP/1P2PPB1/R1BQ1RK1 b - - 2 13": [
-    "A64",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 11...Re8 12.h3 Rb8 13.Nc4"
-  ],
-  "1rbqr1k1/1p3pbp/pn1p1np1/2pP4/P1N5/2N3PP/1P2PPB1/R1BQ1RK1 w - - 3 14": [
-    "A64",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 11...Re8 12.h3 Rb8 13.Nc4 Nb6"
-  ],
-  "1rbqr1k1/1p3pbp/p2p1np1/2pPn3/P1N5/2N3PP/1P2PPB1/R1BQ1RK1 w - - 3 14": [
-    "A64",
-    "Queen's Pawn Opening: Benoni Defense, Fianchetto, 11...Re8 12.h3 Rb8 13.Nc4 Ne5"
   ],
   "rnbqk2r/pp2bppp/3p1n2/2pP4/4P3/2N5/PP3PPP/R1BQKBNR w KQkq - 1 7": [
     "A65",
@@ -12065,19 +12065,19 @@
   ],
   "rnbqkb1r/ppp1pp1p/3p2p1/3nP3/2BP4/5N2/PPP2PPP/RNBQK2R b KQkq - 1 5": [
     "B04",
-    "Alekhine Defense: Modern, Fianchetto, 5.Bc4"
+    "Alekhine Defense: Modern, Fianchetto Variation, 5.Bc4"
   ],
   "rnbqkb1r/ppp1pp1p/1n1p2p1/4P3/2BP4/5N2/PPP2PPP/RNBQK2R w KQkq - 2 6": [
     "B04",
-    "Alekhine Defense: Modern, Fianchetto, 5.Bc4 Nb6"
+    "Alekhine Defense: Modern, Fianchetto Variation, 5.Bc4 Nb6"
   ],
   "rnbqk2r/ppp1ppbp/1n1p2p1/4P3/3P4/1B3N2/PPP2PPP/RNBQK2R w KQkq - 4 7": [
     "B04",
-    "Alekhine Defense: Modern, Fianchetto, 5.Bc4 Nb6 6.Bb3 Bg7"
+    "Alekhine Defense: Modern, Fianchetto Variation, 5.Bc4 Nb6 6.Bb3 Bg7"
   ],
   "rnbqk2r/ppp1ppbp/1n1p2p1/4P1N1/3P4/1B6/PPP2PPP/RNBQK2R b KQkq - 5 7": [
     "B04",
-    "Alekhine Defense: Modern, Fianchetto, 5.Bc4 Nb6 6.Bb3 Bg7 7.Ng5"
+    "Alekhine Defense: Modern, Fianchetto Variation, 5.Bc4 Nb6 6.Bb3 Bg7 7.Ng5"
   ],
   "rnbqkb1r/ppp1pp1p/6p1/3nN3/3P4/8/PPP2PPP/RNBQKB1R w KQkq - 0 6": [
     "B04",
@@ -12199,6 +12199,254 @@
     "B05",
     "Alekhine Defense: Modern, Main Line, 8.h3 Bh5 9.Nc3 O-O 10.Be3 d5"
   ],
+  "rnbqk1nr/pp2ppbp/2pp2p1/8/2BPP3/2N2Q2/PPP2PPP/R1B1K1NR b KQkq - 1 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, 3.Nc3 d6 4.Bc4"
+  ],
+  "rnbqk1nr/pp2ppbp/2pp2p1/8/2BPP3/2N5/PPP2PPP/R1BQK1NR w KQkq - 0 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, 3.Nc3 d6 4.Bc4"
+  ],
+  "rnbqk1nr/pp3pbp/2ppp1p1/8/2BPP3/2N2Q2/PPP2PPP/R1B1K1NR w KQkq - 0 6": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, 3.Nc3 d6 4.Bc4"
+  ],
+  "rnbqk1nr/ppp1ppbp/3p2p1/8/2BPP3/2N5/PPP2PPP/R1BQK1NR b KQkq - 1 4": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, 3.Nc3 d6 4.Bc4"
+  ],
+  "rnbqk2r/pp2ppbp/2pp1np1/8/2BPP3/2N2Q2/PPP2PPP/R1B1K1NR w KQkq - 2 6": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, 3.Nc3 d6 4.Bc4"
+  ],
+  "rnbqk1nr/ppp1ppbp/3p2p1/8/3PP3/2N1B3/PPP2PPP/R2QKBNR b KQkq - 1 4": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, 3.Nc3 d6 4.Be3"
+  ],
+  "rnbqk1nr/1pp1ppbp/p2p2p1/8/3PP3/2N1B3/PPP2PPP/R2QKBNR w KQkq - 0 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, 3.Nc3 d6 4.Be3 a6"
+  ],
+  "rnbqk1nr/pp2ppbp/2pp2p1/8/3PP3/2N1B3/PPP2PPP/R2QKBNR w KQkq - 0 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, 3.Nc3 d6 4.Be3 c6"
+  ],
+  "rnbqk1nr/ppppppbp/6p1/8/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq - 2 3": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, 3.Nf3"
+  ],
+  "rnbqk1nr/ppp1ppbp/3p2p1/8/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, 3.Nf3 d6"
+  ],
+  "rnbqk1nr/ppp1ppbp/3p2p1/8/2BPP3/5N2/PPP2PPP/RNBQK2R b KQkq - 1 4": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, 3.Nf3 d6 4.Bc4"
+  ],
+  "rnbqk1nr/ppp1ppbp/3p2p1/8/3PP3/2P5/PP3PPP/RNBQKBNR w KQkq - 0 4": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, 3.c3"
+  ],
+  "rnbqk1nr/ppppppbp/6p1/8/3PP3/2P5/PP3PPP/RNBQKBNR b KQkq - 0 3": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, 3.c3"
+  ],
+  "rnbqk1nr/pp2ppbp/2pp2p1/8/2BPP3/2N5/PPP1QPPP/R1B1K1NR b KQkq - 1 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Anti-Modern"
+  ],
+  "rnbqk1nr/ppppppbp/6p1/8/2BPP3/8/PPP2PPP/RNBQK1NR b KQkq - 2 3": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Bishop Attack"
+  ],
+  "rnbqk1nr/p1ppppbp/6p1/1p6/2BPP3/8/PPP2PPP/RNBQK1NR w KQkq - 0 4": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Bishop Attack, Bücker Gambit"
+  ],
+  "rnbqk1nr/pppp1p1p/4p1p1/8/2BbP3/5Q2/PPP2PPP/RNB1K1NR w KQkq - 0 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Bishop Attack, Monkey's Bum Variation"
+  ],
+  "rnbqk1nr/pp2pp1p/2P3p1/8/2Pb4/8/PP3PPP/RNBQKBNR w KQkq - 0 6": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Dunworthy Variation"
+  ],
+  "rnbqkbnr/ppppp2p/6p1/5p2/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Fianchetto Gambit"
+  ],
+  "rnbqk1nr/ppp1ppbp/3p2p1/8/3PP3/2P2N2/PP3PPP/RNBQKB1R b KQkq - 1 4": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Geller System"
+  ],
+  "rnbqk1nr/pp2ppb1/2p3p1/3pP2p/3P1P2/2N5/PPP3PP/R1BQKBNR w KQkq - 0 6": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Gurgenidze Defense"
+  ],
+  "rnbqk1nr/ppp1ppbp/6p1/3p4/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Lizard Defense, Mittenberger Gambit"
+  ],
+  "rnbq1rk1/ppppp2p/6pb/5P2/3P4/2N5/PPP2PPP/R2QKBNR w KQ - 1 6": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Masur Gambit"
+  ],
+  "rnbqk1nr/p1ppppbp/1p4p1/8/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Mongredien Defense, with Nc3"
+  ],
+  "rnbqk1nr/p1ppppbp/1p4p1/8/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Mongredien Defense, with Nf3"
+  ],
+  "rnbqkb1r/pppppp1p/5np1/8/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 1 3": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Norwegian Defense"
+  ],
+  "rnbqkb1r/ppp1pp1p/3p2p1/4P2n/3P4/8/PPP1BPPP/RNBQK1NR w KQkq - 0 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Norwegian Defense, Norwegian Gambit"
+  ],
+  "r1bqk1nr/ppp1ppbp/2np2p1/8/3PPP2/2N5/PPP3PP/R1BQKBNR w KQkq - 1 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pseudo-Austrian Attack"
+  ],
+  "rnbqk1nr/pp2ppbp/2pp2p1/8/3PPP2/2N2N2/PPP3PP/R1BQKB1R b KQkq - 1 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pseudo-Austrian Attack"
+  ],
+  "rnbqk1nr/pp2ppbp/2pp2p1/8/3PPP2/2N5/PPP3PP/R1BQKBNR w KQkq - 0 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pseudo-Austrian Attack"
+  ],
+  "rnbqk1nr/ppp1ppbp/3p2p1/8/3PPP2/2N5/PPP3PP/R1BQKBNR b KQkq - 0 4": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pseudo-Austrian Attack"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PPP2/5N2/PPP3PP/RNBQKB1R w KQkq - 2 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Austrian, Austriadactylus Western"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1p5/4PP2/2N2N2/PPPP2PP/R1BQKB1R w KQkq - 2 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Austrian, Grand Prix Pterodactyl"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PPP2/2P5/PP4PP/RNBQKBNR w KQkq - 1 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Austrian, Pteranodon"
+  ],
+  "rnb1k1nr/pp2ppbp/3p2p1/q1p5/2PPP3/2N1B3/PP3PPP/R2QKBNR w KQkq - 2 6": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Central, Anhanguera"
+  ],
+  "rnb1k1nr/pp2ppbp/3p2p1/q1pP4/2P1P3/2N5/PP3PPP/R1BQKBNR w KQkq - 2 6": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Central, Benoni Quetzalcoatlus"
+  ],
+  "rnb1k1nr/pp2ppbp/3p2p1/q1P5/2P1P3/2N5/PP3PPP/R1BQKBNR w KQkq - 1 6": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Central, Quetzalcoatlus Gambit"
+  ],
+  "rnbqk1nr/pp1pppbp/6p1/2p5/3PP3/2N1B3/PPP2PPP/R2QKBNR b KQkq - 1 4": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Eastern, Anhanguera"
+  ],
+  "rnbqk1nr/pp1pppbp/6p1/2pP4/4P3/2N5/PPP2PPP/R1BQKBNR b KQkq - 0 4": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Eastern, Benoni"
+  ],
+  "rnb1k1nr/pp1ppp1p/6p1/q1pP4/4P3/2P5/P1P2PPP/R1BQKBNR w KQkq - 1 6": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Eastern, Benoni Pteranodon"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1pP4/4P3/2N5/PPP2PPP/R1BQKBNR w KQkq - 1 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Eastern, Benoni Pterodactyl"
+  ],
+  "rnb1k1nr/pp1ppp1p/6p1/q1P5/4P3/2P5/P1P2PPP/R1BQKBNR w KQkq - 1 6": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Eastern, Pteranodon"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1P5/4P3/2N5/PPP2PPP/R1BQKBNR w KQkq - 1 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Eastern, Pterodactyl"
+  ],
+  "rnbqk1nr/pp1pppbp/6p1/2P5/4P3/2N5/PPP2PPP/R1BQKBNR b KQkq - 0 4": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Eastern, Rhamphorhynchus"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/5NP1/PPP2P1P/RNBQKB1R w KQkq - 2 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Fianchetto Variation, King Pterodactyl"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1P5/4P3/6P1/PPP2P1P/RNBQKBNR w KQkq - 1 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Fianchetto Variation, Rhamphorhynchus"
+  ],
+  "rnb1k1nr/pp2ppbp/3p2p1/q1p5/3PP3/2N2N2/PPP1BPPP/R1BQK2R w KQkq - 0 6": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Sicilian, Quetzalcoatlus"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1p5/2BPP3/2N2N2/PPP2PPP/R1BQK2R b KQkq - 3 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Sicilian, Siroccopteryx"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/4BN2/PPP2PPP/RN1QKB1R w KQkq - 2 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Western, Anhanguera"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q7/2BNP3/8/PPP2PPP/RNBQK2R w KQkq - 1 6": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Western, Siroccopteryx"
+  ],
+  "rnb1k1nr/pp2ppbp/3p2p1/q1p5/2PPP3/5N2/PP2BPPP/RNBQK2R w KQkq - 2 6": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Semi-Averbakh Variation, Pterodactyl Variation Declined"
+  ],
+  "rnbqk1nr/ppp1ppbp/3p2p1/8/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Standard Defense"
+  ],
+  "rnbqk1nr/ppppppbp/6p1/8/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq - 2 3": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Standard Line"
+  ],
+  "rnbqk1nr/pp1pppbp/6p1/2p5/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Standard Line, Pterodactyl Defense"
+  ],
+  "rnbqk1nr/ppppppbp/6p1/8/3PPP2/8/PPP3PP/RNBQKBNR b KQkq - 0 3": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Three Pawns Attack"
+  ],
+  "rnbqk1nr/ppp1ppbp/3p2p1/8/3PP3/2N2N2/PPP2PPP/R1BQKB1R b KQkq - 1 4": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Two Knights Variation"
+  ],
+  "rnbqk1nr/pp2ppbp/2pp2p1/8/3PP3/2N2N2/PPP2PPP/R1BQKB1R w KQkq - 0 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Two Knights Variation, Suttles Variation"
+  ],
+  "rnb1k1nr/pp2ppbp/2pp2p1/6B1/3PP3/2N2N2/PqPQ1PPP/R3KB1R w KQkq - 0 7": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Two Knights Variation, Suttles Variation, Tal Gambit"
+  ],
+  "rnb1k1nr/pp2ppbp/1qpp2p1/6B1/3PP3/2N2N2/PPPQ1PPP/R3KB1R b KQkq - 3 6": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Two Knights, Suttles, Tal Gambit"
+  ],
+  "rnbqk1nr/ppppppbp/6p1/8/3PP3/8/PPPB1PPP/RN1QKBNR b KQkq - 2 3": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Westermann Gambit"
+  ],
+  "rnbqk1nr/ppppppbp/6p1/8/3PP3/3B4/PPP2PPP/RNBQK1NR b KQkq - 2 3": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, Wind Gambit"
+  ],
+  "rnbqk1nr/pp2ppbp/3p2p1/2p5/3PPP2/2P5/PP4PP/RNBQKBNR w KQkq - 0 5": [
+    "B06",
+    "King's Pawn Opening: Modern Defense, c3 Pterodactyl"
+  ],
   "rnbqk1nr/ppp1ppbp/3p2p1/8/4PP2/2N5/PPPP2PP/R1BQKBNR w KQkq - 0 4": [
     "B06",
     "Modern"
@@ -12251,257 +12499,9 @@
     "B06",
     "Modern Defense"
   ],
-  "rnbqk1nr/pp2ppbp/2pp2p1/8/2BPP3/2N2Q2/PPP2PPP/R1B1K1NR b KQkq - 1 5": [
-    "B06",
-    "Modern Defense: 3.Nc3 d6 4.Bc4"
-  ],
-  "rnbqk1nr/pp2ppbp/2pp2p1/8/2BPP3/2N5/PPP2PPP/R1BQK1NR w KQkq - 0 5": [
-    "B06",
-    "Modern Defense: 3.Nc3 d6 4.Bc4"
-  ],
-  "rnbqk1nr/pp3pbp/2ppp1p1/8/2BPP3/2N2Q2/PPP2PPP/R1B1K1NR w KQkq - 0 6": [
-    "B06",
-    "Modern Defense: 3.Nc3 d6 4.Bc4"
-  ],
-  "rnbqk1nr/ppp1ppbp/3p2p1/8/2BPP3/2N5/PPP2PPP/R1BQK1NR b KQkq - 1 4": [
-    "B06",
-    "Modern Defense: 3.Nc3 d6 4.Bc4"
-  ],
-  "rnbqk2r/pp2ppbp/2pp1np1/8/2BPP3/2N2Q2/PPP2PPP/R1B1K1NR w KQkq - 2 6": [
-    "B06",
-    "Modern Defense: 3.Nc3 d6 4.Bc4"
-  ],
-  "rnbqk1nr/ppp1ppbp/3p2p1/8/3PP3/2N1B3/PPP2PPP/R2QKBNR b KQkq - 1 4": [
-    "B06",
-    "Modern Defense: 3.Nc3 d6 4.Be3"
-  ],
-  "rnbqk1nr/1pp1ppbp/p2p2p1/8/3PP3/2N1B3/PPP2PPP/R2QKBNR w KQkq - 0 5": [
-    "B06",
-    "Modern Defense: 3.Nc3 d6 4.Be3 a6"
-  ],
-  "rnbqk1nr/pp2ppbp/2pp2p1/8/3PP3/2N1B3/PPP2PPP/R2QKBNR w KQkq - 0 5": [
-    "B06",
-    "Modern Defense: 3.Nc3 d6 4.Be3 c6"
-  ],
-  "rnbqk1nr/ppppppbp/6p1/8/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq - 2 3": [
-    "B06",
-    "Modern Defense: 3.Nf3"
-  ],
-  "rnbqk1nr/ppp1ppbp/3p2p1/8/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4": [
-    "B06",
-    "Modern Defense: 3.Nf3 d6"
-  ],
-  "rnbqk1nr/ppp1ppbp/3p2p1/8/2BPP3/5N2/PPP2PPP/RNBQK2R b KQkq - 1 4": [
-    "B06",
-    "Modern Defense: 3.Nf3 d6 4.Bc4"
-  ],
-  "rnbqk1nr/ppp1ppbp/3p2p1/8/3PP3/2P5/PP3PPP/RNBQKBNR w KQkq - 0 4": [
-    "B06",
-    "Modern Defense: 3.c3"
-  ],
-  "rnbqk1nr/ppppppbp/6p1/8/3PP3/2P5/PP3PPP/RNBQKBNR b KQkq - 0 3": [
-    "B06",
-    "Modern Defense: 3.c3"
-  ],
-  "rnbqk1nr/pp2ppbp/2pp2p1/8/2BPP3/2N5/PPP1QPPP/R1B1K1NR b KQkq - 1 5": [
-    "B06",
-    "Modern Defense: Anti-Modern"
-  ],
-  "rnbqk1nr/ppppppbp/6p1/8/2BPP3/8/PPP2PPP/RNBQK1NR b KQkq - 2 3": [
-    "B06",
-    "Modern Defense: Bishop Attack"
-  ],
-  "rnbqk1nr/p1ppppbp/6p1/1p6/2BPP3/8/PPP2PPP/RNBQK1NR w KQkq - 0 4": [
-    "B06",
-    "Modern Defense: Bishop Attack, Bücker Gambit"
-  ],
-  "rnbqk1nr/pppp1p1p/4p1p1/8/2BbP3/5Q2/PPP2PPP/RNB1K1NR w KQkq - 0 5": [
-    "B06",
-    "Modern Defense: Bishop Attack, Monkey's Bum Variation"
-  ],
-  "rnbqk1nr/pp2pp1p/2P3p1/8/2Pb4/8/PP3PPP/RNBQKBNR w KQkq - 0 6": [
-    "B06",
-    "Modern Defense: Dunworthy Variation"
-  ],
-  "rnbqkbnr/ppppp2p/6p1/5p2/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
-    "B06",
-    "Modern Defense: Fianchetto Gambit"
-  ],
-  "rnbqk1nr/ppp1ppbp/3p2p1/8/3PP3/2P2N2/PP3PPP/RNBQKB1R b KQkq - 1 4": [
-    "B06",
-    "Modern Defense: Geller System"
-  ],
-  "rnbqk1nr/pp2ppb1/2p3p1/3pP2p/3P1P2/2N5/PPP3PP/R1BQKBNR w KQkq - 0 6": [
-    "B06",
-    "Modern Defense: Gurgenidze Defense"
-  ],
-  "rnbqk1nr/ppp1ppbp/6p1/3p4/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4": [
-    "B06",
-    "Modern Defense: Lizard Defense, Mittenberger Gambit"
-  ],
-  "rnbq1rk1/ppppp2p/6pb/5P2/3P4/2N5/PPP2PPP/R2QKBNR w KQ - 1 6": [
-    "B06",
-    "Modern Defense: Masur Gambit"
-  ],
-  "rnbqk1nr/pp1pppbp/6p1/2p5/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4": [
-    "B06",
-    "Modern Defense: Modern Pterodactyl"
-  ],
-  "rnbqk1nr/p1ppppbp/1p4p1/8/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4": [
-    "B06",
-    "Modern Defense: Mongredien Defense, with Nc3"
-  ],
-  "rnbqk1nr/p1ppppbp/1p4p1/8/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4": [
-    "B06",
-    "Modern Defense: Mongredien Defense, with Nf3"
-  ],
-  "rnbqkb1r/pppppp1p/5np1/8/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 1 3": [
-    "B06",
-    "Modern Defense: Norwegian Defense"
-  ],
-  "rnbqkb1r/ppp1pp1p/3p2p1/4P2n/3P4/8/PPP1BPPP/RNBQK1NR w KQkq - 0 5": [
-    "B06",
-    "Modern Defense: Norwegian Defense, Norwegian Gambit"
-  ],
-  "r1bqk1nr/ppp1ppbp/2np2p1/8/3PPP2/2N5/PPP3PP/R1BQKBNR w KQkq - 1 5": [
-    "B06",
-    "Modern Defense: Pseudo-Austrian Attack"
-  ],
-  "rnbqk1nr/pp2ppbp/2pp2p1/8/3PPP2/2N2N2/PPP3PP/R1BQKB1R b KQkq - 1 5": [
-    "B06",
-    "Modern Defense: Pseudo-Austrian Attack"
-  ],
-  "rnbqk1nr/pp2ppbp/2pp2p1/8/3PPP2/2N5/PPP3PP/R1BQKBNR w KQkq - 0 5": [
-    "B06",
-    "Modern Defense: Pseudo-Austrian Attack"
-  ],
-  "rnbqk1nr/ppp1ppbp/3p2p1/8/3PPP2/2N5/PPP3PP/R1BQKBNR b KQkq - 0 4": [
-    "B06",
-    "Modern Defense: Pseudo-Austrian Attack"
-  ],
-  "rnb1k1nr/pp2ppbp/3p2p1/q1p5/2PPP3/5N2/PP2BPPP/RNBQK2R w KQkq - 2 6": [
-    "B06",
-    "Modern Defense: Semi-Averbakh Variation, Pterodactyl Variation Declined"
-  ],
-  "rnbqk1nr/ppp1ppbp/3p2p1/8/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4": [
-    "B06",
-    "Modern Defense: Standard Defense"
-  ],
-  "rnbqk1nr/ppppppbp/6p1/8/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq - 2 3": [
-    "B06",
-    "Modern Defense: Standard Line"
-  ],
-  "rnbqk1nr/ppppppbp/6p1/8/3PPP2/8/PPP3PP/RNBQKBNR b KQkq - 0 3": [
-    "B06",
-    "Modern Defense: Three Pawns Attack"
-  ],
-  "rnbqk1nr/ppp1ppbp/3p2p1/8/3PP3/2N2N2/PPP2PPP/R1BQKB1R b KQkq - 1 4": [
-    "B06",
-    "Modern Defense: Two Knights Variation"
-  ],
-  "rnbqk1nr/pp2ppbp/2pp2p1/8/3PP3/2N2N2/PPP2PPP/R1BQKB1R w KQkq - 0 5": [
-    "B06",
-    "Modern Defense: Two Knights Variation, Suttles Variation"
-  ],
-  "rnb1k1nr/pp2ppbp/2pp2p1/6B1/3PP3/2N2N2/PqPQ1PPP/R3KB1R w KQkq - 0 7": [
-    "B06",
-    "Modern Defense: Two Knights Variation, Suttles Variation, Tal Gambit"
-  ],
-  "rnb1k1nr/pp2ppbp/1qpp2p1/6B1/3PP3/2N2N2/PPPQ1PPP/R3KB1R b KQkq - 3 6": [
-    "B06",
-    "Modern Defense: Two Knights, Suttles, Tal Gambit"
-  ],
-  "rnbqk1nr/ppppppbp/6p1/8/3PP3/8/PPPB1PPP/RN1QKBNR b KQkq - 2 3": [
-    "B06",
-    "Modern Defense: Westermann Gambit"
-  ],
-  "rnbqk1nr/ppppppbp/6p1/8/3PP3/3B4/PPP2PPP/RNBQK1NR b KQkq - 2 3": [
-    "B06",
-    "Modern Defense: Wind Gambit"
-  ],
-  "rnbqk1nr/pp2ppbp/3p2p1/2p5/3PPP2/2P5/PP4PP/RNBQKBNR w KQkq - 0 5": [
-    "B06",
-    "Modern Defense: c3 Pterodactyl"
-  ],
   "rnbqkb1r/ppppppnp/6p1/4P3/3P2P1/8/PPP2P1P/RNBQKBNR w KQkq - 1 5": [
     "B06",
     "Norwegian Defense"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PPP2/5N2/PPP3PP/RNBQKB1R w KQkq - 2 5": [
-    "B06",
-    "Pterodactyl Defense: Austrian, Austriadactylus Western"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1p5/4PP2/2N2N2/PPPP2PP/R1BQKB1R w KQkq - 2 5": [
-    "B06",
-    "Pterodactyl Defense: Austrian, Grand Prix Pterodactyl"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PPP2/2P5/PP4PP/RNBQKBNR w KQkq - 1 5": [
-    "B06",
-    "Pterodactyl Defense: Austrian, Pteranodon"
-  ],
-  "rnb1k1nr/pp2ppbp/3p2p1/q1p5/2PPP3/2N1B3/PP3PPP/R2QKBNR w KQkq - 2 6": [
-    "B06",
-    "Pterodactyl Defense: Central, Anhanguera"
-  ],
-  "rnb1k1nr/pp2ppbp/3p2p1/q1pP4/2P1P3/2N5/PP3PPP/R1BQKBNR w KQkq - 2 6": [
-    "B06",
-    "Pterodactyl Defense: Central, Benoni Quetzalcoatlus"
-  ],
-  "rnb1k1nr/pp2ppbp/3p2p1/q1P5/2P1P3/2N5/PP3PPP/R1BQKBNR w KQkq - 1 6": [
-    "B06",
-    "Pterodactyl Defense: Central, Quetzalcoatlus Gambit"
-  ],
-  "rnbqk1nr/pp1pppbp/6p1/2p5/3PP3/2N1B3/PPP2PPP/R2QKBNR b KQkq - 1 4": [
-    "B06",
-    "Pterodactyl Defense: Eastern, Anhanguera"
-  ],
-  "rnbqk1nr/pp1pppbp/6p1/2pP4/4P3/2N5/PPP2PPP/R1BQKBNR b KQkq - 0 4": [
-    "B06",
-    "Pterodactyl Defense: Eastern, Benoni"
-  ],
-  "rnb1k1nr/pp1ppp1p/6p1/q1pP4/4P3/2P5/P1P2PPP/R1BQKBNR w KQkq - 1 6": [
-    "B06",
-    "Pterodactyl Defense: Eastern, Benoni Pteranodon"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1pP4/4P3/2N5/PPP2PPP/R1BQKBNR w KQkq - 1 5": [
-    "B06",
-    "Pterodactyl Defense: Eastern, Benoni Pterodactyl"
-  ],
-  "rnb1k1nr/pp1ppp1p/6p1/q1P5/4P3/2P5/P1P2PPP/R1BQKBNR w KQkq - 1 6": [
-    "B06",
-    "Pterodactyl Defense: Eastern, Pteranodon"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1P5/4P3/2N5/PPP2PPP/R1BQKBNR w KQkq - 1 5": [
-    "B06",
-    "Pterodactyl Defense: Eastern, Pterodactyl"
-  ],
-  "rnbqk1nr/pp1pppbp/6p1/2P5/4P3/2N5/PPP2PPP/R1BQKBNR b KQkq - 0 4": [
-    "B06",
-    "Pterodactyl Defense: Eastern, Rhamphorhynchus"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/5NP1/PPP2P1P/RNBQKB1R w KQkq - 2 5": [
-    "B06",
-    "Pterodactyl Defense: Fianchetto, King Pterodactyl"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1P5/4P3/6P1/PPP2P1P/RNBQKBNR w KQkq - 1 5": [
-    "B06",
-    "Pterodactyl Defense: Fianchetto, Rhamphorhynchus"
-  ],
-  "rnb1k1nr/pp2ppbp/3p2p1/q1p5/3PP3/2N2N2/PPP1BPPP/R1BQK2R w KQkq - 0 6": [
-    "B06",
-    "Pterodactyl Defense: Sicilian, Quetzalcoatlus"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1p5/2BPP3/2N2N2/PPP2PPP/R1BQK2R b KQkq - 3 5": [
-    "B06",
-    "Pterodactyl Defense: Sicilian, Siroccopteryx"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/4BN2/PPP2PPP/RN1QKB1R w KQkq - 2 5": [
-    "B06",
-    "Pterodactyl Defense: Western, Anhanguera"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q7/2BNP3/8/PPP2PPP/RNBQK2R w KQkq - 1 6": [
-    "B06",
-    "Pterodactyl Defense: Western, Siroccopteryx"
   ],
   "rnbqkbnr/pp2pp1p/2pp2p1/8/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4": [
     "B06",
@@ -12515,6 +12515,10 @@
     "B07",
     "King's Pawn Game: Maróczy Defense"
   ],
+  "rnbqk1nr/ppp1ppbp/3p2p1/8/3PP3/2P2N2/PP3PPP/RNBQKB1R b KQkq - 0 4": [
+    "B07",
+    "King's Pawn Opening: Modern Defense, Geller System"
+  ],
   "r1bqkb1r/pppnpppp/3p1n2/8/3PPP2/2N5/PPP3PP/R1BQKBNR b KQkq - 0 4": [
     "B07",
     "Lion Defense: Anti-Philidor Variation"
@@ -12526,10 +12530,6 @@
   "r1bqkb1r/pp1n1ppp/2p2n2/3p4/2BQPP2/2N2N2/PPP3PP/R1B1K2R w KQkq - 0 8": [
     "B07",
     "Lion Defense: Anti-Philidor Variation, Lion's Cave Variation, Lion's Claw Gambit"
-  ],
-  "rnbqk1nr/ppp1ppbp/3p2p1/8/3PP3/2P2N2/PP3PPP/RNBQKB1R b KQkq - 0 4": [
-    "B07",
-    "Modern Defense: Geller System"
   ],
   "rnbqkb1r/ppp1pp1p/3p1np1/8/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4": [
     "B07",
@@ -15523,37 +15523,37 @@
     "B26",
     "Sicilian Defense: Closed Variation, 6.Be3 e6 7.Qd2 Rb8 8.Nge2"
   ],
-  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/2N2N2/PPP2PPP/R1BQKB1R w KQkq - 3 5": [
-    "B27",
-    "Modern Defense: Pterodactyl Variation"
-  ],
   "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/2N1BN2/PPP2PPP/R2QKB1R b KQkq - 4 5": [
     "B27",
-    "Pterodactyl Defense: Sicilian, Anhanguera"
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Sicilian, Anhanguera"
   ],
   "rnb1k1nr/pp1pppbp/6p1/q1pP4/4P3/2N2N2/PPP2PPP/R1BQKB1R b KQkq - 0 5": [
     "B27",
-    "Pterodactyl Defense: Sicilian, Benoni Gambit"
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Sicilian, Benoni Gambit"
   ],
   "rnb1k1nr/pp1ppp1p/6p1/q1P5/4P3/2P2N2/P1P2PPP/R1BQKB1R b KQkq - 0 6": [
     "B27",
-    "Pterodactyl Defense: Sicilian, Pteranodon"
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Sicilian, Pteranodon"
   ],
   "rnb1k1nr/pp1pppbp/6p1/q1P5/4P3/2N2N2/PPP2PPP/R1BQKB1R b KQkq - 2 5": [
     "B27",
-    "Pterodactyl Defense: Sicilian, Rhamphorhynchus"
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Sicilian, Rhamphorhynchus"
   ],
   "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/2N2N2/PPPB1PPP/R2QKB1R b KQkq - 4 5": [
     "B27",
-    "Pterodactyl Defense: Sicilian, Unpin"
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Sicilian, Unpin"
   ],
   "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/2P2N2/PP3PPP/RNBQKB1R w KQkq - 1 5": [
     "B27",
-    "Pterodactyl Defense: Western, Pterodactyl"
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Western, Pterodactyl"
   ],
   "rnb1k1nr/pp1pppbp/6p1/q1P5/4P3/5N2/PPP2PPP/RNBQKB1R w KQkq - 1 5": [
     "B27",
-    "Pterodactyl Defense: Western, Rhamphorhynchus"
+    "King's Pawn Opening: Modern Defense, Pterodactyl Defense, Western, Rhamphorhynchus"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/2N2N2/PPP2PPP/R1BQKB1R w KQkq - 3 5": [
+    "B27",
+    "King's Pawn Opening: Modern Defense, Pterodactyl Variation"
   ],
   "rnbqkbnr/pp1ppppp/8/2p5/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 0 2": [
     "B27",
@@ -39461,11 +39461,11 @@
   ],
   "r1bq1rk1/3nbppp/p1p1pn2/1p4B1/3P4/2NBPN2/PP3PPP/2RQ1RK1 b - - 1 11": [
     "D66",
-    "Queen's Gambit Declined: Orthodox, Main Line, Fianchetto, 11.O-O"
+    "Queen's Gambit Declined: Orthodox, Main Line, Fianchetto Variation, 11.O-O"
   ],
   "r1bq1rk1/3nbppp/p1p1pn2/1p4B1/3PP3/2NB1N2/PP3PPP/2RQK2R b K - 0 11": [
     "D66",
-    "Queen's Gambit Declined: Orthodox, Main Line, Fianchetto, 11.e4"
+    "Queen's Gambit Declined: Orthodox, Main Line, Fianchetto Variation, 11.e4"
   ],
   "r1b2rk1/pp1nqppp/2p1p3/3n4/2BPN3/4PN2/PP3PPP/2RQK2R b K - 1 11": [
     "D67",
