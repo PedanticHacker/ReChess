@@ -15,20 +15,13 @@ class PieceType(IntEnum):
     Queen = 5
 
 
-class Turn(IntEnum):
-    """Black or White as player on turn."""
-
-    Black = 0
-    White = 1
-
-
 class PromotionDialog(QDialog):
     """Dialog with buttons for selecting pawn promotion piece type."""
 
-    def __init__(self, turn: Turn) -> None:
+    def __init__(self, turn: bool) -> None:
         super().__init__()
 
-        self._turn: Turn = turn
+        self._turn: bool = turn
         self._piece_type: PieceType = PieceType.Pawn
 
         self.set_title()
@@ -42,7 +35,7 @@ class PromotionDialog(QDialog):
 
     def create_buttons(self) -> None:
         """Create buttons based on piece color showing piece type."""
-        if self._turn == Turn.White:
+        if self._turn:
             self.queen_button: QPushButton = create_button(svg_icon("white-queen"))
             self.rook_button: QPushButton = create_button(svg_icon("white-rook"))
             self.bishop_button: QPushButton = create_button(svg_icon("white-bishop"))
