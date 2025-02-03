@@ -40077,27 +40077,27 @@
   ],
   "rnbqkb1r/ppp1pp1p/6p1/3p2B1/2PPn3/2N5/PP2PPPP/R2QKBNR w KQkq - 2 5": [
     "D80",
-    "Grünfeld Defense: Stockholm, 4...Ne4"
+    "Grünfeld Defense: Stockholm Variation, 4...Ne4"
   ],
   "rnbqkb1r/ppp1pp1p/6p1/3p4/2PPnB2/2N5/PP2PPPP/R2QKBNR b KQkq - 3 5": [
     "D80",
-    "Grünfeld Defense: Stockholm, 4...Ne4 5.Bf4"
+    "Grünfeld Defense: Stockholm Variation, 4...Ne4 5.Bf4"
   ],
   "rnbqkb1r/ppp1pp1p/6p1/3p2B1/2PPN3/8/PP2PPPP/R2QKBNR b KQkq - 0 5": [
     "D80",
-    "Grünfeld Defense: Stockholm, 4...Ne4 5.Nxe4"
+    "Grünfeld Defense: Stockholm Variation, 4...Ne4 5.Nxe4"
   ],
   "rnbqkb1r/ppp1pp1p/6p1/3p4/2PPn2B/2N5/PP2PPPP/R2QKBNR b KQkq - 3 5": [
     "D80",
-    "Grünfeld Defense: Stockholm, Taimanov Variation"
+    "Grünfeld Defense: Stockholm Variation, Taimanov Variation"
   ],
   "rnbqkb1r/ppp1pp1p/6p1/3p4/2PP3B/2n5/PP2PPPP/R2QKBNR w KQkq - 0 6": [
     "D80",
-    "Grünfeld Defense: Stockholm, Taimanov, 5...Nxc3"
+    "Grünfeld Defense: Stockholm Variation, Taimanov Variation, 5...Nxc3"
   ],
   "rnbqk2r/ppp1ppbp/6p1/3p4/2PP3B/2P5/P3PPPP/R2QKBNR w KQkq - 1 7": [
     "D80",
-    "Grünfeld Defense: Stockholm, Taimanov, 5...Nxc3 6.bxc3 Bg7"
+    "Grünfeld Defense: Stockholm Variation, Taimanov Variation, 5...Nxc3 6.bxc3 Bg7"
   ],
   "rnbqkb1r/ppp1pp1p/5np1/3p4/2PP3P/2N5/PP2PPP1/R1BQKBNR b KQkq - 0 4": [
     "D80",
@@ -40109,27 +40109,27 @@
   ],
   "rn1qkb1r/ppp1pp1p/4bnp1/8/2QP4/2N5/PP2PPPP/R1B1KBNR w KQkq - 1 6": [
     "D81",
-    "Grünfeld Defense: Early Russian, 5...Be6"
+    "Grünfeld Defense: Early Russian Variation, 5...Be6"
   ],
   "rn1qkb1r/ppp1pp1p/4bnp1/1Q6/3P4/2N5/PP2PPPP/R1B1KBNR b KQkq - 2 6": [
     "D81",
-    "Grünfeld Defense: Early Russian, 5...Be6 6.Qb5+"
+    "Grünfeld Defense: Early Russian Variation, 5...Be6 6.Qb5+"
   ],
   "rnbqk2r/ppp1ppbp/5np1/8/2QP4/2N5/PP2PPPP/R1B1KBNR w KQkq - 1 6": [
     "D81",
-    "Grünfeld Defense: Early Russian, 5...Bg7"
+    "Grünfeld Defense: Early Russian Variation, 5...Bg7"
   ],
   "rnbqk2r/ppp1ppbp/5np1/8/2QPP3/2N5/PP3PPP/R1B1KBNR b KQkq - 0 6": [
     "D81",
-    "Grünfeld Defense: Early Russian, 5...Bg7 6.e4"
+    "Grünfeld Defense: Early Russian Variation, 5...Bg7 6.e4"
   ],
   "rnbq1rk1/ppp1ppbp/5np1/8/2QPP3/2N5/PP3PPP/R1B1KBNR w KQ - 1 7": [
     "D81",
-    "Grünfeld Defense: Early Russian, 5...Bg7 6.e4 O-O"
+    "Grünfeld Defense: Early Russian Variation, 5...Bg7 6.e4 O-O"
   ],
   "rn1qkb1r/pppbpp1p/5np1/1Q6/3P4/2N5/PP2PPPP/R1B1KBNR w KQkq - 3 7": [
     "D81",
-    "Grünfeld Defense: Early Russian, Adorjan Gambit"
+    "Grünfeld Defense: Early Russian Variation, Adorjan Gambit"
   ],
   "rnbqkb1r/ppp1pp1p/5np1/3p4/2PP4/1QN5/PP2PPPP/R1B1KBNR b KQkq - 1 4": [
     "D81",
@@ -40181,11 +40181,11 @@
   ],
   "rnbq1rk1/ppp1ppbp/5np1/3p4/2PP1B2/1QN1P3/PP3PPP/R3KBNR b KQ - 2 6": [
     "D83",
-    "Grünfeld Defense: Grünfeld Gambit, 6.Qb3"
+    "Grünfeld Defense: Brinckmann Attack, Grünfeld Gambit, 6.Qb3"
   ],
   "rnbq1rk1/pp2ppbp/5np1/2pp4/2PP1B2/2N1P3/PP3PPP/2RQKBNR w K - 0 7": [
     "D83",
-    "Grünfeld Defense: Grünfeld Gambit, Capablanca Variation"
+    "Grünfeld Defense: Brinckmann Attack, Grünfeld Gambit, Capablanca Variation"
   ],
   "rnb2rk1/ppB1ppbp/6p1/3q4/3P4/4P3/PP3PPP/R2QKBNR b KQ - 0 8": [
     "D84",
@@ -40193,39 +40193,39 @@
   ],
   "rnbq1rk1/ppp1ppbp/5np1/3P4/3P1B2/2N1P3/PP3PPP/R2QKBNR b KQ - 0 6": [
     "D84",
-    "Grünfeld Defense: Grünfeld Gambit Accepted"
+    "Grünfeld Defense: Brinckmann Attack, Grünfeld Gambit Accepted"
   ],
   "rn3rk1/ppB1ppbp/6p1/3q1b2/3P4/4P3/PP3PPP/R2QKBNR w KQ - 1 9": [
     "D84",
-    "Grünfeld Defense: Grünfeld Gambit Accepted, 8...Bf5"
+    "Grünfeld Defense: Brinckmann Attack, Grünfeld Gambit Accepted, 8...Bf5"
   ],
   "r1b2rk1/ppB1ppbp/n5p1/3q4/3P4/4P3/PP3PPP/R2QKBNR w KQ - 1 9": [
     "D84",
-    "Grünfeld Defense: Grünfeld Gambit Accepted, 8...Na6"
+    "Grünfeld Defense: Brinckmann Attack, Grünfeld Gambit Accepted, 8...Na6"
   ],
   "r1b2rk1/ppB1ppbp/B5p1/8/3P4/4P3/PP3PqP/R2QK1NR w KQ - 0 10": [
     "D84",
-    "Grünfeld Defense: Grünfeld Gambit Accepted, 8...Na6 9.Bxa6 Qxg2"
+    "Grünfeld Defense: Brinckmann Attack, Grünfeld Gambit Accepted, 8...Na6 9.Bxa6 Qxg2"
   ],
   "r1b2rk1/ppB1ppbp/2n3p1/3q4/3P4/4P3/PP3PPP/R2QKBNR w KQ - 1 9": [
     "D84",
-    "Grünfeld Defense: Grünfeld Gambit Accepted, 8...Nc6"
+    "Grünfeld Defense: Brinckmann Attack, Grünfeld Gambit Accepted, 8...Nc6"
   ],
   "r1b2rk1/ppB1ppbp/2n3p1/3q4/3P4/4P3/PP2NPPP/R2QKB1R b KQ - 2 9": [
     "D84",
-    "Grünfeld Defense: Grünfeld Gambit Accepted, 8...Nc6 9.Ne2"
+    "Grünfeld Defense: Brinckmann Attack, Grünfeld Gambit Accepted, 8...Nc6 9.Ne2"
   ],
   "r4rk1/ppB1ppbp/2n3p1/3q4/3P2b1/4P3/PP2NPPP/R2QKB1R w KQ - 3 10": [
     "D84",
-    "Grünfeld Defense: Grünfeld Gambit Accepted, 8...Nc6 9.Ne2 Bg4"
+    "Grünfeld Defense: Brinckmann Attack, Grünfeld Gambit Accepted, 8...Nc6 9.Ne2 Bg4"
   ],
   "rnb2rk1/p1B1ppbp/1p4p1/3q4/3P4/4P3/PP3PPP/R2QKBNR w KQ - 0 9": [
     "D84",
-    "Grünfeld Defense: Grünfeld Gambit Accepted, 8...b6"
+    "Grünfeld Defense: Brinckmann Attack, Grünfeld Gambit Accepted, 8...b6"
   ],
   "rnbqkb1r/ppp1pp1p/6p1/8/3PP3/2P5/P4PPP/R1BQKBNR b KQkq - 0 6": [
     "D85",
-    "Grunfeld Exchange, 6.bxc3"
+    "Grünfeld Defense: Exchange Variation, 6.bxc3"
   ],
   "rnbqkb1r/ppp1pp1p/5np1/3P4/3P4/2N5/PP2PPPP/R1BQKBNR b KQkq - 0 4": [
     "D85",
@@ -40241,7 +40241,7 @@
   ],
   "rnbqk2r/pp2ppbp/6p1/2p5/3PP3/2P2N1P/P4PP1/R1BQKB1R b KQkq - 0 8": [
     "D85",
-    "Grünfeld Defense: Exchange Variation, Modern Exchange Variation, Kramnik's Line"
+    "Grünfeld Defense: Exchange Variation, Modern Exchange Variation, Kramnik Line"
   ],
   "r1bq1rk1/pp2pp1p/2n3p1/2pP4/4P3/2b2N2/P3BPPP/1RBQK2R w K - 0 11": [
     "D85",
@@ -40253,95 +40253,95 @@
   ],
   "rnbqkb1r/ppp1pp1p/6p1/3n4/3P4/2N5/PP1BPPPP/R2QKBNR b KQkq - 1 5": [
     "D85",
-    "Grünfeld Defense: Exchange, 5.Bd2"
+    "Grünfeld Defense: Exchange Variation, 5.Bd2"
   ],
   "rnbqk2r/ppp1ppbp/1n4p1/8/3PP3/2N5/PP1B1PPP/R2QKBNR w KQkq - 1 7": [
     "D85",
-    "Grünfeld Defense: Exchange, 5.Bd2 Bg7 6.e4 Nb6"
+    "Grünfeld Defense: Exchange Variation, 5.Bd2 Bg7 6.e4 Nb6"
   ],
   "rnbqk2r/ppp1ppbp/1n4p1/8/3PP3/2N1B3/PP3PPP/R2QKBNR b KQkq - 2 7": [
     "D85",
-    "Grünfeld Defense: Exchange, 5.Bd2 Bg7 6.e4 Nb6 7.Be3"
+    "Grünfeld Defense: Exchange Variation, 5.Bd2 Bg7 6.e4 Nb6 7.Be3"
   ],
   "rnbqkb1r/ppp1pp1p/6p1/3n4/3PP3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 5": [
     "D85",
-    "Grünfeld Defense: Exchange, 5.e4"
+    "Grünfeld Defense: Exchange Variation, 5.e4"
   ],
   "rnbqkb1r/ppp1pp1p/1n4p1/8/3PP3/2N5/PP3PPP/R1BQKBNR w KQkq - 1 6": [
     "D85",
-    "Grünfeld Defense: Exchange, 5.e4 Nb6"
+    "Grünfeld Defense: Exchange Variation, 5.e4 Nb6"
   ],
   "rnbqkb1r/ppp1pp1p/6p1/8/3PP3/2n5/PP3PPP/R1BQKBNR w KQkq - 0 6": [
     "D85",
-    "Grünfeld Defense: Exchange, 5.e4 Nxc3"
+    "Grünfeld Defense: Exchange Variation, 5.e4 Nxc3"
   ],
   "rnbqk2r/ppp1ppbp/6p1/8/3PP3/2P5/P4PPP/R1BQKBNR w KQkq - 1 7": [
     "D85",
-    "Grünfeld Defense: Exchange, 5.e4 Nxc3 6.bxc3 Bg7"
+    "Grünfeld Defense: Exchange Variation, 5.e4 Nxc3 6.bxc3 Bg7"
   ],
   "rnbqkb1r/pp2pp1p/6p1/2p5/3PP3/2P5/P4PPP/R1BQKBNR w KQkq - 0 7": [
     "D85",
-    "Grünfeld Defense: Exchange, 5.e4 Nxc3 6.bxc3 c5"
+    "Grünfeld Defense: Exchange Variation, 5.e4 Nxc3 6.bxc3 c5"
   ],
   "rnbqkb1r/ppp1pp1p/6p1/3n4/3P4/2N3P1/PP2PP1P/R1BQKBNR b KQkq - 0 5": [
     "D85",
-    "Grünfeld Defense: Exchange, 5.g3"
+    "Grünfeld Defense: Exchange Variation, 5.g3"
   ],
   "rnbqk2r/ppp1ppbp/6p1/8/3PP3/B1P5/P4PPP/R2QKBNR b KQkq - 2 7": [
     "D85",
-    "Grünfeld Defense: Exchange, 7.Ba3"
+    "Grünfeld Defense: Exchange Variation, 7.Ba3"
   ],
   "rnbqk2r/ppp1ppbp/6p1/1B6/3PP3/2P5/P4PPP/R1BQK1NR b KQkq - 2 7": [
     "D85",
-    "Grünfeld Defense: Exchange, 7.Bb5+"
+    "Grünfeld Defense: Exchange Variation, 7.Bb5+"
   ],
   "rnbqk2r/pp2ppbp/2p3p1/1B6/3PP3/2P5/P4PPP/R1BQK1NR w KQkq - 0 8": [
     "D85",
-    "Grünfeld Defense: Exchange, 7.Bb5+ c6"
+    "Grünfeld Defense: Exchange Variation, 7.Bb5+ c6"
   ],
   "rnbqk2r/pp2ppbp/2p3p1/8/B2PP3/2P5/P4PPP/R1BQK1NR b KQkq - 1 8": [
     "D85",
-    "Grünfeld Defense: Exchange, 7.Bb5+ c6 8.Ba4"
+    "Grünfeld Defense: Exchange Variation, 7.Bb5+ c6 8.Ba4"
   ],
   "rnbq1rk1/pp2ppbp/2p3p1/8/B2PP3/2P5/P4PPP/R1BQK1NR w KQ - 2 9": [
     "D85",
-    "Grünfeld Defense: Exchange, 7.Bb5+ c6 8.Ba4 O-O"
+    "Grünfeld Defense: Exchange Variation, 7.Bb5+ c6 8.Ba4 O-O"
   ],
   "rnbqk2r/ppp1ppbp/6p1/8/3PP3/2P1B3/P4PPP/R2QKBNR b KQkq - 2 7": [
     "D85",
-    "Grünfeld Defense: Exchange, 7.Be3"
+    "Grünfeld Defense: Exchange Variation, 7.Be3"
   ],
   "rnbqk2r/pp2ppbp/6p1/2p5/3PP3/2P1B3/P4PPP/R2QKBNR w KQkq - 0 8": [
     "D85",
-    "Grünfeld Defense: Exchange, 7.Be3 c5"
+    "Grünfeld Defense: Exchange Variation, 7.Be3 c5"
   ],
   "rnbqk2r/pp2ppbp/6p1/2p5/3PP3/2P1B3/P2Q1PPP/R3KBNR b KQkq - 1 8": [
     "D85",
-    "Grünfeld Defense: Exchange, 7.Be3 c5 8.Qd2"
+    "Grünfeld Defense: Exchange Variation, 7.Be3 c5 8.Qd2"
   ],
   "rnbq1rk1/pp2ppbp/6p1/2p5/3PP3/2P1B3/P2Q1PPP/R3KBNR w KQ - 2 9": [
     "D85",
-    "Grünfeld Defense: Exchange, 7.Be3 c5 8.Qd2 O-O"
+    "Grünfeld Defense: Exchange Variation, 7.Be3 c5 8.Qd2 O-O"
   ],
   "rnbq1rk1/pp2ppbp/6p1/2p5/3PP3/2P1B3/P2Q1PPP/2R1KBNR b K - 3 9": [
     "D85",
-    "Grünfeld Defense: Exchange, 7.Be3 c5 8.Qd2 O-O 9.Rc1"
+    "Grünfeld Defense: Exchange Variation, 7.Be3 c5 8.Qd2 O-O 9.Rc1"
   ],
   "rnb1k2r/pp2ppbp/6p1/q1p5/3PP3/2P1B3/P2Q1PPP/R3KBNR w KQkq - 2 9": [
     "D85",
-    "Grünfeld Defense: Exchange, 7.Be3 c5 8.Qd2 Qa5"
+    "Grünfeld Defense: Exchange Variation, 7.Be3 c5 8.Qd2 Qa5"
   ],
   "rnb1k2r/pp2ppbp/6p1/q1p5/3PP3/2P1B3/P2Q1PPP/1R2KBNR b Kkq - 3 9": [
     "D85",
-    "Grünfeld Defense: Exchange, 7.Be3 c5 8.Qd2 Qa5 9.Rb1"
+    "Grünfeld Defense: Exchange Variation, 7.Be3 c5 8.Qd2 Qa5 9.Rb1"
   ],
   "rnb1k2r/p3ppbp/1p4p1/q1p5/3PP3/2P1B3/P2Q1PPP/1R2KBNR w Kkq - 0 10": [
     "D85",
-    "Grünfeld Defense: Exchange, 7.Be3 c5 8.Qd2 Qa5 9.Rb1 b6"
+    "Grünfeld Defense: Exchange Variation, 7.Be3 c5 8.Qd2 Qa5 9.Rb1 b6"
   ],
   "rnb1k2r/pp2ppbp/6p1/q1p5/3PP3/2P1B3/P2Q1PPP/2R1KBNR b Kkq - 3 9": [
     "D85",
-    "Grünfeld Defense: Exchange, 7.Be3 c5 8.Qd2 Qa5 9.Rc1"
+    "Grünfeld Defense: Exchange Variation, 7.Be3 c5 8.Qd2 Qa5 9.Rc1"
   ],
   "rnbq1rk1/ppp1ppbp/6p1/8/3PP3/2P2N2/P4PPP/R1BQKB1R w KQ - 3 8": [
     "D85",
@@ -40945,31 +40945,31 @@
   ],
   "rnbqk2r/pp2ppbp/2p2np1/3p4/2PP4/2N1PN2/PP3PPP/R1BQKB1R w KQkq - 0 6": [
     "D94",
-    "Grünfeld Defense: Slav/Schlecter"
+    "Grünfeld Defense: Schlecter Variation"
   ],
   "rnbqk2r/pp2ppbp/2p2np1/3p4/2PP4/2NBPN2/PP3PPP/R1BQK2R b KQkq - 1 6": [
     "D94",
-    "Grünfeld Defense: Slav/Schlecter, 6.Bd3"
+    "Grünfeld Defense: Schlecter Variation, 6.Bd3"
   ],
   "rnbqk2r/pp2ppbp/2p2np1/3p4/2PP4/2N1PN2/PP2BPPP/R1BQK2R b KQkq - 1 6": [
     "D94",
-    "Grünfeld Defense: Slav/Schlecter, 6.Be2"
+    "Grünfeld Defense: Schlecter Variation, 6.Be2"
   ],
   "rnbq1rk1/pp2ppbp/2p2np1/3p4/2PP4/2N1PN2/PP2BPPP/R1BQK2R w KQ - 2 7": [
     "D94",
-    "Grünfeld Defense: Slav/Schlecter, 6.Be2 O-O"
+    "Grünfeld Defense: Schlecter Variation, 6.Be2 O-O"
   ],
   "rnbq1rk1/pp2ppbp/2p2np1/3p4/2PP4/2N1PN2/PP2BPPP/R1BQ1RK1 b - - 3 7": [
     "D94",
-    "Grünfeld Defense: Slav/Schlecter, 6.Be2 O-O 7.O-O"
+    "Grünfeld Defense: Schlecter Variation, 6.Be2 O-O 7.O-O"
   ],
   "rn1q1rk1/pp2ppbp/2p2np1/3p4/2PP2b1/2NBPN2/PP3PPP/R1BQ1RK1 w - - 2 8": [
     "D94",
-    "Grünfeld Defense: Smyslov Defense"
+    "Grünfeld Defense: Russian Variation, Smyslov Defense"
   ],
   "rn1q1rk1/pp2ppbp/2p2np1/3p4/2PP2b1/2NBPN2/PP3PPP/R1BQ1RK1 w - - 6 8": [
     "D94",
-    "Grünfeld Defense: Smyslov Defense"
+    "Grünfeld Defense: Russian Variation, Smyslov Defense"
   ],
   "rnbqk2r/ppp1ppbp/5np1/3p4/2PP4/2N1PN2/PP3PPP/R1BQKB1R b KQkq - 0 5": [
     "D94",
