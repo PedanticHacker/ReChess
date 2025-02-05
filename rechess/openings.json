@@ -1337,7 +1337,7 @@
   ],
   "rnb1k1nr/pp1pppbp/6p1/q1P5/8/4PN2/PPP2PPP/RNBQKB1R w KQkq - 1 5": [
     "A04",
-    "Queen's Pawn Game: Colle System, Rhamphorhynchus Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, Rhamphorhynchus Variation"
   ],
   "r1bqk1nr/pp1p1pbp/2n1p1p1/2p5/4P3/3P1NP1/PPP2PBP/RNBQ1RK1 b kq - 0 6": [
     "A04",
@@ -1697,11 +1697,11 @@
   ],
   "rnbqkbnr/ppp1pppp/8/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R b KQkq - 0 2": [
     "A06",
-    "Queen's Pawn Game"
+    "Queen's Pawn Opening: Queen's Pawn Game"
   ],
   "rnbqkb1r/ppp1pppp/5n2/3p4/2PP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 0 3": [
     "A06",
-    "Queen's Pawn Game, Symmetrical Variation, 3.c4"
+    "Queen's Pawn Opening: Queen's Pawn Game, Symmetrical Variation, 3.c4"
   ],
   "rnbqkbnr/ppp1pppp/8/3p4/8/4PN2/PPPP1PPP/RNBQKB1R b KQkq - 0 2": [
     "A06",
@@ -5213,155 +5213,155 @@
   ],
   "rnbqkbnr/pp1ppppp/2p5/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2": [
     "A40",
-    "Queen's Pawn Game: 1...c6"
+    "Queen's Pawn Opening: Queen's Pawn Game, 1...c6"
   ],
   "rnbqkbnr/pp1ppppp/2p5/8/3P4/5N2/PPP1PPPP/RNBQKB1R b KQkq - 1 2": [
     "A40",
-    "Queen's Pawn Game: 1...c6 2.Nf3"
+    "Queen's Pawn Opening: Queen's Pawn Game, 1...c6 2.Nf3"
   ],
   "rnbqkbnr/pp1ppppp/2p5/8/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2": [
     "A40",
-    "Queen's Pawn Game: 1...c6 2.c4"
+    "Queen's Pawn Opening: Queen's Pawn Game, 1...c6 2.c4"
   ],
   "rnbqkbnr/pppp1ppp/4p3/8/3P4/5N2/PPP1PPPP/RNBQKB1R b KQkq - 1 2": [
     "A40",
-    "Queen's Pawn Game: 1...e6 2.Nf3"
+    "Queen's Pawn Opening: Queen's Pawn Game, 1...e6 2.Nf3"
   ],
   "rnbqkbnr/pp1p1ppp/4p3/2p5/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3": [
     "A40",
-    "Queen's Pawn Game: 1...e6 2.Nf3 c5"
+    "Queen's Pawn Opening: Queen's Pawn Game, 1...e6 2.Nf3 c5"
   ],
   "rnbqkbnr/pppp1ppp/4p3/8/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2": [
     "A40",
-    "Queen's Pawn Game: 1...e6 2.c4"
+    "Queen's Pawn Opening: Queen's Pawn Game, 1...e6 2.c4"
   ],
   "rnbqkbnr/pp2pppp/2pp4/8/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3": [
     "A40",
-    "Queen's Pawn Game: Anglo-Slav Opening"
+    "Queen's Pawn Opening: Queen's Pawn Game, Anglo-Slav Opening"
   ],
   "r1bqkbnr/pppppppp/2n5/6B1/3P4/8/PPP1PPPP/RN1QKBNR b KQkq - 2 2": [
     "A40",
-    "Queen's Pawn Game: Bogoljubow-Miles, 2.Bg5"
+    "Queen's Pawn Opening: Queen's Pawn Game, Bogoljubow-Miles, 2.Bg5"
   ],
   "r1bqkbnr/pppppppp/2n5/8/3P4/5N2/PPP1PPPP/RNBQKB1R b KQkq - 2 2": [
     "A40",
-    "Queen's Pawn Game: Bogoljubow-Miles, 2.Nf3"
+    "Queen's Pawn Opening: Queen's Pawn Game, Bogoljubow-Miles, 2.Nf3"
   ],
   "r1bqkbnr/pppppppp/2n5/8/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2": [
     "A40",
-    "Queen's Pawn Game: Bogoljubow-Miles, 2.c4"
+    "Queen's Pawn Opening: Queen's Pawn Game, Bogoljubow-Miles, 2.c4"
   ],
   "r1bqkbnr/pppppppp/2n5/3P4/8/8/PPP1PPPP/RNBQKBNR b KQkq - 0 2": [
     "A40",
-    "Queen's Pawn Game: Bogoljubow-Miles, 2.d5"
+    "Queen's Pawn Opening: Queen's Pawn Game, Bogoljubow-Miles, 2.d5"
   ],
   "rnb1k1nr/pp1pppbp/6p1/q1p5/3P4/3BPN2/PPP2PPP/RNBQK2R w KQkq - 2 5": [
     "A40",
-    "Queen's Pawn Game: Colle System, Pterodactyl Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, Pterodactyl Variation"
   ],
   "rnb1k1nr/pp1pppbp/6p1/q7/3N4/3BP3/PPP2PPP/RNBQK2R w KQkq - 1 6": [
     "A40",
-    "Queen's Pawn Game: Colle System, Siroccopteryx Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, Siroccopteryx Variation"
   ],
   "rnbqkbnr/p1pppppp/1p6/8/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2": [
     "A40",
-    "Queen's Pawn Game: English Defense, 2.c4"
+    "Queen's Pawn Opening: Queen's Pawn Game, English Defense, 2.c4"
   ],
   "rn1qkbnr/pbpppppp/1p6/8/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 1 3": [
     "A40",
-    "Queen's Pawn Game: English Defense, 2.c4 Bb7"
+    "Queen's Pawn Opening: Queen's Pawn Game, English Defense, 2.c4 Bb7"
   ],
   "rnbqkbnr/p1pp1ppp/1p2p3/8/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 3": [
     "A40",
-    "Queen's Pawn Game: English Defense, 3.Nc3"
+    "Queen's Pawn Opening: Queen's Pawn Game, English Defense, 3.Nc3"
   ],
   "rnbqkbnr/p1pp1ppp/1p2p3/8/2PP4/P7/1P2PPPP/RNBQKBNR b KQkq - 0 3": [
     "A40",
-    "Queen's Pawn Game: English Defense, 3.a3"
+    "Queen's Pawn Opening: Queen's Pawn Game, English Defense, 3.a3"
   ],
   "rnbqkbnr/p1pp1ppp/1p2p3/8/2PPP3/8/PP3PPP/RNBQKBNR b KQkq - 0 3": [
     "A40",
-    "Queen's Pawn Game: English Defense, 3.e4"
+    "Queen's Pawn Opening: Queen's Pawn Game, English Defense, 3.e4"
   ],
   "rn1qkbnr/pbpp2pp/1p2p3/5p2/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5": [
     "A40",
-    "Queen's Pawn Game: English Defense, Hartlaub Gambit"
+    "Queen's Pawn Opening: Queen's Pawn Game, English Defense, Hartlaub Gambit"
   ],
   "rn1qkbnr/pbpp2pp/1p2p3/5p2/2PPP3/5P2/PP4PP/RNBQKBNR w KQkq - 0 5": [
     "A40",
-    "Queen's Pawn Game: English Defense, Polli Gambit"
+    "Queen's Pawn Opening: Queen's Pawn Game, English Defense, Polli Gambit"
   ],
   "r1b1kb1r/ppppq1pp/2n2n2/3Q4/8/5N2/PPP1PPPP/RNB1KB1R w KQkq - 0 6": [
     "A40",
-    "Queen's Pawn Game: Englund Gambit"
+    "Queen's Pawn Opening: Queen's Pawn Game, Englund Gambit"
   ],
   "rnbqkbnr/p2ppppp/2p5/1p6/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3": [
     "A40",
-    "Queen's Pawn Game: Jadoul"
+    "Queen's Pawn Opening: Queen's Pawn Game, Jadoul"
   ],
   "rnbqk1nr/pppp1ppp/4p3/8/1bPP4/8/PP1BPPPP/RN1QKBNR b KQkq - 2 3": [
     "A40",
-    "Queen's Pawn Game: Keres Defense, 3.Bd2"
+    "Queen's Pawn Opening: Queen's Pawn Game, Keres Defense, 3.Bd2"
   ],
   "rnbqk1nr/pppp1ppp/4p3/8/2PP4/8/PP1bPPPP/RN1QKBNR w KQkq - 0 4": [
     "A40",
-    "Queen's Pawn Game: Keres Defense, 3.Bd2 Bxd2+"
+    "Queen's Pawn Opening: Queen's Pawn Game, Keres Defense, 3.Bd2 Bxd2+"
   ],
   "rnbqk1nr/1ppp1ppp/4p3/p7/1bPP4/8/PP1BPPPP/RN1QKBNR w KQkq - 0 4": [
     "A40",
-    "Queen's Pawn Game: Keres Defense, 3.Bd2 a5"
+    "Queen's Pawn Opening: Queen's Pawn Game, Keres Defense, 3.Bd2 a5"
   ],
   "rn1qk2r/pbpp1ppp/1p2p2n/8/2PPP3/2N5/PP1Q1PPP/R3KBNR w KQkq - 1 7": [
     "A40",
-    "Queen's Pawn Game: Keres Defense, Kangaroo Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Keres Defense, Kangaroo Variation"
   ],
   "rnbqk1nr/pp1pppbp/6p1/2p5/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 4": [
     "A40",
-    "Queen's Pawn Game: Modern Defense"
+    "Queen's Pawn Opening: Queen's Pawn Game, Modern Defense"
   ],
   "rnbqk1nr/pp1pppbp/6p1/2p5/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
     "A40",
-    "Queen's Pawn Game: Modern Defense"
+    "Queen's Pawn Opening: Queen's Pawn Game, Modern Defense"
   ],
   "rnbqk1nr/pp1pppbp/6p1/2pP4/2P5/2N5/PP2PPPP/R1BQKBNR b KQkq - 0 4": [
     "A40",
-    "Queen's Pawn Game: Modern Defense"
+    "Queen's Pawn Opening: Queen's Pawn Game, Modern Defense"
   ],
   "rnbqk1nr/ppppppbp/6p1/8/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 2 3": [
     "A40",
-    "Queen's Pawn Game: Modern Defense"
+    "Queen's Pawn Opening: Queen's Pawn Game, Modern Defense"
   ],
   "rnbqk1nr/ppppppbp/6p1/8/2PP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 2 3": [
     "A40",
-    "Queen's Pawn Game: Modern Defense"
+    "Queen's Pawn Opening: Queen's Pawn Game, Modern Defense"
   ],
   "rnbqk1nr/ppppppbp/6p1/8/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 1 3": [
     "A40",
-    "Queen's Pawn Game: Modern Defense"
+    "Queen's Pawn Opening: Queen's Pawn Game, Modern Defense"
   ],
   "rnbqk1nr/ppppppbp/6p1/8/2PPP3/8/PP3PPP/RNBQKBNR b KQkq - 0 3": [
     "A40",
-    "Queen's Pawn Game: Modern Defense"
+    "Queen's Pawn Opening: Queen's Pawn Game, Modern Defense"
   ],
   "rnbqkbnr/pppppp1p/6p1/8/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2": [
     "A40",
-    "Queen's Pawn Game: Modern Defense"
+    "Queen's Pawn Opening: Queen's Pawn Game, Modern Defense"
   ],
   "rnbqkbnr/pppppp1p/6p1/8/3P4/5N2/PPP1PPPP/RNBQKB1R b KQkq - 1 2": [
     "A40",
-    "Queen's Pawn Game: Modern Defense"
+    "Queen's Pawn Opening: Queen's Pawn Game, Modern Defense"
   ],
   "rnbqkbnr/pppppp1p/6p1/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2": [
     "A40",
-    "Queen's Pawn Game: Modern Defense"
+    "Queen's Pawn Opening: Queen's Pawn Game, Modern Defense"
   ],
   "rn1qkbnr/pbpppppp/8/1p6/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 1 3": [
     "A40",
-    "Queen's Pawn Game: Polish Defense"
+    "Queen's Pawn Opening: Queen's Pawn Game, Polish Defense"
   ],
   "rnbqkbnr/p1pppppp/8/1p6/3PP3/8/PPP2PPP/RNBQKBNR b KQkq - 0 2": [
     "A40",
-    "Queen's Pawn Game: Polish Defense"
+    "Queen's Pawn Opening: Queen's Pawn Game, Polish Defense"
   ],
   "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1": [
     "A40",
@@ -5593,7 +5593,7 @@
   ],
   "rnbqkbnr/ppp1pppp/3p4/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2": [
     "A41",
-    "Queen's Pawn Game"
+    "Queen's Pawn Opening: Queen's Pawn Game"
   ],
   "rnbqkbnr/ppp2ppp/3p4/4p3/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3": [
     "A41",
@@ -5769,7 +5769,7 @@
   ],
   "rnbqkbnr/pp1ppppp/8/8/2Pp4/4P3/PP3PPP/RNBQKBNR b KQkq - 0 3": [
     "A43",
-    "Queen's Pawn Game: Liedmann Gambit"
+    "Queen's Pawn Opening: Queen's Pawn Game, Liedmann Gambit"
   ],
   "rnbqkbnr/pp1ppppp/8/2P5/8/8/PPP1PPPP/RNBQKBNR b KQkq - 0 2": [
     "A43",
@@ -6301,11 +6301,11 @@
   ],
   "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/2N5/PPP1PPPP/R1BQKBNR w KQkq - 0 3": [
     "A45",
-    "Queen's Pawn Game: Chigorin Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Chigorin Variation"
   ],
   "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/2N2P2/PPP1P1PP/R1BQKBNR b KQkq - 1 3": [
     "A45",
-    "Queen's Pawn Game: Veresov Attack, Richter Attack"
+    "Queen's Pawn Opening: Queen's Pawn Game, Veresov Attack, Richter Attack"
   ],
   "rnbqkb1r/pppppppp/5n2/6B1/3P4/8/PPP1PPPP/RN1QKBNR b KQkq - 2 2": [
     "A45",
@@ -6761,11 +6761,11 @@
   ],
   "rnb1kb1r/pp3ppp/1q2pn2/2pp2B1/3P4/2P1PN2/PP3PPP/RN1QKB1R w KQkq - 1 6": [
     "A46",
-    "Queen's Pawn Game: Torre Attack, Breyer Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Torre Attack, Breyer Variation"
   ],
   "rnbqkb1r/ppp2ppp/4pn2/3p2B1/3P4/2N2N2/PPP1PPPP/R2QKB1R b KQkq - 1 4": [
     "A46",
-    "Queen's Pawn Game: Veresov Attack, Classical Defense"
+    "Queen's Pawn Opening: Queen's Pawn Game, Veresov Attack, Classical Defense"
   ],
   "rnbqk2r/ppppbppp/4pn2/6B1/3P4/5N2/PPP1PPPP/RN1QKB1R w KQkq - 2 4": [
     "A46",
@@ -7117,11 +7117,11 @@
   ],
   "rnbq1rk1/ppp1ppbp/5np1/3p4/3P1B2/2N1PN2/PPP1BPPP/R2QK2R b KQ - 2 6": [
     "A48",
-    "Queen's Pawn Game: Barry Attack, Grünfeld Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Barry Attack, Grünfeld Variation"
   ],
   "rnbq1rk1/ppp1ppbp/5np1/3p2B1/3P4/4PN2/PPPN1PPP/R2QKB1R w KQ - 1 6": [
     "A48",
-    "Queen's Pawn Game: Torre Attack, Grünfeld Variation, Main Line"
+    "Queen's Pawn Opening: Queen's Pawn Game, Torre Attack, Grünfeld Variation, Main Line"
   ],
   "rnbqkb1r/pppppp1p/5np1/6B1/3P4/5N2/PPP1PPPP/RN1QKB1R b KQkq - 1 3": [
     "A48",
@@ -9285,7 +9285,7 @@
   ],
   "rnbqkbnr/ppp1p1pp/8/3p1p2/3P4/2N5/PPP1PPPP/R1BQKBNR w KQkq - 0 3": [
     "A80",
-    "Queen's Pawn Game: Veresov Attack, Dutch System"
+    "Queen's Pawn Opening: Queen's Pawn Game, Veresov Attack, Dutch System"
   ],
   "rnbqkbnr/ppppp1pp/8/5p2/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2": [
     "A80",
@@ -11149,7 +11149,7 @@
   ],
   "rnbqkbnr/ppp1pppp/8/3p4/4P3/2N5/PPPP1PPP/R1BQKBNR b KQkq - 1 2": [
     "B01",
-    "Queen's Pawn Game"
+    "Queen's Pawn Opening: Queen's Pawn Game"
   ],
   "rnbqkbnr/ppp1pppp/8/3p4/4P3/1P6/P1PP1PPP/RNBQKBNR b KQkq - 0 2": [
     "B01",
@@ -32669,131 +32669,131 @@
   ],
   "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/4P3/PPP2PPP/RNBQKBNR w KQkq - 1 3": [
     "D00",
-    "Queen's Pawn Game"
+    "Queen's Pawn Opening: Queen's Pawn Game"
   ],
   "rnbqkbnr/ppp1pppp/8/3p4/3P4/4P3/PPP2PPP/RNBQKBNR b KQkq - 0 2": [
     "D00",
-    "Queen's Pawn Game"
+    "Queen's Pawn Opening: Queen's Pawn Game"
   ],
   "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2": [
     "D00",
-    "Queen's Pawn Game"
+    "Queen's Pawn Opening: Queen's Pawn Game"
   ],
   "rnbqkbnr/ppp2ppp/4p3/3p4/3P4/4P3/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
     "D00",
-    "Queen's Pawn Game"
+    "Queen's Pawn Opening: Queen's Pawn Game"
   ],
   "rnbqkbnr/ppp1pppp/8/3p4/3P4/2P5/PP2PPPP/RNBQKBNR b KQkq - 0 2": [
     "D00",
-    "Queen's Pawn Game: 2.c3"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.c3"
   ],
   "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/2P5/PP2PPPP/RNBQKBNR w KQkq - 1 3": [
     "D00",
-    "Queen's Pawn Game: 2.c3 Nf6"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.c3 Nf6"
   ],
   "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/2P5/PP2PPPP/RN1QKBNR b KQkq - 2 3": [
     "D00",
-    "Queen's Pawn Game: 2.c3 Nf6 3.Bf4"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.c3 Nf6 3.Bf4"
   ],
   "rnbqkb1r/ppp1pppp/5n2/3p2B1/3P4/2P5/PP2PPPP/RN1QKBNR b KQkq - 2 3": [
     "D00",
-    "Queen's Pawn Game: 2.c3 Nf6 3.Bg5"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.c3 Nf6 3.Bg5"
   ],
   "rnbqkbnr/ppp1pppp/8/3p4/3P4/6P1/PPP1PP1P/RNBQKBNR b KQkq - 0 2": [
     "D00",
-    "Queen's Pawn Game: 2.g3"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.g3"
   ],
   "rnbqkbnr/ppp1pppp/8/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 1 2": [
     "D00",
-    "Queen's Pawn Game: Accelerated London System"
+    "Queen's Pawn Opening: Queen's Pawn Game, Accelerated London System"
   ],
   "rnbqkbnr/pp2pppp/8/2pp4/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3": [
     "D00",
-    "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit"
+    "Queen's Pawn Opening: Queen's Pawn Game, Accelerated London System, Steinitz Countergambit"
   ],
   "rnbqkbnr/pp2pppp/8/2Pp4/5B2/8/PPP1PPPP/RN1QKBNR b KQkq - 0 3": [
     "D00",
-    "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit Accepted"
+    "Queen's Pawn Opening: Queen's Pawn Game, Accelerated London System, Steinitz Countergambit Accepted"
   ],
   "rnbqkbnr/pp2pppp/8/2pp4/3PPB2/8/PPP2PPP/RN1QKBNR b KQkq - 0 3": [
     "D00",
-    "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit, Morris Countergambit"
+    "Queen's Pawn Opening: Queen's Pawn Game, Accelerated London System, Steinitz Countergambit, Morris Countergambit"
   ],
   "rnbqkbnr/pp2pppp/8/2p5/3PpB2/8/PPP2PPP/RN1QKBNR w KQkq - 0 4": [
     "D00",
-    "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit, Morris Countergambit Accepted"
+    "Queen's Pawn Opening: Queen's Pawn Game, Accelerated London System, Steinitz Countergambit, Morris Countergambit Accepted"
   ],
   "rnbqkb1r/ppp1pp1p/5np1/3p4/3P1B2/2N2N2/PPP1PPPP/R2QKB1R b KQkq - 1 4": [
     "D00",
-    "Queen's Pawn Game: Anti King's Indian Defense"
+    "Queen's Pawn Opening: Queen's Pawn Game, Anti King's Indian Defense"
   ],
   "rnbqkbnr/ppp1pppp/8/3p4/3P4/2N5/PPP1PPPP/R1BQKBNR b KQkq - 0 2": [
     "D00",
-    "Queen's Pawn Game: Chigorin Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Chigorin Variation"
   ],
   "rnbqkbnr/ppp1pppp/8/3p4/3P4/2N5/PPP1PPPP/R1BQKBNR b KQkq - 1 2": [
     "D00",
-    "Queen's Pawn Game: Chigorin Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Chigorin Variation"
   ],
   "rn1qkbnr/ppp1pppp/8/3p1b2/3P4/2N5/PPP1PPPP/R1BQKBNR w KQkq - 2 3": [
     "D00",
-    "Queen's Pawn Game: Chigorin Variation, Alburt Defense"
+    "Queen's Pawn Opening: Queen's Pawn Game, Chigorin Variation, Alburt Defense"
   ],
   "rn1qkbnr/ppp1pppp/8/3p4/3P2b1/2N5/PPP1PPPP/R1BQKBNR w KQkq - 2 3": [
     "D00",
-    "Queen's Pawn Game: Chigorin Variation, Anti-Veresov Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Chigorin Variation, Anti-Veresov Variation"
   ],
   "rnbqk1nr/ppp1ppbp/6p1/3p4/3P4/2N2N2/PPP1PPPP/R1BQKB1R w KQkq - 0 4": [
     "D00",
-    "Queen's Pawn Game: Chigorin Variation, Fianchetto Defense"
+    "Queen's Pawn Opening: Queen's Pawn Game, Chigorin Variation, Fianchetto Defense"
   ],
   "rnbqkbnr/pp2pppp/8/2pp4/3P4/2N5/PPP1PPPP/R1BQKBNR w KQkq - 0 3": [
     "D00",
-    "Queen's Pawn Game: Chigorin Variation, Irish Gambit"
+    "Queen's Pawn Opening: Queen's Pawn Game, Chigorin Variation, Irish Gambit"
   ],
   "rnbqkbnr/ppp2ppp/8/3pp3/3P4/2N5/PPP1PPPP/R1BQKBNR w KQkq - 0 3": [
     "D00",
-    "Queen's Pawn Game: Chigorin Variation, Shaviliuk Gambit"
+    "Queen's Pawn Opening: Queen's Pawn Game, Chigorin Variation, Shaviliuk Gambit"
   ],
   "rnbqkbnr/ppp1ppp1/8/3p3p/3P4/2N5/PPP1PPPP/R1BQKBNR w KQkq - 0 3": [
     "D00",
-    "Queen's Pawn Game: Chigorin Variation, Shropshire Defense"
+    "Queen's Pawn Opening: Queen's Pawn Game, Chigorin Variation, Shropshire Defense"
   ],
   "rnbqkb1r/ppp1pppp/5n2/3p4/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq - 0 3": [
     "D00",
-    "Queen's Pawn Game: Hübsch Gambit"
+    "Queen's Pawn Opening: Queen's Pawn Game, Hübsch Gambit"
   ],
   "rnbqkbnr/ppp1pppp/8/3p2B1/3P4/8/PPP1PPPP/RN1QKBNR b KQkq - 1 2": [
     "D00",
-    "Queen's Pawn Game: Levitsky Attack"
+    "Queen's Pawn Opening: Queen's Pawn Game, Levitsky Attack"
   ],
   "rn1qkbnr/ppp1pppp/8/3p2B1/3P2b1/8/PPP1PPPP/RN1QKBNR w KQkq - 2 3": [
     "D00",
-    "Queen's Pawn Game: Levitsky Attack, Welling Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Levitsky Attack, Welling Variation"
   ],
   "rnbqkbnr/ppp1pppp/8/3p4/3P1P2/8/PPP1P1PP/RNBQKBNR b KQkq - 0 2": [
     "D00",
-    "Queen's Pawn Game: Mason Attack"
+    "Queen's Pawn Opening: Queen's Pawn Game, Mason Attack"
   ],
   "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/3BP3/PPP2PPP/RNBQK1NR b KQkq - 2 3": [
     "D00",
-    "Queen's Pawn Game: Stonewall Attack"
+    "Queen's Pawn Opening: Queen's Pawn Game, Stonewall Attack"
   ],
   "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/2N5/PPP1PPPP/R1BQKBNR w KQkq - 2 3": [
     "D00",
-    "Queen's Pawn Game: Veresov Attack"
+    "Queen's Pawn Opening: Queen's Pawn Game, Veresov Attack"
   ],
   "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/2N2N2/PPP1PPPP/R1BQKB1R b KQkq - 3 3": [
     "D00",
-    "Queen's Pawn Game: Veresov Attack, 3.Nf3"
+    "Queen's Pawn Opening: Queen's Pawn Game, Veresov Attack, 3.Nf3"
   ],
   "rnbqkb1r/ppp1pp1p/5np1/3p4/3P4/2N2N2/PPP1PPPP/R1BQKB1R w KQkq - 0 4": [
     "D00",
-    "Queen's Pawn Game: Veresov Attack, 3.Nf3 g6"
+    "Queen's Pawn Opening: Queen's Pawn Game, Veresov Attack, 3.Nf3 g6"
   ],
   "rnbqkbnr/ppp1pppp/8/3p4/3P2P1/8/PPP1PP1P/RNBQKBNR b KQkq - 0 2": [
     "D00",
-    "Queen's Pawn Game: Zürich Gambit"
+    "Queen's Pawn Opening: Queen's Pawn Game, Zürich Gambit"
   ],
   "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPPKPPPP/RNBQ1BNR b kq - 1 2": [
     "D00",
@@ -32953,239 +32953,239 @@
   ],
   "rnbqkbnr/ppp2ppp/4p3/3p4/3P4/4PN2/PPP2PPP/RNBQKB1R b KQkq - 0 3": [
     "D02",
-    "Queen's Pawn Game"
+    "Queen's Pawn Opening: Queen's Pawn Game"
   ],
   "rn1qkbnr/ppp1pppp/8/3p1b2/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 2 3": [
     "D02",
-    "Queen's Pawn Game: 2.Nf3 Bf5"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.Nf3 Bf5"
   ],
   "rn1qkbnr/ppp1pppp/8/3p1b2/3P1B2/5N2/PPP1PPPP/RN1QKB1R b KQkq - 3 3": [
     "D02",
-    "Queen's Pawn Game: 2.Nf3 Bf5 3.Bf4"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.Nf3 Bf5 3.Bf4"
   ],
   "rn1qkbnr/pp2pppp/2p5/3p1b2/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 0 4": [
     "D02",
-    "Queen's Pawn Game: 2.Nf3 Bf5 3.Bf4 c6"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.Nf3 Bf5 3.Bf4 c6"
   ],
   "rn1qkbnr/ppp2ppp/4p3/3p1b2/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 0 4": [
     "D02",
-    "Queen's Pawn Game: 2.Nf3 Bf5 3.Bf4 e6"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.Nf3 Bf5 3.Bf4 e6"
   ],
   "rn1qkbnr/ppp1pppp/8/3p1b2/3P4/4PN2/PPP2PPP/RNBQKB1R b KQkq - 0 3": [
     "D02",
-    "Queen's Pawn Game: 2.Nf3 Bf5 3.e3"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.Nf3 Bf5 3.e3"
   ],
   "rn1qkbnr/pp2pppp/2p5/3p1b2/3P4/4PN2/PPP2PPP/RNBQKB1R w KQkq - 0 4": [
     "D02",
-    "Queen's Pawn Game: 2.Nf3 Bf5 3.e3 c6"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.Nf3 Bf5 3.e3 c6"
   ],
   "rn1qkbnr/ppp1pppp/8/3p4/3P2b1/5N2/PPP1PPPP/RNBQKB1R w KQkq - 2 3": [
     "D02",
-    "Queen's Pawn Game: 2.Nf3 Bg4"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.Nf3 Bg4"
   ],
   "r1bqkbnr/ppp1pppp/2n5/3p4/3P1B2/5N2/PPP1PPPP/RN1QKB1R b KQkq - 3 3": [
     "D02",
-    "Queen's Pawn Game: 2.Nf3 Nc6 3.Bf4"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.Nf3 Nc6 3.Bf4"
   ],
   "r1bqkbnr/ppp1pppp/2n5/3p4/3P4/5NP1/PPP1PP1P/RNBQKB1R b KQkq - 0 3": [
     "D02",
-    "Queen's Pawn Game: 2.Nf3 Nc6 3.g3"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.Nf3 Nc6 3.g3"
   ],
   "r2qkbnr/ppp1pppp/2n5/3p4/3P2b1/5NP1/PPP1PP1P/RNBQKB1R w KQkq - 1 4": [
     "D02",
-    "Queen's Pawn Game: 2.Nf3 Nc6 3.g3 Bg4"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.Nf3 Nc6 3.g3 Bg4"
   ],
   "rnbqkbnr/pp2pppp/2p5/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3": [
     "D02",
-    "Queen's Pawn Game: 2.Nf3 c6"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.Nf3 c6"
   ],
   "rnbqkbnr/ppp2ppp/4p3/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3": [
     "D02",
-    "Queen's Pawn Game: 2.Nf3 e6"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.Nf3 e6"
   ],
   "rnbqkbnr/ppp2ppp/4p3/3p4/3P4/5NP1/PPP1PP1P/RNBQKB1R b KQkq - 0 3": [
     "D02",
-    "Queen's Pawn Game: 2.Nf3 e6 3.g3"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.Nf3 e6 3.g3"
   ],
   "rnbqkbnr/pp3ppp/4p3/2pp4/3P4/5NP1/PPP1PP1P/RNBQKB1R w KQkq - 0 4": [
     "D02",
-    "Queen's Pawn Game: 2.Nf3 e6 3.g3 c5"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.Nf3 e6 3.g3 c5"
   ],
   "rnbqkbnr/pp3ppp/4p3/2pp4/3P4/5NP1/PPP1PPBP/RNBQK2R b KQkq - 1 4": [
     "D02",
-    "Queen's Pawn Game: 2.Nf3 e6 3.g3 c5"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.Nf3 e6 3.g3 c5"
   ],
   "rnbqkbnr/pp3ppp/4p3/3p4/3N4/6P1/PPP1PPBP/RNBQK2R b KQkq - 0 5": [
     "D02",
-    "Queen's Pawn Game: 2.Nf3 e6 3.g3 c5"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.Nf3 e6 3.g3 c5"
   ],
   "rnbqkbnr/pp3ppp/8/3pp3/3N4/6P1/PPP1PPBP/RNBQK2R w KQkq - 0 6": [
     "D02",
-    "Queen's Pawn Game: 2.Nf3 e6 3.g3 c5"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.Nf3 e6 3.g3 c5"
   ],
   "rnbqkbnr/ppp1pp1p/6p1/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3": [
     "D02",
-    "Queen's Pawn Game: 2.Nf3 g6"
+    "Queen's Pawn Opening: Queen's Pawn Game, 2.Nf3 g6"
   ],
   "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/2P2N2/PP2PPPP/RNBQKB1R b KQkq - 0 3": [
     "D02",
-    "Queen's Pawn Game: 3.c3"
+    "Queen's Pawn Opening: Queen's Pawn Game, 3.c3"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/3p4/3P4/5NP1/PPP1PP1P/RNBQKB1R w KQkq - 0 4": [
     "D02",
-    "Queen's Pawn Game: 3.g3 c6"
+    "Queen's Pawn Opening: Queen's Pawn Game, 3.g3 c6"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/3p4/3P4/5NP1/PPP1PPBP/RNBQK2R b KQkq - 1 4": [
     "D02",
-    "Queen's Pawn Game: 3.g3 c6"
+    "Queen's Pawn Opening: Queen's Pawn Game, 3.g3 c6"
   ],
   "r2qkb1r/pp1n1ppp/2p1pn2/3p4/3P2b1/5NP1/PPPNPPBP/R1BQ1RK1 w kq - 0 7": [
     "D02",
-    "Queen's Pawn Game: 3.g3 c6 4.Bg2 Bg4"
+    "Queen's Pawn Opening: Queen's Pawn Game, 3.g3 c6 4.Bg2 Bg4"
   ],
   "r2qkb1r/pp1npppp/2p2n2/3p4/3P2b1/5NP1/PPP1PPBP/RNBQ1RK1 w kq - 4 6": [
     "D02",
-    "Queen's Pawn Game: 3.g3 c6 4.Bg2 Bg4"
+    "Queen's Pawn Opening: Queen's Pawn Game, 3.g3 c6 4.Bg2 Bg4"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/3p4/3P2b1/5NP1/PPP1PPBP/RNBQ1RK1 b kq - 3 5": [
     "D02",
-    "Queen's Pawn Game: 3.g3 c6 4.Bg2 Bg4"
+    "Queen's Pawn Opening: Queen's Pawn Game, 3.g3 c6 4.Bg2 Bg4"
   ],
   "rn1qkb1r/pp2pppp/2p2n2/3p4/3P2b1/5NP1/PPP1PPBP/RNBQK2R w KQkq - 2 5": [
     "D02",
-    "Queen's Pawn Game: 3.g3 c6 4.Bg2 Bg4"
+    "Queen's Pawn Opening: Queen's Pawn Game, 3.g3 c6 4.Bg2 Bg4"
   ],
   "rnbq1rk1/ppp1ppbp/5np1/3p4/3P4/5NP1/PPP1PPBP/RNBQ1RK1 w - - 4 6": [
     "D02",
-    "Queen's Pawn Game: 3.g3 g6"
+    "Queen's Pawn Opening: Queen's Pawn Game, 3.g3 g6"
   ],
   "rnbqk2r/ppp1ppbp/5np1/3p4/3P4/5NP1/PPP1PPBP/RNBQK2R w KQkq - 2 5": [
     "D02",
-    "Queen's Pawn Game: 3.g3 g6"
+    "Queen's Pawn Opening: Queen's Pawn Game, 3.g3 g6"
   ],
   "rnbqkb1r/ppp1pp1p/5np1/3p4/3P4/5NP1/PPP1PP1P/RNBQKB1R w KQkq - 0 4": [
     "D02",
-    "Queen's Pawn Game: 3.g3 g6"
+    "Queen's Pawn Opening: Queen's Pawn Game, 3.g3 g6"
   ],
   "rn1qkbnr/ppp1pppp/8/3p4/3P2b1/5N2/PPP1PPPP/RNBQKB1R w KQkq - 1 3": [
     "D02",
-    "Queen's Pawn Game: Anti-Torre Attack"
+    "Queen's Pawn Opening: Queen's Pawn Game, Anti-Torre Attack"
   ],
   "rnbqkbnr/pp2pppp/8/3p4/3p4/5NP1/PPP1PPBP/RNBQK2R b KQkq - 1 4": [
     "D02",
-    "Queen's Pawn Game: Chandler Gambit"
+    "Queen's Pawn Opening: Queen's Pawn Game, Chandler Gambit"
   ],
   "r1bqkbnr/ppp1pppp/2n5/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 2 3": [
     "D02",
-    "Queen's Pawn Game: Chigorin Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Chigorin Variation"
   ],
   "r1bqkbnr/pp2pppp/2n5/2pp4/3P4/5NP1/PPP1PP1P/RNBQKB1R w KQkq - 1 4": [
     "D02",
-    "Queen's Pawn Game: Krause Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Krause Variation"
   ],
   "r1bqkbnr/pp2pppp/2n5/2pp4/3P4/5NP1/PPP1PPBP/RNBQK2R b KQkq - 2 4": [
     "D02",
-    "Queen's Pawn Game: Krause Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Krause Variation"
   ],
   "rnbqkbnr/pp2pppp/8/2pp4/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 3": [
     "D02",
-    "Queen's Pawn Game: Krause Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Krause Variation"
   ],
   "rnbqkbnr/pp2pppp/8/2pp4/3P4/5NP1/PPP1PP1P/RNBQKB1R b KQkq - 0 3": [
     "D02",
-    "Queen's Pawn Game: Krause Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Krause Variation"
   ],
   "rnbqkbnr/pp2pppp/8/2pp4/2PP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 0 3": [
     "D02",
-    "Queen's Pawn Game: Krause Variation, 3.c4"
+    "Queen's Pawn Opening: Queen's Pawn Game, Krause Variation, 3.c4"
   ],
   "rnbqkbnr/pp2pppp/8/2Pp4/8/5N2/PPP1PPPP/RNBQKB1R b KQkq - 0 3": [
     "D02",
-    "Queen's Pawn Game: Krause Variation, Reversed Queen's Gambit Accepted"
+    "Queen's Pawn Opening: Queen's Pawn Game, Krause Variation, Reversed Queen's Gambit Accepted"
   ],
   "rnbqkbnr/pp2pppp/8/2pp4/3P4/4PN2/PPP2PPP/RNBQKB1R b KQkq - 0 3": [
     "D02",
-    "Queen's Pawn Game: Krause Variation, Reversed Queen's Gambit Declined"
+    "Queen's Pawn Opening: Queen's Pawn Game, Krause Variation, Reversed Queen's Gambit Declined"
   ],
   "rnbqkbnr/pp2pppp/8/2pp4/3P4/2P2N2/PP2PPPP/RNBQKB1R b KQkq - 0 3": [
     "D02",
-    "Queen's Pawn Game: Krause Variation, Reversed Slav Defense"
+    "Queen's Pawn Opening: Queen's Pawn Game, Krause Variation, Reversed Slav Defense"
   ],
   "rnb1kbnr/pp2ppp1/1qp4p/3p4/3P3B/5N2/PPP1PPPP/RN1QKB1R w KQkq - 2 5": [
     "D02",
-    "Queen's Pawn Game: Levitsky Attack, Euwe Variation, Modern Line"
+    "Queen's Pawn Opening: Queen's Pawn Game, Levitsky Attack, Euwe Variation, Modern Line"
   ],
   "r1bqk2r/pp3ppp/2nbpn2/2pp4/3P1B2/2PBPN2/PP3PPP/RN1QK2R w KQkq - 3 7": [
     "D02",
-    "Queen's Pawn Game: London System"
+    "Queen's Pawn Opening: Queen's Pawn Game, London System"
   ],
   "r1bqkb1r/pp3ppp/2n1pn2/2pp4/3P1B2/2P1PN2/PP3PPP/RN1QKB1R w KQkq - 1 6": [
     "D02",
-    "Queen's Pawn Game: London System"
+    "Queen's Pawn Opening: Queen's Pawn Game, London System"
   ],
   "rn1qkb1r/ppp1pppp/5n2/3p1b2/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 4 4": [
     "D02",
-    "Queen's Pawn Game: London System"
+    "Queen's Pawn Opening: Queen's Pawn Game, London System"
   ],
   "rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 0 4": [
     "D02",
-    "Queen's Pawn Game: London System"
+    "Queen's Pawn Opening: Queen's Pawn Game, London System"
   ],
   "rnbqkb1r/pp3ppp/4pn2/2pp4/3P1B2/4PN2/PPP2PPP/RN1QKB1R w KQkq - 0 5": [
     "D02",
-    "Queen's Pawn Game: London System"
+    "Queen's Pawn Opening: Queen's Pawn Game, London System"
   ],
   "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/5N2/PPP1PPPP/RN1QKB1R b KQkq - 3 3": [
     "D02",
-    "Queen's Pawn Game: London System"
+    "Queen's Pawn Opening: Queen's Pawn Game, London System"
   ],
   "rnbqkb1r/ppp2ppp/4pn2/3p4/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 0 4": [
     "D02",
-    "Queen's Pawn Game: London System"
+    "Queen's Pawn Opening: Queen's Pawn Game, London System"
   ],
   "rnbqkbnr/pp2pppp/2p5/3p4/3P1B2/5N2/PPP1PPPP/RN1QKB1R b KQkq - 1 3": [
     "D02",
-    "Queen's Pawn Game: London System"
+    "Queen's Pawn Opening: Queen's Pawn Game, London System"
   ],
   "rnb1kbnr/pp2pppp/1qp5/3p4/3P1B2/5N2/PPP1PPPP/RN1QKB1R w KQkq - 2 4": [
     "D02",
-    "Queen's Pawn Game: London System, Alapin Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, London System, Alapin Variation"
   ],
   "rnb1k1nr/pp1pppbp/6p1/q7/3P1B2/5N2/PP2PPPP/RN1QKB1R w KQkq - 1 6": [
     "D02",
-    "Queen's Pawn Game: London System, Pterodactyl Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, London System, Pterodactyl Variation"
   ],
   "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R w KQkq - 2 3": [
     "D02",
-    "Queen's Pawn Game: Symmetrical Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Symmetrical Variation"
   ],
   "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/5NP1/PPP1PP1P/RNBQKB1R b KQkq - 0 3": [
     "D02",
-    "Queen's Pawn Game: Symmetrical Variation, Pseudo-Catalan Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Symmetrical Variation, Pseudo-Catalan Variation"
   ],
   "rnbqkb1r/p1p1pppp/5n2/1p1p4/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
     "D02",
-    "Queen's Pawn Game: Zilbermints Countergambit"
+    "Queen's Pawn Opening: Queen's Pawn Game, Zilbermints Countergambit"
   ],
   "rnbqkbnr/ppp1pppp/8/3p4/3P4/5N2/PPP1PPPP/RNBQKB1R b KQkq - 1 2": [
     "D02",
-    "Queen's Pawn Game: Zukertort Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Zukertort Variation"
   ],
   "rnbqkb1r/pp2pppp/5n2/2pp2B1/3P4/5N2/PPP1PPPP/RN1QKB1R w KQkq - 0 4": [
     "D03",
-    "Queen's Pawn Game, Torre Attack"
+    "Queen's Pawn Opening: Queen's Pawn Game, Torre Attack"
   ],
   "rnbqkb1r/ppp1pppp/5n2/3p2B1/3P4/5N2/PPP1PPPP/RN1QKB1R b KQkq - 3 3": [
     "D03",
-    "Queen's Pawn Game: Torre Attack"
+    "Queen's Pawn Opening: Queen's Pawn Game, Torre Attack"
   ],
   "rnbqkb1r/ppp1pppp/8/3p2B1/3Pn3/5N2/PPP1PPPP/RN1QKB1R w KQkq - 4 4": [
     "D03",
-    "Queen's Pawn Game: Torre Attack, Gossip Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Torre Attack, Gossip Variation"
   ],
   "rnbqkb1r/ppp1pp1p/5np1/3p2B1/3P4/5N2/PPP1PPPP/RN1QKB1R w KQkq - 0 4": [
     "D03",
-    "Queen's Pawn Game: Torre Attack, Grünfeld Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Torre Attack, Grünfeld Variation"
   ],
   "rnbqk2r/ppp1bppp/4pn2/3p2B1/3P4/4PN2/PPP2PPP/RN1QKB1R w KQkq - 1 5": [
     "D03",
@@ -33285,99 +33285,99 @@
   ],
   "rnbqkb1r/ppp1pppp/5n2/3p4/3P4/4PN2/PPP2PPP/RNBQKB1R b KQkq - 0 3": [
     "D04",
-    "Queen's Pawn Game: Colle System"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System"
   ],
   "rn1qkb1r/ppp2ppp/4pn2/3p1b2/3P4/3BPN2/PPP2PPP/RNBQK2R w KQkq - 0 5": [
     "D04",
-    "Queen's Pawn Game: Colle System, 3...Bf5, Alekhine Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, 3...Bf5, Alekhine Variation"
   ],
   "rn1qkb1r/ppp1pppp/5n2/3p4/3P2b1/4PN2/PPP2PPP/RNBQKB1R w KQkq - 1 4": [
     "D04",
-    "Queen's Pawn Game: Colle System, 3...Bg4"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, 3...Bg4"
   ],
   "rnbqkb1r/pp2pppp/5n2/2pp4/3P4/4PN2/PPP2PPP/RNBQKB1R w KQkq - 0 4": [
     "D04",
-    "Queen's Pawn Game: Colle System, 3...c5"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, 3...c5"
   ],
   "rnbqkb1r/pp2pppp/5n2/2pp4/3P4/2P1PN2/PP3PPP/RNBQKB1R b KQkq - 0 4": [
     "D04",
-    "Queen's Pawn Game: Colle System, 3...c5 4.c3"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, 3...c5 4.c3"
   ],
   "r1bqkb1r/pp1npppp/5n2/2pp4/3P4/2P1PN2/PP3PPP/RNBQKB1R w KQkq - 1 5": [
     "D04",
-    "Queen's Pawn Game: Colle System, 3...c5 4.c3 Nbd7"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, 3...c5 4.c3 Nbd7"
   ],
   "r1bqkb1r/pp2pppp/2n2n2/2pp4/3P4/2P1PN2/PP3PPP/RNBQKB1R w KQkq - 1 5": [
     "D04",
-    "Queen's Pawn Game: Colle System, 3...c5 4.c3 Nc6"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, 3...c5 4.c3 Nc6"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/3p4/3P4/4PN2/PPP2PPP/RNBQKB1R w KQkq - 0 4": [
     "D04",
-    "Queen's Pawn Game: Colle System, 3...c6"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, 3...c6"
   ],
   "rnbqkb1r/ppp1pp1p/5np1/3p4/3P4/4PN2/PPP2PPP/RNBQKB1R w KQkq - 0 4": [
     "D04",
-    "Queen's Pawn Game: Colle System, 3...g6"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, 3...g6"
   ],
   "rn1qkb1r/ppp1pppp/5n2/3p1b2/3P4/4PN2/PPP2PPP/RNBQKB1R w KQkq - 1 4": [
     "D04",
-    "Queen's Pawn Game: Colle System, Anti-Colle Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, Anti-Colle Variation"
   ],
   "rnbqk2r/ppp1ppbp/5np1/3p4/3P4/3BPN2/PPP2PPP/RNBQK2R w KQkq - 2 5": [
     "D04",
-    "Queen's Pawn Game: Colle System, Grünfeld Formation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, Grünfeld Formation"
   ],
   "rnbqkb1r/ppp2ppp/4pn2/3p4/3P4/3BPN2/PPP2PPP/RNBQK2R b KQkq - 1 4": [
     "D05",
-    "Queen's Pawn Game: Colle System"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System"
   ],
   "rnbqkb1r/ppp2ppp/4pn2/3p4/3P4/4PN2/PPP2PPP/RNBQKB1R w KQkq - 0 4": [
     "D05",
-    "Queen's Pawn Game: Colle System"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System"
   ],
   "rnbqkb1r/pp3ppp/4pn2/2pp4/3P4/3BPN2/PPP2PPP/RNBQK2R w KQkq - 0 5": [
     "D05",
-    "Queen's Pawn Game: Colle System, 3...e6 4.Bd3 c5"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, 3...e6 4.Bd3 c5"
   ],
   "rnbqkb1r/ppp2ppp/4pn2/3p4/3P4/4PN2/PPPN1PPP/R1BQKB1R b KQkq - 1 4": [
     "D05",
-    "Queen's Pawn Game: Colle System, 3...e6 4.Nbd2"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, 3...e6 4.Nbd2"
   ],
   "r1bqkb1r/pp1n1ppp/4pn2/2pp4/3P4/2PBPN2/PP3PPP/RNBQK2R w KQkq - 1 6": [
     "D05",
-    "Queen's Pawn Game: Colle System, 5.c3 Nbd7"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, 5.c3 Nbd7"
   ],
   "r1bqkb1r/pp3ppp/2n1pn2/2pp4/3P4/2PBPN2/PP3PPP/RNBQK2R w KQkq - 1 6": [
     "D05",
-    "Queen's Pawn Game: Colle System, 5.c3 Nc6"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, 5.c3 Nc6"
   ],
   "r1bqkb1r/pp3ppp/2n1pn2/2pp4/3P4/2PBPN2/PP1N1PPP/R1BQK2R b KQkq - 2 6": [
     "D05",
-    "Queen's Pawn Game: Colle System, 5.c3 Nc6 6.Nbd2"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, 5.c3 Nc6 6.Nbd2"
   ],
   "r1bqk2r/pp3ppp/2nbpn2/2pp4/3P4/2PBPN2/PP1N1PPP/R1BQK2R w KQkq - 3 7": [
     "D05",
-    "Queen's Pawn Game: Colle System, 5.c3 Nc6 6.Nbd2 Bd6"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, 5.c3 Nc6 6.Nbd2 Bd6"
   ],
   "r1bq1rk1/pp3ppp/2nbpn2/2pp4/3P4/2PBPN2/PP1N1PPP/R1BQ1RK1 w - - 5 8": [
     "D05",
-    "Queen's Pawn Game: Colle System, 5.c3 Nc6 6.Nbd2 Bd6 7.O-O O-O"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, 5.c3 Nc6 6.Nbd2 Bd6 7.O-O O-O"
   ],
   "r1bq1rk1/pp3ppp/2n1pn2/2bp4/8/2PBPN2/PP1N1PPP/R1BQ1RK1 w - - 0 9": [
     "D05",
-    "Queen's Pawn Game: Colle System, 5.c3 Nc6 6.Nbd2 Bd6 7.O-O O-O 8.dxc5 Bxc5"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, 5.c3 Nc6 6.Nbd2 Bd6 7.O-O O-O 8.dxc5 Bxc5"
   ],
   "r1bqkb1r/pp3ppp/2n1pn2/2pp4/3P4/1P1BPN2/P1P2PPP/RNBQK2R w KQkq - 1 6": [
     "D05",
-    "Queen's Pawn Game: Colle System, Rubinstein Attack, 5...Nc6"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, Rubinstein Attack, 5...Nc6"
   ],
   "rnbqkb1r/pp3ppp/4pn2/2pp4/3P4/2PBPN2/PP3PPP/RNBQK2R b KQkq - 0 5": [
     "D05",
-    "Queen's Pawn Game: Colle System, Traditional Line"
+    "Queen's Pawn Opening: Queen's Pawn Game, Colle System, Traditional Line"
   ],
   "rnbqkb1r/pp3ppp/4pn2/2pp4/3P4/1P2PN2/P1PN1PPP/R1BQKB1R b KQkq - 0 5": [
     "D05",
-    "Queen's Pawn Game: Zukertort Variation"
+    "Queen's Pawn Opening: Queen's Pawn Game, Zukertort Variation"
   ],
   "rnbqkb1r/pp3ppp/4pn2/2pp4/3P4/1P1BPN2/P1P2PPP/RNBQK2R b KQkq - 0 5": [
     "D05",
@@ -41325,31 +41325,31 @@
   ],
   "rnbqkb1r/pppp1ppp/4pn2/8/2PP4/P7/1P2PPPP/RNBQKBNR b KQkq - 0 3": [
     "E00",
-    "Queen's Pawn Game: Anti Nimzo-Indian Defense"
+    "Queen's Pawn Opening: Queen's Pawn Game, Anti Nimzo-Indian Defense"
   ],
   "rnbqkb1r/ppp2ppp/4pn2/3p4/2PP4/P7/1P2PPPP/RNBQKBNR w KQkq - 0 4": [
     "E00",
-    "Queen's Pawn Game: Anti Nimzo-Indian Defense, 3...d5"
+    "Queen's Pawn Opening: Queen's Pawn Game, Anti Nimzo-Indian Defense, 3...d5"
   ],
   "rnbqkb1r/pppp1ppp/4pn2/8/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 1 3": [
     "E00",
-    "Queen's Pawn Game: New Indian Attack"
+    "Queen's Pawn Opening: Queen's Pawn Game, New Indian Attack"
   ],
   "rnbqkb1r/pppp1ppp/4pn2/8/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3": [
     "E00",
-    "Queen's Pawn Game: New Indian Attack"
+    "Queen's Pawn Opening: Queen's Pawn Game, New Indian Attack"
   ],
   "rnbqkb1r/p1pp1ppp/1p2pn2/8/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 4": [
     "E00",
-    "Queen's Pawn Game: New Indian Attack, 3...b6"
+    "Queen's Pawn Opening: Queen's Pawn Game, New Indian Attack, 3...b6"
   ],
   "rnbqkb1r/p1pp1ppp/1p2pn2/8/2PPP3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 4": [
     "E00",
-    "Queen's Pawn Game: New Indian Attack, 3...b6"
+    "Queen's Pawn Opening: Queen's Pawn Game, New Indian Attack, 3...b6"
   ],
   "rnbqkb1r/pp1p1ppp/4pn2/2p5/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 4": [
     "E00",
-    "Queen's Pawn Game: New Indian Attack, 3...c5"
+    "Queen's Pawn Opening: Queen's Pawn Game, New Indian Attack, 3...c5"
   ],
   "rnbqk2r/ppp2ppp/4pn2/3p4/1bPP4/6P1/PP2PPBP/RNBQK1NR w KQkq - 2 5": [
     "E01",
@@ -42025,15 +42025,15 @@
   ],
   "rnbqk2r/ppppbppp/4pn2/8/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 4": [
     "E10",
-    "Queen's Pawn Game: 3.Nf3 Be7"
+    "Queen's Pawn Opening: Queen's Pawn Game, 3.Nf3 Be7"
   ],
   "rnbqkb1r/1ppp1ppp/p3pn2/8/2PP4/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 1 4": [
     "E10",
-    "Queen's Pawn Game: 3.Nf3 a6 4.Nc3"
+    "Queen's Pawn Opening: Queen's Pawn Game, 3.Nf3 a6 4.Nc3"
   ],
   "rnbqkb1r/1p1p1ppp/p3pn2/2p5/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 5": [
     "E10",
-    "Queen's Pawn Game: 3.Nf3 a6 4.Nc3 c5"
+    "Queen's Pawn Opening: Queen's Pawn Game, 3.Nf3 a6 4.Nc3 c5"
   ],
   "rnbqkb1r/pp1p1ppp/4pn2/2p5/2PP4/4PN2/PP3PPP/RNBQKB1R b KQkq - 0 4": [
     "E10",
