@@ -23379,6 +23379,14 @@
     "C19",
     "French Defense: Winawer Variation, Smyslov Variation, 7...Qa5"
   ],
+  "rnbqkb1r/pppp1ppp/5n2/4p3/4P3/8/PPPPNPPP/RNBQKB1R w KQkq - 2 3": [
+    "C20",
+    "Alapin Opening"
+  ],
+  "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPPNPPP/RNBQKB1R b KQkq - 1 2": [
+    "C20",
+    "Alapin Opening"
+  ],
   "rnbqkb1r/pppp1ppp/5n2/4p3/2B1P3/5P2/PPPP2PP/RNBQK1NR b KQkq - 2 3": [
     "C20",
     "Barnes Opening: Walkerling Variation"
@@ -23402,10 +23410,6 @@
   "rnbqkb1r/pppp1ppp/5n2/4Q3/4P3/8/PPPP1PPP/RNB1KBNR b KQkq - 0 3": [
     "C20",
     "King's Pawn Game, Wayward Queen Attack, Kiddie Countergambit"
-  ],
-  "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPPNPPP/RNBQKB1R b KQkq - 1 2": [
-    "C20",
-    "King's Pawn Game: Alapin Opening"
   ],
   "rnbqkbnr/ppp2ppp/8/3pp3/2P1P3/8/PP1P1PPP/RNBQKBNR w KQkq - 0 3": [
     "C20",
@@ -23487,29 +23491,17 @@
     "C20",
     "King's Pawn Game: van Hooydoon Gambit"
   ],
+  "rnbqkbnr/pppp1ppp/8/4p3/4P3/7N/PPPP1PPP/RNBQKB1R b KQkq - 1 2": [
+    "C20",
+    "King's Pawn Opening: King's Pawn Game, Basman Attack"
+  ],
   "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPPKPPP/RNBQ1BNR b kq - 1 2": [
     "C20",
     "King's Pawn Opening: King's Pawn Game, Bongcloud Variation"
   ],
   "rnbqkbnr/ppp2ppp/8/3pp3/4P3/3P4/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
     "C20",
-    "Open Opening: 2.d3 d5"
-  ],
-  "rnbqkb1r/pppp1ppp/5n2/4p3/4P3/8/PPPPNPPP/RNBQKB1R w KQkq - 2 3": [
-    "C20",
-    "Open Opening: Alapin Opening"
-  ],
-  "r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/8/PPPP1PPP/RNBQK1NR w KQkq - 2 3": [
-    "C20",
-    "Open Opening: Portuguese, 2...Nc6"
-  ],
-  "rnbqkb1r/pppp1ppp/5n2/1B2p3/4P3/8/PPPP1PPP/RNBQK1NR w KQkq - 2 3": [
-    "C20",
-    "Open Opening: Portuguese, 2...Nf6"
-  ],
-  "rnbqkbnr/pp1p1ppp/2p5/1B2p3/4P3/8/PPPP1PPP/RNBQK1NR w KQkq - 0 3": [
-    "C20",
-    "Open Opening: Portuguese, 2...c6"
+    "Open Game: 2.d3 d5"
   ],
   "r1bqkb1r/pppp1p1p/2n2np1/4p3/2B1P3/5Q2/PPPP1PPP/RNB1K1NR w KQkq - 2 5": [
     "C20",
@@ -23539,6 +23531,18 @@
     "C20",
     "Portuguese Opening"
   ],
+  "r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/8/PPPP1PPP/RNBQK1NR w KQkq - 2 3": [
+    "C20",
+    "Portuguese Opening: 2...Nc6"
+  ],
+  "rnbqkb1r/pppp1ppp/5n2/1B2p3/4P3/8/PPPP1PPP/RNBQK1NR w KQkq - 2 3": [
+    "C20",
+    "Portuguese Opening: 2...Nf6"
+  ],
+  "rnbqkbnr/pp1p1ppp/2p5/1B2p3/4P3/8/PPPP1PPP/RNBQK1NR w KQkq - 0 3": [
+    "C20",
+    "Portuguese Opening: 2...c6"
+  ],
   "rnbqk1nr/pppp1ppp/8/1Bb1p3/1P2P3/8/P1PP1PPP/RNBQK1NR b KQkq - 0 3": [
     "C20",
     "Portuguese Opening: Miguel Gambit"
@@ -23546,10 +23550,6 @@
   "rnbqkb1r/pppp1ppp/5n2/1B2p3/3PP3/8/PPP2PPP/RNBQK1NR b KQkq - 0 3": [
     "C20",
     "Portuguese Opening: Portuguese Gambit"
-  ],
-  "rnbqkbnr/pppp1ppp/8/4p3/4P3/7N/PPPP1PPP/RNBQKB1R b KQkq - 1 2": [
-    "C20",
-    "The Basman Attack"
   ],
   "rnbqkbnr/pppp1ppp/8/8/3QP3/8/PPP2PPP/RNB1KBNR b KQkq - 0 3": [
     "C21",
@@ -25723,6 +25723,10 @@
     "C40",
     "King's Pawn Game: McConnell Defense"
   ],
+  "rnbqk1nr/pppp1ppp/8/4p3/1b2P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3": [
+    "C40",
+    "King's Pawn Opening: King's Pawn Game, Open Game"
+  ],
   "rnbqkbnr/pppp2pp/8/4pp2/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 0 3": [
     "C40",
     "Latvian Gambit"
@@ -25845,7 +25849,15 @@
   ],
   "rnbqkbnr/ppp3pp/8/3pN3/2B1p3/8/PPPP1PPP/RNBQK2R w KQkq - 0 5": [
     "C40",
-    "Latvian Gambit: Mayet Attack, Polerio-SvedenBasman Variation"
+    "Latvian Gambit: Mayet Attack, Polerio-Svedenborg Variation"
+  ],
+  "rnbqkb1r/ppp4p/5nN1/3p3Q/2B1p3/8/PPPP1PPP/RNB1K2R w KQkq - 1 7": [
+    "C40",
+    "Latvian Gambit: Mayet Attack, Polerio-Svedenborg Variation, 6.Nxg6 Nf6"
+  ],
+  "rnbqkbnr/ppp5/6p1/3p3Q/2B1p3/8/PPPP1PPP/RNB1K2R w KQkq - 0 7": [
+    "C40",
+    "Latvian Gambit: Mayet Attack, Polerio-Svedenborg Variation, 6.Nxg6 hxg6"
   ],
   "rnbqkbnr/p1pp2pp/8/1p2pp2/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4": [
     "C40",
@@ -25861,27 +25873,15 @@
   ],
   "rnbk1bnr/pppp1B1p/6p1/4N2Q/3Pp3/8/PPP2PqP/RNB1K2R w KQ - 2 8": [
     "C40",
-    "Latvian Gambit: Poisoned Pawn, Main Line"
+    "Latvian Gambit: Poisoned Pawn Variation, Main Line"
   ],
   "rnbqkbnr/pppp2pp/8/4pp2/1P2P3/5N2/P1PP1PPP/RNBQKB1R b KQkq - 0 3": [
     "C40",
     "Latvian Gambit: Senechaud Gambit"
   ],
-  "rnbqkb1r/ppp4p/5nN1/3p3Q/2B1p3/8/PPPP1PPP/RNB1K2R w KQkq - 1 7": [
-    "C40",
-    "Latvian Gambit: SvedenBasman, 6.Nxg6 Nf6"
-  ],
-  "rnbqkbnr/ppp5/6p1/3p3Q/2B1p3/8/PPPP1PPP/RNB1K2R w KQkq - 0 7": [
-    "C40",
-    "Latvian Gambit: SvedenBasman, 6.Nxg6 hxg6"
-  ],
-  "rnbqk1nr/pppp1ppp/8/4p3/1b2P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3": [
-    "C40",
-    "Open Opening"
-  ],
   "rnb1kbnr/ppppqppp/8/4p3/4P3/2N2N2/PPPP1PPP/R1BQKB1R b KQkq - 3 3": [
     "C40",
-    "Open Opening: Gunderam Defense, 3.Nc3"
+    "Open Game: Gunderam Defense, 3.Nc3"
   ],
   "rnbqk1nr/ppp1bppp/3p4/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 2 4": [
     "C41",
@@ -26661,23 +26661,23 @@
   ],
   "r1bqkb1r/pppp1ppp/2n2n2/4p3/4P3/3P1N2/PPP2PPP/RNBQKB1R w KQkq - 1 4": [
     "C44",
-    "Open Opening: Inverted Philidor Defense"
+    "Open Game: Inverted Philidor Defense"
   ],
   "r1bqkbnr/ppp2ppp/2n5/3pp3/4P3/3P1N2/PPP2PPP/RNBQKB1R w KQkq - 0 4": [
     "C44",
-    "Open Opening: Inverted Philidor Defense"
+    "Open Game: Inverted Philidor Defense"
   ],
   "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/3P1N2/PPP2PPP/RNBQKB1R b KQkq - 0 3": [
     "C44",
-    "Open Opening: Inverted Philidor Defense"
+    "Open Game: Inverted Philidor Defense"
   ],
   "r1bqkb1r/pppp1ppp/2n2n2/4p3/4P3/3P1N2/PPP1BPPP/RNBQK2R b KQkq - 2 4": [
     "C44",
-    "Open Opening: Inverted Philidor Defense, 4.Be2"
+    "Open Game: Inverted Philidor Defense, 4.Be2"
   ],
   "r1bqkb1r/pppp1ppp/2n2n2/4p3/4P3/3P1NP1/PPP2P1P/RNBQKB1R b KQkq - 0 4": [
     "C44",
-    "Open Opening: Inverted Philidor Defense, 4.g3"
+    "Open Game: Inverted Philidor Defense, 4.g3"
   ],
   "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/2P2N2/PP1P1PPP/RNBQKB1R b KQkq - 0 3": [
     "C44",
