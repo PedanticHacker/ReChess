@@ -1321,7 +1321,7 @@
   ],
   "rnb1k1nr/pp1pppbp/6p1/q1P5/8/4PN2/PPP2PPP/RNBQKB1R w KQkq - 1 5": [
     "A04",
-    "Colle System, Rhamphorhynchus Variation"
+    "Colle System: Rhamphorhynchus Variation"
   ],
   "rnbqkbnr/pp1ppppp/8/2p5/2P5/5N2/PP1PPPPP/RNBQKB1R b KQkq - 0 2": [
     "A04",
@@ -5061,15 +5061,15 @@
   ],
   "rnbqk2r/pp2npbp/3p2p1/2pP4/4P3/2N2N2/PP3PPP/R1BQKB1R w KQkq - 3 8": [
     "A40",
-    "Benoni Defense: Franco-Sicilian Hybrid Variation"
+    "Benoni Defense: French-Sicilian Hybrid Variation"
   ],
   "rnb1k1nr/pp1pppbp/6p1/q1p5/3P4/3BPN2/PPP2PPP/RNBQK2R w KQkq - 2 5": [
     "A40",
-    "Colle System, Pterodactyl Variation"
+    "Colle System: Pterodactyl Variation"
   ],
   "rnb1k1nr/pp1pppbp/6p1/q7/3N4/3BP3/PPP2PPP/RNBQK2R w KQkq - 1 6": [
     "A40",
-    "Colle System, Siroccopteryx Variation"
+    "Colle System: Siroccopteryx Variation"
   ],
   "rnbqkbnr/p1pp1ppp/1p2p3/8/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3": [
     "A40",
@@ -5195,37 +5195,37 @@
     "A40",
     "Kangaroo Defense: Keres Defense, Transpositional Variation"
   ],
-  "rnbqk1nr/pp1pp2p/6p1/2pP1p2/2P5/2P5/P3PPPP/R1BQKBNR w KQkq - 0 6": [
-    "A40",
-    "Modern Defense: Beefeater Variation"
-  ],
   "rnbqkb1r/pppppp1p/5np1/7P/3P4/8/PPP1PPP1/RNBQKBNR b KQkq - 0 3": [
     "A40",
     "Modern Defense: Lizard Defense, Pirc-Diemer Gambit"
   ],
   "rnb1k1nr/pp1pppbp/6p1/q1pP4/2P1P3/8/PP3PPP/RNBQKBNR w KQkq - 1 5": [
     "A40",
-    "Modern Defense: Pterodactyl Defense, Central Benoni Variation"
+    "Modern Defense: Standard Line, Pterodactyl Defense, Central Benoni Variation"
+  ],
+  "rnbqk1nr/pp1pp2p/6p1/2pP1p2/2P5/2P5/P3PPPP/R1BQKBNR w KQkq - 0 6": [
+    "A40",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Central Benoni Variation, Beefeater Variation"
   ],
   "rnb1k1nr/pp2pp1p/3p2p1/q1pP4/2P1P3/2P5/P4PPP/R1BQKBNR w KQkq - 1 7": [
     "A40",
-    "Modern Defense: Pterodactyl Defense, Central, Benoni Beefeater Pterodactyl"
+    "Modern Defense: Standard Line, Pterodactyl Defense, Central Benoni Variation, Beefeater Variation, Pterodactyl Variation"
   ],
   "rnb1k1nr/pp1pppbp/6p1/q1pP4/2P5/2N5/PP2PPPP/R1BQKBNR w KQkq - 1 5": [
     "A40",
-    "Modern Defense: Pterodactyl Defense, Fianchetto Variation, Queen Benoni Variation"
+    "Modern Defense: Standard Line, Pterodactyl Defense, Fianchetto Variation, Queen Benoni Variation"
   ],
   "rnb1k1nr/pp1ppp1p/6p1/q1pP4/2P5/2P5/P3PPPP/R1BQKBNR w KQkq - 1 6": [
     "A40",
-    "Modern Defense: Pterodactyl Defense, Fianchetto Variation, Queen Pteranodon Variation"
+    "Modern Defense: Standard Line, Pterodactyl Defense, Fianchetto Variation, Queen Pteranodon Variation"
   ],
   "rnb1k1nr/pp1pppbp/6p1/q1p5/3P4/5NP1/PPP1PPBP/RNBQK2R w KQkq - 2 5": [
     "A40",
-    "Modern Defense: Pterodactyl Defense, Fianchetto Variation, Queen Pterodactyl Variation"
+    "Modern Defense: Standard Line, Pterodactyl Defense, Fianchetto Variation, Queen Pterodactyl Variation"
   ],
   "rnbqk1nr/pp1pppbp/6p1/2p5/2PP4/2N1P3/PP3PPP/R1BQKBNR b KQkq - 0 4": [
     "A40",
-    "Modern Defense: Pterodactyl Defense, Queen Pterodactyl Variation, Quiet Line"
+    "Modern Defense: Standard Line, Pterodactyl Defense, Queen Pterodactyl Variation, Quiet Line"
   ],
   "rnbqkbnr/pppppppp/8/3P4/8/8/PPP1PPPP/RNBQKBNR w KQkq - 1 3": [
     "A40",
@@ -5329,7 +5329,7 @@
   ],
   "rnbqkbnr/p2ppppp/2p5/1p6/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3": [
     "A40",
-    "Queen's Pawn Game: Jadoul"
+    "Queen's Pawn Game: Jadoul Variation"
   ],
   "rnbqk1nr/pppp1ppp/4p3/8/1bPP4/8/PP1BPPPP/RN1QKBNR b KQkq - 2 3": [
     "A40",
@@ -5743,25 +5743,25 @@
     "A42",
     "Modern Defense: Pterodactyl Defense"
   ],
-  "rnb1k1nr/pp2ppbp/3p2p1/q1p5/2PPP3/2N2N2/PP3PPP/R1BQKB1R w KQkq - 2 6": [
-    "A42",
-    "Modern Defense: Pterodactyl Defense with c4"
-  ],
-  "rnbqk1nr/pp2ppbp/3p2p1/2p5/2PPP3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 1 5": [
-    "A42",
-    "Modern Defense: Pterodactyl Defense with c4"
-  ],
-  "rnbqk1nr/pp2ppbp/3p2p1/2p5/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5": [
-    "A42",
-    "Modern Defense: Pterodactyl Defense with c4"
-  ],
-  "rnb1k1nr/pp2ppbp/3p2p1/q1p5/2PPP3/2N5/PP2NPPP/R1BQKB1R w KQkq - 2 6": [
-    "A42",
-    "Modern Defense: Pterodactyl Defense, Central Bogolubovia Variation"
-  ],
   "rnbqk1nr/ppp1p1bp/3p2p1/5p2/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5": [
     "A42",
     "Modern Defense: Randspringer Variation"
+  ],
+  "rnb1k1nr/pp2ppbp/3p2p1/q1p5/2PPP3/2N5/PP2NPPP/R1BQKB1R w KQkq - 2 6": [
+    "A42",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Central Bogolubovia Variation"
+  ],
+  "rnb1k1nr/pp2ppbp/3p2p1/q1p5/2PPP3/2N2N2/PP3PPP/R1BQKB1R w KQkq - 2 6": [
+    "A42",
+    "Modern Defense: Standard Line, Pterodactyl Defense, with c4"
+  ],
+  "rnbqk1nr/pp2ppbp/3p2p1/2p5/2PPP3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 1 5": [
+    "A42",
+    "Modern Defense: Standard Line, Pterodactyl Defense, with c4"
+  ],
+  "rnbqk1nr/pp2ppbp/3p2p1/2p5/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5": [
+    "A42",
+    "Modern Defense: Standard Line, Pterodactyl Defense, with c4"
   ],
   "rnbqkbnr/pp1ppppp/8/2P5/8/8/PPP1PPPP/RNBQKBNR b KQkq - 0 2": [
     "A43",
@@ -5789,7 +5789,7 @@
   ],
   "rnbqkbnr/pp1p1ppp/4p3/2pP4/4P3/8/PPP2PPP/RNBQKBNR b KQkq - 0 3": [
     "A43",
-    "Benoni Defense: French Benoni"
+    "Benoni Defense: French-Benoni Defense"
   ],
   "rnbqkb1r/pp1ppppp/5n2/3P4/2p5/5N2/PPP1PPPP/RNBQKB1R w KQkq - 0 4": [
     "A43",
@@ -5877,15 +5877,15 @@
   ],
   "rnbqkbnr/pp1pp1pp/8/2pP1p2/8/2N5/PPP1PPPP/R1BQKBNR b KQkq - 1 3": [
     "A43",
-    "Benoni Defense: Old Benoni Defense, Clarendon Court Variation, 3.Nc3"
+    "Benoni Defense: Old Benoni Defense, Clarendon-Court Variation, 3.Nc3"
   ],
   "rnbqkbnr/pp1pp1pp/8/2pP1p2/2P5/8/PP2PPPP/RNBQKBNR b KQkq - 0 3": [
     "A43",
-    "Benoni Defense: Old Benoni Defense, Clarendon Court Variation, 3.c4"
+    "Benoni Defense: Old Benoni Defense, Clarendon-Court Variation, 3.c4"
   ],
   "rnbqkbnr/pp1pp1pp/8/2pP1p2/8/6P1/PPP1PP1P/RNBQKBNR b KQkq - 0 3": [
     "A43",
-    "Benoni Defense: Old Benoni Defense, Clarendon Court Variation, 3.g3"
+    "Benoni Defense: Old Benoni Defense, Clarendon-Court Variation, 3.g3"
   ],
   "rnbqkb1r/pp1ppppp/5n2/3P4/2p1P3/5N2/PPP2PPP/RNBQKB1R b KQkq - 0 4": [
     "A43",
@@ -10831,21 +10831,21 @@
     "B00",
     "Nimzowitsch Defense: El Columpio Defense, Pin Variation"
   ],
-  "r1bqkb1r/pppp2pp/2n1pn2/5P2/3P4/5N2/PPP2PPP/RNBQKB1R w KQkq - 1 5": [
-    "B00",
-    "Nimzowitsch Defense: Franco-Hiva Gambit"
-  ],
-  "r1bqkb1r/pppp2pp/2n1pn2/5P2/3P4/2N5/PPP2PPP/R1BQKBNR w KQkq - 1 5": [
-    "B00",
-    "Nimzowitsch Defense: Franco-Hiva Gambit, 3.Nc3 f5 4.exf5 Nf6"
-  ],
-  "r1bqkbnr/pppp1ppp/2n1p3/8/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 0 3": [
-    "B00",
-    "Nimzowitsch Defense: Franco-Nimzowitsch Variation"
-  ],
   "r1bqkbnr/pppp1ppp/2n1p3/8/4P3/2N5/PPPP1PPP/R1BQKBNR w KQkq - 0 3": [
     "B00",
     "Nimzowitsch Defense: French Connection"
+  ],
+  "r1bqkb1r/pppp2pp/2n1pn2/5P2/3P4/5N2/PPP2PPP/RNBQKB1R w KQkq - 1 5": [
+    "B00",
+    "Nimzowitsch Defense: French-Hiva Gambit"
+  ],
+  "r1bqkb1r/pppp2pp/2n1pn2/5P2/3P4/2N5/PPP2PPP/R1BQKBNR w KQkq - 1 5": [
+    "B00",
+    "Nimzowitsch Defense: French-Hiva Gambit, 3.Nc3 f5 4.exf5 Nf6"
+  ],
+  "r1bqkbnr/pppp1ppp/2n1p3/8/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 0 3": [
+    "B00",
+    "Nimzowitsch Defense: French-Nimzowitsch Variation"
   ],
   "r1bqkbnr/ppp1pppp/2n5/3p4/3PP3/4B3/PPP2PPP/RN1QKBNR b KQkq - 1 3": [
     "B00",
@@ -12035,9 +12035,33 @@
     "B04",
     "Alekhine Defense: Modern Variation"
   ],
+  "rnbqkb1r/pp2pppp/2pp4/3nP3/3P4/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 5": [
+    "B04",
+    "Alekhine Defense: Modern Variation, 4...c6"
+  ],
+  "rnbqkb1r/pp2pppp/2pp4/3nP3/2PP4/5N2/PP3PPP/RNBQKB1R b KQkq - 0 5": [
+    "B04",
+    "Alekhine Defense: Modern Variation, 4...c6 5.c4"
+  ],
   "rnbqkb1r/ppp1pp1p/3p2p1/3nP3/3P4/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 5": [
     "B04",
     "Alekhine Defense: Modern Variation, Alburt Variation"
+  ],
+  "rnbqkb1r/ppp1pp1p/3p2p1/3nP3/2BP4/5N2/PPP2PPP/RNBQK2R b KQkq - 1 5": [
+    "B04",
+    "Alekhine Defense: Modern Variation, Fianchetto Variation, 5.Bc4"
+  ],
+  "rnbqkb1r/ppp1pp1p/1n1p2p1/4P3/2BP4/5N2/PPP2PPP/RNBQK2R w KQkq - 2 6": [
+    "B04",
+    "Alekhine Defense: Modern Variation, Fianchetto Variation, 5.Bc4 Nb6"
+  ],
+  "rnbqk2r/ppp1ppbp/1n1p2p1/4P3/3P4/1B3N2/PPP2PPP/RNBQK2R w KQkq - 4 7": [
+    "B04",
+    "Alekhine Defense: Modern Variation, Fianchetto Variation, 5.Bc4 Nb6 6.Bb3 Bg7"
+  ],
+  "rnbqk2r/ppp1ppbp/1n1p2p1/4P1N1/3P4/1B6/PPP2PPP/RNBQK2R b KQkq - 5 7": [
+    "B04",
+    "Alekhine Defense: Modern Variation, Fianchetto Variation, 5.Bc4 Nb6 6.Bb3 Bg7 7.Ng5"
   ],
   "rnbqk2r/ppp1ppbp/1n1p2p1/4P3/P2P4/1B3N2/1PP2PPP/RNBQK2R b KQkq - 0 7": [
     "B04",
@@ -12047,6 +12071,18 @@
     "B04",
     "Alekhine Defense: Modern Variation, Larsen Variation"
   ],
+  "rnbqkb1r/ppp1pp1p/6p1/3nN3/3P4/8/PPP2PPP/RNBQKB1R w KQkq - 0 6": [
+    "B04",
+    "Alekhine Defense: Modern Variation, Larsen Variation, 5.Nxe5 g6"
+  ],
+  "rnbqkb1r/ppp1pp1p/6p1/3nN3/2BP4/8/PPP2PPP/RNBQK2R b KQkq - 1 6": [
+    "B04",
+    "Alekhine Defense: Modern Variation, Larsen Variation, 5.Nxe5 g6 6.Bc4"
+  ],
+  "rnbqkb1r/pp2pp1p/2p3p1/3nN3/2BP4/8/PPP2PPP/RNBQ1RK1 b kq - 1 7": [
+    "B04",
+    "Alekhine Defense: Modern Variation, Larsen Variation, 5.Nxe5 g6 6.Bc4 c6 7.O-O"
+  ],
   "r1bqkb1r/ppp1pppp/2np4/3nP3/3P4/5N2/PPP2PPP/RNBQKB1R w KQkq - 2 5": [
     "B04",
     "Alekhine Defense: Modern Variation, Larsen-Haakert Variation"
@@ -12055,53 +12091,105 @@
     "B04",
     "Alekhine Defense: Modern Variation, Schmid Variation"
   ],
-  "rnbqkb1r/pp2pppp/2pp4/3nP3/3P4/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 5": [
-    "B04",
-    "Alekhine Defense: Modern, 4...c6"
+  "rn1qkb1r/ppp1pppp/3p4/3nP3/3P2b1/5N2/PPP1BPPP/RNBQK2R b KQkq - 3 5": [
+    "B05",
+    "Alekhine Defense: Modern Variation, 5.Be2"
   ],
-  "rnbqkb1r/pp2pppp/2pp4/3nP3/2PP4/5N2/PP3PPP/RNBQKB1R b KQkq - 0 5": [
-    "B04",
-    "Alekhine Defense: Modern, 4...c6 5.c4"
+  "r2qkb1r/ppp1pppp/2np4/3nP3/3P2b1/5N2/PPP1BPPP/RNBQK2R w KQkq - 4 6": [
+    "B05",
+    "Alekhine Defense: Modern Variation, 5.Be2 Nc6"
   ],
-  "rnbqkb1r/ppp1pp1p/3p2p1/3nP3/2BP4/5N2/PPP2PPP/RNBQK2R b KQkq - 1 5": [
-    "B04",
-    "Alekhine Defense: Modern, Fianchetto Variation, 5.Bc4"
+  "rn1qkb1r/ppp2ppp/3pp3/3nP3/3P2b1/5N2/PPP1BPPP/RNBQK2R w KQkq - 0 6": [
+    "B05",
+    "Alekhine Defense: Modern Variation, 5.Be2 e6"
   ],
-  "rnbqkb1r/ppp1pp1p/1n1p2p1/4P3/2BP4/5N2/PPP2PPP/RNBQK2R w KQkq - 2 6": [
-    "B04",
-    "Alekhine Defense: Modern, Fianchetto Variation, 5.Bc4 Nb6"
+  "rn1qkb1r/ppp2ppp/3pp3/3nP3/3P2b1/5N2/PPP1BPPP/RNBQ1RK1 b kq - 1 6": [
+    "B05",
+    "Alekhine Defense: Modern Variation, 5.Be2 e6 6.O-O"
   ],
-  "rnbqk2r/ppp1ppbp/1n1p2p1/4P3/3P4/1B3N2/PPP2PPP/RNBQK2R w KQkq - 4 7": [
-    "B04",
-    "Alekhine Defense: Modern, Fianchetto Variation, 5.Bc4 Nb6 6.Bb3 Bg7"
-  ],
-  "rnbqk2r/ppp1ppbp/1n1p2p1/4P1N1/3P4/1B6/PPP2PPP/RNBQK2R b KQkq - 5 7": [
-    "B04",
-    "Alekhine Defense: Modern, Fianchetto Variation, 5.Bc4 Nb6 6.Bb3 Bg7 7.Ng5"
-  ],
-  "rnbqkb1r/ppp1pp1p/6p1/3nN3/3P4/8/PPP2PPP/RNBQKB1R w KQkq - 0 6": [
-    "B04",
-    "Alekhine Defense: Modern, Larsen, 5.Nxe5 g6"
-  ],
-  "rnbqkb1r/ppp1pp1p/6p1/3nN3/2BP4/8/PPP2PPP/RNBQK2R b KQkq - 1 6": [
-    "B04",
-    "Alekhine Defense: Modern, Larsen, 5.Nxe5 g6 6.Bc4"
-  ],
-  "rnbqkb1r/pp2pp1p/2p3p1/3nN3/2BP4/8/PPP2PPP/RNBQ1RK1 b kq - 1 7": [
-    "B04",
-    "Alekhine Defense: Modern, Larsen, 5.Nxe5 g6 6.Bc4 c6 7.O-O"
+  "rn1qkb1r/ppp1pppp/1n1p4/4P3/2PP2b1/5N2/PP3PPP/RNBQKB1R w KQkq - 1 6": [
+    "B05",
+    "Alekhine Defense: Modern Variation, Alekhine Variation"
   ],
   "rn1qkb1r/ppp1pppp/3p4/3nP3/2PP2b1/5N2/PP3PPP/RNBQKB1R b KQkq - 0 5": [
     "B05",
     "Alekhine Defense: Modern Variation, Alekhine Variation"
   ],
+  "rn1qkb1r/ppp1pppp/1n1P4/8/2PP2b1/5N2/PP3PPP/RNBQKB1R b KQkq - 0 6": [
+    "B05",
+    "Alekhine Defense: Modern Variation, Alekhine Variation, 6.exd6"
+  ],
+  "rn1qkb1r/pp2pppp/1n1p4/8/2PP2b1/5N2/PP3PPP/RNBQKB1R w KQkq - 0 7": [
+    "B05",
+    "Alekhine Defense: Modern Variation, Alekhine Variation, 6.exd6 cxd6"
+  ],
+  "rn1qkb1r/ppp2ppp/1n1p4/8/2PP2b1/5N2/PP3PPP/RNBQKB1R w KQkq - 0 7": [
+    "B05",
+    "Alekhine Defense: Modern Variation, Alekhine Variation, 6.exd6 exd6"
+  ],
   "rn1qkb1r/pp2pppp/2pp4/3nP3/3P2b1/5N2/PPP1BPPP/RNBQK2R w KQkq - 0 6": [
     "B05",
     "Alekhine Defense: Modern Variation, Flohr Variation"
   ],
+  "rn1qkb1r/pp2pppp/2pp4/3nP3/3P2b1/5N2/PPP1BPPP/RNBQ1RK1 b kq - 1 6": [
+    "B05",
+    "Alekhine Defense: Modern Variation, Flohr Variation, 6.O-O"
+  ],
+  "rn1qkb1r/pp2pppp/2pp4/3nP3/2PP2b1/5N2/PP2BPPP/RNBQK2R b KQkq - 0 6": [
+    "B05",
+    "Alekhine Defense: Modern Variation, Flohr Variation, 6.c4"
+  ],
+  "rn1qk2r/ppp1bppp/3pp3/3nP3/2PP2b1/5N2/PP2BPPP/RNBQ1RK1 b kq - 0 7": [
+    "B05",
+    "Alekhine Defense: Modern Variation, Main Line"
+  ],
   "rn1qkb1r/ppp1pppp/3p4/3nP3/3P2b1/5N2/PPP2PPP/RNBQKB1R w KQkq - 2 5": [
     "B05",
     "Alekhine Defense: Modern Variation, Main Line"
+  ],
+  "rn1qk2r/ppp1bppp/1n1pp3/4P3/2PP2b1/2N2N2/PP2BPPP/R1BQ1RK1 b kq - 2 8": [
+    "B05",
+    "Alekhine Defense: Modern Variation, Main Line, 8.Nc3"
+  ],
+  "rn1q1rk1/ppp1bppp/1n1pp3/4P3/2PP2b1/2N1BN2/PP2BPPP/R2Q1RK1 b - - 4 9": [
+    "B05",
+    "Alekhine Defense: Modern Variation, Main Line, 8.Nc3 O-O 9.Be3"
+  ],
+  "r2q1rk1/ppp1bppp/1nnpp3/4P3/2PP2b1/2N1BN2/PP2BPPP/R2Q1RK1 w - - 5 10": [
+    "B05",
+    "Alekhine Defense: Modern Variation, Main Line, 8.Nc3 O-O 9.Be3 Nc6"
+  ],
+  "r2q1rk1/pp2bppp/1nnpp3/8/2PP2b1/2N1BN2/PP2BPPP/R2Q1RK1 w - - 0 11": [
+    "B05",
+    "Alekhine Defense: Modern Variation, Main Line, 8.Nc3 O-O 9.Be3 Nc6 10.exd6 cxd6"
+  ],
+  "rn1qk2r/ppp1bppp/1n1Pp3/8/2PP2b1/5N2/PP2BPPP/RNBQ1RK1 b kq - 0 8": [
+    "B05",
+    "Alekhine Defense: Modern Variation, Main Line, 8.exd6"
+  ],
+  "rn1qk2r/ppp1bppp/1n1pp3/4P3/2PP2b1/5N1P/PP2BPP1/RNBQ1RK1 b kq - 0 8": [
+    "B05",
+    "Alekhine Defense: Modern Variation, Main Line, 8.h3"
+  ],
+  "rn1qk2r/ppp1bppp/1n1pp3/4P2b/2PP4/5N1P/PP2BPP1/RNBQ1RK1 w kq - 1 9": [
+    "B05",
+    "Alekhine Defense: Modern Variation, Main Line, 8.h3 Bh5"
+  ],
+  "rn1qk2r/ppp1bppp/1n1pp3/4P2b/2PP4/2N2N1P/PP2BPP1/R1BQ1RK1 b kq - 2 9": [
+    "B05",
+    "Alekhine Defense: Modern Variation, Main Line, 8.h3 Bh5 9.Nc3"
+  ],
+  "rn1q1rk1/ppp1bppp/1n1pp3/4P2b/2PP4/2N2N1P/PP2BPP1/R1BQ1RK1 w - - 3 10": [
+    "B05",
+    "Alekhine Defense: Modern Variation, Main Line, 8.h3 Bh5 9.Nc3 O-O"
+  ],
+  "rn1q1rk1/ppp1bppp/1n1pp3/4P2b/2PP4/2N1BN1P/PP2BPP1/R2Q1RK1 b - - 4 10": [
+    "B05",
+    "Alekhine Defense: Modern Variation, Main Line, 8.h3 Bh5 9.Nc3 O-O 10.Be3"
+  ],
+  "rn1q1rk1/ppp1bppp/1n2p3/3pP2b/2PP4/2N1BN1P/PP2BPP1/R2Q1RK1 w - - 0 11": [
+    "B05",
+    "Alekhine Defense: Modern Variation, Main Line, 8.h3 Bh5 9.Nc3 O-O 10.Be3 d5"
   ],
   "rn1qkb1r/ppp1pppp/3p4/3nP3/3P2b1/5N1P/PPP2PP1/RNBQKB1R b KQkq - 0 5": [
     "B05",
@@ -12111,143 +12199,55 @@
     "B05",
     "Alekhine Defense: Modern Variation, Vitolins Attack"
   ],
-  "rn1qkb1r/ppp1pppp/3p4/3nP3/3P2b1/5N2/PPP1BPPP/RNBQK2R b KQkq - 3 5": [
-    "B05",
-    "Alekhine Defense: Modern, 5.Be2"
-  ],
-  "r2qkb1r/ppp1pppp/2np4/3nP3/3P2b1/5N2/PPP1BPPP/RNBQK2R w KQkq - 4 6": [
-    "B05",
-    "Alekhine Defense: Modern, 5.Be2 Nc6"
-  ],
-  "rn1qkb1r/ppp2ppp/3pp3/3nP3/3P2b1/5N2/PPP1BPPP/RNBQK2R w KQkq - 0 6": [
-    "B05",
-    "Alekhine Defense: Modern, 5.Be2 e6"
-  ],
-  "rn1qkb1r/ppp2ppp/3pp3/3nP3/3P2b1/5N2/PPP1BPPP/RNBQ1RK1 b kq - 1 6": [
-    "B05",
-    "Alekhine Defense: Modern, 5.Be2 e6 6.O-O"
-  ],
-  "rn1qkb1r/ppp1pppp/1n1p4/4P3/2PP2b1/5N2/PP3PPP/RNBQKB1R w KQkq - 1 6": [
-    "B05",
-    "Alekhine Defense: Modern, Alekhine Variation"
-  ],
-  "rn1qkb1r/ppp1pppp/1n1P4/8/2PP2b1/5N2/PP3PPP/RNBQKB1R b KQkq - 0 6": [
-    "B05",
-    "Alekhine Defense: Modern, Alekhine Variation, 6.exd6"
-  ],
-  "rn1qkb1r/pp2pppp/1n1p4/8/2PP2b1/5N2/PP3PPP/RNBQKB1R w KQkq - 0 7": [
-    "B05",
-    "Alekhine Defense: Modern, Alekhine Variation, 6.exd6 cxd6"
-  ],
-  "rn1qkb1r/ppp2ppp/1n1p4/8/2PP2b1/5N2/PP3PPP/RNBQKB1R w KQkq - 0 7": [
-    "B05",
-    "Alekhine Defense: Modern, Alekhine Variation, 6.exd6 exd6"
-  ],
-  "rn1qkb1r/pp2pppp/2pp4/3nP3/3P2b1/5N2/PPP1BPPP/RNBQ1RK1 b kq - 1 6": [
-    "B05",
-    "Alekhine Defense: Modern, Flohr, 6.O-O"
-  ],
-  "rn1qkb1r/pp2pppp/2pp4/3nP3/2PP2b1/5N2/PP2BPPP/RNBQK2R b KQkq - 0 6": [
-    "B05",
-    "Alekhine Defense: Modern, Flohr, 6.c4"
-  ],
-  "rn1qk2r/ppp1bppp/3pp3/3nP3/2PP2b1/5N2/PP2BPPP/RNBQ1RK1 b kq - 0 7": [
-    "B05",
-    "Alekhine Defense: Modern, Main Line"
-  ],
-  "rn1qk2r/ppp1bppp/1n1pp3/4P3/2PP2b1/2N2N2/PP2BPPP/R1BQ1RK1 b kq - 2 8": [
-    "B05",
-    "Alekhine Defense: Modern, Main Line, 8.Nc3"
-  ],
-  "rn1q1rk1/ppp1bppp/1n1pp3/4P3/2PP2b1/2N1BN2/PP2BPPP/R2Q1RK1 b - - 4 9": [
-    "B05",
-    "Alekhine Defense: Modern, Main Line, 8.Nc3 O-O 9.Be3"
-  ],
-  "r2q1rk1/ppp1bppp/1nnpp3/4P3/2PP2b1/2N1BN2/PP2BPPP/R2Q1RK1 w - - 5 10": [
-    "B05",
-    "Alekhine Defense: Modern, Main Line, 8.Nc3 O-O 9.Be3 Nc6"
-  ],
-  "r2q1rk1/pp2bppp/1nnpp3/8/2PP2b1/2N1BN2/PP2BPPP/R2Q1RK1 w - - 0 11": [
-    "B05",
-    "Alekhine Defense: Modern, Main Line, 8.Nc3 O-O 9.Be3 Nc6 10.exd6 cxd6"
-  ],
-  "rn1qk2r/ppp1bppp/1n1Pp3/8/2PP2b1/5N2/PP2BPPP/RNBQ1RK1 b kq - 0 8": [
-    "B05",
-    "Alekhine Defense: Modern, Main Line, 8.exd6"
-  ],
-  "rn1qk2r/ppp1bppp/1n1pp3/4P3/2PP2b1/5N1P/PP2BPP1/RNBQ1RK1 b kq - 0 8": [
-    "B05",
-    "Alekhine Defense: Modern, Main Line, 8.h3"
-  ],
-  "rn1qk2r/ppp1bppp/1n1pp3/4P2b/2PP4/5N1P/PP2BPP1/RNBQ1RK1 w kq - 1 9": [
-    "B05",
-    "Alekhine Defense: Modern, Main Line, 8.h3 Bh5"
-  ],
-  "rn1qk2r/ppp1bppp/1n1pp3/4P2b/2PP4/2N2N1P/PP2BPP1/R1BQ1RK1 b kq - 2 9": [
-    "B05",
-    "Alekhine Defense: Modern, Main Line, 8.h3 Bh5 9.Nc3"
-  ],
-  "rn1q1rk1/ppp1bppp/1n1pp3/4P2b/2PP4/2N2N1P/PP2BPP1/R1BQ1RK1 w - - 3 10": [
-    "B05",
-    "Alekhine Defense: Modern, Main Line, 8.h3 Bh5 9.Nc3 O-O"
-  ],
-  "rn1q1rk1/ppp1bppp/1n1pp3/4P2b/2PP4/2N1BN1P/PP2BPP1/R2Q1RK1 b - - 4 10": [
-    "B05",
-    "Alekhine Defense: Modern, Main Line, 8.h3 Bh5 9.Nc3 O-O 10.Be3"
-  ],
-  "rn1q1rk1/ppp1bppp/1n2p3/3pP2b/2PP4/2N1BN1P/PP2BPP1/R2Q1RK1 w - - 0 11": [
-    "B05",
-    "Alekhine Defense: Modern, Main Line, 8.h3 Bh5 9.Nc3 O-O 10.Be3 d5"
-  ],
   "rnbqk1nr/ppp1ppbp/3p2p1/8/4PP2/2N5/PPPP2PP/R1BQKBNR w KQkq - 0 4": [
     "B06",
-    "Modern"
+    "Modern Defense"
   ],
   "rnbqk1nr/ppp1ppbp/3p2p1/8/4PP2/5N2/PPPP2PP/RNBQKB1R w KQkq - 0 4": [
     "B06",
-    "Modern"
-  ],
-  "rnbqk1nr/ppppppbp/6p1/8/4P3/2N5/PPPP1PPP/R1BQKBNR w KQkq - 2 3": [
-    "B06",
-    "Modern"
-  ],
-  "rnbqk1nr/ppppppbp/6p1/8/4PP2/5N2/PPPP2PP/RNBQKB1R b KQkq - 2 3": [
-    "B06",
-    "Modern"
-  ],
-  "rnbqkbnr/pp1ppp1p/2p3p1/8/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
-    "B06",
-    "Modern"
-  ],
-  "rnbqkbnr/ppp1pp1p/3p2p1/8/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
-    "B06",
-    "Modern"
-  ],
-  "rnbqkbnr/ppp1pp1p/3p2p1/8/4P3/2N5/PPPP1PPP/R1BQKBNR w KQkq - 0 3": [
-    "B06",
-    "Modern"
-  ],
-  "rnbqkbnr/ppp1pp1p/3p2p1/8/4PP2/8/PPPP2PP/RNBQKBNR w KQkq - 0 3": [
-    "B06",
-    "Modern"
-  ],
-  "rnbqkbnr/pppppp1p/6p1/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq - 0 2": [
-    "B06",
-    "Modern"
-  ],
-  "rnbqkbnr/pppppp1p/6p1/8/4P3/2N5/PPPP1PPP/R1BQKBNR b KQkq - 1 2": [
-    "B06",
-    "Modern"
-  ],
-  "rnbqkbnr/pppppp1p/6p1/8/4PP2/8/PPPP2PP/RNBQKBNR b KQkq - 0 2": [
-    "B06",
-    "Modern"
+    "Modern Defense"
   ],
   "rnbqk1nr/ppppppbp/6p1/8/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 1 3": [
     "B06",
     "Modern Defense"
   ],
+  "rnbqk1nr/ppppppbp/6p1/8/4P3/2N5/PPPP1PPP/R1BQKBNR w KQkq - 2 3": [
+    "B06",
+    "Modern Defense"
+  ],
+  "rnbqk1nr/ppppppbp/6p1/8/4PP2/5N2/PPPP2PP/RNBQKB1R b KQkq - 2 3": [
+    "B06",
+    "Modern Defense"
+  ],
+  "rnbqkbnr/pp1ppp1p/2p3p1/8/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
+    "B06",
+    "Modern Defense"
+  ],
+  "rnbqkbnr/ppp1pp1p/3p2p1/8/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
+    "B06",
+    "Modern Defense"
+  ],
+  "rnbqkbnr/ppp1pp1p/3p2p1/8/4P3/2N5/PPPP1PPP/R1BQKBNR w KQkq - 0 3": [
+    "B06",
+    "Modern Defense"
+  ],
+  "rnbqkbnr/ppp1pp1p/3p2p1/8/4PP2/8/PPPP2PP/RNBQKBNR w KQkq - 0 3": [
+    "B06",
+    "Modern Defense"
+  ],
+  "rnbqkbnr/pppppp1p/6p1/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq - 0 2": [
+    "B06",
+    "Modern Defense"
+  ],
+  "rnbqkbnr/pppppp1p/6p1/8/4P3/2N5/PPPP1PPP/R1BQKBNR b KQkq - 1 2": [
+    "B06",
+    "Modern Defense"
+  ],
   "rnbqkbnr/pppppp1p/6p1/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2": [
+    "B06",
+    "Modern Defense"
+  ],
+  "rnbqkbnr/pppppp1p/6p1/8/4PP2/8/PPPP2PP/RNBQKBNR b KQkq - 0 2": [
     "B06",
     "Modern Defense"
   ],
@@ -12305,7 +12305,7 @@
   ],
   "rnbqk1nr/pp2ppbp/2pp2p1/8/2BPP3/2N5/PPP1QPPP/R1B1K1NR b KQkq - 1 5": [
     "B06",
-    "Modern Defense: Anti-Modern"
+    "Modern Defense: Anti-Modern Variation"
   ],
   "rnbqk1nr/ppppppbp/6p1/8/2BPP3/8/PPP2PPP/RNBQK1NR b KQkq - 2 3": [
     "B06",
@@ -12375,89 +12375,13 @@
     "B06",
     "Modern Defense: Pseudo-Austrian Attack"
   ],
-  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PPP2/5N2/PPP3PP/RNBQKB1R w KQkq - 2 5": [
-    "B06",
-    "Modern Defense: Pterodactyl Defense, Austrian, Austriadactylus Western"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1p5/4PP2/2N2N2/PPPP2PP/R1BQKB1R w KQkq - 2 5": [
-    "B06",
-    "Modern Defense: Pterodactyl Defense, Austrian, Grand Prix Pterodactyl"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PPP2/2P5/PP4PP/RNBQKBNR w KQkq - 1 5": [
-    "B06",
-    "Modern Defense: Pterodactyl Defense, Austrian, Pteranodon"
-  ],
-  "rnb1k1nr/pp2ppbp/3p2p1/q1p5/2PPP3/2N1B3/PP3PPP/R2QKBNR w KQkq - 2 6": [
-    "B06",
-    "Modern Defense: Pterodactyl Defense, Central, Anhanguera"
-  ],
-  "rnb1k1nr/pp2ppbp/3p2p1/q1pP4/2P1P3/2N5/PP3PPP/R1BQKBNR w KQkq - 2 6": [
-    "B06",
-    "Modern Defense: Pterodactyl Defense, Central, Benoni Quetzalcoatlus"
-  ],
-  "rnb1k1nr/pp2ppbp/3p2p1/q1P5/2P1P3/2N5/PP3PPP/R1BQKBNR w KQkq - 1 6": [
-    "B06",
-    "Modern Defense: Pterodactyl Defense, Central, Quetzalcoatlus Gambit"
-  ],
-  "rnbqk1nr/pp1pppbp/6p1/2p5/3PP3/2N1B3/PPP2PPP/R2QKBNR b KQkq - 1 4": [
-    "B06",
-    "Modern Defense: Pterodactyl Defense, Eastern, Anhanguera"
-  ],
-  "rnbqk1nr/pp1pppbp/6p1/2pP4/4P3/2N5/PPP2PPP/R1BQKBNR b KQkq - 0 4": [
-    "B06",
-    "Modern Defense: Pterodactyl Defense, Eastern, Benoni"
-  ],
-  "rnb1k1nr/pp1ppp1p/6p1/q1pP4/4P3/2P5/P1P2PPP/R1BQKBNR w KQkq - 1 6": [
-    "B06",
-    "Modern Defense: Pterodactyl Defense, Eastern, Benoni Pteranodon"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1pP4/4P3/2N5/PPP2PPP/R1BQKBNR w KQkq - 1 5": [
-    "B06",
-    "Modern Defense: Pterodactyl Defense, Eastern, Benoni Pterodactyl"
-  ],
-  "rnb1k1nr/pp1ppp1p/6p1/q1P5/4P3/2P5/P1P2PPP/R1BQKBNR w KQkq - 1 6": [
-    "B06",
-    "Modern Defense: Pterodactyl Defense, Eastern, Pteranodon"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1P5/4P3/2N5/PPP2PPP/R1BQKBNR w KQkq - 1 5": [
-    "B06",
-    "Modern Defense: Pterodactyl Defense, Eastern, Pterodactyl"
-  ],
-  "rnbqk1nr/pp1pppbp/6p1/2P5/4P3/2N5/PPP2PPP/R1BQKBNR b KQkq - 0 4": [
-    "B06",
-    "Modern Defense: Pterodactyl Defense, Eastern, Rhamphorhynchus"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/5NP1/PPP2P1P/RNBQKB1R w KQkq - 2 5": [
-    "B06",
-    "Modern Defense: Pterodactyl Defense, Fianchetto Variation, King Pterodactyl"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1P5/4P3/6P1/PPP2P1P/RNBQKBNR w KQkq - 1 5": [
-    "B06",
-    "Modern Defense: Pterodactyl Defense, Fianchetto Variation, Rhamphorhynchus"
-  ],
-  "rnb1k1nr/pp2ppbp/3p2p1/q1p5/3PP3/2N2N2/PPP1BPPP/R1BQK2R w KQkq - 0 6": [
-    "B06",
-    "Modern Defense: Pterodactyl Defense, Sicilian, Quetzalcoatlus"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1p5/2BPP3/2N2N2/PPP2PPP/R1BQK2R b KQkq - 3 5": [
-    "B06",
-    "Modern Defense: Pterodactyl Defense, Sicilian, Siroccopteryx"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/4BN2/PPP2PPP/RN1QKB1R w KQkq - 2 5": [
-    "B06",
-    "Modern Defense: Pterodactyl Defense, Western, Anhanguera"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q7/2BNP3/8/PPP2PPP/RNBQK2R w KQkq - 1 6": [
-    "B06",
-    "Modern Defense: Pterodactyl Defense, Western, Siroccopteryx"
-  ],
   "rnb1k1nr/pp2ppbp/3p2p1/q1p5/2PPP3/5N2/PP2BPPP/RNBQK2R w KQkq - 2 6": [
     "B06",
     "Modern Defense: Semi-Averbakh Variation, Pterodactyl Variation Declined"
   ],
   "rnbqk1nr/ppp1ppbp/3p2p1/8/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4": [
     "B06",
-    "Modern Defense: Standard Defense"
+    "Modern Defense: Standard Line"
   ],
   "rnbqk1nr/ppppppbp/6p1/8/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq - 2 3": [
     "B06",
@@ -12466,6 +12390,82 @@
   "rnbqk1nr/pp1pppbp/6p1/2p5/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4": [
     "B06",
     "Modern Defense: Standard Line, Pterodactyl Defense"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PPP2/5N2/PPP3PP/RNBQKB1R w KQkq - 2 5": [
+    "B06",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Austrian Attack, Austriadactylus Variation"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1p5/4PP2/2N2N2/PPPP2PP/R1BQKB1R w KQkq - 2 5": [
+    "B06",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Austrian Attack, Grand Prix Variation, Pterodactyl Variation"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PPP2/2P5/PP4PP/RNBQKBNR w KQkq - 1 5": [
+    "B06",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Austrian Attack, Pteranodon Variation"
+  ],
+  "rnb1k1nr/pp2ppbp/3p2p1/q1p5/2PPP3/2N1B3/PP3PPP/R2QKBNR w KQkq - 2 6": [
+    "B06",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Central Benoni Variation, Anhanguera Variation"
+  ],
+  "rnb1k1nr/pp2ppbp/3p2p1/q1P5/2P1P3/2N5/PP3PPP/R1BQKBNR w KQkq - 1 6": [
+    "B06",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Central Benoni Variation, Quetzalcoatlus Gambit"
+  ],
+  "rnb1k1nr/pp2ppbp/3p2p1/q1pP4/2P1P3/2N5/PP3PPP/R1BQKBNR w KQkq - 2 6": [
+    "B06",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Central Benoni Variation, Quetzalcoatlus Gambit"
+  ],
+  "rnbqk1nr/pp1pppbp/6p1/2p5/3PP3/2N1B3/PPP2PPP/R2QKBNR b KQkq - 1 4": [
+    "B06",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Eastern Variation, Anhanguera Variation"
+  ],
+  "rnbqk1nr/pp1pppbp/6p1/2pP4/4P3/2N5/PPP2PPP/R1BQKBNR b KQkq - 0 4": [
+    "B06",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Eastern Variation, Benoni Variation"
+  ],
+  "rnb1k1nr/pp1ppp1p/6p1/q1pP4/4P3/2P5/P1P2PPP/R1BQKBNR w KQkq - 1 6": [
+    "B06",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Eastern Variation, Benoni-Pteranodon Variation"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1pP4/4P3/2N5/PPP2PPP/R1BQKBNR w KQkq - 1 5": [
+    "B06",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Eastern Variation, Benoni-Pterodactyl Variation"
+  ],
+  "rnb1k1nr/pp1ppp1p/6p1/q1P5/4P3/2P5/P1P2PPP/R1BQKBNR w KQkq - 1 6": [
+    "B06",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Eastern Variation, Pteranodon Variation"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1P5/4P3/2N5/PPP2PPP/R1BQKBNR w KQkq - 1 5": [
+    "B06",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Eastern Variation, Pterodactyl Variation"
+  ],
+  "rnbqk1nr/pp1pppbp/6p1/2P5/4P3/2N5/PPP2PPP/R1BQKBNR b KQkq - 0 4": [
+    "B06",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Eastern Variation, Rhamphorhynchus Variation"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/5NP1/PPP2P1P/RNBQKB1R w KQkq - 2 5": [
+    "B06",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Fianchetto Variation, King Pterodactyl Variation"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1P5/4P3/6P1/PPP2P1P/RNBQKBNR w KQkq - 1 5": [
+    "B06",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Fianchetto Variation, Rhamphorhynchus Variation"
+  ],
+  "rnb1k1nr/pp2ppbp/3p2p1/q1p5/3PP3/2N2N2/PPP1BPPP/R1BQK2R w KQkq - 0 6": [
+    "B06",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Sicilian Variation, Quetzalcoatlus Gambit"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1p5/2BPP3/2N2N2/PPP2PPP/R1BQK2R b KQkq - 3 5": [
+    "B06",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Sicilian Variation, Siroccopteryx Variation"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/4BN2/PPP2PPP/RN1QKB1R w KQkq - 2 5": [
+    "B06",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Western Variation, Anhanguera Variation"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q7/2BNP3/8/PPP2PPP/RNBQK2R w KQkq - 1 6": [
+    "B06",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Western Variation, Siroccopteryx Variation"
   ],
   "rnbqk1nr/ppppppbp/6p1/8/3PPP2/8/PPP3PP/RNBQKBNR b KQkq - 0 3": [
     "B06",
@@ -13063,25 +13063,25 @@
     "B10",
     "Caro-Kann Defense: Breyer Variation"
   ],
-  "rnbq1rk1/pp2npbp/2p3p1/3pp3/1P2P3/3P1NP1/P1PN1PBP/R1BQ1RK1 b - - 0 8": [
-    "B10",
-    "Caro-Kann Defense: Breyer Variation, Stein Attack"
-  ],
   "rnbqkbnr/pp2pppp/2p5/3p4/4P3/3P4/PPPN1PPP/R1BQKBNR b KQkq - 1 3": [
     "B10",
-    "Caro-Kann Defense: Breyer, 3.Nd2"
+    "Caro-Kann Defense: Breyer Variation, 3.Nd2"
   ],
   "rnbqkbnr/pp3ppp/2p5/3pp3/4P3/3P4/PPPN1PPP/R1BQKBNR w KQkq - 0 4": [
     "B10",
-    "Caro-Kann Defense: Breyer, 3.Nd2 e5"
+    "Caro-Kann Defense: Breyer Variation, 3.Nd2 e5"
   ],
   "rnbqkbnr/pp2pp1p/2p3p1/3p4/4P3/3P4/PPPN1PPP/R1BQKBNR w KQkq - 0 4": [
     "B10",
-    "Caro-Kann Defense: Breyer, 3.Nd2 g6"
+    "Caro-Kann Defense: Breyer Variation, 3.Nd2 g6"
   ],
   "rnbqk1nr/pp3ppp/2pb4/3pp3/4P3/3P1NP1/PPPN1P1P/R1BQKB1R b KQkq - 0 5": [
     "B10",
-    "Caro-Kann Defense: Breyer, Main Line"
+    "Caro-Kann Defense: Breyer Variation, Main Line"
+  ],
+  "rnbq1rk1/pp2npbp/2p3p1/3pp3/1P2P3/3P1NP1/P1PN1PBP/R1BQ1RK1 b - - 0 8": [
+    "B10",
+    "Caro-Kann Defense: Breyer Variation, Stein Attack"
   ],
   "rnbqkbnr/pp2pppp/2p5/3P4/2P5/8/PP1P1PPP/RNBQKBNR b KQkq - 0 3": [
     "B10",
@@ -13327,6 +13327,34 @@
     "B12",
     "Caro-Kann Defense: Advance Variation"
   ],
+  "rn1qkbnr/pp2pppp/2p5/3pPb2/3P4/8/PPP2PPP/RNBQKBNR w KQkq - 1 4": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, 3...Bf5"
+  ],
+  "rnbqkbnr/pp2pppp/8/2PpP3/8/8/PPP2PPP/RNBQKBNR b KQkq - 0 4": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, 3...c5 4.dxc5"
+  ],
+  "r1bqkbnr/pp2pppp/2n5/2PpP3/8/8/PPP2PPP/RNBQKBNR w KQkq - 1 5": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, 3...c5 4.dxc5 Nc6"
+  ],
+  "rn1qkbnr/pp2pppp/2p5/3pPb2/3P4/3B4/PPP2PPP/RNBQK1NR b KQkq - 2 4": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, 4.Bd3"
+  ],
+  "rn1qkbnr/pp3ppp/2p1p3/3pPb2/3P4/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 5": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, 4.Nc3 e6"
+  ],
+  "rn1qkbnr/pp2ppp1/2p5/3pPb1p/3P4/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 5": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, 4.Nc3 h5"
+  ],
+  "rn1qkbnr/pp3ppp/2p1p3/3pPb2/3P4/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 5": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, 4.Nf3 e6"
+  ],
   "rn1qk1nr/pp3ppp/2p1p3/3pPb2/1b1P4/5N2/PPP1BPPP/RNBQK2R w KQkq - 2 6": [
     "B12",
     "Caro-Kann Defense: Advance Variation, 4.Nf3 e6 5.Be2"
@@ -13338,6 +13366,54 @@
   "rn1qkbnr/pp3ppp/2p1p3/3pP3/3P2b1/5N2/PPP1BPPP/RNBQK2R w KQkq - 2 6": [
     "B12",
     "Caro-Kann Defense: Advance Variation, 4.Nf3 e6 5.Be2"
+  ],
+  "rn1qkbnr/pp3ppp/2p1p3/3pPb2/3P4/5N2/PPP1BPPP/RNBQK2R b KQkq - 1 5": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, 4.Nf3 e6 5.Be2"
+  ],
+  "r2qkb1r/pp1nnppp/4p1b1/2ppP3/3P3N/8/PPPNBPPP/R1BQ1RK1 w kq - 0 9": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, 4.Nf3 e6 5.Be2 Nd7"
+  ],
+  "r2qkbnr/pp1n1ppp/2p1p3/3pPb2/3P4/5N2/PPP1BPPP/RNBQK2R w KQkq - 2 6": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, 4.Nf3 e6 5.Be2 Nd7"
+  ],
+  "rn1qkbnr/pp3ppp/4p3/2ppPb2/3P4/5N2/PPP1BPPP/RNBQK2R w KQkq - 0 6": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, 4.Nf3 e6 5.Be2 c5"
+  ],
+  "r2qkbnr/pp1n1ppp/4p3/2ppPb2/3P4/4BN2/PPP1BPPP/RN1Q1RK1 b kq - 3 7": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, 4.Nf3 e6 5.Be2 c5 6.Be3"
+  ],
+  "r2qkbnr/pp1n1ppp/4p3/2ppPb2/3P4/4BN2/PPP1BPPP/RN1QK2R w KQkq - 2 7": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, 4.Nf3 e6 5.Be2 c5 6.Be3"
+  ],
+  "rn1qkb1r/pp2nppp/4p3/2ppPb2/3P4/4BN2/PPP1BPPP/RN1QK2R w KQkq - 2 7": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, 4.Nf3 e6 5.Be2 c5 6.Be3"
+  ],
+  "rn1qkbnr/pp3ppp/4p3/2ppPb2/3P4/4BN2/PPP1BPPP/RN1QK2R b KQkq - 1 6": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, 4.Nf3 e6 5.Be2 c5 6.Be3"
+  ],
+  "r2qkbnr/pp1n1ppp/4p3/2ppPb2/3P4/5N2/PPP1BPPP/RNBQ1RK1 w kq - 2 7": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, 4.Nf3 e6 5.Be2 c5 6.O-O"
+  ],
+  "rn1qkb1r/pp2nppp/4p3/2ppPb2/3P4/5N2/PPP1BPPP/RNBQ1RK1 w kq - 2 7": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, 4.Nf3 e6 5.Be2 c5 6.O-O"
+  ],
+  "rn1qkbnr/pp3ppp/4p3/2ppPb2/3P4/5N2/PPP1BPPP/RNBQ1RK1 b kq - 1 6": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, 4.Nf3 e6 5.Be2 c5 6.O-O"
+  ],
+  "rn1qkbnr/pp2pppp/2p5/3pPb2/3P4/2P5/PP3PPP/RNBQKBNR b KQkq - 0 4": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, 4.c3"
   ],
   "rn1qkbnr/pp2pppp/2p5/3pPb2/3P2P1/8/PPP2P1P/RNBQKBNR b KQkq - 0 4": [
     "B12",
@@ -13351,11 +13427,27 @@
     "B12",
     "Caro-Kann Defense: Advance Variation, Bronstein Variation"
   ],
+  "rn1qkbnr/pp3ppp/2p1p3/3pPb2/3P2P1/2N5/PPP2P1P/R1BQKBNR b KQkq - 0 5": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, Main Line"
+  ],
+  "rn1qkbnr/pp3ppp/2p1p1b1/3pP3/3P2P1/2N5/PPP1NP1P/R1BQKB1R b KQkq - 2 6": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, Main Line, 6.Nge2"
+  ],
+  "rn1qkbnr/pp3ppp/4p1b1/2ppP3/3P2P1/2N5/PPP1NP1P/R1BQKB1R w KQkq - 0 7": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, Main Line, 6.Nge2 c5"
+  ],
   "rn1qkbnr/pp2pppp/2p5/3pPb2/1P1P4/8/P1P2PPP/RNBQKBNR b KQkq - 0 4": [
     "B12",
     "Caro-Kann Defense: Advance Variation, Prins Attack"
   ],
   "rn1qkbnr/pp2pppp/2p5/3pPb2/3P4/5N2/PPP2PPP/RNBQKB1R b KQkq - 2 4": [
+    "B12",
+    "Caro-Kann Defense: Advance Variation, Short Variation"
+  ],
+  "rn1qkbnr/pp3ppp/2p1p3/3pPb2/3P4/2P5/PP2BPPP/RNBQK1NR b KQkq - 1 5": [
     "B12",
     "Caro-Kann Defense: Advance Variation, Short Variation"
   ],
@@ -13365,107 +13457,15 @@
   ],
   "rn1qkbnr/pp2pppp/2p5/3pPb2/3P4/2N5/PPP2PPP/R1BQKBNR b KQkq - 2 4": [
     "B12",
-    "Caro-Kann Defense: Advance Variation, Van der Wiel Attack"
+    "Caro-Kann Defense: Advance Variation, van der Wiel Attack"
   ],
   "rn1qkbnr/pp3ppp/4p1b1/2ppP3/3P2PP/2N5/PPP1NP2/R1BQKB1R b KQkq - 0 7": [
     "B12",
-    "Caro-Kann Defense: Advance Variation, Van der Wiel Attack"
+    "Caro-Kann Defense: Advance Variation, van der Wiel Attack"
   ],
   "rn2kbnr/pp2pppp/1qp5/3pPb2/3P4/2N5/PPP2PPP/R1BQKBNR w KQkq - 3 5": [
     "B12",
-    "Caro-Kann Defense: Advance Variation, Van der Wiel Attack, Dreyev Defense"
-  ],
-  "rn1qkbnr/pp2pppp/2p5/3pPb2/3P4/8/PPP2PPP/RNBQKBNR w KQkq - 1 4": [
-    "B12",
-    "Caro-Kann Defense: Advance, 3...Bf5"
-  ],
-  "rnbqkbnr/pp2pppp/8/2PpP3/8/8/PPP2PPP/RNBQKBNR b KQkq - 0 4": [
-    "B12",
-    "Caro-Kann Defense: Advance, 3...c5 4.dxc5"
-  ],
-  "r1bqkbnr/pp2pppp/2n5/2PpP3/8/8/PPP2PPP/RNBQKBNR w KQkq - 1 5": [
-    "B12",
-    "Caro-Kann Defense: Advance, 3...c5 4.dxc5 Nc6"
-  ],
-  "rn1qkbnr/pp2pppp/2p5/3pPb2/3P4/3B4/PPP2PPP/RNBQK1NR b KQkq - 2 4": [
-    "B12",
-    "Caro-Kann Defense: Advance, 4.Bd3"
-  ],
-  "rn1qkbnr/pp3ppp/2p1p3/3pPb2/3P4/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 5": [
-    "B12",
-    "Caro-Kann Defense: Advance, 4.Nc3 e6"
-  ],
-  "rn1qkbnr/pp2ppp1/2p5/3pPb1p/3P4/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 5": [
-    "B12",
-    "Caro-Kann Defense: Advance, 4.Nc3 h5"
-  ],
-  "rn1qkbnr/pp3ppp/2p1p3/3pPb2/3P4/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 5": [
-    "B12",
-    "Caro-Kann Defense: Advance, 4.Nf3 e6"
-  ],
-  "rn1qkbnr/pp3ppp/2p1p3/3pPb2/3P4/5N2/PPP1BPPP/RNBQK2R b KQkq - 1 5": [
-    "B12",
-    "Caro-Kann Defense: Advance, 4.Nf3 e6 5.Be2"
-  ],
-  "r2qkb1r/pp1nnppp/4p1b1/2ppP3/3P3N/8/PPPNBPPP/R1BQ1RK1 w kq - 0 9": [
-    "B12",
-    "Caro-Kann Defense: Advance, 4.Nf3 e6 5.Be2 Nd7"
-  ],
-  "r2qkbnr/pp1n1ppp/2p1p3/3pPb2/3P4/5N2/PPP1BPPP/RNBQK2R w KQkq - 2 6": [
-    "B12",
-    "Caro-Kann Defense: Advance, 4.Nf3 e6 5.Be2 Nd7"
-  ],
-  "rn1qkbnr/pp3ppp/4p3/2ppPb2/3P4/5N2/PPP1BPPP/RNBQK2R w KQkq - 0 6": [
-    "B12",
-    "Caro-Kann Defense: Advance, 4.Nf3 e6 5.Be2 c5"
-  ],
-  "r2qkbnr/pp1n1ppp/4p3/2ppPb2/3P4/4BN2/PPP1BPPP/RN1Q1RK1 b kq - 3 7": [
-    "B12",
-    "Caro-Kann Defense: Advance, 4.Nf3 e6 5.Be2 c5 6.Be3"
-  ],
-  "r2qkbnr/pp1n1ppp/4p3/2ppPb2/3P4/4BN2/PPP1BPPP/RN1QK2R w KQkq - 2 7": [
-    "B12",
-    "Caro-Kann Defense: Advance, 4.Nf3 e6 5.Be2 c5 6.Be3"
-  ],
-  "rn1qkb1r/pp2nppp/4p3/2ppPb2/3P4/4BN2/PPP1BPPP/RN1QK2R w KQkq - 2 7": [
-    "B12",
-    "Caro-Kann Defense: Advance, 4.Nf3 e6 5.Be2 c5 6.Be3"
-  ],
-  "rn1qkbnr/pp3ppp/4p3/2ppPb2/3P4/4BN2/PPP1BPPP/RN1QK2R b KQkq - 1 6": [
-    "B12",
-    "Caro-Kann Defense: Advance, 4.Nf3 e6 5.Be2 c5 6.Be3"
-  ],
-  "r2qkbnr/pp1n1ppp/4p3/2ppPb2/3P4/5N2/PPP1BPPP/RNBQ1RK1 w kq - 2 7": [
-    "B12",
-    "Caro-Kann Defense: Advance, 4.Nf3 e6 5.Be2 c5 6.O-O"
-  ],
-  "rn1qkb1r/pp2nppp/4p3/2ppPb2/3P4/5N2/PPP1BPPP/RNBQ1RK1 w kq - 2 7": [
-    "B12",
-    "Caro-Kann Defense: Advance, 4.Nf3 e6 5.Be2 c5 6.O-O"
-  ],
-  "rn1qkbnr/pp3ppp/4p3/2ppPb2/3P4/5N2/PPP1BPPP/RNBQ1RK1 b kq - 1 6": [
-    "B12",
-    "Caro-Kann Defense: Advance, 4.Nf3 e6 5.Be2 c5 6.O-O"
-  ],
-  "rn1qkbnr/pp2pppp/2p5/3pPb2/3P4/2P5/PP3PPP/RNBQKBNR b KQkq - 0 4": [
-    "B12",
-    "Caro-Kann Defense: Advance, 4.c3"
-  ],
-  "rn1qkbnr/pp3ppp/2p1p3/3pPb2/3P2P1/2N5/PPP2P1P/R1BQKBNR b KQkq - 0 5": [
-    "B12",
-    "Caro-Kann Defense: Advance, Main Line"
-  ],
-  "rn1qkbnr/pp3ppp/2p1p1b1/3pP3/3P2P1/2N5/PPP1NP1P/R1BQKB1R b KQkq - 2 6": [
-    "B12",
-    "Caro-Kann Defense: Advance, Main Line, 6.Nge2"
-  ],
-  "rn1qkbnr/pp3ppp/4p1b1/2ppP3/3P2P1/2N5/PPP1NP1P/R1BQKB1R w KQkq - 0 7": [
-    "B12",
-    "Caro-Kann Defense: Advance, Main Line, 6.Nge2 c5"
-  ],
-  "rn1qkbnr/pp3ppp/2p1p3/3pPb2/3P4/2P5/PP2BPPP/RNBQK1NR b KQkq - 1 5": [
-    "B12",
-    "Caro-Kann Defense: Advance, Short Variation"
+    "Caro-Kann Defense: Advance Variation, van der Wiel Attack, Dreyev Defense"
   ],
   "rnbqkbnr/pp2pppp/8/2ppP3/3P4/2P5/PP3PPP/RNBQKBNR b KQkq - 0 4": [
     "B12",
@@ -13493,35 +13493,35 @@
   ],
   "rnbqkbnr/pp2pp1p/2p3p1/3p4/3PP3/8/PPPN1PPP/R1BQKBNR w KQkq - 0 4": [
     "B12",
-    "Caro-Kann Defense: Gurgenidze/Modern Defense: 3.Nd2 g6"
+    "Caro-Kann Defense: Gurgenidze System, 3.Nd2 g6"
   ],
   "rnbqkbnr/pp2pp1p/2p3p1/3p4/3PP3/5N2/PPPN1PPP/R1BQKB1R b KQkq - 1 4": [
     "B12",
-    "Caro-Kann Defense: Gurgenidze/Modern Defense: 3.Nd2 g6 4.Ngf3"
+    "Caro-Kann Defense: Gurgenidze System, 3.Nd2 g6 4.Ngf3"
   ],
   "rnbqk1nr/pp2ppbp/2p3p1/3p4/3PP3/5N2/PPPN1PPP/R1BQKB1R w KQkq - 2 5": [
     "B12",
-    "Caro-Kann Defense: Gurgenidze/Modern Defense: 3.Nd2 g6 4.Ngf3 Bg7"
+    "Caro-Kann Defense: Gurgenidze System, 3.Nd2 g6 4.Ngf3 Bg7"
   ],
   "rnbqk1nr/pp2ppbp/2p3p1/3p4/3PP3/2P2N2/PP1N1PPP/R1BQKB1R b KQkq - 0 5": [
     "B12",
-    "Caro-Kann Defense: Gurgenidze/Modern Defense: 3.Nd2 g6 4.Ngf3 Bg7 5.c3"
+    "Caro-Kann Defense: Gurgenidze System, 3.Nd2 g6 4.Ngf3 Bg7 5.c3"
   ],
   "rnbqk1nr/pp2ppbp/2p3p1/3p4/3PP3/5N1P/PPPN1PP1/R1BQKB1R b KQkq - 0 5": [
     "B12",
-    "Caro-Kann Defense: Gurgenidze/Modern Defense: 3.Nd2 g6 4.Ngf3 Bg7 5.h3"
-  ],
-  "rnbqkbnr/pp2pppp/2p5/8/3Pp3/5P2/PPP3PP/RNBQKBNR w KQkq - 0 4": [
-    "B12",
-    "Caro-Kann Defense: Maróczy (Fantasy), 3...dxe4"
-  ],
-  "rnbqkbnr/pp3ppp/2p1p3/3p4/3PP3/5P2/PPP3PP/RNBQKBNR w KQkq - 0 4": [
-    "B12",
-    "Caro-Kann Defense: Maróczy (Fantasy), 3...e6"
+    "Caro-Kann Defense: Gurgenidze System, 3.Nd2 g6 4.Ngf3 Bg7 5.h3"
   ],
   "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/5P2/PPP3PP/RNBQKBNR b KQkq - 0 3": [
     "B12",
     "Caro-Kann Defense: Maróczy Variation"
+  ],
+  "rnbqkbnr/pp2pppp/2p5/8/3Pp3/5P2/PPP3PP/RNBQKBNR w KQkq - 0 4": [
+    "B12",
+    "Caro-Kann Defense: Maróczy Variation, 3...dxe4"
+  ],
+  "rnbqkbnr/pp3ppp/2p1p3/3p4/3PP3/5P2/PPP3PP/RNBQKBNR w KQkq - 0 4": [
+    "B12",
+    "Caro-Kann Defense: Maróczy Variation, 3...e6"
   ],
   "rnbqkbnr/pp3ppp/2p5/8/2BpP3/5N2/PPP3PP/RNBQK2R b KQkq - 1 6": [
     "B12",
@@ -13562,6 +13562,46 @@
   "rnbqkbnr/pp2pppp/2p5/3P4/3P4/8/PPP2PPP/RNBQKBNR b KQkq - 0 3": [
     "B13",
     "Caro-Kann Defense: Exchange Variation"
+  ],
+  "rnb1kbnr/pp2pppp/2p5/3q4/3P4/8/PPP2PPP/RNBQKBNR w KQkq - 0 4": [
+    "B13",
+    "Caro-Kann Defense: Exchange Variation, 3...Qxd5"
+  ],
+  "rnbqkbnr/pp2pppp/8/3p4/3P4/8/PPP2PPP/RNBQKBNR w KQkq - 0 4": [
+    "B13",
+    "Caro-Kann Defense: Exchange Variation, 3...cxd5"
+  ],
+  "rnbqkbnr/pp2pppp/8/3p4/3P4/3B4/PPP2PPP/RNBQK1NR b KQkq - 1 4": [
+    "B13",
+    "Caro-Kann Defense: Exchange Variation, 4.Bd3"
+  ],
+  "r1bqkbnr/pp2pppp/2n5/3p4/3P4/3B4/PPP2PPP/RNBQK1NR w KQkq - 2 5": [
+    "B13",
+    "Caro-Kann Defense: Exchange Variation, 4.Bd3 Nc6"
+  ],
+  "r1bqkbnr/pp2pppp/2n5/3p4/3P4/2PB4/PP3PPP/RNBQK1NR b KQkq - 0 5": [
+    "B13",
+    "Caro-Kann Defense: Exchange Variation, 4.Bd3 Nc6 5.c3"
+  ],
+  "r1bqkb1r/pp2pppp/2n2n2/3p4/3P4/2PB4/PP3PPP/RNBQK1NR w KQkq - 1 6": [
+    "B13",
+    "Caro-Kann Defense: Exchange Variation, 4.Bd3 Nc6 5.c3 Nf6"
+  ],
+  "r1bqkb1r/pp2pppp/2n2n2/3p4/3P4/2PB1N2/PP3PPP/RNBQK2R b KQkq - 2 6": [
+    "B13",
+    "Caro-Kann Defense: Exchange Variation, 4.Bd3 Nc6 5.c3 Nf6 6.Nf3"
+  ],
+  "r1bqkbnr/pp2pp1p/2n3p1/3p4/3P4/2PB4/PP3PPP/RNBQK1NR w KQkq - 0 6": [
+    "B13",
+    "Caro-Kann Defense: Exchange Variation, 4.Bd3 Nc6 5.c3 g6"
+  ],
+  "rnbqkbnr/pp2pppp/8/3p4/3P4/5N2/PPP2PPP/RNBQKB1R b KQkq - 1 4": [
+    "B13",
+    "Caro-Kann Defense: Exchange Variation, 4.Nf3"
+  ],
+  "rnbqkb1r/pp2pppp/5n2/3p4/3P4/5N2/PPP2PPP/RNBQKB1R w KQkq - 2 5": [
+    "B13",
+    "Caro-Kann Defense: Exchange Variation, 4.Nf3 Nf6"
   ],
   "rnbqkbnr/pp2pppp/8/3p4/3P2P1/8/PPP2P1P/RNBQKBNR b KQkq - 0 4": [
     "B13",
@@ -13611,57 +13651,17 @@
     "B13",
     "Caro-Kann Defense: Exchange Variation, Rubinstein Variation, 7.Qb3 Qd7"
   ],
-  "rnb1kbnr/pp2pppp/2p5/3q4/3P4/8/PPP2PPP/RNBQKBNR w KQkq - 0 4": [
-    "B13",
-    "Caro-Kann Defense: Exchange, 3...Qxd5"
-  ],
-  "rnbqkbnr/pp2pppp/8/3p4/3P4/8/PPP2PPP/RNBQKBNR w KQkq - 0 4": [
-    "B13",
-    "Caro-Kann Defense: Exchange, 3...cxd5"
-  ],
-  "rnbqkbnr/pp2pppp/8/3p4/3P4/3B4/PPP2PPP/RNBQK1NR b KQkq - 1 4": [
-    "B13",
-    "Caro-Kann Defense: Exchange, 4.Bd3"
-  ],
-  "r1bqkbnr/pp2pppp/2n5/3p4/3P4/3B4/PPP2PPP/RNBQK1NR w KQkq - 2 5": [
-    "B13",
-    "Caro-Kann Defense: Exchange, 4.Bd3 Nc6"
-  ],
-  "r1bqkbnr/pp2pppp/2n5/3p4/3P4/2PB4/PP3PPP/RNBQK1NR b KQkq - 0 5": [
-    "B13",
-    "Caro-Kann Defense: Exchange, 4.Bd3 Nc6 5.c3"
-  ],
-  "r1bqkb1r/pp2pppp/2n2n2/3p4/3P4/2PB4/PP3PPP/RNBQK1NR w KQkq - 1 6": [
-    "B13",
-    "Caro-Kann Defense: Exchange, 4.Bd3 Nc6 5.c3 Nf6"
-  ],
-  "r1bqkb1r/pp2pppp/2n2n2/3p4/3P4/2PB1N2/PP3PPP/RNBQK2R b KQkq - 2 6": [
-    "B13",
-    "Caro-Kann Defense: Exchange, 4.Bd3 Nc6 5.c3 Nf6 6.Nf3"
-  ],
-  "r1bqkbnr/pp2pp1p/2n3p1/3p4/3P4/2PB4/PP3PPP/RNBQK1NR w KQkq - 0 6": [
-    "B13",
-    "Caro-Kann Defense: Exchange, 4.Bd3 Nc6 5.c3 g6"
-  ],
-  "rnbqkbnr/pp2pppp/8/3p4/3P4/5N2/PPP2PPP/RNBQKB1R b KQkq - 1 4": [
-    "B13",
-    "Caro-Kann Defense: Exchange, 4.Nf3"
-  ],
-  "rnbqkb1r/pp2pppp/5n2/3p4/3P4/5N2/PPP2PPP/RNBQKB1R w KQkq - 2 5": [
-    "B13",
-    "Caro-Kann Defense: Exchange, 4.Nf3 Nf6"
-  ],
   "r2qkb1r/pp2pppp/2n2n2/3p4/3P1Bb1/2PB4/PP3PPP/RN1QK1NR w KQkq - 3 7": [
     "B13",
-    "Caro-Kann Defense: Exchange, Rubinstein, 6...Bg4"
+    "Caro-Kann Defense: Exchange Variation, Rubinstein, 6...Bg4"
   ],
   "r1q1kb1r/pp2pppp/2n2n2/3p4/3P1Bb1/1QPB4/PP3PPP/RN2K1NR w KQkq - 5 8": [
     "B13",
-    "Caro-Kann Defense: Exchange, Rubinstein, 7.Qb3 Qc8"
+    "Caro-Kann Defense: Exchange Variation, Rubinstein, 7.Qb3 Qc8"
   ],
   "r3kb1r/pp1qpppp/2n2n2/3p4/3P1Bb1/1QPB4/PP3PPP/RN2K1NR w KQkq - 5 8": [
     "B13",
-    "Caro-Kann Defense: Exchange, Rubinstein, 7.Qb3 Qd7"
+    "Caro-Kann Defense: Exchange Variation, Rubinstein, 7.Qb3 Qd7"
   ],
   "rnbqkb1r/pp2pppp/5n2/3p4/2PP4/2N5/PP3PPP/R1BQKBNR b KQkq - 2 5": [
     "B13",
@@ -14119,10 +14119,6 @@
     "B17",
     "Caro-Kann Defense: Karpov Variation, 5.Qe2"
   ],
-  "r1bqk2r/pp1n1pp1/2pbp2p/8/3PQ3/3B1N2/PPP2PPP/R1B1K2R b KQkq - 0 10": [
-    "B17",
-    "Caro-Kann Defense: Karpov Variation, Modern Main Line"
-  ],
   "r1bqkbnr/pp1nppp1/2p4p/6N1/3P4/8/PPP2PPP/R1BQKBNR w KQkq - 0 6": [
     "B17",
     "Caro-Kann Defense: Karpov Variation, Modern Variation"
@@ -14138,6 +14134,10 @@
   "r1bqkb1r/pp1npppp/2p2n2/8/3P4/5NN1/PPP2PPP/R1BQKB1R b KQkq - 4 6": [
     "B17",
     "Caro-Kann Defense: Karpov Variation, Modern Variation, Kasparov Attack"
+  ],
+  "r1bqk2r/pp1n1pp1/2pbp2p/8/3PQ3/3B1N2/PPP2PPP/R1B1K2R b KQkq - 0 10": [
+    "B17",
+    "Caro-Kann Defense: Karpov Variation, Modern Variation, Main Line"
   ],
   "r1bqkb1r/pp3ppp/1np1pn2/6N1/2BP4/8/PPP1QPPP/R1B1K1NR w KQkq - 2 8": [
     "B17",
@@ -14459,6 +14459,10 @@
     "B20",
     "Sicilian Defense: 2.d3 e6 3.g3"
   ],
+  "rnbqkbnr/pp1ppppp/8/2p1P3/8/8/PPPP1PPP/RNBQKBNR b KQkq - 0 2": [
+    "B20",
+    "Sicilian Defense: 2.e5"
+  ],
   "rnbqk1nr/pp1pppbp/6p1/2p5/4P3/6P1/PPPP1PBP/RNBQK1NR w KQkq - 2 4": [
     "B20",
     "Sicilian Defense: 2.g3"
@@ -14537,7 +14541,7 @@
   ],
   "rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPPKPPP/RNBQ1BNR b kq - 1 2": [
     "B20",
-    "Sicilian Defense: King David Opening"
+    "Sicilian Defense: King David Variation"
   ],
   "rnbqkbnr/pp1ppppp/8/2p5/4P3/N7/PPPP1PPP/R1BQKBNR b KQkq - 1 2": [
     "B20",
@@ -14631,17 +14635,13 @@
     "B20",
     "Sicilian Defense: Wing Gambit, Santasiere Variation"
   ],
-  "rnbqkbnr/pp1ppppp/8/2p1P3/8/8/PPPP1PPP/RNBQKBNR b KQkq - 0 2": [
-    "B20",
-    "Sicilian Defense: with 2.e5"
-  ],
   "rnbqkbnr/pp2pppp/8/2p5/4pP2/5N2/PPPP2PP/RNBQKB1R w KQkq - 0 4": [
     "B21",
     "Bird Opening: Dutch Variation, Batavo Gambit"
   ],
   "r1bqkb1r/pp1ppppp/2n2n2/8/2B1P3/8/PPP2PPP/RNBQK1NR b KQkq - 4 5": [
     "B21",
-    "Sicilian Defense: Coles Sicilian Gambit"
+    "Sicilian Defense: Coles-Sicilian Gambit"
   ],
   "r1bqkbnr/pp1ppppp/2n5/2p5/4PP2/8/PPPP2PP/RNBQKBNR w KQkq - 1 3": [
     "B21",
@@ -14703,10 +14703,6 @@
     "B21",
     "Sicilian Defense: Grand Prix Attack, Toilet Variation"
   ],
-  "rnbqkbnr/pp1ppppp/8/8/3pPP2/8/PPP3PP/RNBQKBNR b KQkq - 0 3": [
-    "B21",
-    "Sicilian Defense: Halasz Gambit"
-  ],
   "rnbqkbnr/pp1ppppp/8/2p5/4PP2/8/PPPP2PP/RNBQKBNR b KQkq - 0 2": [
     "B21",
     "Sicilian Defense: McDonnell Attack"
@@ -14723,14 +14719,6 @@
     "B21",
     "Sicilian Defense: Morphy Gambit, Andreaschek Gambit"
   ],
-  "rnbqkbnr/pp1ppppp/8/8/4P3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 4": [
-    "B21",
-    "Sicilian Defense: Smith-Morra Accepted"
-  ],
-  "rnbqkbnr/pp1ppppp/8/8/4P3/2p5/PP3PPP/RNBQKBNR w KQkq - 0 4": [
-    "B21",
-    "Sicilian Defense: Smith-Morra Accepted"
-  ],
   "rnbqkbnr/pp1ppppp/8/2p5/3PP3/8/PPP2PPP/RNBQKBNR b KQkq - 0 2": [
     "B21",
     "Sicilian Defense: Smith-Morra Gambit"
@@ -14738,6 +14726,14 @@
   "rnbqkbnr/pp1ppppp/8/8/3pP3/2P5/PP3PPP/RNBQKBNR b KQkq - 0 3": [
     "B21",
     "Sicilian Defense: Smith-Morra Gambit"
+  ],
+  "rnbqkbnr/pp1ppppp/8/8/4P3/2N5/PP3PPP/R1BQKBNR b KQkq - 0 4": [
+    "B21",
+    "Sicilian Defense: Smith-Morra Gambit Accepted"
+  ],
+  "rnbqkbnr/pp1ppppp/8/8/4P3/2p5/PP3PPP/RNBQKBNR w KQkq - 0 4": [
+    "B21",
+    "Sicilian Defense: Smith-Morra Gambit Accepted"
   ],
   "rnbqkb1r/1p3ppp/p2ppn2/8/2B1P3/2N2N2/PP3PPP/R1BQ1RK1 w kq - 0 8": [
     "B21",
@@ -14815,6 +14811,66 @@
     "B21",
     "Sicilian Defense: Smith-Morra Gambit Declined, Wing Formation"
   ],
+  "rnbqkbnr/pp1ppppp/8/8/3pP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
+    "B21",
+    "Sicilian Defense: Smith-Morra Gambit, 2...cxd4"
+  ],
+  "rnbqkbnr/pp2pppp/8/2pp4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
+    "B21",
+    "Sicilian Defense: Smith-Morra Gambit, 2...d5"
+  ],
+  "r1bqkbnr/pp1ppppp/2n5/8/4P3/2N5/PP3PPP/R1BQKBNR w KQkq - 1 5": [
+    "B21",
+    "Sicilian Defense: Smith-Morra Gambit, 4.Nxc3 Nc6"
+  ],
+  "r1bqkbnr/pp1ppppp/2n5/8/4P3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 2 5": [
+    "B21",
+    "Sicilian Defense: Smith-Morra Gambit, 4.Nxc3 Nc6 5.Nf3"
+  ],
+  "r1bqkbnr/pp2pppp/2np4/8/4P3/2N2N2/PP3PPP/R1BQKB1R w KQkq - 0 6": [
+    "B21",
+    "Sicilian Defense: Smith-Morra Gambit, 4.Nxc3 Nc6 5.Nf3 d6"
+  ],
+  "r1bqkbnr/pp1p1ppp/2n1p3/8/4P3/2N2N2/PP3PPP/R1BQKB1R w KQkq - 0 6": [
+    "B21",
+    "Sicilian Defense: Smith-Morra Gambit, 4.Nxc3 Nc6 5.Nf3 e6"
+  ],
+  "r1bqkbnr/pp1p1ppp/2n1p3/8/2B1P3/2N2N2/PP3PPP/R1BQK2R b KQkq - 1 6": [
+    "B21",
+    "Sicilian Defense: Smith-Morra Gambit, 4.Nxc3 Nc6 5.Nf3 e6 6.Bc4"
+  ],
+  "rnbqkbnr/pp2pppp/3p4/8/4P3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5": [
+    "B21",
+    "Sicilian Defense: Smith-Morra Gambit, 4.Nxc3 d6"
+  ],
+  "rnbqkbnr/pp1p1ppp/4p3/8/4P3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5": [
+    "B21",
+    "Sicilian Defense: Smith-Morra Gambit, 4.Nxc3 e6"
+  ],
+  "rnbqkbnr/pp1p1ppp/4p3/8/4P3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 1 5": [
+    "B21",
+    "Sicilian Defense: Smith-Morra Gambit, 4.Nxc3 e6 5.Nf3"
+  ],
+  "r1bqkbnr/pp2pppp/2np4/8/2B1P3/2N2N2/PP3PPP/R1BQK2R b KQkq - 1 6": [
+    "B21",
+    "Sicilian Defense: Smith-Morra Gambit, 5.Nf3 d6 6.Bc4"
+  ],
+  "r1bqkbnr/1p2pppp/p1np4/8/2B1P3/2N2N2/PP3PPP/R1BQK2R w KQkq - 0 7": [
+    "B21",
+    "Sicilian Defense: Smith-Morra Gambit, 5.Nf3 d6 6.Bc4 a6"
+  ],
+  "r1bqkbnr/pp3ppp/2npp3/8/2B1P3/2N2N2/PP3PPP/R1BQ1RK1 b kq - 1 7": [
+    "B21",
+    "Sicilian Defense: Smith-Morra Gambit, 5.Nf3 d6 6.Bc4 e6 7.O-O"
+  ],
+  "r1bqkb1r/pp3ppp/2nppn2/8/2B1P3/2N2N2/PP3PPP/R1BQ1RK1 w kq - 2 8": [
+    "B21",
+    "Sicilian Defense: Smith-Morra Gambit, 5.Nf3 d6 6.Bc4 e6 7.O-O Nf6"
+  ],
+  "r1bqk2r/pp2bppp/2nppn2/8/2B1P3/2N2N2/PP2QPPP/R1B2RK1 w kq - 4 9": [
+    "B21",
+    "Sicilian Defense: Smith-Morra Gambit, 5.Nf3 d6 6.Bc4 e6 7.O-O Nf6 8.Qe2 Be7"
+  ],
   "2bqkbnr/r4ppp/p1npp3/1p6/4P3/1BN2N2/PP2QPPP/R1B2RK1 w k - 2 10": [
     "B21",
     "Sicilian Defense: Smith-Morra Gambit, Chicago Defense"
@@ -14823,65 +14879,9 @@
     "B21",
     "Sicilian Defense: Smith-Morra Gambit, Danish Variation"
   ],
-  "rnbqkbnr/pp1ppppp/8/8/3pP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
+  "rnbqkbnr/pp1ppppp/8/8/3pPP2/8/PPP3PP/RNBQKBNR b KQkq - 0 3": [
     "B21",
-    "Sicilian Defense: Smith-Morra, 2...cxd4"
-  ],
-  "rnbqkbnr/pp2pppp/8/2pp4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
-    "B21",
-    "Sicilian Defense: Smith-Morra, 2...d5"
-  ],
-  "r1bqkbnr/pp1ppppp/2n5/8/4P3/2N5/PP3PPP/R1BQKBNR w KQkq - 1 5": [
-    "B21",
-    "Sicilian Defense: Smith-Morra, 4.Nxc3 Nc6"
-  ],
-  "r1bqkbnr/pp1ppppp/2n5/8/4P3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 2 5": [
-    "B21",
-    "Sicilian Defense: Smith-Morra, 4.Nxc3 Nc6 5.Nf3"
-  ],
-  "r1bqkbnr/pp2pppp/2np4/8/4P3/2N2N2/PP3PPP/R1BQKB1R w KQkq - 0 6": [
-    "B21",
-    "Sicilian Defense: Smith-Morra, 4.Nxc3 Nc6 5.Nf3 d6"
-  ],
-  "r1bqkbnr/pp1p1ppp/2n1p3/8/4P3/2N2N2/PP3PPP/R1BQKB1R w KQkq - 0 6": [
-    "B21",
-    "Sicilian Defense: Smith-Morra, 4.Nxc3 Nc6 5.Nf3 e6"
-  ],
-  "r1bqkbnr/pp1p1ppp/2n1p3/8/2B1P3/2N2N2/PP3PPP/R1BQK2R b KQkq - 1 6": [
-    "B21",
-    "Sicilian Defense: Smith-Morra, 4.Nxc3 Nc6 5.Nf3 e6 6.Bc4"
-  ],
-  "rnbqkbnr/pp2pppp/3p4/8/4P3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5": [
-    "B21",
-    "Sicilian Defense: Smith-Morra, 4.Nxc3 d6"
-  ],
-  "rnbqkbnr/pp1p1ppp/4p3/8/4P3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5": [
-    "B21",
-    "Sicilian Defense: Smith-Morra, 4.Nxc3 e6"
-  ],
-  "rnbqkbnr/pp1p1ppp/4p3/8/4P3/2N2N2/PP3PPP/R1BQKB1R b KQkq - 1 5": [
-    "B21",
-    "Sicilian Defense: Smith-Morra, 4.Nxc3 e6 5.Nf3"
-  ],
-  "r1bqkbnr/pp2pppp/2np4/8/2B1P3/2N2N2/PP3PPP/R1BQK2R b KQkq - 1 6": [
-    "B21",
-    "Sicilian Defense: Smith-Morra, 5.Nf3 d6 6.Bc4"
-  ],
-  "r1bqkbnr/1p2pppp/p1np4/8/2B1P3/2N2N2/PP3PPP/R1BQK2R w KQkq - 0 7": [
-    "B21",
-    "Sicilian Defense: Smith-Morra, 5.Nf3 d6 6.Bc4 a6"
-  ],
-  "r1bqkbnr/pp3ppp/2npp3/8/2B1P3/2N2N2/PP3PPP/R1BQ1RK1 b kq - 1 7": [
-    "B21",
-    "Sicilian Defense: Smith-Morra, 5.Nf3 d6 6.Bc4 e6 7.O-O"
-  ],
-  "r1bqkb1r/pp3ppp/2nppn2/8/2B1P3/2N2N2/PP3PPP/R1BQ1RK1 w kq - 2 8": [
-    "B21",
-    "Sicilian Defense: Smith-Morra, 5.Nf3 d6 6.Bc4 e6 7.O-O Nf6"
-  ],
-  "r1bqk2r/pp2bppp/2nppn2/8/2B1P3/2N2N2/PP2QPPP/R1B2RK1 w kq - 4 9": [
-    "B21",
-    "Sicilian Defense: Smith-Morra, 5.Nf3 d6 6.Bc4 e6 7.O-O Nf6 8.Qe2 Be7"
+    "Sicilian Defense: Smith-Morra Gambit, Halász Gambit"
   ],
   "rnbqkbnr/pp1ppppp/8/8/3QP3/8/PPP2PPP/RNB1KBNR b KQkq - 0 3": [
     "B21",
@@ -15523,37 +15523,37 @@
     "B26",
     "Sicilian Defense: Closed Variation, 6.Be3 e6 7.Qd2 Rb8 8.Nge2"
   ],
-  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/2N1BN2/PPP2PPP/R2QKB1R b KQkq - 4 5": [
-    "B27",
-    "Modern Defense: Pterodactyl Defense, Sicilian, Anhanguera"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1pP4/4P3/2N2N2/PPP2PPP/R1BQKB1R b KQkq - 0 5": [
-    "B27",
-    "Modern Defense: Pterodactyl Defense, Sicilian, Benoni Gambit"
-  ],
-  "rnb1k1nr/pp1ppp1p/6p1/q1P5/4P3/2P2N2/P1P2PPP/R1BQKB1R b KQkq - 0 6": [
-    "B27",
-    "Modern Defense: Pterodactyl Defense, Sicilian, Pteranodon"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1P5/4P3/2N2N2/PPP2PPP/R1BQKB1R b KQkq - 2 5": [
-    "B27",
-    "Modern Defense: Pterodactyl Defense, Sicilian, Rhamphorhynchus"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/2N2N2/PPPB1PPP/R2QKB1R b KQkq - 4 5": [
-    "B27",
-    "Modern Defense: Pterodactyl Defense, Sicilian, Unpin"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/2P2N2/PP3PPP/RNBQKB1R w KQkq - 1 5": [
-    "B27",
-    "Modern Defense: Pterodactyl Defense, Western, Pterodactyl"
-  ],
-  "rnb1k1nr/pp1pppbp/6p1/q1P5/4P3/5N2/PPP2PPP/RNBQKB1R w KQkq - 1 5": [
-    "B27",
-    "Modern Defense: Pterodactyl Defense, Western, Rhamphorhynchus"
-  ],
   "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/2N2N2/PPP2PPP/R1BQKB1R w KQkq - 3 5": [
     "B27",
     "Modern Defense: Pterodactyl Variation"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/2N1BN2/PPP2PPP/R2QKB1R b KQkq - 4 5": [
+    "B27",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Sicilian Variation, Anhanguera"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1pP4/4P3/2N2N2/PPP2PPP/R1BQKB1R b KQkq - 0 5": [
+    "B27",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Sicilian Variation, Benoni Gambit"
+  ],
+  "rnb1k1nr/pp1ppp1p/6p1/q1P5/4P3/2P2N2/P1P2PPP/R1BQKB1R b KQkq - 0 6": [
+    "B27",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Sicilian Variation, Pteranodon"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1P5/4P3/2N2N2/PPP2PPP/R1BQKB1R b KQkq - 2 5": [
+    "B27",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Sicilian Variation, Rhamphorhynchus"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/2N2N2/PPPB1PPP/R2QKB1R b KQkq - 4 5": [
+    "B27",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Sicilian Variation, Unpin"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/2P2N2/PP3PPP/RNBQKB1R w KQkq - 1 5": [
+    "B27",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Western, Pterodactyl"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1P5/4P3/5N2/PPP2PPP/RNBQKB1R w KQkq - 1 5": [
+    "B27",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Western, Rhamphorhynchus"
   ],
   "rnbqkbnr/pp1ppppp/8/2p5/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 0 2": [
     "B27",
@@ -16053,7 +16053,7 @@
   ],
   "r1bqkbnr/pp1p1ppp/2n1p3/2p5/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4": [
     "B32",
-    "Sicilian Defense: Franco-Sicilian Variation"
+    "Sicilian Defense: French-Sicilian Variation"
   ],
   "r1b1kbnr/pp1ppppp/1qn5/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq - 1 5": [
     "B32",
@@ -21349,15 +21349,15 @@
   ],
   "rnbqkbnr/pppp2pp/4p3/5p2/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
     "C00",
-    "French Defense: Franco-Hiva Gambit"
+    "French Defense: French-Hiva Gambit"
   ],
   "rnbqkbnr/pppp2pp/4p3/5P2/3P4/8/PPP2PPP/RNBQKBNR b KQkq - 0 3": [
     "C00",
-    "French Defense: Franco-Hiva Gambit Accepted"
+    "French Defense: French-Hiva Gambit Accepted"
   ],
   "rnbqkbnr/pp1p1ppp/4p3/2p5/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
     "C00",
-    "French Defense: Franco-Sicilian Defense"
+    "French Defense: French-Sicilian Defense"
   ],
   "rnbqkbnr/ppp2ppp/8/3p4/3PPp2/8/PPP1Q1PP/RNB1KBNR w KQkq - 0 5": [
     "C00",
@@ -21401,7 +21401,7 @@
   ],
   "rnbqkbnr/pppp2pp/4p3/5p2/4P3/3P4/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
     "C00",
-    "French Defense: King's Indian Attack, Franco-Hiva Gambit"
+    "French Defense: King's Indian Attack, French-Hiva Gambit"
   ],
   "rnbqkb1r/ppp2ppp/4pn2/3p4/4P3/3P1N2/PPPN1PPP/R1BQKB1R b KQkq - 3 4": [
     "C00",
@@ -21425,7 +21425,7 @@
   ],
   "rnbqkbnr/pppp2pp/4p3/5p2/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 0 3": [
     "C00",
-    "French Defense: Knight Variation, Franco-Hiva Gambit"
+    "French Defense: Knight Variation, French-Hiva Gambit"
   ],
   "rnbqkbnr/pppp1ppp/4p3/8/4PP2/8/PPPP2PP/RNBQKBNR b KQkq - 0 2": [
     "C00",
@@ -21649,7 +21649,7 @@
   ],
   "rnbqkb1r/pppp2pp/4pn2/5P2/3P4/8/PPP2PPP/RNBQKBNR w KQkq - 1 4": [
     "C01",
-    "French Defense: Franco-Hiva Gambit Accepted"
+    "French Defense: French-Hiva Gambit Accepted"
   ],
   "rnbqk1nr/ppp2ppp/8/3p4/1b1P4/2N5/PPP2PPP/R1BQKBNR w KQkq - 2 5": [
     "C01",
@@ -23561,11 +23561,11 @@
   ],
   "rnbqkbnr/pppp1ppp/8/8/3pPP2/8/PPP3PP/RNBQKBNR b KQkq - 0 3": [
     "C21",
-    "Center Game Accepted: Halasz-McDonnell Gambit"
+    "Center Game Accepted: Halász-McDonnell Gambit"
   ],
   "r1bqk1nr/pppp1ppp/2n5/2b5/3pPP2/2P2N2/PP4PP/RNBQKB1R b KQkq - 0 5": [
     "C21",
-    "Center Game Accepted: Halasz-McDonnell Gambit, Crocodile Variation"
+    "Center Game Accepted: Halász-McDonnell Gambit, Crocodile Variation"
   ],
   "rnbqkbnr/p2p1ppp/8/1pp5/2BpP3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 5": [
     "C21",
@@ -27385,7 +27385,7 @@
   ],
   "r1bqkb1r/pppp1ppp/2n2n2/4p3/4P3/2N2N2/PPPPBPPP/R1BQK2R b KQkq - 5 4": [
     "C47",
-    "Four Knights Opening: Van der Wiel Variation"
+    "Four Knights Opening: van der Wiel Variation"
   ],
   "r1bqkb1r/pppp1ppp/5n2/4n3/4P3/2N5/PPPP1PPP/R1BQKB1R w KQkq - 0 5": [
     "C47",
@@ -33289,43 +33289,43 @@
   ],
   "rn1qkb1r/ppp2ppp/4pn2/3p1b2/3P4/3BPN2/PPP2PPP/RNBQK2R w KQkq - 0 5": [
     "D04",
-    "Colle System, 3...Bf5, Alekhine Variation"
+    "Colle System: 3...Bf5, Alekhine Variation"
   ],
   "rn1qkb1r/ppp1pppp/5n2/3p4/3P2b1/4PN2/PPP2PPP/RNBQKB1R w KQkq - 1 4": [
     "D04",
-    "Colle System, 3...Bg4"
+    "Colle System: 3...Bg4"
   ],
   "rnbqkb1r/pp2pppp/5n2/2pp4/3P4/4PN2/PPP2PPP/RNBQKB1R w KQkq - 0 4": [
     "D04",
-    "Colle System, 3...c5"
+    "Colle System: 3...c5"
   ],
   "rnbqkb1r/pp2pppp/5n2/2pp4/3P4/2P1PN2/PP3PPP/RNBQKB1R b KQkq - 0 4": [
     "D04",
-    "Colle System, 3...c5 4.c3"
+    "Colle System: 3...c5 4.c3"
   ],
   "r1bqkb1r/pp1npppp/5n2/2pp4/3P4/2P1PN2/PP3PPP/RNBQKB1R w KQkq - 1 5": [
     "D04",
-    "Colle System, 3...c5 4.c3 Nbd7"
+    "Colle System: 3...c5 4.c3 Nbd7"
   ],
   "r1bqkb1r/pp2pppp/2n2n2/2pp4/3P4/2P1PN2/PP3PPP/RNBQKB1R w KQkq - 1 5": [
     "D04",
-    "Colle System, 3...c5 4.c3 Nc6"
+    "Colle System: 3...c5 4.c3 Nc6"
   ],
   "rnbqkb1r/pp2pppp/2p2n2/3p4/3P4/4PN2/PPP2PPP/RNBQKB1R w KQkq - 0 4": [
     "D04",
-    "Colle System, 3...c6"
+    "Colle System: 3...c6"
   ],
   "rnbqkb1r/ppp1pp1p/5np1/3p4/3P4/4PN2/PPP2PPP/RNBQKB1R w KQkq - 0 4": [
     "D04",
-    "Colle System, 3...g6"
+    "Colle System: 3...g6"
   ],
   "rn1qkb1r/ppp1pppp/5n2/3p1b2/3P4/4PN2/PPP2PPP/RNBQKB1R w KQkq - 1 4": [
     "D04",
-    "Colle System, Anti-Colle Variation"
+    "Colle System: Anti-Colle Variation"
   ],
   "rnbqk2r/ppp1ppbp/5np1/3p4/3P4/3BPN2/PPP2PPP/RNBQK2R w KQkq - 2 5": [
     "D04",
-    "Colle System, Grünfeld Formation"
+    "Colle System: Grünfeld Formation"
   ],
   "rnbqkb1r/ppp2ppp/4pn2/3p4/3P4/3BPN2/PPP2PPP/RNBQK2R b KQkq - 1 4": [
     "D05",
@@ -33337,43 +33337,43 @@
   ],
   "rnbqkb1r/pp3ppp/4pn2/2pp4/3P4/3BPN2/PPP2PPP/RNBQK2R w KQkq - 0 5": [
     "D05",
-    "Colle System, 3...e6 4.Bd3 c5"
+    "Colle System: 3...e6 4.Bd3 c5"
   ],
   "rnbqkb1r/ppp2ppp/4pn2/3p4/3P4/4PN2/PPPN1PPP/R1BQKB1R b KQkq - 1 4": [
     "D05",
-    "Colle System, 3...e6 4.Nbd2"
+    "Colle System: 3...e6 4.Nbd2"
   ],
   "r1bqkb1r/pp1n1ppp/4pn2/2pp4/3P4/2PBPN2/PP3PPP/RNBQK2R w KQkq - 1 6": [
     "D05",
-    "Colle System, 5.c3 Nbd7"
+    "Colle System: 5.c3 Nbd7"
   ],
   "r1bqkb1r/pp3ppp/2n1pn2/2pp4/3P4/2PBPN2/PP3PPP/RNBQK2R w KQkq - 1 6": [
     "D05",
-    "Colle System, 5.c3 Nc6"
+    "Colle System: 5.c3 Nc6"
   ],
   "r1bqkb1r/pp3ppp/2n1pn2/2pp4/3P4/2PBPN2/PP1N1PPP/R1BQK2R b KQkq - 2 6": [
     "D05",
-    "Colle System, 5.c3 Nc6 6.Nbd2"
+    "Colle System: 5.c3 Nc6 6.Nbd2"
   ],
   "r1bqk2r/pp3ppp/2nbpn2/2pp4/3P4/2PBPN2/PP1N1PPP/R1BQK2R w KQkq - 3 7": [
     "D05",
-    "Colle System, 5.c3 Nc6 6.Nbd2 Bd6"
+    "Colle System: 5.c3 Nc6 6.Nbd2 Bd6"
   ],
   "r1bq1rk1/pp3ppp/2nbpn2/2pp4/3P4/2PBPN2/PP1N1PPP/R1BQ1RK1 w - - 5 8": [
     "D05",
-    "Colle System, 5.c3 Nc6 6.Nbd2 Bd6 7.O-O O-O"
+    "Colle System: 5.c3 Nc6 6.Nbd2 Bd6 7.O-O O-O"
   ],
   "r1bq1rk1/pp3ppp/2n1pn2/2bp4/8/2PBPN2/PP1N1PPP/R1BQ1RK1 w - - 0 9": [
     "D05",
-    "Colle System, 5.c3 Nc6 6.Nbd2 Bd6 7.O-O O-O 8.dxc5 Bxc5"
+    "Colle System: 5.c3 Nc6 6.Nbd2 Bd6 7.O-O O-O 8.dxc5 Bxc5"
   ],
   "r1bqkb1r/pp3ppp/2n1pn2/2pp4/3P4/1P1BPN2/P1P2PPP/RNBQK2R w KQkq - 1 6": [
     "D05",
-    "Colle System, Rubinstein Attack, 5...Nc6"
+    "Colle System: Rubinstein Attack, 5...Nc6"
   ],
   "rnbqkb1r/pp3ppp/4pn2/2pp4/3P4/2PBPN2/PP3PPP/RNBQK2R b KQkq - 0 5": [
     "D05",
-    "Colle System, Traditional Line"
+    "Colle System: Traditional Line"
   ],
   "rnbqkb1r/pp3ppp/4pn2/2pp4/3P4/1P2PN2/P1PN1PPP/R1BQKB1R b KQkq - 0 5": [
     "D05",
