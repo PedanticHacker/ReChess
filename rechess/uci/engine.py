@@ -1,5 +1,7 @@
 from __future__ import annotations
+
 from contextlib import suppress
+from typing import ClassVar
 
 from chess import Move
 from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
@@ -17,10 +19,10 @@ from rechess.utils import (
 class Engine(QObject):
     """Communication with UCI-compliant engine."""
 
-    best_move_analyzed: Signal = Signal(Move)
-    move_played: Signal = Signal(Move)
-    score_analyzed: Signal = Signal(Score)
-    variation_analyzed: Signal = Signal(str)
+    best_move_analyzed: ClassVar[Signal[Move]] = Signal(Move)
+    move_played: ClassVar[Signal[Move]] = Signal(Move)
+    score_analyzed: ClassVar[Signal[Score]] = Signal(Score)
+    variation_analyzed: ClassVar[Signal[str]] = Signal(str)
 
     def __init__(self, game: Game) -> None:
         super().__init__()

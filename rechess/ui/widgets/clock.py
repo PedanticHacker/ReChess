@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from typing import ClassVar
+
 from PySide6.QtCore import QElapsedTimer, Qt, QTimer, Signal, Slot
 from PySide6.QtWidgets import QLCDNumber
 
@@ -9,7 +11,7 @@ from rechess.utils import setting_value
 class Clock(QLCDNumber):
     """Digital chess clock with 30 millisecond timer accuracy."""
 
-    time_expired: Signal = Signal()
+    time_expired: ClassVar[Signal] = Signal()
 
     def __init__(self, clock_color: ClockColor) -> None:
         super().__init__()
