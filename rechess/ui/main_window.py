@@ -674,8 +674,8 @@ class MainWindow(QMainWindow):
     @Slot(str)
     def on_variation_analyzed(self, variation: str) -> None:
         """Show formatted `variation` based on engine analysis."""
-        formatted_variation: str = sub(r"(?=(\b\d+\.+))", "\n", variation).strip()
-        self._engine_analysis_label.setText(formatted_variation)
+        tidy_variation: str = sub(r"(?=(\b\d+\.+))", "\n", variation).strip()
+        self._engine_analysis_label.setText(tidy_variation)
 
     @Slot(Score)
     def on_score_analyzed(self, score: Score) -> None:
