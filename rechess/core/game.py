@@ -1,6 +1,6 @@
 from contextlib import suppress
 from enum import EnumDict
-from typing import Iterator
+from typing import ClassVar, Iterator
 
 from chess import (
     BB_SQUARES,
@@ -34,7 +34,7 @@ class SoundEffectFileUrl(EnumDict):
 class Game(QObject):
     """Chess game state, moves, and UI interaction management."""
 
-    move_played: Signal = Signal(Move)
+    move_played: ClassVar[Signal[Move]] = Signal(Move)
 
     def __init__(self) -> None:
         super().__init__()
