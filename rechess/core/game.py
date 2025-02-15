@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from contextlib import suppress
 from enum import EnumDict
 from typing import ClassVar, Iterator
