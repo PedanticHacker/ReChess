@@ -55,13 +55,17 @@ def engine_file_filter() -> str:
 
 def delete_quarantine_attribute(path_to_file: str) -> None:
     """Delete quarantine attribute for file at `path_to_file`."""
-    if hasattr(os, "removexattr"):
-        os.removexattr(path_to_file, "com.apple.quarantine")
+    if platform_name() == "macos":
+        subprocess.run(
+            ["xattr", "-d", "com.apple.quarantine", path_to_file],
+            stderr=subprocess.DEVNULL,
+        )
 
 
 def make_executable(path_to_file: str) -> None:
     """Make file at `path_to_file` be executable."""
-    os.chmod(path_to_file, os.stat(path_to_file).st_mode | stat.S_IXUSR)
+    if platform_name() == "linux":
+        os.chmod(path_to_file, os.stat(path_to_file).st_mode | stat.S_IXUSR)
 
 
 def _available_hash() -> int:
@@ -104,15 +108,25 @@ def setting_value(section: SettingSection, key: SettingKey) -> SettingValue:
 
 
 @overload
-def set_setting_value(section: BoardSection, key: BoardKey, value: bool) -> None: ...
+def set_setting_value(
+    section: BoardSection, key: BoardKey, value: bool
+) -> None: ...
 @overload
-def set_setting_value(section: ClockSection, key: ClockKey, value: float) -> None: ...
+def set_setting_value(
+    section: ClockSection, key: ClockKey, value: float
+) -> None: ...
 @overload
-def set_setting_value(section: EngineSection, key: EngineKey, value: bool) -> None: ...
+def set_setting_value(
+    section: EngineSection, key: EngineKey, value: bool
+) -> None: ...
 @overload
-def set_setting_value(section: HumanSection, key: HumanKey, value: str) -> None: ...
+def set_setting_value(
+    section: HumanSection, key: HumanKey, value: str
+) -> None: ...
 @overload
-def set_setting_value(section: UiSection, key: StyleKey, value: str) -> None: ...
+def set_setting_value(
+    section: UiSection, key: StyleKey, value: str
+) -> None: ...
 def set_setting_value(
     section: SettingSection, key: SettingKey, value: SettingValue
 ) -> None:
@@ -120,7 +134,9 @@ def set_setting_value(
     settings_dict: SettingsDict = _settings()
     settings_dict[section][key] = value
 
-    with open("rechess/settings.json", mode="w", newline="\n") as settings_file:
+    with open(
+        "rechess/settings.json", mode="w", newline="\n"
+    ) as settings_file:
         json.dump(settings_dict, settings_file, indent=2)
         settings_file.write("\n")
 
