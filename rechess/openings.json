@@ -35947,6 +35947,14 @@
     "D30",
     "Queen's Gambit Declined: Capablanca Variation"
   ],
+  "rnbqkbnr/pp3ppp/4p3/2pp4/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
+    "D30",
+    "Queen's Gambit Declined: Pseudo-Tarrasch Defense"
+  ],
+  "rnbqkbnr/pp3ppp/8/2pp2B1/3P4/5N2/PP2PPPP/RN1QKB1R b KQkq - 1 5": [
+    "D30",
+    "Queen's Gambit Declined: Pseudo-Tarrasch Defense, Bishop Attack"
+  ],
   "r1bqkb1r/pp1n1ppp/2p1pn2/3p4/2PP4/4PN2/PP1N1PPP/R1BQKB1R w KQkq - 2 6": [
     "D30",
     "Queen's Gambit Declined: Semi-Slav Defense, Quiet Variation"
@@ -36014,14 +36022,6 @@
   "r1bqk2r/pp2bppp/2n2n2/2pp4/3P4/5NP1/PP2PPBP/RNBQ1RK1 w kq - 5 8": [
     "D30",
     "Queen's Gambit Declined: Tarrasch Defense without Nc3, Main Line"
-  ],
-  "rnbqkbnr/pp3ppp/8/2pp2B1/3P4/5N2/PP2PPPP/RN1QKB1R b KQkq - 1 5": [
-    "D30",
-    "Queen's Gambit Declined: Tarrasch Defense, Pseudo-Tarrasch Bishop Attack"
-  ],
-  "rnbqkbnr/pp3ppp/4p3/2pp4/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
-    "D30",
-    "Queen's Gambit Declined: Tarrasch Defense, Pseudo-Tarrasch Defense"
   ],
   "rnbqkb1r/ppp2ppp/4pn2/3p2B1/2PP4/5N2/PP2PPPP/RN1QKB1R b KQkq - 1 4": [
     "D30",
