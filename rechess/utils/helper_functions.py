@@ -120,14 +120,14 @@ def set_setting_value(
     settings_dict: SettingsDict = _settings()
     settings_dict[section][key] = value
 
-    with open("rechess/settings.json", mode="w") as settings_file:
+    with open("rechess/settings.json", mode="w", newline="\n") as settings_file:
         json.dump(settings_dict, settings_file, indent=2)
         settings_file.write("\n")
 
 
 def find_opening(fen: str) -> tuple[str, str] | None:
     """Return ECO code and opening name based on `fen`."""
-    with open("rechess/openings.json") as json_file:
+    with open("rechess/openings.json", encoding="utf-8") as json_file:
         openings = json.load(json_file)
     return openings.get(fen)
 
