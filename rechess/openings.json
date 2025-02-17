@@ -15547,13 +15547,13 @@
     "B27",
     "Modern Defense: Standard Line, Pterodactyl Defense, Sicilian Variation, Unpin Variation"
   ],
-  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/2P2N2/PP3PPP/RNBQKB1R w KQkq - 1 5": [
-    "B27",
-    "Modern Defense: Standard Line, Pterodactyl Defense, Western Variation, Pterodactyl Variation"
-  ],
   "rnb1k1nr/pp1pppbp/6p1/q1P5/4P3/5N2/PPP2PPP/RNBQKB1R w KQkq - 1 5": [
     "B27",
     "Modern Defense: Standard Line, Pterodactyl Defense, Western Variation Rhamphorhynchus Variation"
+  ],
+  "rnb1k1nr/pp1pppbp/6p1/q1p5/3PP3/2P2N2/PP3PPP/RNBQKB1R w KQkq - 1 5": [
+    "B27",
+    "Modern Defense: Standard Line, Pterodactyl Defense, Western Variation, Pterodactyl Variation"
   ],
   "rnbqkbnr/pp1ppppp/8/2p5/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 0 2": [
     "B27",
@@ -17003,22 +17003,6 @@
     "B41",
     "Sicilian Defense: Kan Variation"
   ],
-  "r1bqk2r/1p1p1ppp/p1n1pn2/8/1bPNP3/2N5/PPB2PPP/R1BQK2R b KQkq - 6 8": [
-    "B41",
-    "Sicilian Defense: Kan Variation, Maróczy Bind Formation, Bronstein Variation"
-  ],
-  "r1bqk2r/1p1p1ppp/p1n1pn2/8/1bPNP3/2NB4/PP3PPP/R1BQK2R w KQkq - 5 8": [
-    "B41",
-    "Sicilian Defense: Kan Variation, Maróczy Bind Formation, Bronstein Variation"
-  ],
-  "rnbqkbnr/1p1p1p1p/p3p1p1/8/2PNP3/8/PP3PPP/RNBQKB1R w KQkq - 0 6": [
-    "B41",
-    "Sicilian Defense: Kan Variation, Maróczy Bind Formation, Hedgehog Variation"
-  ],
-  "rnbqkbnr/1p1p1ppp/p3p3/8/2PNP3/8/PP3PPP/RNBQKB1R b KQkq - 0 5": [
-    "B41",
-    "Sicilian Defense: Kan Variation, Maróczy Bind Formation, Réti Variation"
-  ],
   "rnbqkbnr/1p1p1ppp/p3p3/8/3NP3/8/PPP1BPPP/RNBQK2R b KQkq - 1 5": [
     "B41",
     "Sicilian Defense: Kan Variation, 5.Be2"
@@ -17063,21 +17047,21 @@
     "B41",
     "Sicilian Defense: Kan Variation, 5.g3"
   ],
-  "rnbqkb1r/1p3p1p/p2ppnp1/8/2PNP3/3B4/PP3PPP/RNBQ1RK1 w kq - 0 8": [
-    "B42",
-    "Sicilian Defense: Kan Variation, Gipslis Variation"
+  "r1bqk2r/1p1p1ppp/p1n1pn2/8/1bPNP3/2N5/PPB2PPP/R1BQK2R b KQkq - 6 8": [
+    "B41",
+    "Sicilian Defense: Kan Variation, Maróczy Bind Formation, Bronstein Variation"
   ],
-  "rnbqkbnr/1p1p1ppp/p3p3/8/3NP3/3B4/PPP2PPP/RNBQK2R b KQkq - 1 5": [
-    "B42",
-    "Sicilian Defense: Kan Variation, Modern Variation"
+  "r1bqk2r/1p1p1ppp/p1n1pn2/8/1bPNP3/2NB4/PP3PPP/R1BQK2R w KQkq - 5 8": [
+    "B41",
+    "Sicilian Defense: Kan Variation, Maróczy Bind Formation, Bronstein Variation"
   ],
-  "rnbqk1nr/1p1p1ppp/p3p3/2b5/3NP3/3B4/PPP2PPP/RNBQK2R w KQkq - 2 6": [
-    "B42",
-    "Sicilian Defense: Kan Variation, Polugaevsky Variation"
+  "rnbqkbnr/1p1p1p1p/p3p1p1/8/2PNP3/8/PP3PPP/RNBQKB1R w KQkq - 0 6": [
+    "B41",
+    "Sicilian Defense: Kan Variation, Maróczy Bind Formation, Hedgehog Variation"
   ],
-  "rnbqkbnr/1p1p1p1p/p3p1p1/8/3NP3/3B4/PPP2PPP/RNBQK2R w KQkq - 0 6": [
-    "B42",
-    "Sicilian Defense: Kan Variation, Swiss Cheese Variation"
+  "rnbqkbnr/1p1p1ppp/p3p3/8/2PNP3/8/PP3PPP/RNBQKB1R b KQkq - 0 5": [
+    "B41",
+    "Sicilian Defense: Kan Variation, Maróczy Bind Formation, Réti Variation"
   ],
   "r1bqkbnr/1p1p1ppp/p1n1p3/8/3NP3/3B4/PPP2PPP/RNBQK2R w KQkq - 2 6": [
     "B42",
@@ -17131,25 +17115,25 @@
     "B42",
     "Sicilian Defense: Kan Variation, 5.Bd3 Qc7"
   ],
+  "rnbqkb1r/1p3p1p/p2ppnp1/8/2PNP3/3B4/PP3PPP/RNBQ1RK1 w kq - 0 8": [
+    "B42",
+    "Sicilian Defense: Kan Variation, Gipslis Variation"
+  ],
+  "rnbqkbnr/1p1p1ppp/p3p3/8/3NP3/3B4/PPP2PPP/RNBQK2R b KQkq - 1 5": [
+    "B42",
+    "Sicilian Defense: Kan Variation, Modern Variation"
+  ],
+  "rnbqk1nr/1p1p1ppp/p3p3/2b5/3NP3/3B4/PPP2PPP/RNBQK2R w KQkq - 2 6": [
+    "B42",
+    "Sicilian Defense: Kan Variation, Polugaevsky Variation"
+  ],
   "rnbqk1nr/bp1p1ppp/p3p3/8/4P3/1N1B4/PPP2PPP/RNBQK2R w KQkq - 4 7": [
     "B42",
     "Sicilian Defense: Kan Variation, Polugaevsky Variation, 6.Nb3 Ba7"
   ],
-  "rnbqkbnr/1p1p1ppp/p3p3/8/3NP3/2N5/PPP2PPP/R1BQKB1R b KQkq - 1 5": [
-    "B43",
-    "Sicilian Defense: Kan Variation, Knight Variation"
-  ],
-  "rnbqkbnr/3p1ppp/p3p3/1p6/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 6": [
-    "B43",
-    "Sicilian Defense: Kan Variation, Wing Attack"
-  ],
-  "rnb1k1nr/3p1ppp/pq2p3/1pb5/3NP1Q1/2NBB3/PPP2PPP/R3K2R b KQkq - 5 8": [
-    "B43",
-    "Sicilian Defense: Kan Variation, Wing Attack, Christiansen's Dream"
-  ],
-  "rnb1kbnr/3p1ppp/pq2p3/1p6/4P3/2NB1N2/PPP2PPP/R1BQK2R b KQkq - 3 7": [
-    "B43",
-    "Sicilian Defense: Kan Variation, Wing Attack, Spraggett Attack"
+  "rnbqkbnr/1p1p1p1p/p3p1p1/8/3NP3/3B4/PPP2PPP/RNBQK2R w KQkq - 0 6": [
+    "B42",
+    "Sicilian Defense: Kan Variation, Swiss Cheese Variation"
   ],
   "rnb1kbnr/1pqp1ppp/p3p3/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 2 6": [
     "B43",
@@ -17202,6 +17186,22 @@
   "rnbqkbnr/1p3ppp/p2pp3/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 6": [
     "B43",
     "Sicilian Defense: Kan Variation, 5.Nc3 d6"
+  ],
+  "rnbqkbnr/1p1p1ppp/p3p3/8/3NP3/2N5/PPP2PPP/R1BQKB1R b KQkq - 1 5": [
+    "B43",
+    "Sicilian Defense: Kan Variation, Knight Variation"
+  ],
+  "rnbqkbnr/3p1ppp/p3p3/1p6/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 6": [
+    "B43",
+    "Sicilian Defense: Kan Variation, Wing Attack"
+  ],
+  "rnb1k1nr/3p1ppp/pq2p3/1pb5/3NP1Q1/2NBB3/PPP2PPP/R3K2R b KQkq - 5 8": [
+    "B43",
+    "Sicilian Defense: Kan Variation, Wing Attack, Christiansen's Dream"
+  ],
+  "rnb1kbnr/3p1ppp/pq2p3/1p6/4P3/2NB1N2/PPP2PPP/R1BQK2R b KQkq - 3 7": [
+    "B43",
+    "Sicilian Defense: Kan Variation, Wing Attack, Spraggett Attack"
   ],
   "r1bqkbnr/pp1p1ppp/2n1p3/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq - 1 5": [
     "B44",
@@ -17262,26 +17262,6 @@
   "r1bq1rk1/4bppp/ppnppn2/8/2P1P3/N1N5/PP2BPPP/R1BQ1RK1 w - - 0 11": [
     "B44",
     "Sicilian Defense: Taimanov Variation, Modern Line"
-  ],
-  "r1bq1rk1/4bppp/ppnppn2/8/2P1P3/N1N1B3/PP2BPPP/R2Q1RK1 b - - 1 11": [
-    "B44",
-    "Sicilian Defense: Taimanov Variation, Szén Variation, Hedgehog System, 11.Be3"
-  ],
-  "r2q1rk1/1b2bppp/ppnppn2/8/2P1P3/N1N1B3/PP2BPPP/R2Q1RK1 w - - 2 12": [
-    "B44",
-    "Sicilian Defense: Taimanov Variation, Szén Variation, Hedgehog System, 11.Be3 Bb7"
-  ],
-  "r2q1rk1/1b2bppp/ppnppn2/8/2P1P3/NQN1B3/PP2BPPP/R4RK1 b - - 3 12": [
-    "B44",
-    "Sicilian Defense: Taimanov Variation, Szén Variation, Hedgehog System, 11.Be3 Bb7 12.Qb3"
-  ],
-  "r2q1rk1/3bbppp/ppnppn2/8/2P1P3/N1N1B3/PP2BPPP/R2Q1RK1 w - - 2 12": [
-    "B44",
-    "Sicilian Defense: Taimanov Variation, Szén Variation, Hedgehog System, 11.Be3 Bd7"
-  ],
-  "r1bq1rk1/4bppp/pp1ppn2/4n3/2P1P3/N1N1B3/PP2BPPP/R2Q1RK1 w - - 2 12": [
-    "B44",
-    "Sicilian Defense: Taimanov Variation, Szén Variation, Hedgehog System, 11.Be3 Ne5"
   ],
   "r1bqkbnr/pp1p1ppp/2n1p3/1N6/4P3/8/PPP2PPP/RNBQKB1R b KQkq - 2 5": [
     "B44",
@@ -17350,6 +17330,26 @@
   "r1bqkb1r/pp3ppp/2nppn2/8/2P1P3/2N5/PP3PPP/RNBQKB1R b KQkq - 2 7": [
     "B44",
     "Sicilian Defense: Taimanov Variation, Szén Variation, 7.N5c3"
+  ],
+  "r1bq1rk1/4bppp/ppnppn2/8/2P1P3/N1N1B3/PP2BPPP/R2Q1RK1 b - - 1 11": [
+    "B44",
+    "Sicilian Defense: Taimanov Variation, Szén Variation, Hedgehog System, 11.Be3"
+  ],
+  "r2q1rk1/1b2bppp/ppnppn2/8/2P1P3/N1N1B3/PP2BPPP/R2Q1RK1 w - - 2 12": [
+    "B44",
+    "Sicilian Defense: Taimanov Variation, Szén Variation, Hedgehog System, 11.Be3 Bb7"
+  ],
+  "r2q1rk1/1b2bppp/ppnppn2/8/2P1P3/NQN1B3/PP2BPPP/R4RK1 b - - 3 12": [
+    "B44",
+    "Sicilian Defense: Taimanov Variation, Szén Variation, Hedgehog System, 11.Be3 Bb7 12.Qb3"
+  ],
+  "r2q1rk1/3bbppp/ppnppn2/8/2P1P3/N1N1B3/PP2BPPP/R2Q1RK1 w - - 2 12": [
+    "B44",
+    "Sicilian Defense: Taimanov Variation, Szén Variation, Hedgehog System, 11.Be3 Bd7"
+  ],
+  "r1bq1rk1/4bppp/pp1ppn2/4n3/2P1P3/N1N1B3/PP2BPPP/R2Q1RK1 w - - 2 12": [
+    "B44",
+    "Sicilian Defense: Taimanov Variation, Szén Variation, Hedgehog System, 11.Be3 Ne5"
   ],
   "r1bqk1nr/pp1p1ppp/2n1p3/8/1b1NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 3 6": [
     "B45",
@@ -20755,18 +20755,6 @@
     "B95",
     "Sicilian Defense: Najdorf Variation, 6...e6 7.Qf3 h6"
   ],
-  "rnb1kb1r/5ppp/p3pP2/1p2q1B1/3N4/2N5/PPP3PP/R2QKB1R w KQkq - 1 11": [
-    "B96",
-    "Sicilian Defense: Najdorf Variation, Polugaevsky Variation"
-  ],
-  "rnbqkb1r/5ppp/p3pn2/1p2P1B1/3N4/2N5/PPP3PP/R2QKB1R b KQkq - 0 9": [
-    "B96",
-    "Sicilian Defense: Najdorf Variation, Polugaevsky Variation"
-  ],
-  "rnbqkb1r/5ppp/p3pn2/1p2p1B1/3N1P2/2N5/PPP3PP/R2QKB1R w KQkq - 0 9": [
-    "B96",
-    "Sicilian Defense: Najdorf Variation, Polugaevsky Variation"
-  ],
   "rnbqkb1r/1p3ppp/p2ppn2/6B1/3NPP2/2N5/PPP3PP/R2QKB1R b KQkq - 0 7": [
     "B96",
     "Sicilian Defense: Najdorf Variation"
@@ -20859,7 +20847,19 @@
     "B96",
     "Sicilian Defense: Najdorf Variation, New Classical Defense"
   ],
+  "rnb1kb1r/5ppp/p3pP2/1p2q1B1/3N4/2N5/PPP3PP/R2QKB1R w KQkq - 1 11": [
+    "B96",
+    "Sicilian Defense: Najdorf Variation, Polugaevsky Variation"
+  ],
   "rnbqkb1r/5ppp/p2ppn2/1p4B1/3NPP2/2N5/PPP3PP/R2QKB1R w KQkq - 0 8": [
+    "B96",
+    "Sicilian Defense: Najdorf Variation, Polugaevsky Variation"
+  ],
+  "rnbqkb1r/5ppp/p3pn2/1p2P1B1/3N4/2N5/PPP3PP/R2QKB1R b KQkq - 0 9": [
+    "B96",
+    "Sicilian Defense: Najdorf Variation, Polugaevsky Variation"
+  ],
+  "rnbqkb1r/5ppp/p3pn2/1p2p1B1/3N1P2/2N5/PPP3PP/R2QKB1R w KQkq - 0 9": [
     "B96",
     "Sicilian Defense: Najdorf Variation, Polugaevsky Variation"
   ],
@@ -21403,6 +21403,10 @@
     "C00",
     "French Defense: King's Indian Attack, French-Hiva Gambit"
   ],
+  "r1bqkb1r/ppp2ppp/2n1pn2/3p4/4P3/3P1N2/PPPNBPPP/R1BQK2R b KQkq - 5 5": [
+    "C00",
+    "French Defense: King's Indian Attack, Reversed Philidor Formation"
+  ],
   "rnbqkb1r/ppp2ppp/4pn2/3p4/4P3/3P1N2/PPPN1PPP/R1BQKB1R b KQkq - 3 4": [
     "C00",
     "French Defense: King's Indian Attack, Reversed Philidor Formation"
@@ -21462,10 +21466,6 @@
   "rnbqkbnr/pppp1ppp/4p3/8/4P3/2N5/PPPP1PPP/R1BQKBNR b KQkq - 1 2": [
     "C00",
     "French Defense: Queen's Knight Variation"
-  ],
-  "r1bqkb1r/ppp2ppp/2n1pn2/3p4/4P3/3P1N2/PPPNBPPP/R1BQK2R b KQkq - 5 5": [
-    "C00",
-    "French Defense: King's Indian Attack, Reversed Philidor Formation"
   ],
   "rnbqkbnr/pppp1ppp/4p3/8/4P3/6P1/PPPP1P1P/RNBQKBNR b KQkq - 0 2": [
     "C00",
@@ -21875,13 +21875,13 @@
     "C03",
     "French Defense: Tarrasch Variation, Morozevich Variation"
   ],
-  "r1bqkb1r/ppp2ppp/2n1pn2/3p4/3PP3/5N2/PPPN1PPP/R1BQKB1R w KQkq - 4 5": [
-    "C04",
-    "French Defense: Tarrasch Variation, Guimard Defense, Main Line"
-  ],
   "r1bqkb1r/ppp2ppp/2n1pn2/3pP3/3P4/5N2/PPPN1PPP/R1BQKB1R b KQkq - 0 5": [
     "C04",
     "French Defense: Tarrasch Variation, Guimard Defense, 4.Ngf3 Nf6 5.e5"
+  ],
+  "r1bqkb1r/ppp2ppp/2n1pn2/3p4/3PP3/5N2/PPPN1PPP/R1BQKB1R w KQkq - 4 5": [
+    "C04",
+    "French Defense: Tarrasch Variation, Guimard Defense, Main Line"
   ],
   "r1bqkb1r/pppn1ppp/2n1p3/3pP3/3P4/5N2/PPPN1PPP/R1BQKB1R w KQkq - 1 6": [
     "C04",
@@ -22035,10 +22035,6 @@
     "C05",
     "French Defense: Tarrasch Variation, Pawn Center Variation"
   ],
-  "r1bqkb1r/pp1n1ppp/2n1p3/3pP3/3P4/3B4/PP1NNPPP/R1BQK2R b KQkq - 0 8": [
-    "C06",
-    "French Defense: Tarrasch Variation, Closed Variation, Main Line"
-  ],
   "r1b1kb1r/pp1n1ppp/1qn1p3/3pP3/3P4/3B4/PP1NNPPP/R1BQK2R w KQkq - 1 9": [
     "C06",
     "French Defense: Tarrasch Variation, Closed Variation, 8...Qb6"
@@ -22115,6 +22111,10 @@
     "C06",
     "French Defense: Tarrasch Variation, Closed Variation, Leningrad Variation, 9.O-O a5"
   ],
+  "r1bqkb1r/pp1n1ppp/2n1p3/3pP3/3P4/3B4/PP1NNPPP/R1BQK2R b KQkq - 0 8": [
+    "C06",
+    "French Defense: Tarrasch Variation, Closed Variation, Main Line"
+  ],
   "r1bqkb1r/pp3ppp/1nn1p3/3pP3/3P4/3B4/PP1NNPPP/R1BQK2R w KQkq - 1 9": [
     "C06",
     "French Defense: Tarrasch Variation, Leningrad Variation"
@@ -22134,18 +22134,6 @@
   "rnbqkbnr/pp3ppp/4p3/2pp4/3PP3/8/PPPN1PPP/R1BQKBNR w KQkq - 0 4": [
     "C07",
     "French Defense: Tarrasch Variation, Open Variation"
-  ],
-  "rnbqkbnr/pp3ppp/4p3/2pp4/3PP3/5N2/PPPN1PPP/R1BQKB1R b KQkq - 1 4": [
-    "C07",
-    "French Defense: Tarrasch Variation, Open Variation, Euwe-Keres Line"
-  ],
-  "rnbqkb1r/pp3ppp/4pn2/2pP4/3P4/8/PPPN1PPP/R1BQKBNR w KQkq - 1 5": [
-    "C07",
-    "French Defense: Tarrasch Variation, Open Variation, Shaposhnikov Gambit"
-  ],
-  "rnbqkbnr/pp3ppp/4p3/2pp4/3PP3/2P5/PP1N1PPP/R1BQKBNR b KQkq - 0 4": [
-    "C07",
-    "French Defense: Tarrasch Variation, Open Variation, Süchting Line"
   ],
   "r1bqkbnr/pp3ppp/2n1p3/2pp4/3PP3/5N2/PPPN1PPP/R1BQKB1R w KQkq - 2 5": [
     "C07",
@@ -22207,13 +22195,21 @@
     "C07",
     "French Defense: Tarrasch Variation, Open Variation, 4.exd5 Qxd5, Main Line, 10.Qxd4 Qxd4"
   ],
+  "rnbqkbnr/pp3ppp/4p3/2pp4/3PP3/5N2/PPPN1PPP/R1BQKB1R b KQkq - 1 4": [
+    "C07",
+    "French Defense: Tarrasch Variation, Open Variation, Euwe-Keres Line"
+  ],
+  "rnbqkb1r/pp3ppp/4pn2/2pP4/3P4/8/PPPN1PPP/R1BQKBNR w KQkq - 1 5": [
+    "C07",
+    "French Defense: Tarrasch Variation, Open Variation, Shaposhnikov Gambit"
+  ],
+  "rnbqkbnr/pp3ppp/4p3/2pp4/3PP3/2P5/PP1N1PPP/R1BQKBNR b KQkq - 0 4": [
+    "C07",
+    "French Defense: Tarrasch Variation, Open Variation, Süchting Line"
+  ],
   "rnbqkbnr/pp3ppp/8/2pp4/3P4/8/PPPN1PPP/R1BQKBNR w KQkq - 0 5": [
     "C08",
     "French Defense: Tarrasch Variation, Open Variation"
-  ],
-  "rnbqkbnr/pp3ppp/8/3p4/2pP4/5N2/PPPN1PPP/R1BQKB1R w KQkq - 0 6": [
-    "C08",
-    "French Defense: Tarrasch Variation, Open Variation, Advance Line"
   ],
   "rn1qkbnr/pp1b1ppp/8/1Bpp4/3P4/8/PPPN1PPP/R1BQK1NR w KQkq - 2 6": [
     "C08",
@@ -22263,9 +22259,9 @@
     "C08",
     "French Defense: Tarrasch Variation, Open Variation, 4.exd5 exd5 5.Ngf3 a6 6.Be2"
   ],
-  "r1bqkbnr/pp3ppp/2n5/2pp4/3P4/5N2/PPPN1PPP/R1BQKB1R w KQkq - 2 6": [
-    "C09",
-    "French Defense: Tarrasch Variation, Open Variation, Main Line"
+  "rnbqkbnr/pp3ppp/8/3p4/2pP4/5N2/PPPN1PPP/R1BQKB1R w KQkq - 0 6": [
+    "C08",
+    "French Defense: Tarrasch Variation, Open Variation, Advance Line"
   ],
   "r1bqkbnr/pp3ppp/2n5/1Bpp4/3P4/5N2/PPPN1PPP/R1BQK2R b KQkq - 3 6": [
     "C09",
@@ -22288,6 +22284,10 @@
     "French Defense: Tarrasch Variation, Open Variation, 7.dxc5"
   ],
   "r1bqk2r/pp2nppp/2n5/1Bbp4/8/5N2/PPPN1PPP/R1BQ1RK1 w kq - 2 9": [
+    "C09",
+    "French Defense: Tarrasch Variation, Open Variation, Main Line"
+  ],
+  "r1bqkbnr/pp3ppp/2n5/2pp4/3P4/5N2/PPPN1PPP/R1BQKB1R w KQkq - 2 6": [
     "C09",
     "French Defense: Tarrasch Variation, Open Variation, Main Line"
   ],
@@ -22715,26 +22715,6 @@
     "C13",
     "French Defense: Alekhine-Chatard Attack"
   ],
-  "rnb1k2r/pppn1ppp/4p3/3pP1q1/3P4/2N5/PPP2PP1/R2QKBNR w KQkq - 0 8": [
-    "C13",
-    "French Defense: Alekhine-Chatard Attack, Albin-Chatard Gambit"
-  ],
-  "rnbqk2r/pp1nbppp/4p3/2ppP1B1/3P3P/2N5/PPP2PP1/R2QKBNR w KQkq - 0 7": [
-    "C13",
-    "French Defense: Alekhine-Chatard Attack, Breyer Variation"
-  ],
-  "rnbqk2r/1ppnbppp/p3p3/3pP1B1/3P3P/2N5/PPP2PP1/R2QKBNR w KQkq - 0 7": [
-    "C13",
-    "French Defense: Alekhine-Chatard Attack, Maróczy Variation"
-  ],
-  "rnbq1rk1/pppnbppp/4p3/3pP1B1/3P3P/2N5/PPP2PP1/R2QKBNR w KQ - 1 7": [
-    "C13",
-    "French Defense: Alekhine-Chatard Attack, Spielmann Variation"
-  ],
-  "rnbqk2r/pppnb1pp/4pp2/3pP1B1/3P3P/2N5/PPP2PP1/R2QKBNR w KQkq - 0 7": [
-    "C13",
-    "French Defense: Alekhine-Chatard Attack, Teichmann Variation"
-  ],
   "rnbqk2r/pppn1ppp/4p3/3pP1b1/3P3P/2N5/PPP2PP1/R2QKBNR w KQkq - 0 7": [
     "C13",
     "French Defense: Alekhine-Chatard Attack, 6...Bxg5"
@@ -22742,6 +22722,14 @@
   "rnb1k2r/pppnqppp/4p3/3pP3/3P1N2/2N5/PPP2PP1/R2QKB1R b KQkq - 3 9": [
     "C13",
     "French Defense: Alekhine-Chatard Attack, 6...Bxg5 7.hxg5 Qxg5 8.Nh3 Qe7 9.Nf4"
+  ],
+  "rnb1k2r/pppn1ppp/4p3/3pP1q1/3P4/2N5/PPP2PP1/R2QKBNR w KQkq - 0 8": [
+    "C13",
+    "French Defense: Alekhine-Chatard Attack, Albin-Chatard Gambit"
+  ],
+  "rnbqk2r/pp1nbppp/4p3/2ppP1B1/3P3P/2N5/PPP2PP1/R2QKBNR w KQkq - 0 7": [
+    "C13",
+    "French Defense: Alekhine-Chatard Attack, Breyer Variation"
   ],
   "rnbqk2r/pp1nBppp/4p3/2ppP3/3P3P/2N5/PPP2PP1/R2QKBNR b KQkq - 0 7": [
     "C13",
@@ -22751,9 +22739,29 @@
     "C13",
     "French Defense: Alekhine-Chatard Attack, Breyer Variation, 7.Bxe7 Kxe7"
   ],
+  "rnbqk2r/1ppnbppp/p3p3/3pP1B1/3P3P/2N5/PPP2PP1/R2QKBNR w KQkq - 0 7": [
+    "C13",
+    "French Defense: Alekhine-Chatard Attack, Maróczy Variation"
+  ],
   "rnbqk2r/1ppn1ppp/p3p3/3pP1b1/3P2QP/2N5/PPP2PP1/R3KBNR w KQkq - 0 8": [
     "C13",
     "French Defense: Alekhine-Chatard Attack, Maróczy Variation, 7.Qg4 Bxg5"
+  ],
+  "rnbq1rk1/pppnbppp/4p3/3pP1B1/3P3P/2N5/PPP2PP1/R2QKBNR w KQ - 1 7": [
+    "C13",
+    "French Defense: Alekhine-Chatard Attack, Spielmann Variation"
+  ],
+  "rnbqk2r/pppnb1pp/4pp2/3pP1B1/3P3P/2N5/PPP2PP1/R2QKBNR w KQkq - 0 7": [
+    "C13",
+    "French Defense: Alekhine-Chatard Attack, Teichmann Variation"
+  ],
+  "rnbqk2r/ppp1bppp/4pn2/3pP1B1/3P4/2N5/PPP2PPP/R2QKBNR b KQkq - 0 5": [
+    "C13",
+    "French Defense: Classical Variation, 5.e5"
+  ],
+  "rnbqk2r/pppnbppp/4p3/3pP1B1/3P4/2N5/PPP2PPP/R2QKBNR w KQkq - 1 6": [
+    "C13",
+    "French Defense: Classical Variation, 5.e5 Nfd7"
   ],
   "rnbqk1nr/p1p1bppp/1p2p3/3pP3/3P4/2N1B3/PPP2PPP/R2QKBNR w KQkq - 0 7": [
     "C13",
@@ -22775,21 +22783,13 @@
     "C13",
     "French Defense: Classical Variation, Tartakower Variation"
   ],
-  "rnbqk1nr/ppp1bppp/4p3/3pP1B1/3P4/2N5/PPP2PPP/R2QKBNR w KQkq - 1 6": [
-    "C13",
-    "French Defense: Classical Variation, Vistaneckis Variation"
-  ],
-  "rnbqk2r/ppp1bppp/4pn2/3pP1B1/3P4/2N5/PPP2PPP/R2QKBNR b KQkq - 0 5": [
-    "C13",
-    "French Defense: Classical Variation, 5.e5"
-  ],
-  "rnbqk2r/pppnbppp/4p3/3pP1B1/3P4/2N5/PPP2PPP/R2QKBNR w KQkq - 1 6": [
-    "C13",
-    "French Defense: Classical Variation, 5.e5 Nfd7"
-  ],
   "rnbqk2r/ppp1Bppp/4p3/3pP3/3Pn3/2N5/PPP2PPP/R2QKBNR b KQkq - 0 6": [
     "C13",
     "French Defense: Classical Variation, Tartakower Variation, 6.Bxe7"
+  ],
+  "rnbqk1nr/ppp1bppp/4p3/3pP1B1/3P4/2N5/PPP2PPP/R2QKBNR w KQkq - 1 6": [
+    "C13",
+    "French Defense: Classical Variation, Vistaneckis Variation"
   ],
   "rnb1k2r/pppnqppp/4p3/3pP3/3P4/2N5/PPP2PPP/R2QKBNR w KQkq - 0 7": [
     "C14",
@@ -23103,21 +23103,17 @@
     "C17",
     "French Defense: Winawer Variation, Advance Variation"
   ],
-  "rnbqk1nr/pp3ppp/4p3/2ppP3/1b1P2Q1/2N5/PPP2PPP/R1B1KBNR b KQkq - 1 5": [
-    "C17",
-    "French Defense: Winawer Variation, Advance Variation, Moscow Variation"
-  ],
   "rnbqk1nr/pp3ppp/4p3/2PpP3/1b6/2N5/PPP2PPP/R1BQKBNR b KQkq - 0 5": [
     "C17",
     "French Defense: Winawer Variation, Advance Variation, 5.dxc5"
   ],
+  "rnbqk1nr/pp3ppp/4p3/2ppP3/1b1P2Q1/2N5/PPP2PPP/R1B1KBNR b KQkq - 1 5": [
+    "C17",
+    "French Defense: Winawer Variation, Advance Variation, Moscow Variation"
+  ],
   "rnbqk1nr/pp3ppp/4p3/2ppP3/1b1P4/2N5/PPPB1PPP/R2QKBNR b KQkq - 1 5": [
     "C17",
     "French Defense: Winawer Variation, Bogoljubow Variation"
-  ],
-  "rnbqk2r/pp2nppp/4p3/2ppP3/1b1P1P2/2N5/PPPB2PP/R2QKBNR b KQkq - 0 6": [
-    "C17",
-    "French Defense: Winawer Variation, Bogoljubow Variation, Icelandic Defense"
   ],
   "rnbqk2r/pp2nppp/4p3/2ppP3/1b1P4/2N5/PPPB1PPP/R2QKBNR w KQkq - 2 6": [
     "C17",
@@ -23138,6 +23134,10 @@
   "rnbqk1nr/pp3ppp/4p3/3pP3/1b1p4/2N5/PPPB1PPP/R2QKBNR w KQkq - 0 6": [
     "C17",
     "French Defense: Winawer Variation, Bogoljubow Variation, 5...cxd4"
+  ],
+  "rnbqk2r/pp2nppp/4p3/2ppP3/1b1P1P2/2N5/PPPB2PP/R2QKBNR b KQkq - 0 6": [
+    "C17",
+    "French Defense: Winawer Variation, Bogoljubow Variation, Icelandic Defense"
   ],
   "rnbqk1nr/pp3ppp/4p3/3pP3/1P6/2p5/1PP2PPP/R1BQKBNR w KQkq - 0 7": [
     "C17",
@@ -23407,9 +23407,13 @@
     "C20",
     "King's Pawn Game"
   ],
-  "rnbqkb1r/pppp1ppp/5n2/4Q3/4P3/8/PPPP1PPP/RNB1KBNR b KQkq - 0 3": [
+  "rnbqkbnr/pppp1ppp/8/4p3/4P3/7N/PPPP1PPP/RNBQKB1R b KQkq - 1 2": [
     "C20",
-    "King's Pawn Game: Wayward Queen Attack, Kiddie Countergambit"
+    "King's Pawn Game, Basman Attack"
+  ],
+  "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPPKPPP/RNBQ1BNR b kq - 1 2": [
+    "C20",
+    "King's Pawn Game, Bongcloud Variation"
   ],
   "rnbqkbnr/ppp2ppp/8/3pp3/2P1P3/8/PP1P1PPP/RNBQKBNR w KQkq - 0 3": [
     "C20",
@@ -23475,6 +23479,10 @@
     "C20",
     "King's Pawn Game: Wayward Queen Attack"
   ],
+  "rnbqkb1r/pppp1ppp/5n2/4Q3/4P3/8/PPPP1PPP/RNB1KBNR b KQkq - 0 3": [
+    "C20",
+    "King's Pawn Game: Wayward Queen Attack, Kiddie Countergambit"
+  ],
   "rnbqkb1r/pppp1ppp/5n2/4p2Q/4P3/8/PPPP1PPP/RNB1KBNR w KQkq - 2 3": [
     "C20",
     "King's Pawn Game: Wayward Queen Attack, Kiddie Countergambit"
@@ -23490,14 +23498,6 @@
   "r1bqk2r/pppp1ppp/5n2/2b5/3nP3/5N2/PP2QPPP/RNB1KB1R w KQkq - 0 7": [
     "C20",
     "King's Pawn Game: van Hooydoon Gambit"
-  ],
-  "rnbqkbnr/pppp1ppp/8/4p3/4P3/7N/PPPP1PPP/RNBQKB1R b KQkq - 1 2": [
-    "C20",
-    "King's Pawn Game, Basman Attack"
-  ],
-  "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPPKPPP/RNBQ1BNR b kq - 1 2": [
-    "C20",
-    "King's Pawn Game, Bongcloud Variation"
   ],
   "rnbqkbnr/ppp2ppp/8/3pp3/4P3/3P4/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
     "C20",
@@ -23635,13 +23635,9 @@
     "C21",
     "Danish Gambit Accepted: 4.Bc4"
   ],
-  "rnbqk2r/ppp2ppp/5P2/3p4/2B5/2N5/P4PPP/R2QK1NR b KQkq - 0 9": [
+  "rnb1kbnr/ppppqppp/8/8/2B1P3/8/PB3PPP/RN1QK1NR w KQkq - 1 6": [
     "C21",
-    "Danish Gambit Accepted: Classical Defense"
-  ],
-  "rnbqkb1r/pppp1ppp/5n2/8/2B1P3/5N2/PB3PPP/RN1QK2R b KQkq - 2 6": [
-    "C21",
-    "Danish Gambit Accepted: Classical Defense"
+    "Danish Gambit Accepted: Chigorin Defense"
   ],
   "rnbqk1r1/ppp2pPp/8/8/2p5/2N5/P4PPP/R2QK1NR w KQq - 1 11": [
     "C21",
@@ -23651,7 +23647,27 @@
     "C21",
     "Danish Gambit Accepted: Classical Defense"
   ],
+  "rnbqk2r/ppp2ppp/5P2/3p4/1bB5/2B5/P4PPP/RN1QK1NR b KQkq - 2 8": [
+    "C21",
+    "Danish Gambit Accepted: Classical Defense"
+  ],
+  "rnbqk2r/ppp2ppp/5P2/3p4/1bB5/8/PB3PPP/RN1QK1NR w KQkq - 1 8": [
+    "C21",
+    "Danish Gambit Accepted: Classical Defense"
+  ],
+  "rnbqk2r/ppp2ppp/5P2/3p4/2B5/2N5/P4PPP/R2QK1NR b KQkq - 0 9": [
+    "C21",
+    "Danish Gambit Accepted: Classical Defense"
+  ],
+  "rnbqk2r/ppp2ppp/5P2/3p4/2B5/2b5/P4PPP/RN1QK1NR w KQkq - 0 9": [
+    "C21",
+    "Danish Gambit Accepted: Classical Defense"
+  ],
   "rnbqk2r/ppp2ppp/5P2/8/2p5/2N5/P4PPP/R2QK1NR w KQkq - 0 10": [
+    "C21",
+    "Danish Gambit Accepted: Classical Defense"
+  ],
+  "rnbqkb1r/ppp2ppp/5P2/3p4/2B5/8/PB3PPP/RN1QK1NR b KQkq - 0 7": [
     "C21",
     "Danish Gambit Accepted: Classical Defense"
   ],
@@ -23663,23 +23679,7 @@
     "C21",
     "Danish Gambit Accepted: Classical Defense"
   ],
-  "rnb1kbnr/ppppqppp/8/8/2B1P3/8/PB3PPP/RN1QK1NR w KQkq - 1 6": [
-    "C21",
-    "Danish Gambit Accepted: Chigorin Defense"
-  ],
-  "rnbqk2r/ppp2ppp/5P2/3p4/1bB5/2B5/P4PPP/RN1QK1NR b KQkq - 2 8": [
-    "C21",
-    "Danish Gambit Accepted: Classical Defense"
-  ],
-  "rnbqk2r/ppp2ppp/5P2/3p4/1bB5/8/PB3PPP/RN1QK1NR w KQkq - 1 8": [
-    "C21",
-    "Danish Gambit Accepted: Classical Defense"
-  ],
-  "rnbqk2r/ppp2ppp/5P2/3p4/2B5/2b5/P4PPP/RN1QK1NR w KQkq - 0 9": [
-    "C21",
-    "Danish Gambit Accepted: Classical Defense"
-  ],
-  "rnbqkb1r/ppp2ppp/5P2/3p4/2B5/8/PB3PPP/RN1QK1NR b KQkq - 0 7": [
+  "rnbqkb1r/pppp1ppp/5n2/8/2B1P3/5N2/PB3PPP/RN1QK2R b KQkq - 2 6": [
     "C21",
     "Danish Gambit Accepted: Classical Defense"
   ],
@@ -24335,10 +24335,6 @@
     "C27",
     "Bishop's Opening: Boden-Kieseritzky Gambit, Lichtenhein Defense"
   ],
-  "rnbqkb1r/pppp1ppp/3n4/4p2Q/2B5/2N5/PPPP1PPP/R1B1K1NR w KQkq - 2 5": [
-    "C27",
-    "Vienna Opening: Falkbeer Defense"
-  ],
   "rnbqkb1r/pppp1ppp/8/4p3/2B1N3/8/PPPP1PPP/R1BQK1NR b KQkq - 0 4": [
     "C27",
     "Vienna Opening: 3.Bc4 Nxe4 4.Nxe4"
@@ -24366,6 +24362,10 @@
   "r1bqkb1r/pppp1ppp/2nn4/4p2Q/3P4/1BN5/PPP2PPP/R1B1K1NR b KQkq - 0 6": [
     "C27",
     "Vienna Opening: Adams Gambit"
+  ],
+  "rnbqkb1r/pppp1ppp/3n4/4p2Q/2B5/2N5/PPPP1PPP/R1B1K1NR w KQkq - 2 5": [
+    "C27",
+    "Vienna Opening: Falkbeer Defense"
   ],
   "N1bk1b1r/pp1pq2p/2nn2p1/3Qpp2/8/1B6/PPPP1PPP/R1B1K1NR b KQ - 0 10": [
     "C27",
@@ -24543,10 +24543,6 @@
     "C29",
     "Vienna Gambit: Paulsen Attack, 5...Nxc3"
   ],
-  "rnb1kb1r/ppp2ppp/8/3pP3/4n2q/2NP4/PPP3PP/R1BQKBNR w KQkq - 1 6": [
-    "C29",
-    "Vienna Opening: Würzburger Trap"
-  ],
   "rnbqkb1r/ppp3pp/8/3pPp2/3Pn3/2N2Q2/PPP3PP/R1B1KBNR b KQkq - 0 6": [
     "C29",
     "Vienna Opening: Heyde Variation"
@@ -24586,6 +24582,10 @@
   "rnb1kb1r/ppp2ppp/8/3NP2q/8/3P1Nn1/PPP4P/R1BQKB1R b KQkq - 0 8": [
     "C29",
     "Vienna Opening: Vienna Gambit, Würzburger Trap"
+  ],
+  "rnb1kb1r/ppp2ppp/8/3pP3/4n2q/2NP4/PPP3PP/R1BQKBNR w KQkq - 1 6": [
+    "C29",
+    "Vienna Opening: Würzburger Trap"
   ],
   "rnbqkbnr/pppp1ppp/8/4p3/4PP2/8/PPPP2PP/RNBQKBNR b KQkq - 0 2": [
     "C30",
@@ -24679,15 +24679,15 @@
     "C30",
     "King's Gambit Declined: Hobbs-Zilbermints Gambit"
   ],
-  "rnb1kbnr/ppppqppp/8/4p3/4PP2/6P1/PPPP3P/RNBQKBNR w KQkq - 1 4": [
-    "C30",
-    "King's Gambit Declined: Keene Defense"
-  ],
   "rnb1kbnr/pppp1ppp/8/4p3/4PP1q/6P1/PPPP3P/RNBQKBNR b KQkq - 0 3": [
     "C30",
     "King's Gambit Declined: Keene Defense"
   ],
   "rnb1kbnr/pppp1ppp/8/4p3/4PP1q/8/PPPP2PP/RNBQKBNR w KQkq - 1 3": [
+    "C30",
+    "King's Gambit Declined: Keene Defense"
+  ],
+  "rnb1kbnr/ppppqppp/8/4p3/4PP2/6P1/PPPP3P/RNBQKBNR w KQkq - 1 4": [
     "C30",
     "King's Gambit Declined: Keene Defense"
   ],
@@ -25255,10 +25255,6 @@
     "C36",
     "King's Gambit Accepted: Scandinavian Defense, Modern Variation, 5.Nc3"
   ],
-  "rnb1kbnr/pppp1p1p/8/4N3/2B1Pppq/8/PPPP2PP/RNBQ1K1R b kq - 3 6": [
-    "C37",
-    "King's Gambit Accepted: Salvio Gambit"
-  ],
   "rnbqkbnr/pppp1p1p/8/8/2B1Ppp1/5N2/PPPP2PP/RNBQK2R w KQkq - 0 5": [
     "C37",
     "King's Gambit Accepted: 3.Nf3 g5 4.Bc4 g4"
@@ -25327,6 +25323,10 @@
     "C37",
     "King's Gambit Accepted: Middleton Countergambit"
   ],
+  "rnbqkbnr/pppp1p1p/8/8/2B1Pp2/5p2/PPPP2PP/RNBQ1RK1 w kq - 0 6": [
+    "C37",
+    "King's Gambit Accepted: Muzio Gambit"
+  ],
   "rnb1kbnr/ppppqp1p/8/8/2B1Pp2/5Q2/PPPP2PP/RNB2RK1 w kq - 1 7": [
     "C37",
     "King's Gambit Accepted: Muzio Gambit Accepted, From Defense"
@@ -25371,6 +25371,10 @@
     "C37",
     "King's Gambit Accepted: Rosentreter Gambit, Testa Variation"
   ],
+  "rnb1kbnr/pppp1p1p/8/4N3/2B1Pppq/8/PPPP2PP/RNBQ1K1R b kq - 3 6": [
+    "C37",
+    "King's Gambit Accepted: Salvio Gambit"
+  ],
   "rnb1kbnr/pppp1p1p/8/4N3/2B1Pppq/8/PPPP2PP/RNBQK2R w KQkq - 2 6": [
     "C37",
     "King's Gambit Accepted: Salvio Gambit"
@@ -25406,10 +25410,6 @@
   "rnbqkbnr/pppp1p1p/8/4N3/3PPpp1/8/PPP3PP/RNBQKB1R b KQkq - 1 5": [
     "C37",
     "King's Gambit Accepted: Sörensen Gambit"
-  ],
-  "rnbqkbnr/pppp1p1p/8/8/2B1Pp2/5p2/PPPP2PP/RNBQ1RK1 w kq - 0 6": [
-    "C37",
-    "King's Gambit Accepted: Muzio Gambit"
   ],
   "rnbqk1nb/pp3p2/2pp4/4N1p1/2BPPp2/2N5/PPP3P1/R1BQK3 b Qq - 1 10": [
     "C38",
@@ -25447,21 +25447,9 @@
     "C38",
     "King's Gambit Accepted: Traditional Variation"
   ],
-  "rnbqkb1r/ppp2p1p/5n2/3pN3/2B1PppP/8/PPPP2P1/RNBQK2R w KQkq - 0 7": [
-    "C39",
-    "King's Gambit Accepted: Kieseritzky Gambit, Berlin Defense"
-  ],
   "rnbqkbnr/pppp1p1p/8/6N1/4PppP/8/PPPP2P1/RNBQKB1R b KQkq - 1 5": [
     "C39",
     "King's Gambit Accepted: Allgaier Gambit"
-  ],
-  "rnbq1bnr/pppp1k2/7p/8/3PPppP/8/PPP3P1/RNBQKB1R b KQ - 0 7": [
-    "C39",
-    "King's Gambit Accepted: Allgaier Gambit, Thorold Attack"
-  ],
-  "rnbq1bnr/pppp1k2/7p/8/2B1PppP/8/PPPP2P1/RNBQK2R b KQ - 1 7": [
-    "C39",
-    "King's Gambit Accepted: Allgaier Gambit, Urusov Attack"
   ],
   "rnbq1bnr/pppp1k2/7p/8/4PppP/2N5/PPPP2P1/R1BQKB1R b KQ - 1 7": [
     "C39",
@@ -25479,7 +25467,15 @@
     "C39",
     "King's Gambit Accepted: Allgaier Gambit, Schlechter Defense"
   ],
+  "rnbq1bnr/pppp1k2/7p/8/3PPppP/8/PPP3P1/RNBQKB1R b KQ - 0 7": [
+    "C39",
+    "King's Gambit Accepted: Allgaier Gambit, Thorold Attack"
+  ],
   "rnbq1bnr/ppp3k1/7p/3B4/3PPppP/8/PPP3P1/RNBQK2R b KQ - 0 9": [
+    "C39",
+    "King's Gambit Accepted: Allgaier Gambit, Urusov Attack"
+  ],
+  "rnbq1bnr/pppp1k2/7p/8/2B1PppP/8/PPPP2P1/RNBQK2R b KQ - 1 7": [
     "C39",
     "King's Gambit Accepted: Allgaier Gambit, Urusov Attack"
   ],
@@ -25502,6 +25498,10 @@
   "rnbqk2r/ppp2p1p/3b4/3PN3/2BP1npP/8/PPP3P1/RN1QK2R w KQkq - 0 10": [
     "C39",
     "King's Gambit Accepted: Kieseritzky Gambit, Anderssen-Cordel Gambit"
+  ],
+  "rnbqkb1r/ppp2p1p/5n2/3pN3/2B1PppP/8/PPPP2P1/RNBQK2R w KQkq - 0 7": [
+    "C39",
+    "King's Gambit Accepted: Kieseritzky Gambit, Berlin Defense"
   ],
   "rnbqkb1r/pppp1p1p/5n2/4N3/4PppP/8/PPPP2P1/RNBQKB1R w KQkq - 2 6": [
     "C39",
@@ -25583,11 +25583,11 @@
     "C39",
     "King's Gambit Accepted: Kieseritzky Gambit, Salvio Defense, Cozio Variation"
   ],
-  "rnbqkbnr/pppp1p1p/8/8/4PppP/5N2/PPPP2P1/RNBQKB1R w KQkq - 0 5": [
+  "rnbqkbnr/pppp1p1p/8/6p1/4Pp1P/5N2/PPPP2P1/RNBQKB1R b KQkq - 0 4": [
     "C39",
     "King's Gambit Accepted: King's Knight Gambit"
   ],
-  "rnbqkbnr/pppp1p1p/8/6p1/4Pp1P/5N2/PPPP2P1/RNBQKB1R b KQkq - 0 4": [
+  "rnbqkbnr/pppp1p1p/8/8/4PppP/5N2/PPPP2P1/RNBQKB1R w KQkq - 0 5": [
     "C39",
     "King's Gambit Accepted: King's Knight Gambit"
   ],
@@ -25639,14 +25639,6 @@
     "C40",
     "Gunderam Gambit"
   ],
-  "rnb1k2r/pp1p1ppp/2p2n2/4q3/4P3/2PP4/P1P1BPPP/R1BQ1RK1 b kq - 0 8": [
-    "C40",
-    "Gunderam Gambit: Bishop Attack, Main Line, Exchange Line"
-  ],
-  "rnbqkbnr/pp1p1ppp/2p5/4p3/4P3/5NP1/PPPP1P1P/RNBQKB1R b KQkq - 0 3": [
-    "C40",
-    "Gunderam Gambit: Fianchetto Attack"
-  ],
   "rnb1k2r/pp1p1ppp/2p2n2/4q3/1b2P3/2NP4/PPP1BPPP/R1BQK2R w KQkq - 2 7": [
     "C40",
     "Gunderam Gambit: Bishop Attack"
@@ -25662,6 +25654,14 @@
   "rnb1k2r/pp1p1ppp/2p2n2/4q3/4P3/2bP4/PPP1BPPP/R1BQ1RK1 w kq - 0 8": [
     "C40",
     "Gunderam Gambit: Bishop Attack, Main Line"
+  ],
+  "rnb1k2r/pp1p1ppp/2p2n2/4q3/4P3/2PP4/P1P1BPPP/R1BQ1RK1 b kq - 0 8": [
+    "C40",
+    "Gunderam Gambit: Bishop Attack, Main Line, Exchange Line"
+  ],
+  "rnbqkbnr/pp1p1ppp/2p5/4p3/4P3/5NP1/PPPP1P1P/RNBQKB1R b KQkq - 0 3": [
+    "C40",
+    "Gunderam Gambit: Fianchetto Attack"
   ],
   "rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2": [
     "C40",
@@ -28267,6 +28267,10 @@
     "C55",
     "Italian Game: Scotch Invitation Declined"
   ],
+  "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/5N2/PPPP1PPP/RNBQ1RK1 b kq - 5 4": [
+    "C55",
+    "Italian Game: Two Knights Defense"
+  ],
   "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4": [
     "C55",
     "Italian Game: Two Knights Defense"
@@ -28374,10 +28378,6 @@
   "r1bqkb1r/pppp1ppp/2n2n2/6N1/2BpP3/8/PPP2PPP/RNBQK2R b KQkq - 1 5": [
     "C55",
     "Italian Game: Two Knights Defense, Perreux Variation"
-  ],
-  "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/5N2/PPPP1PPP/RNBQ1RK1 b kq - 5 4": [
-    "C55",
-    "Italian Game: Two Knights Defense"
   ],
   "r1b1kb1r/ppp2ppp/2n5/3q4/3pn3/2N2N2/PPP2PPP/R1BQR1K1 b kq - 1 8": [
     "C56",
@@ -28551,11 +28551,39 @@
     "C56",
     "Scotch Gambit: Nakhmanson Gambit, Kf6 Defense, Rook Attack"
   ],
+  "r1bqkb1r/pppp1ppp/2n5/3np1N1/2B1P3/8/PPPP1PPP/RNBQK2R w KQkq - 6 5": [
+    "C57",
+    "Italian Game: Two Knights Defense"
+  ],
+  "r1bqkb1r/pppp1ppp/2n5/3np1N1/2BPP3/8/PPP2PPP/RNBQK2R b KQkq - 0 5": [
+    "C57",
+    "Italian Game: Two Knights Defense"
+  ],
+  "r1bqkb1r/ppp2ppp/2n5/3np1N1/2B5/8/PPPP1PPP/RNBQK2R w KQkq - 0 6": [
+    "C57",
+    "Italian Game: Two Knights Defense, 4.Ng5 d5 5.exd5 Nxd5"
+  ],
+  "r1bq1b1r/ppn3pp/2p1k3/3np3/2BPQ3/P1N5/1PP2PPP/R1B1K2R w KQ - 1 12": [
+    "C57",
+    "Italian Game: Two Knights Defense, Fegatello Attack, Leonhardt Variation"
+  ],
+  "r1bq1b1r/ppp1n1pp/4k3/3np3/2B5/2N2Q2/PPPP1PPP/R1B1K2R w KQ - 4 9": [
+    "C57",
+    "Italian Game: Two Knights Defense, Fegatello Attack, Polerio Defense"
+  ],
   "r1bq1b1r/ppp2kpp/2n5/3np3/2B5/5Q2/PPPP1PPP/RNB1K2R b KQ - 1 7": [
     "C57",
     "Italian Game: Two Knights Defense, Fried Liver Attack"
   ],
+  "r1bq1b1r/ppp2kpp/2n5/3np3/2B5/8/PPPP1PPP/RNBQK2R w KQ - 0 7": [
+    "C57",
+    "Italian Game: Two Knights Defense, Fried Liver Attack"
+  ],
   "r1bq1b1r/ppp3pp/2n1k3/3np3/2B5/2N2Q2/PPPP1PPP/R1B1K2R b KQ - 3 8": [
+    "C57",
+    "Italian Game: Two Knights Defense, Fried Liver Attack"
+  ],
+  "r1bq1b1r/ppp3pp/2n1k3/3np3/2B5/5Q2/PPPP1PPP/RNB1K2R w KQ - 2 8": [
     "C57",
     "Italian Game: Two Knights Defense, Fried Liver Attack"
   ],
@@ -28578,42 +28606,6 @@
   "r1bq1b1r/ppp3pp/4k3/3np3/2B5/P1N2Q2/1PnP1PPP/R1BK3R b - - 1 10": [
     "C57",
     "Italian Game: Two Knights Defense, Fried Liver Attack"
-  ],
-  "r1bq1b1r/ppp2kpp/2n5/3np3/2B5/8/PPPP1PPP/RNBQK2R w KQ - 0 7": [
-    "C57",
-    "Italian Game: Two Knights Defense, Fried Liver Attack"
-  ],
-  "r1bq1b1r/ppp3pp/2n1k3/3np3/2B5/5Q2/PPPP1PPP/RNB1K2R w KQ - 2 8": [
-    "C57",
-    "Italian Game: Two Knights Defense, Fried Liver Attack"
-  ],
-  "r1bq3r/ppp1bkpp/2n5/3np3/2BP4/2P5/PP3PPP/RNBQK2R w KQ - 0 9": [
-    "C57",
-    "Italian Game: Two Knights Defense, Lolli Variation, Pincus Variation"
-  ],
-  "r1bqk2r/ppp1bNpp/2n5/3np3/2BP4/2P5/PP3PPP/RNBQK2R b KQkq - 0 8": [
-    "C57",
-    "Italian Game: Two Knights Defense, Lolli Variation, Pincus Variation"
-  ],
-  "r1bqk2r/ppp1bppp/2n5/3np1N1/2BP4/2P5/PP3PPP/RNBQK2R w KQkq - 1 8": [
-    "C57",
-    "Italian Game: Two Knights Defense, Lolli Variation, Pincus Variation"
-  ],
-  "r1bqk2r/ppp2ppp/2n5/3np1N1/1bBP4/2P5/PP3PPP/RNBQK2R b KQkq - 0 7": [
-    "C57",
-    "Italian Game: Two Knights Defense, Lolli Variation, Pincus Variation"
-  ],
-  "r1bqkb1r/ppp2ppp/2n5/3np1N1/2B5/8/PPPP1PPP/RNBQK2R w KQkq - 0 6": [
-    "C57",
-    "Italian Game: Two Knights Defense, 4.Ng5 d5 5.exd5 Nxd5"
-  ],
-  "r1bq1b1r/ppn3pp/2p1k3/3np3/2BPQ3/P1N5/1PP2PPP/R1B1K2R w KQ - 1 12": [
-    "C57",
-    "Italian Game: Two Knights Defense, Fegatello Attack, Leonhardt Variation"
-  ],
-  "r1bq1b1r/ppp1n1pp/4k3/3np3/2B5/2N2Q2/PPPP1PPP/R1B1K2R w KQ - 4 9": [
-    "C57",
-    "Italian Game: Two Knights Defense, Fegatello Attack, Polerio Defense"
   ],
   "r1bqkb1r/ppp2Npp/2n5/3np3/2B5/8/PPPP1PPP/RNBQK2R b KQkq - 0 6": [
     "C57",
@@ -28747,6 +28739,22 @@
     "C57",
     "Italian Game: Two Knights Defense, Lolli Variation, Pincus Variation"
   ],
+  "r1bq3r/ppp1bkpp/2n5/3np3/2BP4/2P5/PP3PPP/RNBQK2R w KQ - 0 9": [
+    "C57",
+    "Italian Game: Two Knights Defense, Lolli Variation, Pincus Variation"
+  ],
+  "r1bqk2r/ppp1bNpp/2n5/3np3/2BP4/2P5/PP3PPP/RNBQK2R b KQkq - 0 8": [
+    "C57",
+    "Italian Game: Two Knights Defense, Lolli Variation, Pincus Variation"
+  ],
+  "r1bqk2r/ppp1bppp/2n5/3np1N1/2BP4/2P5/PP3PPP/RNBQK2R w KQkq - 1 8": [
+    "C57",
+    "Italian Game: Two Knights Defense, Lolli Variation, Pincus Variation"
+  ],
+  "r1bqk2r/ppp2ppp/2n5/3np1N1/1bBP4/2P5/PP3PPP/RNBQK2R b KQkq - 0 7": [
+    "C57",
+    "Italian Game: Two Knights Defense, Lolli Variation, Pincus Variation"
+  ],
   "r1bqk2r/ppp2ppp/2n5/3np1N1/1bBP4/8/PPP2PPP/RNBQK2R w KQkq - 1 7": [
     "C57",
     "Italian Game: Two Knights Defense, Pincus Variation"
@@ -28771,11 +28779,19 @@
     "C57",
     "Italian Game: Two Knights Defense, Traxler Counterattack"
   ],
+  "r1bq1r2/ppp1k1pp/2p2n2/2b1p1N1/4P3/8/PPPP1PPP/RNBQK2R w KQ - 0 8": [
+    "C57",
+    "Italian Game: Two Knights Defense, Traxler Counterattack"
+  ],
   "r1bq1r2/ppp1k1pp/2p5/2b1p1B1/4P3/3P3N/PPP2nPP/RN1QK2R b KQ - 1 10": [
     "C57",
     "Italian Game: Two Knights Defense, Traxler Counterattack"
   ],
   "r1bq1r2/ppp1k1pp/2p5/2b1p3/4P3/3P3N/PPP2nPP/RNBQK2R w KQ - 0 10": [
+    "C57",
+    "Italian Game: Two Knights Defense, Traxler Counterattack"
+  ],
+  "r1bq1r2/ppppk1pp/2B2n2/2b1p1N1/4P3/8/PPPP1PPP/RNBQK2R b KQ - 0 7": [
     "C57",
     "Italian Game: Two Knights Defense, Traxler Counterattack"
   ],
@@ -28808,6 +28824,10 @@
     "Italian Game: Two Knights Defense, Traxler Counterattack"
   ],
   "r2q1r2/ppp1k1pp/2np1n2/2bBp1N1/4P1b1/1QP5/PP1P1PPP/RNB2RK1 b - - 2 9": [
+    "C57",
+    "Italian Game: Two Knights Defense, Traxler Counterattack"
+  ],
+  "r2q1r2/ppp1k1pp/2np1n2/2bBp1N1/4P1b1/2P5/PP1P1PPP/RNBQ1RK1 w - - 1 9": [
     "C57",
     "Italian Game: Two Knights Defense, Traxler Counterattack"
   ],
@@ -28955,35 +28975,23 @@
     "C57",
     "Italian Game: Two Knights Defense, Ulvestad Variation, Kurkin Gambit"
   ],
-  "r1bq1r2/ppp1k1pp/2p5/2b1p3/4P1n1/3P3N/PPP2PPP/RNBQK2R b KQ - 2 9": [
-    "C57",
-    "Scotch Gambit: Traxler Counterattack, Bishop Sacrifice Line"
-  ],
   "r1bq1r2/ppp1k1pp/2p2n2/2b1p1N1/4P3/3P4/PPP2PPP/RNBQK2R b KQ - 0 8": [
     "C57",
     "Scotch Gambit: Traxler Counterattack"
   ],
-  "r1bqkb1r/pppp1ppp/2n5/3np1N1/2B1P3/8/PPPP1PPP/RNBQK2R w KQkq - 6 5": [
+  "r1bq1r2/ppp1k1pp/2p5/2b1p3/4P1n1/3P3N/PPP2PPP/RNBQK2R b KQ - 2 9": [
     "C57",
-    "Italian Game: Two Knights Defense"
-  ],
-  "r1bqkb1r/pppp1ppp/2n5/3np1N1/2BPP3/8/PPP2PPP/RNBQK2R b KQkq - 0 5": [
-    "C57",
-    "Italian Game: Two Knights Defense"
-  ],
-  "r1bq1r2/ppp1k1pp/2p2n2/2b1p1N1/4P3/8/PPPP1PPP/RNBQK2R w KQ - 0 8": [
-    "C57",
-    "Italian Game: Two Knights Defense, Traxler Counterattack"
-  ],
-  "r1bq1r2/ppppk1pp/2B2n2/2b1p1N1/4P3/8/PPPP1PPP/RNBQK2R b KQ - 0 7": [
-    "C57",
-    "Italian Game: Two Knights Defense, Traxler Counterattack"
-  ],
-  "r2q1r2/ppp1k1pp/2np1n2/2bBp1N1/4P1b1/2P5/PP1P1PPP/RNBQ1RK1 w - - 1 9": [
-    "C57",
-    "Italian Game: Two Knights Defense, Traxler Counterattack"
+    "Scotch Gambit: Traxler Counterattack, Bishop Sacrifice Line"
   ],
   "r1bqkb1r/p4ppp/2p2n2/n3p1N1/8/8/PPPPBPPP/RNBQK2R b KQkq - 1 8": [
+    "C58",
+    "Italian Game: Two Knights Defense"
+  ],
+  "r1bqkb1r/p4ppp/2p2n2/nB2p1N1/8/8/PPPP1PPP/RNBQK2R w KQkq - 0 8": [
+    "C58",
+    "Italian Game: Two Knights Defense"
+  ],
+  "r1bqkb1r/pp3ppp/2P2n2/nB2p1N1/8/8/PPPP1PPP/RNBQK2R b KQkq - 0 7": [
     "C58",
     "Italian Game: Two Knights Defense"
   ],
@@ -29090,14 +29098,6 @@
   "r1bqk2r/ppp2pp1/5n1p/2bP4/2P1p3/8/PPPNQPPP/RNB1K2R b KQkq - 2 10": [
     "C58",
     "Italian Game: Two Knights Defense, Polerio Defense, Yankovich Variation"
-  ],
-  "r1bqkb1r/p4ppp/2p2n2/nB2p1N1/8/8/PPPP1PPP/RNBQK2R w KQkq - 0 8": [
-    "C58",
-    "Italian Game: Two Knights Defense"
-  ],
-  "r1bqkb1r/pp3ppp/2P2n2/nB2p1N1/8/8/PPPP1PPP/RNBQK2R b KQkq - 0 7": [
-    "C58",
-    "Italian Game: Two Knights Defense"
   ],
   "r1b1k2r/p1q2pp1/2pb1n1p/n3N3/3Pp3/8/PPPBBPPP/RN1QK2R b KQkq - 2 12": [
     "C59",
@@ -31321,71 +31321,71 @@
   ],
   "r1bqk2r/1pp1bppp/p1p2n2/4p3/4P3/5N2/PPPP1PPP/RNBQ1RK1 w kq - 0 7": [
     "C85",
-    "Ruy López Opening: Closed Variation, Exchange"
+    "Ruy López Opening: Closed Variation, Exchange Variation"
   ],
   "r1bqk2r/1pp1bppp/p1p2n2/4p3/4P3/2N2N2/PPPP1PPP/R1BQ1RK1 b kq - 1 7": [
     "C85",
-    "Ruy López Opening: Closed Variation, Exchange, 7.Nc3"
+    "Ruy López Opening: Closed Variation, Exchange Variation, 7.Nc3"
   ],
   "r2qk2r/1pp1bppp/p1p2n2/4p3/4P1b1/2N2N2/PPPP1PPP/R1BQ1RK1 w kq - 2 8": [
     "C85",
-    "Ruy López Opening: Closed Variation, Exchange, 7.Nc3 Bg4"
+    "Ruy López Opening: Closed Variation, Exchange Variation, 7.Nc3 Bg4"
   ],
   "r1bqk2r/1pp1bppp/p1p2n2/4p3/4P3/5N2/PPPP1PPP/RNB1QRK1 b kq - 1 7": [
     "C85",
-    "Ruy López Opening: Closed Variation, Exchange, 7.Qe1"
+    "Ruy López Opening: Closed Variation, Exchange Variation, 7.Qe1"
   ],
   "r1bqk2r/1ppnbppp/p1p5/4p3/4P3/5N2/PPPP1PPP/RNB1QRK1 w kq - 2 8": [
     "C85",
-    "Ruy López Opening: Closed Variation, Exchange, 7.Qe1 Nd7"
+    "Ruy López Opening: Closed Variation, Exchange Variation, 7.Qe1 Nd7"
   ],
   "r1bqk2r/1ppnbppp/p1p5/4p3/4P3/1P3N2/P1PP1PPP/RNB1QRK1 b kq - 0 8": [
     "C85",
-    "Ruy López Opening: Closed Variation, Exchange, 7.Qe1 Nd7 8.b3"
+    "Ruy López Opening: Closed Variation, Exchange Variation, 7.Qe1 Nd7 8.b3"
   ],
   "r1bqk2r/1pp1bppp/p4n2/2p1p3/4P3/5N2/PPPP1PPP/RNB1QRK1 w kq - 0 8": [
     "C85",
-    "Ruy López Opening: Closed Variation, Exchange, 7.Qe1 c5"
+    "Ruy López Opening: Closed Variation, Exchange Variation, 7.Qe1 c5"
   ],
   "r1bqk2r/1pp1bppp/p1p2n2/4p3/4P3/5N2/PPPPQPPP/RNB2RK1 b kq - 1 7": [
     "C85",
-    "Ruy López Opening: Closed Variation, Exchange, 7.Qe2"
+    "Ruy López Opening: Closed Variation, Exchange Variation, 7.Qe2"
   ],
   "r1bqk2r/1pp1bppp/p1p2n2/4p3/4P3/3P1N2/PPP2PPP/RNBQ1RK1 b kq - 0 7": [
     "C85",
-    "Ruy López Opening: Closed Variation, Exchange, 7.d3"
+    "Ruy López Opening: Closed Variation, Exchange Variation, 7.d3"
   ],
   "r2qk2r/1pp1bppp/p1p2n2/4p3/4P1b1/3P1N2/PPP2PPP/RNBQ1RK1 w kq - 1 8": [
     "C85",
-    "Ruy López Opening: Closed Variation, Exchange, 7.d3 Bg4"
+    "Ruy López Opening: Closed Variation, Exchange Variation, 7.d3 Bg4"
   ],
   "r1bqk2r/1ppnbppp/p1p5/4p3/4P3/3P1N2/PPP2PPP/RNBQ1RK1 w kq - 1 8": [
     "C85",
-    "Ruy López Opening: Closed Variation, Exchange, 7.d3 Nd7"
+    "Ruy López Opening: Closed Variation, Exchange Variation, 7.d3 Nd7"
   ],
   "r1bqk2r/1ppnbppp/p1p5/4p3/4P3/3P1N2/PPPN1PPP/R1BQ1RK1 b kq - 2 8": [
     "C85",
-    "Ruy López Opening: Closed Variation, Exchange, 7.d3 Nd7 8.Nbd2"
+    "Ruy López Opening: Closed Variation, Exchange Variation, 7.d3 Nd7 8.Nbd2"
   ],
   "r1bq1rk1/1ppnbppp/p1p5/4p3/2N1P3/3P1N2/PPP2PPP/R1BQ1RK1 b - - 4 9": [
     "C85",
-    "Ruy López Opening: Closed Variation, Exchange, 7.d3 Nd7 8.Nbd2 O-O 9.Nc4"
+    "Ruy López Opening: Closed Variation, Exchange Variation, 7.d3 Nd7 8.Nbd2 O-O 9.Nc4"
   ],
   "r1bq1rk1/1ppnb1pp/p1p2p2/4p3/2N1P3/3P1N2/PPP2PPP/R1BQ1RK1 w - - 0 10": [
     "C85",
-    "Ruy López Opening: Closed Variation, Exchange, 7.d3 Nd7 8.Nbd2 O-O 9.Nc4 f6"
+    "Ruy López Opening: Closed Variation, Exchange Variation, 7.d3 Nd7 8.Nbd2 O-O 9.Nc4 f6"
   ],
   "r1bq1rk1/1ppnb1pp/p1p2p2/4p3/2N1P2N/3P4/PPP2PPP/R1BQ1RK1 b - - 1 10": [
     "C85",
-    "Ruy López Opening: Closed Variation, Exchange, 7.d3 Nd7 8.Nbd2 O-O 9.Nc4 f6 10.Nh4"
+    "Ruy López Opening: Closed Variation, Exchange Variation, 7.d3 Nd7 8.Nbd2 O-O 9.Nc4 f6 10.Nh4"
   ],
   "r1bq1rk1/1pp1b1pp/p1p2p2/2n1p3/2N1P2N/3P4/PPP2PPP/R1BQ1RK1 w - - 2 11": [
     "C85",
-    "Ruy López Opening: Closed Variation, Exchange, 7.d3 Nd7 8.Nbd2 O-O 9.Nc4 f6 10.Nh4 Nc5"
+    "Ruy López Opening: Closed Variation, Exchange Variation, 7.d3 Nd7 8.Nbd2 O-O 9.Nc4 f6 10.Nh4 Nc5"
   ],
   "r1bq1rk1/1pp1b1pp/p1p2p2/2n1pN2/2N1P3/3P4/PPP2PPP/R1BQ1RK1 b - - 3 11": [
     "C85",
-    "Ruy López Opening: Closed Variation, Exchange, 7.d3 Nd7 8.Nbd2 O-O 9.Nc4 f6 10.Nh4 Nc5 11.Nf5"
+    "Ruy López Opening: Closed Variation, Exchange Variation, 7.d3 Nd7 8.Nbd2 O-O 9.Nc4 f6 10.Nh4 Nc5 11.Nf5"
   ],
   "r1bqk2r/1pppbppp/p1n2n2/4p3/B3P3/5N2/PPPPQPPP/RNB2RK1 b kq - 5 6": [
     "C86",
@@ -31461,63 +31461,63 @@
   ],
   "r1bqk2r/1pp1bppp/p1Bp1n2/4p3/4P3/5N2/PPPP1PPP/RNBQR1K1 b kq - 0 7": [
     "C87",
-    "Ruy López Opening: Closed Variation, Averbakh, 7.Bxc6+"
+    "Ruy López Opening: Closed Variation, Averbakh Variation, 7.Bxc6+"
   ],
   "r1bqk2r/2p1bppp/p1pp1n2/4p3/3PP3/5N2/PPP2PPP/RNBQR1K1 b kq - 0 8": [
     "C87",
-    "Ruy López Opening: Closed Variation, Averbakh, 7.Bxc6+ bxc6 8.d4"
+    "Ruy López Opening: Closed Variation, Averbakh Variation, 7.Bxc6+ bxc6 8.d4"
   ],
   "r1bqk2r/2p1bppp/p1pp1n2/8/3NP3/8/PPP2PPP/RNBQR1K1 b kq - 0 9": [
     "C87",
-    "Ruy López Opening: Closed Variation, Averbakh, 7.Bxc6+ bxc6 8.d4 exd4"
+    "Ruy López Opening: Closed Variation, Averbakh Variation, 7.Bxc6+ bxc6 8.d4 exd4"
   ],
   "r1bqk2r/2p1bppp/p1pp1n2/8/3pP3/5N2/PPP2PPP/RNBQR1K1 w kq - 0 9": [
     "C87",
-    "Ruy López Opening: Closed Variation, Averbakh, 7.Bxc6+ bxc6 8.d4 exd4"
+    "Ruy López Opening: Closed Variation, Averbakh Variation, 7.Bxc6+ bxc6 8.d4 exd4"
   ],
   "r1bqk2r/1pp1bppp/p1np1n2/4p3/B3P3/2P2N2/PP1P1PPP/RNBQR1K1 b kq - 0 7": [
     "C87",
-    "Ruy López Opening: Closed Variation, Averbakh, 7.c3"
+    "Ruy López Opening: Closed Variation, Averbakh Variation, 7.c3"
   ],
   "r2qk2r/1pp1bppp/p1np1n2/4p3/B3P1b1/2P2N2/PP1P1PPP/RNBQR1K1 w kq - 1 8": [
     "C87",
-    "Ruy López Opening: Closed Variation, Averbakh, 7.c3 Bg4"
+    "Ruy López Opening: Closed Variation, Averbakh Variation, 7.c3 Bg4"
   ],
   "r2qk2r/1pp1bppp/p1np1n2/4p3/B3P1b1/2PP1N2/PP3PPP/RNBQR1K1 b kq - 0 8": [
     "C87",
-    "Ruy López Opening: Closed Variation, Averbakh, 7.c3 Bg4 8.d3"
+    "Ruy López Opening: Closed Variation, Averbakh Variation, 7.c3 Bg4 8.d3"
   ],
   "r2qk2r/1pp1bppp/p1np1n2/4p3/B3P1b1/2P2N1P/PP1P1PP1/RNBQR1K1 b kq - 0 8": [
     "C87",
-    "Ruy López Opening: Closed Variation, Averbakh, 7.c3 Bg4 8.h3"
+    "Ruy López Opening: Closed Variation, Averbakh Variation, 7.c3 Bg4 8.h3"
   ],
   "r1bq1rk1/1pp1bppp/p1np1n2/4p3/B3P3/2P2N2/PP1P1PPP/RNBQR1K1 w - - 1 8": [
     "C87",
-    "Ruy López Opening: Closed Variation, Averbakh, 7.c3 O-O"
+    "Ruy López Opening: Closed Variation, Averbakh Variation, 7.c3 O-O"
   ],
   "r1bq1rk1/1pp1bppp/p1np1n2/4p3/B2PP3/2P2N2/PP3PPP/RNBQR1K1 b - - 0 8": [
     "C87",
-    "Ruy López Opening: Closed Variation, Averbakh, 7.c3 O-O 8.d4"
+    "Ruy López Opening: Closed Variation, Averbakh Variation, 7.c3 O-O 8.d4"
   ],
   "r2q1rk1/1ppbbppp/p1np1n2/4p3/B2PP3/2P2N2/PP3PPP/RNBQR1K1 w - - 1 9": [
     "C87",
-    "Ruy López Opening: Closed Variation, Averbakh, 7.c3 O-O 8.d4 Bd7"
+    "Ruy López Opening: Closed Variation, Averbakh Variation, 7.c3 O-O 8.d4 Bd7"
   ],
   "r2q1rk1/1ppbbppp/p1np1n2/4p3/B2PP3/2P2N2/PP1N1PPP/R1BQR1K1 b - - 2 9": [
     "C87",
-    "Ruy López Opening: Closed Variation, Averbakh, 7.c3 O-O 8.d4 Bd7 9.Nbd2"
+    "Ruy López Opening: Closed Variation, Averbakh Variation, 7.c3 O-O 8.d4 Bd7 9.Nbd2"
   ],
   "r2qr1k1/1ppbbppp/p1np1n2/4p3/B2PP3/2P2N2/PP1N1PPP/R1BQR1K1 w - - 3 10": [
     "C87",
-    "Ruy López Opening: Closed Variation, Averbakh, 7.c3 O-O 8.d4 Bd7 9.Nbd2 Re8"
+    "Ruy López Opening: Closed Variation, Averbakh Variation, 7.c3 O-O 8.d4 Bd7 9.Nbd2 Re8"
   ],
   "r1bq1rk1/1pp1bppp/p1np1n2/4p3/B3P3/2P2N1P/PP1P1PP1/RNBQR1K1 b - - 0 8": [
     "C87",
-    "Ruy López Opening: Closed Variation, Averbakh, 7.c3 O-O 8.h3"
+    "Ruy López Opening: Closed Variation, Averbakh Variation, 7.c3 O-O 8.h3"
   ],
   "r2q1rk1/1ppbbppp/p1np1n2/4p3/B3P3/2P2N1P/PP1P1PP1/RNBQR1K1 w - - 1 9": [
     "C87",
-    "Ruy López Opening: Closed Variation, Averbakh, 7.c3 O-O 8.h3 Bd7"
+    "Ruy López Opening: Closed Variation, Averbakh Variation, 7.c3 O-O 8.h3 Bd7"
   ],
   "r1bq1rk1/2ppbppp/p1n2n2/1p2p3/4P3/1B3N2/PPPP1PPP/RNBQR1K1 w - - 2 8": [
     "C88",
@@ -31573,31 +31573,31 @@
   ],
   "r1bq1rk1/2ppbppp/p1n2n2/1p2p3/P3P3/1B3N2/1PPP1PPP/RNBQR1K1 b - - 0 8": [
     "C88",
-    "Ruy López Opening: Closed Variation, Anti-Marshall"
+    "Ruy López Opening: Closed Variation, Anti-Marshall Variation"
   ],
   "r2q1rk1/1bppbppp/p1n2n2/1p2p3/P3P3/1B3N2/1PPP1PPP/RNBQR1K1 w - - 1 9": [
     "C88",
-    "Ruy López Opening: Closed Variation, Anti-Marshall 8.a4 Bb7"
+    "Ruy López Opening: Closed Variation, Anti-Marshall Variation, 8.a4 Bb7"
   ],
   "r2q1rk1/1bppbppp/p1n2n2/1p2p3/P3P3/1B1P1N2/1PP2PPP/RNBQR1K1 b - - 0 9": [
     "C88",
-    "Ruy López Opening: Closed Variation, Anti-Marshall 8.a4 Bb7 9.d3"
+    "Ruy López Opening: Closed Variation, Anti-Marshall Variation, 8.a4 Bb7 9.d3"
   ],
   "r2q1rk1/1bp1bppp/p1np1n2/1p2p3/P3P3/1B1P1N2/1PP2PPP/RNBQR1K1 w - - 0 10": [
     "C88",
-    "Ruy López Opening: Closed Variation, Anti-Marshall 8.a4 Bb7 9.d3 d6"
+    "Ruy López Opening: Closed Variation, Anti-Marshall Variation, 8.a4 Bb7 9.d3 d6"
   ],
   "r2q1rk1/1bp1bppp/p1np1n2/1p2p3/P3P3/1BNP1N2/1PP2PPP/R1BQR1K1 b - - 1 10": [
     "C88",
-    "Ruy López Opening: Closed Variation, Anti-Marshall 8.a4 Bb7 9.d3 d6 10.Nc3"
+    "Ruy López Opening: Closed Variation, Anti-Marshall Variation, 8.a4 Bb7 9.d3 d6 10.Nc3"
   ],
   "r2q1rk1/1bp1bppp/p1np1n2/1p2p3/P3P3/1BPP1N2/1P3PPP/RNBQR1K1 b - - 0 10": [
     "C88",
-    "Ruy López Opening: Closed Variation, Anti-Marshall 8.a4 Bb7 9.d3 d6 10.c3"
+    "Ruy López Opening: Closed Variation, Anti-Marshall Variation, 8.a4 Bb7 9.d3 d6 10.c3"
   ],
   "r1bq1rk1/2ppbppp/p1n2n2/4p3/Pp2P3/1B3N2/1PPP1PPP/RNBQR1K1 w - - 0 9": [
     "C88",
-    "Ruy López Opening: Closed Variation, Anti-Marshall 8.a4 b4"
+    "Ruy López Opening: Closed Variation, Anti-Marshall Variation, 8.a4 b4"
   ],
   "r1b1k2r/2q1bppp/p2p1n2/npp1p3/P2PP3/2P2N2/1PB2PPP/RNBQR1K1 b kq - 0 11": [
     "C88",
@@ -35615,6 +35615,10 @@
     "D27",
     "Queen's Gambit Accepted: Classical Defense, 6...a6 7.b3"
   ],
+  "rnbqk2r/1p3ppp/p3pn2/2b5/2B5/4PN2/PP3PPP/RNBQ1RK1 w kq - 0 8": [
+    "D27",
+    "Queen's Gambit Accepted: Classical Defense, Furman Variation"
+  ],
   "rnbqkb1r/1p3ppp/p3pn2/2p5/2BP4/4PN2/PP3PPP/RNBQ1RK1 w kq - 0 7": [
     "D27",
     "Queen's Gambit Accepted: Classical Defense, Main Line"
@@ -35678,10 +35682,6 @@
   "rnb1k2r/1p3ppp/p3pn2/2b5/2B5/1P2PN2/P4PPP/RNBR2K1 b kq - 0 9": [
     "D27",
     "Queen's Gambit Accepted: Classical Defense, Spassky Variation, 9.b3"
-  ],
-  "rnbqk2r/1p3ppp/p3pn2/2b5/2B5/4PN2/PP3PPP/RNBQ1RK1 w kq - 0 8": [
-    "D27",
-    "Queen's Gambit Accepted: Classical Defense, Furman Variation"
   ],
   "r1bqkb1r/1p3ppp/p1n1pn2/2p5/2BP4/4PN2/PP2QPPP/RNB2RK1 w kq - 2 8": [
     "D28",
