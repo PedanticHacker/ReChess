@@ -47483,29 +47483,29 @@
     "E91",
     "King's Indian Defense: 6.Be2 c6 7.O-O"
   ],
-  "r1bq1rk1/ppp1ppbp/n2p1np1/8/2PPP3/2N2N2/PP2BPPP/R1BQK2R w KQ - 4 7": [
-    "E91",
-    "King's Indian Defense: Kazakh Variation"
-  ],
-  "r1bq1rk1/ppp1ppbp/n2p1np1/6B1/2PPP3/2N2N2/PP2BPPP/R2QK2R b KQ - 5 7": [
-    "E91",
-    "King's Indian Defense: Kazakh Variation, 7.Bg5"
-  ],
-  "r1bq1rk1/ppp1ppbp/n2p1np1/8/2PPP3/2N2N2/PP2BPPP/R1BQ1RK1 b - - 5 7": [
-    "E91",
-    "King's Indian Defense: Kazakh Variation, 7.O-O"
-  ],
-  "r1bq1rk1/pp2ppbp/n2p1np1/2p5/2PPP3/2N2N2/PP2BPPP/R1BQ1RK1 w - - 0 8": [
-    "E91",
-    "King's Indian Defense: Kazakh Variation, 7.O-O c5"
-  ],
-  "r1bq1rk1/pp2ppbp/n1pp1np1/8/2PPP3/2N2N2/PP2BPPP/R1BQ1RK1 w - - 0 8": [
-    "E91",
-    "King's Indian Defense: Kazakh Variation, 7.O-O c6"
-  ],
   "rnbq1rk1/ppp1ppbp/3p1np1/8/2PPP3/2N2N2/PP2BPPP/R1BQK2R b KQ - 3 6": [
     "E91",
     "King's Indian Defense: Orthodox Variation"
+  ],
+  "r1bq1rk1/ppp1ppbp/n2p1np1/8/2PPP3/2N2N2/PP2BPPP/R1BQK2R w KQ - 4 7": [
+    "E91",
+    "King's Indian Defense: Orthodox Variation, Kazakh Variation"
+  ],
+  "r1bq1rk1/ppp1ppbp/n2p1np1/6B1/2PPP3/2N2N2/PP2BPPP/R2QK2R b KQ - 5 7": [
+    "E91",
+    "King's Indian Defense: Orthodox Variation, Kazakh Variation, 7.Bg5"
+  ],
+  "r1bq1rk1/ppp1ppbp/n2p1np1/8/2PPP3/2N2N2/PP2BPPP/R1BQ1RK1 b - - 5 7": [
+    "E91",
+    "King's Indian Defense: Orthodox Variation, Kazakh Variation, 7.O-O"
+  ],
+  "r1bq1rk1/pp2ppbp/n2p1np1/2p5/2PPP3/2N2N2/PP2BPPP/R1BQ1RK1 w - - 0 8": [
+    "E91",
+    "King's Indian Defense: Orthodox Variation, Kazakh Variation, 7.O-O c5"
+  ],
+  "r1bq1rk1/pp2ppbp/n1pp1np1/8/2PPP3/2N2N2/PP2BPPP/R1BQ1RK1 w - - 0 8": [
+    "E91",
+    "King's Indian Defense: Orthodox Variation, Kazakh Variation, 7.O-O c6"
   ],
   "rnbq1rk1/ppp2pbp/5np1/4p3/2P1P3/2N2N2/PP2BPPP/R1BQK2R w KQ - 0 8": [
     "E92",
@@ -47530,6 +47530,10 @@
   "rnbq1rk1/ppp2pbp/3p1np1/4P3/2P1P3/2N2N2/PP2BPPP/R1BQK2R b KQ - 0 7": [
     "E92",
     "King's Indian Defense: Exchange Variation"
+  ],
+  "rnbq1rk1/ppp2pbp/3p1np1/4p3/2PPP3/2N1BN2/PP2BPPP/R2QK2R b KQ - 1 7": [
+    "E92",
+    "King's Indian Defense: Gligorić-Taimanov System"
   ],
   "rnbq1rk1/ppp2pbp/3p2p1/4p3/2PPP1n1/2N1BN2/PP2BPPP/R2QK2R w KQ - 2 8": [
     "E92",
@@ -47562,10 +47566,6 @@
   "rnbq1rk1/ppp2pbp/3p1np1/4p3/2PPP3/2N2N2/PP2BPPP/R1BQK2R w KQ - 0 7": [
     "E92",
     "King's Indian Defense: Orthodox Variation"
-  ],
-  "rnbq1rk1/ppp2pbp/3p1np1/4p3/2PPP3/2N1BN2/PP2BPPP/R2QK2R b KQ - 1 7": [
-    "E92",
-    "King's Indian Defense: Orthodox Variation, Gligorić-Taimanov System"
   ],
   "rnbq1rk1/ppp2pbp/3p1np1/3Pp3/2P1P3/2N2N2/PP2BPPP/R1BQK2R b KQ - 0 7": [
     "E92",
