@@ -27,7 +27,6 @@ from rechess.utils import (
     create_action,
     engine_file_filter,
     find_opening,
-    platform_name,
     set_setting_value,
     setting_value,
     style_name,
