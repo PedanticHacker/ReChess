@@ -29,22 +29,36 @@ type SettingValue = bool | float | str
 type SettingsDict = dict[SettingSection, dict[SettingKey, SettingValue]]
 
 
+def is_linux() -> bool:
+    """Return True if running on Linux."""
+    return platform.system() == "Linux"
+
+
+def is_macos() -> bool:
+    """Return True if running on macOS."""
+    return platform.system() == "Darwin"
+
+
+def is_windows() -> bool:
+    """Return True if running on Windows."""
+    return platform.system() == "Windows"
+
+
 def path_to_stockfish() -> str:
     """Return path to executable file of Stockfish 17 engine."""
-    return (
-        f"rechess/assets/engines/stockfish-17/{platform.system()}/stockfish"
-        f"{'.exe' if platform.system() == 'Windows' else ''}"
-    )
+    file_extension: str = ".exe" if is_windows() else ""
+    system: str = platform.system()
+    return f"rechess/assets/engines/stockfish-17/{system}/stockfish{file_extension}"
 
 
 def engine_file_filter() -> str:
     """Return platform-specific filter of executable engine file."""
-    return "Chess engine (*.exe)" if platform.system() == "Windows" else ""
+    return "Chess engine (*.exe)" if is_windows() else ""
 
 
 def delete_quarantine_attribute(path_to_file: str) -> None:
     """Delete quarantine attribute for file at `path_to_file`."""
-    if platform.system() == "Darwin":
+    if is_macos():
         subprocess.run(
             ["xattr", "-d", "com.apple.quarantine", path_to_file],
             stderr=subprocess.DEVNULL,
@@ -53,7 +67,7 @@ def delete_quarantine_attribute(path_to_file: str) -> None:
 
 def make_executable(path_to_file: str) -> None:
     """Make file at `path_to_file` be executable."""
-    if platform.system() == "Linux":
+    if is_linux():
         os.chmod(path_to_file, os.stat(path_to_file).st_mode | stat.S_IXUSR)
 
 
