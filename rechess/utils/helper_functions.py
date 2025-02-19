@@ -3,7 +3,7 @@ import os
 import platform
 import stat
 import subprocess
-from typing import Callable, Literal, overload
+from typing import Callable, Final, Literal, overload
 
 from psutil import cpu_count, virtual_memory
 from PySide6.QtCore import QSize
@@ -29,36 +29,26 @@ type SettingValue = bool | float | str
 type SettingsDict = dict[SettingSection, dict[SettingKey, SettingValue]]
 
 
-def is_linux() -> bool:
-    """Return True if running on Linux."""
-    return platform.system() == "Linux"
-
-
-def is_macos() -> bool:
-    """Return True if running on macOS."""
-    return platform.system() == "Darwin"
-
-
-def is_windows() -> bool:
-    """Return True if running on Windows."""
-    return platform.system() == "Windows"
+SYSTEM: Final[str] = platform.system()
+IS_LINUX: Final[bool] = SYSTEM == "Linux"
+IS_MACOS: Final[bool] = SYSTEM == "Darwin"
+IS_WINDOWS: Final[bool] = SYSTEM == "Windows"
+FILE_EXTENSION: Final[str] = ".exe" if IS_WINDOWS else ""
 
 
 def path_to_stockfish() -> str:
     """Return path to executable file of Stockfish 17 engine."""
-    file_extension: str = ".exe" if is_windows() else ""
-    system: str = platform.system()
-    return f"rechess/assets/engines/stockfish-17/{system}/stockfish{file_extension}"
+    return f"rechess/assets/engines/stockfish-17/{SYSTEM}/stockfish{FILE_EXTENSION}"
 
 
 def engine_file_filter() -> str:
     """Return platform-specific filter of executable engine file."""
-    return "Chess engine (*.exe)" if is_windows() else ""
+    return "Chess engine (*.exe)" if IS_WINDOWS else ""
 
 
 def delete_quarantine_attribute(path_to_file: str) -> None:
     """Delete quarantine attribute for file at `path_to_file`."""
-    if is_macos():
+    if IS_MACOS:
         subprocess.run(
             ["xattr", "-d", "com.apple.quarantine", path_to_file],
             stderr=subprocess.DEVNULL,
@@ -67,20 +57,20 @@ def delete_quarantine_attribute(path_to_file: str) -> None:
 
 def make_executable(path_to_file: str) -> None:
     """Make file at `path_to_file` be executable."""
-    if is_linux():
+    if IS_LINUX:
         os.chmod(path_to_file, os.stat(path_to_file).st_mode | stat.S_IXUSR)
 
 
 def _available_hash() -> int:
     """Return all available RAM in megabytes to be used as hash."""
-    MEGABYTES_FACTOR: int = 1_048_576
+    MEGABYTES_FACTOR: Final[int] = 1_048_576
     return virtual_memory().available // MEGABYTES_FACTOR
 
 
 def _available_threads() -> int:
     """Return all CPU threads, but reserve one for other CPU tasks."""
     cpu_threads: int | None = cpu_count()
-    return 1 if not cpu_threads or cpu_threads == 1 else cpu_threads - 1
+    return cpu_threads if cpu_threads is not None else 0
 
 
 def engine_configuration() -> dict[str, int]:
