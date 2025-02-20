@@ -25663,10 +25663,6 @@
     "C40",
     "Gunderam Gambit: Fianchetto Attack"
   ],
-  "rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2": [
-    "C40",
-    "King's Knight Opening"
-  ],
   "rnbqk1nr/pppp1ppp/8/2b1p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3": [
     "C40",
     "King's Pawn Game: Busch-Gass Gambit"
@@ -25714,6 +25710,10 @@
   "rnbqkbnr/pp1p1ppp/2p5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 0 3": [
     "C40",
     "King's Pawn Game: Gunderam Gambit"
+  ],
+  "rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2": [
+    "C40",
+    "King's Pawn Game: King's Knight Variation"
   ],
   "rnb1kbnr/pppp1ppp/6q1/4p3/2B1P3/5N2/PPPP1PPP/RNBQ1RK1 b kq - 5 4": [
     "C40",
