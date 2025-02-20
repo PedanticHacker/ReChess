@@ -1,3 +1,7 @@
+from __future__ import annotations
+
+from typing import ClassVar
+
 from PySide6.QtCore import (
     QAbstractTableModel,
     QItemSelectionModel,
@@ -6,14 +10,13 @@ from PySide6.QtCore import (
     Signal,
     Slot,
 )
-from PySide6.QtGui import QFocusEvent, QKeyEvent
 from PySide6.QtWidgets import QAbstractItemView, QHeaderView, QTableView
 
 
 class TableView(QTableView):
     """View for displaying items in table."""
 
-    item_selected: Signal = Signal(int)
+    item_selected: ClassVar[Signal] = Signal(int)
 
     def __init__(self, table_model: QAbstractTableModel) -> None:
         super().__init__()

@@ -3,7 +3,7 @@ import os
 import platform
 import stat
 import subprocess
-from typing import Callable, Final
+from typing import Any, Callable
 
 from psutil import cpu_count, virtual_memory
 from PySide6.QtCore import QSize
@@ -11,26 +11,21 @@ from PySide6.QtGui import QAction, QColor, QIcon, QPixmap
 from PySide6.QtWidgets import QApplication, QPushButton
 
 
-SYSTEM: Final[str] = platform.system()
-IS_LINUX: Final[bool] = SYSTEM == "Linux"
-IS_MACOS: Final[bool] = SYSTEM == "Darwin"
-IS_WINDOWS: Final[bool] = SYSTEM == "Windows"
-FILE_SUFFIX: Final[str] = ".exe" if IS_WINDOWS else ""
-
-
 def path_to_stockfish() -> str:
     """Return path to executable file of Stockfish 17 engine."""
-    return f"rechess/assets/engines/stockfish-17/{SYSTEM}/stockfish{FILE_SUFFIX}"
+    system: str = platform.system()
+    suffix: str = ".exe" if system == "Windows" else ""
+    return f"rechess/assets/engines/stockfish-17/{system}/stockfish{suffix}"
 
 
 def engine_file_filter() -> str:
     """Return platform-specific filter for engine's executable file."""
-    return "Chess engine (*.exe)" if IS_WINDOWS else ""
+    return "Chess engine (*.exe)" if platform.system() == "Windows" else ""
 
 
 def delete_quarantine_attribute(path_to_file: str) -> None:
     """Delete quarantine attribute for file at `path_to_file`."""
-    if IS_MACOS:
+    if platform.system() == "Darwin":
         subprocess.run(
             ["xattr", "-d", "com.apple.quarantine", path_to_file],
             stderr=subprocess.DEVNULL,
@@ -39,14 +34,14 @@ def delete_quarantine_attribute(path_to_file: str) -> None:
 
 def make_executable(path_to_file: str) -> None:
     """Make file at `path_to_file` be executable."""
-    if IS_LINUX:
+    if platform.system() == "Linux":
         os.chmod(path_to_file, os.stat(path_to_file).st_mode | stat.S_IXUSR)
 
 
 def _available_hash() -> int:
     """Return all available RAM in megabytes to be used as hash."""
-    MEGABYTES_FACTOR: Final[int] = 1_048_576
-    return virtual_memory().available // MEGABYTES_FACTOR
+    megabytes_factor: int = 1_048_576
+    return virtual_memory().available // megabytes_factor
 
 
 def _available_threads() -> int:
@@ -60,21 +55,21 @@ def engine_configuration() -> dict[str, int]:
     return {"Hash": _available_hash(), "Threads": _available_threads()}
 
 
-def _settings() -> dict[str, dict[str, bool | float | str]]:
+def _settings() -> dict[str, dict[str, Any]]:
     """Return all settings from settings.json file."""
     with open("rechess/settings.json") as settings_file:
         return json.load(settings_file)
 
 
-def setting_value(section: str, key: str) -> bool | float | str:
+def setting_value(section: str, key: str) -> Any:
     """Return value of `key` from `section`."""
-    settings_dict: dict[str, dict[str, bool | float | str]] = _settings()
+    settings_dict: dict[str, dict[str, Any]] = _settings()
     return settings_dict[section][key]
 
 
-def set_setting_value(section: str, key: str, value: bool | float | str) -> None:
+def set_setting_value(section: str, key: str, value: Any) -> None:
     """Set `value` to `key` for `section`."""
-    settings_dict: dict[str, dict[str, bool | float | str]] = _settings()
+    settings_dict: dict[str, dict[str, Any]] = _settings()
     settings_dict[section][key] = value
 
     with open("rechess/settings.json", mode="w", newline="\n") as settings_file:

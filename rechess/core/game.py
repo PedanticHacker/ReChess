@@ -36,7 +36,7 @@ class SoundEffectFileUrl(EnumDict):
 class Game(QObject):
     """Chess game state, moves, and UI interaction management."""
 
-    move_played: ClassVar[Signal[Move]] = Signal(Move)
+    move_played: ClassVar[Signal] = Signal(Move)
 
     def __init__(self) -> None:
         super().__init__()

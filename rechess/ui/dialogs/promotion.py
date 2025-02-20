@@ -1,35 +1,17 @@
-from enum import IntEnum
-
+from chess import Color, PieceType
 from PySide6.QtWidgets import QDialog, QHBoxLayout, QPushButton
 
 from rechess.utils import create_button, svg_icon
 
 
-class PieceType(IntEnum):
-    """Pawn, knight, bishop, rook, or queen as piece type."""
-
-    Pawn = 1
-    Knight = 2
-    Bishop = 3
-    Rook = 4
-    Queen = 5
-
-
-class Turn(IntEnum):
-    """Black or White as player on turn."""
-
-    Black = 0
-    White = 1
-
-
 class PromotionDialog(QDialog):
     """Dialog with buttons for selecting pawn promotion piece type."""
 
-    def __init__(self, turn: Turn) -> None:
+    def __init__(self, turn: Color) -> None:
         super().__init__()
 
-        self._turn: Turn = turn
-        self._piece_type: PieceType = PieceType.Pawn
+        self._turn: Color = turn
+        self._piece_type: PieceType = 0
 
         self.set_title()
         self.create_buttons()
@@ -41,8 +23,8 @@ class PromotionDialog(QDialog):
         self.setWindowTitle("Pawn Promotion")
 
     def create_buttons(self) -> None:
-        """Create buttons based on piece color showing piece type."""
-        if self._turn == Turn.White:
+        """Create buttons based on turn."""
+        if self._turn:
             self.queen_button: QPushButton = create_button(svg_icon("white-queen"))
             self.rook_button: QPushButton = create_button(svg_icon("white-rook"))
             self.bishop_button: QPushButton = create_button(svg_icon("white-bishop"))
@@ -72,22 +54,22 @@ class PromotionDialog(QDialog):
 
     def on_queen_button_clicked(self) -> None:
         """Set piece type to queen."""
-        self._piece_type = PieceType.Queen
+        self._piece_type = 5
         self.accept()
 
     def on_rook_button_clicked(self) -> None:
         """Set piece type to rook."""
-        self._piece_type = PieceType.Rook
+        self._piece_type = 4
         self.accept()
 
     def on_bishop_button_clicked(self) -> None:
         """Set piece type to bishop."""
-        self._piece_type = PieceType.Bishop
+        self._piece_type = 3
         self.accept()
 
     def on_knight_button_clicked(self) -> None:
         """Set piece type to knight."""
-        self._piece_type = PieceType.Knight
+        self._piece_type = 2
         self.accept()
 
     @property
