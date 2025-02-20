@@ -11,38 +11,20 @@ from PySide6.QtGui import QAction, QColor, QIcon, QPixmap
 from PySide6.QtWidgets import QApplication, QPushButton
 
 
-type BoardSection = Literal["board"]
-type ClockSection = Literal["clock"]
-type EngineSection = Literal["engine"]
-type HumanSection = Literal["human"]
-type UiSection = Literal["ui"]
-
-type BoardKey = Literal["orientation"]
-type ClockKey = Literal["time", "increment"]
-type EngineKey = Literal["is_white", "is_ponder_on"]
-type HumanKey = Literal["name"]
-type StyleKey = Literal["style"]
-
-type SettingSection = BoardSection | ClockSection | EngineSection | HumanSection | UiSection
-type SettingKey = BoardKey | ClockKey | EngineKey | HumanKey | StyleKey
-type SettingValue = bool | float | str
-type SettingsDict = dict[SettingSection, dict[SettingKey, SettingValue]]
-
-
 SYSTEM: Final[str] = platform.system()
 IS_LINUX: Final[bool] = SYSTEM == "Linux"
 IS_MACOS: Final[bool] = SYSTEM == "Darwin"
 IS_WINDOWS: Final[bool] = SYSTEM == "Windows"
-FILE_EXTENSION: Final[str] = ".exe" if IS_WINDOWS else ""
+FILE_SUFFIX: Final[str] = ".exe" if IS_WINDOWS else ""
 
 
 def path_to_stockfish() -> str:
     """Return path to executable file of Stockfish 17 engine."""
-    return f"rechess/assets/engines/stockfish-17/{SYSTEM}/stockfish{FILE_EXTENSION}"
+    return f"rechess/assets/engines/stockfish-17/{SYSTEM}/stockfish{FILE_SUFFIX}"
 
 
 def engine_file_filter() -> str:
-    """Return platform-specific filter of executable engine file."""
+    """Return platform-specific filter for engine's executable file."""
     return "Chess engine (*.exe)" if IS_WINDOWS else ""
 
 
@@ -68,9 +50,9 @@ def _available_hash() -> int:
 
 
 def _available_threads() -> int:
-    """Return all CPU threads, but reserve one for other CPU tasks."""
+    """Return all available CPU threads, else at least one."""
     cpu_threads: int | None = cpu_count()
-    return cpu_threads if cpu_threads is not None else 0
+    return cpu_threads if cpu_threads is not None else 1
 
 
 def engine_configuration() -> dict[str, int]:
@@ -78,58 +60,24 @@ def engine_configuration() -> dict[str, int]:
     return {"Hash": _available_hash(), "Threads": _available_threads()}
 
 
-def _settings() -> SettingsDict:
+def _settings() -> dict[str, dict[str, bool | float | str]]:
     """Return all settings from settings.json file."""
     with open("rechess/settings.json") as settings_file:
         return json.load(settings_file)
 
 
-@overload
-def setting_value(section: BoardSection, key: BoardKey) -> bool: ...
-@overload
-def setting_value(section: ClockSection, key: ClockKey) -> float: ...
-@overload
-def setting_value(section: EngineSection, key: EngineKey) -> bool: ...
-@overload
-def setting_value(section: HumanSection, key: HumanKey) -> str: ...
-@overload
-def setting_value(section: UiSection, key: StyleKey) -> str: ...
-def setting_value(section: SettingSection, key: SettingKey) -> SettingValue:
+def setting_value(section: str, key: str) -> bool | float | str:
     """Return value of `key` from `section`."""
-    settings_dict: SettingsDict = _settings()
+    settings_dict: dict[str, dict[str, bool | float | str]] = _settings()
     return settings_dict[section][key]
 
 
-@overload
-def set_setting_value(
-    section: BoardSection, key: BoardKey, value: bool
-) -> None: ...
-@overload
-def set_setting_value(
-    section: ClockSection, key: ClockKey, value: float
-) -> None: ...
-@overload
-def set_setting_value(
-    section: EngineSection, key: EngineKey, value: bool
-) -> None: ...
-@overload
-def set_setting_value(
-    section: HumanSection, key: HumanKey, value: str
-) -> None: ...
-@overload
-def set_setting_value(
-    section: UiSection, key: StyleKey, value: str
-) -> None: ...
-def set_setting_value(
-    section: SettingSection, key: SettingKey, value: SettingValue
-) -> None:
+def set_setting_value(section: str, key: str, value: bool | float | str) -> None:
     """Set `value` to `key` for `section`."""
-    settings_dict: SettingsDict = _settings()
+    settings_dict: dict[str, dict[str, bool | float | str]] = _settings()
     settings_dict[section][key] = value
 
-    with open(
-        "rechess/settings.json", mode="w", newline="\n"
-    ) as settings_file:
+    with open("rechess/settings.json", mode="w", newline="\n") as settings_file:
         json.dump(settings_dict, settings_file, indent=2)
         settings_file.write("\n")
 
