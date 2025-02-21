@@ -1,14 +1,17 @@
+from __future__ import annotations
+
 import json
 import os
 import platform
 import stat
 import subprocess
+import sys
 from typing import Any, Callable
 
 from psutil import cpu_count, virtual_memory
 from PySide6.QtCore import QSize
 from PySide6.QtGui import QAction, QColor, QIcon, QPixmap
-from PySide6.QtWidgets import QApplication, QPushButton
+from PySide6.QtWidgets import QApplication, QMessageBox, QPushButton
 
 
 def path_to_stockfish() -> str:
@@ -72,7 +75,9 @@ def set_setting_value(section: str, key: str, value: Any) -> None:
     settings_dict: dict[str, dict[str, Any]] = _settings()
     settings_dict[section][key] = value
 
-    with open("rechess/settings.json", mode="w", newline="\n") as settings_file:
+    with open(
+        "rechess/settings.json", mode="w", newline="\n"
+    ) as settings_file:
         json.dump(settings_dict, settings_file, indent=2)
         settings_file.write("\n")
 
@@ -97,6 +102,14 @@ def style_name(filename: str) -> str:
         "light-ocean": "Light ocean",
     }
     return styles[filename]
+
+
+def show_warning(parent: MainWindow) -> None:
+    title: str = "Warning"
+    text: str = "ReChess is already running!"
+    QMessageBox.warning(parent, title, text)
+    parent.destruct()
+    sys.exit()
 
 
 def app_object() -> QApplication:

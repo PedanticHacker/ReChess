@@ -11,6 +11,7 @@ from .helper_functions import (
     path_to_stockfish,
     set_setting_value,
     setting_value,
+    show_warning,
     style_name,
     svg_icon,
 )
@@ -29,6 +30,7 @@ __all__: list[str] = [
     "path_to_stockfish",
     "set_setting_value",
     "setting_value",
+    "show_warning",
     "style_name",
     "svg_icon",
 ]

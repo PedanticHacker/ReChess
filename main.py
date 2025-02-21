@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 
 
-import sys
+from __future__ import annotations
 
 from PySide6.QtCore import QLockFile
-from PySide6.QtWidgets import QApplication, QMessageBox
 
 from rechess.ui import MainWindow
-from rechess.utils import app_object
+from rechess.utils import app_object, show_warning
 
 
 def main() -> None:
@@ -17,11 +16,7 @@ def main() -> None:
     lock_file: QLockFile = QLockFile("ReChess.lock")
 
     if not lock_file.tryLock(1):
-        title: str = "Warning"
-        text: str = "ReChess is already running!"
-        QMessageBox.warning(main_window, title, text)
-        main_window.destruct()
-        sys.exit()
+        show_warning(main_window)
 
     main_window.showMaximized()
     app.exec()
