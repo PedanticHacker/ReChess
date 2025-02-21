@@ -105,6 +105,7 @@ def style_name(filename: str) -> str:
 
 
 def show_warning(parent: MainWindow) -> None:
+    """Warn about ReChess already running."""
     title: str = "Warning"
     text: str = "ReChess is already running!"
     QMessageBox.warning(parent, title, text)
