@@ -1,7 +1,7 @@
 from .helper_functions import (
-    app_object,
     colorize_icon,
     create_action,
+    create_app,
     create_button,
     delete_quarantine_attribute,
     engine_configuration,
@@ -18,9 +18,9 @@ from .helper_functions import (
 
 
 __all__: list[str] = [
-    "app_object",
     "colorize_icon",
     "create_action",
+    "create_app",
     "create_button",
     "delete_quarantine_attribute",
     "engine_configuration",

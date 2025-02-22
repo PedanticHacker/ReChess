@@ -113,18 +113,6 @@ def show_warning(parent: MainWindow) -> None:
     sys.exit()
 
 
-def app_object() -> QApplication:
-    """Initialize QApplication with basic settings and return it."""
-    app: QApplication = QApplication()
-    app.setApplicationDisplayName("ReChess")
-    app.setApplicationName("ReChess")
-    app.setApplicationVersion("1.0")
-    app.setDesktopFileName("ReChess")
-    app.setStyle("fusion")
-    app.setWindowIcon(svg_icon("logo"))
-    return app
-
-
 def create_action(
     handler: Callable, icon: QIcon, name: str, shortcut: str, status_tip: str
 ) -> QAction:
@@ -134,6 +122,18 @@ def create_action(
     action.setStatusTip(status_tip)
     action.triggered.connect(handler)
     return action
+
+
+def create_app() -> QApplication:
+    """Initialize QApplication with basic settings and return it."""
+    app: QApplication = QApplication()
+    app.setApplicationDisplayName("ReChess")
+    app.setApplicationName("ReChess")
+    app.setApplicationVersion("1.0")
+    app.setDesktopFileName("ReChess")
+    app.setStyle("fusion")
+    app.setWindowIcon(svg_icon("logo"))
+    return app
 
 
 def create_button(icon: QIcon) -> QPushButton:
