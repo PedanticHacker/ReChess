@@ -350,7 +350,7 @@ class MainWindow(QMainWindow):
         self._evaluation_bar.setSizePolicy(size_policy)
 
     def switch_clock_timers(self) -> None:
-        """Switch Black's and White's clock timers based on turn."""
+        """Switch between Black and White clock timers based on turn."""
         if self._game.is_white_on_turn():
             self._black_clock.stop_timer()
             self._white_clock.start_timer()
