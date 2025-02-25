@@ -6,7 +6,7 @@ from rechess.utils import setting_value
 
 
 class EvaluationBar(QProgressBar):
-    """Chunk animator based on evaluation score."""
+    """Vertical bar with animatable chunk showing evaluation score."""
 
     def __init__(self) -> None:
         super().__init__()
@@ -22,7 +22,7 @@ class EvaluationBar(QProgressBar):
         self.reset_state()
 
     def reset_state(self) -> None:
-        """Hide widget, set chunk to neutral evaluation, and flip it."""
+        """Hide widget, reset its chunk to neutral, and flip it."""
         self.hide()
         self.reset()
         self.flip_chunk()
