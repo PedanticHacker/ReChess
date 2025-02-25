@@ -21,7 +21,7 @@ from rechess.core import Game
 from rechess.uci import Engine
 from rechess.ui.dialogs import SettingsDialog
 from rechess.ui.table import TableModel, TableView
-from rechess.ui.widgets import Board, Clock, EvaluationBar, FenEditor
+from rechess.ui.widgets import Board, Clock, EvaluationBar, FenEdit
 from rechess.utils import (
     colorize_icon,
     create_action,
@@ -57,7 +57,7 @@ class MainWindow(QMainWindow):
         self._white_clock: Clock = Clock(ClockColor.White)
 
         self._board: Board = Board(self._game)
-        self._fen_editor: FenEditor = FenEditor(self._game)
+        self._fen_edit: FenEdit = FenEdit(self._game)
         self._evaluation_bar: EvaluationBar = EvaluationBar()
 
         self._engine_analysis_label: QLabel = QLabel()
@@ -105,7 +105,7 @@ class MainWindow(QMainWindow):
         self._grid_layout.addWidget(self._engine_name_label, 2, 1)
         self._grid_layout.addWidget(self._white_clock, 4, 1)
         self._grid_layout.addWidget(self._human_name_label, 5, 1)
-        self._grid_layout.addWidget(self._fen_editor, 5, 2)
+        self._grid_layout.addWidget(self._fen_edit, 5, 2)
         self._grid_layout.addWidget(self._game_notifications_label, 5, 3)
 
         self._grid_layout.setRowStretch(0, 1)
@@ -380,7 +380,7 @@ class MainWindow(QMainWindow):
         self._engine.move_played.connect(self.on_move_played)
         self._engine.score_analyzed.connect(self.on_score_analyzed)
         self._engine.variation_analyzed.connect(self.on_variation_analyzed)
-        self._fen_editor.fen_validated.connect(self.on_fen_validated)
+        self._fen_edit.fen_validated.connect(self.on_fen_validated)
         self._game.move_played.connect(self.on_move_played)
         self._table_view.item_selected.connect(self.on_item_selected)
         self._white_clock.time_expired.connect(self.on_white_time_expired)
@@ -534,9 +534,9 @@ class MainWindow(QMainWindow):
 
     def show_fen(self) -> None:
         """Show FEN in editor."""
-        self._fen_editor.clearFocus()
-        self._fen_editor.hide_warning()
-        self._fen_editor.setText(self._game.fen)
+        self._fen_edit.clearFocus()
+        self._fen_edit.hide_warning()
+        self._fen_edit.setText(self._game.fen)
 
     def show_opening(self) -> None:
         """Show ECO code and opening name."""

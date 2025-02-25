@@ -23,7 +23,7 @@ from rechess.utils import setting_value
 
 
 class SoundEffectFileUrl(EnumDict):
-    """File URL enum for sound effects of various move types."""
+    """File URL enum for sound effects of various game events."""
 
     Capture = QUrl("file:rechess/assets/audio/capture.wav")
     Castling = QUrl("file:rechess/assets/audio/castling.wav")
@@ -34,7 +34,7 @@ class SoundEffectFileUrl(EnumDict):
 
 
 class Game(QObject):
-    """Chess game state, moves, and UI interaction management."""
+    """Game state, moves, events, and UI interaction management."""
 
     move_played: ClassVar[Signal] = Signal(Move)
 
