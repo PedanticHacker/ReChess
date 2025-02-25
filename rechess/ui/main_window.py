@@ -78,7 +78,7 @@ class MainWindow(QMainWindow):
         self._openings_label: QLabel = QLabel()
         self._style_name_label: QLabel = QLabel()
 
-        self.set_layout()
+        self.create_layout()
         self.create_actions()
         self.create_menubar()
         self.create_toolbar()
@@ -93,8 +93,8 @@ class MainWindow(QMainWindow):
             self.flip()
             self.invoke_engine()
 
-    def set_layout(self) -> None:
-        """Set layout for fixed-position widgets."""
+    def create_layout(self) -> None:
+        """Create grid layout with fixed widget positions."""
         self._grid_layout: QGridLayout = QGridLayout()
 
         self._grid_layout.addWidget(self._black_clock, 1, 1)
