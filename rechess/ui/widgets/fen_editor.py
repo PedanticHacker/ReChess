@@ -6,7 +6,7 @@ from PySide6.QtWidgets import QLineEdit
 
 
 class FenEditor(QLineEdit):
-    """Editor for Forsyth-Edwards notation (FEN)."""
+    """Editor for Forsyth-Edwards Notation (FEN)."""
 
     fen_validated: Signal = Signal()
 
@@ -33,7 +33,7 @@ class FenEditor(QLineEdit):
 
     @Slot(str)
     def validate_fen(self, fen: str) -> None:
-        """Validate `fen` to set new position based on it."""
+        """Validate `fen` to set new position from it."""
         try:
             self._game.fen = fen
         except (IndexError, ValueError):
