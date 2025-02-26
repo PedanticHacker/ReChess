@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 from chess import svg
-from PySide6.QtCore import Property, QPointF, QRectF, Qt, QTimer
-from PySide6.QtGui import QColor, QMouseEvent, QPainter, QPaintEvent
+from PySide6.QtCore import Property, QPointF, QRectF, QTimer
+from PySide6.QtGui import QColor, QPainter
 from PySide6.QtSvg import QSvgRenderer
 from PySide6.QtSvgWidgets import QSvgWidget
 
@@ -117,9 +117,7 @@ class Board(QSvgWidget):
         orientation: bool = setting_value("board", "orientation")
         colors = tuple(sorted(self._colors().items()))
         from_square: int | None = (
-            self._piece_dragged_from_square
-            if self._is_dragging or self._is_animating
-            else None
+            self._piece_dragged_from_square if self._is_dragging or self._is_animating else None
         )
         animation_state: bool = self._is_animating
 
@@ -147,9 +145,7 @@ class Board(QSvgWidget):
 
         return QPointF(x_position, y_position)
 
-    def _start_return_animation(
-        self, current_position: QPointF, target_square: int
-    ) -> None:
+    def _start_return_animation(self, current_position: QPointF, target_square: int) -> None:
         assert (
             self._piece_dragged_from_square is not None
         ), "Cannot animate without a source square"
@@ -157,9 +153,7 @@ class Board(QSvgWidget):
         self._is_animating = True
         self._is_dragging = False
         self._animation_start_position = current_position
-        self._animation_end_position = self._get_square_center(
-            self._piece_dragged_from_square
-        )
+        self._animation_end_position = self._get_square_center(self._piece_dragged_from_square)
         self._animation_current_position = current_position
         self._animation_current_step = 0
         self._animation_timer.start(20)
@@ -181,10 +175,7 @@ class Board(QSvgWidget):
         progress: float = self._animation_current_step / self._animation_steps
         progress = 1.0 - (1.0 - progress) * (1.0 - progress)
 
-        if (
-            self._animation_start_position is not None
-            and self._animation_end_position is not None
-        ):
+        if self._animation_start_position is not None and self._animation_end_position is not None:
             start_x = self._animation_start_position.x()
             start_y = self._animation_start_position.y()
             end_x = self._animation_end_position.x()
@@ -251,10 +242,7 @@ class Board(QSvgWidget):
             file, rank = self._game.locate_file_and_rank(x_position, y_position)
             target_square: int = rank * 8 + file
 
-            if (
-                0 <= target_square < 64
-                and target_square != self._piece_dragged_from_square
-            ):
+            if 0 <= target_square < 64 and target_square != self._piece_dragged_from_square:
                 legal_move_targets: list[int] | None = self._game.legal_moves
 
                 if legal_move_targets and target_square in legal_move_targets:
@@ -321,8 +309,8 @@ class Board(QSvgWidget):
         if (
             self._is_dragging
             and self._dragged_piece
-            and self._dragged_piece_from_current_x_position is not None
-            and self._dragged_piece_from_current_y_position is not None
+            and self._dragged_piece_from_current_x_position
+            and self._dragged_piece_from_current_y_position
         ):
             painter: QPainter = QPainter(self)
 
