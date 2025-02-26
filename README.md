@@ -100,17 +100,13 @@ Chess variants are not supported.
 
 ## How do I move a piece on the board?
 
-Making a move in ReChess is as simple as a click. Just click a piece and
-then click one of its legal squares to make your move.
+Making a move in ReChess is as simple as a drag. Just drag a piece on
+one of its legal squares and then drop it there to make your move.
 
 ### How do I know which legal squares are available for a piece?
 
-After you click a piece, all of its legal squares get marked with a dot.
-That's how you know.
-
-### Can I drag and drop a piece?
-
-No. Drag-and-drop functionality is not supported, just click-click.
+After you start dragging a piece, all of its legal squares get marked
+with a dot. That's how you know.
 
 ## How does ReChess look?
 
