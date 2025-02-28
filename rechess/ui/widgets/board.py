@@ -176,7 +176,7 @@ class SvgBoard(QSvgWidget):
         )
         self._current_animation_position = current_position
         self._current_animation_step = 0
-        self._animation_timer.start(ANIMATION_MILLISECONDS)
+        self._animation_timer.start(ANIMATION_TIME)
 
     def _animate_piece_return(self) -> None:
         """Update piece position for each step of return animation."""
