@@ -12,6 +12,8 @@ from PySide6.QtSvgWidgets import QSvgWidget
 from rechess.utils import setting_value
 
 
+ANIMATION_MILLISECONDS = 30
+
 BOARD_MARGIN: Final[float] = 20.0
 HALF_SQUARE: Final[float] = 35.0
 SQUARE_CENTER_OFFSET: Final[float] = 55.0
@@ -104,7 +106,7 @@ class SvgBoard(QSvgWidget):
         self._animation_timer.timeout.connect(self._animate_piece_return)
         self._animation_start_position: QPointF | None = None
         self._animation_end_position: QPointF | None = None
-        self._animation_current_position: QPointF | None = None
+        self._current_animation_position: QPointF | None = None
         self._animation_steps: int = 10
         self._current_animation_step: int = 0
 
@@ -163,7 +165,7 @@ class SvgBoard(QSvgWidget):
         return QPointF(x_position, y_position)
 
     def _start_animation(self, current_position: QPointF) -> None:
-        """Begin animation from current position to original square."""
+        """Begin animation from current position to origin square."""
         if not self._piece_dragged_from_square:
             return
 
@@ -173,9 +175,9 @@ class SvgBoard(QSvgWidget):
         self._animation_end_position = self._square_center(
             self._piece_dragged_from_square
         )
-        self._animation_current_position = current_position
+        self._current_animation_position = current_position
         self._current_animation_step = 0
-        self._animation_timer.start()
+        self._animation_timer.start(ANIMATION_MILLISECONDS)
 
     def _animate_piece_return(self) -> None:
         """Update piece position for each step of return animation."""
@@ -190,7 +192,7 @@ class SvgBoard(QSvgWidget):
         if self._animation_start_position and self._animation_end_position:
             start_position: QPointF = self._animation_start_position
             end_position: QPointF = self._animation_end_position
-            self._animation_current_position = QPointF(
+            self._current_animation_position = QPointF(
                 start_position.x() * (1 - progress) + end_position.x() * progress,
                 start_position.y() * (1 - progress) + end_position.y() * progress,
             )
@@ -202,7 +204,7 @@ class SvgBoard(QSvgWidget):
         self._is_animating = False
         self._animation_start_position = None
         self._animation_end_position = None
-        self._animation_current_position = None
+        self._current_animation_position = None
         self._piece_dragged_from_square = None
         self._dragged_piece = None
         self._game.reset_squares()
@@ -320,11 +322,11 @@ class SvgBoard(QSvgWidget):
         elif (
             self._is_animating
             and self._dragged_piece
-            and self._animation_current_position
+            and self._current_animation_position
         ):
             self._render_piece(
-                self._animation_current_position.x(),
-                self._animation_current_position.y(),
+                self._current_animation_position.x(),
+                self._current_animation_position.y(),
             )
 
     @lru_cache(maxsize=20)
