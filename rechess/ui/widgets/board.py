@@ -23,42 +23,42 @@ svg.XX = "<circle id='xx' r='4.5' cx='22.5' cy='22.5' stroke='#303030' fill='#e5
 class SvgBoard(QSvgWidget):
     """Render SVG-based interface for pieces and squares."""
 
-    coord = Property(
+    coord: Property = Property(
         QColor,
         lambda self: self._coord,
         lambda self, color: setattr(self, "_coord", color),
     )
-    inner_border = Property(
+    inner_border: Property = Property(
         QColor,
         lambda self: self._inner_border,
         lambda self, color: setattr(self, "_inner_border", color),
     )
-    margin = Property(
+    margin: Property = Property(
         QColor,
         lambda self: self._margin,
         lambda self, color: setattr(self, "_margin", color),
     )
-    outer_border = Property(
+    outer_border: Property = Property(
         QColor,
         lambda self: self._outer_border,
         lambda self, color: setattr(self, "_outer_border", color),
     )
-    square_dark = Property(
+    square_dark: Property = Property(
         QColor,
         lambda self: self._square_dark,
         lambda self, color: setattr(self, "_square_dark", color),
     )
-    square_dark_lastmove = Property(
+    square_dark_lastmove: Property = Property(
         QColor,
         lambda self: self._square_dark_lastmove,
         lambda self, color: setattr(self, "_square_dark_lastmove", color),
     )
-    square_light = Property(
+    square_light: Property = Property(
         QColor,
         lambda self: self._square_light,
         lambda self, color: setattr(self, "_square_light", color),
     )
-    square_light_lastmove = Property(
+    square_light_lastmove: Property = Property(
         QColor,
         lambda self: self._square_light_lastmove,
         lambda self, color: setattr(self, "_square_light_lastmove", color),
@@ -68,7 +68,7 @@ class SvgBoard(QSvgWidget):
         super().__init__()
 
         self._game: Game = game
-        self._game.move_played.connect(self.clear_cache)
+        self._game.move_played.connect(self._clear_cache)
 
         self._square_size: float = SQUARE_SIZE
         self._initialize_colors()
@@ -108,7 +108,7 @@ class SvgBoard(QSvgWidget):
         self._animation_steps: int = 10
         self._current_animation_step: int = 0
 
-    def clear_cache(self) -> None:
+    def _clear_cache(self) -> None:
         """Clear board SVG cache and update display."""
         self._board_svg.cache_clear()
         self.update()
