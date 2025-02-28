@@ -12,8 +12,7 @@ from PySide6.QtSvgWidgets import QSvgWidget
 from rechess.utils import setting_value
 
 
-ANIMATION_MILLISECONDS = 30
-
+ANIMATION_TIME: Final[int] = 20
 BOARD_MARGIN: Final[float] = 20.0
 HALF_SQUARE: Final[float] = 35.0
 SQUARE_CENTER_OFFSET: Final[float] = 55.0
