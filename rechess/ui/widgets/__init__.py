@@ -1,7 +1,7 @@
-from .board import Board
-from .clock import Clock
-from .evaluation_bar import EvaluationBar
-from .fen_edit import FenEdit
+from .board import SvgBoard
+from .clock import DigitalClock
+from .evaluation import EvaluationBar
+from .fen import FenEdit
 
 
-__all__: list[str] = ["Board", "Clock", "EvaluationBar", "FenEdit"]
+__all__: list[str] = ["DigitalClock", "EvaluationBar", "FenEdit", "SvgBoard"]

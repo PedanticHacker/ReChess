@@ -21,7 +21,7 @@ from rechess.core import Game
 from rechess.uci import Engine
 from rechess.ui.dialogs import SettingsDialog
 from rechess.ui.table import TableModel, TableView
-from rechess.ui.widgets import Board, Clock, EvaluationBar, FenEdit
+from rechess.ui.widgets import DigitalClock, EvaluationBar, FenEdit, SvgBoard
 from rechess.utils import (
     colorize_icon,
     create_action,
@@ -53,10 +53,10 @@ class MainWindow(QMainWindow):
         self._table_model: TableModel = TableModel(self._game.moves)
         self._table_view: TableView = TableView(self._table_model)
 
-        self._black_clock: Clock = Clock(ClockColor.Black)
-        self._white_clock: Clock = Clock(ClockColor.White)
+        self._black_clock: DigitalClock = DigitalClock(ClockColor.Black)
+        self._white_clock: DigitalClock = DigitalClock(ClockColor.White)
 
-        self._board: Board = Board(self._game)
+        self._board: SvgBoard = SvgBoard(self._game)
         self._fen_edit: FenEdit = FenEdit(self._game)
         self._evaluation_bar: EvaluationBar = EvaluationBar()
 
