@@ -65,8 +65,8 @@ class SvgBoard(QSvgWidget):
     )
 
     def __init__(self, game: Game) -> None:
-        """Initialize SVG board."""
         super().__init__()
+
         self._game: Game = game
         self._game.move_played.connect(self.clear_cache)
 
@@ -106,7 +106,7 @@ class SvgBoard(QSvgWidget):
         self._animation_end_position: QPointF | None = None
         self._animation_current_position: QPointF | None = None
         self._animation_steps: int = 10
-        self._animation_current_step: int = 0
+        self._current_animation_step: int = 0
 
     def clear_cache(self) -> None:
         """Clear board SVG cache and update display."""
@@ -174,24 +174,22 @@ class SvgBoard(QSvgWidget):
             self._piece_dragged_from_square
         )
         self._animation_current_position = current_position
-        self._animation_current_step = 0
+        self._current_animation_step = 0
         self._animation_timer.start()
 
     def _animate_piece_return(self) -> None:
         """Update piece position for each step of return animation."""
-        if self._animation_current_step >= self._animation_steps:
+        if self._current_animation_step >= self._animation_steps:
             self._end_animation()
             return
 
-        self._animation_current_step += 1
-        progress: float = self._animation_current_step / self._animation_steps
-        # Apply quadratic ease-out effect
+        self._current_animation_step += 1
+        progress: float = self._current_animation_step / self._animation_steps
         progress = 1.0 - (1.0 - progress) * (1.0 - progress)
 
         if self._animation_start_position and self._animation_end_position:
             start_position: QPointF = self._animation_start_position
             end_position: QPointF = self._animation_end_position
-            # Calculate position using linear interpolation
             self._animation_current_position = QPointF(
                 start_position.x() * (1 - progress) + end_position.x() * progress,
                 start_position.y() * (1 - progress) + end_position.y() * progress,
@@ -280,7 +278,7 @@ class SvgBoard(QSvgWidget):
             self._cancel_move(x_position, y_position)
 
     def _is_valid_move(self, target_square: int) -> bool:
-        """Check if target square is valid move destination."""
+        """Check if `target_square` is valid destination for move."""
         return (
             0 <= target_square < 64
             and target_square != self._piece_dragged_from_square
@@ -298,7 +296,7 @@ class SvgBoard(QSvgWidget):
         self.update()
 
     def _reset_drag_state(self) -> None:
-        """Reset drag operation state variables."""
+        """Reset state variables of drag operation."""
         self._is_dragging = False
         self._piece_dragged_from_square = None
         self._dragged_piece = None
@@ -363,7 +361,7 @@ class SvgBoard(QSvgWidget):
     def _piece_renderer(self, piece_symbol: str) -> QSvgRenderer:
         """Return renderer for specified piece."""
         if piece_symbol not in self._piece_renderers:
-            dragged_piece = self._dragged_piece
+            dragged_piece: Piece = self._dragged_piece
             piece_svg: str = svg.piece(dragged_piece)
             renderer: QSvgRenderer = QSvgRenderer()
             renderer.load(piece_svg.encode())
@@ -379,12 +377,12 @@ class SvgBoard(QSvgWidget):
         painter: QPainter = QPainter(self)
         renderer: QSvgRenderer = self._piece_renderer(self._dragged_piece.symbol())
 
-        piece_rect: QRectF = QRectF(
+        piece_rectangle: QRectF = QRectF(
             x_position - HALF_SQUARE,
             y_position - HALF_SQUARE,
             SQUARE_SIZE,
             SQUARE_SIZE,
         )
 
-        renderer.render(painter, piece_rect)
+        renderer.render(painter, piece_rectangle)
         painter.end()
