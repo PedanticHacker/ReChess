@@ -185,15 +185,17 @@ class SvgBoard(QSvgWidget):
             return
 
         self._current_animation_step += 1
-        progress: float = self._current_animation_step / self._animation_steps
-        progress = 1.0 - (1.0 - progress) * (1.0 - progress)
+        linear_progress: float = self._current_animation_step / self._animation_steps
+        eased_progress: float = 1.0 - (1.0 - linear_progress) ** 2
 
         if self._animation_start_position and self._animation_end_position:
             start_position: QPointF = self._animation_start_position
             end_position: QPointF = self._animation_end_position
             self._current_animation_position = QPointF(
-                start_position.x() * (1 - progress) + end_position.x() * progress,
-                start_position.y() * (1 - progress) + end_position.y() * progress,
+                start_position.x() * (1 - eased_progress)
+                + end_position.x() * eased_progress,
+                start_position.y() * (1 - eased_progress)
+                + end_position.y() * eased_progress,
             )
             self.update()
 
@@ -329,7 +331,7 @@ class SvgBoard(QSvgWidget):
             )
 
     @lru_cache(maxsize=20)
-    def _board_svg(self, cache_key: tuple) -> bytes:
+    def _board_svg(self, _cache_key: tuple) -> bytes:
         """Generate SVG representation of current board state."""
         if (
             self._is_dragging or self._is_animating
