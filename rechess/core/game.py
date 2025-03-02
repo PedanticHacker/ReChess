@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from contextlib import suppress
 from enum import EnumDict
-from typing import ClassVar, Iterator
+from typing import ClassVar, Final, Iterator
 
 from chess import (
     BB_SQUARES,
@@ -20,6 +20,10 @@ from PySide6.QtWidgets import QDialog
 
 from rechess.ui.dialogs import PromotionDialog
 from rechess.utils import setting_value
+
+
+BOARD_MARGIN: Final[float] = 20.0
+SQUARE_SIZE: Final[float] = 70.0
 
 
 class SoundEffectFileUrl(EnumDict):
@@ -195,13 +199,18 @@ class Game(QObject):
     def locate_file_and_rank(self, x: float, y: float) -> tuple[int, int]:
         """Return file and rank from `x` and `y` square coordinates."""
         if setting_value("board", "orientation") == WHITE:
-            file: float = (x - 20) // 70
-            rank: float = 7 - (y - 20) // 70
+            file_position: float = (x - BOARD_MARGIN) // SQUARE_SIZE
+            rank_position: float = 7 - (y - BOARD_MARGIN) // SQUARE_SIZE
         else:
-            file = 7 - (x - 20) // 70
-            rank = (y - 20) // 70
+            file_position = 7 - (x - BOARD_MARGIN) // SQUARE_SIZE
+            rank_position = (y - BOARD_MARGIN) // SQUARE_SIZE
 
-        return round(file), round(rank)
+        file_index: int = round(file_position)
+        rank_index: int = round(rank_position)
+        valid_file: int = max(0, min(7, file_index))
+        valid_rank: int = max(0, min(7, rank_index))
+
+        return valid_file, valid_rank
 
     def find_move(self, origin: Square, target: Square) -> None:
         """Find legal move from `origin` and `target` squares."""
