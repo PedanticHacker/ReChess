@@ -24,16 +24,16 @@ svg.XX = "<circle id='xx' r='4.5' cx='22.5' cy='22.5' stroke='#303030' fill='#e5
 
 
 class PieceAnimator(QObject):
-    """Piece drag-and-drop animation management for board widget."""
+    """Piece drag-and-drop animation management for board."""
 
     animation_completed: ClassVar[Signal] = Signal()
 
-    def __init__(self, parent: SvgBoard) -> None:
-        super().__init__(parent)
+    def __init__(self, svg_board: SvgBoard) -> None:
+        super().__init__(svg_board)
 
-        self.board_widget: SvgBoard = parent
+        self.svg_board: SvgBoard = svg_board
 
-        self.animation_timer: QTimer = QTimer(parent)
+        self.animation_timer: QTimer = QTimer(svg_board)
         self.animation_timer.timeout.connect(self._step_animation)
 
         self.is_animating: bool = False
@@ -62,10 +62,9 @@ class PieceAnimator(QObject):
         piece: Piece,
     ) -> None:
         """Start animation to return piece to origin square."""
-        target_position: QPointF = self.board_widget._square_center(origin_square)
         self.is_animating = True
         self.animation_start_position = current_position
-        self.animation_end_position = target_position
+        self.animation_end_position = self.svg_board._square_center(origin_square)
         self.current_animation_position = current_position
         self.current_animation_step = 0
         self.dragged_piece = piece
@@ -88,7 +87,7 @@ class PieceAnimator(QObject):
                 self.animation_start_position.y() * (1 - motion_progress)
                 + self.animation_end_position.y() * motion_progress,
             )
-            self.board_widget.update()
+            self.svg_board.update()
 
     def _end_animation(self) -> None:
         """Stop animation and emit completion signal."""
@@ -161,7 +160,7 @@ class SvgBoard(QSvgWidget):
     def _update_color(self, property_name: str, color_value: QColor) -> None:
         """Update color property and refresh board display."""
         setattr(self, property_name, color_value)
-        self._color_dict.cache_clear()
+        self._board_colors.cache_clear()
         self.update()
 
     def _setup_colors(self) -> None:
@@ -197,12 +196,14 @@ class SvgBoard(QSvgWidget):
         """Clear cached SVG and update board orientation."""
         self._board_svg.cache_clear()
         current_orientation: bool = setting_value("board", "orientation")
+
         if self._current_orientation != current_orientation:
             self._current_orientation = current_orientation
+
         self.update()
 
     @lru_cache(maxsize=1)
-    def _color_dict(self) -> dict[str, str]:
+    def _board_colors(self) -> dict[str, str]:
         """Create color name dictionary for SVG rendering."""
         return {
             "coord": self._coord.name(),
@@ -215,11 +216,15 @@ class SvgBoard(QSvgWidget):
             "square light lastmove": self._square_light_lastmove.name(),
         }
 
+    def _hashable_board_colors(self) -> tuple:
+        """Return board colors as hashable object for caching."""
+        return tuple(self._board_colors().items())
+
     def _cache_key(self) -> tuple:
         """Generate unique key for board state caching."""
         dragging_square: int | None = (
             self._piece_dragged_from_square
-            if (self._is_dragging or self._animator.is_animating)
+            if self._is_dragging or self._animator.is_animating
             else None
         )
 
@@ -229,7 +234,7 @@ class SvgBoard(QSvgWidget):
             str(self._game.arrow),
             self._game.king_in_check,
             self._current_orientation,
-            hash(frozenset(self._color_dict().items())),
+            self._hashable_board_colors(),
             dragging_square,
             self._animator.is_animating,
         )
@@ -403,9 +408,7 @@ class SvgBoard(QSvgWidget):
     @lru_cache(maxsize=128)
     def _board_svg(self, _cache_key: tuple) -> bytes:
         """Generate SVG representation of current board."""
-        if (
-            self._is_dragging or self._animator.is_animating
-        ) and self._temporary_board is not None:
+        if (self._is_dragging and self._temporary_board) or self._animator.is_animating:
             board_to_render: Board = self._temporary_board
         else:
             board_to_render = self._game.board
@@ -414,7 +417,7 @@ class SvgBoard(QSvgWidget):
             arrows=self._game.arrow,
             board=board_to_render,
             check=self._game.king_in_check,
-            colors=self._color_dict(),
+            colors=self._board_colors(),
             orientation=self._current_orientation,
             squares=self._game.legal_moves,
         )
