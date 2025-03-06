@@ -386,7 +386,7 @@ class SvgBoard(QSvgWidget):
         """Animate piece returning to origin square for invalid move."""
         self._start_animation(QPointF(x, y))
 
-    def paintEvent(self, event) -> None:
+    def paintEvent(self, event: QPaintEvent) -> None:
         """Render board and dragged or animated pieces."""
         cache_key: tuple = self._cache_key()
         board_svg: bytes = self._board_svg(cache_key)
