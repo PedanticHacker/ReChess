@@ -285,7 +285,7 @@ class SvgBoard(QSvgWidget):
         square_index: int = file + (8 * rank)
         return square_index if square_index < ALL_SQUARES else None
 
-    def mousePressEvent(self, event) -> None:
+    def mousePressEvent(self, event: QMouseEvent) -> None:
         """Handle mouse press for piece selection or targeting."""
         if self._animator.is_animating:
             return
@@ -319,7 +319,7 @@ class SvgBoard(QSvgWidget):
 
         self.update()
 
-    def mouseMoveEvent(self, event) -> None:
+    def mouseMoveEvent(self, event: QMouseEvent) -> None:
         """Update piece position during dragging or cursor shape."""
         if self._animator.is_animating:
             return
@@ -335,7 +335,7 @@ class SvgBoard(QSvgWidget):
             self._update_cursor(x, y)
             super().mouseMoveEvent(event)
 
-    def mouseReleaseEvent(self, event) -> None:
+    def mouseReleaseEvent(self, event: QMouseEvent) -> None:
         """Process move or cancel piece dragging when mouse released."""
         if self._animator.is_animating:
             return
@@ -406,7 +406,7 @@ class SvgBoard(QSvgWidget):
                 )
 
     @lru_cache(maxsize=128)
-    def _board_svg(self, _cache_key: tuple) -> bytes:
+    def _board_svg(self, cache_key: tuple) -> bytes:
         """Generate SVG representation of current board."""
         if (self._is_dragging and self._temporary_board) or self._animator.is_animating:
             board_to_render: Board = self._temporary_board
