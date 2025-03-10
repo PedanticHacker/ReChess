@@ -2,10 +2,11 @@ from enum import StrEnum
 from functools import partial
 from pathlib import Path
 from re import sub
+from typing import Final
 
 from chess import Move
 from chess.engine import Score
-from PySide6.QtCore import Qt, QThreadPool, Slot
+from PySide6.QtCore import Qt, QThreadPool, QTimer, Slot
 from PySide6.QtGui import QCloseEvent, QWheelEvent
 from PySide6.QtWidgets import (
     QDialog,
@@ -32,6 +33,9 @@ from rechess.utils import (
     style_name,
     svg_icon,
 )
+
+
+THROTTLING_MILLISECONDS: Final[int] = 160
 
 
 class ClockColor(StrEnum):
@@ -77,6 +81,10 @@ class MainWindow(QMainWindow):
 
         self._openings_label: QLabel = QLabel()
         self._style_name_label: QLabel = QLabel()
+
+        self._wheel_timer = QTimer(self)
+        self._wheel_timer.setSingleShot(True)
+        self._wheel_timer.setInterval(THROTTLING_MILLISECONDS)
 
         self.create_layout()
         self.create_actions()
@@ -612,13 +620,18 @@ class MainWindow(QMainWindow):
             event.ignore()
 
     def wheelEvent(self, event: QWheelEvent) -> None:
-        """Select item in table view on mouse wheel scroll."""
-        wheel_step: int = event.angleDelta().y()
+        """Handle mouse wheel events with timer-based throttling."""
+        if not self._wheel_timer.isActive():
+            wheel_step: int = event.angleDelta().y()
 
-        if wheel_step > 0:
-            self._table_view.select_previous_item()
-        elif wheel_step < 0:
-            self._table_view.select_next_item()
+            if wheel_step > 0:
+                self._table_view.select_previous_item()
+            elif wheel_step < 0:
+                self._table_view.select_next_item()
+
+            self._wheel_timer.start()
+
+        event.accept()
 
     @Slot(Move)
     def on_best_move_analyzed(self, best_move: Move) -> None:
