@@ -185,7 +185,7 @@ class SvgBoard(QSvgWidget):
         self._piece_dragged_from_square = None
         self._dragged_piece = None
         self._temporary_board = None
-        self.reset_game_squares()
+        self.reset_selected_squares()
         self.update()
 
     def _has_dragging_coordinates(self) -> bool:
@@ -217,11 +217,11 @@ class SvgBoard(QSvgWidget):
         self._game.to_square = square
 
     def find_move(self, from_square: Square, to_square: Square) -> None:
-        """Find legal move between given squares."""
+        """Find legal move between `from_square` and `to_square`."""
         self._game.find_move(from_square, to_square)
 
-    def reset_game_squares(self) -> None:
-        """Reset origin and target squares in game."""
+    def reset_selected_squares(self) -> None:
+        """Reset currently selected origin and target squares."""
         self._game.reset_squares()
 
     def locate_file_and_rank(self, x: float, y: float) -> tuple[int, int]:
@@ -229,7 +229,7 @@ class SvgBoard(QSvgWidget):
         return self._game.locate_file_and_rank(x, y)
 
     def locate_square(self, x: float, y: float) -> None:
-        """Handle square location from coordinates."""
+        """Get square location from `x` and `y` coordinates."""
         self._game.locate_square(x, y)
 
     def board_copy(self) -> Board:
@@ -471,15 +471,15 @@ class BoardInteraction:
             and target_square in legal_moves
         )
 
-    def execute_move(self, target_square: Square) -> None:
-        """Complete move and update game state."""
+    def make_move(self, target_square: Square) -> None:
+        """Make move and update game state."""
         self._svg_board.set_target_square(target_square)
         self._svg_board.find_move(
             self._svg_board._piece_dragged_from_square, target_square
         )
 
         self.reset_dragging_state()
-        self._svg_board.reset_game_squares()
+        self._svg_board.reset_selected_squares()
         self._svg_board.update()
 
     def reset_dragging_state(self) -> None:
@@ -553,6 +553,6 @@ class BoardInteraction:
         square_index: Square | None = self.square_index(x, y)
 
         if square_index is not None and self.is_valid_move(square_index):
-            self.execute_move(square_index)
+            self.make_move(square_index)
         else:
             self.cancel_move(x, y)
