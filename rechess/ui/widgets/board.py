@@ -196,7 +196,6 @@ class SvgBoard(QSvgWidget):
             and self._dragging_position_y is not None
         )
 
-    # Delegation methods to follow Law of Demeter
     def piece_at(self, square: Square) -> Piece | None:
         """Get piece at given square."""
         return self._game.board.piece_at(square)
