@@ -101,7 +101,7 @@ class Game(QObject):
 
     @property
     def legal_moves(self) -> list[Square] | None:
-        """Return squares that indicate legal moves for piece."""
+        """Get target squares that would be legal for piece."""
         if self.from_square == -1:
             return None
 
@@ -186,7 +186,7 @@ class Game(QObject):
         self._board = self._board.root()
 
     def locate_square(self, x: float, y: float) -> None:
-        """Convert mouse coordinates to square coordinates."""
+        """Get square location from `x` and `y` coordinates."""
         file, rank = self.locate_file_and_rank(x, y)
 
         if self.from_square == -1:
@@ -197,7 +197,7 @@ class Game(QObject):
             self.reset_squares()
 
     def locate_file_and_rank(self, x: float, y: float) -> tuple[int, int]:
-        """Return file and rank from `x` and `y` square coordinates."""
+        """Get file and rank location from `x` and `y` coordinates."""
         if setting_value("board", "orientation") == WHITE:
             file_position: float = (x - BOARD_MARGIN) // SQUARE_SIZE
             rank_position: float = 7 - (y - BOARD_MARGIN) // SQUARE_SIZE
@@ -212,10 +212,10 @@ class Game(QObject):
 
         return valid_file, valid_rank
 
-    def find_move(self, origin: Square, target: Square) -> None:
-        """Find legal move from `origin` and `target` squares."""
+    def find_move(self, origin_square: Square, target_square: Square) -> None:
+        """Find legal move for `origin_square` and `target_square`."""
         with suppress(IllegalMoveError):
-            move: Move = self._board.find_move(origin, target)
+            move: Move = self._board.find_move(origin_square, target_square)
 
             if move.promotion:
                 move.promotion = self.promotion_piece_type()
@@ -223,7 +223,7 @@ class Game(QObject):
             self.move_played.emit(move)
 
     def promotion_piece_type(self) -> PieceType | None:
-        """Return promotion piece type from promotion dialog."""
+        """Get promotion piece type from promotion dialog."""
         promotion_dialog: PromotionDialog = PromotionDialog(self._board.turn)
 
         if promotion_dialog.exec() == QDialog.DialogCode.Accepted:
@@ -232,12 +232,12 @@ class Game(QObject):
         return None
 
     def set_move(self, item_index: int) -> None:
-        """Set move and arrow based on `item_index`."""
+        """Set move and arrow for it based on `item_index`."""
         self._board = self._positions[item_index].copy()
         self.set_arrow(self._board.move_stack[item_index])
 
     def delete_data_after(self, item_index: int) -> None:
-        """Delete moves and positions after `item_index`."""
+        """Delete moves and positions data after `item_index`."""
         if item_index < 0:
             self._initialize_state()
         else:
@@ -246,7 +246,7 @@ class Game(QObject):
             del self._positions[after_item_index]
 
     def is_check(self, move: Move) -> bool:
-        """Return True if `move` is check."""
+        """Return True if `move` would put opponent king in check."""
         board: Board = self._board.copy()
         board.push(move)
         return board.is_check()
@@ -260,7 +260,7 @@ class Game(QObject):
         return bool(self._moves)
 
     def is_legal(self, move: Move) -> bool:
-        """Return True if `move` is legal."""
+        """Return True if `move` would be considered as legal."""
         return self._board.is_legal(move)
 
     def is_over(self) -> bool:
@@ -268,7 +268,7 @@ class Game(QObject):
         return self._board.is_game_over(claim_draw=True)
 
     def is_over_after(self, move: Move) -> bool:
-        """Return True if `move` makes game be over."""
+        """Return True if `move` would make game be over."""
         board: Board = self._board.copy()
         board.push(move)
         return board.is_game_over(claim_draw=True)

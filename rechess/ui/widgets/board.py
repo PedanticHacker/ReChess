@@ -36,7 +36,7 @@ class BoardCacheKey(NamedTuple):
     """Cache key for board state."""
 
     arrows: tuple[tuple[Square, Square], ...]
-    board_colors: tuple[tuple[str, str], ...]
+    colors: tuple[tuple[str, str], ...]
     fen: str
     is_animating: bool
     king_in_check: Square | None
@@ -103,13 +103,14 @@ class SvgBoard(QSvgWidget):
 
         self._renderer: BoardRenderer = BoardRenderer(self)
         self._interactor: BoardInteractor = BoardInteractor(self)
+
         self._animatable_board: Board | None = None
         self._orientation: Color = setting_value("board", "orientation")
 
         self.setMouseTracking(True)
 
     def _update_color(self, property_name: str, color_value: QColor) -> None:
-        """Update color property and refresh board."""
+        """Update color based on `property_name` and `color_value`."""
         setattr(self, property_name, color_value)
         self._renderer.invalidate_cache()
         self.update()
@@ -136,10 +137,10 @@ class SvgBoard(QSvgWidget):
     def _clear_cache(self) -> None:
         """Clear cached SVG data and update board orientation."""
         self._renderer.invalidate_cache()
-        orientation: Color = setting_value("board", "orientation")
+        current_orientation: Color = setting_value("board", "orientation")
 
-        if self._orientation != orientation:
-            self._orientation = orientation
+        if self._orientation != current_orientation:
+            self._orientation = current_orientation
 
         self.update()
 
@@ -153,8 +154,8 @@ class SvgBoard(QSvgWidget):
 
         return BoardCacheKey(
             arrows=tuple(self._game.arrow),
-            board_colors=self._renderer.hashable_board_colors(),
-            fen=self.board_fen(),
+            colors=self._renderer.hashable_board_colors(),
+            fen=self.fen(),
             is_animating=self._animator.is_animating,
             king_in_check=self._game.king_in_check,
             legal_moves=(
@@ -199,35 +200,35 @@ class SvgBoard(QSvgWidget):
         )
 
     def piece_at(self, square: Square) -> Piece | None:
-        """Get piece at given square."""
+        """Get piece at `square`."""
         return self._game.board.piece_at(square)
 
-    def is_piece_turn(self, piece: Piece) -> bool:
-        """Check whether turn is correct for `piece` to move."""
+    def can_drag_piece(self, piece: Piece) -> bool:
+        """Check whether `piece` can be dragged based on turn."""
         return piece is not None and piece.color == self._game.board.turn
 
-    def board_fen(self) -> str:
-        """Get FEN representation of current board."""
+    def fen(self) -> str:
+        """Get FEN representation of current board setup."""
         return self._game.board.fen()
 
     def set_origin_square(self, square: Square) -> None:
-        """Set origin square for move."""
+        """Set `square` as origin for move."""
         self._game.from_square = square
 
     def set_target_square(self, square: Square) -> None:
-        """Set target square for move."""
+        """Set `square` as target for move."""
         self._game.to_square = square
 
-    def find_move(self, from_square: Square, to_square: Square) -> None:
-        """Find legal move between `from_square` and `to_square`."""
-        self._game.find_move(from_square, to_square)
+    def find_move(self, origin_square: Square, target_square: Square) -> None:
+        """Find legal move for `origin_square` and `target_square`."""
+        self._game.find_move(origin_square, target_square)
 
     def reset_selected_squares(self) -> None:
         """Reset currently selected origin and target squares."""
         self._game.reset_squares()
 
     def locate_file_and_rank(self, x: float, y: float) -> tuple[int, int]:
-        """Convert screen coordinates to board coordinates."""
+        """Get file and rank location from `x` and `y` coordinates."""
         return self._game.locate_file_and_rank(x, y)
 
     def locate_square(self, x: float, y: float) -> None:
@@ -378,7 +379,7 @@ class BoardRenderer:
 
     @lru_cache(maxsize=12)
     def svg_renderer_for_piece(self, piece_symbol: str) -> QSvgRenderer:
-        """Get or create SVG renderer for piece."""
+        """Get or create piece SVG renderer based on `piece_symbol`."""
         if piece_symbol not in self._piece_renderers:
             piece_to_render: Piece | None = None
 
@@ -396,7 +397,7 @@ class BoardRenderer:
         return self._piece_renderers[piece_symbol]
 
     def render_piece(self, x: float, y: float, piece: Piece | None = None) -> None:
-        """Draw piece at specified coordinates."""
+        """Render `piece` at `x` and `y` coordinates."""
         piece_to_render: Piece | None = piece
 
         if not piece_to_render and self._svg_board.is_dragging:
@@ -442,7 +443,7 @@ class BoardInteractor:
         if square_index is not None:
             piece: Piece | None = self._svg_board.piece_at(square_index)
 
-            if self._svg_board.is_piece_turn(piece):
+            if self._svg_board.can_drag_piece(piece):
                 self._svg_board.setCursor(Qt.CursorShape.OpenHandCursor)
                 return
 
@@ -516,7 +517,7 @@ class BoardInteractor:
 
         if square_index is not None:
             piece: Piece | None = self._svg_board.piece_at(square_index)
-            if self._svg_board.is_piece_turn(piece):
+            if self._svg_board.can_drag_piece(piece):
                 self.start_dragging(square_index, piece, x, y)
                 return
 
