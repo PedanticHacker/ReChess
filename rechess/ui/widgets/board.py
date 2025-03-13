@@ -14,6 +14,7 @@ from PySide6.QtCore import (
     QRectF,
     Qt,
     Signal,
+    Slot,
 )
 from PySide6.QtGui import QColor, QPainter
 from PySide6.QtSvg import QSvgRenderer
@@ -104,7 +105,7 @@ class SvgBoard(QSvgWidget):
         self._renderer: BoardRenderer = BoardRenderer(self)
         self._interactor: BoardInteractor = BoardInteractor(self)
 
-        self._animatable_board: Board | None = None
+        self.animatable_board: Board | None = None
         self._orientation: Color = setting_value("board", "orientation")
 
         self.setMouseTracking(True)
@@ -127,22 +128,12 @@ class SvgBoard(QSvgWidget):
         self._square_light_lastmove: QColor = QColor()
 
     def _initialize_dragging_state(self) -> None:
-        """Define instance attributes for piece dragging."""
+        """Initialize instance attributes for piece dragging."""
         self.is_dragging: bool = False
         self.origin_square: Square | None = None
         self.dragged_piece: Piece | None = None
         self.dragging_from_x: float | None = None
         self.dragging_from_y: float | None = None
-
-    def _clear_cache(self) -> None:
-        """Clear cached SVG data and update board orientation."""
-        self._renderer.invalidate_cache()
-        current_orientation: Color = setting_value("board", "orientation")
-
-        if self._orientation != current_orientation:
-            self._orientation = current_orientation
-
-        self.update()
 
     def _cache_key(self) -> BoardCacheKey:
         """Generate unique key for board state."""
@@ -182,14 +173,6 @@ class SvgBoard(QSvgWidget):
             y = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * rank)
 
         return QPointF(x, y)
-
-    def on_animation_complete(self) -> None:
-        """Clean up board state after animation completes."""
-        self.origin_square = None
-        self.dragged_piece = None
-        self._animatable_board = None
-        self.reset_selected_squares()
-        self.update()
 
     def has_dragging_coordinates(self) -> bool:
         """Check whether all data for piece rendering is available."""
@@ -276,6 +259,26 @@ class SvgBoard(QSvgWidget):
                     animated_piece,
                 )
 
+    @Slot()
+    def _clear_cache(self) -> None:
+        """Clear cached SVG data and update board orientation."""
+        self._renderer.invalidate_cache()
+        current_orientation: Color = setting_value("board", "orientation")
+
+        if self._orientation != current_orientation:
+            self._orientation = current_orientation
+
+        self.update()
+
+    @Slot()
+    def on_animation_complete(self) -> None:
+        """Clean up board state after animation completes."""
+        self.origin_square = None
+        self.dragged_piece = None
+        self.animatable_board = None
+        self.reset_selected_squares()
+        self.update()
+
 
 class PieceAnimator(QObject):
     """Piece drag-and-drop animation management for board."""
@@ -360,10 +363,10 @@ class BoardRenderer:
         """Create SVG representation of current board."""
         if (
             self._svg_board.is_dragging
-            and self._svg_board._animatable_board is not None
+            and self._svg_board.animatable_board is not None
             or self._svg_board._animator.is_animating
         ):
-            board_to_render: Board = self._svg_board._animatable_board
+            board_to_render: Board = self._svg_board.animatable_board
         else:
             board_to_render = self._svg_board._game.board
 
@@ -460,8 +463,8 @@ class BoardInteractor:
 
         self._svg_board.setCursor(Qt.CursorShape.ClosedHandCursor)
 
-        self._svg_board._animatable_board = self._svg_board.board_copy()
-        self._svg_board._animatable_board.set_piece_at(square, None)
+        self._svg_board.animatable_board = self._svg_board.board_copy()
+        self._svg_board.animatable_board.set_piece_at(square, None)
 
         self._svg_board.update()
 
@@ -491,7 +494,7 @@ class BoardInteractor:
         self._svg_board.dragged_piece = None
         self._svg_board.dragging_from_x = None
         self._svg_board.dragging_from_y = None
-        self._svg_board._animatable_board = None
+        self._svg_board.animatable_board = None
         self._svg_board.setCursor(Qt.CursorShape.ArrowCursor)
 
     def cancel_move(self, x: float, y: float) -> None:
