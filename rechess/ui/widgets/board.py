@@ -303,7 +303,7 @@ class PieceAnimator(QObject):
         self._position: QPointF = QPointF(0.0, 0.0)
         self._animation: QPropertyAnimation = QPropertyAnimation(self, b"position")
         self._animation.setDuration(ANIMATION_DURATION)
-        self._animation.setEasingCurve(QEasingCurve.Type.OutCubic)
+        self._animation.setEasingCurve(QEasingCurve.Type.OutBack)
         self._animation.finished.connect(self._end_animation)
 
     def _update_position(self, value: QPointF) -> None:
