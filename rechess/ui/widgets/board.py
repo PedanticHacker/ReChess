@@ -336,7 +336,6 @@ class BoardRenderer:
     """Handles board rendering with SVG."""
 
     def __init__(self, board: SvgBoard) -> None:
-        """Initialize board renderer with colors and cached renderers."""
         self._svg_board: SvgBoard = board
         self._piece_renderers: dict[str, QSvgRenderer] = {}
 
