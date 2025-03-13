@@ -137,7 +137,7 @@ class SvgBoard(QSvgWidget):
 
     def _cache_key(self) -> BoardCacheKey:
         """Generate unique key for board state."""
-        dragging_origin_square: Square | None = (
+        dragging_from_origin_square: Square | None = (
             self.origin_square
             if self.is_dragging or self._animator.is_animating
             else None
@@ -155,7 +155,7 @@ class SvgBoard(QSvgWidget):
                 else None
             ),
             orientation=self._orientation,
-            square=dragging_origin_square,
+            square=dragging_from_origin_square,
         )
 
     def _square_center(self, square: Square) -> QPointF:
@@ -219,7 +219,7 @@ class SvgBoard(QSvgWidget):
         self._game.locate_square(x, y)
 
     def board_copy(self) -> Board:
-        """Get copy of current board."""
+        """Get copy of current board state."""
         return self._game.board.copy()
 
     def mousePressEvent(self, event: QMouseEvent) -> None:
@@ -299,8 +299,8 @@ class PieceAnimator(QObject):
         self.is_animating: bool = False
         self.dragged_piece: Piece | None = None
         self.origin_square: Square | None = None
-
         self._position: QPointF = QPointF(0.0, 0.0)
+
         self._animation: QPropertyAnimation = QPropertyAnimation(self, b"position")
         self._animation.setDuration(ANIMATION_DURATION)
         self._animation.setEasingCurve(QEasingCurve.Type.OutBack)
@@ -354,7 +354,7 @@ class BoardRenderer:
         }
 
     def hashable_board_colors(self) -> tuple[tuple[str, str], ...]:
-        """Return board colors as hashable object for caching."""
+        """Get board colors as hashable object for caching."""
         return tuple(self.board_colors().items())
 
     @lru_cache(maxsize=128)
@@ -434,14 +434,15 @@ class BoardInteractor:
         self._svg_board: SvgBoard = board
 
     def square_index(self, x: float, y: float) -> Square | None:
-        """Convert `x` and `y` coordinates to board square index."""
+        """Convert `x` and `y` coordinates to square index."""
         file, rank = self._svg_board.locate_file_and_rank(x, y)
         square_index: Square = file + (rank * 8)
         return square_index if square_index < ALL_SQUARES else None
 
     def update_cursor(self, x: float, y: float) -> None:
-        """Set cursor shape based on square content."""
+        """Set cursor shape based on square index from `x` and `y`."""
         square_index: Square | None = self.square_index(x, y)
+
         if square_index is not None:
             piece: Piece | None = self._svg_board.piece_at(square_index)
 
@@ -468,12 +469,12 @@ class BoardInteractor:
         self._svg_board.update()
 
     def is_valid_move(self, target_square: Square) -> bool:
-        """Verify whether target square is valid for current piece."""
-        legal_moves = self._svg_board._game.legal_moves
+        """Verify whether `target_square` is valid for current piece."""
+        legal_moves: list[Square] | None = self._svg_board._game.legal_moves
         return (
             0 <= target_square < ALL_SQUARES
             and target_square != self._svg_board.origin_square
-            and legal_moves
+            and legal_moves is not None
             and target_square in legal_moves
         )
 
