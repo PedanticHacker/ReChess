@@ -94,7 +94,7 @@ class SvgBoard(QSvgWidget):
         super().__init__()
 
         self._game: Game = game
-        self._game.move_played.connect(self._clear_cache)
+        self._game.move_played.connect(self.clear_cache)
 
         self._initialize_colors()
         self._initialize_dragging_state()
@@ -137,7 +137,7 @@ class SvgBoard(QSvgWidget):
 
     def _cache_key(self) -> BoardCacheKey:
         """Generate unique key for board state."""
-        drag_origin: Square | None = (
+        dragging_origin_square: Square | None = (
             self.origin_square
             if self.is_dragging or self._animator.is_animating
             else None
@@ -155,7 +155,7 @@ class SvgBoard(QSvgWidget):
                 else None
             ),
             orientation=self._orientation,
-            square=drag_origin,
+            square=dragging_origin_square,
         )
 
     def _square_center(self, square: Square) -> QPointF:
@@ -175,7 +175,7 @@ class SvgBoard(QSvgWidget):
         return QPointF(x, y)
 
     def has_dragging_coordinates(self) -> bool:
-        """Check whether all data for piece rendering is available."""
+        """Return True if all data for piece rendering is available."""
         return (
             self.dragged_piece is not None
             and self.dragging_from_x is not None
@@ -187,7 +187,7 @@ class SvgBoard(QSvgWidget):
         return self._game.board.piece_at(square)
 
     def can_drag_piece(self, piece: Piece) -> bool:
-        """Check whether `piece` can be dragged based on turn."""
+        """Return True if `piece` can be dragged based on turn."""
         return piece is not None and piece.color == self._game.board.turn
 
     def fen(self) -> str:
@@ -260,7 +260,7 @@ class SvgBoard(QSvgWidget):
                 )
 
     @Slot()
-    def _clear_cache(self) -> None:
+    def clear_cache(self) -> None:
         """Clear cached SVG data and update board orientation."""
         self._renderer.invalidate_cache()
         current_orientation: Color = setting_value("board", "orientation")
