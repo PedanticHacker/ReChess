@@ -3,8 +3,7 @@ from __future__ import annotations
 from functools import lru_cache
 from typing import ClassVar, Final, NamedTuple
 
-import chess
-from chess import svg
+from chess import svg, Piece
 from PySide6.QtCore import (
     Property,
     QEasingCurve,
@@ -99,11 +98,11 @@ class SvgBoard(QSvgWidget):
         self._initialize_colors()
         self._initialize_dragging_state()
 
-        self._animator: PieceAnimator = PieceAnimator(self)
-        self._animator.animation_completed.connect(self.on_animation_complete)
-
         self._renderer: BoardRenderer = BoardRenderer(self)
         self._interactor: BoardInteractor = BoardInteractor(self)
+
+        self._animator: PieceAnimator = PieceAnimator(self)
+        self._animator.animation_completed.connect(self.on_animation_complete)
 
         self.animatable_board: Board | None = None
         self._orientation: Color = setting_value("board", "orientation")
@@ -243,7 +242,7 @@ class SvgBoard(QSvgWidget):
     def paintEvent(self, event: QPaintEvent) -> None:
         """Render board and dragged or animated pieces."""
         cache_key: BoardCacheKey = self._cache_key()
-        board_svg: bytes = self._renderer.board_svg(cache_key)
+        board_svg: bytes = self._renderer.board_as_svg(cache_key)
         self.load(board_svg)
         super().paintEvent(event)
 
@@ -252,6 +251,7 @@ class SvgBoard(QSvgWidget):
         elif self._animator.is_animating:
             animated_piece: Piece | None = self._animator.dragged_piece
             animation_position: QPointF = self._animator._position
+
             if animated_piece and animation_position:
                 self._renderer.render_piece(
                     animation_position.x(),
@@ -358,8 +358,8 @@ class BoardRenderer:
         return tuple(self.board_colors().items())
 
     @lru_cache(maxsize=128)
-    def board_svg(self, cache_key: BoardCacheKey) -> bytes:
-        """Create SVG representation of current board."""
+    def board_as_svg(self, cache_key: BoardCacheKey) -> bytes:
+        """Transform current board state into SVG data."""
         if (
             self._svg_board.is_dragging
             and self._svg_board.animatable_board is not None
@@ -383,18 +383,10 @@ class BoardRenderer:
     def svg_renderer_for_piece(self, piece_symbol: str) -> QSvgRenderer:
         """Get or create piece SVG renderer based on `piece_symbol`."""
         if piece_symbol not in self._piece_renderers:
-            piece_to_render: Piece | None = None
-
-            if self._svg_board.is_dragging and self._svg_board.dragged_piece:
-                piece_to_render = self._svg_board.dragged_piece
-            elif self._svg_board._animator.is_animating:
-                piece_to_render = self._svg_board._animator.dragged_piece
-
-            if piece_to_render:
-                piece_svg: str = svg.piece(piece_to_render)
-                renderer: QSvgRenderer = QSvgRenderer()
-                renderer.load(piece_svg.encode())
-                self._piece_renderers[piece_symbol] = renderer
+            svg_piece: str = svg.piece(Piece.from_symbol(piece_symbol))
+            renderer: QSvgRenderer = QSvgRenderer()
+            renderer.load(svg_piece.encode())
+            self._piece_renderers[piece_symbol] = renderer
 
         return self._piece_renderers[piece_symbol]
 
@@ -409,7 +401,9 @@ class BoardRenderer:
             return
 
         painter: QPainter = QPainter(self._svg_board)
-        renderer: QSvgRenderer = self.svg_renderer_for_piece(piece_to_render.symbol())
+
+        piece_symbol = piece_to_render.symbol()
+        renderer: QSvgRenderer = self.svg_renderer_for_piece(piece_symbol)
 
         piece_rectangle: QRectF = QRectF(
             x - HALF_SQUARE,
@@ -423,8 +417,10 @@ class BoardRenderer:
 
     def invalidate_cache(self) -> None:
         """Clear cached SVG data."""
-        self.board_svg.cache_clear()
+        self.board_as_svg.cache_clear()
         self.board_colors.cache_clear()
+        self.svg_renderer_for_piece.cache_clear()
+        self._piece_renderers.clear()
 
 
 class BoardInteractor:
@@ -520,6 +516,7 @@ class BoardInteractor:
 
         if square_index is not None:
             piece: Piece | None = self._svg_board.piece_at(square_index)
+
             if self._svg_board.can_drag_piece(piece):
                 self.start_dragging(square_index, piece, x, y)
                 return
