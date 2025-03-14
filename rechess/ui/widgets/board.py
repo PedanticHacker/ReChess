@@ -173,10 +173,11 @@ class SvgBoard(QSvgWidget):
 
         return QPointF(x, y)
 
-    def has_dragging_coordinates(self) -> bool:
-        """Return True if all data for piece rendering is available."""
+    def piece_can_be_dragged(self) -> bool:
+        """Return True if conditions allow for piece to be dragged."""
         return (
-            self.dragged_piece is not None
+            self.is_dragging
+            and self.dragged_piece is not None
             and self.dragging_from_x is not None
             and self.dragging_from_y is not None
         )
@@ -241,12 +242,11 @@ class SvgBoard(QSvgWidget):
 
     def paintEvent(self, event: QPaintEvent) -> None:
         """Render board and dragged or animated pieces."""
-        cache_key: BoardCacheKey = self._cache_key()
-        board_svg: bytes = self._renderer.board_as_svg(cache_key)
+        board_svg: bytes = self._renderer.board_as_svg(self._cache_key())
         self.load(board_svg)
         super().paintEvent(event)
 
-        if self.is_dragging and self.has_dragging_coordinates():
+        if self.piece_can_be_dragged():
             self._renderer.render_piece(self.dragging_from_x, self.dragging_from_y)
         elif self._animator.is_animating:
             animated_piece: Piece | None = self._animator.dragged_piece
@@ -333,7 +333,7 @@ class PieceAnimator(QObject):
 
 
 class BoardRenderer:
-    """Handles board rendering with SVG."""
+    """SVG board rendering manager."""
 
     def __init__(self, board: SvgBoard) -> None:
         self._svg_board: SvgBoard = board
