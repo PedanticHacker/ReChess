@@ -392,12 +392,11 @@ class BoardRenderer:
 
     def render_piece(self, x: float, y: float, piece: Piece | None = None) -> None:
         """Render `piece` at `x` and `y` coordinates."""
-        piece_to_render: Piece | None = piece
+        piece_to_render: Piece | None = piece or (
+            self._svg_board.dragged_piece if self._svg_board.is_dragging else None
+        )
 
-        if not piece_to_render and self._svg_board.is_dragging:
-            piece_to_render = self._svg_board.dragged_piece
-
-        if not piece_to_render:
+        if piece_to_render is None:
             return
 
         painter: QPainter = QPainter(self._svg_board)
