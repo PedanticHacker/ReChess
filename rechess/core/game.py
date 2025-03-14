@@ -38,7 +38,7 @@ class SoundEffectFileUrl(EnumDict):
 
 
 class Game(QObject):
-    """Game state, moves, events, and UI interaction management."""
+    """Management for game state, moves, events, and UI interaction."""
 
     move_played: ClassVar[Signal] = Signal(Move)
 

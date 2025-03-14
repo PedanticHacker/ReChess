@@ -33,7 +33,7 @@ svg.XX = "<circle id='xx' r='4.5' cx='22.5' cy='22.5' stroke='#303030' fill='#e5
 
 
 class BoardCacheKey(NamedTuple):
-    """Cache key for board state."""
+    """Type annotations of cache key for board state."""
 
     arrows: tuple[tuple[Square, Square], ...]
     colors: tuple[tuple[str, str], ...]
@@ -46,7 +46,7 @@ class BoardCacheKey(NamedTuple):
 
 
 class SvgBoard(QSvgWidget):
-    """Interactive SVG-based board with drag-and-drop support."""
+    """Management for piece drag-and-drop ability on SVG board."""
 
     coord: Property = Property(
         QColor,
@@ -281,7 +281,7 @@ class SvgBoard(QSvgWidget):
 
 
 class PieceAnimator(QObject):
-    """Piece drag-and-drop animation management for board."""
+    """Management for piece drag-and-drop animation on board."""
 
     animation_completed: ClassVar[Signal] = Signal()
 
@@ -333,7 +333,7 @@ class PieceAnimator(QObject):
 
 
 class BoardRenderer:
-    """SVG board rendering manager."""
+    """Management for rendering SVG board."""
 
     def __init__(self, board: SvgBoard) -> None:
         self._svg_board: SvgBoard = board
@@ -423,7 +423,7 @@ class BoardRenderer:
 
 
 class BoardInteractor:
-    """Manager for interacting with pieces on board."""
+    """Management for interacting with pieces on board."""
 
     def __init__(self, board: SvgBoard) -> None:
         self._svg_board: SvgBoard = board
