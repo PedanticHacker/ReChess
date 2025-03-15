@@ -188,11 +188,11 @@ class SvgBoard(QSvgWidget):
 
     def can_drag_piece(self, piece: Piece) -> bool:
         """Return True if `piece` can be dragged based on turn."""
-        return piece is not None and piece.color == self._game.board.turn
+        return (piece is not None) and (piece.color == self._game.turn)
 
     def fen(self) -> str:
         """Get FEN representation of current board setup."""
-        return self._game.board.fen()
+        return self._game.fen
 
     def set_origin_square(self, square: Square) -> None:
         """Set `square` as origin for move."""

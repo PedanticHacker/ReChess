@@ -45,11 +45,11 @@ class Game(QObject):
     def __init__(self) -> None:
         super().__init__()
 
-        self._board: Board = Board()
+        self.board: Board = Board()
 
-        self._arrow: list[tuple[Square, Square]] = []
-        self._moves: list[str] = []
-        self._positions: list[Board] = []
+        self.arrow: list[tuple[Square, Square]] = []
+        self.moves: list[str] = []
+        self.positions: list[Board] = []
 
         self._capture_sound_effect: QSoundEffect = QSoundEffect(self)
         self._capture_sound_effect.setSource(SoundEffectFileUrl.Capture)
@@ -72,31 +72,21 @@ class Game(QObject):
         self.reset_squares()
 
     @property
-    def arrow(self) -> list[tuple[Square, Square]]:
-        """Return current arrow marker."""
-        return self._arrow
-
-    @property
-    def board(self) -> Board:
-        """Return current state of board."""
-        return self._board
-
-    @property
     def fen(self) -> str:
         """Return current position in FEN format."""
-        return self._board.fen()
+        return self.board.fen()
 
     @fen.setter
     def fen(self, value) -> None:
         """Initialize state and set new position based on `value`."""
-        self._board.set_fen(value)
+        self.board.set_fen(value)
         self._initialize_state()
 
     @property
     def king_in_check(self) -> Square | None:
         """Return square of king in check."""
-        if self._board.is_check():
-            return self._board.king(self._board.turn)
+        if self.board.is_check():
+            return self.board.king(self.board.turn)
         return None
 
     @property
@@ -106,13 +96,8 @@ class Game(QObject):
             return None
 
         square: Square = BB_SQUARES[self.from_square]
-        legal_moves: Iterator[Move] = self._board.generate_legal_moves(square)
+        legal_moves: Iterator[Move] = self.board.generate_legal_moves(square)
         return [legal_move.to_square for legal_move in legal_moves]
-
-    @property
-    def moves(self) -> list[str]:
-        """Return moves in Standard Algebraic Notation (SAN)."""
-        return self._moves
 
     @property
     def result(self) -> str:
@@ -123,12 +108,12 @@ class Game(QObject):
             "1-0": "White wins",
             "*": "Undetermined game",
         }
-        return result_rewordings[self._board.result(claim_draw=True)]
+        return result_rewordings[self.board.result(claim_draw=True)]
 
     @property
     def turn(self) -> bool:
         """Return True if White is on turn."""
-        return self._board.turn
+        return self.board.turn
 
     def reset_squares(self) -> None:
         """Reset origin and target squares of piece."""
@@ -137,34 +122,34 @@ class Game(QObject):
 
     def _initialize_state(self) -> None:
         """Clear game history and set squares to initial value."""
-        self._arrow.clear()
-        self._moves.clear()
-        self._positions.clear()
+        self.arrow.clear()
+        self.moves.clear()
+        self.positions.clear()
         self.reset_squares()
 
     def prepare_new_game(self) -> None:
         """Reset board for new game and initialize state."""
         self._initialize_state()
-        self._board.reset()
+        self.board.reset()
 
     def push(self, move: Move) -> None:
         """Update game state by pushing `move`."""
         self.set_arrow(move)
         self.play_sound_effect(move)
 
-        new_move: str = self._board.san_and_push(move)
-        self._moves.append(new_move)
+        new_move: str = self.board.san_and_push(move)
+        self.moves.append(new_move)
 
-        position: Board = self._board.copy()
-        self._positions.append(position)
+        position: Board = self.board.copy()
+        self.positions.append(position)
 
     def set_arrow(self, move: Move) -> None:
         """Set arrow marker based on `move`."""
-        self._arrow = [(move.from_square, move.to_square)]
+        self.arrow = [(move.from_square, move.to_square)]
 
     def clear_arrow(self) -> None:
         """Clear arrow marker from board."""
-        self._arrow.clear()
+        self.arrow.clear()
 
     def play_sound_effect(self, move: Move) -> None:
         """Play sound effect for `move`."""
@@ -174,16 +159,16 @@ class Game(QObject):
             self._check_sound_effect.play()
         elif move.promotion:
             self._promotion_sound_effect.play()
-        elif self._board.is_capture(move):
+        elif self.board.is_capture(move):
             self._capture_sound_effect.play()
-        elif self._board.is_castling(move):
+        elif self.board.is_castling(move):
             self._castling_sound_effect.play()
         else:
             self._move_sound_effect.play()
 
     def set_root_position(self) -> None:
         """Reset pieces on board to initial position."""
-        self._board = self._board.root()
+        self.board = self.board.root()
 
     def locate_square(self, x: float, y: float) -> None:
         """Get square location from `x` and `y` coordinates."""
@@ -215,7 +200,7 @@ class Game(QObject):
     def find_move(self, origin_square: Square, target_square: Square) -> None:
         """Find legal move for `origin_square` and `target_square`."""
         with suppress(IllegalMoveError):
-            move: Move = self._board.find_move(origin_square, target_square)
+            move: Move = self.board.find_move(origin_square, target_square)
 
             if move.promotion:
                 move.promotion = self.promotion_piece_type()
@@ -224,7 +209,7 @@ class Game(QObject):
 
     def promotion_piece_type(self) -> PieceType | None:
         """Get promotion piece type from promotion dialog."""
-        promotion_dialog: PromotionDialog = PromotionDialog(self._board.turn)
+        promotion_dialog: PromotionDialog = PromotionDialog(self.board.turn)
 
         if promotion_dialog.exec() == QDialog.DialogCode.Accepted:
             return promotion_dialog.piece_type
@@ -233,50 +218,50 @@ class Game(QObject):
 
     def set_move(self, item_index: int) -> None:
         """Set move and arrow for it based on `item_index`."""
-        self._board = self._positions[item_index].copy()
-        self.set_arrow(self._board.move_stack[item_index])
+        self.board = self.positions[item_index].copy()
+        self.set_arrow(self.board.move_stack[item_index])
 
     def delete_data_after(self, item_index: int) -> None:
         """Delete moves and positions data after `item_index`."""
         if item_index < 0:
             self._initialize_state()
         else:
-            after_item_index: slice = slice(item_index + 1, len(self._moves))
-            del self._moves[after_item_index]
-            del self._positions[after_item_index]
+            after_item_index: slice = slice(item_index + 1, len(self.moves))
+            del self.moves[after_item_index]
+            del self.positions[after_item_index]
 
     def is_check(self, move: Move) -> bool:
         """Return True if `move` would put opponent king in check."""
-        board: Board = self._board.copy()
+        board: Board = self.board.copy()
         board.push(move)
         return board.is_check()
 
     def is_engine_on_turn(self) -> bool:
         """Return True if engine is on turn."""
-        return self._board.turn == setting_value("engine", "is_white")
+        return self.board.turn == setting_value("engine", "is_white")
 
     def is_in_progress(self) -> bool:
         """Return True if game is in progress."""
-        return bool(self._moves)
+        return bool(self.moves)
 
     def is_legal(self, move: Move) -> bool:
         """Return True if `move` would be considered as legal."""
-        return self._board.is_legal(move)
+        return self.board.is_legal(move)
 
     def is_over(self) -> bool:
         """Return True if game is over."""
-        return self._board.is_game_over(claim_draw=True)
+        return self.board.is_game_over(claim_draw=True)
 
     def is_over_after(self, move: Move) -> bool:
         """Return True if `move` would make game be over."""
-        board: Board = self._board.copy()
+        board: Board = self.board.copy()
         board.push(move)
         return board.is_game_over(claim_draw=True)
 
     def is_valid(self) -> bool:
         """Return True if board setup is valid."""
-        return self._board.is_valid()
+        return self.board.is_valid()
 
     def is_white_on_turn(self) -> bool:
         """Return True if White is on turn."""
-        return self._board.turn == WHITE
+        return self.board.turn == WHITE
