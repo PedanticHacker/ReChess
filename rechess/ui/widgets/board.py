@@ -108,6 +108,7 @@ class SvgBoard(QSvgWidget):
         self.is_white_at_bottom: bool = setting_value("board", "orientation")
 
         self._square_center_cache: dict[tuple[Square, bool], QPointF] = {}
+        self.initialize_square_centers()
 
         self.setMouseTracking(True)
 
@@ -136,6 +137,37 @@ class SvgBoard(QSvgWidget):
         self.dragging_from_x: float | None = None
         self.dragging_from_y: float | None = None
 
+    def initialize_square_centers(self) -> None:
+        """Precompute all square centers for the current orientation."""
+        if self.is_white_at_bottom:
+            self.precompute_square_centers_white_at_bottom()
+        else:
+            self.precompute_square_centers_black_at_bottom()
+
+    def precompute_square_centers_white_at_bottom(self) -> None:
+        """Calculate and cache all square centers with white at bottom."""
+        for square in range(ALL_SQUARES):
+            file: int = square % 8
+            rank: int = square // 8
+            flipped_rank: int = 7 - rank
+
+            x: float = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * file)
+            y: float = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * flipped_rank)
+
+            self._square_center_cache[(square, True)] = QPointF(x, y)
+
+    def precompute_square_centers_black_at_bottom(self) -> None:
+        """Calculate and cache all square centers with black at bottom."""
+        for square in range(ALL_SQUARES):
+            file: int = square % 8
+            rank: int = square // 8
+            flipped_file: int = 7 - file
+
+            x: float = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * flipped_file)
+            y: float = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * rank)
+
+            self._square_center_cache[(square, False)] = QPointF(x, y)
+
     def cache_key(self) -> BoardCacheKey:
         """Generate unique key for board state."""
         dragging_from_origin_square: Square | None = (
@@ -160,26 +192,9 @@ class SvgBoard(QSvgWidget):
         )
 
     def square_center(self, square: Square) -> QPointF:
-        """Calculate center coordinates of `square` with caching."""
+        """Get the center coordinates of `square` from cache."""
         cache_key: tuple[Square, bool] = (square, self.is_white_at_bottom)
-        if cache_key in self._square_center_cache:
-            return self._square_center_cache[cache_key]
-
-        file: int = square % 8
-        rank: int = square // 8
-        flipped_file: int = 7 - file
-        flipped_rank: int = 7 - rank
-
-        if self.is_white_at_bottom:
-            x: float = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * file)
-            y: float = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * flipped_rank)
-        else:
-            x = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * flipped_file)
-            y = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * rank)
-
-        result: QPointF = QPointF(x, y)
-        self._square_center_cache[cache_key] = result
-        return result
+        return self._square_center_cache[cache_key]
 
     def piece_can_be_dragged(self) -> bool:
         """Return True if conditions allow for piece to be dragged."""
@@ -275,7 +290,10 @@ class SvgBoard(QSvgWidget):
 
         if self.is_white_at_bottom != current_orientation:
             self.is_white_at_bottom = current_orientation
-            self._square_center_cache.clear()
+            if self.is_white_at_bottom:
+                self.precompute_square_centers_white_at_bottom()
+            else:
+                self.precompute_square_centers_black_at_bottom()
 
         self.update()
 

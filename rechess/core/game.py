@@ -51,20 +51,35 @@ class Game(QObject):
         self.moves: list[str] = []
         self.positions: list[Board] = []
 
+        # Preload all sound effects at initialization
         self._sound_effects: dict[str, QSoundEffect] = {}
+        self._preload_sound_effects()
 
         self._cached_legal_target_squares: list[Square] | None = None
         self._cached_piece_square: Square = -1
 
         self.reset_squares()
 
-    def _get_sound_effect(self, effect_type: str) -> QSoundEffect:
-        """Lazily initialize and return a sound effect."""
-        if effect_type not in self._sound_effects:
+    def _preload_sound_effects(self) -> None:
+        """Preload all sound effects during initialization."""
+        for effect_type in [
+            "Capture",
+            "Castling",
+            "Check",
+            "GameOver",
+            "Move",
+            "Promotion",
+        ]:
             sound_effect: QSoundEffect = QSoundEffect(self)
             sound_effect.setSource(getattr(SoundEffectFileUrl, effect_type))
             self._sound_effects[effect_type] = sound_effect
-        return self._sound_effects[effect_type]
+
+    def has_valid_cached_legal_moves(self) -> bool:
+        """Return True if there are valid cached legal moves for the current square."""
+        return (
+            self.from_square == self._cached_piece_square
+            and self._cached_legal_target_squares is not None
+        )
 
     @property
     def fen(self) -> str:
@@ -90,10 +105,7 @@ class Game(QObject):
         if self.from_square == -1:
             return None
 
-        if (
-            self.from_square == self._cached_piece_square
-            and self._cached_legal_target_squares is not None
-        ):
+        if self.has_valid_cached_legal_moves():
             return self._cached_legal_target_squares
 
         square: Square = BB_SQUARES[self.from_square]
@@ -159,20 +171,25 @@ class Game(QObject):
         """Clear arrow marker from board."""
         self.arrow.clear()
 
+    def _determine_sound_effect_type(self, move: Move) -> str:
+        """Determine the appropriate sound effect type for `move`."""
+        if self.is_over_after(move):
+            return "GameOver"
+        elif self.is_check(move):
+            return "Check"
+        elif move.promotion:
+            return "Promotion"
+        elif self.board.is_capture(move):
+            return "Capture"
+        elif self.board.is_castling(move):
+            return "Castling"
+        else:
+            return "Move"
+
     def play_sound_effect(self, move: Move) -> None:
         """Play sound effect for `move`."""
-        if self.is_over_after(move):
-            self._get_sound_effect("GameOver").play()
-        elif self.is_check(move):
-            self._get_sound_effect("Check").play()
-        elif move.promotion:
-            self._get_sound_effect("Promotion").play()
-        elif self.board.is_capture(move):
-            self._get_sound_effect("Capture").play()
-        elif self.board.is_castling(move):
-            self._get_sound_effect("Castling").play()
-        else:
-            self._get_sound_effect("Move").play()
+        effect_type: str = self._determine_sound_effect_type(move)
+        self._sound_effects[effect_type].play()
 
     def set_root_position(self) -> None:
         """Reset pieces on board to initial position."""
