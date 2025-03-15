@@ -51,25 +51,20 @@ class Game(QObject):
         self.moves: list[str] = []
         self.positions: list[Board] = []
 
-        self._capture_sound_effect: QSoundEffect = QSoundEffect(self)
-        self._capture_sound_effect.setSource(SoundEffectFileUrl.Capture)
+        self._sound_effects: dict[str, QSoundEffect] = {}
 
-        self._castling_sound_effect: QSoundEffect = QSoundEffect(self)
-        self._castling_sound_effect.setSource(SoundEffectFileUrl.Castling)
-
-        self._check_sound_effect: QSoundEffect = QSoundEffect(self)
-        self._check_sound_effect.setSource(SoundEffectFileUrl.Check)
-
-        self._game_over_sound_effect: QSoundEffect = QSoundEffect(self)
-        self._game_over_sound_effect.setSource(SoundEffectFileUrl.GameOver)
-
-        self._move_sound_effect: QSoundEffect = QSoundEffect(self)
-        self._move_sound_effect.setSource(SoundEffectFileUrl.Move)
-
-        self._promotion_sound_effect: QSoundEffect = QSoundEffect(self)
-        self._promotion_sound_effect.setSource(SoundEffectFileUrl.Promotion)
+        self._cached_legal_target_squares: list[Square] | None = None
+        self._cached_piece_square: Square = -1
 
         self.reset_squares()
+
+    def _get_sound_effect(self, effect_type: str) -> QSoundEffect:
+        """Lazily initialize and return a sound effect."""
+        if effect_type not in self._sound_effects:
+            sound_effect: QSoundEffect = QSoundEffect(self)
+            sound_effect.setSource(getattr(SoundEffectFileUrl, effect_type))
+            self._sound_effects[effect_type] = sound_effect
+        return self._sound_effects[effect_type]
 
     @property
     def fen(self) -> str:
@@ -91,13 +86,22 @@ class Game(QObject):
 
     @property
     def legal_moves(self) -> list[Square] | None:
-        """Get target squares that would be legal for piece."""
+        """Get target squares that would be legal for piece with caching."""
         if self.from_square == -1:
             return None
 
+        if (
+            self.from_square == self._cached_piece_square
+            and self._cached_legal_target_squares is not None
+        ):
+            return self._cached_legal_target_squares
+
         square: Square = BB_SQUARES[self.from_square]
         legal_moves: Iterator[Move] = self.board.generate_legal_moves(square)
-        return [legal_move.to_square for legal_move in legal_moves]
+        self._cached_legal_target_squares = [move.to_square for move in legal_moves]
+        self._cached_piece_square = self.from_square
+
+        return self._cached_legal_target_squares
 
     @property
     def result(self) -> str:
@@ -116,9 +120,11 @@ class Game(QObject):
         return self.board.turn
 
     def reset_squares(self) -> None:
-        """Reset origin and target squares of piece."""
+        """Reset origin and target squares, plus invalidate caches."""
         self.from_square: Square = -1
         self.to_square: Square = -1
+        self._cached_legal_target_squares = None
+        self._cached_piece_square = -1
 
     def _initialize_state(self) -> None:
         """Clear game history and set squares to initial value."""
@@ -128,7 +134,7 @@ class Game(QObject):
         self.reset_squares()
 
     def prepare_new_game(self) -> None:
-        """Reset board for new game and initialize state."""
+        """Initialize state and reset board for new game."""
         self._initialize_state()
         self.board.reset()
 
@@ -143,6 +149,8 @@ class Game(QObject):
         position: Board = self.board.copy()
         self.positions.append(position)
 
+        self._cached_legal_target_squares = None
+
     def set_arrow(self, move: Move) -> None:
         """Set arrow marker based on `move`."""
         self.arrow = [(move.from_square, move.to_square)]
@@ -154,17 +162,17 @@ class Game(QObject):
     def play_sound_effect(self, move: Move) -> None:
         """Play sound effect for `move`."""
         if self.is_over_after(move):
-            self._game_over_sound_effect.play()
+            self._get_sound_effect("GameOver").play()
         elif self.is_check(move):
-            self._check_sound_effect.play()
+            self._get_sound_effect("Check").play()
         elif move.promotion:
-            self._promotion_sound_effect.play()
+            self._get_sound_effect("Promotion").play()
         elif self.board.is_capture(move):
-            self._capture_sound_effect.play()
+            self._get_sound_effect("Capture").play()
         elif self.board.is_castling(move):
-            self._castling_sound_effect.play()
+            self._get_sound_effect("Castling").play()
         else:
-            self._move_sound_effect.play()
+            self._get_sound_effect("Move").play()
 
     def set_root_position(self) -> None:
         """Reset pieces on board to initial position."""
