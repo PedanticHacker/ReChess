@@ -97,8 +97,9 @@ class MainWindow(QMainWindow):
         self.connect_signals_to_slots()
         self.apply_style(setting_value("ui", "style"))
 
-        self.flip()
-        self.invoke_engine()
+        if self._game.is_engine_on_turn():
+            self.flip()
+            self.invoke_engine()
 
     def create_layout(self) -> None:
         """Create grid layout with fixed widget positions."""
@@ -399,21 +400,8 @@ class MainWindow(QMainWindow):
         set_setting_value("ui", "style", filename)
         self._style_name_label.setText(f"Style: {style_name(filename)}")
 
-    def is_last_item_selected(self) -> bool:
-        """Return True if last item is selected in table view."""
-        return self._table_view.item_index >= len(self._game.moves) - 1
-
     def invoke_engine(self) -> None:
         """Invoke engine to play move."""
-        if not self.is_last_item_selected():
-            return
-
-        if not self._game.is_engine_on_turn():
-            return
-
-        if self._game.is_over():
-            return
-
         QThreadPool.globalInstance().start(self._engine.play_move)
         self._game_notifications_label.setText("Thinking...")
 
@@ -430,6 +418,7 @@ class MainWindow(QMainWindow):
         """Flip orientation and board-related widgets."""
         is_engine_white: bool = setting_value("engine", "is_white")
         is_white_on_bottom: bool = setting_value("board", "orientation")
+
         new_orientation: bool = (
             not is_engine_white
             if is_engine_white == is_white_on_bottom
@@ -437,6 +426,7 @@ class MainWindow(QMainWindow):
         )
         set_setting_value("board", "orientation", new_orientation)
 
+        self._board.clear_cache()
         self.flip_clocks()
         self.flip_player_names()
         self._evaluation_bar.flip_chunk()
@@ -464,7 +454,8 @@ class MainWindow(QMainWindow):
             self._black_clock.reset()
             self._white_clock.reset()
 
-        self.invoke_engine()
+        if self._game.is_engine_on_turn():
+            self.invoke_engine()
 
     def load_engine(self) -> None:
         """Show file manager to load engine."""
@@ -607,8 +598,9 @@ class MainWindow(QMainWindow):
         self.show_fen()
         self.stop_analysis()
 
-        self.flip()
-        self.invoke_engine()
+        if self._game.is_engine_on_turn():
+            self.flip()
+            self.invoke_engine()
 
     def destruct(self) -> None:
         """Terminate engine process and destroy main window."""
