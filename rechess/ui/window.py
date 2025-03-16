@@ -46,7 +46,7 @@ class ClockColor(StrEnum):
 
 
 class MainWindow(QMainWindow):
-    """Main window containing all widgets."""
+    """Container and layout manager for all widgets."""
 
     def __init__(self) -> None:
         super().__init__()
@@ -404,11 +404,11 @@ class MainWindow(QMainWindow):
         self._game_notifications_label.setText("Analyzing...")
 
     def quit(self) -> None:
-        """Trigger main window's close event to quit."""
+        """Trigger close event of main window."""
         self.close()
 
     def flip(self) -> None:
-        """Flip orientation of board and its corresponding widgets."""
+        """Flip orientation and board-related widgets."""
         is_engine_white: bool = setting_value("engine", "is_white")
         is_white_on_bottom: bool = setting_value("board", "orientation")
         new_orientation: bool = (
@@ -490,7 +490,7 @@ class MainWindow(QMainWindow):
         )
 
     def flip_clocks(self) -> None:
-        """Flip clocks based on board orientation."""
+        """Flip clocks based on orientation."""
         is_white_on_bottom: bool = setting_value("board", "orientation")
 
         self._grid_layout.removeWidget(self._black_clock)
@@ -504,7 +504,7 @@ class MainWindow(QMainWindow):
             self._grid_layout.addWidget(self._white_clock, 1, 1)
 
     def flip_player_names(self) -> None:
-        """Flip player names based on board orientation and engine color."""
+        """Flip player names based on orientation and engine color."""
         is_engine_white: bool = setting_value("engine", "is_white")
         is_white_on_bottom: bool = setting_value("board", "orientation")
 
@@ -601,7 +601,7 @@ class MainWindow(QMainWindow):
             self.invoke_engine()
 
     def destruct(self) -> None:
-        """Terminate engine's process and destroy main window."""
+        """Terminate engine process and destroy main window."""
         self._engine.quit()
         self.destroy()
 

@@ -42,7 +42,7 @@ class SettingsDialog(QDialog):
         self.connect_signals_to_slots()
 
     def set_title(self) -> None:
-        """Set dialog's title."""
+        """Set dialog title to be Settings."""
         self.setWindowTitle("Settings")
 
     def create_groups(self) -> None:
@@ -93,7 +93,7 @@ class SettingsDialog(QDialog):
         self._human_name_option.setText(setting_value("human", "name"))
 
     def set_vertical_layout(self) -> None:
-        """Set layout of dialog's widgets to be vertical."""
+        """Set layout of dialog widgets to be vertical."""
         human_name_layout: QVBoxLayout = QVBoxLayout()
         human_name_layout.addWidget(self._human_name_option)
         self._human_name_group.setLayout(human_name_layout)

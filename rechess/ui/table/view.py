@@ -35,20 +35,20 @@ class TableView(QTableView):
 
     @property
     def item_index(self) -> int:
-        """Return item index based on model index."""
+        """Get item index based on model index."""
         current_model_index: QModelIndex = self.selectionModel().currentIndex()
         return 2 * current_model_index.row() + current_model_index.column()
 
     @property
     def previous_model_index(self) -> QModelIndex:
-        """Return model index of previous item."""
+        """Get model index of previous item."""
         previous_row: int = (self.item_index - 1) // 2
         previous_column: int = (self.item_index - 1) % 2
         return self.model().index(previous_row, previous_column)
 
     @property
     def next_model_index(self) -> QModelIndex:
-        """Return model index of next item."""
+        """Get model index of next item."""
         all_rows: int = self.model().rowCount()
         next_row: int = (self.item_index + 1) // 2
         next_column: int = (self.item_index + 1) % 2

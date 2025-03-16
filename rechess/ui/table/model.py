@@ -21,7 +21,7 @@ class TableModel(QAbstractTableModel):
         index: QModelIndex | QPersistentModelIndex,
         role: int = Qt.ItemDataRole.DisplayRole,
     ) -> Any:
-        """Return item at `index`."""
+        """Get item at `index`."""
         if role == Qt.ItemDataRole.DisplayRole:
             item_index: int = 2 * index.row() + index.column()
 
@@ -32,7 +32,7 @@ class TableModel(QAbstractTableModel):
         self,
         index: QModelIndex | QPersistentModelIndex,
     ) -> Qt.ItemFlag:
-        """Return flags as access to item at `index`."""
+        """Provide flags for item at `index`."""
         if self.data(index):
             return Qt.ItemFlag.ItemIsEnabled | Qt.ItemFlag.ItemIsSelectable
         else:
@@ -42,7 +42,7 @@ class TableModel(QAbstractTableModel):
         self,
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
-        """Return rows needed for all items."""
+        """Provide as many rows as half of all items."""
         all_items = len(self._items) + 1
         return all_items // 2
 
@@ -50,7 +50,7 @@ class TableModel(QAbstractTableModel):
         self,
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
-        """Return two columns for all items."""
+        """Provide two columns for all items."""
         return 2
 
     def headerData(
@@ -59,7 +59,7 @@ class TableModel(QAbstractTableModel):
         orientation: Qt.Orientation,
         role: int = Qt.ItemDataRole.DisplayRole,
     ) -> Any:
-        """Return column headers and row numbers."""
+        """Get column headers and row numbers."""
         if role == Qt.ItemDataRole.DisplayRole:
             if orientation == Qt.Orientation.Horizontal:
                 return ["White", "Black"][section]

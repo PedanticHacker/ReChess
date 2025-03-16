@@ -46,7 +46,7 @@ class BoardCacheKey(NamedTuple):
 
 
 class SvgBoard(QSvgWidget):
-    """Management for piece drag-and-drop ability on SVG board."""
+    """Management for piece drag-and-drop functionality on SVG board."""
 
     coord: Property = Property(
         QColor,
@@ -138,14 +138,14 @@ class SvgBoard(QSvgWidget):
         self.dragging_from_y: float | None = None
 
     def initialize_square_centers(self) -> None:
-        """Precompute all square centers for the current orientation."""
+        """Precompute all square centers for current orientation."""
         if self.is_white_at_bottom:
-            self.precompute_square_centers_white_at_bottom()
+            self.precompute_square_centers_when_white_at_bottom()
         else:
-            self.precompute_square_centers_black_at_bottom()
+            self.precompute_square_centers_when_black_at_bottom()
 
-    def precompute_square_centers_white_at_bottom(self) -> None:
-        """Calculate and cache all square centers with white at bottom."""
+    def precompute_square_centers_when_white_at_bottom(self) -> None:
+        """Calculate and cache square centers when White at bottom."""
         for square in range(ALL_SQUARES):
             file: int = square % 8
             rank: int = square // 8
@@ -156,8 +156,8 @@ class SvgBoard(QSvgWidget):
 
             self._square_center_cache[(square, True)] = QPointF(x, y)
 
-    def precompute_square_centers_black_at_bottom(self) -> None:
-        """Calculate and cache all square centers with black at bottom."""
+    def precompute_square_centers_when_black_at_bottom(self) -> None:
+        """Calculate and cache square centers when Black at bottom."""
         for square in range(ALL_SQUARES):
             file: int = square % 8
             rank: int = square // 8
@@ -192,7 +192,7 @@ class SvgBoard(QSvgWidget):
         )
 
     def square_center(self, square: Square) -> QPointF:
-        """Get the center coordinates of `square` from cache."""
+        """Get center coordinates of `square` from cache."""
         cache_key: tuple[Square, bool] = (square, self.is_white_at_bottom)
         return self._square_center_cache[cache_key]
 
@@ -259,10 +259,6 @@ class SvgBoard(QSvgWidget):
         self._interactor.handle_mouse_release(event)
         super().mouseReleaseEvent(event)
 
-    def keyPressEvent(self, event: QKeyEvent) -> None:
-        """Handle keyboard navigation."""
-        super().keyPressEvent(event)
-
     def paintEvent(self, event: QPaintEvent) -> None:
         """Render board and dragged or animated pieces."""
         board_svg: bytes = self._renderer.board_as_svg(self.cache_key())
@@ -292,9 +288,9 @@ class SvgBoard(QSvgWidget):
             self.is_white_at_bottom = current_orientation
 
             if self.is_white_at_bottom:
-                self.precompute_square_centers_white_at_bottom()
+                self.precompute_square_centers_when_white_at_bottom()
             else:
-                self.precompute_square_centers_black_at_bottom()
+                self.precompute_square_centers_when_black_at_bottom()
 
         self.update()
 
@@ -335,7 +331,7 @@ class PieceAnimator(QObject):
         self._animation.finished.connect(self.end_animation)
 
     def update_position(self, value: QPointF) -> None:
-        """Update position and redraw board."""
+        """Set position based on `value` and update board."""
         self._position = value
         self._svg_board.update()
 

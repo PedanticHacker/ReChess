@@ -78,12 +78,12 @@ class Engine(QObject):
         self._analyzing = False
 
     def quit(self) -> None:
-        """Terminate engine's process."""
+        """Terminate engine process."""
         if hasattr(self, "_engine"):
             self._engine.quit()
 
     @property
     def name(self) -> str:
-        """Return engine's name."""
+        """Get engine name."""
         name: str = self._engine.id["name"]
         return f"{name[0:20]}..." if len(name) > 20 else name

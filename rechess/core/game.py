@@ -93,7 +93,7 @@ class Game(QObject):
 
     @property
     def king_in_check(self) -> Square | None:
-        """Return square of king in check."""
+        """Get square of king in check."""
         if self.board.is_check():
             return self.board.king(self.board.turn)
         return None
@@ -115,7 +115,7 @@ class Game(QObject):
 
     @property
     def result(self) -> str:
-        """Return result of current game."""
+        """Get result of current game."""
         result_rewordings = {
             "1/2-1/2": "Draw",
             "0-1": "Black wins",

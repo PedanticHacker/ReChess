@@ -19,7 +19,7 @@ class PromotionDialog(QDialog):
         self.connect_signals_to_slots()
 
     def set_title(self) -> None:
-        """Set dialog's window title to be Pawn Promotion."""
+        """Set dialog title to be Pawn Promotion."""
         self.setWindowTitle("Pawn Promotion")
 
     def create_buttons(self) -> None:
@@ -74,5 +74,5 @@ class PromotionDialog(QDialog):
 
     @property
     def piece_type(self) -> PieceType:
-        """Return selected piece type."""
+        """Get selected piece type."""
         return self._piece_type
