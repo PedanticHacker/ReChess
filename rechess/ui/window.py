@@ -455,6 +455,7 @@ class MainWindow(QMainWindow):
             self._white_clock.reset()
 
         if self._game.is_engine_on_turn():
+            self.flip()
             self.invoke_engine()
 
     def load_engine(self) -> None:
