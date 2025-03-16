@@ -684,7 +684,6 @@ class MainWindow(QMainWindow):
             self._game.delete_data_after(self._table_view.item_index)
             self._game.push(move)
             self.refresh_ui()
-            self.invoke_engine()
 
     @Slot(str)
     def on_variation_analyzed(self, variation: str) -> None:
