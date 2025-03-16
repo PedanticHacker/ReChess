@@ -51,7 +51,6 @@ class Game(QObject):
         self.moves: list[str] = []
         self.positions: list[Board] = []
 
-        # Preload all sound effects at initialization
         self._sound_effects: dict[str, QSoundEffect] = {}
         self._preload_sound_effects()
 
@@ -62,7 +61,7 @@ class Game(QObject):
 
     def _preload_sound_effects(self) -> None:
         """Preload all sound effects during initialization."""
-        for effect_type in [
+        for sound_effect_type in [
             "Capture",
             "Castling",
             "Check",
@@ -71,11 +70,11 @@ class Game(QObject):
             "Promotion",
         ]:
             sound_effect: QSoundEffect = QSoundEffect(self)
-            sound_effect.setSource(getattr(SoundEffectFileUrl, effect_type))
-            self._sound_effects[effect_type] = sound_effect
+            sound_effect.setSource(getattr(SoundEffectFileUrl, sound_effect_type))
+            self._sound_effects[sound_effect_type] = sound_effect
 
-    def has_valid_cached_legal_moves(self) -> bool:
-        """Return True if there are valid cached legal moves for the current square."""
+    def has_cached_legal_moves(self) -> bool:
+        """Return True if cached legal moves exist."""
         return (
             self.from_square == self._cached_piece_square
             and self._cached_legal_target_squares is not None
@@ -83,12 +82,12 @@ class Game(QObject):
 
     @property
     def fen(self) -> str:
-        """Return current position in FEN format."""
+        """Get current position in FEN format."""
         return self.board.fen()
 
     @fen.setter
     def fen(self, value) -> None:
-        """Initialize state and set new position based on `value`."""
+        """Set new position in FEN format based on `value`."""
         self.board.set_fen(value)
         self._initialize_state()
 
@@ -101,18 +100,17 @@ class Game(QObject):
 
     @property
     def legal_moves(self) -> list[Square] | None:
-        """Get target squares that would be legal for piece with caching."""
+        """Get target squares for piece that would make legal move."""
         if self.from_square == -1:
             return None
 
-        if self.has_valid_cached_legal_moves():
+        if self.has_cached_legal_moves():
             return self._cached_legal_target_squares
 
         square: Square = BB_SQUARES[self.from_square]
         legal_moves: Iterator[Move] = self.board.generate_legal_moves(square)
         self._cached_legal_target_squares = [move.to_square for move in legal_moves]
         self._cached_piece_square = self.from_square
-
         return self._cached_legal_target_squares
 
     @property
@@ -171,8 +169,8 @@ class Game(QObject):
         """Clear arrow marker from board."""
         self.arrow.clear()
 
-    def _determine_sound_effect_type(self, move: Move) -> str:
-        """Determine the appropriate sound effect type for `move`."""
+    def _determine_sound_effect(self, move: Move) -> str:
+        """Determine appropriate sound effect for `move`."""
         if self.is_over_after(move):
             return "GameOver"
         elif self.is_check(move):
@@ -188,8 +186,8 @@ class Game(QObject):
 
     def play_sound_effect(self, move: Move) -> None:
         """Play sound effect for `move`."""
-        effect_type: str = self._determine_sound_effect_type(move)
-        self._sound_effects[effect_type].play()
+        sound_effect: str = self._determine_sound_effect(move)
+        self._sound_effects[sound_effect].play()
 
     def set_root_position(self) -> None:
         """Reset pieces on board to initial position."""
@@ -242,12 +240,12 @@ class Game(QObject):
         return None
 
     def set_move(self, item_index: int) -> None:
-        """Set move and arrow for it based on `item_index`."""
+        """Set move and also arrow for it based on `item_index`."""
         self.board = self.positions[item_index].copy()
         self.set_arrow(self.board.move_stack[item_index])
 
     def delete_data_after(self, item_index: int) -> None:
-        """Delete moves and positions data after `item_index`."""
+        """Delete moves and positions after `item_index`."""
         if item_index < 0:
             self._initialize_state()
         else:

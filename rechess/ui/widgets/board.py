@@ -290,6 +290,7 @@ class SvgBoard(QSvgWidget):
 
         if self.is_white_at_bottom != current_orientation:
             self.is_white_at_bottom = current_orientation
+
             if self.is_white_at_bottom:
                 self.precompute_square_centers_white_at_bottom()
             else:
@@ -364,11 +365,12 @@ class BoardRenderer:
 
     def __init__(self, board: SvgBoard) -> None:
         self._svg_board: SvgBoard = board
+
         self._piece_renderers: dict[str, QSvgRenderer] = {}
         self._cached_colors: dict[str, str] | None = None
 
     def is_dragging_with_animatable_board(self) -> bool:
-        """Return True if a piece is being dragged and an animatable board exists."""
+        """Return True if piece dragged and animatable board exists."""
         return (
             self._svg_board.is_dragging and self._svg_board.animatable_board is not None
         )
@@ -469,20 +471,20 @@ class BoardInteractor:
 
     def __init__(self, board: SvgBoard) -> None:
         self._svg_board: SvgBoard = board
+
         self._last_cursor_position: tuple[float, float] | None = None
         self._last_square_index: Square | None = None
 
     def square_index(self, x: float, y: float) -> Square | None:
-        """Convert `x` and `y` coordinates to square index with caching."""
+        """Convert `x` and `y` coordinates to square index."""
         current_position: tuple[float, float] = (x, y)
+
         if (
             self._last_cursor_position == current_position
             and self._last_square_index is not None
         ):
             return self._last_square_index
 
-        file: int
-        rank: int
         file, rank = self._svg_board.locate_file_and_rank(x, y)
         square_index: Square = file + (rank * 8)
         result: Square | None = square_index if square_index < ALL_SQUARES else None
@@ -512,7 +514,6 @@ class BoardInteractor:
         self._svg_board.dragging_from_x = x
         self._svg_board.dragging_from_y = y
         self._svg_board.set_origin_square(square)
-
         self._svg_board.setCursor(Qt.CursorShape.ClosedHandCursor)
 
         self._svg_board.animatable_board = self._svg_board.board_copy()
@@ -567,7 +568,6 @@ class BoardInteractor:
 
         x: float = event.position().x()
         y: float = event.position().y()
-
         square_index: Square | None = self.square_index(x, y)
 
         if square_index is not None:
@@ -604,7 +604,6 @@ class BoardInteractor:
 
         x: float = event.position().x()
         y: float = event.position().y()
-
         square_index: Square | None = self.square_index(x, y)
 
         if square_index is not None and self.is_valid_move(square_index):
