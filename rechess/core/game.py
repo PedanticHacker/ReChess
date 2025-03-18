@@ -54,9 +54,6 @@ class Game(QObject):
         self._sound_effects: dict[str, QSoundEffect] = {}
         self._preload_sound_effects()
 
-        self._cached_legal_target_squares: list[Square] | None = None
-        self._cached_piece_square: Square = -1
-
         self.reset_squares()
 
     def _preload_sound_effects(self) -> None:
@@ -72,13 +69,6 @@ class Game(QObject):
             sound_effect: QSoundEffect = QSoundEffect(self)
             sound_effect.setSource(getattr(SoundEffectFileUrl, sound_effect_type))
             self._sound_effects[sound_effect_type] = sound_effect
-
-    def has_cached_legal_moves(self) -> bool:
-        """Return True if cached legal moves exist."""
-        return (
-            self.from_square == self._cached_piece_square
-            and self._cached_legal_target_squares is not None
-        )
 
     @property
     def fen(self) -> str:
@@ -104,14 +94,9 @@ class Game(QObject):
         if self.from_square == -1:
             return None
 
-        if self.has_cached_legal_moves():
-            return self._cached_legal_target_squares
-
         square: Square = BB_SQUARES[self.from_square]
         legal_moves: Iterator[Move] = self.board.generate_legal_moves(square)
-        self._cached_legal_target_squares = [move.to_square for move in legal_moves]
-        self._cached_piece_square = self.from_square
-        return self._cached_legal_target_squares
+        return [move.to_square for move in legal_moves]
 
     @property
     def result(self) -> str:
@@ -130,11 +115,9 @@ class Game(QObject):
         return self.board.turn
 
     def reset_squares(self) -> None:
-        """Reset origin and target squares, plus invalidate caches."""
+        """Reset origin and target squares."""
         self.from_square: Square = -1
         self.to_square: Square = -1
-        self._cached_legal_target_squares = None
-        self._cached_piece_square = -1
 
     def _initialize_state(self) -> None:
         """Clear game history and set squares to initial value."""
@@ -158,8 +141,6 @@ class Game(QObject):
 
         position: Board = self.board.copy()
         self.positions.append(position)
-
-        self._cached_legal_target_squares = None
 
     def set_arrow(self, move: Move) -> None:
         """Set arrow marker based on `move`."""

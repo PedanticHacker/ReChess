@@ -41,7 +41,6 @@ class BoardCacheKey(NamedTuple):
     is_animating: bool
     is_white_at_bottom: bool
     king_in_check: Square | None
-    legal_moves: tuple[Square, ...] | None
     square: Square | None
 
 
@@ -107,9 +106,6 @@ class SvgBoard(QSvgWidget):
         self.animatable_board: Board | None = None
         self.is_white_at_bottom: bool = setting_value("board", "orientation")
 
-        self._square_center_cache: dict[tuple[Square, bool], QPointF] = {}
-        self.initialize_square_centers()
-
         self.setMouseTracking(True)
 
     def update_color(self, property_name: str, color_value: QColor) -> None:
@@ -137,37 +133,6 @@ class SvgBoard(QSvgWidget):
         self.dragging_from_x: float | None = None
         self.dragging_from_y: float | None = None
 
-    def initialize_square_centers(self) -> None:
-        """Precompute all square centers for current orientation."""
-        if self.is_white_at_bottom:
-            self.precompute_square_centers_when_white_at_bottom()
-        else:
-            self.precompute_square_centers_when_black_at_bottom()
-
-    def precompute_square_centers_when_white_at_bottom(self) -> None:
-        """Calculate and cache square centers when White at bottom."""
-        for square in range(ALL_SQUARES):
-            file: int = square % 8
-            rank: int = square // 8
-            flipped_rank: int = 7 - rank
-
-            x: float = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * file)
-            y: float = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * flipped_rank)
-
-            self._square_center_cache[(square, True)] = QPointF(x, y)
-
-    def precompute_square_centers_when_black_at_bottom(self) -> None:
-        """Calculate and cache square centers when Black at bottom."""
-        for square in range(ALL_SQUARES):
-            file: int = square % 8
-            rank: int = square // 8
-            flipped_file: int = 7 - file
-
-            x: float = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * flipped_file)
-            y: float = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * rank)
-
-            self._square_center_cache[(square, False)] = QPointF(x, y)
-
     def cache_key(self) -> BoardCacheKey:
         """Generate unique key for board state."""
         dragging_from_origin_square: Square | None = (
@@ -183,18 +148,24 @@ class SvgBoard(QSvgWidget):
             is_animating=self._animator.is_animating,
             is_white_at_bottom=self.is_white_at_bottom,
             king_in_check=self._game.king_in_check,
-            legal_moves=(
-                tuple(self._game.legal_moves)
-                if self._game.legal_moves is not None
-                else None
-            ),
             square=dragging_from_origin_square,
         )
 
     def square_center(self, square: Square) -> QPointF:
-        """Get center coordinates of `square` from cache."""
-        cache_key: tuple[Square, bool] = (square, self.is_white_at_bottom)
-        return self._square_center_cache[cache_key]
+        """Calculate center coordinates of `square`."""
+        file: int = square % 8
+        rank: int = square // 8
+
+        if self.is_white_at_bottom:
+            flipped_rank: int = 7 - rank
+            x: float = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * file)
+            y: float = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * flipped_rank)
+        else:
+            flipped_file: int = 7 - file
+            x = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * flipped_file)
+            y = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * rank)
+
+        return QPointF(x, y)
 
     def piece_can_be_dragged(self) -> bool:
         """Return True if conditions allow for piece to be dragged."""
@@ -282,16 +253,7 @@ class SvgBoard(QSvgWidget):
     def clear_cache(self) -> None:
         """Clear cached SVG data and update board orientation."""
         self._renderer.invalidate_cache()
-        current_orientation: bool = setting_value("board", "orientation")
-
-        if self.is_white_at_bottom != current_orientation:
-            self.is_white_at_bottom = current_orientation
-
-            if self.is_white_at_bottom:
-                self.precompute_square_centers_when_white_at_bottom()
-            else:
-                self.precompute_square_centers_when_black_at_bottom()
-
+        self.is_white_at_bottom = setting_value("board", "orientation")
         self.update()
 
     @Slot()
@@ -403,7 +365,7 @@ class BoardRenderer:
             self._cached_colors = self.board_colors()
         return tuple(self._cached_colors.items())
 
-    @lru_cache(maxsize=256)
+    @lru_cache(maxsize=128)
     def board_as_svg(self, cache_key: BoardCacheKey) -> bytes:
         """Transform current board state into SVG data."""
         svg_board: str = svg.board(
@@ -412,7 +374,7 @@ class BoardRenderer:
             check=cache_key.king_in_check,
             colors=self.board_colors(),
             orientation=cache_key.is_white_at_bottom,
-            squares=cache_key.legal_moves,
+            squares=self._svg_board._game.legal_moves,
         )
         return svg_board.encode()
 
