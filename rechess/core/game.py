@@ -234,6 +234,10 @@ class Game(QObject):
             del self.moves[after_item_index]
             del self.positions[after_item_index]
 
+    def has_past_position(self) -> bool:
+        """Return True if current position exists in game history."""
+        return any(self.fen == position.fen() for position in self.positions)
+
     def is_check(self, move: Move) -> bool:
         """Return True if `move` would put opponent king in check."""
         board: Board = self.board.copy()
