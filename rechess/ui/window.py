@@ -551,10 +551,10 @@ class MainWindow(QMainWindow):
 
     def show_opening(self) -> None:
         """Show ECO code and opening name."""
-        opening: tuple[str, str] | None = find_opening(self._game.fen)
+        openings_data: list[str] | None = find_opening(self._game.fen)
 
-        if opening:
-            eco_code, opening_name = opening
+        if openings_data is not None:
+            eco_code, opening_name = openings_data
             self._openings_label.setText(f"{eco_code}: {opening_name}")
 
     def refresh_ui(self) -> None:

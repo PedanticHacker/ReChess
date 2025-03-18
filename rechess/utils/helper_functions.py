@@ -6,6 +6,7 @@ import platform
 import stat
 import subprocess
 import sys
+from functools import lru_cache
 from typing import Any, Callable
 
 from psutil import cpu_count, virtual_memory
@@ -80,11 +81,16 @@ def set_setting_value(section: str, key: str, value: Any) -> None:
         settings_file.write("\n")
 
 
-def find_opening(fen: str) -> tuple[str, str] | None:
-    """Get ECO code and opening name based on `fen`."""
+@lru_cache(maxsize=1)
+def _load_openings() -> dict[str, list[str]]:
+    """Load openings from JSON file."""
     with open("rechess/openings.json", encoding="utf-8") as json_file:
-        openings = json.load(json_file)
-    return openings.get(fen)
+        return json.load(json_file)
+
+
+def find_opening(fen: str) -> list[str] | None:
+    """Get ECO code and opening name based on `fen`."""
+    return _load_openings().get(fen)
 
 
 def style_name(filename: str) -> str:
