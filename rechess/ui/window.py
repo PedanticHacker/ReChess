@@ -402,9 +402,6 @@ class MainWindow(QMainWindow):
 
     def invoke_engine(self) -> None:
         """Invoke engine to play move in new position only."""
-        if self._game.has_past_position():
-            return
-
         QThreadPool.globalInstance().start(self._engine.play_move)
         self._game_notifications_label.setText("Thinking...")
 
