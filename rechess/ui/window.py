@@ -453,7 +453,7 @@ class MainWindow(QMainWindow):
         """Act on settings being saved."""
         self._human_name_label.setText(setting_value("human", "name"))
 
-        if self._game.is_in_progress():
+        if not self._game.is_in_progress():
             self._black_clock.reset()
             self._white_clock.reset()
 
