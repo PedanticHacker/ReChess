@@ -46,10 +46,10 @@ class Game(QObject):
         super().__init__()
 
         self.board: Board = Board()
-
         self.arrow: list[tuple[Square, Square]] = []
         self.moves: list[str] = []
         self.positions: list[Board] = []
+        self.in_previous_state: bool = False
 
         self._sound_effects: dict[str, QSoundEffect] = {}
         self._preload_sound_effects()

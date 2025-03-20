@@ -51,7 +51,9 @@ class Engine(QObject):
             limit=Limit(depth=30),
             ponder=setting_value("engine", "is_ponder_on"),
         )
-        self.move_played.emit(play_result.move)
+
+        if not self._game.in_previous_state:
+            self.move_played.emit(play_result.move)
 
     def start_analysis(self) -> None:
         """Start analyzing current position."""

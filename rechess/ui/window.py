@@ -563,6 +563,7 @@ class MainWindow(QMainWindow):
         """Refresh current state of UI."""
         self._table_model.refresh_view()
         self._table_view.select_last_item()
+        self._game.in_previous_state = False
 
         self.show_fen()
         self.show_opening()
@@ -591,6 +592,7 @@ class MainWindow(QMainWindow):
     def start_new_game(self) -> None:
         """Start new game by resetting and clearing everything."""
         self._game.prepare_new_game()
+        self._game.in_previous_state = False
 
         self._black_clock.reset()
         self._white_clock.reset()
@@ -661,6 +663,8 @@ class MainWindow(QMainWindow):
     @Slot(int)
     def on_item_selected(self, item_index: int) -> None:
         """Show move based on `item_index`."""
+        self._game.in_previous_state = True
+
         if item_index < 0:
             self._game.clear_arrow()
             self._game.set_root_position()
