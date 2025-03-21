@@ -82,9 +82,9 @@ class MainWindow(QMainWindow):
         self._openings_label: QLabel = QLabel()
         self._style_name_label: QLabel = QLabel()
 
-        self._wheel_timer = QTimer(self)
-        self._wheel_timer.setSingleShot(True)
-        self._wheel_timer.setInterval(THROTTLING_MILLISECONDS)
+        self._scroll_timer: QTimer = QTimer(self)
+        self._scroll_timer.setSingleShot(True)
+        self._scroll_timer.setInterval(THROTTLING_MILLISECONDS)
 
         self.create_layout()
         self.create_actions()
@@ -648,7 +648,7 @@ class MainWindow(QMainWindow):
 
     def wheelEvent(self, event: QWheelEvent) -> None:
         """Handle mouse wheel events with timer-based throttling."""
-        if not self._wheel_timer.isActive():
+        if not self._scroll_timer.isActive():
             wheel_step: int = event.angleDelta().y()
 
             if wheel_step > 0:
@@ -656,7 +656,7 @@ class MainWindow(QMainWindow):
             elif wheel_step < 0:
                 self._table_view.select_next_item()
 
-            self._wheel_timer.start()
+            self._scroll_timer.start()
 
         event.accept()
 
