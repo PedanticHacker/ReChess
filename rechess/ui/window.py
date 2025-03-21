@@ -394,7 +394,7 @@ class MainWindow(QMainWindow):
         self._white_clock.time_expired.connect(self.on_white_time_expired)
 
     def apply_style(self, filename: str) -> None:
-        """Apply style from QSS file at `filename` and set its name."""
+        """Apply style from QSS file at `filename` and show its name."""
         with open(f"rechess/assets/styles/{filename}.qss") as qss_file:
             self.setStyleSheet(qss_file.read())
         set_setting_value("ui", "style", filename)
@@ -427,9 +427,10 @@ class MainWindow(QMainWindow):
         set_setting_value("board", "orientation", new_orientation)
 
         self._board.clear_cache()
+        self._evaluation_bar.flip_chunk()
+
         self.flip_clocks()
         self.flip_player_names()
-        self._evaluation_bar.flip_chunk()
 
     def play_move_now(self) -> None:
         """Force engine to play move on current turn."""
@@ -437,6 +438,8 @@ class MainWindow(QMainWindow):
         self._game.in_previous_state = False
 
         self.stop_analysis()
+        self.hide_analysis_ui()
+
         self.invoke_engine()
 
     def show_settings_dialog(self) -> None:
@@ -444,15 +447,18 @@ class MainWindow(QMainWindow):
         settings_dialog: SettingsDialog = SettingsDialog()
 
         if self._game.is_in_progress():
-            settings_dialog.disable_groups()
+            settings_dialog.disable_profile_groups()
 
         if settings_dialog.exec() == QDialog.DialogCode.Accepted:
             self.apply_saved_settings()
 
     def apply_saved_settings(self) -> None:
-        """Act on settings being saved."""
-        self._game.in_previous_state = False
+        """Act on edited settings being saved."""
+        self.stop_analysis()
+        self.hide_analysis_ui()
 
+        self._evaluation_bar.flip_chunk()
+        self._game.in_previous_state = False
         self._human_name_label.setText(setting_value("human", "name"))
 
         if not self._game.is_in_progress():
@@ -478,6 +484,7 @@ class MainWindow(QMainWindow):
     def start_new_engine(self, path_to_file: str) -> None:
         """Start new engine from file at `path_to_file`."""
         self.stop_analysis()
+        self.hide_analysis_ui()
 
         self._engine.load_from_file_at(path_to_file)
         self._engine_name_label.setText(self._engine.name)
@@ -526,23 +533,30 @@ class MainWindow(QMainWindow):
             self._grid_layout.addWidget(self._engine_name_label, 5, 1)
             self._grid_layout.addWidget(self._human_name_label, 2, 1)
 
+    def show_analysis_ui(self) -> None:
+        """Show engine analysis label and evaluation bar."""
+        self._engine_analysis_label.show()
+        self._evaluation_bar.show()
+
+    def hide_analysis_ui(self) -> None:
+        """Hide engine analysis label and evaluation bar."""
+        self._engine_analysis_label.hide()
+        self._evaluation_bar.hide()
+
     def start_analysis(self) -> None:
         """Start analyzing current position."""
         self.invoke_analysis()
-        self._evaluation_bar.show()
-        self._engine_analysis_label.show()
+        self.show_analysis_ui()
 
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
 
-        self.stop_analysis_action.setEnabled(True)
         self.start_analysis_action.setDisabled(True)
+        self.stop_analysis_action.setEnabled(True)
 
     def stop_analysis(self) -> None:
         """Stop analyzing current position."""
         self._engine.stop_analysis()
-        self._engine_analysis_label.hide()
-        self._evaluation_bar.reset_state()
         self._game_notifications_label.clear()
 
         self.adjust_toolbar_buttons()
@@ -564,13 +578,15 @@ class MainWindow(QMainWindow):
 
     def refresh_ui(self) -> None:
         """Refresh current state of UI."""
+        self._game.in_previous_state = False
+
         self._table_model.refresh_view()
         self._table_view.select_last_item()
-        self._game.in_previous_state = False
 
         self.show_fen()
         self.show_opening()
         self.stop_analysis()
+        self.hide_analysis_ui()
 
         if self._game.is_over():
             self._black_clock.stop_timer()
@@ -605,6 +621,7 @@ class MainWindow(QMainWindow):
 
         self.show_fen()
         self.stop_analysis()
+        self.hide_analysis_ui()
 
         if self._game.is_engine_on_turn():
             self.flip()
@@ -666,8 +683,6 @@ class MainWindow(QMainWindow):
     @Slot(int)
     def on_item_selected(self, item_index: int) -> None:
         """Show move based on `item_index`."""
-        self._game.in_previous_state = True
-
         if item_index < 0:
             self._game.clear_arrow()
             self._game.set_root_position()
@@ -678,8 +693,10 @@ class MainWindow(QMainWindow):
         self.show_fen()
         self.show_opening()
         self.stop_analysis()
+        self.hide_analysis_ui()
 
         self._game.reset_squares()
+        self._game.in_previous_state = True
 
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()

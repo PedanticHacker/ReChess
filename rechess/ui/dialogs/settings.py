@@ -19,7 +19,7 @@ Save: QDialogButtonBox.StandardButton = QDialogButtonBox.StandardButton.Save
 
 
 class SettingsDialog(QDialog):
-    """Dialog for changing and saving settings."""
+    """Dialog for editing and saving settings."""
 
     def __init__(self) -> None:
         super().__init__()
@@ -93,7 +93,7 @@ class SettingsDialog(QDialog):
         self._human_name_option.setText(setting_value("human", "name"))
 
     def set_vertical_layout(self) -> None:
-        """Set layout of dialog widgets to be vertical."""
+        """Set dialog layout for widgets to be vertically arranged."""
         human_name_layout: QVBoxLayout = QVBoxLayout()
         human_name_layout.addWidget(self._human_name_option)
         self._human_name_group.setLayout(human_name_layout)
@@ -117,25 +117,25 @@ class SettingsDialog(QDialog):
         self.setLayout(vertical_layout)
 
     def connect_signals_to_slots(self) -> None:
-        """Connect result signals to appropriate slot methods."""
+        """Connect signals to appropriate slot methods."""
         self.accepted.connect(self.on_accepted)
         self._button_box.accepted.connect(self.accept)
         self._button_box.rejected.connect(self.reject)
 
-        self._clock_increment_option.currentIndexChanged.connect(self.on_changed)
-        self._clock_time_option.currentIndexChanged.connect(self.on_changed)
-        self._engine_black_option.toggled.connect(self.on_changed)
-        self._engine_ponder_option.toggled.connect(self.on_changed)
-        self._engine_white_option.toggled.connect(self.on_changed)
-        self._human_name_option.textChanged.connect(self.on_changed)
+        self._clock_increment_option.currentIndexChanged.connect(self.on_edited)
+        self._clock_time_option.currentIndexChanged.connect(self.on_edited)
+        self._engine_black_option.toggled.connect(self.on_edited)
+        self._engine_ponder_option.toggled.connect(self.on_edited)
+        self._engine_white_option.toggled.connect(self.on_edited)
+        self._human_name_option.textChanged.connect(self.on_edited)
 
-    def disable_groups(self) -> None:
+    def disable_profile_groups(self) -> None:
         """Disable human name and time control groups."""
         self._human_name_group.setDisabled(True)
         self._time_control_group.setDisabled(True)
 
-    def is_changed(self) -> bool:
-        """Return True if any settings were changed."""
+    def is_edited(self) -> bool:
+        """Return True if any setting is edited."""
         current_settings: dict[str, bool | float | str] = {
             "clock_increment": self._clock_increment_option.currentData(),
             "clock_time": self._clock_time_option.currentData(),
@@ -146,13 +146,13 @@ class SettingsDialog(QDialog):
         return current_settings != self._initial_settings
 
     @Slot()
-    def on_changed(self) -> None:
-        """Enable or disable Save button if settings were changed."""
-        self._button_box.button(Save).setEnabled(self.is_changed())
+    def on_edited(self) -> None:
+        """Enable Save button if any setting is edited."""
+        self._button_box.button(Save).setEnabled(self.is_edited())
 
     @Slot()
     def on_accepted(self) -> None:
-        """Save settings on pressing dialog's Save button."""
+        """Save settings for accepted dialog by Save button pressed."""
         set_setting_value(
             section="clock",
             key="time",

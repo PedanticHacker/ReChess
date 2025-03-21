@@ -22,13 +22,12 @@ class EvaluationBar(QProgressBar):
         self.reset_state()
 
     def reset_state(self) -> None:
-        """Hide widget, reset its chunk to neutral, and flip it."""
+        """Hide widget and flip chunk based on orientation."""
         self.hide()
-        self.reset()
         self.flip_chunk()
 
     def flip_chunk(self) -> None:
-        """Flip chunk based on board orientation."""
+        """Flip chunk based on orientation."""
         self.setInvertedAppearance(setting_value("board", "orientation"))
 
     def animate(self, evaluation: Score) -> None:
