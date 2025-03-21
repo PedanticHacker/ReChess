@@ -19,10 +19,6 @@ class EvaluationBar(QProgressBar):
         self.setFixedSize(50, 600)
         self.setOrientation(Qt.Orientation.Vertical)
 
-        self.reset_state()
-
-    def reset_state(self) -> None:
-        """Hide widget and flip chunk based on orientation."""
         self.hide()
         self.flip_chunk()
 
