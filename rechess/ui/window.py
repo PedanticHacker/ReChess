@@ -434,6 +434,7 @@ class MainWindow(QMainWindow):
     def play_move_now(self) -> None:
         """Force engine to play move on current turn."""
         self._game.clear_arrow()
+        self._game.in_previous_state = False
 
         self.stop_analysis()
         self.invoke_engine()
@@ -450,6 +451,8 @@ class MainWindow(QMainWindow):
 
     def apply_saved_settings(self) -> None:
         """Act on settings being saved."""
+        self._game.in_previous_state = False
+
         self._human_name_label.setText(setting_value("human", "name"))
 
         if not self._game.is_in_progress():
@@ -489,7 +492,7 @@ class MainWindow(QMainWindow):
             "About",
             (
                 "This is an app for playing chess.\n\n"
-                "Copyright 2024 Boštjan Mejak\n"
+                "Copyright (C) 2025 Boštjan Mejak\n"
                 "MIT License"
             ),
         )
