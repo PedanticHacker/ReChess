@@ -647,13 +647,13 @@ class MainWindow(QMainWindow):
             event.ignore()
 
     def wheelEvent(self, event: QWheelEvent) -> None:
-        """Handle mouse wheel events with timer-based throttling."""
+        """Handle wheel scroll events with timer-based throttling."""
         if not self._scroll_timer.isActive():
-            wheel_step: int = event.angleDelta().y()
+            scroll_step: int = event.angleDelta().y()
 
-            if wheel_step > 0:
+            if scroll_step > 0:
                 self._table_view.select_previous_item()
-            elif wheel_step < 0:
+            elif scroll_step < 0:
                 self._table_view.select_next_item()
 
             self._scroll_timer.start()
