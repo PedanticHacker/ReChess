@@ -578,10 +578,9 @@ class MainWindow(QMainWindow):
 
     def refresh_ui(self) -> None:
         """Refresh current state of UI."""
-        self._game.is_in_previous_state = False
-
         self._table_model.refresh_view()
         self._table_view.select_last_item()
+        self._game.is_in_previous_state = False
 
         self.show_fen()
         self.show_opening()
@@ -692,6 +691,7 @@ class MainWindow(QMainWindow):
 
         self.show_fen()
         self.show_opening()
+
         self.stop_analysis()
         self.hide_analysis_ui()
 
