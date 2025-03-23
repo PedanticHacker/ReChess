@@ -25723,10 +25723,6 @@
     "C40",
     "King's Pawn Game: McConnell Defense"
   ],
-  "rnbqk1nr/pppp1ppp/8/4p3/1b2P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3": [
-    "C40",
-    "King's Pawn Game: Open Variation"
-  ],
   "rnbqkbnr/pppp2pp/8/4pp2/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 0 3": [
     "C40",
     "Latvian Gambit"
@@ -26625,7 +26621,7 @@
   ],
   "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3": [
     "C44",
-    "King's Pawn Game: Normal Variation"
+    "King's Knight Opening: Normal Variation"
   ],
   "r1bqkbnr/pppp1ppp/2n5/4p3/1P2P3/5N2/P1PP1PPP/RNBQKB1R b KQkq - 0 3": [
     "C44",
