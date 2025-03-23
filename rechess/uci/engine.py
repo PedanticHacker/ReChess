@@ -38,11 +38,11 @@ class Engine(QObject):
         make_executable(path_to_file)
 
         with suppress(EngineError):
-            new_engine: SimpleEngine = SimpleEngine.popen_uci(path_to_file)
-            new_engine.configure(engine_configuration())
+            active_engine: SimpleEngine = SimpleEngine.popen_uci(path_to_file)
+            active_engine.configure(engine_configuration())
 
             self.quit()
-            self._engine: SimpleEngine = new_engine
+            self._engine: SimpleEngine = active_engine
 
     def play_move(self) -> None:
         """Invoke engine to play move."""
