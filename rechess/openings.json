@@ -5271,6 +5271,10 @@
     "A40",
     "Queen's Knight Defense: Pozarek Gambit"
   ],
+  "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1": [
+    "A40",
+    "Queen's Pawn Game"
+  ],
   "rnbqkbnr/pp1ppppp/2p5/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2": [
     "A40",
     "Queen's Pawn Game: 1...c6"
@@ -5394,10 +5398,6 @@
   "rnbqkbnr/p1pppppp/8/1p6/3PP3/8/PPP2PPP/RNBQKBNR b KQkq - 0 2": [
     "A40",
     "Queen's Pawn Game: Polish Defense"
-  ],
-  "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1": [
-    "A40",
-    "Queen's Pawn Game"
   ],
   "rnbqkb1r/p2ppppp/2p2n2/1p6/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4": [
     "A40",
@@ -23403,10 +23403,6 @@
     "C20",
     "King's Pawn Game"
   ],
-  "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2": [
-    "C20",
-    "Open Game"
-  ],
   "rnbqkbnr/pppp1ppp/8/4p3/4P3/7N/PPPP1PPP/RNBQKB1R b KQkq - 1 2": [
     "C20",
     "King's Pawn Game, Basman Attack"
@@ -23498,6 +23494,10 @@
   "r1bqk2r/pppp1ppp/5n2/2b5/3nP3/5N2/PP2QPPP/RNB1KB1R w KQkq - 0 7": [
     "C20",
     "King's Pawn Game: van Hooydoon Gambit"
+  ],
+  "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2": [
+    "C20",
+    "Open Game"
   ],
   "rnbqkbnr/ppp2ppp/8/3pp3/4P3/3P4/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
     "C20",
@@ -25663,6 +25663,10 @@
     "C40",
     "Gunderam Gambit: Fianchetto Attack"
   ],
+  "rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2": [
+    "C40",
+    "King's Knight Opening"
+  ],
   "rnbqk1nr/pppp1ppp/8/2b1p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3": [
     "C40",
     "King's Pawn Game: Busch-Gass Gambit"
@@ -25710,10 +25714,6 @@
   "rnbqkbnr/pp1p1ppp/2p5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 0 3": [
     "C40",
     "King's Pawn Game: Gunderam Gambit"
-  ],
-  "rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2": [
-    "C40",
-    "King's Knight Opening"
   ],
   "rnb1kbnr/pppp1ppp/6q1/4p3/2B1P3/5N2/PPPP1PPP/RNBQ1RK1 b kq - 5 4": [
     "C40",
@@ -26615,13 +26615,13 @@
     "C44",
     "Irish Gambit Accepted"
   ],
-  "r1bqkbnr/pppp1ppp/2n5/4p3/2P1P3/5N2/PP1P1PPP/RNBQKB1R b KQkq - 0 3": [
-    "C44",
-    "King's Pawn Game: Dresden Opening"
-  ],
   "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3": [
     "C44",
     "King's Knight Opening: Normal Variation"
+  ],
+  "r1bqkbnr/pppp1ppp/2n5/4p3/2P1P3/5N2/PP1P1PPP/RNBQKB1R b KQkq - 0 3": [
+    "C44",
+    "King's Pawn Game: Dresden Opening"
   ],
   "r1bqkbnr/pppp1ppp/2n5/4p3/1P2P3/5N2/P1PP1PPP/RNBQKB1R b KQkq - 0 3": [
     "C44",
@@ -27655,70 +27655,6 @@
     "C50",
     "Italian Game: Deutz Gambit"
   ],
-  "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R b KQkq - 0 4": [
-    "C50",
-    "Italian Game: Very Quiet Game"
-  ],
-  "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQ1RK1 b kq - 2 5": [
-    "C50",
-    "Italian Game: Very Quiet Game, 4.d3 Nf6 5.O-O"
-  ],
-  "r1bqk2r/ppp2ppp/2np1n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQ1RK1 w kq - 0 6": [
-    "C50",
-    "Italian Game: Very Quiet Game, 4.d3 Nf6 5.O-O d6"
-  ],
-  "r1bqk2r/ppp2pp1/2np1n1p/2b1p1B1/2B1P3/2NP1N2/PPP2PPP/R2QK2R w KQkq - 0 7": [
-    "C50",
-    "Italian Game: Very Quiet Game, Canal Variation, 6...h6"
-  ],
-  "r1bqk2r/ppp2ppp/2np1n2/2b1p3/2B1P3/2NP1N2/PPP2PPP/R1BQK2R w KQkq - 0 6": [
-    "C50",
-    "Italian Game: Very Quiet Game, Italian Four Knights Variation, 5...d6"
-  ],
-  "r1bqk2r/ppp2ppp/2np1n2/2b1p3/2B1P3/2NPBN2/PPP2PPP/R2QK2R b KQkq - 1 6": [
-    "C50",
-    "Italian Game: Very Quiet Game, Italian Four Knights Variation, 5...d6 6.Be3"
-  ],
-  "r1bqk2r/ppp2ppp/2np1n2/2b1p1B1/2B1P3/2NP1N2/PPP2PPP/R2QK2R b KQkq - 1 6": [
-    "C50",
-    "Italian Game: Very Quiet Game, Canal Variation"
-  ],
-  "r1bqk1nr/pppp2pp/2n5/2b1p1N1/2B1Pp2/3P4/PPP2PPP/RNBQK2R w KQkq - 0 6": [
-    "C50",
-    "Italian Game: Very Quiet Game, Dubois Variation"
-  ],
-  "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/2NP1N2/PPP2PPP/R1BQK2R b KQkq - 2 5": [
-    "C50",
-    "Italian Game: Very Quiet Game, Italian Four Knights Variation"
-  ],
-  "r1bqk1nr/pppp2pp/2n5/2b1pp2/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 0 5": [
-    "C50",
-    "Italian Game: Very Quiet Game, Lucchini Gambit"
-  ],
-  "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 1 5": [
-    "C50",
-    "Italian Game: Very Quiet Game, Normal Variation"
-  ],
-  "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4": [
-    "C50",
-    "Italian Game: Quiet Game"
-  ],
-  "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQ1RK1 b kq - 5 4": [
-    "C50",
-    "Italian Game: Quiet Game, 4.O-O"
-  ],
-  "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQ1RK1 w kq - 6 5": [
-    "C50",
-    "Italian Game: Quiet Game, 4.O-O Nf6"
-  ],
-  "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/2N2N2/PPPP1PPP/R1BQ1RK1 b kq - 7 5": [
-    "C50",
-    "Italian Game: Quiet Game, 4.O-O Nf6 5.Nc3"
-  ],
-  "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/2N2N2/PPPP1PPP/R1BQK2R b KQkq - 5 4": [
-    "C50",
-    "Italian Game: Quiet Game, Three Knights Variation"
-  ],
   "r1bqk1nr/ppppbppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQ1RK1 b kq - 5 4": [
     "C50",
     "Italian Game: Hungarian Defense"
@@ -27747,6 +27683,26 @@
     "C50",
     "Italian Game: Paris Defense"
   ],
+  "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4": [
+    "C50",
+    "Italian Game: Quiet Game"
+  ],
+  "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQ1RK1 b kq - 5 4": [
+    "C50",
+    "Italian Game: Quiet Game, 4.O-O"
+  ],
+  "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQ1RK1 w kq - 6 5": [
+    "C50",
+    "Italian Game: Quiet Game, 4.O-O Nf6"
+  ],
+  "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/2N2N2/PPPP1PPP/R1BQ1RK1 b kq - 7 5": [
+    "C50",
+    "Italian Game: Quiet Game, 4.O-O Nf6 5.Nc3"
+  ],
+  "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/2N2N2/PPPP1PPP/R1BQK2R b KQkq - 5 4": [
+    "C50",
+    "Italian Game: Quiet Game, Three Knights Variation"
+  ],
   "r1bqk1nr/pppp1ppp/2n5/2b1p3/2BPP3/5N2/PPP2PPP/RNBQK2R b KQkq - 0 4": [
     "C50",
     "Italian Game: Rosentreter Gambit"
@@ -27766,6 +27722,50 @@
   "r1b1kbnr/pppp1ppp/8/4N1q1/2BnP3/8/PPPP1PPP/RNBQK2R w KQkq - 1 5": [
     "C50",
     "Italian Game: Schilling-Kostić Gambit"
+  ],
+  "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R b KQkq - 0 4": [
+    "C50",
+    "Italian Game: Very Quiet Game"
+  ],
+  "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQ1RK1 b kq - 2 5": [
+    "C50",
+    "Italian Game: Very Quiet Game, 4.d3 Nf6 5.O-O"
+  ],
+  "r1bqk2r/ppp2ppp/2np1n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQ1RK1 w kq - 0 6": [
+    "C50",
+    "Italian Game: Very Quiet Game, 4.d3 Nf6 5.O-O d6"
+  ],
+  "r1bqk2r/ppp2ppp/2np1n2/2b1p1B1/2B1P3/2NP1N2/PPP2PPP/R2QK2R b KQkq - 1 6": [
+    "C50",
+    "Italian Game: Very Quiet Game, Canal Variation"
+  ],
+  "r1bqk2r/ppp2pp1/2np1n1p/2b1p1B1/2B1P3/2NP1N2/PPP2PPP/R2QK2R w KQkq - 0 7": [
+    "C50",
+    "Italian Game: Very Quiet Game, Canal Variation, 6...h6"
+  ],
+  "r1bqk1nr/pppp2pp/2n5/2b1p1N1/2B1Pp2/3P4/PPP2PPP/RNBQK2R w KQkq - 0 6": [
+    "C50",
+    "Italian Game: Very Quiet Game, Dubois Variation"
+  ],
+  "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/2NP1N2/PPP2PPP/R1BQK2R b KQkq - 2 5": [
+    "C50",
+    "Italian Game: Very Quiet Game, Italian Four Knights Variation"
+  ],
+  "r1bqk2r/ppp2ppp/2np1n2/2b1p3/2B1P3/2NP1N2/PPP2PPP/R1BQK2R w KQkq - 0 6": [
+    "C50",
+    "Italian Game: Very Quiet Game, Italian Four Knights Variation, 5...d6"
+  ],
+  "r1bqk2r/ppp2ppp/2np1n2/2b1p3/2B1P3/2NPBN2/PPP2PPP/R2QK2R b KQkq - 1 6": [
+    "C50",
+    "Italian Game: Very Quiet Game, Italian Four Knights Variation, 5...d6 6.Be3"
+  ],
+  "r1bqk1nr/pppp2pp/2n5/2b1pp2/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 0 5": [
+    "C50",
+    "Italian Game: Very Quiet Game, Lucchini Gambit"
+  ],
+  "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 1 5": [
+    "C50",
+    "Italian Game: Very Quiet Game, Normal Variation"
   ],
   "r1b1kbnr/pppp1Npp/8/6q1/2BnP3/8/PPPP1PPP/RNBQK2R b KQkq - 0 5": [
     "C50",
@@ -28083,14 +28083,6 @@
     "C53",
     "Italian Game: Classical Variation, Closed Variation"
   ],
-  "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQK2R b KQkq - 0 5": [
-    "C53",
-    "Italian Game: Classical Variation, Very Quiet Game"
-  ],
-  "r1bq1rk1/bpp2ppp/p1np1n2/4p3/4P3/1BPP1N1P/PP3PP1/RNBQR1K1 b - - 0 9": [
-    "C53",
-    "Italian Game: Classical Variation, Very Quiet Game, Main Line"
-  ],
   "r1bqk2r/ppp2ppp/2n2n2/2bpP3/2Bp4/2P2N2/PP3PPP/RNBQK2R w KQkq d6 0 7": [
     "C53",
     "Italian Game: Classical Variation, Greco Gambit"
@@ -28106,6 +28098,14 @@
   "r1b1k2r/1pp1qppp/pbnp1n2/4p3/P1BPP3/2P2N1P/1P3PP1/RNBQR1K1 b kq - 2 9": [
     "C53",
     "Italian Game: Classical Variation, Tarrasch Variation"
+  ],
+  "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQK2R b KQkq - 0 5": [
+    "C53",
+    "Italian Game: Classical Variation, Very Quiet Game"
+  ],
+  "r1bq1rk1/bpp2ppp/p1np1n2/4p3/4P3/1BPP1N1P/PP3PP1/RNBQR1K1 b - - 0 9": [
+    "C53",
+    "Italian Game: Classical Variation, Very Quiet Game, Main Line"
   ],
   "rnb1k1nr/ppppqppp/1b1P4/4p3/2B1P3/2P2N2/PP3PPP/RNBQK2R b KQkq - 0 7": [
     "C53",
@@ -28146,26 +28146,6 @@
   "r1bqk2r/pppp1ppp/2n2n2/2b5/2BPP3/5N2/PP3PPP/RNBQK2R b KQkq - 0 6": [
     "C54",
     "Italian Game: Classical Variation, Greco Gambit, Traditional Line"
-  ],
-  "r1bqk2r/1ppp1ppp/p1n2n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQK2R w KQkq - 0 6": [
-    "C54",
-    "Italian Game: Very Quiet Game, 5.d3 a6"
-  ],
-  "r1bqk2r/ppp2ppp/2np1n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQK2R w KQkq - 0 6": [
-    "C54",
-    "Italian Game: Very Quiet Game, 5.d3 d6"
-  ],
-  "r1bqk2r/ppp2ppp/2np1n2/2b1p3/2B1P3/2PP1N2/PP1N1PPP/R1BQK2R b KQkq - 1 6": [
-    "C54",
-    "Italian Game: Very Quiet Game, 5.d3 d6 6.Nbd2"
-  ],
-  "r1bqk2r/ppp2ppp/2np1n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQ1RK1 b kq - 1 6": [
-    "C54",
-    "Italian Game: Very Quiet Game, 5.d3 d6 6.O-O"
-  ],
-  "r1bq1rk1/ppp2ppp/2np1n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQ1RK1 w - - 2 7": [
-    "C54",
-    "Italian Game: Very Quiet Game, 5.d3 d6 6.O-O O-O"
   ],
   "r1bqk2r/pppp1ppp/2n2n2/8/1bBPP3/5N2/PP3PPP/RNBQK2R w KQkq - 1 7": [
     "C54",
@@ -28214,6 +28194,26 @@
   "r1bq1rk1/ppp1nppN/3p4/3P4/2B1R3/8/PP3PPP/R2Q2K1 b - - 0 14": [
     "C54",
     "Italian Game: Quiet Game, Therkatz-Herzog Variation"
+  ],
+  "r1bqk2r/1ppp1ppp/p1n2n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQK2R w KQkq - 0 6": [
+    "C54",
+    "Italian Game: Very Quiet Game, 5.d3 a6"
+  ],
+  "r1bqk2r/ppp2ppp/2np1n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQK2R w KQkq - 0 6": [
+    "C54",
+    "Italian Game: Very Quiet Game, 5.d3 d6"
+  ],
+  "r1bqk2r/ppp2ppp/2np1n2/2b1p3/2B1P3/2PP1N2/PP1N1PPP/R1BQK2R b KQkq - 1 6": [
+    "C54",
+    "Italian Game: Very Quiet Game, 5.d3 d6 6.Nbd2"
+  ],
+  "r1bqk2r/ppp2ppp/2np1n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQ1RK1 b kq - 1 6": [
+    "C54",
+    "Italian Game: Very Quiet Game, 5.d3 d6 6.O-O"
+  ],
+  "r1bq1rk1/ppp2ppp/2np1n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQ1RK1 w - - 2 7": [
+    "C54",
+    "Italian Game: Very Quiet Game, 5.d3 d6 6.O-O O-O"
   ],
   "r1bqk2r/ppp2ppp/3p1n2/4p1B1/2BnP3/8/PPP2PPP/RN1Q1RK1 w kq - 0 8": [
     "C55",
@@ -30755,14 +30755,6 @@
     "C78",
     "Ruy López Opening: Central Countergambit"
   ],
-  "r1bqk2r/1ppp1ppp/p1n2n2/2b1N3/B3P3/8/PPPP1PPP/RNBQ1RK1 b kq - 0 6": [
-    "C78",
-    "Ruy López Opening: Møller Defense, 6.Nxe5"
-  ],
-  "r1bqk2r/1ppp1ppp/p1n2n2/2b1p3/B3P3/2P2N2/PP1P1PPP/RNBQ1RK1 b kq - 0 6": [
-    "C78",
-    "Ruy López Opening: Møller Defense, 6.c3"
-  ],
   "r1bqkb1r/1ppp1ppp/p1n2n2/4p3/B3P3/5N2/PPPP1PPP/RNBQ1RK1 b kq - 3 5": [
     "C78",
     "Ruy López Opening: Morphy Defense"
@@ -30782,6 +30774,14 @@
   "r1bqk2r/2ppbppp/p1n2n2/1p2p3/P3P3/1B3N2/1PPP1PPP/RNBQ1RK1 b kq - 0 7": [
     "C78",
     "Ruy López Opening: Morphy Defense, Wing Attack"
+  ],
+  "r1bqk2r/1ppp1ppp/p1n2n2/2b1N3/B3P3/8/PPPP1PPP/RNBQ1RK1 b kq - 0 6": [
+    "C78",
+    "Ruy López Opening: Møller Defense, 6.Nxe5"
+  ],
+  "r1bqk2r/1ppp1ppp/p1n2n2/2b1p3/B3P3/2P2N2/PP1P1PPP/RNBQ1RK1 b kq - 0 6": [
+    "C78",
+    "Ruy López Opening: Møller Defense, 6.c3"
   ],
   "r1bq1k1r/2p2ppp/p4n2/1pbPR1N1/3n4/1B6/PPPP1PPP/RNBQ2K1 w - - 1 11": [
     "C78",
@@ -32631,6 +32631,10 @@
     "D00",
     "Blackmar-Diemer: von Popiel Attack"
   ],
+  "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2": [
+    "D00",
+    "Closed Game"
+  ],
   "rnbqkbnr/ppp1ppp1/7p/3p2B1/3P4/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3": [
     "D00",
     "Hodgson Attack, 2...h6"
@@ -32670,10 +32674,6 @@
   "rnbqkbnr/ppp1pppp/8/3p4/3P4/4P3/PPP2PPP/RNBQKBNR b KQkq - 0 2": [
     "D00",
     "Queen's Pawn Game"
-  ],
-  "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2": [
-    "D00",
-    "Closed Game"
   ],
   "rnbqkbnr/ppp2ppp/4p3/3p4/3P4/4P3/PPP2PPP/RNBQKBNR w KQkq - 0 3": [
     "D00",
