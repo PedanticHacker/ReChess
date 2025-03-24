@@ -58,7 +58,6 @@ class TableView(QTableView):
 
         if next_row < all_rows and next_index.data():
             return next_index
-
         return QModelIndex()
 
     def select_last_item(self) -> None:
@@ -70,6 +69,8 @@ class TableView(QTableView):
 
     def select_previous_item(self) -> None:
         """Select previous item."""
+        if self.item_index == 0 and self.model().index(0, 0).data() == "...":
+            return
         self.select_model_index(self.previous_model_index)
 
     def select_next_item(self) -> None:

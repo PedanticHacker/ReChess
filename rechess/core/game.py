@@ -132,12 +132,10 @@ class Game(QObject):
         self.board.reset()
 
     def maybe_append_ellipsis(self) -> None:
-        """Check whether to append ellipsis for White's move."""
-        (
+        """If Black moves first, append ellipsis for White's move."""
+        if not self.moves and not self.is_white_on_turn():
             self.moves.append("...")
-            if not self.moves and not self.is_white_on_turn()
-            else None
-        )
+            self.positions.append(self.board.copy())
 
     def push(self, move: Move) -> None:
         """Update game state by pushing `move`."""
@@ -230,14 +228,12 @@ class Game(QObject):
         return None
 
     def set_move(self, item_index: int) -> None:
-        """Set move and also arrow for it based on `item_index`."""
-        self.board = self.positions[item_index].copy()
+        """Set move and arrow based on `item_index`."""
         self.clear_arrow()
+        self.board = self.positions[item_index].copy()
 
-        if self.moves[item_index] != "...":
-            has_ellipsis: bool = bool(self.moves and self.moves[0] == "...")
-            move_index: int = item_index - (1 if has_ellipsis else 0)
-            self.set_arrow(self.board.move_stack[move_index])
+        if self.board.move_stack and self.moves[item_index] != "...":
+            self.set_arrow(self.board.move_stack[-1])
 
     def delete_data_after(self, item_index: int) -> None:
         """Delete moves and positions after `item_index`."""
