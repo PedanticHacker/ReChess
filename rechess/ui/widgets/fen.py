@@ -16,6 +16,7 @@ class FenEdit(QLineEdit):
         self._game: Game = game
 
         self.setText(game.fen)
+        self.textChanged.connect(self.show_tooltip)
         self.textEdited.connect(self.validate_fen)
 
     def show_warning(self) -> None:
@@ -32,8 +33,18 @@ class FenEdit(QLineEdit):
         self.paste()
 
     @Slot(str)
+    def show_tooltip(self, fen: str) -> None:
+        """Show tooltip if `fen` exceeds editor's width."""
+        fen_width = self.fontMetrics().horizontalAdvance(fen)
+
+        if fen_width > self.width():
+            self.setToolTip(fen)
+        else:
+            self.setToolTip("")
+
+    @Slot(str)
     def validate_fen(self, fen: str) -> None:
-        """Validate `fen` to set new position from it."""
+        """Validate `fen` to set new position based on it."""
         try:
             self._game.fen = fen
         except (IndexError, ValueError):
