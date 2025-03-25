@@ -24015,66 +24015,6 @@
     "C24",
     "Bishop's Opening: Warsaw Gambit"
   ],
-  "r1bqkbnr/pppp1ppp/2n5/4p3/4PP2/2N5/PPPP2PP/R1BQKBNR b KQkq - 0 3": [
-    "C25",
-    "Vienna Gambit: Max Lange Defense"
-  ],
-  "r1bqk1nr/ppppbppp/2n5/8/4Pp2/2N2N2/PPPP2PP/R1BQKB1R w KQkq - 2 5": [
-    "C25",
-    "Vienna Gambit: Max Lange Defense, Cunningham Defense"
-  ],
-  "r1bqkbnr/pppp1p1p/2n5/6N1/4PppP/2N5/PPPP2P1/R1BQKB1R b KQkq - 1 6": [
-    "C25",
-    "Vienna Gambit: Max Lange Defense, Hamppe-Allgaier Gambit"
-  ],
-  "r1bqkbnr/ppp2p1p/2np4/6N1/4PppP/2N5/PPPP2P1/R1BQKB1R w KQkq - 0 7": [
-    "C25",
-    "Vienna Gambit: Max Lange Defense, Hamppe-Allgaier Gambit, Alapin Variation"
-  ],
-  "r1bq1bnr/pppp1k2/2n4p/8/3PPppP/2N5/PPP3P1/R1BQKB1R b KQ - 0 8": [
-    "C25",
-    "Vienna Gambit: Max Lange Defense, Hamppe-Allgaier Gambit, Thorold Variation"
-  ],
-  "r1bqkbnr/pppp1p1p/2n5/8/2B1Pp2/2N2p2/PPPP2PP/R1BQ1RK1 w kq - 0 7": [
-    "C25",
-    "Vienna Gambit: Max Lange Defense, Hamppe-Muzio Gambit"
-  ],
-  "r1bqkbnr/pppp1ppp/2n5/8/4Pp2/2N2N2/PPPP2PP/R1BQKB1R b KQkq - 1 4": [
-    "C25",
-    "Vienna Gambit: Max Lange Defense, Knight Variation"
-  ],
-  "r1bqkbnr/pppp1p1p/2n5/6p1/3PPp2/2N2N2/PPP3PP/R1BQKB1R b KQkq - 0 5": [
-    "C25",
-    "Vienna Gambit: Max Lange Defense, Pierce Gambit"
-  ],
-  "r1bqk1nr/ppp2ppp/2np4/2b1P3/4P3/2N5/PPPP2PP/R1BQKBNR w KQkq - 0 5": [
-    "C25",
-    "Vienna Gambit: Max Lange Defense, Quelle Gambit"
-  ],
-  "r1bqkbnr/pppp1ppp/2n5/8/3PPp2/2N5/PPP3PP/R1BQKBNR b KQkq - 0 4": [
-    "C25",
-    "Vienna Gambit: Max Lange Defense, Steinitz Gambit"
-  ],
-  "r1b1kbnr/p1pp1ppp/1pn5/8/3PPp1q/2N5/PPP1K1PP/R1BQ1BNR w kq - 0 6": [
-    "C25",
-    "Vienna Gambit: Max Lange Defense, Steinitz Gambit, Fraser-Minckwitz Defense"
-  ],
-  "r1b1kbnr/pppp1ppp/2n5/8/3PPp1q/2N5/PPP1K1PP/R1BQ1BNR b kq - 2 5": [
-    "C25",
-    "Vienna Gambit: Max Lange Defense, Steinitz Gambit, Main Line"
-  ],
-  "r1b1kbnr/ppp2ppp/2np4/8/3PPp1q/2N5/PPP1K1PP/R1BQ1BNR w kq - 0 6": [
-    "C25",
-    "Vienna Gambit: Max Lange Defense, Steinitz Gambit, Paulsen Defense"
-  ],
-  "r1b1kbnr/pppp1p1p/2n5/6p1/3PPp1q/2N5/PPP1K1PP/R1BQ1BNR w kq - 0 6": [
-    "C25",
-    "Vienna Gambit: Max Lange Defense, Steinitz Gambit, Sörensen Defense"
-  ],
-  "r1b1kbnr/ppp2ppp/2n5/3p4/3PPp1q/2N5/PPP1K1PP/R1BQ1BNR w kq - 0 6": [
-    "C25",
-    "Vienna Gambit: Max Lange Defense, Steinitz Gambit, Zukertort Defense"
-  ],
   "rnbqkbnr/pppp1ppp/8/4p3/4P3/2N5/PPPP1PPP/R1BQKBNR b KQkq - 0 2": [
     "C25",
     "Vienna Game"
@@ -24194,6 +24134,66 @@
   "r1b1k1nr/pppp1ppp/2n2q2/2bNp3/2B1P1Q1/8/PPPP1PPP/R1B1K1NR b KQkq - 7 5": [
     "C25",
     "Vienna Game: Stanley Variation, Meitner-Mieses Gambit"
+  ],
+  "r1bqkbnr/pppp1ppp/2n5/4p3/4PP2/2N5/PPPP2PP/R1BQKBNR b KQkq - 0 3": [
+    "C25",
+    "Vienna Game: Vienna Gambit, Max Lange Defense"
+  ],
+  "r1bqk1nr/ppppbppp/2n5/8/4Pp2/2N2N2/PPPP2PP/R1BQKB1R w KQkq - 2 5": [
+    "C25",
+    "Vienna Game: Vienna Gambit, Max Lange Defense, Cunningham Defense"
+  ],
+  "r1bqkbnr/pppp1p1p/2n5/6N1/4PppP/2N5/PPPP2P1/R1BQKB1R b KQkq - 1 6": [
+    "C25",
+    "Vienna Game: Vienna Gambit, Max Lange Defense, Hamppe-Allgaier Gambit"
+  ],
+  "r1bqkbnr/ppp2p1p/2np4/6N1/4PppP/2N5/PPPP2P1/R1BQKB1R w KQkq - 0 7": [
+    "C25",
+    "Vienna Game: Vienna Gambit, Max Lange Defense, Hamppe-Allgaier Gambit, Alapin Variation"
+  ],
+  "r1bq1bnr/pppp1k2/2n4p/8/3PPppP/2N5/PPP3P1/R1BQKB1R b KQ - 0 8": [
+    "C25",
+    "Vienna Game: Vienna Gambit, Max Lange Defense, Hamppe-Allgaier Gambit, Thorold Variation"
+  ],
+  "r1bqkbnr/pppp1p1p/2n5/8/2B1Pp2/2N2p2/PPPP2PP/R1BQ1RK1 w kq - 0 7": [
+    "C25",
+    "Vienna Game: Vienna Gambit, Max Lange Defense, Hamppe-Muzio Gambit"
+  ],
+  "r1bqkbnr/pppp1ppp/2n5/8/4Pp2/2N2N2/PPPP2PP/R1BQKB1R b KQkq - 1 4": [
+    "C25",
+    "Vienna Game: Vienna Gambit, Max Lange Defense, Knight Variation"
+  ],
+  "r1bqkbnr/pppp1p1p/2n5/6p1/3PPp2/2N2N2/PPP3PP/R1BQKB1R b KQkq - 0 5": [
+    "C25",
+    "Vienna Game: Vienna Gambit, Max Lange Defense, Pierce Gambit"
+  ],
+  "r1bqk1nr/ppp2ppp/2np4/2b1P3/4P3/2N5/PPPP2PP/R1BQKBNR w KQkq - 0 5": [
+    "C25",
+    "Vienna Game: Vienna Gambit, Max Lange Defense, Quelle Gambit"
+  ],
+  "r1bqkbnr/pppp1ppp/2n5/8/3PPp2/2N5/PPP3PP/R1BQKBNR b KQkq - 0 4": [
+    "C25",
+    "Vienna Game: Vienna Gambit, Max Lange Defense, Steinitz Gambit"
+  ],
+  "r1b1kbnr/p1pp1ppp/1pn5/8/3PPp1q/2N5/PPP1K1PP/R1BQ1BNR w kq - 0 6": [
+    "C25",
+    "Vienna Game: Vienna Gambit, Max Lange Defense, Steinitz Gambit, Fraser-Minckwitz Defense"
+  ],
+  "r1b1kbnr/pppp1ppp/2n5/8/3PPp1q/2N5/PPP1K1PP/R1BQ1BNR b kq - 2 5": [
+    "C25",
+    "Vienna Game: Vienna Gambit, Max Lange Defense, Steinitz Gambit, Main Line"
+  ],
+  "r1b1kbnr/ppp2ppp/2np4/8/3PPp1q/2N5/PPP1K1PP/R1BQ1BNR w kq - 0 6": [
+    "C25",
+    "Vienna Game: Vienna Gambit, Max Lange Defense, Steinitz Gambit, Paulsen Defense"
+  ],
+  "r1b1kbnr/pppp1p1p/2n5/6p1/3PPp1q/2N5/PPP1K1PP/R1BQ1BNR w kq - 0 6": [
+    "C25",
+    "Vienna Game: Vienna Gambit, Max Lange Defense, Steinitz Gambit, Sörensen Defense"
+  ],
+  "r1b1kbnr/ppp2ppp/2n5/3p4/3PPp1q/2N5/PPP1K1PP/R1BQ1BNR w kq - 0 6": [
+    "C25",
+    "Vienna Game: Vienna Gambit, Max Lange Defense, Steinitz Gambit, Zukertort Defense"
   ],
   "rnbqk1nr/pppp1ppp/8/4p3/1b2P1Q1/2N5/PPPP1PPP/R1B1KBNR b KQkq - 3 3": [
     "C25",
@@ -24463,86 +24463,6 @@
     "C28",
     "Vienna Game: Stanley Variation, Three Knights Variation"
   ],
-  "rnbqkb1r/ppp2ppp/5n2/3Pp3/5P2/2N5/PPPP2PP/R1BQKBNR b KQkq - 0 4": [
-    "C29",
-    "Vienna Gambit: 3...d5 4.exd5"
-  ],
-  "rnbqkb1r/ppp2ppp/5n2/3P4/5p2/2N5/PPPP2PP/R1BQKBNR w KQkq - 0 5": [
-    "C29",
-    "Vienna Gambit: 3...d5 4.exd5 exf4"
-  ],
-  "rnbqkb1r/ppp2ppp/3p1n2/4p3/4PP2/2N5/PPPP2PP/R1BQKBNR w KQkq - 0 4": [
-    "C29",
-    "Vienna Gambit: 3...d6"
-  ],
-  "rnbqkb1r/ppp2ppp/3p1n2/4p3/4PP2/2N2N2/PPPP2PP/R1BQKB1R b KQkq - 1 4": [
-    "C29",
-    "Vienna Gambit: 3...d6 4.Nf3"
-  ],
-  "rnbqkb1r/pppp1ppp/5n2/8/4Pp2/2N5/PPPP2PP/R1BQKBNR w KQkq - 0 4": [
-    "C29",
-    "Vienna Gambit: 3...exf4"
-  ],
-  "rnbqkb1r/ppp2ppp/5n2/3pP3/4P3/2N5/PPPP2PP/R1BQKBNR b KQkq - 0 4": [
-    "C29",
-    "Vienna Gambit: 4.fxe5"
-  ],
-  "rnbqkb1r/ppp2ppp/8/3pP3/4n3/2N5/PPPP2PP/R1BQKBNR w KQkq - 0 5": [
-    "C29",
-    "Vienna Gambit: 4.fxe5"
-  ],
-  "rnbqkb1r/ppp2ppp/8/3pP3/4n3/2N2N2/PPPP2PP/R1BQKB1R b KQkq - 1 5": [
-    "C29",
-    "Vienna Gambit: 5.Nf3"
-  ],
-  "rnbqk2r/ppp2ppp/8/3pP3/1b2n3/2N2N2/PPPP2PP/R1BQKB1R w KQkq - 2 6": [
-    "C29",
-    "Vienna Gambit: 5.Nf3 Bb4"
-  ],
-  "rn1qkb1r/ppp2ppp/8/3pP3/4n1b1/2N2N2/PPPP2PP/R1BQKB1R w KQkq - 2 6": [
-    "C29",
-    "Vienna Gambit: 5.Nf3 Bg4"
-  ],
-  "r1bqkb1r/ppp2ppp/2n5/3pP3/4n3/2N2N2/PPPP2PP/R1BQKB1R w KQkq - 2 6": [
-    "C29",
-    "Vienna Gambit: 5.Nf3 Nc6"
-  ],
-  "rnbqk2r/ppp1bppp/8/3pP3/4n3/2N2N2/PPPPQ1PP/R1B1KB1R b KQkq - 3 6": [
-    "C29",
-    "Vienna Gambit: Breyer Variation, 6.Qe2"
-  ],
-  "rnbqk2r/ppp1bppp/8/3pP3/8/2n2N2/PPPPQ1PP/R1B1KB1R w KQkq - 0 7": [
-    "C29",
-    "Vienna Gambit: Breyer Variation, 6.Qe2 Nxc3"
-  ],
-  "rnbqk2r/ppp1bppp/8/3pP3/8/2P2N2/PPP1Q1PP/R1B1KB1R b KQkq - 0 7": [
-    "C29",
-    "Vienna Gambit: Breyer Variation, 6.Qe2 Nxc3 7.dxc3"
-  ],
-  "rnbqk2r/ppp2ppp/8/3pP3/1b2n3/2NP4/PPP3PP/R1BQKBNR w KQkq - 1 6": [
-    "C29",
-    "Vienna Gambit: Oxford Variation, 5...Bb4"
-  ],
-  "rnb1k2r/ppp2ppp/8/3pP3/1b2P2q/2N5/PPP1K1PP/R1BQ1BNR b kq - 2 7": [
-    "C29",
-    "Vienna Gambit: Oxford Variation, 5...Bb4 6.dxe4 Qh4+ 7.Ke2"
-  ],
-  "rnbqkb1r/ppp2ppp/8/3pP3/8/2nP4/PPP3PP/R1BQKBNR w KQkq - 0 6": [
-    "C29",
-    "Vienna Gambit: Oxford Variation, 5...Nxc3"
-  ],
-  "rnbqkb1r/ppp2ppp/8/4P3/3p4/2PP4/P1P3PP/R1BQKBNR w KQkq - 0 7": [
-    "C29",
-    "Vienna Gambit: Oxford Variation, 5...Nxc3 6.bxc3 d4"
-  ],
-  "r1bqkb1r/ppp2ppp/2n5/3pP3/4n3/2N2Q2/PPPP2PP/R1B1KBNR w KQkq - 2 6": [
-    "C29",
-    "Vienna Gambit: Paulsen Attack, 5...Nc6"
-  ],
-  "rnbqkb1r/ppp2ppp/8/3pP3/8/2n2Q2/PPPP2PP/R1B1KBNR w KQkq - 0 6": [
-    "C29",
-    "Vienna Gambit: Paulsen Attack, 5...Nxc3"
-  ],
   "rnbqkb1r/ppp3pp/8/3pPp2/3Pn3/2N2Q2/PPP3PP/R1B1KBNR b KQkq - 0 6": [
     "C29",
     "Vienna Game: Heyde Variation"
@@ -24551,6 +24471,50 @@
     "C29",
     "Vienna Game: Vienna Gambit"
   ],
+  "rnbqkb1r/ppp2ppp/5n2/3Pp3/5P2/2N5/PPPP2PP/R1BQKBNR b KQkq - 0 4": [
+    "C29",
+    "Vienna Game: Vienna Gambit, 3...d5 4.exd5"
+  ],
+  "rnbqkb1r/ppp2ppp/5n2/3P4/5p2/2N5/PPPP2PP/R1BQKBNR w KQkq - 0 5": [
+    "C29",
+    "Vienna Game: Vienna Gambit, 3...d5 4.exd5 exf4"
+  ],
+  "rnbqkb1r/ppp2ppp/3p1n2/4p3/4PP2/2N5/PPPP2PP/R1BQKBNR w KQkq - 0 4": [
+    "C29",
+    "Vienna Game: Vienna Gambit, 3...d6"
+  ],
+  "rnbqkb1r/ppp2ppp/3p1n2/4p3/4PP2/2N2N2/PPPP2PP/R1BQKB1R b KQkq - 1 4": [
+    "C29",
+    "Vienna Game: Vienna Gambit, 3...d6 4.Nf3"
+  ],
+  "rnbqkb1r/pppp1ppp/5n2/8/4Pp2/2N5/PPPP2PP/R1BQKBNR w KQkq - 0 4": [
+    "C29",
+    "Vienna Game: Vienna Gambit, 3...exf4"
+  ],
+  "rnbqkb1r/ppp2ppp/5n2/3pP3/4P3/2N5/PPPP2PP/R1BQKBNR b KQkq - 0 4": [
+    "C29",
+    "Vienna Game: Vienna Gambit, 4.fxe5"
+  ],
+  "rnbqkb1r/ppp2ppp/8/3pP3/4n3/2N5/PPPP2PP/R1BQKBNR w KQkq - 0 5": [
+    "C29",
+    "Vienna Game: Vienna Gambit, 4.fxe5"
+  ],
+  "rnbqkb1r/ppp2ppp/8/3pP3/4n3/2N2N2/PPPP2PP/R1BQKB1R b KQkq - 1 5": [
+    "C29",
+    "Vienna Game: Vienna Gambit, 5.Nf3"
+  ],
+  "rnbqk2r/ppp2ppp/8/3pP3/1b2n3/2N2N2/PPPP2PP/R1BQKB1R w KQkq - 2 6": [
+    "C29",
+    "Vienna Game: Vienna Gambit, 5.Nf3 Bb4"
+  ],
+  "rn1qkb1r/ppp2ppp/8/3pP3/4n1b1/2N2N2/PPPP2PP/R1BQKB1R w KQkq - 2 6": [
+    "C29",
+    "Vienna Game: Vienna Gambit, 5.Nf3 Bg4"
+  ],
+  "r1bqkb1r/ppp2ppp/2n5/3pP3/4n3/2N2N2/PPPP2PP/R1BQKB1R w KQkq - 2 6": [
+    "C29",
+    "Vienna Game: Vienna Gambit, 5.Nf3 Nc6"
+  ],
   "rnbqkb1r/ppp3pp/8/3pPp2/4n3/2N2Q2/PPPP2PP/R1B1KBNR w KQkq f6 0 6": [
     "C29",
     "Vienna Game: Vienna Gambit, Bardeleben Variation"
@@ -24558,6 +24522,18 @@
   "rnbqk2r/ppp1bppp/8/3pP3/4n3/2N2N2/PPPP2PP/R1BQKB1R w KQkq - 2 6": [
     "C29",
     "Vienna Game: Vienna Gambit, Breyer Variation"
+  ],
+  "rnbqk2r/ppp1bppp/8/3pP3/4n3/2N2N2/PPPPQ1PP/R1B1KB1R b KQkq - 3 6": [
+    "C29",
+    "Vienna Game: Vienna Gambit, Breyer Variation, 6.Qe2"
+  ],
+  "rnbqk2r/ppp1bppp/8/3pP3/8/2n2N2/PPPPQ1PP/R1B1KB1R w KQkq - 0 7": [
+    "C29",
+    "Vienna Game: Vienna Gambit, Breyer Variation, 6.Qe2 Nxc3"
+  ],
+  "rnbqk2r/ppp1bppp/8/3pP3/8/2P2N2/PPP1Q1PP/R1B1KB1R b KQkq - 0 7": [
+    "C29",
+    "Vienna Game: Vienna Gambit, Breyer Variation, 6.Qe2 Nxc3 7.dxc3"
   ],
   "rn1qkb1r/ppp2ppp/8/3pP3/4n1b1/2N2N2/PPPPQ1PP/R1B1KB1R b KQkq - 3 6": [
     "C29",
@@ -24571,9 +24547,33 @@
     "C29",
     "Vienna Game: Vienna Gambit, Modern Variation"
   ],
+  "rnbqk2r/ppp2ppp/8/3pP3/1b2n3/2NP4/PPP3PP/R1BQKBNR w KQkq - 1 6": [
+    "C29",
+    "Vienna Game: Vienna Gambit, Oxford Variation, 5...Bb4"
+  ],
+  "rnb1k2r/ppp2ppp/8/3pP3/1b2P2q/2N5/PPP1K1PP/R1BQ1BNR b kq - 2 7": [
+    "C29",
+    "Vienna Game: Vienna Gambit, Oxford Variation, 5...Bb4 6.dxe4 Qh4+ 7.Ke2"
+  ],
+  "rnbqkb1r/ppp2ppp/8/3pP3/8/2nP4/PPP3PP/R1BQKBNR w KQkq - 0 6": [
+    "C29",
+    "Vienna Game: Vienna Gambit, Oxford Variation, 5...Nxc3"
+  ],
+  "rnbqkb1r/ppp2ppp/8/4P3/3p4/2PP4/P1P3PP/R1BQKBNR w KQkq - 0 7": [
+    "C29",
+    "Vienna Game: Vienna Gambit, Oxford Variation, 5...Nxc3 6.bxc3 d4"
+  ],
   "rnbqkb1r/ppp2ppp/8/3pP3/4n3/2N2Q2/PPPP2PP/R1B1KBNR b KQkq - 1 5": [
     "C29",
     "Vienna Game: Vienna Gambit, Paulsen Attack"
+  ],
+  "r1bqkb1r/ppp2ppp/2n5/3pP3/4n3/2N2Q2/PPPP2PP/R1B1KBNR w KQkq - 2 6": [
+    "C29",
+    "Vienna Game: Vienna Gambit, Paulsen Attack, 5...Nc6"
+  ],
+  "rnbqkb1r/ppp2ppp/8/3pP3/8/2n2Q2/PPPP2PP/R1B1KBNR w KQkq - 0 6": [
+    "C29",
+    "Vienna Game: Vienna Gambit, Paulsen Attack, 5...Nxc3"
   ],
   "rnbqkb1r/ppp2ppp/5n2/3pp3/4PP2/2NP4/PPP3PP/R1BQKBNR b KQkq - 0 4": [
     "C29",
