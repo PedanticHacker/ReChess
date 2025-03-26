@@ -168,11 +168,10 @@ QToolBar {
 }
 
 QToolTip {
-  background-color: #351d4d;
   border: 1px solid #6b35b0;
   border-radius: 4px;
-  color: #e2d4f5;
-  padding: 6px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 SvgBoard {

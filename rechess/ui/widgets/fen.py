@@ -34,10 +34,10 @@ class FenEdit(QLineEdit):
 
     @Slot(str)
     def show_tooltip(self, fen: str) -> None:
-        """Show tooltip if `fen` exceeds editor's width."""
+        """Show whole FEN in tooltip if `fen` exceeds editor's width."""
         fen_width = self.fontMetrics().horizontalAdvance(fen)
 
-        if fen_width > self.width():
+        if fen_width >= self.width():
             self.setToolTip(fen)
         else:
             self.setToolTip("")
