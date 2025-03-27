@@ -170,6 +170,7 @@ QToolBar {
 QToolTip {
   border: 1px solid #b375e7;
   border-radius: 4px;
+  color: #3a1066;
   font-size: 15px;
   font-weight: bold;
 }
