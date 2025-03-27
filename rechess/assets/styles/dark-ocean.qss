@@ -168,6 +168,7 @@ QToolBar {
 }
 
 QToolTip {
+  background-color: #344d69;
   border: 1px solid #385f80;
   border-radius: 4px;
   color: #c5d9e8;
