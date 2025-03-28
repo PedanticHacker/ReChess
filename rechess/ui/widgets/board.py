@@ -169,11 +169,11 @@ class SvgBoard(QSvgWidget):
 
     def piece_can_be_dragged(self) -> bool:
         """Return True if conditions allow for piece to be dragged."""
-        return (
+        return bool(
             self.is_dragging
-            and self.dragged_piece is not None
-            and self.dragging_from_x is not None
-            and self.dragging_from_y is not None
+            and self.dragged_piece
+            and self.dragging_from_x
+            and self.dragging_from_y
         )
 
     def piece_at(self, square: Square) -> Piece | None:
@@ -182,7 +182,7 @@ class SvgBoard(QSvgWidget):
 
     def can_drag_piece(self, piece: Piece | None) -> bool:
         """Return True if `piece` can be dragged based on turn."""
-        return (piece is not None) and (piece.color == self._game.turn)
+        return bool(piece and piece.color == self._game.turn)
 
     def fen(self) -> str:
         """Get FEN representation of current board setup."""
@@ -236,7 +236,11 @@ class SvgBoard(QSvgWidget):
         self.load(board_svg)
         super().paintEvent(event)
 
-        if self.piece_can_be_dragged():
+        if (
+            self.piece_can_be_dragged()
+            and self.dragging_from_x
+            and self.dragging_from_y
+        ):
             self._renderer.render_piece(self.dragging_from_x, self.dragging_from_y)
         elif self._animator.is_animating:
             animated_piece: Piece | None = self._animator.dragged_piece
@@ -329,12 +333,10 @@ class BoardRenderer:
 
     def is_dragging_with_animatable_board(self) -> bool:
         """Return True if piece dragged and animatable board exists."""
-        return (
-            self._svg_board.is_dragging and self._svg_board.animatable_board is not None
-        )
+        return bool(self._svg_board.is_dragging and self._svg_board.animatable_board)
 
     def is_piece_animating(self) -> bool:
-        """Return True if a piece animation is currently in progress."""
+        """Return True if piece animation is currently in progress."""
         return self._svg_board._animator.is_animating
 
     def determine_board_to_render(self) -> Board:
@@ -398,7 +400,7 @@ class BoardRenderer:
         )
         piece_to_render: Piece | None = available_piece or dragged_piece
 
-        if piece_to_render is None:
+        if not piece_to_render:
             return
 
         painter: QPainter = QPainter(self._svg_board)
@@ -437,10 +439,7 @@ class BoardInteractor:
         """Convert `x` and `y` coordinates to square index."""
         current_position: tuple[float, float] = (x, y)
 
-        if (
-            self._last_cursor_position == current_position
-            and self._last_square_index is not None
-        ):
+        if self._last_cursor_position == current_position and self._last_square_index:
             return self._last_square_index
 
         file, rank = self._svg_board.locate_file_and_rank(x, y)
@@ -455,7 +454,7 @@ class BoardInteractor:
         """Set cursor shape based on square index from `x` and `y`."""
         square_index: Square | None = self.square_index(x, y)
 
-        if square_index is not None:
+        if square_index:
             piece: Piece | None = self._svg_board.piece_at(square_index)
 
             if self._svg_board.can_drag_piece(piece):
@@ -513,11 +512,12 @@ class BoardInteractor:
         self._svg_board.is_dragging = False
         self._svg_board.setCursor(Qt.CursorShape.ArrowCursor)
 
-        self._svg_board._animator.start_return_animation(
-            dragged_piece=self._svg_board.dragged_piece,
-            origin_square=self._svg_board.origin_square,
-            position=QPointF(x, y),
-        )
+        if self._svg_board.origin_square and self._svg_board.dragged_piece:
+            self._svg_board._animator.start_return_animation(
+                position=QPointF(x, y),
+                origin_square=self._svg_board.origin_square,
+                dragged_piece=self._svg_board.dragged_piece,
+            )
 
     def handle_mouse_press(self, event: QMouseEvent) -> None:
         """Handle mouse press for piece selection or targeting."""
@@ -528,10 +528,10 @@ class BoardInteractor:
         y: float = event.position().y()
         square_index: Square | None = self.square_index(x, y)
 
-        if square_index is not None:
+        if square_index:
             piece: Piece | None = self._svg_board.piece_at(square_index)
 
-            if self._svg_board.can_drag_piece(piece):
+            if piece and self._svg_board.can_drag_piece(piece):
                 self.start_dragging(square_index, piece, x, y)
                 return
 
@@ -557,14 +557,17 @@ class BoardInteractor:
         if self._svg_board._animator.is_animating:
             return
 
-        if not self._svg_board.is_dragging or self._svg_board.origin_square is None:
+        if not self._svg_board.origin_square:
+            return
+
+        if not self._svg_board.is_dragging:
             return
 
         x: float = event.position().x()
         y: float = event.position().y()
         square_index: Square | None = self.square_index(x, y)
 
-        if square_index is not None and self.is_valid_move(square_index):
+        if square_index and self.is_valid_move(square_index):
             self.make_move(square_index)
         else:
             self.cancel_move(x, y)
