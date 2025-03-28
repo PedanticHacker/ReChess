@@ -144,7 +144,7 @@ class SvgBoard(QSvgWidget):
         return BoardCacheKey(
             arrows=tuple(self._game.arrow),
             colors=self._renderer.hashable_board_colors(),
-            fen=self.fen(),
+            fen=self._game.fen,
             is_animating=self._animator.is_animating,
             is_white_at_bottom=self.is_white_at_bottom,
             king_in_check=self._game.king_in_check,
@@ -183,10 +183,6 @@ class SvgBoard(QSvgWidget):
     def can_drag_piece(self, piece: Piece | None) -> bool:
         """Return True if `piece` can be dragged based on turn."""
         return bool(piece and piece.color == self._game.turn)
-
-    def fen(self) -> str:
-        """Get FEN representation of current board setup."""
-        return self._game.fen
 
     def set_origin_square(self, square: Square) -> None:
         """Set `square` as origin for move."""
@@ -246,7 +242,7 @@ class SvgBoard(QSvgWidget):
             animated_piece: Piece | None = self._animator.dragged_piece
             animation_position: QPointF = self._animator._position
 
-            if animated_piece and animation_position:
+            if animation_position and animated_piece:
                 self._renderer.render_piece(
                     animation_position.x(),
                     animation_position.y(),
@@ -303,9 +299,9 @@ class PieceAnimator(QObject):
 
     def start_return_animation(
         self,
-        dragged_piece: Piece,
-        origin_square: Square,
         position: QPointF,
+        origin_square: Square,
+        dragged_piece: Piece,
     ) -> None:
         """Start animation to return piece to origin square."""
         self.is_animating = True
