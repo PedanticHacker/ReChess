@@ -29,12 +29,12 @@ SQUARE_SIZE: Final[float] = 70.0
 class SoundEffectFileUrl(EnumDict):
     """File URL enum for sound effects of various game events."""
 
+    GameOver = QUrl("file:rechess/assets/audio/game-over.wav")
+    Check = QUrl("file:rechess/assets/audio/check.wav")
+    Promotion = QUrl("file:rechess/assets/audio/promotion.wav")
     Capture = QUrl("file:rechess/assets/audio/capture.wav")
     Castling = QUrl("file:rechess/assets/audio/castling.wav")
-    Check = QUrl("file:rechess/assets/audio/check.wav")
-    GameOver = QUrl("file:rechess/assets/audio/game-over.wav")
     Move = QUrl("file:rechess/assets/audio/move.wav")
-    Promotion = QUrl("file:rechess/assets/audio/promotion.wav")
 
 
 class Game(QObject):
@@ -59,12 +59,12 @@ class Game(QObject):
     def _preload_sound_effects(self) -> None:
         """Preload all sound effects during initialization."""
         for sound_effect_type in [
+            "GameOver",
+            "Check",
+            "Promotion",
             "Capture",
             "Castling",
-            "Check",
-            "GameOver",
             "Move",
-            "Promotion",
         ]:
             sound_effect: QSoundEffect = QSoundEffect(self)
             sound_effect.setSource(getattr(SoundEffectFileUrl, sound_effect_type))
