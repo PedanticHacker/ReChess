@@ -1,11 +1,11 @@
-NOTICE
+THIRD-PARTY SOFTWARE NOTICE
 
 ReChess incorporates the following third-party software:
 
-Stockfish chess engine version 17:
+Stockfish chess engine version 17.1:
 - Using binary executable files for Windows, Linux, and macOS platforms
 - Official website: https://stockfishchess.org
-- Source code download: https://github.com/official-stockfish/Stockfish/archive/refs/tags/sf_17.zip
+- Source code download: https://github.com/official-stockfish/Stockfish/archive/refs/tags/sf_17.1.zip
 
 Stockfish is licensed under the GNU General Public License v3.0 (GPLv3).
 

@@ -10,11 +10,11 @@ Here's what you need to do:
 
 1. Make sure you have Python 3.13 installed. If not, read below:
 
-    - For Windows, :point_right: [click here to download Python 3.13 installer](https://www.python.org/ftp/python/3.13.1/python-3.13.1-amd64.exe) :point_left:
+    - For Windows, :point_right: [click here to download Python 3.13 installer](https://www.python.org/ftp/python/3.13.2/python-3.13.2-amd64.exe) :point_left:
     - For Linux, execute `sudo apt-get install python3.13` in the
       terminal or execute a command applicable for the package manager
-      of your distro
-    - For macOS, :point_right: [click here to download Python 3.13 installer](https://www.python.org/ftp/python/3.13.1/python-3.13.1-macos11.pkg) :point_left:
+      of your Linux distribution
+    - For macOS, :point_right: [click here to download Python 3.13 installer](https://www.python.org/ftp/python/3.13.2/python-3.13.2-macos11.pkg) :point_left:
 
 2. Install required packages by executing this command in the terminal
    from within ReChess's top-level directory:
@@ -36,8 +36,9 @@ python main.py
 
 4. Start playing by doing this:
 
-    - Click a piece to see its legal moves.
-    - Click a legal square to make your move.
+    - Start dragging a piece to see its legal target squares.
+    - Drag the piece to a legal target square and drop it there to make
+      your move.
     - Use the Settings button to customize your experience.
 
 ## In what programming language is ReChess written?
@@ -119,7 +120,7 @@ The following screenshots show how ReChess looks in **Dark mint** style.
 *Selecting a move from the table view.*
 
 ![Position analysis](https://github.com/user-attachments/assets/a7d3137a-fe5c-404a-bc3d-f0dbe76259be "Position analysis")
-*Analyzing a position with the default Stockfish 17 engine.*
+*Analyzing a chessboard position for the best move.*
 
 ![Pawn promotion](https://github.com/user-attachments/assets/9c922ee8-2633-49ca-9f04-7ec2c1ebcb14 "Pawn promotion")
 *Promoting a white pawn to a queen, a rook, a bishop, or a knight.*

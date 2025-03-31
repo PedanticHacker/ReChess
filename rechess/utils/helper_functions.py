@@ -18,8 +18,8 @@ from PySide6.QtWidgets import QApplication, QMessageBox, QPushButton
 def path_to_stockfish() -> str:
     """Get path to executable file of Stockfish 17 engine."""
     system: str = platform.system()
-    suffix: str = ".exe" if system == "Windows" else ""
-    return f"rechess/assets/engines/stockfish-17/{system}/stockfish{suffix}"
+    extension: str = ".exe" if system == "Windows" else ""
+    return f"rechess/assets/engines/stockfish-17.1/{system}/stockfish{extension}"
 
 
 def engine_file_filter() -> str:
@@ -93,8 +93,8 @@ def find_opening(fen: str) -> list[str] | None:
     return _load_openings().get(fen)
 
 
-def style_name(filename: str) -> str:
-    """Get human-readable style name based on `filename`."""
+def style_name(file_name: str) -> str:
+    """Get human-readable style name from `file_name`."""
     styles: dict[str, str] = {
         "dark-forest": "Dark forest",
         "dark-mint": "Dark mint",
@@ -105,7 +105,7 @@ def style_name(filename: str) -> str:
         "light-nebula": "Light nebula",
         "light-ocean": "Light ocean",
     }
-    return styles[filename]
+    return styles[file_name]
 
 
 def show_warning(parent: MainWindow) -> None:
@@ -155,6 +155,6 @@ def colorize_icon(color: str) -> QIcon:
     return QIcon(pixmap)
 
 
-def svg_icon(filename: str) -> QIcon:
-    """Get SVG icon from file at `filename`."""
-    return QIcon(f":/icons/{filename}.svg")
+def svg_icon(file_name: str) -> QIcon:
+    """Get SVG icon from SVG file at `file_name`."""
+    return QIcon(f":/icons/{file_name}.svg")

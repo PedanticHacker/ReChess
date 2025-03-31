@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from contextlib import suppress
-from enum import EnumDict
 from typing import ClassVar, Final, Iterator
 
 from chess import (
@@ -26,17 +25,6 @@ BOARD_MARGIN: Final[float] = 20.0
 SQUARE_SIZE: Final[float] = 70.0
 
 
-class SoundEffectFileUrl(EnumDict):
-    """File URL enum for sound effects of various game events."""
-
-    GameOver = QUrl("file:rechess/assets/audio/game-over.wav")
-    Check = QUrl("file:rechess/assets/audio/check.wav")
-    Promotion = QUrl("file:rechess/assets/audio/promotion.wav")
-    Capture = QUrl("file:rechess/assets/audio/capture.wav")
-    Castling = QUrl("file:rechess/assets/audio/castling.wav")
-    Move = QUrl("file:rechess/assets/audio/move.wav")
-
-
 class Game(QObject):
     """Management for game state, moves, events, and UI interaction."""
 
@@ -55,20 +43,6 @@ class Game(QObject):
         self._preload_sound_effects()
 
         self.reset_selected_squares()
-
-    def _preload_sound_effects(self) -> None:
-        """Preload all sound effects during initialization."""
-        for sound_effect_type in [
-            "GameOver",
-            "Check",
-            "Promotion",
-            "Capture",
-            "Castling",
-            "Move",
-        ]:
-            sound_effect: QSoundEffect = QSoundEffect(self)
-            sound_effect.setSource(getattr(SoundEffectFileUrl, sound_effect_type))
-            self._sound_effects[sound_effect_type] = sound_effect
 
     @property
     def fen(self) -> str:
@@ -114,6 +88,40 @@ class Game(QObject):
         """Return True if White is on turn."""
         return self.board.turn
 
+    def _preload_sound_effects(self) -> None:
+        """Preload all sound effects during initialization."""
+        file_names: tuple[str, ...] = (
+            "game-over",
+            "check",
+            "promotion",
+            "capture",
+            "castling",
+            "move",
+        )
+        for file_name in file_names:
+            file_url: QUrl = QUrl(f"file:rechess/assets/audio/{file_name}.wav")
+            sound_effect: QSoundEffect = QSoundEffect(self)
+            sound_effect.setSource(file_url)
+            self._sound_effects[file_name] = sound_effect
+
+    def _sound_effect_name(self, move: Move) -> str:
+        """Get sound effect name based on `move`."""
+        if self.is_over_after(move):
+            return "game-over"
+        if self.is_check(move):
+            return "check"
+        if move.promotion:
+            return "promotion"
+        if self.board.is_capture(move):
+            return "capture"
+        if self.board.is_castling(move):
+            return "castling"
+        return "move"
+
+    def play_sound_effect(self, move: Move) -> None:
+        """Play sound effect for `move`."""
+        self._sound_effects[self._sound_effect_name(move)].play()
+
     def reset_selected_squares(self) -> None:
         """Reset origin and target squares."""
         self.origin_square: Square | None = None
@@ -156,26 +164,6 @@ class Game(QObject):
     def clear_arrow(self) -> None:
         """Clear arrow marker from board."""
         self.arrow.clear()
-
-    def _determine_sound_effect(self, move: Move) -> str:
-        """Determine appropriate sound effect for `move`."""
-        if self.is_over_after(move):
-            return "GameOver"
-        elif self.is_check(move):
-            return "Check"
-        elif move.promotion:
-            return "Promotion"
-        elif self.board.is_capture(move):
-            return "Capture"
-        elif self.board.is_castling(move):
-            return "Castling"
-        else:
-            return "Move"
-
-    def play_sound_effect(self, move: Move) -> None:
-        """Play sound effect for `move`."""
-        sound_effect: str = self._determine_sound_effect(move)
-        self._sound_effects[sound_effect].play()
 
     def set_root_position(self) -> None:
         """Reset pieces on board to initial position."""

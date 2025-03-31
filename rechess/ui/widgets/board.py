@@ -201,8 +201,8 @@ class SvgBoard(QSvgWidget):
         self._game.to_square = square
 
     def legal_targets(self) -> list[Square] | None:
-        """Get legal target squares."""
-        return self._game.legal_moves
+        """Get target squares considered as legal moves for piece."""
+        return self._game.legal_targets
 
     def start_piece_return_animation(self, cursor_point: QPointF) -> None:
         """Start animation to return dragged piece to origin square."""
@@ -213,9 +213,9 @@ class SvgBoard(QSvgWidget):
                 dragged_piece=self.dragged_piece,
             )
 
-    def find_move(self, origin_square: Square, target_square: Square) -> None:
+    def find_legal_move(self, origin_square: Square, target_square: Square) -> None:
         """Find legal move for `origin_square` and `target_square`."""
-        self._game.find_move(origin_square, target_square)
+        self._game.find_legal_move(origin_square, target_square)
 
     def reset_selected_squares(self) -> None:
         """Reset currently selected origin and target squares."""
@@ -494,7 +494,7 @@ class BoardInteractor:
     def make_move(self, target_square: Square) -> None:
         """Make move and update game state."""
         self._svg_board.set_target_square(target_square)
-        self._svg_board.find_move(self._svg_board.origin_square, target_square)
+        self._svg_board.find_legal_move(self._svg_board.origin_square, target_square)
 
         self.reset_dragging_state()
         self._svg_board.reset_selected_squares()
