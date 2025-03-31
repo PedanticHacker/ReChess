@@ -14,7 +14,7 @@ from chess import (
     Square,
     square,
 )
-from PySide6.QtCore import QObject, QUrl, Signal
+from PySide6.QtCore import QObject, QPoint, QUrl, Signal
 from PySide6.QtMultimedia import QSoundEffect
 from PySide6.QtWidgets import QDialog
 
@@ -54,7 +54,7 @@ class Game(QObject):
         self._sound_effects: dict[str, QSoundEffect] = {}
         self._preload_sound_effects()
 
-        self.reset_squares()
+        self.reset_selected_squares()
 
     def _preload_sound_effects(self) -> None:
         """Preload all sound effects during initialization."""
@@ -82,21 +82,21 @@ class Game(QObject):
         self._initialize_state()
 
     @property
-    def king_in_check(self) -> Square | None:
-        """Get square of king in check."""
+    def checked_king_square(self) -> Square | None:
+        """Get square of checked king."""
         if self.board.is_check():
             return self.board.king(self.board.turn)
         return None
 
     @property
-    def legal_moves(self) -> list[Square] | None:
-        """Get target squares for piece that would make legal move."""
-        if self.from_square == -1:
+    def legal_targets(self) -> list[Square] | None:
+        """Get target squares considered as legal moves for piece."""
+        if not self.origin_square:
             return None
 
-        square: Square = BB_SQUARES[self.from_square]
-        legal_moves: Iterator[Move] = self.board.generate_legal_moves(square)
-        return [move.to_square for move in legal_moves]
+        square: Square = BB_SQUARES[self.origin_square]
+        legal_targets: Iterator[Move] = self.board.generate_legal_moves(square)
+        return [move.to_square for move in legal_targets]
 
     @property
     def result(self) -> str:
@@ -114,17 +114,17 @@ class Game(QObject):
         """Return True if White is on turn."""
         return self.board.turn
 
-    def reset_squares(self) -> None:
+    def reset_selected_squares(self) -> None:
         """Reset origin and target squares."""
-        self.from_square: Square = -1
-        self.to_square: Square = -1
+        self.origin_square: Square | None = None
+        self.target_square: Square | None = None
 
     def _initialize_state(self) -> None:
         """Clear game history and set squares to initial value."""
         self.arrow.clear()
         self.moves.clear()
         self.positions.clear()
-        self.reset_squares()
+        self.reset_selected_squares()
 
     def prepare_new_game(self) -> None:
         """Initialize state and reset board for new game."""
@@ -181,34 +181,35 @@ class Game(QObject):
         """Reset pieces on board to initial position."""
         self.board = self.board.root()
 
-    def locate_square(self, x: float, y: float) -> None:
-        """Get square location from `x` and `y` coordinates."""
-        file, rank = self.locate_file_and_rank(x, y)
+    def select_square(self, cursor_point: QPointF) -> None:
+        """Select square based on `cursor_point`."""
+        selection_point: QPoint = self.selection_point(cursor_point)
+        selected_square: Square = square(selection_point.x(), selection_point.y())
 
-        if self.from_square == -1:
-            self.from_square = square(file, rank)
+        if not self.origin_square:
+            self.origin_square = selected_square
         else:
-            self.to_square = square(file, rank)
-            self.find_move(self.from_square, self.to_square)
-            self.reset_squares()
+            self.target_square = selected_square
+            self.find_legal_move(self.origin_square, self.target_square)
+            self.reset_selected_squares()
 
-    def locate_file_and_rank(self, x: float, y: float) -> tuple[int, int]:
-        """Get file and rank location from `x` and `y` coordinates."""
+    def selection_point(self, cursor_point: QPointF) -> QPoint:
+        """Get selection point based on `cursor_point`."""
         if setting_value("board", "orientation") == WHITE:
-            file_position: float = (x - BOARD_MARGIN) // SQUARE_SIZE
-            rank_position: float = 7 - (y - BOARD_MARGIN) // SQUARE_SIZE
+            file: float = (cursor_point.x - BOARD_MARGIN) // SQUARE_SIZE
+            rank: float = 7 - (cursor_point.y - BOARD_MARGIN) // SQUARE_SIZE
         else:
-            file_position = 7 - (x - BOARD_MARGIN) // SQUARE_SIZE
-            rank_position = (y - BOARD_MARGIN) // SQUARE_SIZE
+            file = 7 - (cursor_point.x - BOARD_MARGIN) // SQUARE_SIZE
+            rank = (cursor_point.y - BOARD_MARGIN) // SQUARE_SIZE
 
-        file_index: int = round(file_position)
-        rank_index: int = round(rank_position)
-        valid_file: int = max(0, min(7, file_index))
-        valid_rank: int = max(0, min(7, rank_index))
+        file_integer: int = round(file)
+        rank_integer: int = round(rank)
+        file_index: int = max(0, min(7, file_integer))
+        rank_index: int = max(0, min(7, rank_integer))
 
-        return valid_file, valid_rank
+        return QPoint(file_index, rank_index)
 
-    def find_move(self, origin_square: Square, target_square: Square) -> None:
+    def find_legal_move(self, origin_square: Square, target_square: Square) -> None:
         """Find legal move for `origin_square` and `target_square`."""
         with suppress(IllegalMoveError):
             move: Move = self.board.find_move(origin_square, target_square)

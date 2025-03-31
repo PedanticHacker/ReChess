@@ -35,12 +35,12 @@ svg.XX = "<circle id='xx' r='4.5' cx='22.5' cy='22.5' stroke='#303030' fill='#e5
 class BoardCacheKey(NamedTuple):
     """Type annotations of cache key for board state."""
 
-    arrows: tuple[tuple[Square, Square], ...]
     fen: str
-    is_animating: bool
-    is_white_at_bottom: bool
-    king_in_check: Square | None
-    square: Square | None
+    animation: bool
+    orientation: bool
+    piece_square: Square | None
+    checked_king_square: Square | None
+    arrows: tuple[tuple[Square, Square], ...]
 
 
 class SvgBoard(QSvgWidget):
@@ -102,7 +102,7 @@ class SvgBoard(QSvgWidget):
         self._renderer: BoardRenderer = BoardRenderer(self)
         self._interactor: BoardInteractor = BoardInteractor(self)
         self._animator: PieceAnimator = PieceAnimator(self)
-        self._animator.animation_completed.connect(self.on_animation_complete)
+        self._animator.animation_completed.connect(self.on_animation_completed)
 
         self.setMouseTracking(True)
 
@@ -141,24 +141,26 @@ class SvgBoard(QSvgWidget):
     def update_color(self, property_name: str, color_value: QColor) -> None:
         """Update color based on `property_name` and `color_value`."""
         setattr(self, property_name, color_value)
-        self._renderer.invalidate_cache()
+        self._renderer.clear_cache()
         self.update()
 
-    def cache_key(self) -> BoardCacheKey:
-        """Generate unique key for board state."""
-        dragging_from_origin_square: Square | None = (
+    def drag_origin_square(self) -> Square | None:
+        """Get origin square of dragged piece."""
+        return (
             self.origin_square
             if self.is_dragging or self._animator.is_animating
             else None
         )
 
+    def cache_key(self) -> BoardCacheKey:
+        """Generate unique key for board state."""
         return BoardCacheKey(
-            arrows=tuple(self._game.arrow),
             fen=self._game.fen,
-            is_animating=self._animator.is_animating,
-            is_white_at_bottom=self.is_white_at_bottom,
-            king_in_check=self._game.king_in_check,
-            square=dragging_from_origin_square,
+            arrows=tuple(self._game.arrow),
+            orientation=self.is_white_at_bottom,
+            animation=self._animator.is_animating,
+            piece_square=self.drag_origin_square(),
+            checked_king_square=self._game.checked_king_square,
         )
 
     def square_center(self, square: Square) -> QPointF:
@@ -202,11 +204,11 @@ class SvgBoard(QSvgWidget):
         """Get legal target squares."""
         return self._game.legal_moves
 
-    def start_piece_return_animation(self, x: float, y: float) -> None:
+    def start_piece_return_animation(self, cursor_point: QPointF) -> None:
         """Start animation to return dragged piece to origin square."""
         if self.origin_square and self.dragged_piece:
             self._animator.start_return_animation(
-                position=QPointF(x, y),
+                cursor_point=cursor_point,
                 origin_square=self.origin_square,
                 dragged_piece=self.dragged_piece,
             )
@@ -219,9 +221,9 @@ class SvgBoard(QSvgWidget):
         """Reset currently selected origin and target squares."""
         self._game.reset_squares()
 
-    def locate_file_and_rank(self, x: float, y: float) -> tuple[int, int]:
-        """Get file and rank location from `x` and `y` coordinates."""
-        return self._game.locate_file_and_rank(x, y)
+    def file_and_rank(self, cursor_point: QPointF) -> tuple[int, int]:
+        """Get file and rank based on `cursor_point`."""
+        return self._game.file_and_rank(cursor_point)
 
     def locate_square(self, x: float, y: float) -> None:
         """Get square location from `x` and `y` coordinates."""
@@ -258,8 +260,8 @@ class SvgBoard(QSvgWidget):
         super().mouseReleaseEvent(event)
 
     def paintEvent(self, event: QPaintEvent) -> None:
-        """Render board and dragged or animated pieces."""
-        board_svg: bytes = self._renderer.board_as_svg(self.cache_key())
+        """Render board and piece to animate."""
+        board_svg: bytes = self._renderer.svg_data(self.cache_key())
         self.load(board_svg)
         super().paintEvent(event)
 
@@ -270,14 +272,14 @@ class SvgBoard(QSvgWidget):
         ):
             self._renderer.render_piece(self.dragging_from_x, self.dragging_from_y)
         elif self._animator.is_animating:
-            animated_piece: Piece | None = self._animator.dragged_piece
-            position: QPointF = self._animator.position
+            cursor_point: QPointF = self._animator.cursor_point
+            piece_to_animate: Piece | None = self._animator.dragged_piece
 
-            if position and animated_piece:
+            if cursor_point and piece_to_animate:
                 self._renderer.render_piece(
-                    position.x(),
-                    position.y(),
-                    animated_piece,
+                    cursor_point.x(),
+                    cursor_point.y(),
+                    piece_to_animate,
                 )
 
     @Slot()
@@ -285,11 +287,11 @@ class SvgBoard(QSvgWidget):
         """Update board orientation and clear cached SVG data."""
         self.is_white_at_bottom = setting_value("board", "orientation")
 
-        self._renderer.invalidate_cache()
+        self._renderer.clear_cache()
         self.update()
 
     @Slot()
-    def on_animation_complete(self) -> None:
+    def on_animation_completed(self) -> None:
         """Clean up board state after animation completes."""
         self.origin_square = None
         self.dragged_piece = None
@@ -304,10 +306,10 @@ class PieceAnimator(QObject):
 
     animation_completed: ClassVar[Signal] = Signal()
 
-    animation_position: Property = Property(
+    point: Property = Property(
         QPointF,
-        lambda self: self.position,
-        lambda self, value: self.update_position(value),
+        lambda self: self.cursor_point,
+        lambda self, value: self.set_cursor_point(value),
     )
 
     def __init__(self, board: SvgBoard) -> None:
@@ -318,24 +320,21 @@ class PieceAnimator(QObject):
         self.is_animating: bool = False
         self.dragged_piece: Piece | None = None
         self.origin_square: Square | None = None
-        self.position: QPointF = QPointF(0.0, 0.0)
+        self.cursor_point: QPointF = QPointF(0.0, 0.0)
 
-        self._animation: QPropertyAnimation = QPropertyAnimation(
-            self,
-            b"animation_position",
-        )
+        self._animation: QPropertyAnimation = QPropertyAnimation(self, b"point")
         self._animation.setDuration(ANIMATION_DURATION)
         self._animation.setEasingCurve(QEasingCurve.Type.OutBack)
         self._animation.finished.connect(self.end_animation)
 
-    def update_position(self, value: QPointF) -> None:
-        """Set position based on `value` and update board."""
-        self.position = value
+    def set_cursor_point(self, value: QPointF) -> None:
+        """Set cursor point based on `value` and then update board."""
+        self.cursor_point = value
         self._svg_board.update()
 
     def start_return_animation(
         self,
-        position: QPointF,
+        cursor_point: QPointF,
         origin_square: Square,
         dragged_piece: Piece,
     ) -> None:
@@ -344,7 +343,7 @@ class PieceAnimator(QObject):
         self.dragged_piece = dragged_piece
         self.origin_square = origin_square
 
-        self._animation.setStartValue(position)
+        self._animation.setStartValue(cursor_point)
         self._animation.setEndValue(self._svg_board.square_center(origin_square))
         self._animation.start()
 
@@ -368,8 +367,8 @@ class BoardRenderer:
         """Return True if piece animation is currently in progress."""
         return self._svg_board.is_animation_in_progress()
 
-    def determine_board_to_render(self) -> Board:
-        """Determine which board should be used for rendering."""
+    def board_to_render(self) -> Board:
+        """Get board to be used for rendering."""
         if self.is_dragging_with_animatable_board() or self.is_piece_animating():
             return self._svg_board.animatable_board
         return self._svg_board.game_state()
@@ -379,20 +378,20 @@ class BoardRenderer:
         return self._svg_board.color_names()
 
     @lru_cache(maxsize=128)
-    def board_as_svg(self, cache_key: BoardCacheKey) -> bytes:
+    def svg_data(self, cache_key: BoardCacheKey) -> bytes:
         """Transform current board state into SVG data."""
         svg_board: str = svg.board(
             arrows=cache_key.arrows,
-            board=self.determine_board_to_render(),
-            check=cache_key.king_in_check,
             colors=self.color_names(),
-            orientation=cache_key.is_white_at_bottom,
+            board=self.board_to_render(),
+            orientation=cache_key.orientation,
+            check=cache_key.checked_king_square,
             squares=self._svg_board.legal_targets(),
         )
         return svg_board.encode()
 
     @lru_cache(maxsize=12)
-    def svg_renderer_for_piece(self, piece_symbol: str) -> QSvgRenderer:
+    def svg_renderer(self, piece_symbol: str) -> QSvgRenderer:
         """Get or create piece SVG renderer based on `piece_symbol`."""
         svg_piece: str = svg.piece(Piece.from_symbol(piece_symbol))
         renderer: QSvgRenderer = QSvgRenderer()
@@ -400,20 +399,20 @@ class BoardRenderer:
         return renderer
 
     def render_piece(
-        self, x: float, y: float, available_piece: Piece | None = None
+        self, x: float, y: float, selected_piece: Piece | None = None
     ) -> None:
         """Render `piece` at `x` and `y` coordinates."""
         dragged_piece: Piece | None = (
             self._svg_board.dragged_piece if self._svg_board.is_dragging else None
         )
-        piece_to_render: Piece | None = available_piece or dragged_piece
+        piece_to_render: Piece | None = selected_piece or dragged_piece
 
         if not piece_to_render:
             return
 
         painter: QPainter = QPainter(self._svg_board)
         piece_symbol: str = piece_to_render.symbol()
-        renderer: QSvgRenderer = self.svg_renderer_for_piece(piece_symbol)
+        renderer: QSvgRenderer = self.svg_renderer(piece_symbol)
 
         piece_render_area: QRectF = QRectF(
             x - HALF_SQUARE,
@@ -425,10 +424,10 @@ class BoardRenderer:
         renderer.render(painter, piece_render_area)
         painter.end()
 
-    def invalidate_cache(self) -> None:
+    def clear_cache(self) -> None:
         """Clear cached SVG data."""
-        self.board_as_svg.cache_clear()
-        self.svg_renderer_for_piece.cache_clear()
+        self.svg_data.cache_clear()
+        self.svg_renderer.cache_clear()
 
 
 class BoardInteractor:
@@ -437,27 +436,26 @@ class BoardInteractor:
     def __init__(self, board: SvgBoard) -> None:
         self._svg_board: SvgBoard = board
 
-        self._last_cursor_position: tuple[float, float] | None = None
+        self._last_cursor_point: QPointF = QPointF(0.0, 0.0)
         self._last_square_index: Square | None = None
 
-    def square_index(self, x: float, y: float) -> Square | None:
-        """Convert `x` and `y` coordinates to square index."""
-        current_position: tuple[float, float] = (x, y)
+    def square_index(self, cursor_point: QPointF) -> Square | None:
+        """Get square index based on `cursor_point`."""
 
-        if self._last_cursor_position == current_position and self._last_square_index:
+        if self._last_cursor_point == cursor_point and self._last_square_index:
             return self._last_square_index
 
-        file, rank = self._svg_board.locate_file_and_rank(x, y)
+        file, rank = self._svg_board.file_and_rank(cursor_point)
         square_index: Square = file + (rank * 8)
         result: Square | None = square_index if square_index < ALL_SQUARES else None
 
-        self._last_cursor_position = current_position
+        self._last_cursor_point = cursor_point
         self._last_square_index = result
         return result
 
-    def update_cursor(self, x: float, y: float) -> None:
-        """Set cursor shape based on square index from `x` and `y`."""
-        square_index: Square | None = self.square_index(x, y)
+    def change_cursor_shape(self, cursor_point: QPointF) -> None:
+        """Change cursor shape based on `cursor_point`."""
+        square_index: QPointF = self.square_index(cursor_point)
 
         if square_index:
             piece: Piece | None = self._svg_board.piece_at(square_index)
@@ -512,20 +510,19 @@ class BoardInteractor:
         self._svg_board.animatable_board = None
         self._svg_board.setCursor(Qt.CursorShape.ArrowCursor)
 
-    def cancel_move(self, x: float, y: float) -> None:
+    def cancel_move(self, cursor_point: QPointF) -> None:
         """Animate piece returning to origin square for invalid move."""
         self._svg_board.is_dragging = False
         self._svg_board.setCursor(Qt.CursorShape.ArrowCursor)
-        self._svg_board.start_piece_return_animation(x, y)
+        self._svg_board.start_piece_return_animation(cursor_point)
 
     def handle_mouse_press(self, event: QMouseEvent) -> None:
         """Handle mouse press for piece selection or targeting."""
         if self._svg_board.is_animation_in_progress():
             return
 
-        x: float = event.position().x()
-        y: float = event.position().y()
-        square_index: Square | None = self.square_index(x, y)
+        cursor_point: QPointF = QPointF(event.position().x(), event.position().y())
+        square_index: Square | None = self.square_index(cursor_point)
 
         if square_index:
             piece: Piece | None = self._svg_board.piece_at(square_index)
@@ -541,15 +538,14 @@ class BoardInteractor:
         if self._svg_board.is_animation_in_progress():
             return
 
-        x: float = event.position().x()
-        y: float = event.position().y()
+        cursor_point: QPointF = QPointF(event.position().x(), event.position().y())
 
         if self._svg_board.is_dragging:
-            self._svg_board.dragging_from_x = x
-            self._svg_board.dragging_from_y = y
+            self._svg_board.dragging_from_x = cursor_point.x()
+            self._svg_board.dragging_from_y = cursor_point.y()
             self._svg_board.update()
         else:
-            self.update_cursor(x, y)
+            self.change_cursor_shape(cursor_point)
 
     def handle_mouse_release(self, event: QMouseEvent) -> None:
         """Process move or cancel piece dragging when mouse released."""
@@ -559,11 +555,10 @@ class BoardInteractor:
         if self._svg_board.is_animation_in_progress():
             return
 
-        x: float = event.position().x()
-        y: float = event.position().y()
-        square_index: Square | None = self.square_index(x, y)
+        cursor_point: QPointF = QPointF(event.position().x(), event.position().y())
+        square_index: Square | None = self.square_index(cursor_point)
 
         if square_index and self.is_valid_move(square_index):
             self.make_move(square_index)
         else:
-            self.cancel_move(x, y)
+            self.cancel_move(cursor_point)
