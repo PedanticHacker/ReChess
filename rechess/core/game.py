@@ -184,11 +184,11 @@ class Game(QObject):
     def selection_point(self, cursor_point: QPointF) -> QPoint:
         """Get selection point based on `cursor_point`."""
         if setting_value("board", "orientation") == WHITE:
-            file: float = (cursor_point.x - BOARD_MARGIN) // SQUARE_SIZE
-            rank: float = 7 - (cursor_point.y - BOARD_MARGIN) // SQUARE_SIZE
+            file: float = (cursor_point.x() - BOARD_MARGIN) // SQUARE_SIZE
+            rank: float = 7 - (cursor_point.y() - BOARD_MARGIN) // SQUARE_SIZE
         else:
-            file = 7 - (cursor_point.x - BOARD_MARGIN) // SQUARE_SIZE
-            rank = (cursor_point.y - BOARD_MARGIN) // SQUARE_SIZE
+            file = 7 - (cursor_point.x() - BOARD_MARGIN) // SQUARE_SIZE
+            rank = (cursor_point.y() - BOARD_MARGIN) // SQUARE_SIZE
 
         file_integer: int = round(file)
         rank_integer: int = round(rank)
