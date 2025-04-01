@@ -695,7 +695,7 @@ class MainWindow(QMainWindow):
         self.stop_analysis()
         self.hide_analysis_ui()
 
-        self._game.reset_squares()
+        self._game.reset_selected_squares()
         self._game.is_historic_state = True
 
         self._black_clock.stop_timer()

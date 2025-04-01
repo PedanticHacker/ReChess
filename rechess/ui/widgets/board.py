@@ -190,15 +190,15 @@ class SvgBoard(QSvgWidget):
 
     def piece_at(self, square: Square) -> Piece | None:
         """Get piece at `square`."""
-        return self._game.board.piece_at(square)
+        return self._game.piece_at(square)
 
     def set_origin_square(self, square: Square) -> None:
         """Set `square` as origin for move."""
-        self._game.from_square = square
+        self._game.origin_square = square
 
     def set_target_square(self, square: Square) -> None:
         """Set `square` as target for move."""
-        self._game.to_square = square
+        self._game.target_square = square
 
     def legal_targets(self) -> list[Square] | None:
         """Get target squares considered as legal moves for piece."""
@@ -441,21 +441,22 @@ class BoardInteractor:
 
     def square_index(self, cursor_point: QPointF) -> Square | None:
         """Get square index based on `cursor_point`."""
-
         if self._last_cursor_point == cursor_point and self._last_square_index:
             return self._last_square_index
 
         selection_point = self._svg_board.selection_point(cursor_point)
         square_index: Square = selection_point.x() + selection_point.y() * 8
-        result: Square | None = square_index if square_index < ALL_SQUARES else None
+        valid_square_index: Square | None = (
+            square_index if square_index < ALL_SQUARES else None
+        )
 
         self._last_cursor_point = cursor_point
-        self._last_square_index = result
-        return result
+        self._last_square_index = valid_square_index
+        return valid_square_index
 
     def change_cursor_shape(self, cursor_point: QPointF) -> None:
         """Change cursor shape based on `cursor_point`."""
-        square_index: QPointF = self.square_index(cursor_point)
+        square_index: Square | None = self.square_index(cursor_point)
 
         if square_index:
             piece: Piece | None = self._svg_board.piece_at(square_index)
@@ -489,6 +490,7 @@ class BoardInteractor:
     def is_valid_move(self, target_square: Square) -> bool:
         """Verify whether `target_square` is valid for current piece."""
         legal_targets: list[Square] | None = self._svg_board.legal_targets()
+
         return (
             0 <= target_square < ALL_SQUARES
             and target_square != self._svg_board.origin_square
@@ -498,12 +500,12 @@ class BoardInteractor:
 
     def make_move(self, target_square: Square) -> None:
         """Make move and update game state."""
-        self.reset_dragging_state()
-
         self._svg_board.set_target_square(target_square)
         self._svg_board.find_legal_move(self._svg_board.origin_square, target_square)
         self._svg_board.reset_selected_squares()
         self._svg_board.update()
+
+        self.reset_dragging_state()
 
     def reset_dragging_state(self) -> None:
         """Reset all dragging-related state attributes."""
@@ -536,7 +538,7 @@ class BoardInteractor:
                 self.start_dragging(square_index, piece, cursor_point)
                 return
 
-        self._svg_board.locate_square(x, y)
+        self._svg_board.select_square(cursor_point)
 
     def handle_mouse_move(self, event: QMouseEvent) -> None:
         """Update piece position during dragging or cursor shape."""

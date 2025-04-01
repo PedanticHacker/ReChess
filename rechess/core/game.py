@@ -98,6 +98,7 @@ class Game(QObject):
             "castling",
             "move",
         )
+
         for file_name in file_names:
             file_url: QUrl = QUrl(f"file:rechess/assets/audio/{file_name}.wav")
             sound_effect: QSoundEffect = QSoundEffect(self)
@@ -215,6 +216,10 @@ class Game(QObject):
             return promotion_dialog.piece_type
 
         return None
+
+    def piece_at(self, square: Square) -> Piece | None:
+        """Get piece at `square`."""
+        return self.board.piece_at(square)
 
     def set_move(self, item_index: int) -> None:
         """Set move and arrow based on `item_index`."""

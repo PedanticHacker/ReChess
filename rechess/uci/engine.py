@@ -52,7 +52,7 @@ class Engine(QObject):
             ponder=setting_value("engine", "is_ponder_on"),
         )
 
-        if not self._game.is_in_previous_state:
+        if not self._game.is_historic_state:
             self.move_played.emit(play_result.move)
 
     def start_analysis(self) -> None:
