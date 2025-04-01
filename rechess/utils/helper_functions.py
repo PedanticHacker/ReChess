@@ -94,7 +94,7 @@ def find_opening(fen: str) -> list[str] | None:
 
 
 def style_name(file_name: str) -> str:
-    """Get human-readable style name from `file_name`."""
+    """Get formatted QSS style name based on `file_name`."""
     styles: dict[str, str] = {
         "dark-forest": "Dark forest",
         "dark-mint": "Dark mint",

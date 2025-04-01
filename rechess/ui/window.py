@@ -393,15 +393,15 @@ class MainWindow(QMainWindow):
         self._table_view.item_selected.connect(self.on_item_selected)
         self._white_clock.time_expired.connect(self.on_white_time_expired)
 
-    def apply_style(self, filename: str) -> None:
-        """Apply style from QSS file at `filename` and show its name."""
-        with open(f"rechess/assets/styles/{filename}.qss") as qss_file:
+    def apply_style(self, file_name: str) -> None:
+        """Apply QSS style at `file_name` and show its name."""
+        with open(f"rechess/assets/styles/{file_name}.qss") as qss_file:
             self.setStyleSheet(qss_file.read())
-        set_setting_value("ui", "style", filename)
-        self._style_name_label.setText(f"Style: {style_name(filename)}")
+        set_setting_value("ui", "style", file_name)
+        self._style_name_label.setText(f"Style: {style_name(file_name)}")
 
     def invoke_engine(self) -> None:
-        """Invoke engine to play move in new position only."""
+        """Invoke engine to play move."""
         QThreadPool.globalInstance().start(self._engine.play_move)
         self._game_notifications_label.setText("Thinking...")
 
