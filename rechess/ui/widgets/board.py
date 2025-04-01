@@ -239,7 +239,7 @@ class SvgBoard(QSvgWidget):
 
     def can_drag_piece(self, piece: Piece | None) -> bool:
         """Return True if `piece` can be dragged based on turn."""
-        return bool(piece and piece.color == self._game.turn)
+        return bool(piece and piece.color != setting_value("engine", "is_white"))
 
     def is_animation_in_progress(self) -> bool:
         """Return True if animation is currently in progress."""
