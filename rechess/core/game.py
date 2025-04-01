@@ -159,11 +159,11 @@ class Game(QObject):
         self.positions.append(position)
 
     def set_arrow(self, move: Move) -> None:
-        """Set arrow marker based on `move`."""
+        """Set arrow based on `move`."""
         self.arrow = [(move.from_square, move.to_square)]
 
     def clear_arrow(self) -> None:
-        """Clear arrow marker from board."""
+        """Clear arrow from board."""
         self.arrow.clear()
 
     def set_root_position(self) -> None:

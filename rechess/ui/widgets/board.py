@@ -40,7 +40,7 @@ class BoardCacheKey(NamedTuple):
     orientation: bool
     piece_square: Square | None
     checked_king_square: Square | None
-    arrows: tuple[tuple[Square, Square], ...]
+    arrows: tuple[tuple[Square, Square]] | None
 
 
 class SvgBoard(QSvgWidget):
