@@ -181,14 +181,19 @@ class SvgBoard(QSvgWidget):
 
         return QPointF(x, y)
 
-    def is_dragging_valid(self) -> bool:
-        """Return True if conditions allow for piece to be dragged."""
-        return bool(
-            self.is_dragging
-            and self.dragged_piece
-            and self.dragging_from_x
-            and self.dragging_from_y
-        )
+    def dragging_position(self) -> QPointF:
+        """Get current position for dragged piece."""
+        return QPointF(self.dragging_from_x, self.dragging_from_y)
+
+    def update_dragging_position(self, position: QPointF | None = None) -> None:
+        """Update position for dragged piece."""
+        if position is None:
+            self.dragging_from_x = None
+            self.dragging_from_y = None
+        else:
+            self.dragging_from_x = position.x()
+            self.dragging_from_y = position.y()
+        self.update()
 
     def can_drag_piece(self, piece: Piece | None) -> bool:
         """Return True if `piece` with specific color can be dragged."""
@@ -307,8 +312,7 @@ class SvgBoard(QSvgWidget):
         self.is_dragging = True
         self.origin_square = square
         self.dragged_piece = piece
-        self.dragging_from_x = cursor_point.x()
-        self.dragging_from_y = cursor_point.y()
+        self.update_dragging_position(cursor_point)
         self._game.origin_square = square
         self.setCursor(Qt.CursorShape.ClosedHandCursor)
 
@@ -318,15 +322,8 @@ class SvgBoard(QSvgWidget):
         self.update()
 
     def is_valid(self, target_square: Square) -> bool:
-        """Return True if `target_square` is valid for current piece."""
-        legal_targets: list[Square] | None = self._game.legal_targets
-
-        return (
-            0 <= target_square < ALL_SQUARES
-            and target_square != self.origin_square
-            and legal_targets is not None
-            and target_square in legal_targets
-        )
+        """Return True if `target_square` is valid for selected piece."""
+        return target_square in self._game.legal_targets
 
     def move_piece_to(self, target_square: Square) -> None:
         """Move dragged piece to `target_square`."""
@@ -342,8 +339,7 @@ class SvgBoard(QSvgWidget):
         self.is_dragging = False
         self.origin_square = None
         self.dragged_piece = None
-        self.dragging_from_x = None
-        self.dragging_from_y = None
+        self.update_dragging_position()
         self.animation_board = None
         self.setCursor(Qt.CursorShape.ArrowCursor)
 
@@ -378,9 +374,7 @@ class SvgBoard(QSvgWidget):
         cursor_point: QPointF = QPointF(event.position().x(), event.position().y())
 
         if self.is_dragging:
-            self.dragging_from_x = cursor_point.x()
-            self.dragging_from_y = cursor_point.y()
-            self.update()
+            self.update_dragging_position(cursor_point)
         else:
             self.change_cursor_shape_at(cursor_point)
 
@@ -388,10 +382,7 @@ class SvgBoard(QSvgWidget):
 
     def mouseReleaseEvent(self, event: QMouseEvent) -> None:
         """Process move or cancel piece dragging when mouse released."""
-        if not self.is_dragging:
-            return
-
-        if self.is_animating:
+        if not self.is_dragging or self.is_animating:
             return
 
         cursor_point: QPointF = QPointF(event.position().x(), event.position().y())
@@ -410,18 +401,10 @@ class SvgBoard(QSvgWidget):
         self.load(board_svg)
         super().paintEvent(event)
 
-        if self.is_dragging_valid() and self.dragging_from_x and self.dragging_from_y:
-            cursor_point: QPointF = QPointF(self.dragging_from_x, self.dragging_from_y)
-            self.render_piece(cursor_point)
+        if self.is_dragging:
+            self.render_piece(self.dragging_position())
         elif self.is_animating:
-            cursor_point = self.cursor_point
-            piece_to_animate: Piece | None = self.animated_piece
-
-            if cursor_point and piece_to_animate:
-                self.render_piece(
-                    cursor_point,
-                    piece_to_animate,
-                )
+            self.render_piece(self.cursor_point, self.animated_piece)
 
     @Slot()
     def clear_cache(self) -> None:

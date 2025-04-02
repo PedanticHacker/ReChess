@@ -63,10 +63,10 @@ class Game(QObject):
         return None
 
     @property
-    def legal_targets(self) -> list[Square] | None:
+    def legal_targets(self) -> list[Square]:
         """Get target squares considered as legal moves for piece."""
         if not self.origin_square:
-            return None
+            return []
 
         square: Square = BB_SQUARES[self.origin_square]
         legal_targets: Iterator[Move] = self.board.generate_legal_moves(square)
