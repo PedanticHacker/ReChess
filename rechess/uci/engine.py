@@ -47,12 +47,12 @@ class Engine(QObject):
     def play_move(self) -> None:
         """Invoke engine to play move."""
         play_result: PlayResult = self._engine.play(
+            limit=Limit(depth=20),
             board=self._game.board,
-            limit=Limit(depth=30),
             ponder=setting_value("engine", "is_ponder_on"),
         )
 
-        if not self._game.is_historic_state:
+        if not self._game.is_history:
             self.move_played.emit(play_result.move)
 
     def start_analysis(self) -> None:

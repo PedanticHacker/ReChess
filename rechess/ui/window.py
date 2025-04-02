@@ -435,7 +435,7 @@ class MainWindow(QMainWindow):
     def play_move_now(self) -> None:
         """Force engine to play move on current turn."""
         self._game.clear_arrow()
-        self._game.is_historic_state = False
+        self._game.is_history = False
 
         self.stop_analysis()
         self.hide_analysis_ui()
@@ -458,7 +458,7 @@ class MainWindow(QMainWindow):
         self.hide_analysis_ui()
 
         self._evaluation_bar.flip_chunk()
-        self._game.is_historic_state = False
+        self._game.is_history = False
         self._human_name_label.setText(setting_value("human", "name"))
 
         if not self._game.is_in_progress():
@@ -580,7 +580,7 @@ class MainWindow(QMainWindow):
         """Refresh current state of UI."""
         self._table_model.refresh_view()
         self._table_view.select_last_item()
-        self._game.is_historic_state = False
+        self._game.is_history = False
 
         self.show_fen()
         self.show_opening()
@@ -610,7 +610,7 @@ class MainWindow(QMainWindow):
     def start_new_game(self) -> None:
         """Start new game by resetting and clearing everything."""
         self._game.prepare_new_game()
-        self._game.is_historic_state = False
+        self._game.is_history = False
 
         self._black_clock.reset()
         self._white_clock.reset()
@@ -696,7 +696,7 @@ class MainWindow(QMainWindow):
         self.hide_analysis_ui()
 
         self._game.reset_selected_squares()
-        self._game.is_historic_state = True
+        self._game.is_history = True
 
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
