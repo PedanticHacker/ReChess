@@ -402,8 +402,9 @@ class MainWindow(QMainWindow):
 
     def invoke_engine(self) -> None:
         """Invoke engine to play move."""
-        QThreadPool.globalInstance().start(self._engine.play_move)
-        self._game_notifications_label.setText("Thinking...")
+        if not self._game.is_history:
+            QThreadPool.globalInstance().start(self._engine.play_move)
+            self._game_notifications_label.setText("Thinking...")
 
     def invoke_analysis(self) -> None:
         """Invoke engine to start analysis."""

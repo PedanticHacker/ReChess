@@ -3,6 +3,7 @@ from __future__ import annotations
 from contextlib import suppress
 from typing import ClassVar
 
+from chess import Move
 from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
 from PySide6.QtCore import QObject, Signal
 
@@ -50,9 +51,7 @@ class Engine(QObject):
             board=self._game.board,
             ponder=setting_value("engine", "is_ponder_on"),
         )
-
-        if not self._game.is_history:
-            self.move_played.emit(play_result.move)
+        self.move_played.emit(play_result.move)
 
     def start_analysis(self) -> None:
         """Start analyzing current position."""
@@ -67,8 +66,8 @@ class Engine(QObject):
                     pv: list[Move] = info["pv"]
 
                     best_move: Move = pv[0]
-                    variation: str = self._game.board.variation_san(pv)
                     score: Score = info["score"].white()
+                    variation: str = self._game.board.variation_san(pv)
 
                     self.best_move_analyzed.emit(best_move)
                     self.score_analyzed.emit(score)
