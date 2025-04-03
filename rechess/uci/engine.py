@@ -3,7 +3,6 @@ from __future__ import annotations
 from contextlib import suppress
 from typing import ClassVar
 
-from chess import Move
 from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
 from PySide6.QtCore import QObject, Signal
 
