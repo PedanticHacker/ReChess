@@ -64,13 +64,13 @@ class Game(QObject):
 
     @property
     def legal_targets(self) -> list[Square]:
-        """Get target squares considered as legal moves for piece."""
+        """Get target squares for piece to move legally."""
         if not self.origin_square:
             return []
 
         square: Square = BB_SQUARES[self.origin_square]
-        legal_targets: Iterator[Move] = self.board.generate_legal_moves(square)
-        return [move.to_square for move in legal_targets]
+        targets: Iterator[Move] = self.board.generate_legal_moves(square)
+        return [move.to_square for move in targets]
 
     @property
     def result(self) -> str:
