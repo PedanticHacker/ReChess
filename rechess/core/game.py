@@ -56,8 +56,8 @@ class Game(QObject):
         self._initialize_state()
 
     @property
-    def checked_king_square(self) -> Square | None:
-        """Get square of checked king."""
+    def check(self) -> Square | None:
+        """Get square of king in check."""
         if self.board.is_check():
             return self.board.king(self.board.turn)
         return None
@@ -172,18 +172,17 @@ class Game(QObject):
 
     def select_square(self, cursor_point: QPointF) -> None:
         """Select square based on `cursor_point`."""
-        selection_point: QPoint = self.selection_point(cursor_point)
-        selected_square: Square = square(selection_point.x(), selection_point.y())
+        square_index: Square = self.square_index(cursor_point)
 
         if not self.origin_square:
-            self.origin_square = selected_square
+            self.origin_square = square_index
         else:
-            self.target_square = selected_square
+            self.target_square = square_index
             self.find_legal_move(self.origin_square, self.target_square)
             self.reset_selected_squares()
 
-    def selection_point(self, cursor_point: QPointF) -> QPoint:
-        """Get selection point based on `cursor_point`."""
+    def square_index(self, cursor_point: QPointF) -> Square:
+        """Get square index based on `cursor_point`."""
         if setting_value("board", "orientation") == WHITE:
             file: float = (cursor_point.x() - BOARD_MARGIN) // SQUARE_SIZE
             rank: float = 7 - (cursor_point.y() - BOARD_MARGIN) // SQUARE_SIZE
@@ -191,12 +190,9 @@ class Game(QObject):
             file = 7 - (cursor_point.x() - BOARD_MARGIN) // SQUARE_SIZE
             rank = (cursor_point.y() - BOARD_MARGIN) // SQUARE_SIZE
 
-        file_integer: int = round(file)
-        rank_integer: int = round(rank)
-        file_index: int = max(0, min(7, file_integer))
-        rank_index: int = max(0, min(7, rank_integer))
-
-        return QPoint(file_index, rank_index)
+        file_index: int = max(0, min(7, round(file)))
+        rank_index: int = max(0, min(7, round(rank)))
+        return square(file_index, rank_index)
 
     def find_legal_move(self, origin_square: Square, target_square: Square) -> None:
         """Find legal move for `origin_square` and `target_square`."""
