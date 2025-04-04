@@ -63,16 +63,6 @@ class Game(QObject):
         return None
 
     @property
-    def legal_targets(self) -> list[Square]:
-        """Get target squares for piece to move legally."""
-        if not self.origin_square:
-            return []
-
-        square: Square = BB_SQUARES[self.origin_square]
-        targets: Iterator[Move] = self.board.generate_legal_moves(square)
-        return [move.to_square for move in targets]
-
-    @property
     def result(self) -> str:
         """Get result of current game."""
         result_rewordings = {
@@ -180,6 +170,17 @@ class Game(QObject):
             self.target_square = square_index
             self.find_legal_move(self.origin_square, self.target_square)
             self.reset_selected_squares()
+
+    def legal_targets(self, square: Square | None = None) -> list[Square]:
+        """Get target squares considered as legal moves for piece."""
+        selected_square: Square | None = square or self.origin_square
+
+        if selected_square is None:
+            return []
+
+        square = BB_SQUARES[selected_square]
+        targets: Iterator[Move] = self.board.generate_legal_moves(square)
+        return [move.to_square for move in targets]
 
     def square_index(self, cursor_point: QPointF) -> Square:
         """Get square index based on `cursor_point`."""

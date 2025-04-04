@@ -3,7 +3,7 @@ from __future__ import annotations
 from functools import lru_cache
 from typing import Final, NamedTuple
 
-from chess import svg, Piece
+from chess import svg, Move, Piece, BB_SQUARES
 from PySide6.QtCore import (
     Property,
     QEasingCurve,
@@ -34,6 +34,7 @@ class BoardCache(NamedTuple):
     """Type annotations for board cache."""
 
     fen: str
+    dragging: bool
     animation: bool
     orientation: bool
     check: Square | None
@@ -153,10 +154,11 @@ class SvgBoard(QSvgWidget):
         self.update()
 
     def board_cache(self) -> BoardCache:
-        """Get board cache."""
+        """Get cache of current board state."""
         return BoardCache(
             fen=self._game.fen,
             check=self._game.check,
+            dragging=self.is_dragging,
             square=self.origin_square,
             animation=self.is_animating,
             orientation=self.orientation,
@@ -214,14 +216,23 @@ class SvgBoard(QSvgWidget):
 
     @lru_cache(maxsize=128)
     def svg_data(self, cache: BoardCache) -> bytes:
-        """Transform current board state into SVG data."""
+        """Transform current board state into SVG data as bytes."""
+        board_to_render: Board = self._game.board
+
+        if cache.dragging and cache.square is not None:
+            board_to_render = self._game.board.copy()
+            board_to_render.set_piece_at(square=cache.square, piece=None)
+
+        selected_square: Square | None = cache.square if cache.dragging else None
+        legal_targets: list[Square] = self._game.legal_targets(selected_square)
+
         svg_board: str = svg.board(
             check=cache.check,
             arrows=cache.arrows,
+            board=board_to_render,
+            squares=legal_targets,
             colors=self.color_names(),
             orientation=cache.orientation,
-            squares=self._game.legal_targets,
-            board=self.animation_board or self._game.board,
         )
         return svg_board.encode()
 
@@ -295,16 +306,14 @@ class SvgBoard(QSvgWidget):
         self.dragging_from_x = cursor_point.x()
         self.dragging_from_y = cursor_point.y()
 
-        self.animation_board = self._game.board.copy()
-        self.animation_board.set_piece_at(square=square, piece=None)
-
         self.setCursor(Qt.CursorShape.ClosedHandCursor)
 
         self.update()
 
     def is_valid(self, target_square: Square) -> bool:
         """Return True if `target_square` is valid."""
-        return target_square in self._game.legal_targets
+        legal_targets: list[Square] = self._game.legal_targets(self.origin_square)
+        return target_square in legal_targets
 
     def move_piece_to(self, target_square: Square) -> None:
         """Move dragged piece to `target_square`."""
@@ -411,15 +420,21 @@ class SvgBoard(QSvgWidget):
     def on_animation_finished(self) -> None:
         """Reset board state after animation has finished."""
         self._game.reset_selected_squares()
-
         self.reset_dragging_state()
 
-    @Slot()
-    def on_move_played(self) -> None:
+    @Slot(Move)
+    def on_move_played(self, move: Move) -> None:
         """Update board state and clear cached SVG data."""
         self.orientation = setting_value("board", "orientation")
 
         self.svg_data.cache_clear()
         self.svg_renderer.cache_clear()
+
+        if self.is_dragging and self.origin_square is not None:
+            piece_at_origin: Piece | None = self._game.piece_at(self.origin_square)
+
+            if piece_at_origin is not self.dragged_piece:
+                self._game.reset_selected_squares()
+                self.reset_dragging_state()
 
         self.update()
