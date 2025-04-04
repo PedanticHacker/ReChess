@@ -3,7 +3,7 @@ from __future__ import annotations
 from functools import lru_cache
 from typing import Final, NamedTuple
 
-from chess import svg, Move, Piece, BB_SQUARES
+from chess import svg, Move, Piece
 from PySide6.QtCore import (
     Property,
     QEasingCurve,
@@ -430,9 +430,9 @@ class SvgBoard(QSvgWidget):
         self.svg_renderer.cache_clear()
 
         if self.is_dragging and self.origin_square is not None:
-            piece_at_origin: Piece | None = self._game.piece_at(self.origin_square)
+            piece: Piece | None = self._game.piece_at(self.origin_square)
 
-            if piece_at_origin is not self.dragged_piece:
+            if piece is not self.dragged_piece:
                 self._game.reset_selected_squares()
                 self.reset_dragging_state()
 
