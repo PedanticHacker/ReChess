@@ -178,8 +178,8 @@ class Game(QObject):
         if selected_square is None:
             return []
 
-        square = BB_SQUARES[selected_square]
-        targets: Iterator[Move] = self.board.generate_legal_moves(square)
+        square_mask = BB_SQUARES[selected_square]
+        targets: Iterator[Move] = self.board.generate_legal_moves(square_mask)
         return [move.to_square for move in targets]
 
     def square_index(self, cursor_point: QPointF) -> Square:

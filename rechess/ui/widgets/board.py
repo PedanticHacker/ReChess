@@ -113,7 +113,6 @@ class SvgBoard(QSvgWidget):
 
         self.is_animating: bool = False
         self.animated_piece: Piece | None = None
-        self.animation_origin_square: Square | None = None
         self.cursor_point: QPointF = QPointF(0.0, 0.0)
 
         self._animation: QPropertyAnimation = QPropertyAnimation(self, b"point")
@@ -268,7 +267,7 @@ class SvgBoard(QSvgWidget):
         """Return dragged piece at `cursor_point` to origin square."""
         self.is_dragging = False
 
-        if self.origin_square and self.dragged_piece:
+        if self.dragged_piece:
             self.start_animation(
                 cursor_point=cursor_point,
                 origin_square=self.origin_square,
@@ -287,7 +286,6 @@ class SvgBoard(QSvgWidget):
         self.animation_board = None
         self.dragging_from_x = None
         self.dragging_from_y = None
-        self.animation_origin_square = None
 
         self.setCursor(Qt.CursorShape.ArrowCursor)
 
@@ -302,7 +300,7 @@ class SvgBoard(QSvgWidget):
         """Animate returning `dragged_piece` to `origin_square`."""
         self.is_animating = True
         self.animated_piece = dragged_piece
-        self.animation_origin_square = origin_square
+        self.origin_square = origin_square
 
         self._animation.setStartValue(cursor_point)
         self._animation.setEndValue(self.square_center(origin_square))
@@ -313,12 +311,13 @@ class SvgBoard(QSvgWidget):
         """Transform current board state into SVG data as bytes."""
         board_to_render: Board = self._game.board
 
-        if cache.dragging and cache.square is not None:
-            board_to_render = self._game.board.copy()
-            board_to_render.set_piece_at(square=cache.square, piece=None)
+        if cache.dragging or cache.animation:
+            square: Square = cache.square if cache.dragging else self.origin_square
+            board_to_render = board_to_render.copy()
+            board_to_render.set_piece_at(square=square, piece=None)
 
-        selected_square: Square | None = cache.square if cache.dragging else None
-        legal_targets: list[Square] = self._game.legal_targets(selected_square)
+        cached_square: Square | None = cache.square if cache.dragging else None
+        legal_targets: list[Square] = self._game.legal_targets(cached_square)
 
         svg_board: str = svg.board(
             check=cache.check,
@@ -429,7 +428,7 @@ class SvgBoard(QSvgWidget):
         self.svg_data.cache_clear()
         self.svg_renderer.cache_clear()
 
-        if self.is_dragging and self.origin_square is not None:
+        if self.is_dragging:
             piece: Piece | None = self._game.piece_at(self.origin_square)
 
             if piece is not self.dragged_piece:
