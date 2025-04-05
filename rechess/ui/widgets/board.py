@@ -426,8 +426,4 @@ class SvgBoard(QSvgWidget):
         self.svg_data.cache_clear()
         self.svg_renderer.cache_clear()
 
-        if self.is_dragging:
-            self.stop_dragging()
-            return
-
         self.update()
