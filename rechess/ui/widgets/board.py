@@ -245,7 +245,22 @@ class SvgBoard(QSvgWidget):
         self.dragging_from_y = cursor_point.y()
 
         self.setCursor(Qt.CursorShape.ClosedHandCursor)
+        self.update()
 
+    def stop_dragging(self) -> None:
+        """Stop dragging piece and reset all dragging-related state."""
+        self._game.reset_selected_squares()
+
+        self.is_dragging = False
+        self.is_animating = False
+        self.dragged_piece = None
+        self.origin_square = None
+        self.animated_piece = None
+        self.animation_board = None
+        self.dragging_from_x = None
+        self.dragging_from_y = None
+
+        self.setCursor(Qt.CursorShape.ArrowCursor)
         self.update()
 
     def update_dragging_at(self, cursor_point: QPointF) -> None:
@@ -259,9 +274,8 @@ class SvgBoard(QSvgWidget):
         """Move dragged piece to `target_square`."""
         self._game.target_square = target_square
         self._game.find_legal_move(self.origin_square, target_square)
-        self._game.reset_selected_squares()
 
-        self.reset_dragging_state()
+        self.stop_dragging()
 
     def return_piece_at(self, cursor_point: QPointF) -> None:
         """Return dragged piece at `cursor_point` to origin square."""
@@ -275,21 +289,6 @@ class SvgBoard(QSvgWidget):
             )
 
         self.setCursor(Qt.CursorShape.ArrowCursor)
-
-    def reset_dragging_state(self) -> None:
-        """Reset all dragging-related state attributes."""
-        self.is_dragging = False
-        self.is_animating = False
-        self.dragged_piece = None
-        self.origin_square = None
-        self.animated_piece = None
-        self.animation_board = None
-        self.dragging_from_x = None
-        self.dragging_from_y = None
-
-        self.setCursor(Qt.CursorShape.ArrowCursor)
-
-        self.update()
 
     def start_animation(
         self,
@@ -417,8 +416,7 @@ class SvgBoard(QSvgWidget):
     @Slot()
     def on_animation_finished(self) -> None:
         """Reset board state after animation has finished."""
-        self._game.reset_selected_squares()
-        self.reset_dragging_state()
+        self.stop_dragging()
 
     @Slot(Move)
     def on_move_played(self, move: Move) -> None:
@@ -429,10 +427,15 @@ class SvgBoard(QSvgWidget):
         self.svg_renderer.cache_clear()
 
         if self.is_dragging:
-            piece: Piece | None = self._game.piece_at(self.origin_square)
+            if move.to_square == self.origin_square:
+                # Do something on this line to make human piece disappear
+                self.stop_dragging()
+                return
+
+            piece: Piece = self._game.piece_at(self.origin_square)
 
             if piece is not self.dragged_piece:
-                self._game.reset_selected_squares()
-                self.reset_dragging_state()
+                self.stop_dragging()
+                return
 
         self.update()
