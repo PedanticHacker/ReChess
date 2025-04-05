@@ -164,7 +164,7 @@ class Game(QObject):
         """Select square based on `cursor_point`."""
         square_index: Square = self.square_index(cursor_point)
 
-        if not self.origin_square:
+        if self.origin_square is None:
             self.origin_square = square_index
         else:
             self.target_square = square_index
