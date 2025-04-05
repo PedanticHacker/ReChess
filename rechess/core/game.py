@@ -245,6 +245,12 @@ class Game(QObject):
         """Return True if engine is on turn."""
         return self.board.turn == setting_value("engine", "is_white")
 
+    def is_engine_player(self) -> bool:
+        """Return True if player is engine."""
+        # What must I return here to determine whether it is actually
+        # the engine player?
+        return True
+
     def is_in_progress(self) -> bool:
         """Return True if game is in progress."""
         return bool(self.moves)

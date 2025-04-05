@@ -184,9 +184,9 @@ class SvgBoard(QSvgWidget):
         self.cursor_point = event.position()
         return self.cursor_point
 
-    def can_drag_piece(self, piece: Piece | None) -> bool:
-        """Return True if `piece` with specific color can be dragged."""
-        return bool(piece and piece.color != setting_value("engine", "is_white"))
+    def can_drag(self, piece: Piece) -> bool:
+        """Return True if color of `piece` does not belong to engine."""
+        return piece.color != self._game.is_engine_player()
 
     def is_valid(self, target_square: Square) -> bool:
         """Return True if `target_square` is valid."""
@@ -200,7 +200,7 @@ class SvgBoard(QSvgWidget):
         if square_index:
             piece: Piece | None = self._game.piece_at(square_index)
 
-            if self.can_drag_piece(piece):
+            if piece and self.can_drag(piece.color):
                 self.setCursor(Qt.CursorShape.OpenHandCursor)
                 return
 
@@ -343,7 +343,7 @@ class SvgBoard(QSvgWidget):
         if square_index:
             piece: Piece | None = self._game.piece_at(square_index)
 
-            if piece and self.can_drag_piece(piece):
+            if piece and self.can_drag(piece):
                 self.start_dragging(square_index, piece)
         else:
             self._game.select_square(cursor_point)
