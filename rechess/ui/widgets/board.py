@@ -427,15 +427,7 @@ class SvgBoard(QSvgWidget):
         self.svg_renderer.cache_clear()
 
         if self.is_dragging:
-            if move.to_square == self.origin_square:
-                # Do something on this line to make human piece disappear
-                self.stop_dragging()
-                return
-
-            piece: Piece = self._game.piece_at(self.origin_square)
-
-            if piece is not self.dragged_piece:
-                self.stop_dragging()
-                return
+            self.stop_dragging()
+            return
 
         self.update()
