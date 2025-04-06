@@ -355,6 +355,10 @@ class SvgBoard(QSvgWidget):
         cursor_point: QPointF = self.cursor_point_from(event)
         self.update_cursor_shape_at(cursor_point)
 
+        if self.is_dragging and self._game.is_capture():
+            print("Capture during dragging!")
+            super().mouseReleaseEvent(event)
+
     def mouseReleaseEvent(self, event: QMouseEvent) -> None:
         """Make move with dragging piece or return it back."""
         cursor_point: QPointF = self.cursor_point_from(event)

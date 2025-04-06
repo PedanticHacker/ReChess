@@ -173,15 +173,11 @@ class Game(QObject):
 
     def legal_targets(self, square: Square | None = None) -> list[Square]:
         """Get target squares considered as legal moves for piece."""
-        selected_square: Square | None = (
-            square if square is not None else self.origin_square
-        )
-
-        if selected_square is None:
+        if square is None:
             return []
 
-        square_mask = BB_SQUARES[selected_square]
-        targets: Iterator[Move] = self.board.generate_legal_moves(square_mask)
+        mask: Square = BB_SQUARES[square if square is not None else self.origin_square]
+        targets: Iterator[Move] = self.board.generate_legal_moves(mask)
         return [move.to_square for move in targets]
 
     def square_index(self, cursor_point: QPointF) -> Square:
@@ -240,8 +236,12 @@ class Game(QObject):
             del self.moves[after_item_index]
             del self.positions[after_item_index]
 
+    def is_capture(self) -> bool:
+        """Return True if capture on board."""
+        return "x" in self.moves[-1]
+
     def is_check(self, move: Move) -> bool:
-        """Return True if `move` would put opponent king in check."""
+        """Return True if `move` puts opponent's king in check."""
         board: Board = self.board.copy()
         board.push(move)
         return board.is_check()
