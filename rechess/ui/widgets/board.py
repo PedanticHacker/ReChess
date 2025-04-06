@@ -3,7 +3,7 @@ from __future__ import annotations
 from functools import lru_cache
 from typing import Final, NamedTuple
 
-from chess import svg, Move, Piece, Square
+from chess import svg, Board, Move, Piece, Square
 from PySide6.QtCore import (
     Property,
     QEasingCurve,
