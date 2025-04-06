@@ -236,10 +236,6 @@ class Game(QObject):
             del self.moves[after_item_index]
             del self.positions[after_item_index]
 
-    def is_capture(self) -> bool:
-        """Return True if capture on board."""
-        return "x" in self.moves[-1]
-
     def is_check(self, move: Move) -> bool:
         """Return True if `move` puts opponent's king in check."""
         board: Board = self.board.copy()

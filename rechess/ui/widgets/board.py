@@ -3,7 +3,7 @@ from __future__ import annotations
 from functools import lru_cache
 from typing import Final, NamedTuple
 
-from chess import svg, Board, Move, Piece, Square
+from chess import svg, Move, Piece
 from PySide6.QtCore import (
     Property,
     QEasingCurve,
@@ -355,12 +355,10 @@ class SvgBoard(QSvgWidget):
         cursor_point: QPointF = self.cursor_point_from(event)
         self.update_cursor_shape_at(cursor_point)
 
-        if self.is_dragging and self._game.is_capture():
-            print("Capture during dragging!")
-            super().mouseReleaseEvent(event)
-
     def mouseReleaseEvent(self, event: QMouseEvent) -> None:
         """Make move with dragging piece or return it back."""
+        self.release_event: QMouseEvent = event
+
         cursor_point: QPointF = self.cursor_point_from(event)
         square_index: Square = self.square_index(cursor_point)
 
