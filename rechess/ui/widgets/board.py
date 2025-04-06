@@ -228,8 +228,8 @@ class SvgBoard(QSvgWidget):
         self.setCursor(Qt.CursorShape.ArrowCursor)
         self.update()
 
-    def move_piece_to(self, target_square: Square) -> None:
-        """Move dragged piece to `target_square`."""
+    def drop_piece(self, target_square: Square) -> None:
+        """Drop dragged piece on `target_square`."""
         self._game.target_square = target_square
         self._game.find_legal_move(self.origin_square, target_square)
 
@@ -357,7 +357,7 @@ class SvgBoard(QSvgWidget):
         square_index: Square = self.square_index(cursor_point)
 
         if self.is_legal(square_index):
-            self.move_piece_to(square_index)
+            self.drop_piece(square_index)
         else:
             self.return_piece_at(cursor_point)
 
