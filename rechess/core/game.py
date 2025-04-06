@@ -160,8 +160,8 @@ class Game(QObject):
         """Reset pieces on board to initial position."""
         self.board = self.board.root()
 
-    def select_square(self, cursor_point: QPointF) -> None:
-        """Select square based on `cursor_point`."""
+    def select_square_at(self, cursor_point: QPointF) -> None:
+        """Select square at `cursor_point`."""
         square_index: Square = self.square_index(cursor_point)
 
         if self.origin_square is None:
@@ -249,10 +249,6 @@ class Game(QObject):
     def is_engine_on_turn(self) -> bool:
         """Return True if engine is on turn."""
         return self.board.turn == setting_value("engine", "is_white")
-
-    def is_engine_player(self) -> bool:
-        """Return True if player is engine."""
-        return setting_value("engine", "is_white")
 
     def is_in_progress(self) -> bool:
         """Return True if game is in progress."""

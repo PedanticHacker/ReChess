@@ -3,7 +3,7 @@ from __future__ import annotations
 from functools import lru_cache
 from typing import Final, NamedTuple
 
-from chess import svg, Move, Piece
+from chess import svg, Move, Piece, Square
 from PySide6.QtCore import (
     Property,
     QEasingCurve,
@@ -186,10 +186,10 @@ class SvgBoard(QSvgWidget):
 
     def can_drag(self, piece: Piece | None) -> bool:
         """Return True if color of `piece` does not belong to engine."""
-        return piece is not None and piece.color != self._game.is_engine_player()
+        return piece is not None and piece.color != setting_value("engine", "is_white")
 
-    def is_valid(self, target_square: Square) -> bool:
-        """Return True if `target_square` is valid."""
+    def is_legal(self, target_square: Square) -> bool:
+        """Return True if `target_square` is legal for a piece."""
         legal_targets: list[Square] = self._game.legal_targets(self.origin_square)
         return target_square in legal_targets
 
@@ -205,7 +205,7 @@ class SvgBoard(QSvgWidget):
         self.setCursor(Qt.CursorShape.ArrowCursor)
 
     def start_dragging(self, square: Square, piece: Piece) -> None:
-        """Start dragging `piece` on `square`."""
+        """Start dragging `piece` from `square`."""
         self.is_dragging = True
         self.dragged_piece = piece
         self.origin_square = square
@@ -239,7 +239,7 @@ class SvgBoard(QSvgWidget):
         """Return dragged piece at `cursor_point` to origin square."""
         self.is_dragging = False
 
-        if self.dragged_piece:
+        if self.origin_square is not None and self.dragged_piece is not None:
             self.start_animation(
                 cursor_point=cursor_point,
                 origin_square=self.origin_square,
@@ -254,7 +254,7 @@ class SvgBoard(QSvgWidget):
         origin_square: Square,
         dragged_piece: Piece,
     ) -> None:
-        """Animate returning `dragged_piece` to `origin_square`."""
+        """Animate returning `dragged_piece` on `origin_square`."""
         self.is_animating = True
         self.animated_piece = dragged_piece
         self.origin_square = origin_square
@@ -268,8 +268,10 @@ class SvgBoard(QSvgWidget):
         """Transform current board state into SVG data as bytes."""
         board_to_render: Board = self._game.board
 
-        if cache.dragging or cache.animation:
-            square: Square = cache.square if cache.dragging else self.origin_square
+        if cache.square is not None and cache.dragging or cache.animation:
+            square: Square | None = (
+                cache.square if cache.dragging else self.origin_square
+            )
             board_to_render = board_to_render.copy()
             board_to_render.set_piece_at(square=square, piece=None)
 
@@ -294,7 +296,7 @@ class SvgBoard(QSvgWidget):
         renderer.load(svg_piece.encode())
         return renderer
 
-    def piece_render_area(self, cursor_point: QPointF) -> QRectF:
+    def piece_render_area_at(self, cursor_point: QPointF) -> QRectF:
         """Get piece render area based on `cursor_point`."""
         return QRectF(
             cursor_point.x() - HALF_SQUARE,
@@ -318,7 +320,7 @@ class SvgBoard(QSvgWidget):
         painter: QPainter = QPainter(self)
         piece_symbol: str = piece_to_render.symbol()
         renderer: QSvgRenderer = self.svg_renderer(piece_symbol)
-        piece_render_area: QRectF = self.piece_render_area(cursor_point)
+        piece_render_area: QRectF = self.piece_render_area_at(cursor_point)
         renderer.render(painter, piece_render_area)
         painter.end()
 
@@ -342,19 +344,19 @@ class SvgBoard(QSvgWidget):
         if piece is not None and self.can_drag(piece):
             self.start_dragging(square_index, piece)
         else:
-            self._game.select_square(cursor_point)
+            self._game.select_square_at(cursor_point)
 
     def mouseMoveEvent(self, event: QMouseEvent) -> None:
-        """Update cursor shape."""
+        """Update cursor shape when hovering over board."""
         cursor_point: QPointF = self.cursor_point_from(event)
         self.update_cursor_shape_at(cursor_point)
 
     def mouseReleaseEvent(self, event: QMouseEvent) -> None:
-        """Process move or cancel piece dragging when mouse released."""
+        """Make move with dragging piece or return it back."""
         cursor_point: QPointF = self.cursor_point_from(event)
         square_index: Square = self.square_index(cursor_point)
 
-        if self.is_valid(square_index):
+        if self.is_legal(square_index):
             self.move_piece_to(square_index)
         else:
             self.return_piece_at(cursor_point)
