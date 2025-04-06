@@ -198,7 +198,11 @@ class SvgBoard(QSvgWidget):
         square_index: Square = self.square_index(cursor_point)
         piece: Piece | None = self._game.piece_at(square_index)
 
-        if self.can_drag(piece):
+        if self.is_dragging:
+            self.setCursor(Qt.CursorShape.ClosedHandCursor)
+            return
+
+        if piece is not None and self.can_drag(piece):
             self.setCursor(Qt.CursorShape.OpenHandCursor)
             return
 
