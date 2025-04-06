@@ -173,7 +173,9 @@ class Game(QObject):
 
     def legal_targets(self, square: Square | None = None) -> list[Square]:
         """Get target squares considered as legal moves for piece."""
-        selected_square: Square | None = square or self.origin_square
+        selected_square: Square | None = (
+            square if square is not None else self.origin_square
+        )
 
         if selected_square is None:
             return []
@@ -197,6 +199,9 @@ class Game(QObject):
 
     def find_legal_move(self, origin_square: Square, target_square: Square) -> None:
         """Find legal move for `origin_square` and `target_square`."""
+        if origin_square is None or target_square is None:
+            return
+
         with suppress(IllegalMoveError):
             move: Move = self.board.find_move(origin_square, target_square)
 
@@ -247,9 +252,7 @@ class Game(QObject):
 
     def is_engine_player(self) -> bool:
         """Return True if player is engine."""
-        # What must I return here to determine whether it is actually
-        # the engine player?
-        return True
+        return setting_value("engine", "is_white")
 
     def is_in_progress(self) -> bool:
         """Return True if game is in progress."""

@@ -175,7 +175,7 @@ class SvgBoard(QSvgWidget):
 
         return QPointF(x, y)
 
-    def square_index(self, cursor_point: QPointF) -> Square | None:
+    def square_index(self, cursor_point: QPointF) -> Square:
         """Get square index based on `cursor_point`."""
         return self._game.square_index(cursor_point)
 
@@ -184,9 +184,9 @@ class SvgBoard(QSvgWidget):
         self.cursor_point = event.position()
         return self.cursor_point
 
-    def can_drag(self, piece: Piece) -> bool:
+    def can_drag(self, piece: Piece | None) -> bool:
         """Return True if color of `piece` does not belong to engine."""
-        return piece.color != self._game.is_engine_player()
+        return piece is not None and piece.color != self._game.is_engine_player()
 
     def is_valid(self, target_square: Square) -> bool:
         """Return True if `target_square` is valid."""
@@ -195,14 +195,12 @@ class SvgBoard(QSvgWidget):
 
     def update_cursor_shape_at(self, cursor_point: QPointF) -> None:
         """Update cursor shape at `cursor_point`."""
-        square_index: Square | None = self.square_index(cursor_point)
+        square_index: Square = self.square_index(cursor_point)
+        piece: Piece | None = self._game.piece_at(square_index)
 
-        if square_index:
-            piece: Piece | None = self._game.piece_at(square_index)
-
-            if piece and self.can_drag(piece.color):
-                self.setCursor(Qt.CursorShape.OpenHandCursor)
-                return
+        if self.can_drag(piece):
+            self.setCursor(Qt.CursorShape.OpenHandCursor)
+            return
 
         self.setCursor(Qt.CursorShape.ArrowCursor)
 
@@ -338,13 +336,11 @@ class SvgBoard(QSvgWidget):
     def mousePressEvent(self, event: QMouseEvent) -> None:
         """Handle mouse press for piece selection or targeting."""
         cursor_point: QPointF = self.cursor_point_from(event)
-        square_index: Square | None = self.square_index(cursor_point)
+        square_index: Square = self.square_index(cursor_point)
+        piece: Piece | None = self._game.piece_at(square_index)
 
-        if square_index:
-            piece: Piece | None = self._game.piece_at(square_index)
-
-            if piece and self.can_drag(piece):
-                self.start_dragging(square_index, piece)
+        if piece is not None and self.can_drag(piece):
+            self.start_dragging(square_index, piece)
         else:
             self._game.select_square(cursor_point)
 
@@ -356,7 +352,7 @@ class SvgBoard(QSvgWidget):
     def mouseReleaseEvent(self, event: QMouseEvent) -> None:
         """Process move or cancel piece dragging when mouse released."""
         cursor_point: QPointF = self.cursor_point_from(event)
-        square_index: Square | None = self.square_index(cursor_point)
+        square_index: Square = self.square_index(cursor_point)
 
         if self.is_valid(square_index):
             self.move_piece_to(square_index)
