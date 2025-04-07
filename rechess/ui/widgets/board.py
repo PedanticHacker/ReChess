@@ -330,19 +330,19 @@ class SvgBoard(QSvgWidget):
 
     def paintEvent(self, event: QPaintEvent) -> None:
         """Render board and piece to animate."""
-        if self.dragged_piece is not None and self.is_dragging:
-            current_piece: Piece = self._game.piece_at(self.origin_square)
-
-            if current_piece.color != self.dragged_piece.color:
-                self.stop_dragging()
-
         board_svg: bytes = self.svg_data(self.board_cache())
         self.load(board_svg)
         super().paintEvent(event)
 
-        if self.is_dragging:
-            self.render_piece(self.cursor_point)
-        elif self.is_animating:
+        if self.is_dragging and self.dragged_piece is not None:
+            current_piece: Piece = self._game.piece_at(self.origin_square)
+
+            if current_piece.color != self.dragged_piece.color:
+                self.stop_dragging()
+            else:
+                self.render_piece(self.cursor_point)
+
+        if self.is_animating:
             self.render_piece(self.cursor_point, self.animated_piece)
 
     def mousePressEvent(self, event: QMouseEvent) -> None:
