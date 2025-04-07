@@ -78,6 +78,13 @@ class Game(QObject):
         """Return True if White is on turn."""
         return self.board.turn
 
+    def _initialize_state(self) -> None:
+        """Clear game history and set squares to initial value."""
+        self.arrow.clear()
+        self.moves.clear()
+        self.positions.clear()
+        self.reset_selected_squares()
+
     def _preload_sound_effects(self) -> None:
         """Preload all sound effects during initialization."""
         file_names: tuple[str, ...] = (
@@ -117,13 +124,6 @@ class Game(QObject):
         """Reset origin and target squares."""
         self.origin_square: Square | None = None
         self.target_square: Square | None = None
-
-    def _initialize_state(self) -> None:
-        """Clear game history and set squares to initial value."""
-        self.arrow.clear()
-        self.moves.clear()
-        self.positions.clear()
-        self.reset_selected_squares()
 
     def prepare_new_game(self) -> None:
         """Initialize state and reset board for new game."""
@@ -172,7 +172,7 @@ class Game(QObject):
             self.reset_selected_squares()
 
     def legal_targets(self, square: Square | None = None) -> list[Square]:
-        """Get target squares considered as legal moves for piece."""
+        """Get target squares as legal moves for piece at `square`."""
         if square is None:
             return []
 

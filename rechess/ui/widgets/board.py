@@ -240,7 +240,7 @@ class SvgBoard(QSvgWidget):
         self.stop_dragging()
 
     def return_piece_at(self, cursor_point: QPointF) -> None:
-        """Return dragged piece at `cursor_point` to its origin square."""
+        """Return dragged piece at `cursor_point` to origin square."""
         self.is_dragging = False
 
         if self.origin_square is not None and self.dragged_piece is not None:
@@ -258,7 +258,7 @@ class SvgBoard(QSvgWidget):
         origin_square: Square,
         dragged_piece: Piece,
     ) -> None:
-        """Animate returning `dragged_piece` to its `origin_square`."""
+        """Animate returning `dragged_piece` to `origin_square`."""
         self.is_animating = True
         self.animated_piece = dragged_piece
         self.origin_square = origin_square
