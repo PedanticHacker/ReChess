@@ -137,6 +137,11 @@ class SvgBoard(QSvgWidget):
     def update_color(self, property_name: str, color_value: QColor) -> None:
         """Update color based on `property_name` and `color_value`."""
         setattr(self, property_name, color_value)
+        self.clear_cache()
+
+    def clear_cache(self) -> None:
+        """Clear SVG data and renderer caches, then update board."""
+        self.orientation = setting_value("board", "orientation")
 
         self.svg_data.cache_clear()
         self.svg_renderer.cache_clear()
@@ -380,10 +385,5 @@ class SvgBoard(QSvgWidget):
 
     @Slot(Move)
     def on_move_played(self, move: Move) -> None:
-        """Update board state and clear cached SVG data."""
-        self.orientation = setting_value("board", "orientation")
-
-        self.svg_data.cache_clear()
-        self.svg_renderer.cache_clear()
-
-        self.update()
+        """Set orientation from settings and clear cached SVG data."""
+        self.clear_cache()
