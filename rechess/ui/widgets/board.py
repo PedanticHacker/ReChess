@@ -20,7 +20,6 @@ from PySide6.QtSvgWidgets import QSvgWidget
 from rechess.utils import setting_value
 
 
-ANIMATION_DURATION: Final[int] = 200
 HALF_SQUARE: Final[float] = 35.0
 SQUARE_CENTER_OFFSET: Final[float] = 55.0
 SQUARE_SIZE: Final[float] = 70.0
@@ -115,8 +114,6 @@ class SvgBoard(QSvgWidget):
         self._square_light_lastmove: QColor = QColor()
 
         self._animation: QPropertyAnimation = QPropertyAnimation(self, b"point")
-        self._animation.setDuration(ANIMATION_DURATION)
-        self._animation.setEasingCurve(QEasingCurve.Type.OutBack)
         self._animation.finished.connect(self.on_animation_finished)
 
         self.setMouseTracking(True)
