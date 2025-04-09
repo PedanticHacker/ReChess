@@ -161,8 +161,8 @@ class Game(QObject):
         if square is None:
             return []
 
-        mask: Square = BB_SQUARES[square or self.origin_square]
-        targets: Iterator[Move] = self.board.generate_legal_moves(mask)
+        square_bit: int = BB_SQUARES[square]
+        targets: Iterator[Move] = self.board.generate_legal_moves(square_bit)
         return [move.to_square for move in targets]
 
     def find_legal_move(self, origin_square: Square, target_square: Square) -> None:
