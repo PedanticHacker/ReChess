@@ -7,7 +7,7 @@ import stat
 import subprocess
 import sys
 from functools import lru_cache
-from typing import Any, Callable
+from typing import Any, Callable, Final
 
 from psutil import cpu_count, virtual_memory
 from PySide6.QtCore import QSize
@@ -44,8 +44,8 @@ def make_executable(path_to_file: str) -> None:
 
 def _available_hash() -> int:
     """Get all available RAM in megabytes to be used as hash."""
-    megabytes_factor: int = 1_048_576
-    return virtual_memory().available // megabytes_factor
+    MEGABYTES_FACTOR: Final[int] = 1_048_576
+    return virtual_memory().available // MEGABYTES_FACTOR
 
 
 def _available_threads() -> int:
