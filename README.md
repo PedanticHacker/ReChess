@@ -10,11 +10,11 @@ Here's what you need to do:
 
 1. Make sure you have Python 3.13 installed. If not, read below:
 
-    - For Windows, :point_right: [click here to download Python 3.13 installer](https://www.python.org/ftp/python/3.13.2/python-3.13.2-amd64.exe) :point_left:
+    - For Windows, :point_right: [click here to download Python 3.13 installer](https://www.python.org/ftp/python/3.13.3/python-3.13.3-amd64.exe) :point_left:
     - For Linux, execute `sudo apt-get install python3.13` in the
       terminal or execute a command applicable for the package manager
       of your Linux distribution
-    - For macOS, :point_right: [click here to download Python 3.13 installer](https://www.python.org/ftp/python/3.13.2/python-3.13.2-macos11.pkg) :point_left:
+    - For macOS, :point_right: [click here to download Python 3.13 installer](https://www.python.org/ftp/python/3.13.3/python-3.13.3-macos11.pkg) :point_left:
 
 2. Install required packages by executing this command in the terminal
    from within ReChess's top-level directory:
@@ -210,4 +210,4 @@ If you intend to integrate Stockfish in your app:
 1. Include Stockfish's copyright notice
 2. Include the GPLv3 License to comply with Stockfish's license
 
-See the `THIRD-PARTY-NOTICES.txt` file to understand how to do this.
+See the `NOTICE.txt` file to understand how to do this.
