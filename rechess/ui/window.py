@@ -448,7 +448,7 @@ class MainWindow(QMainWindow):
         settings_dialog: SettingsDialog = SettingsDialog()
 
         if self._game.is_in_progress():
-            settings_dialog.disable_profile_groups()
+            settings_dialog.disable_setting_groups()
 
         if settings_dialog.exec() == QDialog.DialogCode.Accepted:
             self.apply_saved_settings()
@@ -536,8 +536,8 @@ class MainWindow(QMainWindow):
 
     def show_analysis_ui(self) -> None:
         """Show engine analysis label and evaluation bar."""
-        self._engine_analysis_label.show()
         self._evaluation_bar.show()
+        self._engine_analysis_label.show()
 
     def hide_analysis_ui(self) -> None:
         """Hide engine analysis label and evaluation bar."""
