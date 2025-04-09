@@ -1,28 +1,15 @@
 from __future__ import annotations
 
 from contextlib import suppress
-from typing import ClassVar, Final, Iterator
+from typing import ClassVar, Iterator
 
-from chess import (
-    BB_SQUARES,
-    WHITE,
-    Board,
-    IllegalMoveError,
-    Move,
-    PieceType,
-    Square,
-    square,
-)
+from chess import BB_SQUARES, Board, IllegalMoveError, Move
 from PySide6.QtCore import QObject, QPoint, QUrl, Signal
 from PySide6.QtMultimedia import QSoundEffect
 from PySide6.QtWidgets import QDialog
 
 from rechess.ui.dialogs import PromotionDialog
 from rechess.utils import setting_value
-
-
-BOARD_MARGIN: Final[float] = 20.0
-SQUARE_SIZE: Final[float] = 70.0
 
 
 class Game(QObject):
@@ -125,6 +112,15 @@ class Game(QObject):
         self.origin_square: Square | None = None
         self.target_square: Square | None = None
 
+    def set_selected_square(self, square_index: Square) -> None:
+        """Set selected square to be `square_index`."""
+        if self.origin_square is None:
+            self.origin_square = square_index
+        else:
+            self.target_square = square_index
+            self.find_legal_move(self.origin_square, self.target_square)
+            self.reset_selected_squares()
+
     def prepare_new_game(self) -> None:
         """Initialize state and reset board for new game."""
         self._initialize_state()
@@ -160,38 +156,14 @@ class Game(QObject):
         """Reset pieces on board to initial position."""
         self.board = self.board.root()
 
-    def select_square_at(self, cursor_point: QPointF) -> None:
-        """Select square at `cursor_point`."""
-        square_index: Square = self.square_index(cursor_point)
-
-        if self.origin_square is None:
-            self.origin_square = square_index
-        else:
-            self.target_square = square_index
-            self.find_legal_move(self.origin_square, self.target_square)
-            self.reset_selected_squares()
-
     def legal_targets(self, square: Square | None = None) -> list[Square]:
         """Get target squares as legal moves for piece at `square`."""
         if square is None:
             return []
 
-        mask: Square = BB_SQUARES[square if square is not None else self.origin_square]
+        mask: Square = BB_SQUARES[square or self.origin_square]
         targets: Iterator[Move] = self.board.generate_legal_moves(mask)
         return [move.to_square for move in targets]
-
-    def square_index(self, cursor_point: QPointF) -> Square:
-        """Get square index based on `cursor_point`."""
-        if setting_value("board", "orientation") == WHITE:
-            file: float = (cursor_point.x() - BOARD_MARGIN) // SQUARE_SIZE
-            rank: float = 7 - (cursor_point.y() - BOARD_MARGIN) // SQUARE_SIZE
-        else:
-            file = 7 - (cursor_point.x() - BOARD_MARGIN) // SQUARE_SIZE
-            rank = (cursor_point.y() - BOARD_MARGIN) // SQUARE_SIZE
-
-        file_index: int = max(0, min(7, round(file)))
-        rank_index: int = max(0, min(7, round(rank)))
-        return square(file_index, rank_index)
 
     def find_legal_move(self, origin_square: Square, target_square: Square) -> None:
         """Find legal move for `origin_square` and `target_square`."""
@@ -270,4 +242,4 @@ class Game(QObject):
 
     def is_white_on_turn(self) -> bool:
         """Return True if White is on turn."""
-        return self.board.turn == WHITE
+        return self.board.turn

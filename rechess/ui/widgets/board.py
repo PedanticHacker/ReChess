@@ -3,7 +3,7 @@ from __future__ import annotations
 from functools import lru_cache
 from typing import Final, NamedTuple
 
-from chess import svg, Move, Piece
+from chess import Move, Piece, square, svg
 from PySide6.QtCore import (
     Property,
     QEasingCurve,
@@ -20,6 +20,7 @@ from PySide6.QtSvgWidgets import QSvgWidget
 from rechess.utils import setting_value
 
 
+BOARD_MARGIN: Final[float] = 20.0
 HALF_SQUARE: Final[float] = 35.0
 SQUARE_CENTER_OFFSET: Final[float] = 55.0
 SQUARE_SIZE: Final[float] = 70.0
@@ -179,7 +180,16 @@ class SvgBoard(QSvgWidget):
 
     def square_index(self, cursor_point: QPointF) -> Square:
         """Get square index based on `cursor_point`."""
-        return self._game.square_index(cursor_point)
+        if self.orientation:
+            file: float = (cursor_point.x() - BOARD_MARGIN) // SQUARE_SIZE
+            rank: float = 7 - (cursor_point.y() - BOARD_MARGIN) // SQUARE_SIZE
+        else:
+            file = 7 - (cursor_point.x() - BOARD_MARGIN) // SQUARE_SIZE
+            rank = (cursor_point.y() - BOARD_MARGIN) // SQUARE_SIZE
+
+        file_index: int = max(0, min(7, round(file)))
+        rank_index: int = max(0, min(7, round(rank)))
+        return square(file_index, rank_index)
 
     def cursor_point_from(self, event: QMouseEvent) -> QPointF:
         """Get cursor point from position data of `event`."""
@@ -347,6 +357,11 @@ class SvgBoard(QSvgWidget):
         if self.is_animating:
             self.render_piece(self.cursor_point, self.animated_piece)
 
+    def select_square_at(self, cursor_point: QPointF) -> None:
+        """Select square at `cursor_point`."""
+        square_index: Square = self.square_index(cursor_point)
+        self._game.set_selected_square(square_index)
+
     def mousePressEvent(self, event: QMouseEvent) -> None:
         """Handle mouse press for piece selection or targeting."""
         cursor_point: QPointF = self.cursor_point_from(event)
@@ -356,7 +371,7 @@ class SvgBoard(QSvgWidget):
         if piece is not None and self.can_drag(piece):
             self.start_dragging(square_index, piece)
         else:
-            self._game.select_square_at(cursor_point)
+            self.select_square_at(cursor_point)
 
     def mouseMoveEvent(self, event: QMouseEvent) -> None:
         """Update cursor shape when hovering over board."""
