@@ -129,7 +129,7 @@ class SettingsDialog(QDialog):
         self._engine_white_option.toggled.connect(self.on_edited)
         self._human_name_option.textChanged.connect(self.on_edited)
 
-    def disable_profile_groups(self) -> None:
+    def disable_setting_groups(self) -> None:
         """Disable human name and time control groups."""
         self._human_name_group.setDisabled(True)
         self._time_control_group.setDisabled(True)
