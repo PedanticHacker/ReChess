@@ -86,8 +86,8 @@ class SvgBoard(QSvgWidget):
 
     point: Property = Property(
         QPointF,
-        lambda self: self.cursor_point,
-        lambda self, value: self.set_cursor_point(value),
+        lambda self: self.animation_point,
+        lambda self, value: self.set_animation_point(value),
     )
 
     def __init__(self, game: Game) -> None:
@@ -103,6 +103,7 @@ class SvgBoard(QSvgWidget):
         self.origin_square: Square | None = None
         self.animation_board: Board | None = None
         self.cursor_point: QPointF = QPointF(0.0, 0.0)
+        self.animation_point: QPointF = QPointF(0.0, 0.0)
         self.orientation: bool = setting_value("board", "orientation")
 
         self._coord: QColor = QColor()
@@ -115,6 +116,8 @@ class SvgBoard(QSvgWidget):
         self._square_light_lastmove: QColor = QColor()
 
         self._animation: QPropertyAnimation = QPropertyAnimation(self, b"point")
+        self._animation.setDuration(350)
+        self._animation.setEasingCurve(QEasingCurve.Type.OutQuad)
         self._animation.finished.connect(self.on_animation_finished)
 
         self.setMouseTracking(True)
@@ -158,9 +161,9 @@ class SvgBoard(QSvgWidget):
             arrows=tuple(self._game.arrow),
         )
 
-    def set_cursor_point(self, value: QPointF) -> None:
-        """Set cursor point based on `value`."""
-        self.cursor_point = value
+    def set_animation_point(self, value: QPointF) -> None:
+        """Set animation point based on `value`."""
+        self.animation_point = value
 
     def square_center(self, square: Square) -> QPointF:
         """Get center point of `square`."""
@@ -275,6 +278,7 @@ class SvgBoard(QSvgWidget):
         self.animated_piece = dragged_piece
         self.origin_square = origin_square
 
+        self._animation_point = cursor_point
         self._animation.setStartValue(cursor_point)
         self._animation.setEndValue(self.square_center(origin_square))
         self._animation.start()
@@ -355,7 +359,7 @@ class SvgBoard(QSvgWidget):
                 self.render_piece(self.cursor_point)
 
         if self.is_animating:
-            self.render_piece(self.cursor_point, self.animated_piece)
+            self.render_piece(self.animation_point, self.animated_piece)
 
     def select_square_at(self, cursor_point: QPointF) -> None:
         """Select square at `cursor_point`."""
