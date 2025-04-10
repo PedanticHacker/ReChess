@@ -15,106 +15,11 @@ from PySide6.QtGui import QAction, QColor, QIcon, QPixmap
 from PySide6.QtWidgets import QApplication, QMessageBox, QPushButton
 
 
-def path_to_stockfish() -> str:
-    """Get path to executable file of Stockfish 17 engine."""
-    system: str = platform.system()
-    extension: str = ".exe" if system == "Windows" else ""
-    return f"rechess/assets/engines/stockfish-17.1/{system}/stockfish{extension}"
-
-
-def engine_file_filter() -> str:
-    """Get platform-specific filter for executable file of engine."""
-    return "Chess engine (*.exe)" if platform.system() == "Windows" else ""
-
-
-def delete_quarantine_attribute(path_to_file: str) -> None:
-    """Delete quarantine attribute for file at `path_to_file`."""
-    if platform.system() == "Darwin":
-        subprocess.run(
-            ["xattr", "-d", "com.apple.quarantine", path_to_file],
-            stderr=subprocess.DEVNULL,
-        )
-
-
-def make_executable(path_to_file: str) -> None:
-    """Make file at `path_to_file` be executable."""
-    if platform.system() == "Linux":
-        os.chmod(path_to_file, os.stat(path_to_file).st_mode | stat.S_IXUSR)
-
-
-def _available_hash() -> int:
-    """Get all available RAM in megabytes to be used as hash."""
-    MEGABYTES_FACTOR: Final[int] = 1_048_576
-    return virtual_memory().available // MEGABYTES_FACTOR
-
-
-def _available_threads() -> int:
-    """Get all available CPU threads, else at least one."""
-    cpu_threads: int | None = cpu_count()
-    return cpu_threads if cpu_threads is not None else 1
-
-
-def engine_configuration() -> dict[str, int]:
-    """Get configuration for engine based on available resources."""
-    return {"Hash": _available_hash(), "Threads": _available_threads()}
-
-
-def _settings() -> dict[str, dict[str, Any]]:
-    """Get all settings from settings.json file."""
-    with open("rechess/settings.json") as settings_file:
-        return json.load(settings_file)
-
-
-def setting_value(section: str, key: str) -> Any:
-    """Get value of `key` from `section`."""
-    settings_dict: dict[str, dict[str, Any]] = _settings()
-    return settings_dict[section][key]
-
-
-def set_setting_value(section: str, key: str, value: Any) -> None:
-    """Set `value` to `key` for `section`."""
-    settings_dict: dict[str, dict[str, Any]] = _settings()
-    settings_dict[section][key] = value
-
-    with open("rechess/settings.json", mode="w", newline="\n") as settings_file:
-        json.dump(settings_dict, settings_file, indent=2)
-        settings_file.write("\n")
-
-
-@lru_cache(maxsize=1)
-def _load_openings() -> dict[str, list[str]]:
-    """Load openings from JSON file."""
-    with open("rechess/openings.json", encoding="utf-8") as json_file:
-        return json.load(json_file)
-
-
-def find_opening(fen: str) -> list[str] | None:
-    """Get ECO code and opening name based on `fen`."""
-    return _load_openings().get(fen)
-
-
-def style_name(file_name: str) -> str:
-    """Get formatted QSS style name based on `file_name`."""
-    styles: dict[str, str] = {
-        "dark-forest": "Dark forest",
-        "dark-mint": "Dark mint",
-        "dark-nebula": "Dark nebula",
-        "dark-ocean": "Dark ocean",
-        "light-forest": "Light forest",
-        "light-mint": "Light mint",
-        "light-nebula": "Light nebula",
-        "light-ocean": "Light ocean",
-    }
-    return styles[file_name]
-
-
-def show_warning(parent: MainWindow) -> None:
-    """Warn about ReChess already running."""
-    title: str = "Warning"
-    text: str = "ReChess is already running!"
-    QMessageBox.warning(parent, title, text)
-    parent.destruct()
-    sys.exit()
+def colorize_icon(color: str) -> QIcon:
+    """Get icon in 16 by 16 pixels filled with `color`."""
+    pixmap: QPixmap = QPixmap(16, 16)
+    pixmap.fill(QColor(color))
+    return QIcon(pixmap)
 
 
 def create_action(
@@ -148,13 +53,108 @@ def create_button(icon: QIcon) -> QPushButton:
     return button
 
 
-def colorize_icon(color: str) -> QIcon:
-    """Get icon in 16 by 16 pixels filled with `color`."""
-    pixmap: QPixmap = QPixmap(16, 16)
-    pixmap.fill(QColor(color))
-    return QIcon(pixmap)
+def show_warning(parent: MainWindow) -> None:
+    """Warn about ReChess already running."""
+    title: str = "Warning"
+    text: str = "ReChess is already running!"
+    QMessageBox.warning(parent, title, text)
+    parent.destruct()
+    sys.exit()
 
 
 def svg_icon(file_name: str) -> QIcon:
     """Get SVG icon from SVG file at `file_name`."""
     return QIcon(f":/icons/{file_name}.svg")
+
+
+def _settings() -> dict[str, dict[str, Any]]:
+    """Get all settings from settings.json file."""
+    with open("rechess/settings.json") as settings_file:
+        return json.load(settings_file)
+
+
+def set_setting_value(section: str, key: str, value: Any) -> None:
+    """Set `value` to `key` for `section`."""
+    settings_dict: dict[str, dict[str, Any]] = _settings()
+    settings_dict[section][key] = value
+
+    with open("rechess/settings.json", mode="w", newline="\n") as settings_file:
+        json.dump(settings_dict, settings_file, indent=2)
+        settings_file.write("\n")
+
+
+def setting_value(section: str, key: str) -> Any:
+    """Get value of `key` from `section`."""
+    settings_dict: dict[str, dict[str, Any]] = _settings()
+    return settings_dict[section][key]
+
+
+def style_name(file_name: str) -> str:
+    """Get formatted QSS style name based on `file_name`."""
+    styles: dict[str, str] = {
+        "dark-forest": "Dark forest",
+        "dark-mint": "Dark mint",
+        "dark-nebula": "Dark nebula",
+        "dark-ocean": "Dark ocean",
+        "light-forest": "Light forest",
+        "light-mint": "Light mint",
+        "light-nebula": "Light nebula",
+        "light-ocean": "Light ocean",
+    }
+    return styles[file_name]
+
+
+def _available_hash() -> int:
+    """Get all available RAM in megabytes to be used as hash."""
+    MEGABYTES_FACTOR: Final[int] = 1_048_576
+    return virtual_memory().available // MEGABYTES_FACTOR
+
+
+def _available_threads() -> int:
+    """Get all available CPU threads, else at least one."""
+    cpu_threads: int | None = cpu_count()
+    return cpu_threads if cpu_threads is not None else 1
+
+
+def delete_quarantine_attribute(path_to_file: str) -> None:
+    """Delete quarantine attribute for file at `path_to_file`."""
+    if platform.system() == "Darwin":
+        subprocess.run(
+            ["xattr", "-d", "com.apple.quarantine", path_to_file],
+            stderr=subprocess.DEVNULL,
+        )
+
+
+def engine_configuration() -> dict[str, int]:
+    """Get configuration for engine based on available resources."""
+    return {"Hash": _available_hash(), "Threads": _available_threads()}
+
+
+def engine_file_filter() -> str:
+    """Get platform-specific filter for executable file of engine."""
+    return "Chess engine (*.exe)" if platform.system() == "Windows" else ""
+
+
+def make_executable(path_to_file: str) -> None:
+    """Make file at `path_to_file` be executable."""
+    if platform.system() == "Linux":
+        os.chmod(path_to_file, os.stat(path_to_file).st_mode | stat.S_IXUSR)
+
+
+def path_to_stockfish() -> str:
+    """Get path to executable file of Stockfish 17 engine."""
+    system: str = platform.system()
+    extension: str = ".exe" if system == "Windows" else ""
+    return f"rechess/assets/engines/stockfish-17.1/{system}/stockfish{extension}"
+
+
+@lru_cache(maxsize=1)
+def _load_openings() -> dict[str, list[str]]:
+    """Load openings from JSON file."""
+    with open("rechess/openings.json", encoding="utf-8") as json_file:
+        return json.load(json_file)
+
+
+def find_opening(fen: str) -> list[str] | None:
+    """Get ECO code and opening name based on `fen`."""
+    return _load_openings().get(fen)
