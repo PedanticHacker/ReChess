@@ -231,7 +231,7 @@ class Game(QObject):
         return self.board.is_game_over(claim_draw=True)
 
     def is_over_after(self, move: Move) -> bool:
-        """Return True if `move` would make game be over."""
+        """Return True if game is over after `move`."""
         board: Board = self.board.copy()
         board.push(move)
         return board.is_game_over(claim_draw=True)
