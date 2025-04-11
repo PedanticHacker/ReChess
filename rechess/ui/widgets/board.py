@@ -142,6 +142,8 @@ class SvgBoard(QSvgWidget):
 
     def clear_cache(self) -> None:
         """Clear SVG data and renderer caches, then update board."""
+        self.orientation = setting_value("board", "orientation")
+
         self.svg_data.cache_clear()
         self.svg_renderer.cache_clear()
 
@@ -396,3 +398,8 @@ class SvgBoard(QSvgWidget):
     def on_animation_finished(self) -> None:
         """Reset board state after animation has finished."""
         self.stop_dragging()
+
+    @Slot(Move)
+    def on_move_played(self, move: Move) -> None:
+        """Set orientation from settings and clear cached SVG data."""
+        self.clear_cache()
