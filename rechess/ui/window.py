@@ -427,9 +427,6 @@ class MainWindow(QMainWindow):
         )
         set_setting_value("board", "orientation", new_orientation)
 
-        self._board.clear_cache()
-        self._evaluation_bar.flip_chunk()
-
         self.flip_clocks()
         self.flip_player_names()
 
@@ -455,19 +452,16 @@ class MainWindow(QMainWindow):
 
     def apply_saved_settings(self) -> None:
         """Act on edited settings being saved."""
+        self._human_name_label.setText(setting_value("human", "name"))
+
         self.stop_analysis()
         self.hide_analysis_ui()
-
-        self._evaluation_bar.flip_chunk()
-        self._game.is_history = False
-        self._human_name_label.setText(setting_value("human", "name"))
 
         if not self._game.is_in_progress():
             self._black_clock.reset()
             self._white_clock.reset()
 
         if self._game.is_engine_on_turn():
-            self.flip()
             self.invoke_engine()
 
     def load_engine(self) -> None:
