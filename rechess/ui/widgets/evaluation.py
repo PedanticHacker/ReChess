@@ -15,16 +15,15 @@ class EvaluationBar(QProgressBar):
         self._animation.setEasingCurve(QEasingCurve.Type.InOutSine)
         self._animation.valueChanged.connect(self.update)
 
+        self.hide()
         self.setRange(0, 1000)
         self.setFixedSize(50, 600)
         self.setOrientation(Qt.Orientation.Vertical)
-
-        self.hide()
-        self.flip_chunk()
-
-    def flip_chunk(self) -> None:
-        """Flip chunk based on orientation."""
         self.setInvertedAppearance(setting_value("board", "orientation"))
+
+    def adjust_appearance(self, value: bool) -> None:
+        """Adjust chunk appearance based on `value`."""
+        self.setInvertedAppearance(value)
 
     def animate(self, evaluation: Score) -> None:
         """Animate chunk based on `evaluation`."""

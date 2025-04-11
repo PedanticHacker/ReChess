@@ -94,7 +94,6 @@ class SvgBoard(QSvgWidget):
         super().__init__()
 
         self._game: Game = game
-        self._game.move_played.connect(self.on_move_played)
 
         self.is_dragging: bool = False
         self.is_animating: bool = False
@@ -122,6 +121,12 @@ class SvgBoard(QSvgWidget):
 
         self.setMouseTracking(True)
 
+    def adjust_orientation(self, value: bool) -> None:
+        """Adjust board orientation based on `value`."""
+        self.orientation = value
+
+        self.clear_cache()
+
     def color_names(self) -> dict[str, str]:
         """Get color names for SVG rendering."""
         return {
@@ -138,12 +143,11 @@ class SvgBoard(QSvgWidget):
     def update_color(self, property_name: str, color_value: QColor) -> None:
         """Update color based on `property_name` and `color_value`."""
         setattr(self, property_name, color_value)
+
         self.clear_cache()
 
     def clear_cache(self) -> None:
         """Clear SVG data and renderer caches, then update board."""
-        self.orientation = setting_value("board", "orientation")
-
         self.svg_data.cache_clear()
         self.svg_renderer.cache_clear()
 
@@ -398,8 +402,3 @@ class SvgBoard(QSvgWidget):
     def on_animation_finished(self) -> None:
         """Reset board state after animation has finished."""
         self.stop_dragging()
-
-    @Slot(Move)
-    def on_move_played(self, move: Move) -> None:
-        """Set orientation from settings and clear cached SVG data."""
-        self.clear_cache()

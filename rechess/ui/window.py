@@ -20,6 +20,7 @@ from PySide6.QtWidgets import (
 
 from rechess.core import Game
 from rechess.uci import Engine
+from rechess.ui.audio import SoundEffect
 from rechess.ui.dialogs import SettingsDialog
 from rechess.ui.table import TableModel, TableView
 from rechess.ui.widgets import DigitalClock, EvaluationBar, FenEdit, SvgBoard
@@ -62,6 +63,7 @@ class MainWindow(QMainWindow):
 
         self._board: SvgBoard = SvgBoard(self._game)
         self._fen_edit: FenEdit = FenEdit(self._game)
+        self._sound_effect: SoundEffect = SoundEffect(self._game)
         self._evaluation_bar: EvaluationBar = EvaluationBar()
 
         self._engine_analysis_label: QLabel = QLabel()
@@ -97,9 +99,7 @@ class MainWindow(QMainWindow):
         self.connect_signals_to_slots()
         self.apply_style(setting_value("ui", "style"))
 
-        if self._game.is_engine_on_turn():
-            self.flip()
-            self.invoke_engine()
+        self.invoke_engine()
 
     def create_layout(self) -> None:
         """Create grid layout with fixed widget positions."""
@@ -390,6 +390,7 @@ class MainWindow(QMainWindow):
         self._engine.variation_analyzed.connect(self.on_variation_analyzed)
         self._fen_edit.fen_validated.connect(self.on_fen_validated)
         self._game.move_played.connect(self.on_move_played)
+        self._game.sound_effect_played.connect(self.on_sound_effect_played)
         self._table_view.item_selected.connect(self.on_item_selected)
         self._white_clock.time_expired.connect(self.on_white_time_expired)
 
@@ -400,9 +401,15 @@ class MainWindow(QMainWindow):
         set_setting_value("ui", "style", file_name)
         self._style_name_label.setText(f"Style: {style_name(file_name)}")
 
+    def should_invoke_engine(self) -> bool:
+        """Return True if engine has all requirements to be invoked."""
+        if self._game.is_engine_on_turn() and not self._game.is_over():
+            return True
+        return False
+
     def invoke_engine(self) -> None:
         """Invoke engine to play move."""
-        if not self._game.is_history:
+        if self.should_invoke_engine():
             QThreadPool.globalInstance().start(self._engine.play_move)
             self._game_notifications_label.setText("Thinking...")
 
@@ -416,28 +423,25 @@ class MainWindow(QMainWindow):
         self.close()
 
     def flip(self) -> None:
-        """Flip orientation and board-related widgets."""
+        """Flip board orientation and board-related widgets."""
         is_engine_white: bool = setting_value("engine", "is_white")
-        is_white_on_bottom: bool = setting_value("board", "orientation")
+        orientation: bool = setting_value("board", "orientation")
 
-        new_orientation: bool = (
-            not is_engine_white
-            if is_engine_white == is_white_on_bottom
-            else not is_white_on_bottom
-        )
+        new_orientation: bool = orientation == is_engine_white
         set_setting_value("board", "orientation", new_orientation)
 
-        self._board.clear_cache()
-        self._evaluation_bar.flip_chunk()
+        self._board.adjust_orientation(new_orientation)
+        self._evaluation_bar.adjust_appearance(new_orientation)
 
-        self.flip_clocks()
-        self.flip_player_names()
+        self.flip_clocks(new_orientation)
+        self.flip_player_names(new_orientation)
+
+    def adjust_orientation(self) -> None:
+        """Adjust orientation of board and its related widgets."""
+        self.flip()
 
     def play_move_now(self) -> None:
         """Force engine to play move on current turn."""
-        self._game.clear_arrow()
-        self._game.is_history = False
-
         self.stop_analysis()
         self.hide_analysis_ui()
 
@@ -455,20 +459,17 @@ class MainWindow(QMainWindow):
 
     def apply_saved_settings(self) -> None:
         """Act on edited settings being saved."""
-        self.stop_analysis()
-        self.hide_analysis_ui()
-
-        self._evaluation_bar.flip_chunk()
-        self._game.is_history = False
-        self._human_name_label.setText(setting_value("human", "name"))
-
         if not self._game.is_in_progress():
             self._black_clock.reset()
             self._white_clock.reset()
 
-        if self._game.is_engine_on_turn():
-            self.flip()
-            self.invoke_engine()
+        self._evaluation_bar.adjust_appearance(setting_value("board", "orientation"))
+        self._human_name_label.setText(setting_value("human", "name"))
+
+        self.stop_analysis()
+        self.hide_analysis_ui()
+
+        self.invoke_engine()
 
     def load_engine(self) -> None:
         """Show file manager to load engine."""
@@ -490,8 +491,7 @@ class MainWindow(QMainWindow):
         self._engine.load_from_file_at(path_to_file)
         self._engine_name_label.setText(self._engine.name)
 
-        if self._game.is_engine_on_turn() and not self._game.is_over():
-            self.invoke_engine()
+        self.invoke_engine()
 
     def show_about(self) -> None:
         """Show About dialog."""
@@ -505,29 +505,24 @@ class MainWindow(QMainWindow):
             ),
         )
 
-    def flip_clocks(self) -> None:
-        """Flip clocks based on orientation."""
-        is_white_on_bottom: bool = setting_value("board", "orientation")
-
+    def flip_clocks(self, orientation: bool) -> None:
+        """Flip clocks based on `orientation`."""
         self._grid_layout.removeWidget(self._black_clock)
         self._grid_layout.removeWidget(self._white_clock)
 
-        if is_white_on_bottom:
+        if orientation:
             self._grid_layout.addWidget(self._black_clock, 1, 1)
             self._grid_layout.addWidget(self._white_clock, 4, 1)
         else:
             self._grid_layout.addWidget(self._black_clock, 4, 1)
             self._grid_layout.addWidget(self._white_clock, 1, 1)
 
-    def flip_player_names(self) -> None:
-        """Flip player names based on orientation and engine color."""
-        is_engine_white: bool = setting_value("engine", "is_white")
-        is_white_on_bottom: bool = setting_value("board", "orientation")
-
+    def flip_player_names(self, orientation: bool) -> None:
+        """Flip player names based on `orientation`."""
         self._grid_layout.removeWidget(self._engine_name_label)
         self._grid_layout.removeWidget(self._human_name_label)
 
-        if is_engine_white != is_white_on_bottom:
+        if orientation:
             self._grid_layout.addWidget(self._engine_name_label, 2, 1)
             self._grid_layout.addWidget(self._human_name_label, 5, 1)
         else:
@@ -579,23 +574,22 @@ class MainWindow(QMainWindow):
 
     def refresh_ui(self) -> None:
         """Refresh current state of UI."""
+        self._game.is_history = False
+
         self._table_model.refresh_view()
         self._table_view.select_last_item()
-        self._game.is_history = False
 
         self.show_fen()
         self.show_opening()
         self.stop_analysis()
         self.hide_analysis_ui()
 
+        self.invoke_engine()
+
         if self._game.is_over():
             self._black_clock.stop_timer()
             self._white_clock.stop_timer()
             self._game_notifications_label.setText(self._game.result)
-            return
-
-        if self._game.is_engine_on_turn() and not self._game.is_over():
-            self.invoke_engine()
 
     def offer_new_game(self) -> None:
         """Show dialog offering to start new game."""
@@ -610,8 +604,8 @@ class MainWindow(QMainWindow):
 
     def start_new_game(self) -> None:
         """Start new game by resetting and clearing everything."""
-        self._game.prepare_new_game()
         self._game.is_history = False
+        self._game.prepare_new_game()
 
         self._black_clock.reset()
         self._white_clock.reset()
@@ -623,9 +617,7 @@ class MainWindow(QMainWindow):
         self.stop_analysis()
         self.hide_analysis_ui()
 
-        if self._game.is_engine_on_turn():
-            self.flip()
-            self.invoke_engine()
+        self.invoke_engine()
 
     def destruct(self) -> None:
         """Terminate engine process and destroy main window."""
@@ -640,7 +632,7 @@ class MainWindow(QMainWindow):
             "Do you really want to quit ReChess?",
         )
 
-        if answer == answer.Yes:
+        if answer == QMessageBox.StandardButton.Yes:
             self._engine.quit()
             event.accept()
         else:
@@ -657,8 +649,6 @@ class MainWindow(QMainWindow):
                 self._table_view.select_next_item()
 
             self._scroll_timer.start()
-
-        event.accept()
 
     @Slot(Move)
     def on_best_move_analyzed(self, best_move: Move) -> None:
@@ -683,6 +673,8 @@ class MainWindow(QMainWindow):
     @Slot(int)
     def on_item_selected(self, item_index: int) -> None:
         """Show move based on `item_index`."""
+        self._game.is_history = True
+
         if item_index < 0:
             self._game.clear_arrow()
             self._game.set_root_position()
@@ -692,15 +684,12 @@ class MainWindow(QMainWindow):
 
         self.show_fen()
         self.show_opening()
-
         self.stop_analysis()
         self.hide_analysis_ui()
 
-        self._game.reset_selected_squares()
-        self._game.is_history = True
-
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
+        self._game.reset_selected_squares()
 
         if self._game.is_over():
             self._game_notifications_label.setText(self._game.result)
@@ -712,6 +701,11 @@ class MainWindow(QMainWindow):
             self._game.delete_data_after(self._table_view.item_index)
             self._game.push(move)
             self.refresh_ui()
+
+    @Slot(Move)
+    def on_sound_effect_played(self, move: Move) -> None:
+        """Play sound effect for received `move`."""
+        self._sound_effect.play(move)
 
     @Slot(str)
     def on_variation_analyzed(self, variation: str) -> None:

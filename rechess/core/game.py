@@ -16,18 +16,20 @@ class Game(QObject):
     """Management for game state, moves, events, and UI interaction."""
 
     move_played: ClassVar[Signal] = Signal(Move)
+    sound_effect_played: ClassVar[Signal] = Signal(Move)
 
     def __init__(self) -> None:
         super().__init__()
 
         self.board: Board = Board()
+
         self.moves: list[str] = []
         self.positions: list[Board] = []
         self.arrow: list[tuple[Square, Square]] = []
-        self.is_history: bool = False
 
-        self._sound_effects: dict[str, QSoundEffect] = {}
-        self._preload_sound_effects()
+        self.is_history: bool = False
+        self.origin_square: Square | None = None
+        self.target_square: Square | None = None
 
         self.reset_selected_squares()
 
@@ -72,45 +74,10 @@ class Game(QObject):
         self.positions.clear()
         self.reset_selected_squares()
 
-    def _preload_sound_effects(self) -> None:
-        """Preload all sound effects during initialization."""
-        file_names: tuple[str, ...] = (
-            "game-over",
-            "check",
-            "promotion",
-            "capture",
-            "castling",
-            "move",
-        )
-
-        for file_name in file_names:
-            file_url: QUrl = QUrl(f"file:rechess/assets/audio/{file_name}.wav")
-            sound_effect: QSoundEffect = QSoundEffect(self)
-            sound_effect.setSource(file_url)
-            self._sound_effects[file_name] = sound_effect
-
-    def _sound_effect_name(self, move: Move) -> str:
-        """Get sound effect name based on `move`."""
-        if self.is_over_after(move):
-            return "game-over"
-        if self.is_check(move):
-            return "check"
-        if move.promotion:
-            return "promotion"
-        if self.board.is_capture(move):
-            return "capture"
-        if self.board.is_castling(move):
-            return "castling"
-        return "move"
-
-    def play_sound_effect(self, move: Move) -> None:
-        """Play sound effect for `move`."""
-        self._sound_effects[self._sound_effect_name(move)].play()
-
     def reset_selected_squares(self) -> None:
         """Reset origin and target squares."""
-        self.origin_square: Square | None = None
-        self.target_square: Square | None = None
+        self.origin_square = None
+        self.target_square = None
 
     def set_selected_square(self, square_index: Square) -> None:
         """Set selected square to be `square_index`."""
@@ -134,8 +101,9 @@ class Game(QObject):
 
     def push(self, move: Move) -> None:
         """Update game state by pushing `move`."""
+        self.sound_effect_played.emit(move)
+
         self.maybe_append_ellipsis()
-        self.play_sound_effect(move)
         self.set_arrow(move)
 
         new_move: str = self.board.san_and_push(move)
@@ -193,7 +161,6 @@ class Game(QObject):
 
     def set_move(self, item_index: int) -> None:
         """Set move and arrow based on `item_index`."""
-        self.clear_arrow()
         self.board = self.positions[item_index].copy()
 
         if self.board.move_stack and self.moves[item_index] != "...":
