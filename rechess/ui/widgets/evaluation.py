@@ -19,11 +19,11 @@ class EvaluationBar(QProgressBar):
         self.setRange(0, 1000)
         self.setFixedSize(50, 600)
         self.setOrientation(Qt.Orientation.Vertical)
-        self.setInvertedAppearance(setting_value("board", "orientation"))
+        self.update_chunk_appearance(setting_value("board", "orientation"))
 
-    def adjust_appearance(self, value: bool) -> None:
-        """Adjust chunk appearance based on `value`."""
-        self.setInvertedAppearance(value)
+    def update_chunk_appearance(self, orientation: bool) -> None:
+        """Update fill direction of chunk based on `orientation`."""
+        self.setInvertedAppearance(orientation)
 
     def animate(self, evaluation: Score) -> None:
         """Animate chunk based on `evaluation`."""

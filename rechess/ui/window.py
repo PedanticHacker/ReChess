@@ -99,6 +99,7 @@ class MainWindow(QMainWindow):
         self.connect_signals_to_slots()
         self.apply_style(setting_value("ui", "style"))
 
+        self.align_orientation_to_engine()
         self.invoke_engine()
 
     def create_layout(self) -> None:
@@ -407,9 +408,9 @@ class MainWindow(QMainWindow):
             return True
         return False
 
-    def invoke_engine(self) -> None:
+    def invoke_engine(self, by_force: bool = False) -> None:
         """Invoke engine to play move."""
-        if self.should_invoke_engine():
+        if self.should_invoke_engine() or by_force:
             QThreadPool.globalInstance().start(self._engine.play_move)
             self._game_notifications_label.setText("Thinking...")
 
@@ -422,36 +423,34 @@ class MainWindow(QMainWindow):
         """Trigger close event of main window."""
         self.close()
 
-    def should_flip(self) -> bool:
-        """Return True if orientation should flip."""
-        is_engine_white: bool = setting_value("engine", "is_white")
-        orientation: bool = setting_value("board", "orientation")
-
-        return (
-            not is_engine_white if orientation == is_engine_white else not orientation
-        )
-
     def flip(self) -> None:
-        """Flip board orientation and board-related widgets."""
-        new_orientation: bool = not setting_value("board", "orientation")
-        set_setting_value("board", "orientation", new_orientation)
+        """Flip current orientation from settings and update it."""
+        required_orientation: bool = not setting_value("board", "orientation")
+        set_setting_value("board", "orientation", required_orientation)
+        self.update_orientation()
 
-        self._board.adjust_orientation(new_orientation)
-        self._evaluation_bar.adjust_appearance(new_orientation)
+    def align_orientation_to_engine(self) -> None:
+        """Align board orientation to color of engine pieces."""
+        required_orientation: bool = not setting_value("engine", "is_white")
+        set_setting_value("board", "orientation", required_orientation)
+        self.update_orientation()
 
-        self.flip_clocks(new_orientation)
-        self.flip_player_names(new_orientation)
+    def update_orientation(self) -> None:
+        """Align board orientation with board-related widgets."""
+        current_orientation: bool = setting_value("board", "orientation")
 
-    def adjust_orientation(self) -> None:
-        """Adjust board orientation and board-related widgets."""
-        self.flip() if self.should_flip() else None
+        self._board.update_orientation(current_orientation)
+        self._evaluation_bar.update_chunk_appearance(current_orientation)
+
+        self.flip_clocks(current_orientation)
+        self.flip_player_names(current_orientation)
 
     def play_move_now(self) -> None:
         """Force engine to play move on current turn."""
         self.stop_analysis()
         self.hide_analysis_ui()
 
-        self.invoke_engine()
+        self.invoke_engine(by_force=True)
 
     def show_settings_dialog(self) -> None:
         """Show dialog to edit settings."""
@@ -469,12 +468,12 @@ class MainWindow(QMainWindow):
             self._black_clock.reset()
             self._white_clock.reset()
 
-        self._evaluation_bar.adjust_appearance(setting_value("board", "orientation"))
         self._human_name_label.setText(setting_value("human", "name"))
 
         self.stop_analysis()
         self.hide_analysis_ui()
 
+        self.align_orientation_to_engine()
         self.invoke_engine()
 
     def load_engine(self) -> None:
@@ -520,20 +519,20 @@ class MainWindow(QMainWindow):
             self._grid_layout.addWidget(self._black_clock, 1, 1)
             self._grid_layout.addWidget(self._white_clock, 4, 1)
         else:
-            self._grid_layout.addWidget(self._black_clock, 4, 1)
             self._grid_layout.addWidget(self._white_clock, 1, 1)
+            self._grid_layout.addWidget(self._black_clock, 4, 1)
 
     def flip_player_names(self, orientation: bool) -> None:
         """Flip player names based on `orientation`."""
         self._grid_layout.removeWidget(self._engine_name_label)
         self._grid_layout.removeWidget(self._human_name_label)
 
-        if orientation:
+        if orientation == setting_value("engine", "is_white"):
+            self._grid_layout.addWidget(self._human_name_label, 2, 1)
+            self._grid_layout.addWidget(self._engine_name_label, 5, 1)
+        else:
             self._grid_layout.addWidget(self._engine_name_label, 2, 1)
             self._grid_layout.addWidget(self._human_name_label, 5, 1)
-        else:
-            self._grid_layout.addWidget(self._engine_name_label, 5, 1)
-            self._grid_layout.addWidget(self._human_name_label, 2, 1)
 
     def show_analysis_ui(self) -> None:
         """Show engine analysis label and evaluation bar."""
@@ -620,9 +619,11 @@ class MainWindow(QMainWindow):
         self._openings_label.clear()
 
         self.show_fen()
+
         self.stop_analysis()
         self.hide_analysis_ui()
 
+        self.align_orientation_to_engine()
         self.invoke_engine()
 
     def destruct(self) -> None:

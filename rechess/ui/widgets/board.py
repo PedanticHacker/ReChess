@@ -121,12 +121,6 @@ class SvgBoard(QSvgWidget):
 
         self.setMouseTracking(True)
 
-    def adjust_orientation(self, value: bool) -> None:
-        """Adjust board orientation based on `value`."""
-        self.orientation = value
-
-        self.clear_cache()
-
     def color_names(self) -> dict[str, str]:
         """Get color names for SVG rendering."""
         return {
@@ -143,6 +137,12 @@ class SvgBoard(QSvgWidget):
     def update_color(self, property_name: str, color_value: QColor) -> None:
         """Update color based on `property_name` and `color_value`."""
         setattr(self, property_name, color_value)
+
+        self.clear_cache()
+
+    def update_orientation(self, orientation: bool) -> None:
+        """Update board orientation based on `orientation`."""
+        self.orientation = orientation
 
         self.clear_cache()
 
