@@ -69,9 +69,10 @@ class Game(QObject):
 
     def _initialize_state(self) -> None:
         """Clear game history and set squares to initial value."""
-        self.arrow.clear()
         self.moves.clear()
         self.positions.clear()
+
+        self.clear_arrow()
         self.reset_selected_squares()
 
     def reset_selected_squares(self) -> None:

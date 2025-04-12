@@ -447,6 +447,8 @@ class MainWindow(QMainWindow):
 
     def play_move_now(self) -> None:
         """Force engine to play move on current turn."""
+        self._game.clear_arrow()
+
         self.stop_analysis()
         self.hide_analysis_ui()
 
@@ -586,6 +588,7 @@ class MainWindow(QMainWindow):
 
         self.show_fen()
         self.show_opening()
+
         self.stop_analysis()
         self.hide_analysis_ui()
 
