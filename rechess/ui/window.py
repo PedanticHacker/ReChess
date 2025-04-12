@@ -422,12 +422,18 @@ class MainWindow(QMainWindow):
         """Trigger close event of main window."""
         self.close()
 
-    def flip(self) -> None:
-        """Flip board orientation and board-related widgets."""
+    def should_flip(self) -> bool:
+        """Return True if orientation should flip."""
         is_engine_white: bool = setting_value("engine", "is_white")
         orientation: bool = setting_value("board", "orientation")
 
-        new_orientation: bool = orientation == is_engine_white
+        return (
+            not is_engine_white if orientation == is_engine_white else not orientation
+        )
+
+    def flip(self) -> None:
+        """Flip board orientation and board-related widgets."""
+        new_orientation: bool = not setting_value("board", "orientation")
         set_setting_value("board", "orientation", new_orientation)
 
         self._board.adjust_orientation(new_orientation)
@@ -437,8 +443,8 @@ class MainWindow(QMainWindow):
         self.flip_player_names(new_orientation)
 
     def adjust_orientation(self) -> None:
-        """Adjust orientation of board and its related widgets."""
-        self.flip()
+        """Adjust board orientation and board-related widgets."""
+        self.flip() if self.should_flip() else None
 
     def play_move_now(self) -> None:
         """Force engine to play move on current turn."""
