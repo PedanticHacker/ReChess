@@ -36,7 +36,7 @@ from rechess.utils import (
 )
 
 
-THROTTLING_MILLISECONDS: Final[int] = 160
+THROTTLING_MILLISECONDS: Final[int] = 180
 
 
 class ClockColor(StrEnum):
