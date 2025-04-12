@@ -175,11 +175,9 @@ class Game(QObject):
             del self.moves[after_item_index]
             del self.positions[after_item_index]
 
-    def is_check(self, move: Move) -> bool:
+    def gives_check(self, move: Move) -> bool:
         """Return True if `move` puts opponent's king in check."""
-        board: Board = self.board.copy()
-        board.push(move)
-        return board.is_check()
+        return self.board.gives_check(move)
 
     def is_engine_on_turn(self) -> bool:
         """Return True if engine is on turn."""

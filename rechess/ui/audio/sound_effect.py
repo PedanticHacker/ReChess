@@ -34,7 +34,7 @@ class SoundEffect:
         """Get name of sound effect based on `move`."""
         if self._game.is_over_after(move):
             return "game-over"
-        if self._game.is_check(move):
+        if self._game.gives_check(move):
             return "check"
         if move.promotion is not None:
             return "promotion"
