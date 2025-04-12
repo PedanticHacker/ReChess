@@ -31,7 +31,7 @@ class SoundEffect:
             self._sound_effects[file_name] = sound_effect
 
     def _sound_effect_name(self, move: Move) -> str:
-        """Get name of sound effect for `move`."""
+        """Get name of sound effect based on `move`."""
         if self._game.is_over_after(move):
             return "game-over"
         if self._game.is_check(move):
