@@ -12,7 +12,7 @@ class EvaluationBar(QProgressBar):
         super().__init__()
 
         self._animation: QPropertyAnimation = QPropertyAnimation(self, b"value")
-        self._animation.setEasingCurve(QEasingCurve.Type.InOutSine)
+        self._animation.setEasingCurve(QEasingCurve.Type.InOutCubic)
         self._animation.valueChanged.connect(self.update)
 
         self.hide()

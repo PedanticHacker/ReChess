@@ -116,7 +116,7 @@ class SvgBoard(QSvgWidget):
 
         self._animation: QPropertyAnimation = QPropertyAnimation(self, b"point")
         self._animation.setDuration(350)
-        self._animation.setEasingCurve(QEasingCurve.Type.OutQuad)
+        self._animation.setEasingCurve(QEasingCurve.Type.OutCubic)
         self._animation.finished.connect(self.on_animation_finished)
 
         self.setMouseTracking(True)
