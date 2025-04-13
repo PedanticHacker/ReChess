@@ -130,7 +130,7 @@ def delete_quarantine_attribute(path_to_file: str) -> None:
         )
 
 
-def engine_configuration() -> dict[str, int]:
+def engine_configuration() -> dict[str, Any]:
     """Get configuration for engine based on available resources."""
     return {
         "Hash": _available_hash(),
