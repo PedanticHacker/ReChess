@@ -53,7 +53,7 @@ def create_button(icon: QIcon) -> QPushButton:
     return button
 
 
-def show_warning(parent: MainWindow) -> None:
+def show_warning(parent: QWidget) -> None:
     """Warn about ReChess already running."""
     title: str = "Warning"
     text: str = "ReChess is already running!"
