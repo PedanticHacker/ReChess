@@ -116,11 +116,6 @@ def _available_threads() -> int:
     return cpu_threads if cpu_threads is not None else 1
 
 
-def _ponder_status() -> bool:
-    """Get current status of engine ponder option."""
-    return setting_value("engine", "is_ponder_on")
-
-
 def delete_quarantine_attribute(path_to_file: str) -> None:
     """Delete quarantine attribute for file at `path_to_file`."""
     if platform.system() == "Darwin":
@@ -130,13 +125,9 @@ def delete_quarantine_attribute(path_to_file: str) -> None:
         )
 
 
-def engine_configuration() -> dict[str, Any]:
+def engine_configuration() -> dict[str, int]:
     """Get configuration for engine based on available resources."""
-    return {
-        "Hash": _available_hash(),
-        "Threads": _available_threads(),
-        "Ponder": _ponder_status(),
-    }
+    return {"Hash": _available_hash(), "Threads": _available_threads()}
 
 
 def engine_file_filter() -> str:

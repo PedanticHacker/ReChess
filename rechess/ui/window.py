@@ -470,7 +470,6 @@ class MainWindow(QMainWindow):
             self._black_clock.reset()
             self._white_clock.reset()
 
-        self._engine.apply_configuration()
         self._human_name_label.setText(setting_value("human", "name"))
 
         self.stop_analysis()
