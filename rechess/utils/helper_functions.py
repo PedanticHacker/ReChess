@@ -73,6 +73,12 @@ def _settings() -> dict[str, dict[str, Any]]:
         return json.load(settings_file)
 
 
+def setting_value(section: str, key: str) -> Any:
+    """Get value of `key` from `section`."""
+    settings_dict: dict[str, dict[str, Any]] = _settings()
+    return settings_dict[section][key]
+
+
 def set_setting_value(section: str, key: str, value: Any) -> None:
     """Set `value` to `key` for `section`."""
     settings_dict: dict[str, dict[str, Any]] = _settings()
@@ -81,12 +87,6 @@ def set_setting_value(section: str, key: str, value: Any) -> None:
     with open("rechess/settings.json", mode="w", newline="\n") as settings_file:
         json.dump(settings_dict, settings_file, indent=2)
         settings_file.write("\n")
-
-
-def setting_value(section: str, key: str) -> Any:
-    """Get value of `key` from `section`."""
-    settings_dict: dict[str, dict[str, Any]] = _settings()
-    return settings_dict[section][key]
 
 
 def style_name(file_name: str) -> str:
@@ -104,6 +104,15 @@ def style_name(file_name: str) -> str:
     return styles[file_name]
 
 
+def delete_quarantine_attribute(path_to_file: str) -> None:
+    """Delete quarantine attribute for file at `path_to_file`."""
+    if platform.system() == "Darwin":
+        subprocess.run(
+            ["xattr", "-d", "com.apple.quarantine", path_to_file],
+            stderr=subprocess.DEVNULL,
+        )
+
+
 def _available_hash() -> int:
     """Get all available RAM in megabytes to be used as hash."""
     MEGABYTES_FACTOR: Final[int] = 1_048_576
@@ -114,15 +123,6 @@ def _available_threads() -> int:
     """Get all available CPU threads, else at least one."""
     cpu_threads: int | None = cpu_count()
     return cpu_threads if cpu_threads is not None else 1
-
-
-def delete_quarantine_attribute(path_to_file: str) -> None:
-    """Delete quarantine attribute for file at `path_to_file`."""
-    if platform.system() == "Darwin":
-        subprocess.run(
-            ["xattr", "-d", "com.apple.quarantine", path_to_file],
-            stderr=subprocess.DEVNULL,
-        )
 
 
 def engine_configuration() -> dict[str, int]:
