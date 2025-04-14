@@ -14,7 +14,7 @@ from PySide6.QtWidgets import QAbstractItemView, QHeaderView, QTableView
 
 
 class TableView(QTableView):
-    """View for displaying items in table."""
+    """View for displaying move history in SAN format."""
 
     item_selected: ClassVar[Signal] = Signal(int)
 
@@ -37,20 +37,20 @@ class TableView(QTableView):
 
     @property
     def item_index(self) -> int:
-        """Get item index based on model index."""
+        """Get index of selected ply."""
         current_model_index: QModelIndex = self.selectionModel().currentIndex()
         return 2 * current_model_index.row() + current_model_index.column()
 
     @property
     def previous_model_index(self) -> QModelIndex:
-        """Get model index of previous item."""
+        """Get model index of previous ply."""
         previous_row: int = (self.item_index - 1) // 2
         previous_column: int = (self.item_index - 1) % 2
         return self.model().index(previous_row, previous_column)
 
     @property
     def next_model_index(self) -> QModelIndex:
-        """Get model index of next item."""
+        """Get model index of next ply."""
         all_rows: int = self.model().rowCount()
         next_row: int = (self.item_index + 1) // 2
         next_column: int = (self.item_index + 1) % 2
@@ -61,20 +61,20 @@ class TableView(QTableView):
         return QModelIndex()
 
     def select_last_item(self) -> None:
-        """Select last item."""
+        """Select most recently played ply."""
         last_row: int = self.model().rowCount() - 1
         last_column: int = 1 if self.model().index(last_row, 1).data() else 0
         last_model_index: QModelIndex = self.model().index(last_row, last_column)
         self.select_model_index(last_model_index)
 
     def select_previous_item(self) -> None:
-        """Select previous item."""
+        """Select previous ply in history."""
         if self.item_index == 0 and self.model().index(0, 0).data() == "...":
             return
         self.select_model_index(self.previous_model_index)
 
     def select_next_item(self) -> None:
-        """Select next item."""
+        """Select next ply in history."""
         if self.item_index < 0:
             next_model_index: QModelIndex = self.model().index(0, 0)
         else:
@@ -84,7 +84,7 @@ class TableView(QTableView):
             self.select_model_index(next_model_index)
 
     def select_model_index(self, model_index: QModelIndex) -> None:
-        """Select item based on `model_index`."""
+        """Select ply based on `model_index`."""
         self.selectionModel().setCurrentIndex(
             model_index,
             QItemSelectionModel.SelectionFlag.ClearAndSelect,
@@ -95,7 +95,7 @@ class TableView(QTableView):
         event.ignore()
 
     def keyPressEvent(self, event: QKeyEvent) -> None:
-        """Select item by pressing left or right keyboard arrow key."""
+        """Select ply using left/right arrow keys."""
         if event.key() == Qt.Key.Key_Left:
             self.select_previous_item()
         elif event.key() == Qt.Key.Key_Right:
@@ -103,5 +103,5 @@ class TableView(QTableView):
 
     @Slot()
     def on_current_changed(self) -> None:
-        """Emit item index based on current selection."""
+        """Emit item index of selected ply."""
         self.item_selected.emit(self.item_index)

@@ -1,4 +1,6 @@
-from chess import Color, PieceType
+from __future__ import annotations
+
+from chess import BISHOP, KNIGHT, PAWN, QUEEN, ROOK
 from PySide6.QtWidgets import QDialog, QHBoxLayout, QPushButton
 
 from rechess.utils import create_button, svg_icon
@@ -11,15 +13,13 @@ class PromotionDialog(QDialog):
         super().__init__()
 
         self._turn: Color = turn
-        self._piece_type: PieceType = 0
 
-        self.set_title()
+        self._piece_type: PieceType = PAWN
+
         self.create_buttons()
         self.set_horizontal_layout()
         self.connect_signals_to_slots()
 
-    def set_title(self) -> None:
-        """Set dialog title to be Pawn Promotion."""
         self.setWindowTitle("Pawn Promotion")
 
     def create_buttons(self) -> None:
@@ -54,22 +54,22 @@ class PromotionDialog(QDialog):
 
     def on_queen_button_clicked(self) -> None:
         """Set piece type to queen."""
-        self._piece_type = 5
+        self._piece_type = QUEEN
         self.accept()
 
     def on_rook_button_clicked(self) -> None:
         """Set piece type to rook."""
-        self._piece_type = 4
+        self._piece_type = ROOK
         self.accept()
 
     def on_bishop_button_clicked(self) -> None:
         """Set piece type to bishop."""
-        self._piece_type = 3
+        self._piece_type = BISHOP
         self.accept()
 
     def on_knight_button_clicked(self) -> None:
         """Set piece type to knight."""
-        self._piece_type = 2
+        self._piece_type = KNIGHT
         self.accept()
 
     @property

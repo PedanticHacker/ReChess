@@ -4,8 +4,7 @@ from contextlib import suppress
 from typing import ClassVar, Iterator
 
 from chess import BB_SQUARES, Board, IllegalMoveError, Move
-from PySide6.QtCore import QObject, QPoint, QUrl, Signal
-from PySide6.QtMultimedia import QSoundEffect
+from PySide6.QtCore import QObject, Signal
 from PySide6.QtWidgets import QDialog
 
 from rechess.ui.dialogs import PromotionDialog
@@ -13,7 +12,7 @@ from rechess.utils import setting_value
 
 
 class Game(QObject):
-    """Management for game state, moves, events, and UI interaction."""
+    """Management of game state, logic, and events."""
 
     move_played: ClassVar[Signal] = Signal(Move)
     sound_effect_played: ClassVar[Signal] = Signal(Move)

@@ -208,7 +208,7 @@ class SvgBoard(QSvgWidget):
         return piece is not None and piece.color != setting_value("engine", "is_white")
 
     def is_legal(self, target_square: Square) -> bool:
-        """Return True if `target_square` is legal for a piece."""
+        """Return True if `target_square` is legal for dragged piece."""
         legal_targets: list[Square] = self._game.legal_targets(self.origin_square)
         return target_square in legal_targets
 

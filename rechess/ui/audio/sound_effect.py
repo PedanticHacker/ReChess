@@ -5,7 +5,7 @@ from PySide6.QtMultimedia import QSoundEffect
 
 
 class SoundEffect:
-    """Audio management of sound efects for specific moves in game."""
+    """Playback of sound effects for moves."""
 
     def __init__(self, game: Game) -> None:
         self._game: Game = game

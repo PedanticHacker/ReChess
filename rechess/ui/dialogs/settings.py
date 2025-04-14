@@ -35,14 +35,11 @@ class SettingsDialog(QDialog):
         self._button_box: QDialogButtonBox = QDialogButtonBox(Save | Cancel)
         self._button_box.button(Save).setDisabled(True)
 
-        self.set_title()
         self.create_groups()
         self.create_options()
         self.set_vertical_layout()
         self.connect_signals_to_slots()
 
-    def set_title(self) -> None:
-        """Set dialog title to be Settings."""
         self.setWindowTitle("Settings")
 
     def create_groups(self) -> None:
@@ -93,7 +90,7 @@ class SettingsDialog(QDialog):
         self._human_name_option.setText(setting_value("human", "name"))
 
     def set_vertical_layout(self) -> None:
-        """Set dialog layout for widgets to be vertically arranged."""
+        """Set dialog layout for widgets to be arranged vertically."""
         human_name_layout: QVBoxLayout = QVBoxLayout()
         human_name_layout.addWidget(self._human_name_option)
         self._human_name_group.setLayout(human_name_layout)
@@ -152,7 +149,7 @@ class SettingsDialog(QDialog):
 
     @Slot()
     def on_accepted(self) -> None:
-        """Save settings for accepted dialog by Save button pressed."""
+        """Save edited settings."""
         set_setting_value(
             section="clock",
             key="time",

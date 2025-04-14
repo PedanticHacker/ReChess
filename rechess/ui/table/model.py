@@ -9,30 +9,27 @@ from PySide6.QtCore import (
 
 
 class TableModel(QAbstractTableModel):
-    """Model for managing items in table."""
+    """Model for storing move history in SAN format."""
 
-    def __init__(self, items: list[str]) -> None:
+    def __init__(self, plies: list[str]) -> None:
         super().__init__()
 
-        self._items: list[str] = items
+        self._plies: list[str] = plies
 
     def data(
         self,
         index: QModelIndex | QPersistentModelIndex,
         role: int = Qt.ItemDataRole.DisplayRole,
     ) -> Any:
-        """Get item at `index`."""
+        """Get SAN representation for ply at `index`."""
         if role == Qt.ItemDataRole.DisplayRole:
-            item_index: int = 2 * index.row() + index.column()
+            ply_index: int = 2 * index.row() + index.column()
 
-            if 0 <= item_index < len(self._items):
-                return self._items[item_index]
+            if 0 <= ply_index < len(self._plies):
+                return self._plies[ply_index]
 
-    def flags(
-        self,
-        index: QModelIndex | QPersistentModelIndex,
-    ) -> Qt.ItemFlag:
-        """Provide flags for item at `index`."""
+    def flags(self, index: QModelIndex | QPersistentModelIndex) -> Qt.ItemFlag:
+        """Get interaction state based on data existence at `index`."""
         if self.data(index):
             return Qt.ItemFlag.ItemIsEnabled | Qt.ItemFlag.ItemIsSelectable
         else:
@@ -42,15 +39,15 @@ class TableModel(QAbstractTableModel):
         self,
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
-        """Provide as many rows as half of all items."""
-        all_items = len(self._items) + 1
-        return all_items // 2
+        """Get count of rows needed for representing moves."""
+        all_plies: int = len(self._plies) + 1
+        return all_plies // 2
 
     def columnCount(
         self,
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
-        """Provide two columns for all items."""
+        """Get fixed count of two columns for White/Black plies."""
         return 2
 
     def headerData(
@@ -59,7 +56,7 @@ class TableModel(QAbstractTableModel):
         orientation: Qt.Orientation,
         role: int = Qt.ItemDataRole.DisplayRole,
     ) -> Any:
-        """Get column headers and row numbers."""
+        """Get 'White'/'Black' column labels and numbers for rows."""
         if role == Qt.ItemDataRole.DisplayRole:
             if orientation == Qt.Orientation.Horizontal:
                 return ["White", "Black"][section]
@@ -68,9 +65,9 @@ class TableModel(QAbstractTableModel):
                 return section + 1
 
     def reset(self) -> None:
-        """Reset model by clearing all items."""
+        """Clear stored move history data from model."""
         self.beginResetModel()
-        self._items.clear()
+        self._plies.clear()
         self.endResetModel()
 
     def refresh_view(self) -> None:
