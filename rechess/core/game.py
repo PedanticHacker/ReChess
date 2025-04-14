@@ -26,6 +26,7 @@ class Game(QObject):
         self.positions: list[Board] = []
         self.arrow: list[tuple[Square, Square]] = []
 
+        self.move_index: int = -1
         self.is_history: bool = False
         self.origin_square: Square | None = None
         self.target_square: Square | None = None
@@ -68,6 +69,8 @@ class Game(QObject):
 
     def _initialize_state(self) -> None:
         """Clear game history and set squares to initial value."""
+        self.move_index = -1
+
         self.moves.clear()
         self.positions.clear()
 
@@ -101,10 +104,14 @@ class Game(QObject):
 
     def push(self, move: Move) -> None:
         """Update game state by pushing `move`."""
+        if not self.board.is_legal(move):
+            return
+
+        self.set_arrow(move)
         self.sound_effect_played.emit(move)
 
         self.maybe_append_ellipsis()
-        self.set_arrow(move)
+        self.delete_data_after_index()
 
         new_move: str = self.board.san_and_push(move)
         self.moves.append(new_move)
@@ -122,6 +129,7 @@ class Game(QObject):
 
     def set_root_position(self) -> None:
         """Reset pieces on board to initial position."""
+        self.move_index = -1
         self.board = self.board.root()
 
     def legal_targets(self, square: Square | None = None) -> list[Square]:
@@ -161,19 +169,20 @@ class Game(QObject):
 
     def set_move(self, item_index: int) -> None:
         """Set move and arrow based on `item_index`."""
+        self.move_index = item_index
         self.board = self.positions[item_index].copy()
 
         if self.board.move_stack and self.moves[item_index] != "...":
             self.set_arrow(self.board.move_stack[-1])
 
-    def delete_data_after(self, item_index: int) -> None:
-        """Delete moves and positions after `item_index`."""
-        if item_index < 0:
-            self._initialize_state()
-        else:
-            after_item_index: slice = slice(item_index + 1, len(self.moves))
-            del self.moves[after_item_index]
-            del self.positions[after_item_index]
+    def delete_data_after_index(self) -> None:
+        """Delete moves and positions after internal move index."""
+        last_move_index: int = len(self.moves) - 1
+
+        if self.move_index < last_move_index:
+            after_move_index: slice = slice(self.move_index + 1, len(self.moves))
+            del self.moves[after_move_index]
+            del self.positions[after_move_index]
 
     def gives_check(self, move: Move) -> bool:
         """Return True if `move` puts opponent's king in check."""

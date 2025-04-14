@@ -707,10 +707,8 @@ class MainWindow(QMainWindow):
     @Slot(Move)
     def on_move_played(self, move: Move) -> None:
         """Play `move` and refresh UI."""
-        if self._game.is_legal(move):
-            self._game.delete_data_after(self._table_view.item_index)
-            self._game.push(move)
-            self.refresh_ui()
+        self._game.push(move)
+        self.refresh_ui()
 
     @Slot(Move)
     def on_sound_effect_played(self, move: Move) -> None:
