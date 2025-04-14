@@ -22,7 +22,7 @@ from rechess.core import Game
 from rechess.uci import Engine
 from rechess.ui.audio import SoundEffect
 from rechess.ui.dialogs import SettingsDialog
-from rechess.ui.table import TableModel, TableViewer
+from rechess.ui.table import TableModel, TableView
 from rechess.ui.widgets import DigitalClock, EvaluationBar, FenEditor, SvgBoard
 from rechess.utils import (
     colorize_icon,
@@ -56,7 +56,7 @@ class MainWindow(QMainWindow):
         self._engine: Engine = Engine(self._game)
 
         self._table_model: TableModel = TableModel(self._game.moves)
-        self._table_viewer: TableViewer = TableViewer(self._table_model)
+        self._table_view: TableView = TableView(self._table_model)
 
         self._black_clock: DigitalClock = DigitalClock(ClockColor.Black)
         self._white_clock: DigitalClock = DigitalClock(ClockColor.White)
@@ -108,7 +108,7 @@ class MainWindow(QMainWindow):
 
         self._grid_layout.addWidget(self._black_clock, 1, 1)
         self._grid_layout.addWidget(self._board, 1, 2, 4, 1)
-        self._grid_layout.addWidget(self._table_viewer, 1, 3, 4, 1)
+        self._grid_layout.addWidget(self._table_view, 1, 3, 4, 1)
         self._grid_layout.addWidget(self._evaluation_bar, 1, 4, 4, 1)
         self._grid_layout.addWidget(self._engine_analysis_label, 1, 5, 4, 1)
         self._grid_layout.addWidget(self._engine_name_label, 2, 1)
@@ -392,7 +392,7 @@ class MainWindow(QMainWindow):
         self._fen_editor.fen_validated.connect(self.on_fen_validated)
         self._game.move_played.connect(self.on_move_played)
         self._game.sound_effect_played.connect(self.on_sound_effect_played)
-        self._table_viewer.item_selected.connect(self.on_item_selected)
+        self._table_view.item_selected.connect(self.on_item_selected)
         self._white_clock.time_expired.connect(self.on_white_time_expired)
 
     def apply_style(self, file_name: str) -> None:
@@ -584,7 +584,7 @@ class MainWindow(QMainWindow):
         self._game.is_history = False
 
         self._table_model.refresh_view()
-        self._table_viewer.select_last_item()
+        self._table_view.select_last_item()
 
         self.show_fen()
         self.show_opening()
@@ -654,9 +654,9 @@ class MainWindow(QMainWindow):
             scroll_step: int = event.angleDelta().y()
 
             if scroll_step > 0:
-                self._table_viewer.select_previous_item()
+                self._table_view.select_previous_item()
             elif scroll_step < 0:
-                self._table_viewer.select_next_item()
+                self._table_view.select_next_item()
 
             self._scroll_timer.start()
 
@@ -708,7 +708,7 @@ class MainWindow(QMainWindow):
     def on_move_played(self, move: Move) -> None:
         """Play `move` and refresh UI."""
         if self._game.is_legal(move):
-            self._game.delete_data_after(self._table_viewer.item_index)
+            self._game.delete_data_after(self._table_view.item_index)
             self._game.push(move)
             self.refresh_ui()
 

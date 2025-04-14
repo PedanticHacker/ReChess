@@ -1,5 +1,5 @@
 from .model import TableModel
-from .view import TableViewer
+from .view import TableView
 
 
-__all__: list[str] = ["TableModel", "TableViewer"]
+__all__: list[str] = ["TableModel", "TableView"]

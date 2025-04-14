@@ -13,8 +13,8 @@ from PySide6.QtCore import (
 from PySide6.QtWidgets import QAbstractItemView, QHeaderView, QTableView
 
 
-class TableViewer(QTableView):
-    """Viewer for move history in SAN format."""
+class TableView(QTableView):
+    """View for move history in SAN format."""
 
     item_selected: ClassVar[Signal] = Signal(int)
 
