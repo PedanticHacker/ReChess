@@ -9,7 +9,7 @@ from PySide6.QtCore import (
 
 
 class TableModel(QAbstractTableModel):
-    """Model for storing move history in SAN format."""
+    """Model for move history in SAN format."""
 
     def __init__(self, moves: list[str]) -> None:
         super().__init__()
