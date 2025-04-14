@@ -6,7 +6,7 @@ from rechess.utils import setting_value
 
 
 class EvaluationBar(QProgressBar):
-    """Vertical bar with animatable chunk showing evaluation score."""
+    """Vertical bar with animatable chunk diplaying evaluation score."""
 
     def __init__(self) -> None:
         super().__init__()

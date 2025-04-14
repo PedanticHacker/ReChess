@@ -11,22 +11,22 @@ from PySide6.QtCore import (
 class TableModel(QAbstractTableModel):
     """Model for storing move history in SAN format."""
 
-    def __init__(self, plies: list[str]) -> None:
+    def __init__(self, moves: list[str]) -> None:
         super().__init__()
 
-        self._plies: list[str] = plies
+        self._moves: list[str] = moves
 
     def data(
         self,
         index: QModelIndex | QPersistentModelIndex,
         role: int = Qt.ItemDataRole.DisplayRole,
     ) -> Any:
-        """Get SAN representation for ply at `index`."""
+        """Get SAN representation for move at `index`."""
         if role == Qt.ItemDataRole.DisplayRole:
-            ply_index: int = 2 * index.row() + index.column()
+            move_index: int = 2 * index.row() + index.column()
 
-            if 0 <= ply_index < len(self._plies):
-                return self._plies[ply_index]
+            if 0 <= move_index < len(self._moves):
+                return self._moves[move_index]
 
     def flags(self, index: QModelIndex | QPersistentModelIndex) -> Qt.ItemFlag:
         """Get interaction state based on data existence at `index`."""
@@ -40,14 +40,14 @@ class TableModel(QAbstractTableModel):
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
         """Get count of rows needed for representing moves."""
-        all_plies: int = len(self._plies) + 1
-        return all_plies // 2
+        all_moves: int = len(self._moves) + 1
+        return all_moves // 2
 
     def columnCount(
         self,
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
-        """Get fixed count of two columns for White/Black plies."""
+        """Get fixed count of two columns for White/Black moves."""
         return 2
 
     def headerData(
@@ -56,7 +56,7 @@ class TableModel(QAbstractTableModel):
         orientation: Qt.Orientation,
         role: int = Qt.ItemDataRole.DisplayRole,
     ) -> Any:
-        """Get 'White'/'Black' column labels and numbers for rows."""
+        """Get player labels for columns and numbers for rows."""
         if role == Qt.ItemDataRole.DisplayRole:
             if orientation == Qt.Orientation.Horizontal:
                 return ["White", "Black"][section]
@@ -67,7 +67,7 @@ class TableModel(QAbstractTableModel):
     def reset(self) -> None:
         """Clear stored move history data from model."""
         self.beginResetModel()
-        self._plies.clear()
+        self._moves.clear()
         self.endResetModel()
 
     def refresh_view(self) -> None:

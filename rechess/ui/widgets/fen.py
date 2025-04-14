@@ -44,7 +44,7 @@ class FenEdit(QLineEdit):
 
     @Slot(str)
     def validate_fen(self, fen: str) -> None:
-        """Validate `fen` to set new position based on it."""
+        """Validate `fen` to set new board position based on it."""
         try:
             self._game.fen = fen
         except (IndexError, ValueError):
