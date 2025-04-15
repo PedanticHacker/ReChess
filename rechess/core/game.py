@@ -175,6 +175,8 @@ class Game(QObject):
 
         if self.moves[item_index] != "...":
             self.set_arrow(self.board.move_stack[-1])
+        else:
+            self.clear_arrow()
 
     def delete_data_after_index(self) -> None:
         """Delete moves and positions after internal move index."""
