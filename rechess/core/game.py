@@ -98,7 +98,7 @@ class Game(QObject):
 
     def maybe_append_ellipsis(self) -> None:
         """If Black moves first, append ellipsis for White's move."""
-        if not self.moves and not self.is_white_on_turn():
+        if self.move_index < 0 and not self.is_white_on_turn():
             self.moves.append("...")
             self.positions.append(self.board.copy())
 
@@ -107,11 +107,10 @@ class Game(QObject):
         if not self.board.is_legal(move):
             return
 
-        self.set_arrow(move)
-        self.sound_effect_played.emit(move)
-
-        self.maybe_append_ellipsis()
         self.delete_data_after_index()
+        self.maybe_append_ellipsis()
+
+        self.sound_effect_played.emit(move)
 
         new_move: str = self.board.san_and_push(move)
         self.moves.append(new_move)
@@ -128,9 +127,11 @@ class Game(QObject):
         self.arrow.clear()
 
     def set_root_position(self) -> None:
-        """Reset pieces on board to initial position."""
+        """Reset pieces on board to initial position and clear arrow."""
         self.move_index = -1
         self.board = self.board.root()
+
+        self.clear_arrow()
 
     def legal_targets(self, square: Square | None = None) -> list[Square]:
         """Get target squares as legal moves for piece at `square`."""
@@ -167,12 +168,12 @@ class Game(QObject):
         """Get piece at `square`."""
         return self.board.piece_at(square)
 
-    def set_move(self, item_index: int) -> None:
-        """Set move and arrow based on `item_index`."""
+    def update_state(self, item_index: int) -> None:
+        """Update game state based on `item_index`."""
         self.move_index = item_index
         self.board = self.positions[item_index].copy()
 
-        if self.board.move_stack and self.moves[item_index] != "...":
+        if self.moves[item_index] != "...":
             self.set_arrow(self.board.move_stack[-1])
 
     def delete_data_after_index(self) -> None:

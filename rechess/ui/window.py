@@ -686,11 +686,10 @@ class MainWindow(QMainWindow):
         self._game.is_history = True
 
         if item_index < 0:
-            self._game.clear_arrow()
-            self._game.set_root_position()
             self._openings_label.clear()
+            self._game.set_root_position()
         else:
-            self._game.set_move(item_index)
+            self._game.update_state(item_index)
 
         self.show_fen()
         self.show_opening()
@@ -699,6 +698,7 @@ class MainWindow(QMainWindow):
 
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
+
         self._game.reset_selected_squares()
 
         if self._game.is_over():
