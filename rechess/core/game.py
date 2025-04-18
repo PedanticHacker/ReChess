@@ -3,7 +3,7 @@ from __future__ import annotations
 from contextlib import suppress
 from typing import ClassVar, Iterator
 
-from chess import BB_SQUARES, Board, IllegalMoveError, Move
+from chess import BB_SQUARES, BLACK, WHITE, Board, IllegalMoveError, Move
 from PySide6.QtCore import QObject, Signal
 from PySide6.QtWidgets import QDialog
 
@@ -27,9 +27,12 @@ class Game(QObject):
         self.arrow: list[tuple[Square, Square]] = []
 
         self.move_index: int = -1
-        self.is_history: bool = False
+        self.loser_color: Color | None = None
         self.origin_square: Square | None = None
         self.target_square: Square | None = None
+
+        self.is_history: bool = False
+        self.has_time_expired: bool = False
 
         self.reset_selected_squares()
 
@@ -54,13 +57,23 @@ class Game(QObject):
     @property
     def result(self) -> str:
         """Get result of current game."""
-        result_rewordings = {
+        result: str = "*"
+
+        if self.has_time_expired:
+            if self.loser_color == BLACK:
+                return "White wins on time"
+            elif self.loser_color == WHITE:
+                return "Black wins on time"
+        else:
+            result = self.board.result(claim_draw=True)
+
+        result_descriptions: dict[str, str] = {
             "1/2-1/2": "Draw",
             "0-1": "Black wins",
             "1-0": "White wins",
             "*": "Undetermined game",
         }
-        return result_rewordings[self.board.result(claim_draw=True)]
+        return result_descriptions[result]
 
     @property
     def turn(self) -> bool:
@@ -70,6 +83,8 @@ class Game(QObject):
     def _initialize_state(self) -> None:
         """Clear game history and set squares to initial value."""
         self.move_index = -1
+        self.loser_color = None
+        self.has_time_expired = False
 
         self.moves.clear()
         self.positions.clear()
@@ -81,6 +96,12 @@ class Game(QObject):
         """Reset origin and target squares."""
         self.origin_square = None
         self.target_square = None
+
+    def process_time_loss(self, loser_color: Color) -> None:
+        """Process game state changes if `loser_color` lost on time."""
+        if not self.is_over():
+            self.has_time_expired = True
+            self.loser_color = loser_color
 
     def set_selected_square(self, square_index: Square) -> None:
         """Set selected square to be `square_index`."""
@@ -104,7 +125,7 @@ class Game(QObject):
 
     def push(self, move: Move) -> None:
         """Update game state by pushing `move`."""
-        if not self.board.is_legal(move):
+        if not self.board.is_legal(move) or self.is_over():
             return
 
         self.delete_data_after_index()
@@ -204,8 +225,8 @@ class Game(QObject):
         return self.board.is_legal(move)
 
     def is_over(self) -> bool:
-        """Return True if game is over."""
-        return self.board.is_game_over(claim_draw=True)
+        """Return True if game is over or clock time has expired."""
+        return self.board.is_game_over(claim_draw=True) or self.has_time_expired
 
     def is_over_after(self, move: Move) -> bool:
         """Return True if game is over after `move`."""
@@ -219,4 +240,4 @@ class Game(QObject):
 
     def is_white_on_turn(self) -> bool:
         """Return True if White is on turn."""
-        return self.board.turn
+        return self.board.turn == WHITE

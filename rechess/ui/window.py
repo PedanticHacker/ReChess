@@ -4,7 +4,7 @@ from pathlib import Path
 from re import sub
 from typing import Final
 
-from chess import Move
+from chess import BLACK, WHITE, Move
 from chess.engine import Score
 from PySide6.QtCore import Qt, QThreadPool, QTimer, Slot
 from PySide6.QtGui import QCloseEvent, QWheelEvent
@@ -620,6 +620,7 @@ class MainWindow(QMainWindow):
 
         self._table_model.reset()
         self._openings_label.clear()
+        self._board.enable_interaction()
 
         self.show_fen()
 
@@ -667,13 +668,43 @@ class MainWindow(QMainWindow):
 
     @Slot()
     def on_black_time_expired(self) -> None:
-        """Notify that White won as Black's time has expired."""
-        self._game_notifications_label.setText("White won on time")
+        """Handle game termination when Black's clock expires."""
+        if self._game.is_over():
+            return
+
+        self._black_clock.stop_timer()
+        self._white_clock.stop_timer()
+
+        # self._engine.stop_analysis()
+
+        self._game.clear_arrow()
+        self._game.process_time_loss(BLACK)
+        self._game_notifications_label.setText(self._game.result)
+
+        self.adjust_toolbar_buttons()
+        self._board.disable_interaction()
+
+        self._board.update()
 
     @Slot()
     def on_white_time_expired(self) -> None:
-        """Notify that Black won as White's time has expired."""
-        self._game_notifications_label.setText("Black won on time")
+        """Handle game end when White's clock expires."""
+        if self._game.is_over():
+            return
+
+        self._black_clock.stop_timer()
+        self._white_clock.stop_timer()
+
+        # self._engine.stop_analysis()
+
+        self._game.clear_arrow()
+        self._game.process_time_loss(WHITE)
+        self._game_notifications_label.setText(self._game.result)
+
+        self.adjust_toolbar_buttons()
+        self._board.disable_interaction()
+
+        self._board.update()
 
     @Slot()
     def on_fen_validated(self) -> None:
