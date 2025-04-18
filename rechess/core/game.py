@@ -99,9 +99,8 @@ class Game(QObject):
 
     def process_time_loss(self, loser_color: Color) -> None:
         """Process game state changes if `loser_color` lost on time."""
-        if not self.is_over():
-            self.has_time_expired = True
-            self.loser_color = loser_color
+        self.loser_color = loser_color
+        self.has_time_expired = True
 
     def set_selected_square(self, square_index: Square) -> None:
         """Set selected square to be `square_index`."""
@@ -125,7 +124,7 @@ class Game(QObject):
 
     def push(self, move: Move) -> None:
         """Update game state by pushing `move`."""
-        if not self.board.is_legal(move) or self.is_over():
+        if not self.board.is_legal(move):
             return
 
         self.delete_data_after_index()
@@ -225,7 +224,7 @@ class Game(QObject):
         return self.board.is_legal(move)
 
     def is_over(self) -> bool:
-        """Return True if game is over or clock time has expired."""
+        """Return True if game is over or time has expired."""
         return self.board.is_game_over(claim_draw=True) or self.has_time_expired
 
     def is_over_after(self, move: Move) -> bool:

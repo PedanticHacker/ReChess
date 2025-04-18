@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from chess import BISHOP, KNIGHT, PAWN, QUEEN, ROOK
+from chess import BISHOP, KNIGHT, PAWN, QUEEN, ROOK, WHITE
 from PySide6.QtWidgets import QDialog, QHBoxLayout, QPushButton
 
 from rechess.utils import create_button, svg_icon
@@ -24,7 +24,7 @@ class PromotionDialog(QDialog):
 
     def create_buttons(self) -> None:
         """Create buttons based on turn."""
-        if self._turn:
+        if self._turn == WHITE:
             self.queen_button: QPushButton = create_button(svg_icon("white-queen"))
             self.rook_button: QPushButton = create_button(svg_icon("white-rook"))
             self.bishop_button: QPushButton = create_button(svg_icon("white-bishop"))

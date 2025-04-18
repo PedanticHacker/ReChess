@@ -218,7 +218,7 @@ class SvgBoard(QSvgWidget):
         return self.cursor_point
 
     def can_drag(self, piece: Piece | None) -> bool:
-        """Return True if color of `piece` does not belong to engine."""
+        """Return True if `piece` does not belong to engine."""
         return (
             piece is not None
             and piece.color != setting_value("engine", "is_white")

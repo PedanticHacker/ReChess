@@ -675,16 +675,14 @@ class MainWindow(QMainWindow):
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
 
-        # self._engine.stop_analysis()
-
         self._game.clear_arrow()
         self._game.process_time_loss(BLACK)
         self._game_notifications_label.setText(self._game.result)
 
-        self.adjust_toolbar_buttons()
         self._board.disable_interaction()
-
         self._board.update()
+
+        self.adjust_toolbar_buttons()
 
     @Slot()
     def on_white_time_expired(self) -> None:
@@ -695,16 +693,14 @@ class MainWindow(QMainWindow):
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
 
-        # self._engine.stop_analysis()
-
         self._game.clear_arrow()
         self._game.process_time_loss(WHITE)
         self._game_notifications_label.setText(self._game.result)
 
-        self.adjust_toolbar_buttons()
         self._board.disable_interaction()
-
         self._board.update()
+
+        self.adjust_toolbar_buttons()
 
     @Slot()
     def on_fen_validated(self) -> None:
