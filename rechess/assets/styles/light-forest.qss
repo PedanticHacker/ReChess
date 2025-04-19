@@ -9,7 +9,6 @@ QHeaderView {
   border-bottom: 1px solid #506f46;
   color: #2c3e1e;
   font-size: 15px;
-  font-weight: bold;
 }
 
 QLabel {
