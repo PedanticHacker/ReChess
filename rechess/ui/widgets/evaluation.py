@@ -17,7 +17,6 @@ class EvaluationBar(QProgressBar):
 
         self.hide()
         self.setRange(0, 1000)
-        self.setFixedSize(50, 600)
         self.setOrientation(Qt.Orientation.Vertical)
         self.update_chunk_appearance(setting_value("board", "orientation"))
 

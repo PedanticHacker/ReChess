@@ -7,7 +7,7 @@ import stat
 import subprocess
 import sys
 from functools import lru_cache
-from typing import Any, Callable, Final
+from typing import Any, Callable, Final, Literal
 
 from psutil import cpu_count, virtual_memory
 from PySide6.QtCore import QSize
@@ -87,6 +87,24 @@ def set_setting_value(section: str, key: str, value: Any) -> None:
     with open("rechess/settings.json", mode="w", newline="\n") as settings_file:
         json.dump(settings_dict, settings_file, indent=2)
         settings_file.write("\n")
+
+
+def game_ui_scale(size: Literal["small", "normal", "big"]) -> dict[str, Any]:
+    """Get settings for scale of game UI based on `size`."""
+    scale: float = 0.8 if size == "small" else 1.2 if size == "big" else 1.0
+
+    return {
+        "board_margin": 20.0 * scale,
+        "clock": (int(200 * scale), int(50 * scale)),
+        "engine_analysis_label": int(150 * scale),
+        "evaluation_bar": (int(50 * scale), int(600 * scale)),
+        "fen_editor": int(600 * scale),
+        "font": int(15 * scale),
+        "half_square": 28.75 * scale,
+        "square": 57.5 * scale,
+        "square_center_offset": 48.75 * scale,
+        "table_view": (int(200 * scale), int(600 * scale)),
+    }
 
 
 def style_name(file_name: str) -> str:

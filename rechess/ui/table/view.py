@@ -24,8 +24,6 @@ class TableView(QTableView):
         self.setModel(table_model)
 
         self.setShowGrid(False)
-        self.setFixedSize(200, 600)
-
         self.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
         self.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
         self.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)

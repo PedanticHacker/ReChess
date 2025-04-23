@@ -17,8 +17,6 @@ class DigitalClock(QLCDNumber):
         super().__init__()
 
         self.setStyleSheet(clock_color)
-
-        self.setFixedSize(200, 50)
         self.setSegmentStyle(QLCDNumber.SegmentStyle.Flat)
 
         self._countdown_timer: QTimer = QTimer(self)

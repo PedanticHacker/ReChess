@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from PySide6.QtCore import Slot
 from PySide6.QtWidgets import (
     QCheckBox,
@@ -44,12 +46,17 @@ class SettingsDialog(QDialog):
 
     def create_groups(self) -> None:
         """Create groups for related settings to be put together."""
-        self._engine_group: QGroupBox = QGroupBox("Engine")
         self._human_name_group: QGroupBox = QGroupBox("Human name")
+        self._engine_group: QGroupBox = QGroupBox("Engine")
         self._time_control_group: QGroupBox = QGroupBox("Time control")
 
     def create_options(self) -> None:
         """Create options that represent settings."""
+        self._human_name_option: QLineEdit = QLineEdit()
+        self._human_name_option.setMaxLength(24)
+        self._human_name_option.setPlaceholderText("Human")
+        self._human_name_option.setText(setting_value("human", "name"))
+
         self._engine_black_option: QRadioButton = QRadioButton()
         self._engine_black_option.setText("Black")
         self._engine_black_option.setChecked(not setting_value("engine", "is_white"))
@@ -83,11 +90,6 @@ class SettingsDialog(QDialog):
         self._clock_increment_option.setCurrentIndex(
             self._clock_increment_option.findData(setting_value("clock", "increment"))
         )
-
-        self._human_name_option: QLineEdit = QLineEdit()
-        self._human_name_option.setMaxLength(24)
-        self._human_name_option.setPlaceholderText("Human")
-        self._human_name_option.setText(setting_value("human", "name"))
 
     def set_vertical_layout(self) -> None:
         """Set dialog layout for widgets to be arranged vertically."""
