@@ -27,6 +27,7 @@ class SettingsDialog(QDialog):
         super().__init__()
 
         self._initial_settings: dict[str, bool | float | str] = {
+            "board_size": setting_value("board", "size"),
             "clock_increment": setting_value("clock", "increment"),
             "clock_time": setting_value("clock", "time"),
             "human_name": setting_value("human", "name"),
@@ -49,6 +50,7 @@ class SettingsDialog(QDialog):
         self._human_name_group: QGroupBox = QGroupBox("Human name")
         self._engine_group: QGroupBox = QGroupBox("Engine")
         self._time_control_group: QGroupBox = QGroupBox("Time control")
+        self._board_size_group: QGroupBox = QGroupBox("Board size")
 
     def create_options(self) -> None:
         """Create options that represent settings."""
@@ -91,6 +93,14 @@ class SettingsDialog(QDialog):
             self._clock_increment_option.findData(setting_value("clock", "increment"))
         )
 
+        self._board_size_option: QComboBox = QComboBox()
+        self._board_size_option.addItem("Small", "small")
+        self._board_size_option.addItem("Normal", "normal")
+        self._board_size_option.addItem("Big", "big")
+        self._board_size_option.setCurrentIndex(
+            self._board_size_option.findData(setting_value("board", "size"))
+        )
+
     def set_vertical_layout(self) -> None:
         """Set dialog layout for widgets to be arranged vertically."""
         human_name_layout: QVBoxLayout = QVBoxLayout()
@@ -108,10 +118,15 @@ class SettingsDialog(QDialog):
         time_control_layout.addWidget(self._clock_increment_option)
         self._time_control_group.setLayout(time_control_layout)
 
+        board_size_layout: QVBoxLayout = QVBoxLayout()
+        board_size_layout.addWidget(self._board_size_option)
+        self._board_size_group.setLayout(board_size_layout)
+
         vertical_layout: QVBoxLayout = QVBoxLayout()
         vertical_layout.addWidget(self._human_name_group)
         vertical_layout.addWidget(self._engine_group)
         vertical_layout.addWidget(self._time_control_group)
+        vertical_layout.addWidget(self._board_size_group)
         vertical_layout.addWidget(self._button_box)
         self.setLayout(vertical_layout)
 
@@ -121,6 +136,7 @@ class SettingsDialog(QDialog):
         self._button_box.accepted.connect(self.accept)
         self._button_box.rejected.connect(self.reject)
 
+        self._board_size_option.currentIndexChanged.connect(self.on_edited)
         self._clock_increment_option.currentIndexChanged.connect(self.on_edited)
         self._clock_time_option.currentIndexChanged.connect(self.on_edited)
         self._engine_black_option.toggled.connect(self.on_edited)
@@ -136,6 +152,7 @@ class SettingsDialog(QDialog):
     def is_edited(self) -> bool:
         """Return True if any setting is edited."""
         current_settings: dict[str, bool | float | str] = {
+            "board_size": self._board_size_option.currentData(),
             "clock_increment": self._clock_increment_option.currentData(),
             "clock_time": self._clock_time_option.currentData(),
             "human_name": self._human_name_option.text().strip() or "Human",
@@ -153,14 +170,9 @@ class SettingsDialog(QDialog):
     def on_accepted(self) -> None:
         """Save edited settings."""
         set_setting_value(
-            section="clock",
-            key="time",
-            value=self._clock_time_option.currentData(),
-        )
-        set_setting_value(
-            section="clock",
-            key="increment",
-            value=self._clock_increment_option.currentData(),
+            section="human",
+            key="name",
+            value=self._human_name_option.text().strip() or "Human",
         )
         set_setting_value(
             section="engine",
@@ -173,7 +185,17 @@ class SettingsDialog(QDialog):
             value=self._engine_ponder_option.isChecked(),
         )
         set_setting_value(
-            section="human",
-            key="name",
-            value=self._human_name_option.text().strip() or "Human",
+            section="clock",
+            key="time",
+            value=self._clock_time_option.currentData(),
+        )
+        set_setting_value(
+            section="clock",
+            key="increment",
+            value=self._clock_increment_option.currentData(),
+        )
+        set_setting_value(
+            section="board",
+            key="size",
+            value=self._board_size_option.currentData(),
         )

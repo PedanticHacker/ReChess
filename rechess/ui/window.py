@@ -2,7 +2,7 @@ from enum import StrEnum
 from functools import partial
 from pathlib import Path
 from re import sub
-from typing import Final
+from typing import Final, Literal
 
 from chess import BLACK, WHITE, Move
 from chess.engine import Score
@@ -354,16 +354,15 @@ class MainWindow(QMainWindow):
 
     def apply_widget_sizes(self) -> None:
         """Apply size of board and its related widgets."""
-        board_size: int = 500
+        self._board.update_board_size()
 
-        self._board.setFixedSize(board_size, board_size)
-        self._table_view.setFixedSize(board_size // 3, board_size)
+        board_size: int = self._board.board_size
 
-        self._black_clock.setFixedSize(board_size // 3, board_size // 9)
-        self._white_clock.setFixedSize(board_size // 3, board_size // 9)
-
-        self._evaluation_bar.setFixedSize(board_size // 12, board_size)
-        self._engine_analysis_label.setFixedSize(board_size // 3, board_size)
+        self._evaluation_bar.setFixedSize(board_size // 8, board_size)
+        self._table_view.setFixedSize(board_size * 2 // 5, board_size)
+        self._black_clock.setFixedSize(board_size * 2 // 5, board_size * 3 // 20)
+        self._white_clock.setFixedSize(board_size * 2 // 5, board_size * 3 // 20)
+        self._engine_analysis_label.setFixedSize(board_size * 2 // 5, board_size)
 
     def retain_layout_size(self) -> None:
         """Retain layout size for hidden widgets."""
@@ -488,6 +487,8 @@ class MainWindow(QMainWindow):
 
         self.stop_analysis()
         self.hide_analysis_ui()
+
+        self.apply_widget_sizes()
 
         self.align_orientation_to_engine()
         self.invoke_engine()
