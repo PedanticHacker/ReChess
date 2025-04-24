@@ -2,7 +2,7 @@ from enum import StrEnum
 from functools import partial
 from pathlib import Path
 from re import sub
-from typing import Final
+from typing import Final, Literal
 
 from chess import BLACK, WHITE, Move
 from chess.engine import Score
@@ -97,6 +97,7 @@ class MainWindow(QMainWindow):
         self.switch_clock_timers()
         self.adjust_toolbar_buttons()
         self.connect_signals_to_slots()
+        self.apply_scale(setting_value("ui", "scale"))
         self.apply_style(setting_value("ui", "style"))
 
         self.align_orientation_to_engine()
@@ -402,6 +403,10 @@ class MainWindow(QMainWindow):
         set_setting_value("ui", "style", file_name)
         self._style_name_label.setText(f"Style: {style_name(file_name)}")
 
+    def apply_scale(self, option: Literal["small", "normal", "big"]) -> None:
+        """Apply scale of game UI based on `option`."""
+        self._board.update_scale(option)
+
     def should_invoke_engine(self) -> bool:
         """Return True if engine has all requirements to be invoked."""
         if self._game.is_engine_on_turn() and not self._game.is_over():
@@ -474,6 +479,8 @@ class MainWindow(QMainWindow):
 
         self.stop_analysis()
         self.hide_analysis_ui()
+
+        self.apply_scale(setting_value("ui", "scale"))
 
         self.align_orientation_to_engine()
         self.invoke_engine()

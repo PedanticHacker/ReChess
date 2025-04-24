@@ -89,21 +89,21 @@ def set_setting_value(section: str, key: str, value: Any) -> None:
         settings_file.write("\n")
 
 
-def game_ui_scale(size: Literal["small", "normal", "big"]) -> dict[str, Any]:
-    """Get settings for scale of game UI based on `size`."""
-    scale: float = 0.8 if size == "small" else 1.2 if size == "big" else 1.0
+def game_ui_scale(option: Literal["small", "normal", "big"]) -> dict[str, Any]:
+    """Get settings for scale of game UI based on `option`."""
+    factor: float = 0.8 if option == "small" else 1.2 if option == "big" else 1.0
 
     return {
-        "board_margin": 20.0 * scale,
-        "clock": (int(200 * scale), int(50 * scale)),
-        "engine_analysis_label": int(150 * scale),
-        "evaluation_bar": (int(50 * scale), int(600 * scale)),
-        "fen_editor": int(600 * scale),
-        "font": int(15 * scale),
-        "half_square": 28.75 * scale,
-        "square": 57.5 * scale,
-        "square_center_offset": 48.75 * scale,
-        "table_view": (int(200 * scale), int(600 * scale)),
+        "board_margin": 20.0 * factor,
+        "clock": (int(200 * factor), int(50 * factor)),
+        "engine_analysis_label": int(150 * factor),
+        "evaluation_bar": (int(50 * factor), int(600 * factor)),
+        "fen_editor": int(600 * factor),
+        "font": int(15 * factor),
+        "half_square": 28.75 * factor,
+        "square": 57.5 * factor,
+        "square_center_offset": 48.75 * factor,
+        "table_view": (int(200 * factor), int(600 * factor)),
     }
 
 
