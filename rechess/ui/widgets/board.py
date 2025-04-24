@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from functools import lru_cache
-from typing import Any, Final, Literal, NamedTuple
+from typing import Final, NamedTuple
 
 from chess import Move, Piece, square, svg
 from PySide6.QtCore import (
@@ -17,8 +17,13 @@ from PySide6.QtGui import QColor, QPainter
 from PySide6.QtSvg import QSvgRenderer
 from PySide6.QtSvgWidgets import QSvgWidget
 
-from rechess.utils import game_ui_scale, setting_value
+from rechess.utils import setting_value
 
+
+BOARD_MARGIN: float = 20.0
+HALF_SQUARE_SIZE: float = 28.75
+SQUARE_CENTER_OFFSET: float = 48.75
+SQUARE_SIZE: float = 57.5
 
 svg.XX = "<circle id='xx' r='4.5' cx='22.5' cy='22.5' stroke='#303030' fill='#e5e5e5'/>"
 
@@ -117,15 +122,6 @@ class SvgBoard(QSvgWidget):
 
         self.setMouseTracking(True)
 
-    def update_scale(self, option: Literal["small", "normal", "big"]) -> None:
-        """Update game UI based on `option`."""
-        settings: dict[str, Any] = game_ui_scale(option)
-
-        self._board_margin = settings["board_margin"]
-        self._half_square = settings["half_square"]
-        self._square_center_offset = settings["square_center_offset"]
-        self._square_size = settings["square"]
-
     def disable_interaction(self):
         """Prevent player from making moves."""
         self.is_interactive = False
@@ -194,25 +190,23 @@ class SvgBoard(QSvgWidget):
 
         if self.orientation:
             flipped_rank: int = 7 - rank
-            x: float = self._square_center_offset + (self._square_size * file)
-            y: float = self._square_center_offset + (self._square_size * flipped_rank)
+            x: float = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * file)
+            y: float = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * flipped_rank)
         else:
             flipped_file: int = 7 - file
-            x = self._square_center_offset + (self._square_size * flipped_file)
-            y = self._square_center_offset + (self._square_size * rank)
+            x = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * flipped_file)
+            y = SQUARE_CENTER_OFFSET + (SQUARE_SIZE * rank)
 
         return QPointF(x, y)
 
     def square_index(self, cursor_point: QPointF) -> Square:
         """Get square index based on `cursor_point`."""
         if self.orientation:
-            file: float = (cursor_point.x() - self._board_margin) // self._square_size
-            rank: float = (
-                7 - (cursor_point.y() - self._board_margin) // self._square_size
-            )
+            file: float = (cursor_point.x() - BOARD_MARGIN) // SQUARE_SIZE
+            rank: float = 7 - (cursor_point.y() - BOARD_MARGIN) // SQUARE_SIZE
         else:
-            file = 7 - (cursor_point.x() - self._board_margin) // self._square_size
-            rank = (cursor_point.y() - self._board_margin) // self._square_size
+            file = 7 - (cursor_point.x() - BOARD_MARGIN) // SQUARE_SIZE
+            rank = (cursor_point.y() - BOARD_MARGIN) // SQUARE_SIZE
 
         file_index: int = max(0, min(7, round(file)))
         rank_index: int = max(0, min(7, round(rank)))
@@ -347,10 +341,10 @@ class SvgBoard(QSvgWidget):
     def piece_render_area_at(self, cursor_point: QPointF) -> QRectF:
         """Get piece render area based on `cursor_point`."""
         return QRectF(
-            cursor_point.x() - self._half_square,
-            cursor_point.y() - self._half_square,
-            self._square_size,
-            self._square_size,
+            cursor_point.x() - HALF_SQUARE_SIZE,
+            cursor_point.y() - HALF_SQUARE_SIZE,
+            SQUARE_SIZE,
+            SQUARE_SIZE,
         )
 
     def render_piece(

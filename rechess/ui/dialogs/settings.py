@@ -32,7 +32,6 @@ class SettingsDialog(QDialog):
             "human_name": setting_value("human", "name"),
             "is_engine_ponder_on": setting_value("engine", "is_ponder_on"),
             "is_engine_white": setting_value("engine", "is_white"),
-            "ui_scale": setting_value("ui", "scale"),
         }
 
         self._button_box: QDialogButtonBox = QDialogButtonBox(Save | Cancel)
@@ -50,7 +49,6 @@ class SettingsDialog(QDialog):
         self._human_name_group: QGroupBox = QGroupBox("Human name")
         self._engine_group: QGroupBox = QGroupBox("Engine")
         self._time_control_group: QGroupBox = QGroupBox("Time control")
-        self._ui_scale_group: QGroupBox = QGroupBox("UI Scale")
 
     def create_options(self) -> None:
         """Create options that represent settings."""
@@ -93,14 +91,6 @@ class SettingsDialog(QDialog):
             self._clock_increment_option.findData(setting_value("clock", "increment"))
         )
 
-        self._ui_scale_option: QComboBox = QComboBox()
-        self._ui_scale_option.addItem("Small", "small")
-        self._ui_scale_option.addItem("Normal", "normal")
-        self._ui_scale_option.addItem("Big", "big")
-        self._ui_scale_option.setCurrentIndex(
-            self._ui_scale_option.findData(setting_value("ui", "scale"))
-        )
-
     def set_vertical_layout(self) -> None:
         """Set dialog layout for widgets to be arranged vertically."""
         human_name_layout: QVBoxLayout = QVBoxLayout()
@@ -118,15 +108,10 @@ class SettingsDialog(QDialog):
         time_control_layout.addWidget(self._clock_increment_option)
         self._time_control_group.setLayout(time_control_layout)
 
-        ui_scale_layout: QVBoxLayout = QVBoxLayout()
-        ui_scale_layout.addWidget(self._ui_scale_option)
-        self._ui_scale_group.setLayout(ui_scale_layout)
-
         vertical_layout: QVBoxLayout = QVBoxLayout()
         vertical_layout.addWidget(self._human_name_group)
         vertical_layout.addWidget(self._engine_group)
         vertical_layout.addWidget(self._time_control_group)
-        vertical_layout.addWidget(self._ui_scale_group)
         vertical_layout.addWidget(self._button_box)
         self.setLayout(vertical_layout)
 
@@ -142,7 +127,6 @@ class SettingsDialog(QDialog):
         self._engine_ponder_option.toggled.connect(self.on_edited)
         self._engine_white_option.toggled.connect(self.on_edited)
         self._human_name_option.textChanged.connect(self.on_edited)
-        self._ui_scale_option.currentIndexChanged.connect(self.on_edited)
 
     def disable_setting_groups(self) -> None:
         """Disable human name and time control groups."""
@@ -157,7 +141,6 @@ class SettingsDialog(QDialog):
             "human_name": self._human_name_option.text().strip() or "Human",
             "is_engine_ponder_on": self._engine_ponder_option.isChecked(),
             "is_engine_white": self._engine_white_option.isChecked(),
-            "ui_scale": self._ui_scale_option.currentData(),
         }
         return current_settings != self._initial_settings
 
@@ -193,9 +176,4 @@ class SettingsDialog(QDialog):
             section="human",
             key="name",
             value=self._human_name_option.text().strip() or "Human",
-        )
-        set_setting_value(
-            section="ui",
-            key="scale",
-            value=self._ui_scale_option.currentData(),
         )

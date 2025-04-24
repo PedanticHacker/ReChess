@@ -13,8 +13,12 @@
   "human": {
     "name": "Bono"
   },
+  "scale": {
+    "small": 400,
+    "normal": 500,
+    "big": 600
+  },
   "ui": {
-    "scale": "normal",
     "style": "dark-mint"
   }
 }

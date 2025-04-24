@@ -2,7 +2,7 @@ from enum import StrEnum
 from functools import partial
 from pathlib import Path
 from re import sub
-from typing import Final, Literal
+from typing import Final
 
 from chess import BLACK, WHITE, Move
 from chess.engine import Score
@@ -95,9 +95,9 @@ class MainWindow(QMainWindow):
         self.create_statusbar()
         self.retain_layout_size()
         self.switch_clock_timers()
+        self.update_widget_sizes()
         self.adjust_toolbar_buttons()
         self.connect_signals_to_slots()
-        self.apply_scale(setting_value("ui", "scale"))
         self.apply_style(setting_value("ui", "style"))
 
         self.align_orientation_to_engine()
@@ -372,6 +372,15 @@ class MainWindow(QMainWindow):
             if self._game.is_in_progress():
                 self._white_clock.add_increment()
 
+    def update_widget_sizes(self) -> None:
+        """Update size of board and its related widgets."""
+        board_size: int = setting_value("scale", "big")
+
+        self._board.setFixedSize(board_size, board_size)
+        self._table_view.setFixedSize(board_size // 3, board_size)
+        self._black_clock.setFixedSize(board_size // 3, board_size // 9)
+        self._white_clock.setFixedSize(board_size // 3, board_size // 9)
+
     def adjust_toolbar_buttons(self) -> None:
         """Adjust state of engine-related toolbar buttons."""
         self.play_move_now_action.setEnabled(True)
@@ -402,10 +411,6 @@ class MainWindow(QMainWindow):
             self.setStyleSheet(qss_file.read())
         set_setting_value("ui", "style", file_name)
         self._style_name_label.setText(f"Style: {style_name(file_name)}")
-
-    def apply_scale(self, option: Literal["small", "normal", "big"]) -> None:
-        """Apply scale of game UI based on `option`."""
-        self._board.update_scale(option)
 
     def should_invoke_engine(self) -> bool:
         """Return True if engine has all requirements to be invoked."""
@@ -479,8 +484,6 @@ class MainWindow(QMainWindow):
 
         self.stop_analysis()
         self.hide_analysis_ui()
-
-        self.apply_scale(setting_value("ui", "scale"))
 
         self.align_orientation_to_engine()
         self.invoke_engine()
