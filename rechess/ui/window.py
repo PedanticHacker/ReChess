@@ -93,9 +93,9 @@ class MainWindow(QMainWindow):
         self.create_menubar()
         self.create_toolbar()
         self.create_statusbar()
+        self.apply_widget_sizes()
         self.retain_layout_size()
         self.switch_clock_timers()
-        self.update_widget_sizes()
         self.adjust_toolbar_buttons()
         self.connect_signals_to_slots()
         self.apply_style(setting_value("ui", "style"))
@@ -352,6 +352,19 @@ class MainWindow(QMainWindow):
         self.statusBar().addWidget(self._openings_label)
         self.statusBar().addPermanentWidget(self._style_name_label)
 
+    def apply_widget_sizes(self) -> None:
+        """Apply size of board and its related widgets."""
+        board_size: int = 500
+
+        self._board.setFixedSize(board_size, board_size)
+        self._table_view.setFixedSize(board_size // 3, board_size)
+
+        self._black_clock.setFixedSize(board_size // 3, board_size // 9)
+        self._white_clock.setFixedSize(board_size // 3, board_size // 9)
+
+        self._evaluation_bar.setFixedSize(board_size // 12, board_size)
+        self._engine_analysis_label.setFixedSize(board_size // 3, board_size)
+
     def retain_layout_size(self) -> None:
         """Retain layout size for hidden widgets."""
         size_policy: QSizePolicy = self.sizePolicy()
@@ -371,15 +384,6 @@ class MainWindow(QMainWindow):
             self._black_clock.start_timer()
             if self._game.is_in_progress():
                 self._white_clock.add_increment()
-
-    def update_widget_sizes(self) -> None:
-        """Update size of board and its related widgets."""
-        board_size: int = setting_value("scale", "big")
-
-        self._board.setFixedSize(board_size, board_size)
-        self._table_view.setFixedSize(board_size // 3, board_size)
-        self._black_clock.setFixedSize(board_size // 3, board_size // 9)
-        self._white_clock.setFixedSize(board_size // 3, board_size // 9)
 
     def adjust_toolbar_buttons(self) -> None:
         """Adjust state of engine-related toolbar buttons."""

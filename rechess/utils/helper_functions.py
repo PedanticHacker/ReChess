@@ -7,7 +7,7 @@ import stat
 import subprocess
 import sys
 from functools import lru_cache
-from typing import Any, Callable, Final, Literal
+from typing import Any, Callable, Final
 
 from psutil import cpu_count, virtual_memory
 from PySide6.QtCore import QSize
