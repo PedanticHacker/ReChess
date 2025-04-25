@@ -20,11 +20,6 @@ from PySide6.QtSvgWidgets import QSvgWidget
 from rechess.utils import setting_value
 
 
-BOARD_MARGIN: float = 20.0
-HALF_SQUARE_SIZE: float = 28.75
-SQUARE_CENTER_OFFSET: float = 48.75
-SQUARE_SIZE: float = 57.5
-
 svg.XX = "<circle id='xx' r='4.5' cx='22.5' cy='22.5' stroke='#303030' fill='#e5e5e5'/>"
 
 
@@ -124,14 +119,25 @@ class SvgBoard(QSvgWidget):
 
     @property
     def board_size(self) -> int:
-        """Get board size based on settings."""
-        size_option: Literal["small", "normal", "big"] = setting_value("board", "size")
-        return 400 if size_option == "small" else 600 if size_option == "big" else 500
+        """Get board size based on option in settings."""
+        SMALL_BOARD_SIZE: Final[int] = 400
+        NORMAL_BOARD_SIZE: Final[int] = 500
+        BIG_BOARD_SIZE: Final[int] = 600
+
+        option: Literal["small", "normal", "big"] = setting_value("board", "size")
+
+        if option == "small":
+            return SMALL_BOARD_SIZE
+        elif option == "big":
+            return BIG_BOARD_SIZE
+        else:
+            return NORMAL_BOARD_SIZE
 
     @property
     def board_margin(self) -> float:
         """Get board margin based on board size."""
-        return self.board_size * 0.04  # 4% of board size
+        BOARD_MARGIN_FACTOR: Final[float] = 0.04
+        return self.board_size * BOARD_MARGIN_FACTOR
 
     @property
     def square_size(self) -> float:
@@ -140,13 +146,13 @@ class SvgBoard(QSvgWidget):
 
     @property
     def half_square_size(self) -> float:
-        """Get half square size."""
+        """Get half size of square."""
         return self.square_size / 2
 
     @property
     def square_center_offset(self) -> float:
-        """Get square center offset."""
-        return self.board_margin + self.half_square_size
+        """Get offset for square center in size of board margin."""
+        return self.half_square_size + self.board_margin
 
     def update_board_size(self) -> None:
         """Update board size and clear caches."""
