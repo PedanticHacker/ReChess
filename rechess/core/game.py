@@ -97,11 +97,6 @@ class Game(QObject):
         self.origin_square = None
         self.target_square = None
 
-    def expire_time_for(self, player_color: Color) -> None:
-        """Set that time for `player_color` has expired."""
-        self.loser_on_time = player_color
-        self.has_time_expired = True
-
     def set_selected_square(self, square_index: Square) -> None:
         """Set selected square to be `square_index`."""
         if self.origin_square is None:
@@ -110,6 +105,11 @@ class Game(QObject):
             self.target_square = square_index
             self.find_legal_move(self.origin_square, self.target_square)
             self.reset_selected_squares()
+
+    def expire_time_for(self, player_color: Color) -> None:
+        """Set that time for `player_color` has expired."""
+        self.loser_on_time = player_color
+        self.has_time_expired = True
 
     def prepare_new_game(self) -> None:
         """Initialize state and reset board for new game."""
