@@ -689,6 +689,7 @@ class MainWindow(QMainWindow):
 
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
+        self._sound_effect.play_time_expired()
 
         self._game.clear_arrow()
         self._game.process_time_loss(BLACK)
@@ -707,6 +708,7 @@ class MainWindow(QMainWindow):
 
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
+        self._sound_effect.play_time_expired()
 
         self._game.clear_arrow()
         self._game.process_time_loss(WHITE)

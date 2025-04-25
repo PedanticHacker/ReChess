@@ -48,3 +48,7 @@ class SoundEffect:
         """Play sound effect for `move`."""
         sound_effect_name: str = self._sound_effect_name(move)
         self._sound_effects[sound_effect_name].play()
+
+    def play_time_expired(self) -> None:
+        """Play game-over sound effect for expired time."""
+        self._sound_effects["game-over"].play()
