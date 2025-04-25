@@ -27,7 +27,7 @@ class Game(QObject):
         self.arrow: list[tuple[Square, Square]] = []
 
         self.move_index: int = -1
-        self.loser_color: Color | None = None
+        self.loser_on_time: Color | None = None
         self.origin_square: Square | None = None
         self.target_square: Square | None = None
 
@@ -60,9 +60,9 @@ class Game(QObject):
         result: str = "*"
 
         if self.has_time_expired:
-            if self.loser_color == BLACK:
+            if self.loser_on_time == BLACK:
                 return "White wins on time"
-            elif self.loser_color == WHITE:
+            elif self.loser_on_time == WHITE:
                 return "Black wins on time"
         else:
             result = self.board.result(claim_draw=True)
@@ -83,7 +83,7 @@ class Game(QObject):
     def _initialize_state(self) -> None:
         """Clear game history and set squares to initial value."""
         self.move_index = -1
-        self.loser_color = None
+        self.loser_on_time = None
         self.has_time_expired = False
 
         self.moves.clear()
@@ -97,9 +97,9 @@ class Game(QObject):
         self.origin_square = None
         self.target_square = None
 
-    def process_time_loss(self, loser_color: Color) -> None:
-        """Process game state changes if `loser_color` lost on time."""
-        self.loser_color = loser_color
+    def expire_time_for(self, player_color: Color) -> None:
+        """Set that time for `player_color` has expired."""
+        self.loser_on_time = player_color
         self.has_time_expired = True
 
     def set_selected_square(self, square_index: Square) -> None:
