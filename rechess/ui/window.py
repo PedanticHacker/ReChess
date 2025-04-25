@@ -358,11 +358,11 @@ class MainWindow(QMainWindow):
 
         board_size: int = self._board.board_size
 
-        self._evaluation_bar.setFixedSize(board_size // 8, board_size)
-        self._table_view.setFixedSize(board_size * 2 // 5, board_size)
-        self._black_clock.setFixedSize(board_size * 2 // 5, board_size * 3 // 20)
-        self._white_clock.setFixedSize(board_size * 2 // 5, board_size * 3 // 20)
-        self._engine_analysis_label.setFixedSize(board_size * 2 // 5, board_size)
+        self._table_view.setFixedSize(board_size // 3, board_size)
+        self._evaluation_bar.setFixedSize(board_size // 9, board_size)
+        self._black_clock.setFixedSize(board_size // 3, board_size // 9)
+        self._white_clock.setFixedSize(board_size // 3, board_size // 9)
+        self._engine_analysis_label.setFixedSize(board_size // 3, board_size)
 
     def retain_layout_size(self) -> None:
         """Retain layout size for hidden widgets."""
