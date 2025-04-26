@@ -107,7 +107,7 @@ class Game(QObject):
             self.reset_selected_squares()
 
     def expire_time_for(self, player_color: Color) -> None:
-        """Set that time for `player_color` has expired."""
+        """Set `player_color` as loser on time."""
         self.loser_on_time = player_color
         self.has_time_expired = True
 

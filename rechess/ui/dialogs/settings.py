@@ -147,6 +147,7 @@ class SettingsDialog(QDialog):
     def disable_setting_groups(self) -> None:
         """Disable human name and time control groups."""
         self._human_name_group.setDisabled(True)
+        self._engine_group.setDisabled(True)
         self._time_control_group.setDisabled(True)
 
     def is_edited(self) -> bool:

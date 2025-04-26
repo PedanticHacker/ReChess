@@ -463,8 +463,6 @@ class MainWindow(QMainWindow):
         self._game.clear_arrow()
 
         self.stop_analysis()
-        self.hide_analysis_ui()
-
         self.invoke_engine(by_force=True)
 
     def show_settings_dialog(self) -> None:
@@ -483,13 +481,9 @@ class MainWindow(QMainWindow):
             self._black_clock.reset()
             self._white_clock.reset()
 
-        self._human_name_label.setText(setting_value("human", "name"))
-
-        self.stop_analysis()
-        self.hide_analysis_ui()
+            self._human_name_label.setText(setting_value("human", "name"))
 
         self.apply_widget_sizes()
-
         self.align_orientation_to_engine()
         self.invoke_engine()
 
@@ -508,7 +502,6 @@ class MainWindow(QMainWindow):
     def start_new_engine(self, path_to_file: str) -> None:
         """Start new engine from file at `path_to_file`."""
         self.stop_analysis()
-        self.hide_analysis_ui()
 
         self._engine.load_from_file_at(path_to_file)
         self._engine_name_label.setText(self._engine.name)
@@ -552,7 +545,7 @@ class MainWindow(QMainWindow):
             self._grid_layout.addWidget(self._human_name_label, 5, 1)
 
     def show_analysis_ui(self) -> None:
-        """Show engine analysis label and evaluation bar."""
+        """Show evaluation bar and engine analysis label."""
         self._evaluation_bar.show()
         self._engine_analysis_label.show()
 
@@ -575,10 +568,12 @@ class MainWindow(QMainWindow):
     def stop_analysis(self) -> None:
         """Stop analyzing current position."""
         self._engine.stop_analysis()
+
         self._game_notifications_label.clear()
 
         self.adjust_toolbar_buttons()
         self.switch_clock_timers()
+        self.hide_analysis_ui()
 
     def show_fen(self) -> None:
         """Show FEN in editor."""
@@ -603,10 +598,7 @@ class MainWindow(QMainWindow):
 
         self.show_fen()
         self.show_opening()
-
         self.stop_analysis()
-        self.hide_analysis_ui()
-
         self.invoke_engine()
 
         if self._game.is_over():
@@ -628,20 +620,17 @@ class MainWindow(QMainWindow):
     def start_new_game(self) -> None:
         """Start new game by resetting and clearing everything."""
         self._game.is_history = False
-        self._game.prepare_new_game()
 
         self._black_clock.reset()
         self._white_clock.reset()
 
         self._table_model.reset()
         self._openings_label.clear()
+        self._game.prepare_new_game()
         self._board.enable_interaction()
 
         self.show_fen()
-
         self.stop_analysis()
-        self.hide_analysis_ui()
-
         self.align_orientation_to_engine()
         self.invoke_engine()
 
@@ -735,15 +724,13 @@ class MainWindow(QMainWindow):
         else:
             self._game.update_state(item_index)
 
+        self._black_clock.stop_timer()
+        self._white_clock.stop_timer()
+        self._game.reset_selected_squares()
+
         self.show_fen()
         self.show_opening()
         self.stop_analysis()
-        self.hide_analysis_ui()
-
-        self._black_clock.stop_timer()
-        self._white_clock.stop_timer()
-
-        self._game.reset_selected_squares()
 
         if self._game.is_over():
             self._game_notifications_label.setText(self._game.result)
