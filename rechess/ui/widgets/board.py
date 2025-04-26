@@ -28,11 +28,10 @@ class BoardCache(NamedTuple):
 
     fen: str
     dragging: bool
-    animation: bool
     orientation: bool
     check: Square | None
     square: Square | None
-    arrows: tuple[tuple[Square, Square]]
+    arrow: tuple[tuple[Square, Square]]
 
 
 class SvgBoard(QSvgWidget):
@@ -212,9 +211,8 @@ class SvgBoard(QSvgWidget):
             check=self._game.check,
             dragging=self.is_dragging,
             square=self.origin_square,
-            animation=self.is_animating,
             orientation=self.orientation,
-            arrows=tuple(self._game.arrow),
+            arrow=tuple(self._game.arrow),
         )
 
     def set_animation_point(self, value: QPointF) -> None:
@@ -348,7 +346,7 @@ class SvgBoard(QSvgWidget):
         """Transform current board state into SVG data as bytes."""
         board_to_render: Board = self._game.board
 
-        if cache.square is not None and cache.dragging or cache.animation:
+        if cache.square is not None and cache.dragging or self.is_animating:
             square: Square | None = (
                 cache.square if cache.dragging else self.origin_square
             )
@@ -360,7 +358,7 @@ class SvgBoard(QSvgWidget):
 
         svg_board: str = svg.board(
             check=cache.check,
-            arrows=cache.arrows,
+            arrows=cache.arrow,
             board=board_to_render,
             squares=legal_targets,
             colors=self.color_names(),
