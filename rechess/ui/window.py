@@ -681,7 +681,7 @@ class MainWindow(QMainWindow):
         self._sound_effect.play_time_expired()
 
         self._game.clear_arrow()
-        self._game.expire_time_for(BLACK)
+        self._game.declare_time_loss(BLACK)
         self._game_notifications_label.setText(self._game.result)
 
         self._board.disable_interaction()
@@ -700,7 +700,7 @@ class MainWindow(QMainWindow):
         self._sound_effect.play_time_expired()
 
         self._game.clear_arrow()
-        self._game.expire_time_for(WHITE)
+        self._game.declare_time_loss(WHITE)
         self._game_notifications_label.setText(self._game.result)
 
         self._board.disable_interaction()
