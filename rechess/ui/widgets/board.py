@@ -157,6 +157,7 @@ class SvgBoard(QSvgWidget):
     def update_board_size(self) -> None:
         """Update board size and clear caches."""
         self.setFixedSize(self.board_size, self.board_size)
+
         self.clear_cache()
 
     def disable_interaction(self):
