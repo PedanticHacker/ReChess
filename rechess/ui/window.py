@@ -488,6 +488,7 @@ class MainWindow(QMainWindow):
             self._white_clock.reset()
 
             self._human_name_label.setText(setting_value("human", "name"))
+            self._human_name_label.setToolTip(setting_value("human", "name"))
 
         self.apply_widget_sizes()
         self.align_orientation_to_engine()
@@ -511,6 +512,7 @@ class MainWindow(QMainWindow):
 
         self._engine.load_from_file_at(path_to_file)
         self._engine_name_label.setText(self._engine.name)
+        self._engine_name_label.setToolTip(self._engine.name)
 
         self.invoke_engine()
 
