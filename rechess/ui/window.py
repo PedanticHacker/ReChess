@@ -358,11 +358,11 @@ class MainWindow(QMainWindow):
 
         board_size: int = self._board.board_size
 
-        self._table_view.setFixedSize(board_size // 3, board_size)
+        self._table_view.setFixedSize(board_size // 2, board_size)
         self._evaluation_bar.setFixedSize(board_size // 9, board_size)
-        self._black_clock.setFixedSize(board_size // 3, board_size // 9)
-        self._white_clock.setFixedSize(board_size // 3, board_size // 9)
-        self._engine_analysis_label.setFixedSize(board_size // 3, board_size)
+        self._black_clock.setFixedSize(board_size // 2, board_size // 9)
+        self._white_clock.setFixedSize(board_size // 2, board_size // 9)
+        self._engine_analysis_label.setFixedSize(board_size // 2, board_size)
 
     def retain_layout_size(self) -> None:
         """Retain layout size for hidden widgets."""
@@ -678,10 +678,10 @@ class MainWindow(QMainWindow):
 
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
+
         self._sound_effect.play_time_expired()
 
-        self._game.clear_arrow()
-        self._game.declare_time_loss(BLACK)
+        self._game.declare_time_loss_for(BLACK)
         self._game_notifications_label.setText(self._game.result)
 
         self._board.disable_interaction()
@@ -697,10 +697,10 @@ class MainWindow(QMainWindow):
 
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
+
         self._sound_effect.play_time_expired()
 
-        self._game.clear_arrow()
-        self._game.declare_time_loss(WHITE)
+        self._game.declare_time_loss_for(WHITE)
         self._game_notifications_label.setText(self._game.result)
 
         self._board.disable_interaction()

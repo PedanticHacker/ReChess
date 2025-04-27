@@ -29,7 +29,7 @@ class Game(QObject):
         self.move_index: int = -1
         self.origin_square: Square | None = None
         self.target_square: Square | None = None
-        self.player_time_loss: Color | None = None
+        self.player_lost_on_time: Color | None = None
 
         self.is_history: bool = False
         self.has_time_expired: bool = False
@@ -60,9 +60,9 @@ class Game(QObject):
         result: str = "*"
 
         if self.has_time_expired:
-            if self.player_time_loss == BLACK:
+            if self.player_lost_on_time == BLACK:
                 return "White wins on time"
-            elif self.player_time_loss == WHITE:
+            elif self.player_lost_on_time == WHITE:
                 return "Black wins on time"
         else:
             result = self.board.result(claim_draw=True)
@@ -84,8 +84,8 @@ class Game(QObject):
         """Clear game history and set squares to initial value."""
         self.move_index = -1
 
-        self.player_time_loss = None
         self.has_time_expired = False
+        self.player_lost_on_time = None
 
         self.moves.clear()
         self.positions.clear()
@@ -112,9 +112,9 @@ class Game(QObject):
         self._initialize_state()
         self.board.reset()
 
-    def declare_time_loss(self, player_color: Color) -> None:
+    def declare_time_loss_for(self, player_color: Color) -> None:
         """Declare that `player_color` has lost on time."""
-        self.player_time_loss = player_color
+        self.player_lost_on_time = player_color
         self.has_time_expired = True
 
     def maybe_append_ellipsis(self) -> None:

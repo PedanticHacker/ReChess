@@ -83,5 +83,4 @@ class Engine(QObject):
     @property
     def name(self) -> str:
         """Get engine name."""
-        name: str = self._engine.id["name"]
-        return f"{name[0:20]}..." if len(name) > 20 else name
+        return self._engine.id["name"]
