@@ -1,6 +1,6 @@
 {
   "board": {
-    "size": "small",
+    "size": "normal",
     "orientation": true
   },
   "clock": {
