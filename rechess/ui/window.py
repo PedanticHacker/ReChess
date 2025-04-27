@@ -73,6 +73,7 @@ class MainWindow(QMainWindow):
         self._engine_name_label: QLabel = QLabel()
         self._engine_name_label.setObjectName("engineName")
         self._engine_name_label.setText(self._engine.name)
+        self._engine_name_label.setToolTip(self._engine_name_label.text())
 
         self._game_notifications_label: QLabel = QLabel()
         self._game_notifications_label.setObjectName("gameNotifications")
@@ -80,6 +81,7 @@ class MainWindow(QMainWindow):
         self._human_name_label: QLabel = QLabel()
         self._human_name_label.setObjectName("humanName")
         self._human_name_label.setText(setting_value("human", "name"))
+        self._human_name_label.setToolTip(self._human_name_label.text())
 
         self._openings_label: QLabel = QLabel()
         self._style_name_label: QLabel = QLabel()
@@ -357,12 +359,16 @@ class MainWindow(QMainWindow):
         self._board.update_board_size()
 
         board_size: int = self._board.board_size
+        half_board_size: int = board_size // 2
+        ninth_board_size: int = board_size // 9
 
-        self._table_view.setFixedSize(board_size // 2, board_size)
-        self._evaluation_bar.setFixedSize(board_size // 9, board_size)
-        self._black_clock.setFixedSize(board_size // 2, board_size // 9)
-        self._white_clock.setFixedSize(board_size // 2, board_size // 9)
-        self._engine_analysis_label.setFixedSize(board_size // 2, board_size)
+        self._human_name_label.setFixedWidth(half_board_size)
+        self._engine_name_label.setFixedWidth(half_board_size)
+        self._table_view.setFixedSize(half_board_size, board_size)
+        self._evaluation_bar.setFixedSize(ninth_board_size, board_size)
+        self._black_clock.setFixedSize(half_board_size, ninth_board_size)
+        self._white_clock.setFixedSize(half_board_size, ninth_board_size)
+        self._engine_analysis_label.setFixedSize(half_board_size, board_size)
 
     def retain_layout_size(self) -> None:
         """Retain layout size for hidden widgets."""
