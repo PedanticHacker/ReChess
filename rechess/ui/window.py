@@ -359,7 +359,7 @@ class MainWindow(QMainWindow):
         self._board.update_board_size()
 
         board_size: int = self._board.board_size
-        half_board_size: int = board_size // 2
+        half_board_size: int = board_size // 3
         ninth_board_size: int = board_size // 9
 
         self._human_name_label.setFixedWidth(half_board_size)
