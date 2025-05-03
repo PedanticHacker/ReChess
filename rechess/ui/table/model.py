@@ -39,7 +39,7 @@ class TableModel(QAbstractTableModel):
         self,
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
-        """Get count of rows needed for representing moves."""
+        """Get calculated row count needed for White/Black moves."""
         all_moves: int = len(self._moves) + 1
         return all_moves // 2
 
@@ -47,7 +47,7 @@ class TableModel(QAbstractTableModel):
         self,
         index: QModelIndex | QPersistentModelIndex = QModelIndex(),
     ) -> int:
-        """Get fixed count of two columns for White/Black moves."""
+        """Get fixed two column count needed for White/Black moves."""
         return 2
 
     def headerData(
