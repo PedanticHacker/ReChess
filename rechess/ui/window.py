@@ -36,9 +36,6 @@ from rechess.utils import (
 )
 
 
-THROTTLING_MILLISECONDS: Final[int] = 180
-
-
 class ClockColor(StrEnum):
     """CSS color style enum for clocks of Black and White players."""
 
@@ -88,7 +85,7 @@ class MainWindow(QMainWindow):
 
         self._scroll_timer: QTimer = QTimer(self)
         self._scroll_timer.setSingleShot(True)
-        self._scroll_timer.setInterval(THROTTLING_MILLISECONDS)
+        self._scroll_timer.setInterval(180)
 
         self.create_layout()
         self.create_actions()
@@ -379,6 +376,9 @@ class MainWindow(QMainWindow):
 
     def switch_clock_timers(self) -> None:
         """Switch between Black and White clock timers based on turn."""
+        if self._game.is_over():
+            return
+
         if self._game.is_white_on_turn():
             self._black_clock.stop_timer()
             self._white_clock.start_timer()
