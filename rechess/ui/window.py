@@ -18,8 +18,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from rechess.core import Game
-from rechess.uci import Engine
+from rechess.core import Engine, Game
 from rechess.ui.audio import SoundEffect
 from rechess.ui.dialogs import SettingsDialog
 from rechess.ui.table import TableModel, TableView

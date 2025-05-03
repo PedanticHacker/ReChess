@@ -34,9 +34,6 @@ class Engine(QObject):
 
     def load_from_file_at(self, path_to_file: str) -> None:
         """Load engine from file at `path_to_file`."""
-        delete_quarantine_attribute(path_to_file)
-        make_executable(path_to_file)
-
         with suppress(EngineError):
             self.quit()
             self._engine: SimpleEngine = SimpleEngine.popen_uci(path_to_file)
@@ -76,7 +73,9 @@ class Engine(QObject):
         self._analyzing = False
 
     def quit(self) -> None:
-        """Terminate engine process."""
+        """Stop analysis and terminate engine process."""
+        self.stop_analysis()
+
         if hasattr(self, "_engine"):
             self._engine.quit()
 
