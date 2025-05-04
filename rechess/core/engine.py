@@ -4,7 +4,7 @@ from contextlib import suppress
 from typing import ClassVar
 
 from chess import Move
-from chess.engine import EngineError, Limit, PlayResult, Score, SimpleEngine
+from chess.engine import Limit, PlayResult, Score, SimpleEngine
 from PySide6.QtCore import QObject, Signal
 
 from rechess.utils import (
@@ -34,10 +34,12 @@ class Engine(QObject):
 
     def load_from_file_at(self, path_to_file: str) -> None:
         """Load engine from file at `path_to_file`."""
-        with suppress(EngineError):
+        with suppress(Exception):
+            new_engine: SimpleEngine = SimpleEngine.popen_uci(path_to_file)
+            new_engine.configure(engine_configuration())
+
             self.quit()
-            self._engine: SimpleEngine = SimpleEngine.popen_uci(path_to_file)
-            self._engine.configure(engine_configuration())
+            self._engine: SimpleEngine = new_engine
 
     def play_move(self) -> None:
         """Invoke engine to play move."""
