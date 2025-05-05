@@ -679,7 +679,7 @@ class MainWindow(QMainWindow):
 
     @Slot()
     def on_black_time_expired(self) -> None:
-        """Handle game termination when Black's clock expires."""
+        """Handle game termination when Black's time expires."""
         if self._game.is_over():
             return
 
@@ -698,7 +698,7 @@ class MainWindow(QMainWindow):
 
     @Slot()
     def on_white_time_expired(self) -> None:
-        """Handle game end when White's clock expires."""
+        """Handle game termination when White's time expires."""
         if self._game.is_over():
             return
 
