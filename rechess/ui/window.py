@@ -350,6 +350,14 @@ class MainWindow(QMainWindow):
         self.statusBar().addWidget(self._openings_label)
         self.statusBar().addPermanentWidget(self._style_name_label)
 
+    def update_font_size(self) -> None:
+        """Update font size based on current board size."""
+        board_size: Literal["small", "normal", "big"] = setting_value("board", "size")
+        font_size: int = (
+            13 if board_size == "small" else 17 if board_size == "big" else 15
+        )
+        self.font().setPixelSize(font_size)
+
     def apply_widget_sizes(self) -> None:
         """Apply size of board and its related widgets."""
         self._board.update_board_size()
@@ -365,6 +373,8 @@ class MainWindow(QMainWindow):
         self._black_clock.setFixedSize(half_board_size, ninth_board_size)
         self._white_clock.setFixedSize(half_board_size, ninth_board_size)
         self._engine_analysis_label.setFixedSize(half_board_size, board_size)
+
+        self.update_font_size()
 
     def retain_layout_size(self) -> None:
         """Retain layout size for hidden widgets."""
