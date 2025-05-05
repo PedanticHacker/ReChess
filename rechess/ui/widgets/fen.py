@@ -36,7 +36,7 @@ class FenEditor(QLineEdit):
 
     @Slot(str)
     def update_tooltip(self, fen: str) -> None:
-        """Update tooltip whenever FEN changes."""
+        """Update tooltip whenever `fen` changes."""
         self.setToolTip(fen)
 
     @Slot(str)
