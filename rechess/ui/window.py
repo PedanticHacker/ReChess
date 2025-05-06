@@ -358,6 +358,7 @@ class MainWindow(QMainWindow):
 
     def apply_widget_sizes(self) -> None:
         """Apply size of board and its related widgets."""
+        self.update_font_size()
         self._board.update_board_size()
 
         board_size: int = self._board.board_size
@@ -371,8 +372,6 @@ class MainWindow(QMainWindow):
         self._black_clock.setFixedSize(half_board_size, ninth_board_size)
         self._white_clock.setFixedSize(half_board_size, ninth_board_size)
         self._engine_analysis_label.setFixedSize(half_board_size, board_size)
-
-        self.update_font_size()
 
     def retain_layout_size(self) -> None:
         """Retain layout size for hidden widgets."""
