@@ -353,8 +353,10 @@ class MainWindow(QMainWindow):
     def update_font_size(self) -> None:
         """Update font size based on current board size."""
         board_size: Literal["small", "normal", "big"] = setting_value("board", "size")
-        font_size_options: dict[str, int] = {"small": 13, "normal": 15, "big": 17}
-        self.font().setPointSize(font_size_options[board_size])
+        font_size_options: dict[str, int] = {"small": 10, "normal": 14, "big": 18}
+        self.centralWidget().setStyleSheet(
+            f"font-size: {font_size_options[board_size]}px;"
+        )
 
     def apply_widget_sizes(self) -> None:
         """Apply size of board and its related widgets."""
