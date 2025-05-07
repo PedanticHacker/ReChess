@@ -12,6 +12,7 @@ QHeaderView {
 
 QLabel {
   color: #1c4b45;
+  font-size: 14px;
   font-weight: bold;
 }
 
