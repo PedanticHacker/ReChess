@@ -77,7 +77,6 @@ class MainWindow(QMainWindow):
         self._human_name_label: QLabel = QLabel()
         self._human_name_label.setObjectName("humanName")
         self._human_name_label.setText(setting_value("human", "name"))
-        self._human_name_label.setToolTip(self._human_name_label.text())
 
         self._openings_label: QLabel = QLabel()
         self._style_name_label: QLabel = QLabel()
@@ -353,7 +352,7 @@ class MainWindow(QMainWindow):
     def update_font_size(self) -> None:
         """Update font size based on current board size."""
         board_size: Literal["small", "normal", "big"] = setting_value("board", "size")
-        font_size_options: dict[str, int] = {"small": 12, "normal": 14, "big": 16}
+        font_size_options: dict[str, int] = {"small": 11, "normal": 14, "big": 17}
         self.centralWidget().setStyleSheet(
             f"font-size: {font_size_options[board_size]}px;"
         )
@@ -364,16 +363,16 @@ class MainWindow(QMainWindow):
         self._board.update_board_size()
 
         board_size: int = self._board.board_size
-        third_board_size: int = board_size // 3
+        half_board_size: int = board_size // 2
         ninth_board_size: int = board_size // 9
 
-        self._human_name_label.setFixedWidth(third_board_size)
-        self._engine_name_label.setFixedWidth(third_board_size)
-        self._table_view.setFixedSize(third_board_size, board_size)
+        self._human_name_label.setFixedWidth(half_board_size)
+        self._engine_name_label.setFixedWidth(half_board_size)
+        self._table_view.setFixedSize(half_board_size, board_size)
         self._evaluation_bar.setFixedSize(ninth_board_size, board_size)
-        self._black_clock.setFixedSize(third_board_size, ninth_board_size)
-        self._white_clock.setFixedSize(third_board_size, ninth_board_size)
-        self._engine_analysis_label.setFixedSize(third_board_size, board_size)
+        self._black_clock.setFixedSize(half_board_size, ninth_board_size)
+        self._white_clock.setFixedSize(half_board_size, ninth_board_size)
+        self._engine_analysis_label.setFixedSize(half_board_size, board_size)
 
     def retain_layout_size(self) -> None:
         """Retain layout size for hidden widgets."""
@@ -436,7 +435,7 @@ class MainWindow(QMainWindow):
         return False
 
     def invoke_engine(self, by_force: bool = False) -> None:
-        """Invoke engine to play move."""
+        """Invoke engine when on turn or when `by_force` is True."""
         if self.should_invoke_engine() or by_force:
             QThreadPool.globalInstance().start(self._engine.play_move)
             self._game_notifications_label.setText("Thinking...")
@@ -494,9 +493,7 @@ class MainWindow(QMainWindow):
         if not self._game.is_in_progress():
             self._black_clock.reset()
             self._white_clock.reset()
-
             self._human_name_label.setText(setting_value("human", "name"))
-            self._human_name_label.setToolTip(setting_value("human", "name"))
 
         self.apply_widget_sizes()
         self.align_orientation_to_engine()
@@ -689,9 +686,6 @@ class MainWindow(QMainWindow):
     @Slot()
     def on_black_time_expired(self) -> None:
         """Handle game termination when Black's time expires."""
-        if self._game.is_over():
-            return
-
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
 
@@ -708,9 +702,6 @@ class MainWindow(QMainWindow):
     @Slot()
     def on_white_time_expired(self) -> None:
         """Handle game termination when White's time expires."""
-        if self._game.is_over():
-            return
-
         self._black_clock.stop_timer()
         self._white_clock.stop_timer()
 

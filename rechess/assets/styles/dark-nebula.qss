@@ -8,12 +8,10 @@ QHeaderView {
   background-color: #351d4d;
   border-bottom: 1px solid #6b35b0;
   color: #e2d4f5;
-  font-size: 15px;
 }
 
 QLabel {
   color: #e2d4f5;
-  font-size: 15px;
   font-weight: bold;
 }
 
@@ -37,7 +35,6 @@ QLineEdit {
   border: 1px solid #6b35b0;
   border-radius: 4px;
   color: #e2d4f5;
-  font-size: 15px;
   font-weight: bold;
   qproperty-alignment: AlignCenter;
 }
@@ -119,7 +116,6 @@ QProgressBar {
   border: 1px solid #6b35b0;
   border-radius: 4px;
   color: #6b35b0;
-  font-size: 13px;
   font-weight: bold;
   text-align: center;
 }
@@ -145,7 +141,6 @@ QTableView {
   border: 1px solid #6b35b0;
   border-radius: 4px;
   color: #e2d4f5;
-  font-size: 15px;
   font-weight: bold;
   gridline-color: #6b35b0;
   selection-background-color: #6b35b0;
@@ -167,7 +162,6 @@ QToolTip {
   border: 1px solid #6b35b0;
   border-radius: 4px;
   color: #e2d4f5;
-  font-size: 15px;
   font-weight: bold;
 }
 
