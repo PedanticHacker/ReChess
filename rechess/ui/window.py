@@ -405,8 +405,6 @@ class MainWindow(QMainWindow):
 
         if self._game.is_over():
             self.play_move_now_action.setDisabled(True)
-            self.stop_analysis_action.setDisabled(True)
-            self.start_analysis_action.setDisabled(True)
 
     def connect_signals_to_slots(self) -> None:
         """Connect component signals to corresponding slot methods."""
