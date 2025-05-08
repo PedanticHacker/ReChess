@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from contextlib import suppress
 from typing import ClassVar
 
 from chess import Move
@@ -20,6 +19,7 @@ class Engine(QObject):
     """Communication with UCI-compliant engine."""
 
     best_move_analyzed: ClassVar[Signal] = Signal(Move)
+    load_failed: ClassVar[Signal] = Signal(str)
     move_played: ClassVar[Signal] = Signal(Move)
     score_analyzed: ClassVar[Signal] = Signal(Score)
     variation_analyzed: ClassVar[Signal] = Signal(str)
@@ -41,7 +41,7 @@ class Engine(QObject):
 
     def load_from_file_at(self, path_to_file: str) -> None:
         """Load engine from file at `path_to_file`."""
-        with suppress(Exception):
+        try:
             delete_quarantine_attribute(path_to_file)
             make_executable(path_to_file)
 
@@ -50,6 +50,9 @@ class Engine(QObject):
 
             self.quit()
             self._engine: SimpleEngine = new_engine
+
+        except Exception as exception:
+            self.load_failed.emit(f"UCI engine failed to load.\n\n{exception}")
 
     def play_move(self) -> None:
         """Invoke engine to play move."""

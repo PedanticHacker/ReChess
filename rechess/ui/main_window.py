@@ -30,6 +30,7 @@ from rechess.utils import (
     find_opening,
     set_setting_value,
     setting_value,
+    show_info,
     style_name,
     svg_icon,
 )
@@ -411,6 +412,7 @@ class MainWindow(QMainWindow):
         """Connect component signals to corresponding slot methods."""
         self._black_clock.time_expired.connect(self.on_black_time_expired)
         self._engine.best_move_analyzed.connect(self.on_best_move_analyzed)
+        self._engine.load_failed.connect(self.on_load_failed)
         self._engine.move_played.connect(self.on_move_played)
         self._engine.score_analyzed.connect(self.on_score_analyzed)
         self._engine.variation_analyzed.connect(self.on_variation_analyzed)
@@ -740,6 +742,11 @@ class MainWindow(QMainWindow):
 
         if self._game.is_over():
             self._game_notifications_label.setText(self._game.result)
+
+    @Slot(str)
+    def on_load_failed(self, engine_message: str) -> None:
+        """Show `engine_message` after failed engine load attempt."""
+        show_info(self, engine_message)
 
     @Slot(Move)
     def on_move_played(self, move: Move) -> None:
