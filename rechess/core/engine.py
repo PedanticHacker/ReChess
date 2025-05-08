@@ -32,9 +32,19 @@ class Engine(QObject):
 
         self.load_from_file_at(path_to_stockfish())
 
+    @property
+    def name(self) -> str:
+        """Get engine name if engine is loaded."""
+        if hasattr(self, "_engine"):
+            return self._engine.id["name"]
+        return "(no engine loaded)"
+
     def load_from_file_at(self, path_to_file: str) -> None:
         """Load engine from file at `path_to_file`."""
         with suppress(Exception):
+            delete_quarantine_attribute(path_to_file)
+            make_executable(path_to_file)
+
             new_engine: SimpleEngine = SimpleEngine.popen_uci(path_to_file)
             new_engine.configure(engine_configuration())
 
@@ -75,13 +85,8 @@ class Engine(QObject):
         self._analyzing = False
 
     def quit(self) -> None:
-        """Stop analysis and terminate engine process."""
+        """Stop analysis and terminate engine."""
         self.stop_analysis()
 
         if hasattr(self, "_engine"):
             self._engine.quit()
-
-    @property
-    def name(self) -> str:
-        """Get engine name."""
-        return self._engine.id["name"]
