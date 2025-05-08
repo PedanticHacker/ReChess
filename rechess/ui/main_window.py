@@ -7,6 +7,7 @@ from typing import Final, Literal
 from chess import BLACK, WHITE, Move
 from chess.engine import Score
 from PySide6.QtCore import Qt, QThreadPool, QTimer, Slot
+from PySide6.QtGui import QCloseEvent, QWheelEvent
 from PySide6.QtWidgets import (
     QDialog,
     QFileDialog,
