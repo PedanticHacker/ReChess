@@ -53,12 +53,12 @@ def create_button(icon: QIcon) -> QPushButton:
     return button
 
 
-def show_info(parent: MainWindow, message: str) -> None:
+def show_info(parent: QWidget, message: str) -> None:
     """Inform about something based on `message`."""
     QMessageBox.information(parent, "Info", message)
 
 
-def show_warning(parent: MainWindow) -> None:
+def show_warning(parent: QWidget) -> None:
     """Warn that ReChess is already running and terminate relaunch."""
     title: str = "Warning"
     text: str = "ReChess is already running!"
