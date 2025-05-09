@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 from PySide6.QtCore import QLockFile
-from PySide6.QtWidgets import QSplashScreen
 
 from rechess.ui import MainWindow
 from rechess.utils import create_app, create_splash_screen, show_warning
