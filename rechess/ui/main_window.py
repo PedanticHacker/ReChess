@@ -117,21 +117,21 @@ class MainWindow(QMainWindow):
         self._grid_layout.addWidget(self._game_notifications_label, 5, 3)
 
         self._grid_layout.setRowStretch(0, 1)
+        self._grid_layout.setRowStretch(3, 1)
         self._grid_layout.setRowStretch(6, 1)
         self._grid_layout.setColumnStretch(0, 1)
         self._grid_layout.setColumnStretch(6, 1)
-        self._grid_layout.setRowStretch(3, 1)
+
+        self._grid_layout.setRowStretch(1, 0)
+        self._grid_layout.setRowStretch(2, 0)
+        self._grid_layout.setRowStretch(4, 0)
+        self._grid_layout.setRowStretch(5, 0)
 
         self._grid_layout.setColumnStretch(1, 0)
         self._grid_layout.setColumnStretch(2, 0)
         self._grid_layout.setColumnStretch(3, 0)
         self._grid_layout.setColumnStretch(4, 0)
         self._grid_layout.setColumnStretch(5, 0)
-
-        self._grid_layout.setRowStretch(1, 0)
-        self._grid_layout.setRowStretch(2, 0)
-        self._grid_layout.setRowStretch(4, 0)
-        self._grid_layout.setRowStretch(5, 0)
 
         central_widget: QWidget = QWidget()
         central_widget.setLayout(self._grid_layout)
