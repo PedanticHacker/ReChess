@@ -55,7 +55,7 @@ class SettingsDialog(QDialog):
     def create_options(self) -> None:
         """Create options that represent settings."""
         self._human_name_option: QLineEdit = QLineEdit()
-        self._human_name_option.setMaxLength(24)
+        self._human_name_option.setMaxLength(20)
         self._human_name_option.setPlaceholderText("Human")
         self._human_name_option.setText(setting_value("human", "name"))
 
