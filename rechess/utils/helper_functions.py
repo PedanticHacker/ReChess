@@ -12,7 +12,7 @@ from typing import Any, Callable, Final
 from psutil import cpu_count, virtual_memory
 from PySide6.QtCore import QSize
 from PySide6.QtGui import QAction, QColor, QIcon, QPixmap
-from PySide6.QtWidgets import QApplication, QMessageBox, QPushButton
+from PySide6.QtWidgets import QApplication, QMessageBox, QPushButton, QSplashScreen
 
 
 def colorize_icon(color: str) -> QIcon:
@@ -51,6 +51,15 @@ def create_button(icon: QIcon) -> QPushButton:
     button.setIcon(icon)
     button.setIconSize(QSize(56, 56))
     return button
+
+
+def create_splash_screen(app: QApplication) -> QSplashScreen:
+    """Create and show ReChess logo as splash screen."""
+    pixmap: QPixmap = svg_icon("logo").pixmap(300, 300)
+    splash_screen: QSplashScreen = QSplashScreen(pixmap)
+    splash_screen.show()
+    app.processEvents()
+    return splash_screen
 
 
 def show_info(parent: QWidget, message: str) -> None:
