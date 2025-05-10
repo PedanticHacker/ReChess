@@ -755,7 +755,7 @@ class MainWindow(QMainWindow):
 
     @Slot(str)
     def on_load_failed(self, engine_message: str) -> None:
-        """Show `engine_message` after failed engine load attempt."""
+        """Show `engine_message` after engine load attempt failed."""
         show_info(self, engine_message)
 
     @Slot(Move)
