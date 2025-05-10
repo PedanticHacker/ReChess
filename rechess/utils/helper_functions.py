@@ -10,7 +10,7 @@ from functools import lru_cache
 from typing import Any, Callable, Final
 
 from psutil import cpu_count, virtual_memory
-from PySide6.QtCore import QSize
+from PySide6.QtCore import QSize, Qt
 from PySide6.QtGui import QAction, QColor, QIcon, QPixmap
 from PySide6.QtWidgets import QApplication, QMessageBox, QPushButton, QSplashScreen
 
@@ -53,12 +53,16 @@ def create_button(icon: QIcon) -> QPushButton:
     return button
 
 
-def create_splash_screen(app: QApplication) -> QSplashScreen:
-    """Create and show ReChess logo as splash screen."""
-    pixmap: QPixmap = svg_icon("logo").pixmap(300, 300)
-    splash_screen: QSplashScreen = QSplashScreen(pixmap)
+def create_splash_screen() -> QSplashScreen:
+    """Create and show ReChess text and app logo as splash screen."""
+    logo_pixmap: QPixmap = svg_icon("logo").pixmap(300, 300)
+    center_alignment: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignCenter
+    yellow_color: Qt.GlobalColor = Qt.GlobalColor.yellow
+
+    splash_screen: QSplashScreen = QSplashScreen(logo_pixmap)
+    splash_screen.showMessage("ReChess", center_alignment, yellow_color)
     splash_screen.show()
-    app.processEvents()
+    splash_screen.repaint()
     return splash_screen
 
 

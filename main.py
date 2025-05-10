@@ -12,7 +12,7 @@ from rechess.utils import create_app, create_splash_screen, show_warning
 def main() -> None:
     """Initialize app and lock it to be launched only once."""
     app: QApplication = create_app()
-    splash_screen: QSplashScreen = create_splash_screen(app)
+    splash_screen: QSplashScreen = create_splash_screen()
 
     main_window: MainWindow = MainWindow()
     lock_file: QLockFile = QLockFile("ReChess.lock")
