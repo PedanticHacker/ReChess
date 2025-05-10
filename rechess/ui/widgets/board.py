@@ -95,7 +95,6 @@ class SvgBoard(QSvgWidget):
         self.dragged_piece: Piece | None = None
         self.animated_piece: Piece | None = None
         self.origin_square: Square | None = None
-        self.animation_board: Board | None = None
         self.cursor_point: QPointF = QPointF(0.0, 0.0)
         self.animation_point: QPointF = QPointF(0.0, 0.0)
         self.orientation: bool = setting_value("board", "orientation")
@@ -300,7 +299,6 @@ class SvgBoard(QSvgWidget):
         self.dragged_piece = None
         self.origin_square = None
         self.animated_piece = None
-        self.animation_board = None
 
         self.unsetCursor()
         self.update()
@@ -445,8 +443,6 @@ class SvgBoard(QSvgWidget):
 
     def mouseReleaseEvent(self, event: QMouseEvent) -> None:
         """Make move with dragging piece or return it back."""
-        self.release_event: QMouseEvent = event
-
         cursor_point: QPointF = self.cursor_point_from(event)
         square_index: Square = self.square_index(cursor_point)
 
