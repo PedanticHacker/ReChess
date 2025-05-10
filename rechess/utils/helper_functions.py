@@ -60,7 +60,7 @@ def create_splash_screen() -> QSplashScreen:
     yellow_color: Qt.GlobalColor = Qt.GlobalColor.yellow
 
     splash_screen: QSplashScreen = QSplashScreen(logo_pixmap)
-    splash_screen.showMessage("ReChess", center_alignment, yellow_color)
+    splash_screen.showMessage("ReChess 1.0", center_alignment, yellow_color)
     splash_screen.show()
     splash_screen.repaint()
     return splash_screen
