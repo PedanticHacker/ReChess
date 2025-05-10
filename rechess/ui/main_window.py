@@ -691,7 +691,7 @@ class MainWindow(QMainWindow):
 
     @Slot(Move)
     def on_best_move_analyzed(self, best_move: Move) -> None:
-        """Show `best_move` as arrow marker based on engine analysis."""
+        """Show `best_move` as arrow on board."""
         self._game.set_arrow(best_move)
 
     @Slot()
