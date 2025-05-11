@@ -25,6 +25,7 @@ QLabel#engineName, #gameNotifications, #humanName {
   background-color: #2d382d;
   border: 1px solid #3d4f3d;
   border-radius: 4px;
+  font-weight: bold;
   qproperty-alignment: AlignCenter;
 }
 
@@ -161,7 +162,7 @@ QToolTip {
 }
 
 QWidget {
-  font-size: 10pt;
+  font-size: 15pt;
 }
 
 SvgBoard {
