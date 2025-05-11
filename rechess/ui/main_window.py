@@ -119,19 +119,9 @@ class MainWindow(QMainWindow):
         self._grid_layout.setRowStretch(0, 1)
         self._grid_layout.setRowStretch(3, 1)
         self._grid_layout.setRowStretch(6, 1)
+
         self._grid_layout.setColumnStretch(0, 1)
         self._grid_layout.setColumnStretch(6, 1)
-
-        self._grid_layout.setRowStretch(1, 0)
-        self._grid_layout.setRowStretch(2, 0)
-        self._grid_layout.setRowStretch(4, 0)
-        self._grid_layout.setRowStretch(5, 0)
-
-        self._grid_layout.setColumnStretch(1, 0)
-        self._grid_layout.setColumnStretch(2, 0)
-        self._grid_layout.setColumnStretch(3, 0)
-        self._grid_layout.setColumnStretch(4, 0)
-        self._grid_layout.setColumnStretch(5, 0)
 
         central_widget: QWidget = QWidget()
         central_widget.setLayout(self._grid_layout)
@@ -363,9 +353,9 @@ class MainWindow(QMainWindow):
     def update_font_size(self) -> None:
         """Update font size based on current board size."""
         board_size: Literal["small", "normal", "big"] = setting_value("board", "size")
-        font_size_options: dict[str, int] = {"small": 10, "normal": 13, "big": 16}
+        font_size_options: dict[str, int] = {"small": 8, "normal": 10, "big": 12}
         self.centralWidget().setStyleSheet(
-            f"font-size: {font_size_options[board_size]}px;"
+            f"font-size: {font_size_options[board_size]}pt;"
         )
 
     def apply_widget_sizes(self) -> None:

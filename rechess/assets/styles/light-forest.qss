@@ -12,8 +12,6 @@ QHeaderView {
 
 QLabel {
   color: #2c3e1e;
-  font-size: 14px;
-  font-weight: bold;
 }
 
 QLabel#engineAnalysis {
@@ -21,7 +19,6 @@ QLabel#engineAnalysis {
   border: 1px solid #506f46;
   border-radius: 4px;
   qproperty-alignment: AlignTop;
-  qproperty-wordWrap: true;
 }
 
 QLabel#engineName, #gameNotifications, #humanName {
@@ -36,7 +33,6 @@ QLineEdit {
   border: 1px solid #506f46;
   border-radius: 4px;
   color: #2c3e1e;
-  font-weight: bold;
   qproperty-alignment: AlignCenter;
 }
 
@@ -59,7 +55,6 @@ QMenu {
   background-color: #a5b69c;
   border: 1px solid #506f46;
   border-radius: 4px;
-  font-weight: bold;
   padding: 6px 6px 6px 10px;
 }
 
@@ -142,7 +137,6 @@ QTableView {
   border: 1px solid #506f46;
   border-radius: 4px;
   color: #2c3e1e;
-  font-weight: bold;
   gridline-color: #506f46;
   selection-background-color: #85987c;
 }
@@ -164,6 +158,10 @@ QToolTip {
   border-radius: 4px;
   color: #2c3e1e;
   font-weight: bold;
+}
+
+QWidget {
+  font-size: 10pt;
 }
 
 SvgBoard {
