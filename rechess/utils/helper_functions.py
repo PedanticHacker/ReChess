@@ -54,14 +54,21 @@ def create_button(icon: QIcon) -> QPushButton:
 
 
 def create_splash_screen() -> QSplashScreen:
-    """Create and show ReChess text and app logo as splash screen."""
+    """Show app logo with name and version of app as splash screen."""
+    yellow_color: Qt.GlobalColor = Qt.GlobalColor.yellow
     logo_pixmap: QPixmap = svg_icon("logo").pixmap(300, 300)
     center_alignment: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignCenter
-    yellow_color: Qt.GlobalColor = Qt.GlobalColor.yellow
 
     splash_screen: QSplashScreen = QSplashScreen(logo_pixmap)
+
+    message_font: QFont = splash_screen.font()
+    message_font.setBold(True)
+    message_font.setPixelSize(22)
+
+    splash_screen.setFont(message_font)
     splash_screen.showMessage("ReChess 1.0", center_alignment, yellow_color)
     splash_screen.show()
+
     return splash_screen
 
 
