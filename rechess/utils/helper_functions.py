@@ -58,8 +58,9 @@ def create_splash_screen() -> QSplashScreen:
     yellow_color: Qt.GlobalColor = Qt.GlobalColor.yellow
     logo_pixmap: QPixmap = svg_icon("logo").pixmap(300, 300)
     center_alignment: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignCenter
+    window_flag: Qt.WindowType = Qt.WindowType.WindowStaysOnTopHint
 
-    splash_screen: QSplashScreen = QSplashScreen(logo_pixmap)
+    splash_screen: QSplashScreen = QSplashScreen(logo_pixmap, window_flag)
 
     message_font: QFont = splash_screen.font()
     message_font.setBold(True)
