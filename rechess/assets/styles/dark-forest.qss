@@ -162,7 +162,7 @@ QToolTip {
 }
 
 QWidget {
-  font-size: 15pt;
+  font-size: 14px;
 }
 
 SvgBoard {
