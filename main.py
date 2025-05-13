@@ -3,23 +3,19 @@
 
 from __future__ import annotations
 
-from platform import system
-
 from PySide6.QtCore import QLockFile, QTimer
 
 from rechess.ui import MainWindow
 from rechess.utils import create_app, create_splash_screen, show_warning
 
 
-def _initialize(main_window: MainWindow, splash_screen: QSplashScreen) -> None:
+def _initialize(splash_screen: QSplashScreen, main_window: MainWindow) -> None:
     main_window.showMaximized()
     splash_screen.finish(main_window)
 
 
 def main() -> None:
     """Launch app with splash screen, lock it to launch only once."""
-    is_macos: bool = system() == "Darwin"
-
     app: QApplication = create_app()
     splash_screen: QSplashScreen = create_splash_screen()
 
@@ -31,11 +27,7 @@ def main() -> None:
         show_warning(main_window)
         return
 
-    if is_macos:
-        splash_screen.close()
-        main_window.showMaximized()
-    else:
-        QTimer.singleShot(3000, lambda: _initialize(main_window, splash_screen))
+    QTimer.singleShot(3000, lambda: _initialize(splash_screen, main_window))
 
     app.exec()
 
