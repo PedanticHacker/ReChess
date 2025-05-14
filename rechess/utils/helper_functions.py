@@ -54,7 +54,7 @@ def create_button(icon: QIcon) -> QPushButton:
 
 
 def create_splash_screen() -> QSplashScreen:
-    """Show app logo with name and version of app as splash screen."""
+    """Show app logo with app name and app version as splash screen."""
     yellow_color: Qt.GlobalColor = Qt.GlobalColor.yellow
     logo_pixmap: QPixmap = svg_icon("logo").pixmap(300, 300)
     center_alignment: Qt.AlignmentFlag = Qt.AlignmentFlag.AlignCenter
@@ -71,6 +71,12 @@ def create_splash_screen() -> QSplashScreen:
     splash_screen.raise_()
 
     return splash_screen
+
+
+def initialize(splash_screen: QSplashScreen, main_window: QMainWindow) -> None:
+    """When main window is shown, finish showing splash screen."""
+    main_window.showMaximized()
+    splash_screen.finish(main_window)
 
 
 def show_info(parent: QWidget, message: str) -> None:
