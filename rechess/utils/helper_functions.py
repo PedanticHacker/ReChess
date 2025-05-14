@@ -68,6 +68,7 @@ def create_splash_screen() -> QSplashScreen:
     splash_screen.setFont(message_font)
     splash_screen.showMessage("ReChess 1.0", center_alignment, yellow_color)
     splash_screen.show()
+    splash_screen.raise_()
 
     return splash_screen
 
