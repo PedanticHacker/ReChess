@@ -73,12 +73,6 @@ def create_splash_screen() -> QSplashScreen:
     return splash_screen
 
 
-def initialize(splash_screen: QSplashScreen, main_window: QMainWindow) -> None:
-    """When main window is shown, finish showing splash screen."""
-    main_window.showMaximized()
-    splash_screen.finish(main_window)
-
-
 def show_info(parent: QWidget, message: str) -> None:
     """Inform about something based on `message`."""
     QMessageBox.information(parent, "Info", message)

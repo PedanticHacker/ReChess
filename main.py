@@ -6,7 +6,13 @@ from __future__ import annotations
 from PySide6.QtCore import QLockFile, QTimer
 
 from rechess.ui import MainWindow
-from rechess.utils import create_app, create_splash_screen, initialize, show_warning
+from rechess.utils import create_app, create_splash_screen, show_warning
+
+
+def _finish(splash_screen: QSplashScreen, main_window: QMainWindow) -> None:
+    """When main window is shown, finish showing splash screen."""
+    main_window.showMaximized()
+    splash_screen.finish(main_window)
 
 
 def main() -> None:
@@ -21,7 +27,7 @@ def main() -> None:
         show_warning(main_window)
         return
 
-    QTimer.singleShot(3000, lambda: initialize(splash_screen, main_window))
+    QTimer.singleShot(3000, lambda: _finish(splash_screen, main_window))
 
     app.exec()
 
