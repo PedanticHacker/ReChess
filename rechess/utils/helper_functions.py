@@ -139,7 +139,7 @@ def delete_quarantine_attribute(path_to_file: str) -> None:
 
 
 def engine_configuration() -> dict[str, int]:
-    """Get configuration for engine based on available resources."""
+    """Get engine configuration with fixed hash and variable threads."""
     return {"Hash": 512, "Threads": cpu_count() or 1}
 
 
