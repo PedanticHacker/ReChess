@@ -138,12 +138,6 @@ def delete_quarantine_attribute(path_to_file: str) -> None:
         )
 
 
-def _available_hash() -> int:
-    """Get all available RAM in megabytes to be used as hash."""
-    MEGABYTES_FACTOR: Final[int] = 1_048_576
-    return virtual_memory().available // MEGABYTES_FACTOR
-
-
 def _available_threads() -> int:
     """Get all available CPU threads, else at least one."""
     cpu_threads: int | None = cpu_count()
@@ -152,7 +146,7 @@ def _available_threads() -> int:
 
 def engine_configuration() -> dict[str, int]:
     """Get configuration for engine based on available resources."""
-    return {"Hash": _available_hash(), "Threads": _available_threads()}
+    return {"Hash": 512, "Threads": _available_threads()}
 
 
 def engine_file_filter() -> str:
