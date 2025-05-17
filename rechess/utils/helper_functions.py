@@ -138,15 +138,9 @@ def delete_quarantine_attribute(path_to_file: str) -> None:
         )
 
 
-def _available_threads() -> int:
-    """Get all available CPU threads, else at least one."""
-    cpu_threads: int | None = cpu_count()
-    return cpu_threads if cpu_threads is not None else 1
-
-
 def engine_configuration() -> dict[str, int]:
     """Get configuration for engine based on available resources."""
-    return {"Hash": 512, "Threads": _available_threads()}
+    return {"Hash": 512, "Threads": cpu_count() or 1}
 
 
 def engine_file_filter() -> str:
