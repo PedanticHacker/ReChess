@@ -157,7 +157,7 @@ def engine_configuration() -> dict[str, int]:
 
 def engine_file_filter() -> str:
     """Get platform-specific filter for executable file of engine."""
-    return "Chess engine (*.exe)" if platform.system() == "Windows" else ""
+    return "UCI engine (*.exe)" if platform.system() == "Windows" else ""
 
 
 def make_executable(path_to_file: str) -> None:
